@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -43,9 +44,19 @@ class Github:
             "Authorization": "Bearer " + self.token, "Accept": "application/vnd.github+json",
             "Content-Type": content_type, "User-Agent": "Leaf2Android-release", "X-GitHub-Api-Version": "2022-11-28",
         })
-        with urllib.request.urlopen(request, timeout=180) as response:
-            body = response.read()
-            return json.loads(body) if body else None
+        for attempt in range(4):
+            try:
+                with urllib.request.urlopen(request, timeout=180) as response:
+                    body = response.read()
+                    return json.loads(body) if body else None
+            except urllib.error.HTTPError as error:
+                if method != "GET" or error.code not in {429, 500, 502, 503, 504} or attempt == 3:
+                    raise
+            except (urllib.error.URLError, TimeoutError, ConnectionError):
+                if method != "GET" or attempt == 3:
+                    raise
+            # Mutations are never replayed blindly; rerunning main reconciles the draft/assets first.
+            time.sleep(0.5 * 2 ** attempt)
 
 
 def main() -> None:
