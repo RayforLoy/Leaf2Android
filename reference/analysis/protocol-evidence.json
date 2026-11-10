@@ -1,0 +1,504 @@
+{
+  "evidence_level": "static_binary_analysis",
+  "hardware_validated": false,
+  "notes": [
+    "These anchors identify code in the exact pinned samples, not an Aptus II 5 firmware capture.",
+    "Control values are code-page converted by the original client; arbitrary Unicode filename encoding remains unverified.",
+    "The offline framer implements a bounded, non-packetized subset. Synthetic tests are not captured camera sessions.",
+    "A complete startup handshake, peer authentication behavior, MOS download, and live view remain unverified."
+  ],
+  "samples": [
+    {
+      "version_label": "1.0.2",
+      "executable_cab_member": "00LeafCE.001",
+      "executable_sha256": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "function_ranges": {
+        "reader": {
+          "begin_va": "0x2a1a4",
+          "end_va_exclusive": "0x2a404"
+        },
+        "read_image": {
+          "begin_va": "0x31274",
+          "end_va_exclusive": "0x315c4"
+        },
+        "get_image_reply": {
+          "begin_va": "0x315cc",
+          "end_va_exclusive": "0x319dc"
+        }
+      },
+      "reader_instructions": [
+        {
+          "meaning": "caret",
+          "va": "0x2a208",
+          "offset": "0x19608",
+          "bytes": "5e0051e3",
+          "instruction": "cmp r1, #0x5e"
+        },
+        {
+          "meaning": "end_marker",
+          "va": "0x2a224",
+          "offset": "0x19624",
+          "bytes": "3e0051e3",
+          "instruction": "cmp r1, #0x3e"
+        }
+      ],
+      "spp_uuid": {
+        "value": "00001101-0000-1000-8000-00805f9b34fb",
+        "module": "BTSDKC~1.004",
+        "export_rva": "0x1e09c"
+      },
+      "version_log": {
+        "format": "Leaf WiView version %d.%d%d",
+        "constructed_value": "1.15",
+        "arguments_begin_va": "0x6123c",
+        "note": "This is a statically reconstructed log string, not a verified About dialog or release package version."
+      },
+      "control_anchors": [
+        {
+          "offset": "0xf829c",
+          "va": "0x109a9c",
+          "encoding": "ascii",
+          "text": "^<Ack/>"
+        },
+        {
+          "offset": "0xfa750",
+          "va": "0x10bf50",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"qformat\" Subject=\""
+        },
+        {
+          "offset": "0xfa7b0",
+          "va": "0x10bfb0",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"recovery\" Subject=\""
+        },
+        {
+          "offset": "0xfa880",
+          "va": "0x10c080",
+          "encoding": "utf-16le",
+          "text": "^<GetPictureParams file_name=\""
+        },
+        {
+          "offset": "0xfa8fc",
+          "va": "0x10c0fc",
+          "encoding": "utf-16le",
+          "text": "^<SetPictureParams file_name=\""
+        },
+        {
+          "offset": "0xfa948",
+          "va": "0x10c148",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"del\" Subject=\""
+        },
+        {
+          "offset": "0xfad20",
+          "va": "0x10c520",
+          "encoding": "utf-16le",
+          "text": "^<RequestSync />"
+        },
+        {
+          "offset": "0xfad48",
+          "va": "0x10c548",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"CurrentTime\" />"
+        },
+        {
+          "offset": "0xfada8",
+          "va": "0x10c5a8",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"dir\" Subject=\""
+        },
+        {
+          "offset": "0xfae10",
+          "va": "0x10c610",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />"
+        },
+        {
+          "offset": "0xfb440",
+          "va": "0x10cc40",
+          "encoding": "utf-16le",
+          "text": "^<ReSyncRequest />"
+        },
+        {
+          "offset": "0xfb47c",
+          "va": "0x10cc7c",
+          "encoding": "utf-16le",
+          "text": "^<Ack />"
+        },
+        {
+          "offset": "0xfb4a4",
+          "va": "0x10cca4",
+          "encoding": "utf-16le",
+          "text": "^<GetImage file_name=\""
+        },
+        {
+          "offset": "0xfb79c",
+          "va": "0x10cf9c",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam CurrentTime=\""
+        },
+        {
+          "offset": "0xfba5c",
+          "va": "0x10d25c",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam "
+        },
+        {
+          "offset": "0xfbaac",
+          "va": "0x10d2ac",
+          "encoding": "utf-16le",
+          "text": "^<ImageFunction file_name=\""
+        },
+        {
+          "offset": "0xfbb58",
+          "va": "0x10d358",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"move\" Subject=\""
+        },
+        {
+          "offset": "0xfbbc8",
+          "va": "0x10d3c8",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"copy\" Subject=\""
+        },
+        {
+          "offset": "0xfbc38",
+          "va": "0x10d438",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+        },
+        {
+          "offset": "0xfbcc0",
+          "va": "0x10d4c0",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"rename\" Subject=\""
+        },
+        {
+          "offset": "0xfbd68",
+          "va": "0x10d568",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+        },
+        {
+          "offset": "0xfbdd8",
+          "va": "0x10d5d8",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"Histogram_scale\" />"
+        },
+        {
+          "offset": "0xfbe40",
+          "va": "0x10d640",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"exp_left\" />"
+        },
+        {
+          "offset": "0xfbfd8",
+          "va": "0x10d7d8",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"battery_percent\" />"
+        },
+        {
+          "offset": "0xfc0bc",
+          "va": "0x10d8bc",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam Brightness=\""
+        },
+        {
+          "offset": "0xfc110",
+          "va": "0x10d910",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam EnableTakenPicture=\""
+        },
+        {
+          "offset": "0xfc1c8",
+          "va": "0x10d9c8",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam CEVersion=\""
+        },
+        {
+          "offset": "0xfc2ec",
+          "va": "0x10daec",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam NewPinCode=\""
+        },
+        {
+          "offset": "0xfc340",
+          "va": "0x10db40",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"TotalFrames\" />"
+        },
+        {
+          "offset": "0xfc420",
+          "va": "0x10dc20",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam ResetCounter=\"yes\" />"
+        },
+        {
+          "offset": "0xfc488",
+          "va": "0x10dc88",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />"
+        },
+        {
+          "offset": "0xfc688",
+          "va": "0x10de88",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"Copyright;Annotation\" />"
+        }
+      ]
+    },
+    {
+      "version_label": "1.0.3",
+      "executable_cab_member": "00LeafCE.001",
+      "executable_sha256": "ac6d0699870d7f9a1e00fe8bf507a35cfc38f3d2b6619e5dbae30eb248b87fe9",
+      "function_ranges": {
+        "reader": {
+          "begin_va": "0x2a988",
+          "end_va_exclusive": "0x2abe8"
+        },
+        "read_image": {
+          "begin_va": "0x320cc",
+          "end_va_exclusive": "0x3241c"
+        },
+        "get_image_reply": {
+          "begin_va": "0x32424",
+          "end_va_exclusive": "0x32838"
+        }
+      },
+      "reader_instructions": [
+        {
+          "meaning": "caret",
+          "va": "0x2a9ec",
+          "offset": "0x19dec",
+          "bytes": "5e0051e3",
+          "instruction": "cmp r1, #0x5e"
+        },
+        {
+          "meaning": "end_marker",
+          "va": "0x2aa08",
+          "offset": "0x19e08",
+          "bytes": "3e0051e3",
+          "instruction": "cmp r1, #0x3e"
+        }
+      ],
+      "spp_uuid": {
+        "value": "00001101-0000-1000-8000-00805f9b34fb",
+        "module": "BTSDKC~1.004",
+        "export_rva": "0x1e09c"
+      },
+      "version_log": {
+        "format": "Leaf WiView version %d.%d%d",
+        "constructed_value": "1.17",
+        "arguments_begin_va": "0x62194",
+        "note": "This is a statically reconstructed log string, not a verified About dialog or release package version."
+      },
+      "control_anchors": [
+        {
+          "offset": "0xfaae0",
+          "va": "0x10bce0",
+          "encoding": "ascii",
+          "text": "^<Ack/>"
+        },
+        {
+          "offset": "0xfd090",
+          "va": "0x10e290",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"qformat\" Subject=\""
+        },
+        {
+          "offset": "0xfd0f0",
+          "va": "0x10e2f0",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"recovery\" Subject=\""
+        },
+        {
+          "offset": "0xfd1c0",
+          "va": "0x10e3c0",
+          "encoding": "utf-16le",
+          "text": "^<GetPictureParams file_name=\""
+        },
+        {
+          "offset": "0xfd23c",
+          "va": "0x10e43c",
+          "encoding": "utf-16le",
+          "text": "^<SetPictureParams file_name=\""
+        },
+        {
+          "offset": "0xfd288",
+          "va": "0x10e488",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"del\" Subject=\""
+        },
+        {
+          "offset": "0xfd660",
+          "va": "0x10e860",
+          "encoding": "utf-16le",
+          "text": "^<RequestSync />"
+        },
+        {
+          "offset": "0xfd688",
+          "va": "0x10e888",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"CurrentTime\" />"
+        },
+        {
+          "offset": "0xfd6e8",
+          "va": "0x10e8e8",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"dir\" Subject=\""
+        },
+        {
+          "offset": "0xfd750",
+          "va": "0x10e950",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />"
+        },
+        {
+          "offset": "0xfddf0",
+          "va": "0x10eff0",
+          "encoding": "utf-16le",
+          "text": "^<ReSyncRequest />"
+        },
+        {
+          "offset": "0xfde2c",
+          "va": "0x10f02c",
+          "encoding": "utf-16le",
+          "text": "^<Ack />"
+        },
+        {
+          "offset": "0xfde54",
+          "va": "0x10f054",
+          "encoding": "utf-16le",
+          "text": "^<Nak />"
+        },
+        {
+          "offset": "0xfde7c",
+          "va": "0x10f07c",
+          "encoding": "utf-16le",
+          "text": "^<GetImage file_name=\""
+        },
+        {
+          "offset": "0xfe174",
+          "va": "0x10f374",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam CurrentTime=\""
+        },
+        {
+          "offset": "0xfe434",
+          "va": "0x10f634",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam "
+        },
+        {
+          "offset": "0xfe484",
+          "va": "0x10f684",
+          "encoding": "utf-16le",
+          "text": "^<ImageFunction file_name=\""
+        },
+        {
+          "offset": "0xfe530",
+          "va": "0x10f730",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"move\" Subject=\""
+        },
+        {
+          "offset": "0xfe5a0",
+          "va": "0x10f7a0",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"copy\" Subject=\""
+        },
+        {
+          "offset": "0xfe610",
+          "va": "0x10f810",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+        },
+        {
+          "offset": "0xfe698",
+          "va": "0x10f898",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"rename\" Subject=\""
+        },
+        {
+          "offset": "0xfe740",
+          "va": "0x10f940",
+          "encoding": "utf-16le",
+          "text": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+        },
+        {
+          "offset": "0xfe7b0",
+          "va": "0x10f9b0",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"Histogram_scale\" />"
+        },
+        {
+          "offset": "0xfe818",
+          "va": "0x10fa18",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"exp_left\" />"
+        },
+        {
+          "offset": "0xfe9b0",
+          "va": "0x10fbb0",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"battery_percent\" />"
+        },
+        {
+          "offset": "0xfea94",
+          "va": "0x10fc94",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam Brightness=\""
+        },
+        {
+          "offset": "0xfeb00",
+          "va": "0x10fd00",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam PowerSource=\""
+        },
+        {
+          "offset": "0xfeb58",
+          "va": "0x10fd58",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam EnableTakenPicture=\""
+        },
+        {
+          "offset": "0xfec10",
+          "va": "0x10fe10",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam CEVersion=\""
+        },
+        {
+          "offset": "0xfed34",
+          "va": "0x10ff34",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam NewPinCode=\""
+        },
+        {
+          "offset": "0xfed88",
+          "va": "0x10ff88",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"TotalFrames\" />"
+        },
+        {
+          "offset": "0xfee68",
+          "va": "0x110068",
+          "encoding": "utf-16le",
+          "text": "^<SetCameraParam ResetCounter=\"yes\" />"
+        },
+        {
+          "offset": "0xfeed0",
+          "va": "0x1100d0",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />"
+        },
+        {
+          "offset": "0xff0d8",
+          "va": "0x1102d8",
+          "encoding": "utf-16le",
+          "text": "^<GetCameraParam GetParamList=\"Copyright;Annotation\" />"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+[
+  {
+    "offset": "0x26f4",
+    "va": "0x1040f4",
+    "encoding": "ascii",
+    "text": "COREDLL.dll"
+  },
+  {
+    "offset": "0x2702",
+    "va": "0x104102",
+    "encoding": "ascii",
+    "text": "?OnAudioDisconnect@CBtIf@@UAAXG@Z"
+  },
+  {
+    "offset": "0x2726",
+    "va": "0x104126",
+    "encoding": "ascii",
+    "text": "?OnAudioConnected@CBtIf@@UAAXG@Z"
+  },
+  {
+    "offset": "0x274a",
+    "va": "0x10414a",
+    "encoding": "ascii",
+    "text": "??0CBtIf@@QAA@XZ"
+  },
+  {
+    "offset": "0x275e",
+    "va": "0x10415e",
+    "encoding": "ascii",
+    "text": "??1CBtIf@@UAA@XZ"
+  },
+  {
+    "offset": "0x2772",
+    "va": "0x104172",
+    "encoding": "ascii",
+    "text": "??0CSppClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x278a",
+    "va": "0x10418a",
+    "encoding": "ascii",
+    "text": "??1CSppClient@@UAA@XZ"
+  },
+  {
+    "offset": "0x27a2",
+    "va": "0x1041a2",
+    "encoding": "ascii",
+    "text": "?WIDCOMMSDK_ShutDown@@YAXXZ"
+  },
+  {
+    "offset": "0x27c0",
+    "va": "0x1041c0",
+    "encoding": "ascii",
+    "text": "?StartInquiry@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x27de",
+    "va": "0x1041de",
+    "encoding": "ascii",
+    "text": "?StopInquiry@CBtIf@@QAAXXZ"
+  },
+  {
+    "offset": "0x27fc",
+    "va": "0x1041fc",
+    "encoding": "ascii",
+    "text": "?StartDiscovery@CBtIf@@QAAHQAEPAU_GUID@@@Z"
+  },
+  {
+    "offset": "0x282a",
+    "va": "0x10422a",
+    "encoding": "ascii",
+    "text": "?ReadDiscoveryRecords@CBtIf@@QAAHQAEHPAVCSdpDiscoveryRec@@PAU_GUID@@@Z"
+  },
+  {
+    "offset": "0x2874",
+    "va": "0x104274",
+    "encoding": "ascii",
+    "text": "??0CSdpDiscoveryRec@@QAA@XZ"
+  },
+  {
+    "offset": "0x2892",
+    "va": "0x104292",
+    "encoding": "ascii",
+    "text": "??1CSdpDiscoveryRec@@QAA@XZ"
+  },
+  {
+    "offset": "0x28b0",
+    "va": "0x1042b0",
+    "encoding": "ascii",
+    "text": "?CreateConnection@CSppClient@@QAA?AW4SPP_CLIENT_RETURN_CODE@1@QAEPAG@Z"
+  },
+  {
+    "offset": "0x28fa",
+    "va": "0x1042fa",
+    "encoding": "ascii",
+    "text": "?RemoveConnection@CSppClient@@QAA?AW4SPP_CLIENT_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x293e",
+    "va": "0x10433e",
+    "encoding": "ascii",
+    "text": "?Bond@CBtIf@@QAA?AW4BOND_RETURN_CODE@1@QAEPAG@Z"
+  },
+  {
+    "offset": "0x2970",
+    "va": "0x104370",
+    "encoding": "ascii",
+    "text": "?BondQuery@CBtIf@@QAAHQAE@Z"
+  },
+  {
+    "offset": "0x298e",
+    "va": "0x10438e",
+    "encoding": "ascii",
+    "text": "?UnBond@CBtIf@@QAAHQAE@Z"
+  },
+  {
+    "offset": "0x29aa",
+    "va": "0x1043aa",
+    "encoding": "ascii",
+    "text": "?RadioOn@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x29c4",
+    "va": "0x1043c4",
+    "encoding": "ascii",
+    "text": "?RadioOff@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x29de",
+    "va": "0x1043de",
+    "encoding": "ascii",
+    "text": "?ReloadStack@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x29fc",
+    "va": "0x1043fc",
+    "encoding": "ascii",
+    "text": "?SetLinkSupervisionTimeOut@CBtIf@@SAHQAEG@Z"
+  },
+  {
+    "offset": "0x2a2a",
+    "va": "0x10442a",
+    "encoding": "ascii",
+    "text": "?GetConnectionStats@CSppClient@@QAA?AW4SPP_CLIENT_RETURN_CODE@1@PAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x2a80",
+    "va": "0x104480",
+    "encoding": "ascii",
+    "text": "BtSdkCE30.dll"
+  },
+  {
+    "offset": "0x2acc",
+    "va": "0x1044cc",
+    "encoding": "ascii",
+    "text": "LeafWiBTStack.dll"
+  },
+  {
+    "offset": "0x2ade",
+    "va": "0x1044de",
+    "encoding": "ascii",
+    "text": "InitLog"
+  },
+  {
+    "offset": "0x2ae6",
+    "va": "0x1044e6",
+    "encoding": "ascii",
+    "text": "InitStack"
+  },
+  {
+    "offset": "0x2cb8",
+    "va": "0x1050b8",
+    "encoding": "utf-16le",
+    "text": " DK version function unavailable"
+  },
+  {
+    "offset": "0x2cfc",
+    "va": "0x1050fc",
+    "encoding": "utf-16le",
+    "text": " failed to get DK version"
+  },
+  {
+    "offset": "0x2d30",
+    "va": "0x105130",
+    "encoding": "utf-16le",
+    "text": "Bluetooth stack DK version"
+  },
+  {
+    "offset": "0x2d68",
+    "va": "0x105168",
+    "encoding": "ascii",
+    "text": "?GetDKCEVersionInfo@CBtIf@@QAAHPAGH@Z"
+  },
+  {
+    "offset": "0x2d90",
+    "va": "0x105190",
+    "encoding": "utf-16le",
+    "text": " BT version function unavailable"
+  },
+  {
+    "offset": "0x2dd4",
+    "va": "0x1051d4",
+    "encoding": "utf-16le",
+    "text": " failed to get BT version"
+  },
+  {
+    "offset": "0x2e08",
+    "va": "0x105208",
+    "encoding": "utf-16le",
+    "text": "Bluetooth stack BT version "
+  },
+  {
+    "offset": "0x2e40",
+    "va": "0x105240",
+    "encoding": "utf-16le",
+    "text": "BtStack.cpp"
+  },
+  {
+    "offset": "0x2e58",
+    "va": "0x105258",
+    "encoding": "utf-16le",
+    "text": "Bluetooth stack"
+  },
+  {
+    "offset": "0x2e78",
+    "va": "0x105278",
+    "encoding": "ascii",
+    "text": "?GetBTWCEVersionInfo@CBtIf@@QAAHPAGH@Z"
+  },
+  {
+    "offset": "0x2ea0",
+    "va": "0x1052a0",
+    "encoding": "ascii",
+    "text": "?SetAutoReconnect@CBtIf@@QAAHH@Z"
+  },
+  {
+    "offset": "0x2ec4",
+    "va": "0x1052c4",
+    "encoding": "utf-16le",
+    "text": "BtSdkCE30.dll"
+  },
+  {
+    "offset": "0x2ee0",
+    "va": "0x1052e0",
+    "encoding": "utf-16le",
+    "text": "CBtStackWrapper::OnDiscoveryComplete"
+  },
+  {
+    "offset": "0x2f2c",
+    "va": "0x10532c",
+    "encoding": "utf-16le",
+    "text": "Callback 0x%08X, Param 0x%08X"
+  },
+  {
+    "offset": "0x2f68",
+    "va": "0x105368",
+    "encoding": "utf-16le",
+    "text": "CBtStackWrapper::OnInquiryComplete"
+  },
+  {
+    "offset": "0x2fb0",
+    "va": "0x1053b0",
+    "encoding": "utf-16le",
+    "text": "New status: %s, Value %d"
+  },
+  {
+    "offset": "0x2fe8",
+    "va": "0x1053e8",
+    "encoding": "utf-16le",
+    "text": "StatusChange callback is not defined"
+  },
+  {
+    "offset": "0x3034",
+    "va": "0x105434",
+    "encoding": "utf-16le",
+    "text": "OnStackStatusChange"
+  },
+  {
+    "offset": "0x305c",
+    "va": "0x10545c",
+    "encoding": "utf-16le",
+    "text": "DEVST_RELOADED"
+  },
+  {
+    "offset": "0x307c",
+    "va": "0x10547c",
+    "encoding": "utf-16le",
+    "text": "DEVST_UNLOADED"
+  },
+  {
+    "offset": "0x309c",
+    "va": "0x10549c",
+    "encoding": "utf-16le",
+    "text": "DEVST_ERROR"
+  },
+  {
+    "offset": "0x30b4",
+    "va": "0x1054b4",
+    "encoding": "utf-16le",
+    "text": "DEVST_UP"
+  },
+  {
+    "offset": "0x30c8",
+    "va": "0x1054c8",
+    "encoding": "utf-16le",
+    "text": "DEVST_DOWN"
+  },
+  {
+    "offset": "0x30e0",
+    "va": "0x1054e0",
+    "encoding": "utf-16le",
+    "text": "Unknown"
+  },
+  {
+    "offset": "0x30f0",
+    "va": "0x1054f0",
+    "encoding": "utf-16le",
+    "text": "OnClientStateChange"
+  },
+  {
+    "offset": "0x3118",
+    "va": "0x105518",
+    "encoding": "utf-16le",
+    "text": "SDK_SPP_DISCONNECTED"
+  },
+  {
+    "offset": "0x3144",
+    "va": "0x105544",
+    "encoding": "utf-16le",
+    "text": "SDK_SPP_CONNECTED"
+  },
+  {
+    "offset": "0x3168",
+    "va": "0x105568",
+    "encoding": "utf-16le",
+    "text": "New status: %s, port %d"
+  },
+  {
+    "offset": "0x3198",
+    "va": "0x105598",
+    "encoding": "utf-16le",
+    "text": "StartInquiry started"
+  },
+  {
+    "offset": "0x31d4",
+    "va": "0x1055d4",
+    "encoding": "utf-16le",
+    "text": "StartInquiry"
+  },
+  {
+    "offset": "0x31f0",
+    "va": "0x1055f0",
+    "encoding": "utf-16le",
+    "text": "inquiry dont started"
+  },
+  {
+    "offset": "0x321c",
+    "va": "0x10561c",
+    "encoding": "utf-16le",
+    "text": "StopInquiry"
+  },
+  {
+    "offset": "0x3234",
+    "va": "0x105634",
+    "encoding": "utf-16le",
+    "text": "performed"
+  },
+  {
+    "offset": "0x3248",
+    "va": "0x105648",
+    "encoding": "utf-16le",
+    "text": "StartDiscovery started"
+  },
+  {
+    "offset": "0x3278",
+    "va": "0x105678",
+    "encoding": "utf-16le",
+    "text": "ReadDiscoveryRecords"
+  },
+  {
+    "offset": "0x32a4",
+    "va": "0x1056a4",
+    "encoding": "utf-16le",
+    "text": "records readed %d"
+  },
+  {
+    "offset": "0x32c8",
+    "va": "0x1056c8",
+    "encoding": "utf-16le",
+    "text": "SDK_UNKNOWN_ERROR"
+  },
+  {
+    "offset": "0x32ec",
+    "va": "0x1056ec",
+    "encoding": "utf-16le",
+    "text": "SDK_NOT_ENOUGH_MEMORY"
+  },
+  {
+    "offset": "0x3318",
+    "va": "0x105718",
+    "encoding": "utf-16le",
+    "text": "SDK_NOT_CONNECTED"
+  },
+  {
+    "offset": "0x333c",
+    "va": "0x10573c",
+    "encoding": "utf-16le",
+    "text": "SDK_ALREADY_CONNECTED"
+  },
+  {
+    "offset": "0x3368",
+    "va": "0x105768",
+    "encoding": "utf-16le",
+    "text": "SDK_NO_BT_SERVER"
+  },
+  {
+    "offset": "0x338c",
+    "va": "0x10578c",
+    "encoding": "utf-16le",
+    "text": "CreateConnection"
+  },
+  {
+    "offset": "0x33b0",
+    "va": "0x1057b0",
+    "encoding": "utf-16le",
+    "text": "SDK_SUCCESS"
+  },
+  {
+    "offset": "0x33c8",
+    "va": "0x1057c8",
+    "encoding": "utf-16le",
+    "text": "RemoveConnection"
+  },
+  {
+    "offset": "0x33ec",
+    "va": "0x1057ec",
+    "encoding": "utf-16le",
+    "text": "SDK_FAIL"
+  },
+  {
+    "offset": "0x3400",
+    "va": "0x105800",
+    "encoding": "utf-16le",
+    "text": "SDK_BAD_PARAMETER"
+  },
+  {
+    "offset": "0x3424",
+    "va": "0x105824",
+    "encoding": "utf-16le",
+    "text": "SDK_ALREADY_BONDED"
+  },
+  {
+    "offset": "0x344c",
+    "va": "0x10584c",
+    "encoding": "utf-16le",
+    "text": "Bond"
+  },
+  {
+    "offset": "0x3458",
+    "va": "0x105858",
+    "encoding": "utf-16le",
+    "text": "SDK_BOND_SUCCESS"
+  },
+  {
+    "offset": "0x347c",
+    "va": "0x10587c",
+    "encoding": "utf-16le",
+    "text": "BondQuery bonded"
+  },
+  {
+    "offset": "0x34a0",
+    "va": "0x1058a0",
+    "encoding": "utf-16le",
+    "text": "false"
+  },
+  {
+    "offset": "0x34ac",
+    "va": "0x1058ac",
+    "encoding": "utf-16le",
+    "text": "true"
+  },
+  {
+    "offset": "0x34b8",
+    "va": "0x1058b8",
+    "encoding": "utf-16le",
+    "text": "UnBond unbond query started"
+  },
+  {
+    "offset": "0x34f0",
+    "va": "0x1058f0",
+    "encoding": "utf-16le",
+    "text": "RadioOn"
+  },
+  {
+    "offset": "0x3500",
+    "va": "0x105900",
+    "encoding": "utf-16le",
+    "text": "Failed"
+  },
+  {
+    "offset": "0x3510",
+    "va": "0x105910",
+    "encoding": "utf-16le",
+    "text": "Succeeded"
+  },
+  {
+    "offset": "0x3524",
+    "va": "0x105924",
+    "encoding": "utf-16le",
+    "text": "RadioOff"
+  },
+  {
+    "offset": "0x3538",
+    "va": "0x105938",
+    "encoding": "utf-16le",
+    "text": "ReloadStack"
+  },
+  {
+    "offset": "0x3550",
+    "va": "0x105950",
+    "encoding": "utf-16le",
+    "text": "SetLinkSupervisionTimeOut"
+  }
+]

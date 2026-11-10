@@ -1,0 +1,63 @@
+{
+  "apk": "dist\\Leaf2Android-0.2.0.apk",
+  "bytes": 3105063,
+  "sha256": "d3a081c242fa813d87cbd9b09d54e76c4e8a44762621e7398720c5c548c30a4c",
+  "application_id": "com.leaf2android",
+  "version": "0.2.0",
+  "min_sdk": 31,
+  "target_sdk": 36,
+  "build_type": "release",
+  "debuggable": false,
+  "signature_verified": true,
+  "zip_16k_alignment": true,
+  "elf_load_alignments": {
+    "lib/arm64-v8a/libandroidx.graphics.path.so": [
+      16384,
+      16384,
+      16384
+    ],
+    "lib/armeabi-v7a/libandroidx.graphics.path.so": [
+      16384,
+      16384,
+      16384
+    ],
+    "lib/x86/libandroidx.graphics.path.so": [
+      16384,
+      16384,
+      16384
+    ],
+    "lib/x86_64/libandroidx.graphics.path.so": [
+      16384,
+      16384,
+      16384
+    ]
+  },
+  "signing_details": [
+    "Verifies",
+    "Verified using v1 scheme (JAR signing): false",
+    "Verified using v2 scheme (APK Signature Scheme v2): true",
+    "Verified using v3 scheme (APK Signature Scheme v3): false",
+    "Verified using v3.1 scheme (APK Signature Scheme v3.1): false",
+    "Verified using v4 scheme (APK Signature Scheme v4): false",
+    "Verified for SourceStamp: false",
+    "Number of signers: 1",
+    "Signer #1 certificate DN: CN=Leaf2Android, OU=Mobile, O=Leaf2Android",
+    "Signer #1 certificate SHA-256 digest: 5fcf225f0008fb14d748cfb45adb48d875109f7386856d35d7fbe886dc00148b",
+    "Signer #1 certificate SHA-1 digest: 902c8ed7ae1a8db5ceaa10d3b6112b0dee8b38e4",
+    "Signer #1 certificate MD5 digest: ae0db2b7af05aeaa756939747861d6aa",
+    "Signer #1 key algorithm: RSA",
+    "Signer #1 key size (bits): 4096",
+    "Signer #1 public key SHA-256 digest: bc4893b5b5934e791707e7da26b2ab2a080463f8e265236082f8875971e7e9af",
+    "Signer #1 public key SHA-1 digest: 2e902cedf176a874044fd75915e669e6c6fab8ed",
+    "Signer #1 public key MD5 digest: bf57312b5c3bd53823a8239c5209557e"
+  ],
+  "permissions": [
+    "android.permission.BLUETOOTH_SCAN",
+    "android.permission.BLUETOOTH_CONNECT",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+    "com.leaf2android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "real_hardware_verified": false
+}

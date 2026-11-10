@@ -1,0 +1,140 @@
+[
+  {
+    "offset": "0x1298",
+    "va": "0x102098",
+    "encoding": "ascii",
+    "text": "COREDLL.dll"
+  },
+  {
+    "offset": "0x1300",
+    "va": "0x102100",
+    "encoding": "ascii",
+    "text": "CabSetup.dll"
+  },
+  {
+    "offset": "0x130d",
+    "va": "0x10210d",
+    "encoding": "ascii",
+    "text": "Install_Exit"
+  },
+  {
+    "offset": "0x131a",
+    "va": "0x10211a",
+    "encoding": "ascii",
+    "text": "Install_Init"
+  },
+  {
+    "offset": "0x1327",
+    "va": "0x102127",
+    "encoding": "ascii",
+    "text": "Uninstall_Exit"
+  },
+  {
+    "offset": "0x1336",
+    "va": "0x102136",
+    "encoding": "ascii",
+    "text": "Uninstall_Init"
+  },
+  {
+    "offset": "0x1490",
+    "va": "0x103090",
+    "encoding": "utf-16le",
+    "text": "Leaf WiView"
+  },
+  {
+    "offset": "0x14a8",
+    "va": "0x1030a8",
+    "encoding": "utf-16le",
+    "text": "Software\\Microsoft\\Today\\Items"
+  },
+  {
+    "offset": "0x14e8",
+    "va": "0x1030e8",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Microsoft\\Today\\Items\\Leaf WiView"
+  },
+  {
+    "offset": "0x1540",
+    "va": "0x103140",
+    "encoding": "utf-16le",
+    "text": "\"iPAQ Entertainment\""
+  },
+  {
+    "offset": "0x156c",
+    "va": "0x10316c",
+    "encoding": "utf-16le",
+    "text": "Order"
+  },
+  {
+    "offset": "0x1578",
+    "va": "0x103178",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Microsoft\\Today\\Items"
+  },
+  {
+    "offset": "0x15b8",
+    "va": "0x1031b8",
+    "encoding": "utf-16le",
+    "text": "Enabled"
+  },
+  {
+    "offset": "0x15c8",
+    "va": "0x1031c8",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Microsoft\\Today\\Items\\\"iPAQ Entertainment\""
+  },
+  {
+    "offset": "0x1630",
+    "va": "0x103230",
+    "encoding": "utf-16le",
+    "text": "RemoteViewerMainWindowClassName"
+  },
+  {
+    "offset": "0x1680",
+    "va": "0x103280",
+    "encoding": "utf-16le",
+    "text": "\\*.*"
+  },
+  {
+    "offset": "0x168c",
+    "va": "0x10328c",
+    "encoding": "utf-16le",
+    "text": "nokiafc22.ttf"
+  },
+  {
+    "offset": "0x16a8",
+    "va": "0x1032a8",
+    "encoding": "utf-16le",
+    "text": "LeafWiBTStack.dll"
+  },
+  {
+    "offset": "0x16cc",
+    "va": "0x1032cc",
+    "encoding": "utf-16le",
+    "text": "Leaf WiView.exe"
+  },
+  {
+    "offset": "0x16ec",
+    "va": "0x1032ec",
+    "encoding": "utf-16le",
+    "text": "LeafWiLauncher.dll"
+  },
+  {
+    "offset": "0x171c",
+    "va": "0x10331c",
+    "encoding": "utf-16le",
+    "text": "InstallPath"
+  },
+  {
+    "offset": "0x1734",
+    "va": "0x103334",
+    "encoding": "utf-16le",
+    "text": "Software\\Kodak\\Leaf WiView"
+  },
+  {
+    "offset": "0x176c",
+    "va": "0x10336c",
+    "encoding": "utf-16le",
+    "text": "\\Program Files\\Leaf WiView"
+  }
+]

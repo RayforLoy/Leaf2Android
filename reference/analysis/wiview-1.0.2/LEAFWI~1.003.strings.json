@@ -1,0 +1,134 @@
+[
+  {
+    "offset": "0x1714",
+    "va": "0x103114",
+    "encoding": "ascii",
+    "text": "COREDLL.dll"
+  },
+  {
+    "offset": "0x1750",
+    "va": "0x103150",
+    "encoding": "ascii",
+    "text": "LeafWiLauncher.dll"
+  },
+  {
+    "offset": "0x1948",
+    "va": "0x104148",
+    "encoding": "utf-16le",
+    "text": "Impossibile avviare l"
+  },
+  {
+    "offset": "0x1974",
+    "va": "0x104174",
+    "encoding": "utf-16le",
+    "text": "applicazione Leaf WiView."
+  },
+  {
+    "offset": "0x19a8",
+    "va": "0x1041a8",
+    "encoding": "utf-16le",
+    "text": "Die Leaf WiView-Anwendung kann nicht gestartet werden."
+  },
+  {
+    "offset": "0x1a1c",
+    "va": "0x10421c",
+    "encoding": "utf-16le",
+    "text": "application Leaf WiView ne peut d"
+  },
+  {
+    "offset": "0x1a60",
+    "va": "0x104260",
+    "encoding": "utf-16le",
+    "text": "marrer."
+  },
+  {
+    "offset": "0x1a70",
+    "va": "0x104270",
+    "encoding": "utf-16le",
+    "text": "No se puede iniciar la aplicaci"
+  },
+  {
+    "offset": "0x1ab0",
+    "va": "0x1042b0",
+    "encoding": "utf-16le",
+    "text": "n Leaf WiView."
+  },
+  {
+    "offset": "0x1ad0",
+    "va": "0x1042d0",
+    "encoding": "utf-16le",
+    "text": "The Leaf WiView application cannot start."
+  },
+  {
+    "offset": "0x1b24",
+    "va": "0x104324",
+    "encoding": "utf-16le",
+    "text": "Leaf WiView"
+  },
+  {
+    "offset": "0x1b3c",
+    "va": "0x10433c",
+    "encoding": "utf-16le",
+    "text": "Software\\Kodak\\Leaf WiView"
+  },
+  {
+    "offset": "0x1b74",
+    "va": "0x104374",
+    "encoding": "utf-16le",
+    "text": "InterfaceLanguage"
+  },
+  {
+    "offset": "0x1b98",
+    "va": "0x104398",
+    "encoding": "utf-16le",
+    "text": "PocketPC"
+  },
+  {
+    "offset": "0x1bac",
+    "va": "0x1043ac",
+    "encoding": "utf-16le",
+    "text": "Leaf WiView Launcher"
+  },
+  {
+    "offset": "0x1bd8",
+    "va": "0x1043d8",
+    "encoding": "utf-16le",
+    "text": "LeafAptusLauncherClass"
+  },
+  {
+    "offset": "0x1c08",
+    "va": "0x104408",
+    "encoding": "utf-16le",
+    "text": "\\Leaf WiView.exe"
+  },
+  {
+    "offset": "0x1c2c",
+    "va": "0x10442c",
+    "encoding": "utf-16le",
+    "text": "InstallPath"
+  },
+  {
+    "offset": "0x1c44",
+    "va": "0x104444",
+    "encoding": "utf-16le",
+    "text": "\\Program Files\\Leaf WiView"
+  },
+  {
+    "offset": "0x1c7c",
+    "va": "0x10447c",
+    "encoding": "utf-16le",
+    "text": "SHGetUIMetrics"
+  },
+  {
+    "offset": "0x1c9c",
+    "va": "0x10449c",
+    "encoding": "utf-16le",
+    "text": "aygshell.dll"
+  },
+  {
+    "offset": "0x1cb8",
+    "va": "0x1044b8",
+    "encoding": "utf-16le",
+    "text": "LeafCE lang change event"
+  }
+]

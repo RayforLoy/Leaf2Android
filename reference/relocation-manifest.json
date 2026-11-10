@@ -1,0 +1,425 @@
+{
+  "schema_version": 2,
+  "date": "2026-11-10",
+  "files_verified_unchanged_at_move": 46,
+  "note": "Original manufacturer inputs, extracted client bytes, and provenance logs were moved without byte changes. The source-lock metadata was then updated to canonical reference paths. Use inventory.json for current checksums.",
+  "managed_metadata_updated_after_move": [
+    "reference/sources.lock.json"
+  ],
+  "entries": [
+    {
+      "original_path": "res/Leaf WiView11_1_0_3.CAB",
+      "path": "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB",
+      "bytes": 2729244,
+      "sha256_at_relocation": "0f0a34891b3b4f7c70c6681092da38cd5d0bb9cadc82ff7b6dcb793c399b4cce",
+      "current_sha256": "0f0a34891b3b4f7c70c6681092da38cd5d0bb9cadc82ff7b6dcb793c399b4cce",
+      "current_bytes": 2729244,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources/LeafWiView-1.0.2.CAB",
+      "path": "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB",
+      "bytes": 2683140,
+      "sha256_at_relocation": "5f38aab055b2cb46560e59aa87d019a76a0e7e4a2d6866fbbc58b8e5eac56f85",
+      "current_sha256": "5f38aab055b2cb46560e59aa87d019a76a0e7e4a2d6866fbbc58b8e5eac56f85",
+      "current_bytes": 2683140,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources/WiView-1.0.2-mac-Installer.data",
+      "path": "reference/wiview/1.0.2/WiView-1.0.2-mac-Installer.data",
+      "bytes": 835922,
+      "sha256_at_relocation": "6a864adb792c657d093135602c5413ba5a8ed98c87ba0730d9415cd9e30b23d4",
+      "current_sha256": "6a864adb792c657d093135602c5413ba5a8ed98c87ba0730d9415cd9e30b23d4",
+      "current_bytes": 835922,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources/WiView-1.0.2-ReadMe.txt",
+      "path": "reference/wiview/1.0.2/WiView-1.0.2-ReadMe.txt",
+      "bytes": 5570,
+      "sha256_at_relocation": "89e57de9c04d2a08bff0f59b0a43e6878de8940b8d21f5f4181e84e4cf8cc912",
+      "current_sha256": "89e57de9c04d2a08bff0f59b0a43e6878de8940b8d21f5f4181e84e4cf8cc912",
+      "current_bytes": 5570,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources/LeafWiView-Installation-2007.pdf",
+      "path": "reference/wiview/guides/LeafWiView-Installation-2007.pdf",
+      "bytes": 743496,
+      "sha256_at_relocation": "777b294d5dc1f96f014a3bc9d6871fe3d3e920281105941705b5de82bbde4f23",
+      "current_sha256": "777b294d5dc1f96f014a3bc9d6871fe3d3e920281105941705b5de82bbde4f23",
+      "current_bytes": 743496,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources/LeafWiView-1.0.3-Installation-2008.pdf",
+      "path": "reference/wiview/guides/LeafWiView-1.0.3-Installation-2008.pdf",
+      "bytes": 563679,
+      "sha256_at_relocation": "dc2d731c083df87cc05722691b4807501818e6c075b199b6462e8c97336a8aef",
+      "current_sha256": "dc2d731c083df87cc05722691b4807501818e6c075b199b6462e8c97336a8aef",
+      "current_bytes": 563679,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources/downloads.json",
+      "path": "reference/wiview/provenance/downloads.json",
+      "bytes": 4383,
+      "sha256_at_relocation": "8e10de984e9e24070b94bd115a9a4cec4085cca99ed7baca0fe84e76e53bb6da",
+      "current_sha256": "8e10de984e9e24070b94bd115a9a4cec4085cca99ed7baca0fe84e76e53bb6da",
+      "current_bytes": 4383,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources/leaf-capture-11-metadata.json",
+      "path": "reference/wiview/provenance/leaf-capture-11-metadata.json",
+      "bytes": 114012,
+      "sha256_at_relocation": "93e83775fc8e10ab8491480b9a49275c25019f454ce81d940fc18e445ceabf12",
+      "current_sha256": "93e83775fc8e10ab8491480b9a49275c25019f454ce81d940fc18e445ceabf12",
+      "current_bytes": 114012,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/00LeafCE.001.strings.json",
+      "path": "reference/analysis/wiview-1.0.2/00LeafCE.001.strings.json",
+      "bytes": 413537,
+      "sha256_at_relocation": "c8bfb0b170037d37bcc3a098dd2eac6ece5e6cd57a15cbaadadabd05976f9a5a",
+      "current_sha256": "c8bfb0b170037d37bcc3a098dd2eac6ece5e6cd57a15cbaadadabd05976f9a5a",
+      "current_bytes": 413537,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/binary-analysis.json",
+      "path": "reference/analysis/wiview-1.0.2/binary-analysis.json",
+      "bytes": 187450,
+      "sha256_at_relocation": "f386db1b233ec1d58b11656543588a5b2d526c0e8dc2c7b354d3c668e7ea0b59",
+      "current_sha256": "f386db1b233ec1d58b11656543588a5b2d526c0e8dc2c7b354d3c668e7ea0b59",
+      "current_bytes": 187450,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/BtCoreIf.005.strings.json",
+      "path": "reference/analysis/wiview-1.0.2/BtCoreIf.005.strings.json",
+      "bytes": 58202,
+      "sha256_at_relocation": "ccdbcb219eac8fdf7f4ab43ae757eb0d316a97bbd73bca44e4d4b294ca3abdd3",
+      "current_sha256": "ccdbcb219eac8fdf7f4ab43ae757eb0d316a97bbd73bca44e4d4b294ca3abdd3",
+      "current_bytes": 58202,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/BTSDKC~1.004.strings.json",
+      "path": "reference/analysis/wiview-1.0.2/BTSDKC~1.004.strings.json",
+      "bytes": 132172,
+      "sha256_at_relocation": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174",
+      "current_sha256": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174",
+      "current_bytes": 132172,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/CabSetup.999.strings.json",
+      "path": "reference/analysis/wiview-1.0.2/CabSetup.999.strings.json",
+      "bytes": 2834,
+      "sha256_at_relocation": "d412f0de38dcf3791d9db8ce04d799a0df1032cf9c5e0279e8a31cfad9eb199b",
+      "current_sha256": "d412f0de38dcf3791d9db8ce04d799a0df1032cf9c5e0279e8a31cfad9eb199b",
+      "current_bytes": 2834,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/LEAFWI~1.003.strings.json",
+      "path": "reference/analysis/wiview-1.0.2/LEAFWI~1.003.strings.json",
+      "bytes": 2754,
+      "sha256_at_relocation": "90b97350ce27406408d8f5eee7625336782d94191d2ff2ae0fe553bc37c92468",
+      "current_sha256": "90b97350ce27406408d8f5eee7625336782d94191d2ff2ae0fe553bc37c92468",
+      "current_bytes": 2754,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/LEAFWI~2.002.strings.json",
+      "path": "reference/analysis/wiview-1.0.2/LEAFWI~2.002.strings.json",
+      "bytes": 10914,
+      "sha256_at_relocation": "ebecd39b9becbd71a90579de343d550925afc1f4a102de9e68d341c656e2e5bf",
+      "current_sha256": "ebecd39b9becbd71a90579de343d550925afc1f4a102de9e68d341c656e2e5bf",
+      "current_bytes": 10914,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/extracted/00LeafCE.001",
+      "path": "reference/analysis/wiview-1.0.2/extracted/00LeafCE.001",
+      "bytes": 2319872,
+      "sha256_at_relocation": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "current_sha256": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "current_bytes": 2319872,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/extracted/BtCoreIf.005",
+      "path": "reference/analysis/wiview-1.0.2/extracted/BtCoreIf.005",
+      "bytes": 123392,
+      "sha256_at_relocation": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "current_sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "current_bytes": 123392,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/extracted/BTSDKC~1.004",
+      "path": "reference/analysis/wiview-1.0.2/extracted/BTSDKC~1.004",
+      "bytes": 188928,
+      "sha256_at_relocation": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "current_sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "current_bytes": 188928,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/extracted/CabSetup.999",
+      "path": "reference/analysis/wiview-1.0.2/extracted/CabSetup.999",
+      "bytes": 23552,
+      "sha256_at_relocation": "88f699643246d9b67bc576f65b3ba9d94de70c4d16903c32ff24ab78659bea3a",
+      "current_sha256": "88f699643246d9b67bc576f65b3ba9d94de70c4d16903c32ff24ab78659bea3a",
+      "current_bytes": 23552,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/extracted/LEAFCE~1.000",
+      "path": "reference/analysis/wiview-1.0.2/extracted/LEAFCE~1.000",
+      "bytes": 861,
+      "sha256_at_relocation": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "current_sha256": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "current_bytes": 861,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/extracted/LEAFWI~1.003",
+      "path": "reference/analysis/wiview-1.0.2/extracted/LEAFWI~1.003",
+      "bytes": 10240,
+      "sha256_at_relocation": "9a61bc949c41c631a7cd6c25b42c8d2a731a99f1b2d357cf5bca13fa9773d78d",
+      "current_sha256": "9a61bc949c41c631a7cd6c25b42c8d2a731a99f1b2d357cf5bca13fa9773d78d",
+      "current_bytes": 10240,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.2/extracted/LEAFWI~2.002",
+      "path": "reference/analysis/wiview-1.0.2/extracted/LEAFWI~2.002",
+      "bytes": 15360,
+      "sha256_at_relocation": "c6b8c1a79290de2bdb11f4b7984a56949a48615ea499cd4e98128a29181d8088",
+      "current_sha256": "c6b8c1a79290de2bdb11f4b7984a56949a48615ea499cd4e98128a29181d8088",
+      "current_bytes": 15360,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/00LeafCE.001.strings.json",
+      "path": "reference/analysis/wiview-1.0.3/00LeafCE.001.strings.json",
+      "bytes": 416321,
+      "sha256_at_relocation": "baee47fbdffa5f2ca66db038a1e978630515e717b670458613513e35d7fc1790",
+      "current_sha256": "baee47fbdffa5f2ca66db038a1e978630515e717b670458613513e35d7fc1790",
+      "current_bytes": 416321,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/binary-analysis.json",
+      "path": "reference/analysis/wiview-1.0.3/binary-analysis.json",
+      "bytes": 187446,
+      "sha256_at_relocation": "64f11cd5bc174bd7b518aaf5e95b471efaf7e342b3cd7448f8c28a1980387149",
+      "current_sha256": "64f11cd5bc174bd7b518aaf5e95b471efaf7e342b3cd7448f8c28a1980387149",
+      "current_bytes": 187446,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/BtCoreIf.005.strings.json",
+      "path": "reference/analysis/wiview-1.0.3/BtCoreIf.005.strings.json",
+      "bytes": 58202,
+      "sha256_at_relocation": "ccdbcb219eac8fdf7f4ab43ae757eb0d316a97bbd73bca44e4d4b294ca3abdd3",
+      "current_sha256": "ccdbcb219eac8fdf7f4ab43ae757eb0d316a97bbd73bca44e4d4b294ca3abdd3",
+      "current_bytes": 58202,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/BTSDKC~1.004.strings.json",
+      "path": "reference/analysis/wiview-1.0.3/BTSDKC~1.004.strings.json",
+      "bytes": 132172,
+      "sha256_at_relocation": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174",
+      "current_sha256": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174",
+      "current_bytes": 132172,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/CabSetup.999.strings.json",
+      "path": "reference/analysis/wiview-1.0.3/CabSetup.999.strings.json",
+      "bytes": 2834,
+      "sha256_at_relocation": "d412f0de38dcf3791d9db8ce04d799a0df1032cf9c5e0279e8a31cfad9eb199b",
+      "current_sha256": "d412f0de38dcf3791d9db8ce04d799a0df1032cf9c5e0279e8a31cfad9eb199b",
+      "current_bytes": 2834,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/LEAFWI~1.003.strings.json",
+      "path": "reference/analysis/wiview-1.0.3/LEAFWI~1.003.strings.json",
+      "bytes": 2754,
+      "sha256_at_relocation": "90b97350ce27406408d8f5eee7625336782d94191d2ff2ae0fe553bc37c92468",
+      "current_sha256": "90b97350ce27406408d8f5eee7625336782d94191d2ff2ae0fe553bc37c92468",
+      "current_bytes": 2754,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/LEAFWI~2.002.strings.json",
+      "path": "reference/analysis/wiview-1.0.3/LEAFWI~2.002.strings.json",
+      "bytes": 10914,
+      "sha256_at_relocation": "ebecd39b9becbd71a90579de343d550925afc1f4a102de9e68d341c656e2e5bf",
+      "current_sha256": "ebecd39b9becbd71a90579de343d550925afc1f4a102de9e68d341c656e2e5bf",
+      "current_bytes": 10914,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/extracted/00LeafCE.001",
+      "path": "reference/analysis/wiview-1.0.3/extracted/00LeafCE.001",
+      "bytes": 2357760,
+      "sha256_at_relocation": "ac6d0699870d7f9a1e00fe8bf507a35cfc38f3d2b6619e5dbae30eb248b87fe9",
+      "current_sha256": "ac6d0699870d7f9a1e00fe8bf507a35cfc38f3d2b6619e5dbae30eb248b87fe9",
+      "current_bytes": 2357760,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/extracted/BtCoreIf.005",
+      "path": "reference/analysis/wiview-1.0.3/extracted/BtCoreIf.005",
+      "bytes": 123392,
+      "sha256_at_relocation": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "current_sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "current_bytes": 123392,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/extracted/BTSDKC~1.004",
+      "path": "reference/analysis/wiview-1.0.3/extracted/BTSDKC~1.004",
+      "bytes": 188928,
+      "sha256_at_relocation": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "current_sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "current_bytes": 188928,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/extracted/CabSetup.999",
+      "path": "reference/analysis/wiview-1.0.3/extracted/CabSetup.999",
+      "bytes": 23552,
+      "sha256_at_relocation": "32c2a943b31fbc12cf596e649ee883f543ed13d40ab30e425cd07f20203bd109",
+      "current_sha256": "32c2a943b31fbc12cf596e649ee883f543ed13d40ab30e425cd07f20203bd109",
+      "current_bytes": 23552,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/extracted/LEAFCE~1.000",
+      "path": "reference/analysis/wiview-1.0.3/extracted/LEAFCE~1.000",
+      "bytes": 861,
+      "sha256_at_relocation": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "current_sha256": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "current_bytes": 861,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/extracted/LEAFWI~1.003",
+      "path": "reference/analysis/wiview-1.0.3/extracted/LEAFWI~1.003",
+      "bytes": 18432,
+      "sha256_at_relocation": "aa864a45bf7e4b1800c648ea6565d7da9dc36922cbf06d85781a9ec3c08f1530",
+      "current_sha256": "aa864a45bf7e4b1800c648ea6565d7da9dc36922cbf06d85781a9ec3c08f1530",
+      "current_bytes": 18432,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/generated/wiview-1.0.3/extracted/LEAFWI~2.002",
+      "path": "reference/analysis/wiview-1.0.3/extracted/LEAFWI~2.002",
+      "bytes": 15360,
+      "sha256_at_relocation": "91904d568629a7a32f8aadfeadcf2ab1a582ac3c69456a2501f935dc23b8cbbf",
+      "current_sha256": "91904d568629a7a32f8aadfeadcf2ab1a582ac3c69456a2501f935dc23b8cbbf",
+      "current_bytes": 15360,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/extracted/wiview-1.0.2/00LeafCE.001",
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/00LeafCE.001",
+      "bytes": 2319872,
+      "sha256_at_relocation": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "current_sha256": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "current_bytes": 2319872,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/extracted/wiview-1.0.2/BtCoreIf.005",
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/BtCoreIf.005",
+      "bytes": 123392,
+      "sha256_at_relocation": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "current_sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "current_bytes": 123392,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/extracted/wiview-1.0.2/BTSDKC~1.004",
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/BTSDKC~1.004",
+      "bytes": 188928,
+      "sha256_at_relocation": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "current_sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "current_bytes": 188928,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/extracted/wiview-1.0.2/CabSetup.999",
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/CabSetup.999",
+      "bytes": 23552,
+      "sha256_at_relocation": "88f699643246d9b67bc576f65b3ba9d94de70c4d16903c32ff24ab78659bea3a",
+      "current_sha256": "88f699643246d9b67bc576f65b3ba9d94de70c4d16903c32ff24ab78659bea3a",
+      "current_bytes": 23552,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/extracted/wiview-1.0.2/LEAFCE~1.000",
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/LEAFCE~1.000",
+      "bytes": 861,
+      "sha256_at_relocation": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "current_sha256": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "current_bytes": 861,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/extracted/wiview-1.0.2/LEAFWI~1.003",
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/LEAFWI~1.003",
+      "bytes": 10240,
+      "sha256_at_relocation": "9a61bc949c41c631a7cd6c25b42c8d2a731a99f1b2d357cf5bca13fa9773d78d",
+      "current_sha256": "9a61bc949c41c631a7cd6c25b42c8d2a731a99f1b2d357cf5bca13fa9773d78d",
+      "current_bytes": 10240,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/extracted/wiview-1.0.2/LEAFWI~2.002",
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/LEAFWI~2.002",
+      "bytes": 15360,
+      "sha256_at_relocation": "c6b8c1a79290de2bdb11f4b7984a56949a48615ea499cd4e98128a29181d8088",
+      "current_sha256": "c6b8c1a79290de2bdb11f4b7984a56949a48615ea499cd4e98128a29181d8088",
+      "current_bytes": 15360,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/reports/protocol-evidence.json",
+      "path": "reference/analysis/protocol-evidence.json",
+      "bytes": 15304,
+      "sha256_at_relocation": "0aa8a52f9e20abe3abb680846321d46cfb30a3584b21e99a99742cc90e7679cf",
+      "current_sha256": "0aa8a52f9e20abe3abb680846321d46cfb30a3584b21e99a99742cc90e7679cf",
+      "current_bytes": 15304,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/reports/version-comparison.json",
+      "path": "reference/analysis/version-comparison.json",
+      "bytes": 20607,
+      "sha256_at_relocation": "1ed099fb6464baab6fe01e541805626654c687a9564046364397d5e440027d04",
+      "current_sha256": "1ed099fb6464baab6fe01e541805626654c687a9564046364397d5e440027d04",
+      "current_bytes": 20607,
+      "metadata_updated_after_relocation": false
+    },
+    {
+      "original_path": "research/sources.lock.json",
+      "path": "reference/sources.lock.json",
+      "bytes": 5059,
+      "sha256_at_relocation": "c6817859046b87547a693801997f2828cb1a350788e89265c08c24c6ef7603e3",
+      "current_sha256": "72186ca3a9ee5153014a8fdaa9329577c0cc066c59b184cb5e7264dabd23f5c6",
+      "current_bytes": 5311,
+      "metadata_updated_after_relocation": true
+    }
+  ]
+}

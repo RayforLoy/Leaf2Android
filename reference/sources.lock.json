@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "note": "SHA-256 pins identify acquired bytes; archive checksum agreement does not independently authenticate a community CD upload. Never run vendor binaries.",
+  "sources": [
+    {
+      "id": "LeafWiView-1.0.2.CAB",
+      "path": "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB",
+      "url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView%2011%201.0.2%20for%20PC%20installer/WiView%2011%201.0.2%20installer/installfile/Leaf%20WiView_11_1_0_2.CAB",
+      "resolved_url": "https://dn720301.ca.archive.org/0/items/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView%2011%201.0.2%20for%20PC%20installer/WiView%2011%201.0.2%20installer/installfile/Leaf%20WiView_11_1_0_2.CAB",
+      "retrieved_at": "2026-10-17T16:12:34.421611+00:00",
+      "size": 2683140,
+      "sha256": "5f38aab055b2cb46560e59aa87d019a76a0e7e4a2d6866fbbc58b8e5eac56f85",
+      "archive_sha1": "b4875c333b0d8410ea164186c9b89226da047ac9",
+      "archive_md5": "46fb4b30c8cafb34b76f630d46a2c993",
+      "archive_item": "https://archive.org/details/leaf-capture-11",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "id": "WiView-1.0.2-mac-Installer.data",
+      "path": "reference/wiview/1.0.2/WiView-1.0.2-mac-Installer.data",
+      "url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView11%201.0.2%20Installer.app/Contents/InstallerData/Installer.data",
+      "resolved_url": "https://dn720301.ca.archive.org/0/items/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView11%201.0.2%20Installer.app/Contents/InstallerData/Installer.data",
+      "retrieved_at": "2026-10-17T16:12:33.875217+00:00",
+      "size": 835922,
+      "sha256": "6a864adb792c657d093135602c5413ba5a8ed98c87ba0730d9415cd9e30b23d4",
+      "archive_sha1": "295f0e3af517e65317c75b305cefec8165e5066d",
+      "archive_md5": "9c3216a231385444e6767d8d232c241e",
+      "archive_item": "https://archive.org/details/leaf-capture-11",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "id": "WiView-1.0.2-ReadMe.txt",
+      "path": "reference/wiview/1.0.2/WiView-1.0.2-ReadMe.txt",
+      "url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView11%201.0.2%20Installer.app/Contents/Resources/ReadMe.txt",
+      "resolved_url": "https://dn720301.ca.archive.org/0/items/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView11%201.0.2%20Installer.app/Contents/Resources/ReadMe.txt",
+      "retrieved_at": "2026-10-17T16:12:30.377049+00:00",
+      "size": 5570,
+      "sha256": "89e57de9c04d2a08bff0f59b0a43e6878de8940b8d21f5f4181e84e4cf8cc912",
+      "archive_sha1": "785df84c54589da357e14cdb213dbbbf323b0a36",
+      "archive_md5": "f75ece0ba3ec6c5cdfe83eaf75087d37",
+      "archive_item": "https://archive.org/details/leaf-capture-11",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "id": "LeafWiView-Installation-2007.pdf",
+      "path": "reference/wiview/guides/LeafWiView-Installation-2007.pdf",
+      "url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Leaf_Aptus/Documentation/LeafWiView_Installation_Guide.pdf",
+      "resolved_url": "https://dn720301.ca.archive.org/0/items/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Leaf_Aptus/Documentation/LeafWiView_Installation_Guide.pdf",
+      "retrieved_at": "2026-10-17T16:12:32.601841+00:00",
+      "size": 743496,
+      "sha256": "777b294d5dc1f96f014a3bc9d6871fe3d3e920281105941705b5de82bbde4f23",
+      "archive_sha1": "3789183e35f41dc994f514cffcc867dfbd74b35f",
+      "archive_md5": "f8a2edf9e1897c045ab4c011e07206e9",
+      "archive_item": "https://archive.org/details/leaf-capture-11",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "id": "LeafWiView-1.0.3-Installation-2008.pdf",
+      "path": "reference/wiview/guides/LeafWiView-1.0.3-Installation-2008.pdf",
+      "url": "https://web.archive.org/web/20081230142347id_/http://www.leaf-photography.com/imgs/uploads/user%20guides/leafwiview_103_installation.pdf",
+      "retrieved_at": "2026-10-17T16:16:00.042389+00:00",
+      "size": 563679,
+      "sha256": "dc2d731c083df87cc05722691b4807501818e6c075b199b6462e8c97336a8aef",
+      "provenance": "manufacturer installation guide, archived from official Leaf website"
+    },
+    {
+      "id": "user-wiview-1.0.3-cab",
+      "path": "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB",
+      "url": null,
+      "size": 2729244,
+      "sha256": "0f0a34891b3b4f7c70c6681092da38cd5d0bb9cadc82ff7b6dcb793c399b4cce",
+      "provenance": "User supplied in this chat on 2026-10-18; original publisher not independently authenticated"
+    }
+  ],
+  "organization_date": "2026-11-10",
+  "layout": "All manufacturer inputs live under reference/wiview; generated analyses under reference/analysis. No camera-back firmware image has been supplied."
+}

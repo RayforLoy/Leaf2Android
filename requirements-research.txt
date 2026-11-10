@@ -1,0 +1,4 @@
+capstone==5.0.6
+pefile==2024.8.26
+pypdf==6.16.2
+

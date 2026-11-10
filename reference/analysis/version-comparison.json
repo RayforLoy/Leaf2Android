@@ -1,0 +1,738 @@
+{
+  "before_cab_sha256": "5f38aab055b2cb46560e59aa87d019a76a0e7e4a2d6866fbbc58b8e5eac56f85",
+  "after_cab_sha256": "0f0a34891b3b4f7c70c6681092da38cd5d0bb9cadc82ff7b6dcb793c399b4cce",
+  "components": [
+    {
+      "cab_name": "CabSetup.999",
+      "module_name": "CabSetup.dll",
+      "before_size": 23552,
+      "after_size": 23552,
+      "identical_file": false,
+      "sections": [
+        {
+          "name": ".text",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rdata",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".data",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".pdata",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rsrc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".reloc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        }
+      ]
+    },
+    {
+      "cab_name": "BtCoreIf.005",
+      "module_name": "BtCoreIf.dll",
+      "before_size": 123392,
+      "after_size": 123392,
+      "identical_file": true,
+      "sections": [
+        {
+          "name": ".text",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rdata",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".data",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".pdata",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rsrc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".reloc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        }
+      ]
+    },
+    {
+      "cab_name": "BTSDKC~1.004",
+      "module_name": "BtSdkCE30.dll",
+      "before_size": 188928,
+      "after_size": 188928,
+      "identical_file": true,
+      "sections": [
+        {
+          "name": ".text",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rdata",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".data",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".pdata",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rsrc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".reloc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        }
+      ]
+    },
+    {
+      "cab_name": "LEAFWI~1.003",
+      "module_name": "LeafWiLauncher.dll",
+      "before_size": 10240,
+      "after_size": 18432,
+      "identical_file": false,
+      "sections": [
+        {
+          "name": ".text",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rdata",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".data",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".pdata",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rsrc",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": false
+        },
+        {
+          "name": ".reloc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        }
+      ]
+    },
+    {
+      "cab_name": "LEAFWI~2.002",
+      "module_name": "LeafWiBTStack.dll",
+      "before_size": 15360,
+      "after_size": 15360,
+      "identical_file": false,
+      "sections": [
+        {
+          "name": ".text",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".rdata",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".data",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".pdata",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        },
+        {
+          "name": ".reloc",
+          "identical_bytes": true,
+          "identical_without_export_timestamp": true
+        }
+      ]
+    },
+    {
+      "cab_name": "00LeafCE.001",
+      "module_name": null,
+      "before_size": 2319872,
+      "after_size": 2357760,
+      "identical_file": false,
+      "sections": [
+        {
+          "name": ".text",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": false
+        },
+        {
+          "name": ".rdata",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": false
+        },
+        {
+          "name": ".data",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": false
+        },
+        {
+          "name": ".pdata",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": false
+        },
+        {
+          "name": ".rsrc",
+          "identical_bytes": false,
+          "identical_without_export_timestamp": false
+        }
+      ]
+    }
+  ],
+  "command_anchors": [
+    {
+      "text": "^<Ack />",
+      "before": {
+        "offset": "0xfb47c",
+        "va": "0x10cc7c",
+        "encoding": "utf-16le",
+        "text": "^<Ack />"
+      },
+      "after": {
+        "offset": "0xfde2c",
+        "va": "0x10f02c",
+        "encoding": "utf-16le",
+        "text": "^<Ack />"
+      }
+    },
+    {
+      "text": "^<Ack/>",
+      "before": {
+        "offset": "0xf829c",
+        "va": "0x109a9c",
+        "encoding": "ascii",
+        "text": "^<Ack/>"
+      },
+      "after": {
+        "offset": "0xfaae0",
+        "va": "0x10bce0",
+        "encoding": "ascii",
+        "text": "^<Ack/>"
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"copy\" Subject=\"",
+      "before": {
+        "offset": "0xfbbc8",
+        "va": "0x10d3c8",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"copy\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfe5a0",
+        "va": "0x10f7a0",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"copy\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"del\" Subject=\"",
+      "before": {
+        "offset": "0xfa948",
+        "va": "0x10c148",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"del\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfd288",
+        "va": "0x10e488",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"del\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"dir\" Subject=\"",
+      "before": {
+        "offset": "0xfada8",
+        "va": "0x10c5a8",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"dir\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfd6e8",
+        "va": "0x10e8e8",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"dir\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />",
+      "before": {
+        "offset": "0xfae10",
+        "va": "0x10c610",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />"
+      },
+      "after": {
+        "offset": "0xfd750",
+        "va": "0x10e950",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />"
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"mkdir\" Subject=\"",
+      "before": {
+        "offset": "0xfbd68",
+        "va": "0x10d568",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfe740",
+        "va": "0x10f940",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"move\" Subject=\"",
+      "before": {
+        "offset": "0xfbb58",
+        "va": "0x10d358",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"move\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfe530",
+        "va": "0x10f730",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"move\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"qformat\" Subject=\"",
+      "before": {
+        "offset": "0xfa750",
+        "va": "0x10bf50",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"qformat\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfd090",
+        "va": "0x10e290",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"qformat\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"recovery\" Subject=\"",
+      "before": {
+        "offset": "0xfa7b0",
+        "va": "0x10bfb0",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"recovery\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfd0f0",
+        "va": "0x10e2f0",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"recovery\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"rename\" Subject=\"",
+      "before": {
+        "offset": "0xfbcc0",
+        "va": "0x10d4c0",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"rename\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfe698",
+        "va": "0x10f898",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"rename\" Subject=\""
+      }
+    },
+    {
+      "text": "^<FileCommand FileCommand=\"rmdir\" Subject=\"",
+      "before": {
+        "offset": "0xfbc38",
+        "va": "0x10d438",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+      },
+      "after": {
+        "offset": "0xfe610",
+        "va": "0x10f810",
+        "encoding": "utf-16le",
+        "text": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+      }
+    },
+    {
+      "text": "^<GetCameraParam GetParamList=\"Copyright;Annotation\" />",
+      "before": {
+        "offset": "0xfc688",
+        "va": "0x10de88",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"Copyright;Annotation\" />"
+      },
+      "after": {
+        "offset": "0xff0d8",
+        "va": "0x1102d8",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"Copyright;Annotation\" />"
+      }
+    },
+    {
+      "text": "^<GetCameraParam GetParamList=\"CurrentTime\" />",
+      "before": {
+        "offset": "0xfad48",
+        "va": "0x10c548",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"CurrentTime\" />"
+      },
+      "after": {
+        "offset": "0xfd688",
+        "va": "0x10e888",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"CurrentTime\" />"
+      }
+    },
+    {
+      "text": "^<GetCameraParam GetParamList=\"Histogram_scale\" />",
+      "before": {
+        "offset": "0xfbdd8",
+        "va": "0x10d5d8",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"Histogram_scale\" />"
+      },
+      "after": {
+        "offset": "0xfe7b0",
+        "va": "0x10f9b0",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"Histogram_scale\" />"
+      }
+    },
+    {
+      "text": "^<GetCameraParam GetParamList=\"TotalFrames\" />",
+      "before": {
+        "offset": "0xfc340",
+        "va": "0x10db40",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"TotalFrames\" />"
+      },
+      "after": {
+        "offset": "0xfed88",
+        "va": "0x10ff88",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"TotalFrames\" />"
+      }
+    },
+    {
+      "text": "^<GetCameraParam GetParamList=\"battery_percent\" />",
+      "before": {
+        "offset": "0xfbfd8",
+        "va": "0x10d7d8",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"battery_percent\" />"
+      },
+      "after": {
+        "offset": "0xfe9b0",
+        "va": "0x10fbb0",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"battery_percent\" />"
+      }
+    },
+    {
+      "text": "^<GetCameraParam GetParamList=\"exp_left\" />",
+      "before": {
+        "offset": "0xfbe40",
+        "va": "0x10d640",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"exp_left\" />"
+      },
+      "after": {
+        "offset": "0xfe818",
+        "va": "0x10fa18",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"exp_left\" />"
+      }
+    },
+    {
+      "text": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />",
+      "before": {
+        "offset": "0xfc488",
+        "va": "0x10dc88",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />"
+      },
+      "after": {
+        "offset": "0xfeed0",
+        "va": "0x1100d0",
+        "encoding": "utf-16le",
+        "text": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />"
+      }
+    },
+    {
+      "text": "^<GetImage file_name=\"",
+      "before": {
+        "offset": "0xfb4a4",
+        "va": "0x10cca4",
+        "encoding": "utf-16le",
+        "text": "^<GetImage file_name=\""
+      },
+      "after": {
+        "offset": "0xfde7c",
+        "va": "0x10f07c",
+        "encoding": "utf-16le",
+        "text": "^<GetImage file_name=\""
+      }
+    },
+    {
+      "text": "^<GetPictureParams file_name=\"",
+      "before": {
+        "offset": "0xfa880",
+        "va": "0x10c080",
+        "encoding": "utf-16le",
+        "text": "^<GetPictureParams file_name=\""
+      },
+      "after": {
+        "offset": "0xfd1c0",
+        "va": "0x10e3c0",
+        "encoding": "utf-16le",
+        "text": "^<GetPictureParams file_name=\""
+      }
+    },
+    {
+      "text": "^<ImageFunction file_name=\"",
+      "before": {
+        "offset": "0xfbaac",
+        "va": "0x10d2ac",
+        "encoding": "utf-16le",
+        "text": "^<ImageFunction file_name=\""
+      },
+      "after": {
+        "offset": "0xfe484",
+        "va": "0x10f684",
+        "encoding": "utf-16le",
+        "text": "^<ImageFunction file_name=\""
+      }
+    },
+    {
+      "text": "^<Nak />",
+      "before": null,
+      "after": {
+        "offset": "0xfde54",
+        "va": "0x10f054",
+        "encoding": "utf-16le",
+        "text": "^<Nak />"
+      }
+    },
+    {
+      "text": "^<ReSyncRequest />",
+      "before": {
+        "offset": "0xfb440",
+        "va": "0x10cc40",
+        "encoding": "utf-16le",
+        "text": "^<ReSyncRequest />"
+      },
+      "after": {
+        "offset": "0xfddf0",
+        "va": "0x10eff0",
+        "encoding": "utf-16le",
+        "text": "^<ReSyncRequest />"
+      }
+    },
+    {
+      "text": "^<RequestSync />",
+      "before": {
+        "offset": "0xfad20",
+        "va": "0x10c520",
+        "encoding": "utf-16le",
+        "text": "^<RequestSync />"
+      },
+      "after": {
+        "offset": "0xfd660",
+        "va": "0x10e860",
+        "encoding": "utf-16le",
+        "text": "^<RequestSync />"
+      }
+    },
+    {
+      "text": "^<SetCameraParam ",
+      "before": {
+        "offset": "0xfba5c",
+        "va": "0x10d25c",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam "
+      },
+      "after": {
+        "offset": "0xfe434",
+        "va": "0x10f634",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam "
+      }
+    },
+    {
+      "text": "^<SetCameraParam Brightness=\"",
+      "before": {
+        "offset": "0xfc0bc",
+        "va": "0x10d8bc",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam Brightness=\""
+      },
+      "after": {
+        "offset": "0xfea94",
+        "va": "0x10fc94",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam Brightness=\""
+      }
+    },
+    {
+      "text": "^<SetCameraParam CEVersion=\"",
+      "before": {
+        "offset": "0xfc1c8",
+        "va": "0x10d9c8",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam CEVersion=\""
+      },
+      "after": {
+        "offset": "0xfec10",
+        "va": "0x10fe10",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam CEVersion=\""
+      }
+    },
+    {
+      "text": "^<SetCameraParam CurrentTime=\"",
+      "before": {
+        "offset": "0xfb79c",
+        "va": "0x10cf9c",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam CurrentTime=\""
+      },
+      "after": {
+        "offset": "0xfe174",
+        "va": "0x10f374",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam CurrentTime=\""
+      }
+    },
+    {
+      "text": "^<SetCameraParam EnableTakenPicture=\"",
+      "before": {
+        "offset": "0xfc110",
+        "va": "0x10d910",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam EnableTakenPicture=\""
+      },
+      "after": {
+        "offset": "0xfeb58",
+        "va": "0x10fd58",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam EnableTakenPicture=\""
+      }
+    },
+    {
+      "text": "^<SetCameraParam NewPinCode=\"",
+      "before": {
+        "offset": "0xfc2ec",
+        "va": "0x10daec",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam NewPinCode=\""
+      },
+      "after": {
+        "offset": "0xfed34",
+        "va": "0x10ff34",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam NewPinCode=\""
+      }
+    },
+    {
+      "text": "^<SetCameraParam PowerSource=\"",
+      "before": null,
+      "after": {
+        "offset": "0xfeb00",
+        "va": "0x10fd00",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam PowerSource=\""
+      }
+    },
+    {
+      "text": "^<SetCameraParam ResetCounter=\"yes\" />",
+      "before": {
+        "offset": "0xfc420",
+        "va": "0x10dc20",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam ResetCounter=\"yes\" />"
+      },
+      "after": {
+        "offset": "0xfee68",
+        "va": "0x110068",
+        "encoding": "utf-16le",
+        "text": "^<SetCameraParam ResetCounter=\"yes\" />"
+      }
+    },
+    {
+      "text": "^<SetPictureParams file_name=\"",
+      "before": {
+        "offset": "0xfa8fc",
+        "va": "0x10c0fc",
+        "encoding": "utf-16le",
+        "text": "^<SetPictureParams file_name=\""
+      },
+      "after": {
+        "offset": "0xfd23c",
+        "va": "0x10e43c",
+        "encoding": "utf-16le",
+        "text": "^<SetPictureParams file_name=\""
+      }
+    }
+  ],
+  "added_command_anchors": [
+    "^<Nak />",
+    "^<SetCameraParam PowerSource=\""
+  ],
+  "removed_command_anchors": [],
+  "interpretation": "File and section equality is byte equality only. Strings are static evidence, not hardware validation."
+}

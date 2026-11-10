@@ -1,0 +1,2858 @@
+[
+  {
+    "offset": "0x16730",
+    "va": "0x118130",
+    "encoding": "ascii",
+    "text": "COREDLL.dll"
+  },
+  {
+    "offset": "0x1673e",
+    "va": "0x11813e",
+    "encoding": "ascii",
+    "text": "closesocket"
+  },
+  {
+    "offset": "0x1674c",
+    "va": "0x11814c",
+    "encoding": "ascii",
+    "text": "sendto"
+  },
+  {
+    "offset": "0x16756",
+    "va": "0x118156",
+    "encoding": "ascii",
+    "text": "bind"
+  },
+  {
+    "offset": "0x1675e",
+    "va": "0x11815e",
+    "encoding": "ascii",
+    "text": "socket"
+  },
+  {
+    "offset": "0x16768",
+    "va": "0x118168",
+    "encoding": "ascii",
+    "text": "ntohl"
+  },
+  {
+    "offset": "0x1676e",
+    "va": "0x11816e",
+    "encoding": "ascii",
+    "text": "WINSOCK.dll"
+  },
+  {
+    "offset": "0x17038",
+    "va": "0x118a38",
+    "encoding": "utf-16le",
+    "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+  },
+  {
+    "offset": "0x1720c",
+    "va": "0x118c0c",
+    "encoding": "ascii",
+    "text": "BtCoreIf.dll"
+  },
+  {
+    "offset": "0x17219",
+    "va": "0x118c19",
+    "encoding": "ascii",
+    "text": "?g_bUseDST@@3HA"
+  },
+  {
+    "offset": "0x17229",
+    "va": "0x118c29",
+    "encoding": "ascii",
+    "text": "BTM_AcceptScoLink"
+  },
+  {
+    "offset": "0x1723b",
+    "va": "0x118c3b",
+    "encoding": "ascii",
+    "text": "BTM_AclRegisterForChanges"
+  },
+  {
+    "offset": "0x17255",
+    "va": "0x118c55",
+    "encoding": "ascii",
+    "text": "BTM_AddDevice"
+  },
+  {
+    "offset": "0x17263",
+    "va": "0x118c63",
+    "encoding": "ascii",
+    "text": "BTM_AllocateSCN"
+  },
+  {
+    "offset": "0x17273",
+    "va": "0x118c73",
+    "encoding": "ascii",
+    "text": "BTM_AllocateSecurityIndex"
+  },
+  {
+    "offset": "0x1728d",
+    "va": "0x118c8d",
+    "encoding": "ascii",
+    "text": "BTM_CancelInquiry"
+  },
+  {
+    "offset": "0x1729f",
+    "va": "0x118c9f",
+    "encoding": "ascii",
+    "text": "BTM_CancelParkMode"
+  },
+  {
+    "offset": "0x172b2",
+    "va": "0x118cb2",
+    "encoding": "ascii",
+    "text": "BTM_CancelPeriodicInquiry"
+  },
+  {
+    "offset": "0x172cc",
+    "va": "0x118ccc",
+    "encoding": "ascii",
+    "text": "BTM_CancelSniffMode"
+  },
+  {
+    "offset": "0x172e0",
+    "va": "0x118ce0",
+    "encoding": "ascii",
+    "text": "BTM_CreateSco"
+  },
+  {
+    "offset": "0x172ee",
+    "va": "0x118cee",
+    "encoding": "ascii",
+    "text": "BTM_DeleteDevice"
+  },
+  {
+    "offset": "0x172ff",
+    "va": "0x118cff",
+    "encoding": "ascii",
+    "text": "BTM_DeregisterSleeper"
+  },
+  {
+    "offset": "0x17315",
+    "va": "0x118d15",
+    "encoding": "ascii",
+    "text": "BTM_DeviceAuthorized"
+  },
+  {
+    "offset": "0x1732a",
+    "va": "0x118d2a",
+    "encoding": "ascii",
+    "text": "BTM_FindService"
+  },
+  {
+    "offset": "0x1733a",
+    "va": "0x118d3a",
+    "encoding": "ascii",
+    "text": "BTM_FreeSCN"
+  },
+  {
+    "offset": "0x17346",
+    "va": "0x118d46",
+    "encoding": "ascii",
+    "text": "BTM_GetACLDiscReasonCode"
+  },
+  {
+    "offset": "0x1735f",
+    "va": "0x118d5f",
+    "encoding": "ascii",
+    "text": "BTM_GetLocalDeviceAddr"
+  },
+  {
+    "offset": "0x17376",
+    "va": "0x118d76",
+    "encoding": "ascii",
+    "text": "BTM_GetNumAclLinks"
+  },
+  {
+    "offset": "0x17389",
+    "va": "0x118d89",
+    "encoding": "ascii",
+    "text": "BTM_GetSCODiscReasonCode"
+  },
+  {
+    "offset": "0x173a2",
+    "va": "0x118da2",
+    "encoding": "ascii",
+    "text": "BTM_GetVoiceCodingSupport"
+  },
+  {
+    "offset": "0x173bc",
+    "va": "0x118dbc",
+    "encoding": "ascii",
+    "text": "BTM_InqDbFirst"
+  },
+  {
+    "offset": "0x173cb",
+    "va": "0x118dcb",
+    "encoding": "ascii",
+    "text": "BTM_InqDbNext"
+  },
+  {
+    "offset": "0x173d9",
+    "va": "0x118dd9",
+    "encoding": "ascii",
+    "text": "BTM_InquiryRegisterForChanges"
+  },
+  {
+    "offset": "0x173f7",
+    "va": "0x118df7",
+    "encoding": "ascii",
+    "text": "BTM_IsAclConnectionUp"
+  },
+  {
+    "offset": "0x1740d",
+    "va": "0x118e0d",
+    "encoding": "ascii",
+    "text": "BTM_IsDevicePresent"
+  },
+  {
+    "offset": "0x17421",
+    "va": "0x118e21",
+    "encoding": "ascii",
+    "text": "BTM_IsDeviceUp"
+  },
+  {
+    "offset": "0x17430",
+    "va": "0x118e30",
+    "encoding": "ascii",
+    "text": "BTM_PANConnect"
+  },
+  {
+    "offset": "0x1743f",
+    "va": "0x118e3f",
+    "encoding": "ascii",
+    "text": "BTM_PANDisconnect"
+  },
+  {
+    "offset": "0x17451",
+    "va": "0x118e51",
+    "encoding": "ascii",
+    "text": "BTM_PANGetConnectionStats"
+  },
+  {
+    "offset": "0x1746b",
+    "va": "0x118e6b",
+    "encoding": "ascii",
+    "text": "BTM_PANNdisUnload"
+  },
+  {
+    "offset": "0x1747d",
+    "va": "0x118e7d",
+    "encoding": "ascii",
+    "text": "BTM_PINCodeReply"
+  },
+  {
+    "offset": "0x1748e",
+    "va": "0x118e8e",
+    "encoding": "ascii",
+    "text": "BTM_ReadConnectability"
+  },
+  {
+    "offset": "0x174a5",
+    "va": "0x118ea5",
+    "encoding": "ascii",
+    "text": "BTM_ReadDeviceClass"
+  },
+  {
+    "offset": "0x174b9",
+    "va": "0x118eb9",
+    "encoding": "ascii",
+    "text": "BTM_ReadDeviceScoPacketTypes"
+  },
+  {
+    "offset": "0x174d6",
+    "va": "0x118ed6",
+    "encoding": "ascii",
+    "text": "BTM_ReadDiscoverability"
+  },
+  {
+    "offset": "0x174ee",
+    "va": "0x118eee",
+    "encoding": "ascii",
+    "text": "BTM_ReadLocalDeviceName"
+  },
+  {
+    "offset": "0x17506",
+    "va": "0x118f06",
+    "encoding": "ascii",
+    "text": "BTM_ReadLocalFeatures"
+  },
+  {
+    "offset": "0x1751c",
+    "va": "0x118f1c",
+    "encoding": "ascii",
+    "text": "BTM_ReadRemoteDeviceName"
+  },
+  {
+    "offset": "0x17535",
+    "va": "0x118f35",
+    "encoding": "ascii",
+    "text": "BTM_ReadScoBdAddr"
+  },
+  {
+    "offset": "0x17547",
+    "va": "0x118f47",
+    "encoding": "ascii",
+    "text": "BTM_ReadScoHandle"
+  },
+  {
+    "offset": "0x17559",
+    "va": "0x118f59",
+    "encoding": "ascii",
+    "text": "BTM_RegisterForDeviceStatusNotif"
+  },
+  {
+    "offset": "0x1757a",
+    "va": "0x118f7a",
+    "encoding": "ascii",
+    "text": "BTM_RegisterL2CAPSleeper"
+  },
+  {
+    "offset": "0x17593",
+    "va": "0x118f93",
+    "encoding": "ascii",
+    "text": "BTM_RegisterRfcommSleeper"
+  },
+  {
+    "offset": "0x175ad",
+    "va": "0x118fad",
+    "encoding": "ascii",
+    "text": "BTM_RejectScoLink"
+  },
+  {
+    "offset": "0x175bf",
+    "va": "0x118fbf",
+    "encoding": "ascii",
+    "text": "BTM_ReleaseSecurityIndex"
+  },
+  {
+    "offset": "0x175d8",
+    "va": "0x118fd8",
+    "encoding": "ascii",
+    "text": "BTM_RemoveSco"
+  },
+  {
+    "offset": "0x175e6",
+    "va": "0x118fe6",
+    "encoding": "ascii",
+    "text": "BTM_ScoCommand"
+  },
+  {
+    "offset": "0x175f5",
+    "va": "0x118ff5",
+    "encoding": "ascii",
+    "text": "BTM_SecAddRmtNameNotifyCallback"
+  },
+  {
+    "offset": "0x17615",
+    "va": "0x119015",
+    "encoding": "ascii",
+    "text": "BTM_SecBond"
+  },
+  {
+    "offset": "0x17621",
+    "va": "0x119021",
+    "encoding": "ascii",
+    "text": "BTM_SecRegister"
+  },
+  {
+    "offset": "0x17631",
+    "va": "0x119031",
+    "encoding": "ascii",
+    "text": "BTM_SetConnectability"
+  },
+  {
+    "offset": "0x17647",
+    "va": "0x119047",
+    "encoding": "ascii",
+    "text": "BTM_SetDefaultLinkPolicy"
+  },
+  {
+    "offset": "0x17660",
+    "va": "0x119060",
+    "encoding": "ascii",
+    "text": "BTM_SetDefaultLinkSuperTout"
+  },
+  {
+    "offset": "0x1767c",
+    "va": "0x11907c",
+    "encoding": "ascii",
+    "text": "BTM_SetDeviceClass"
+  },
+  {
+    "offset": "0x1768f",
+    "va": "0x11908f",
+    "encoding": "ascii",
+    "text": "BTM_SetDiscoverability"
+  },
+  {
+    "offset": "0x176a6",
+    "va": "0x1190a6",
+    "encoding": "ascii",
+    "text": "BTM_SetHoldMode"
+  },
+  {
+    "offset": "0x176b6",
+    "va": "0x1190b6",
+    "encoding": "ascii",
+    "text": "BTM_SetLinkSuperTout"
+  },
+  {
+    "offset": "0x176cb",
+    "va": "0x1190cb",
+    "encoding": "ascii",
+    "text": "BTM_SetLocalDeviceName"
+  },
+  {
+    "offset": "0x176e2",
+    "va": "0x1190e2",
+    "encoding": "ascii",
+    "text": "BTM_SetPairableMode"
+  },
+  {
+    "offset": "0x176f6",
+    "va": "0x1190f6",
+    "encoding": "ascii",
+    "text": "BTM_SetParkMode"
+  },
+  {
+    "offset": "0x17706",
+    "va": "0x119106",
+    "encoding": "ascii",
+    "text": "BTM_SetPeriodicInquiryMode"
+  },
+  {
+    "offset": "0x17721",
+    "va": "0x119121",
+    "encoding": "ascii",
+    "text": "BTM_SetPinType"
+  },
+  {
+    "offset": "0x17730",
+    "va": "0x119130",
+    "encoding": "ascii",
+    "text": "BTM_SetScoIndCback"
+  },
+  {
+    "offset": "0x17743",
+    "va": "0x119143",
+    "encoding": "ascii",
+    "text": "BTM_SetSecurityLevel"
+  },
+  {
+    "offset": "0x17758",
+    "va": "0x119158",
+    "encoding": "ascii",
+    "text": "BTM_SetSecurityMode"
+  },
+  {
+    "offset": "0x1776c",
+    "va": "0x11916c",
+    "encoding": "ascii",
+    "text": "BTM_SetSniffMode"
+  },
+  {
+    "offset": "0x1777d",
+    "va": "0x11917d",
+    "encoding": "ascii",
+    "text": "BTM_StartDiscovery"
+  },
+  {
+    "offset": "0x17790",
+    "va": "0x119190",
+    "encoding": "ascii",
+    "text": "BTM_StartInquiry"
+  },
+  {
+    "offset": "0x177a1",
+    "va": "0x1191a1",
+    "encoding": "ascii",
+    "text": "BTM_SwitchRole"
+  },
+  {
+    "offset": "0x177b0",
+    "va": "0x1191b0",
+    "encoding": "ascii",
+    "text": "BTM_UnpairDevice"
+  },
+  {
+    "offset": "0x177c1",
+    "va": "0x1191c1",
+    "encoding": "ascii",
+    "text": "BT_BD_ANY"
+  },
+  {
+    "offset": "0x177cb",
+    "va": "0x1191cb",
+    "encoding": "ascii",
+    "text": "BtCoreIf_Init"
+  },
+  {
+    "offset": "0x177d9",
+    "va": "0x1191d9",
+    "encoding": "ascii",
+    "text": "BtCoreIf_LogMsg"
+  },
+  {
+    "offset": "0x177e9",
+    "va": "0x1191e9",
+    "encoding": "ascii",
+    "text": "BtCoreIf_ProtocolTrace"
+  },
+  {
+    "offset": "0x17800",
+    "va": "0x119200",
+    "encoding": "ascii",
+    "text": "BtCoreIf_ShutDown"
+  },
+  {
+    "offset": "0x17812",
+    "va": "0x119212",
+    "encoding": "ascii",
+    "text": "GAP_AuthorizeRsp"
+  },
+  {
+    "offset": "0x17823",
+    "va": "0x119223",
+    "encoding": "ascii",
+    "text": "GAP_Bond"
+  },
+  {
+    "offset": "0x1782c",
+    "va": "0x11922c",
+    "encoding": "ascii",
+    "text": "GAP_CancelInquiry"
+  },
+  {
+    "offset": "0x1783e",
+    "va": "0x11923e",
+    "encoding": "ascii",
+    "text": "GAP_CancelPeriodicInquiry"
+  },
+  {
+    "offset": "0x17858",
+    "va": "0x119258",
+    "encoding": "ascii",
+    "text": "GAP_ConnBTRead"
+  },
+  {
+    "offset": "0x17867",
+    "va": "0x119267",
+    "encoding": "ascii",
+    "text": "GAP_ConnBTWrite"
+  },
+  {
+    "offset": "0x17877",
+    "va": "0x119277",
+    "encoding": "ascii",
+    "text": "GAP_ConnClose"
+  },
+  {
+    "offset": "0x17885",
+    "va": "0x119285",
+    "encoding": "ascii",
+    "text": "GAP_ConnGetRemoteAddr"
+  },
+  {
+    "offset": "0x1789b",
+    "va": "0x11929b",
+    "encoding": "ascii",
+    "text": "GAP_ConnOpen"
+  },
+  {
+    "offset": "0x178a8",
+    "va": "0x1192a8",
+    "encoding": "ascii",
+    "text": "GAP_ConnReadData"
+  },
+  {
+    "offset": "0x178b9",
+    "va": "0x1192b9",
+    "encoding": "ascii",
+    "text": "GAP_ConnReconfig"
+  },
+  {
+    "offset": "0x178ca",
+    "va": "0x1192ca",
+    "encoding": "ascii",
+    "text": "GAP_ConnSetIdleTimeout"
+  },
+  {
+    "offset": "0x178e1",
+    "va": "0x1192e1",
+    "encoding": "ascii",
+    "text": "GAP_ConnWriteData"
+  },
+  {
+    "offset": "0x178f3",
+    "va": "0x1192f3",
+    "encoding": "ascii",
+    "text": "GAP_FindAddrByName"
+  },
+  {
+    "offset": "0x17906",
+    "va": "0x119306",
+    "encoding": "ascii",
+    "text": "GAP_GetFirstInquiryResult"
+  },
+  {
+    "offset": "0x17920",
+    "va": "0x119320",
+    "encoding": "ascii",
+    "text": "GAP_GetNextInquiryResult"
+  },
+  {
+    "offset": "0x17939",
+    "va": "0x119339",
+    "encoding": "ascii",
+    "text": "GAP_GetRemoteDeviceName"
+  },
+  {
+    "offset": "0x17951",
+    "va": "0x119351",
+    "encoding": "ascii",
+    "text": "GAP_PinRsp"
+  },
+  {
+    "offset": "0x1795c",
+    "va": "0x11935c",
+    "encoding": "ascii",
+    "text": "GAP_ReadConnectableMode"
+  },
+  {
+    "offset": "0x17974",
+    "va": "0x119374",
+    "encoding": "ascii",
+    "text": "GAP_ReadDeviceClass"
+  },
+  {
+    "offset": "0x17988",
+    "va": "0x119388",
+    "encoding": "ascii",
+    "text": "GAP_ReadDiscoverableMode"
+  },
+  {
+    "offset": "0x179a1",
+    "va": "0x1193a1",
+    "encoding": "ascii",
+    "text": "GAP_ReadLocalDeviceInfo"
+  },
+  {
+    "offset": "0x179b9",
+    "va": "0x1193b9",
+    "encoding": "ascii",
+    "text": "GAP_SecRegister"
+  },
+  {
+    "offset": "0x179c9",
+    "va": "0x1193c9",
+    "encoding": "ascii",
+    "text": "GAP_SetConnectableMode"
+  },
+  {
+    "offset": "0x179e0",
+    "va": "0x1193e0",
+    "encoding": "ascii",
+    "text": "GAP_SetDeviceClass"
+  },
+  {
+    "offset": "0x179f3",
+    "va": "0x1193f3",
+    "encoding": "ascii",
+    "text": "GAP_SetDiscoverableMode"
+  },
+  {
+    "offset": "0x17a0b",
+    "va": "0x11940b",
+    "encoding": "ascii",
+    "text": "GAP_SetPairableMode"
+  },
+  {
+    "offset": "0x17a1f",
+    "va": "0x11941f",
+    "encoding": "ascii",
+    "text": "GAP_SetSecurityMode"
+  },
+  {
+    "offset": "0x17a33",
+    "va": "0x119433",
+    "encoding": "ascii",
+    "text": "GAP_StartDiscovery"
+  },
+  {
+    "offset": "0x17a46",
+    "va": "0x119446",
+    "encoding": "ascii",
+    "text": "GAP_StartInquiry"
+  },
+  {
+    "offset": "0x17a57",
+    "va": "0x119457",
+    "encoding": "ascii",
+    "text": "GAP_StartPeriodicInquiry"
+  },
+  {
+    "offset": "0x17a70",
+    "va": "0x119470",
+    "encoding": "ascii",
+    "text": "GKI_add_to_timer_list"
+  },
+  {
+    "offset": "0x17a86",
+    "va": "0x119486",
+    "encoding": "ascii",
+    "text": "GKI_change_buf_owner"
+  },
+  {
+    "offset": "0x17a9b",
+    "va": "0x11949b",
+    "encoding": "ascii",
+    "text": "GKI_chk_buf_pool_damage"
+  },
+  {
+    "offset": "0x17ab3",
+    "va": "0x1194b3",
+    "encoding": "ascii",
+    "text": "GKI_create_pool"
+  },
+  {
+    "offset": "0x17ac3",
+    "va": "0x1194c3",
+    "encoding": "ascii",
+    "text": "GKI_create_task"
+  },
+  {
+    "offset": "0x17ad3",
+    "va": "0x1194d3",
+    "encoding": "ascii",
+    "text": "GKI_delay"
+  },
+  {
+    "offset": "0x17add",
+    "va": "0x1194dd",
+    "encoding": "ascii",
+    "text": "GKI_delete_pool"
+  },
+  {
+    "offset": "0x17aed",
+    "va": "0x1194ed",
+    "encoding": "ascii",
+    "text": "GKI_dequeue"
+  },
+  {
+    "offset": "0x17af9",
+    "va": "0x1194f9",
+    "encoding": "ascii",
+    "text": "GKI_disable"
+  },
+  {
+    "offset": "0x17b05",
+    "va": "0x119505",
+    "encoding": "ascii",
+    "text": "GKI_enable"
+  },
+  {
+    "offset": "0x17b10",
+    "va": "0x119510",
+    "encoding": "ascii",
+    "text": "GKI_enqueue"
+  },
+  {
+    "offset": "0x17b1c",
+    "va": "0x11951c",
+    "encoding": "ascii",
+    "text": "GKI_enqueue_head"
+  },
+  {
+    "offset": "0x17b2d",
+    "va": "0x11952d",
+    "encoding": "ascii",
+    "text": "GKI_exception"
+  },
+  {
+    "offset": "0x17b3b",
+    "va": "0x11953b",
+    "encoding": "ascii",
+    "text": "GKI_exit_task"
+  },
+  {
+    "offset": "0x17b49",
+    "va": "0x119549",
+    "encoding": "ascii",
+    "text": "GKI_find_buf_start"
+  },
+  {
+    "offset": "0x17b5c",
+    "va": "0x11955c",
+    "encoding": "ascii",
+    "text": "GKI_freebuf"
+  },
+  {
+    "offset": "0x17b68",
+    "va": "0x119568",
+    "encoding": "ascii",
+    "text": "GKI_get_buf_size"
+  },
+  {
+    "offset": "0x17b79",
+    "va": "0x119579",
+    "encoding": "ascii",
+    "text": "GKI_get_taskid"
+  },
+  {
+    "offset": "0x17b88",
+    "va": "0x119588",
+    "encoding": "ascii",
+    "text": "GKI_get_tick_count"
+  },
+  {
+    "offset": "0x17b9b",
+    "va": "0x11959b",
+    "encoding": "ascii",
+    "text": "GKI_get_time_stamp"
+  },
+  {
+    "offset": "0x17bae",
+    "va": "0x1195ae",
+    "encoding": "ascii",
+    "text": "GKI_getbuf"
+  },
+  {
+    "offset": "0x17bb9",
+    "va": "0x1195b9",
+    "encoding": "ascii",
+    "text": "GKI_getfirst"
+  },
+  {
+    "offset": "0x17bc6",
+    "va": "0x1195c6",
+    "encoding": "ascii",
+    "text": "GKI_getnext"
+  },
+  {
+    "offset": "0x17bd2",
+    "va": "0x1195d2",
+    "encoding": "ascii",
+    "text": "GKI_getpoolbuf"
+  },
+  {
+    "offset": "0x17be1",
+    "va": "0x1195e1",
+    "encoding": "ascii",
+    "text": "GKI_init"
+  },
+  {
+    "offset": "0x17bea",
+    "va": "0x1195ea",
+    "encoding": "ascii",
+    "text": "GKI_init_q"
+  },
+  {
+    "offset": "0x17bf5",
+    "va": "0x1195f5",
+    "encoding": "ascii",
+    "text": "GKI_init_timer_list"
+  },
+  {
+    "offset": "0x17c09",
+    "va": "0x119609",
+    "encoding": "ascii",
+    "text": "GKI_init_timer_list_entry"
+  },
+  {
+    "offset": "0x17c23",
+    "va": "0x119623",
+    "encoding": "ascii",
+    "text": "GKI_isend_event"
+  },
+  {
+    "offset": "0x17c33",
+    "va": "0x119633",
+    "encoding": "ascii",
+    "text": "GKI_log_error"
+  },
+  {
+    "offset": "0x17c41",
+    "va": "0x119641",
+    "encoding": "ascii",
+    "text": "GKI_map_taskname"
+  },
+  {
+    "offset": "0x17c52",
+    "va": "0x119652",
+    "encoding": "ascii",
+    "text": "GKI_poolfreecount"
+  },
+  {
+    "offset": "0x17c64",
+    "va": "0x119664",
+    "encoding": "ascii",
+    "text": "GKI_queue_is_empty"
+  },
+  {
+    "offset": "0x17c77",
+    "va": "0x119677",
+    "encoding": "ascii",
+    "text": "GKI_read_mbox"
+  },
+  {
+    "offset": "0x17c85",
+    "va": "0x119685",
+    "encoding": "ascii",
+    "text": "GKI_ready_to_sleep"
+  },
+  {
+    "offset": "0x17c98",
+    "va": "0x119698",
+    "encoding": "ascii",
+    "text": "GKI_register_mempool"
+  },
+  {
+    "offset": "0x17cad",
+    "va": "0x1196ad",
+    "encoding": "ascii",
+    "text": "GKI_remove_from_queue"
+  },
+  {
+    "offset": "0x17cc3",
+    "va": "0x1196c3",
+    "encoding": "ascii",
+    "text": "GKI_remove_from_timer_list"
+  },
+  {
+    "offset": "0x17cde",
+    "va": "0x1196de",
+    "encoding": "ascii",
+    "text": "GKI_resume_task"
+  },
+  {
+    "offset": "0x17cee",
+    "va": "0x1196ee",
+    "encoding": "ascii",
+    "text": "GKI_run"
+  },
+  {
+    "offset": "0x17cf6",
+    "va": "0x1196f6",
+    "encoding": "ascii",
+    "text": "GKI_sched_lock"
+  },
+  {
+    "offset": "0x17d05",
+    "va": "0x119705",
+    "encoding": "ascii",
+    "text": "GKI_sched_unlock"
+  },
+  {
+    "offset": "0x17d16",
+    "va": "0x119716",
+    "encoding": "ascii",
+    "text": "GKI_send_event"
+  },
+  {
+    "offset": "0x17d25",
+    "va": "0x119725",
+    "encoding": "ascii",
+    "text": "GKI_send_msg"
+  },
+  {
+    "offset": "0x17d32",
+    "va": "0x119732",
+    "encoding": "ascii",
+    "text": "GKI_set_pool_permission"
+  },
+  {
+    "offset": "0x17d4a",
+    "va": "0x11974a",
+    "encoding": "ascii",
+    "text": "GKI_shutdown"
+  },
+  {
+    "offset": "0x17d57",
+    "va": "0x119757",
+    "encoding": "ascii",
+    "text": "GKI_start_timer"
+  },
+  {
+    "offset": "0x17d67",
+    "va": "0x119767",
+    "encoding": "ascii",
+    "text": "GKI_stop_timer"
+  },
+  {
+    "offset": "0x17d76",
+    "va": "0x119776",
+    "encoding": "ascii",
+    "text": "GKI_suspend_task"
+  },
+  {
+    "offset": "0x17d87",
+    "va": "0x119787",
+    "encoding": "ascii",
+    "text": "GKI_timer_update"
+  },
+  {
+    "offset": "0x17d98",
+    "va": "0x119798",
+    "encoding": "ascii",
+    "text": "GKI_update_timer_list"
+  },
+  {
+    "offset": "0x17dae",
+    "va": "0x1197ae",
+    "encoding": "ascii",
+    "text": "GKI_wait"
+  },
+  {
+    "offset": "0x17db7",
+    "va": "0x1197b7",
+    "encoding": "ascii",
+    "text": "L2CA_AllocatePSM"
+  },
+  {
+    "offset": "0x17dc8",
+    "va": "0x1197c8",
+    "encoding": "ascii",
+    "text": "L2CA_ConfigReq"
+  },
+  {
+    "offset": "0x17dd7",
+    "va": "0x1197d7",
+    "encoding": "ascii",
+    "text": "L2CA_ConfigRsp"
+  },
+  {
+    "offset": "0x17de6",
+    "va": "0x1197e6",
+    "encoding": "ascii",
+    "text": "L2CA_ConnectReq"
+  },
+  {
+    "offset": "0x17df6",
+    "va": "0x1197f6",
+    "encoding": "ascii",
+    "text": "L2CA_ConnectRsp"
+  },
+  {
+    "offset": "0x17e06",
+    "va": "0x119806",
+    "encoding": "ascii",
+    "text": "L2CA_DataWrite"
+  },
+  {
+    "offset": "0x17e15",
+    "va": "0x119815",
+    "encoding": "ascii",
+    "text": "L2CA_Deregister"
+  },
+  {
+    "offset": "0x17e25",
+    "va": "0x119825",
+    "encoding": "ascii",
+    "text": "L2CA_DisconnectReq"
+  },
+  {
+    "offset": "0x17e38",
+    "va": "0x119838",
+    "encoding": "ascii",
+    "text": "L2CA_DisconnectRsp"
+  },
+  {
+    "offset": "0x17e4b",
+    "va": "0x11984b",
+    "encoding": "ascii",
+    "text": "L2CA_FreePSM"
+  },
+  {
+    "offset": "0x17e58",
+    "va": "0x119858",
+    "encoding": "ascii",
+    "text": "L2CA_GetConnectionStats"
+  },
+  {
+    "offset": "0x17e70",
+    "va": "0x119870",
+    "encoding": "ascii",
+    "text": "L2CA_Ping"
+  },
+  {
+    "offset": "0x17e7a",
+    "va": "0x11987a",
+    "encoding": "ascii",
+    "text": "L2CA_Register"
+  },
+  {
+    "offset": "0x17e88",
+    "va": "0x119888",
+    "encoding": "ascii",
+    "text": "L2CA_SetDesireRole"
+  },
+  {
+    "offset": "0x17e9b",
+    "va": "0x11989b",
+    "encoding": "ascii",
+    "text": "L2CA_SetIdleTimeout"
+  },
+  {
+    "offset": "0x17eaf",
+    "va": "0x1198af",
+    "encoding": "ascii",
+    "text": "L2CA_SetTraceLevel"
+  },
+  {
+    "offset": "0x17ec2",
+    "va": "0x1198c2",
+    "encoding": "ascii",
+    "text": "OBEX_AbortCnf"
+  },
+  {
+    "offset": "0x17ed0",
+    "va": "0x1198d0",
+    "encoding": "ascii",
+    "text": "OBEX_AbortReq"
+  },
+  {
+    "offset": "0x17ede",
+    "va": "0x1198de",
+    "encoding": "ascii",
+    "text": "OBEX_AllocBuf"
+  },
+  {
+    "offset": "0x17eec",
+    "va": "0x1198ec",
+    "encoding": "ascii",
+    "text": "OBEX_AllocHeaders"
+  },
+  {
+    "offset": "0x17efe",
+    "va": "0x1198fe",
+    "encoding": "ascii",
+    "text": "OBEX_CIStrCmp"
+  },
+  {
+    "offset": "0x17f0c",
+    "va": "0x11990c",
+    "encoding": "ascii",
+    "text": "OBEX_ClientRegister"
+  },
+  {
+    "offset": "0x17f20",
+    "va": "0x119920",
+    "encoding": "ascii",
+    "text": "OBEX_ClientUnregister"
+  },
+  {
+    "offset": "0x17f36",
+    "va": "0x119936",
+    "encoding": "ascii",
+    "text": "OBEX_CloseCnf"
+  },
+  {
+    "offset": "0x17f44",
+    "va": "0x119944",
+    "encoding": "ascii",
+    "text": "OBEX_CloseReq"
+  },
+  {
+    "offset": "0x17f52",
+    "va": "0x119952",
+    "encoding": "ascii",
+    "text": "OBEX_CreateCnf"
+  },
+  {
+    "offset": "0x17f61",
+    "va": "0x119961",
+    "encoding": "ascii",
+    "text": "OBEX_DeallocBuf"
+  },
+  {
+    "offset": "0x17f71",
+    "va": "0x119971",
+    "encoding": "ascii",
+    "text": "OBEX_DeallocHeaders"
+  },
+  {
+    "offset": "0x17f85",
+    "va": "0x119985",
+    "encoding": "ascii",
+    "text": "OBEX_DeleteCnf"
+  },
+  {
+    "offset": "0x17f94",
+    "va": "0x119994",
+    "encoding": "ascii",
+    "text": "OBEX_GetAttachedBDAddr"
+  },
+  {
+    "offset": "0x17fab",
+    "va": "0x1199ab",
+    "encoding": "ascii",
+    "text": "OBEX_GetClientRfcHandle"
+  },
+  {
+    "offset": "0x17fc3",
+    "va": "0x1199c3",
+    "encoding": "ascii",
+    "text": "OBEX_GetCnf"
+  },
+  {
+    "offset": "0x17fcf",
+    "va": "0x1199cf",
+    "encoding": "ascii",
+    "text": "OBEX_GetReq"
+  },
+  {
+    "offset": "0x17fdb",
+    "va": "0x1199db",
+    "encoding": "ascii",
+    "text": "OBEX_GetServerRfcHandle"
+  },
+  {
+    "offset": "0x17ff3",
+    "va": "0x1199f3",
+    "encoding": "ascii",
+    "text": "OBEX_GetTraceLevel"
+  },
+  {
+    "offset": "0x18006",
+    "va": "0x119a06",
+    "encoding": "ascii",
+    "text": "OBEX_IsNameEmpty"
+  },
+  {
+    "offset": "0x18017",
+    "va": "0x119a17",
+    "encoding": "ascii",
+    "text": "OBEX_IsNameSet"
+  },
+  {
+    "offset": "0x18026",
+    "va": "0x119a26",
+    "encoding": "ascii",
+    "text": "OBEX_OpenCnf"
+  },
+  {
+    "offset": "0x18033",
+    "va": "0x119a33",
+    "encoding": "ascii",
+    "text": "OBEX_OpenReq"
+  },
+  {
+    "offset": "0x18040",
+    "va": "0x119a40",
+    "encoding": "ascii",
+    "text": "OBEX_OpenReqWithAuth"
+  },
+  {
+    "offset": "0x18055",
+    "va": "0x119a55",
+    "encoding": "ascii",
+    "text": "OBEX_PutCnf"
+  },
+  {
+    "offset": "0x18061",
+    "va": "0x119a61",
+    "encoding": "ascii",
+    "text": "OBEX_PutReq"
+  },
+  {
+    "offset": "0x1806d",
+    "va": "0x119a6d",
+    "encoding": "ascii",
+    "text": "OBEX_ReOpenReq"
+  },
+  {
+    "offset": "0x1807c",
+    "va": "0x119a7c",
+    "encoding": "ascii",
+    "text": "OBEX_RemoveHeader"
+  },
+  {
+    "offset": "0x1808e",
+    "va": "0x119a8e",
+    "encoding": "ascii",
+    "text": "OBEX_ServerRegister"
+  },
+  {
+    "offset": "0x180a2",
+    "va": "0x119aa2",
+    "encoding": "ascii",
+    "text": "OBEX_ServerUnregister"
+  },
+  {
+    "offset": "0x180b8",
+    "va": "0x119ab8",
+    "encoding": "ascii",
+    "text": "OBEX_SetTraceLevel"
+  },
+  {
+    "offset": "0x180cb",
+    "va": "0x119acb",
+    "encoding": "ascii",
+    "text": "OBEX_SetpathCnf"
+  },
+  {
+    "offset": "0x180db",
+    "va": "0x119adb",
+    "encoding": "ascii",
+    "text": "OBEX_SetpathReq"
+  },
+  {
+    "offset": "0x180eb",
+    "va": "0x119aeb",
+    "encoding": "ascii",
+    "text": "OBEX_TypeCmp"
+  },
+  {
+    "offset": "0x180f8",
+    "va": "0x119af8",
+    "encoding": "ascii",
+    "text": "PORT_CheckConnection"
+  },
+  {
+    "offset": "0x1810d",
+    "va": "0x119b0d",
+    "encoding": "ascii",
+    "text": "PORT_ClearError"
+  },
+  {
+    "offset": "0x1811d",
+    "va": "0x119b1d",
+    "encoding": "ascii",
+    "text": "PORT_Control"
+  },
+  {
+    "offset": "0x1812a",
+    "va": "0x119b2a",
+    "encoding": "ascii",
+    "text": "PORT_FlowControl"
+  },
+  {
+    "offset": "0x1813b",
+    "va": "0x119b3b",
+    "encoding": "ascii",
+    "text": "PORT_GetConnectionStats"
+  },
+  {
+    "offset": "0x18153",
+    "va": "0x119b53",
+    "encoding": "ascii",
+    "text": "PORT_GetModemStatus"
+  },
+  {
+    "offset": "0x18167",
+    "va": "0x119b67",
+    "encoding": "ascii",
+    "text": "PORT_GetQueueStatus"
+  },
+  {
+    "offset": "0x1817b",
+    "va": "0x119b7b",
+    "encoding": "ascii",
+    "text": "PORT_GetState"
+  },
+  {
+    "offset": "0x18189",
+    "va": "0x119b89",
+    "encoding": "ascii",
+    "text": "PORT_Purge"
+  },
+  {
+    "offset": "0x18194",
+    "va": "0x119b94",
+    "encoding": "ascii",
+    "text": "PORT_Read"
+  },
+  {
+    "offset": "0x1819e",
+    "va": "0x119b9e",
+    "encoding": "ascii",
+    "text": "PORT_ReadData"
+  },
+  {
+    "offset": "0x181ac",
+    "va": "0x119bac",
+    "encoding": "ascii",
+    "text": "PORT_SendError"
+  },
+  {
+    "offset": "0x181bb",
+    "va": "0x119bbb",
+    "encoding": "ascii",
+    "text": "PORT_SetEventCallback"
+  },
+  {
+    "offset": "0x181d1",
+    "va": "0x119bd1",
+    "encoding": "ascii",
+    "text": "PORT_SetEventMask"
+  },
+  {
+    "offset": "0x181e3",
+    "va": "0x119be3",
+    "encoding": "ascii",
+    "text": "PORT_SetState"
+  },
+  {
+    "offset": "0x181f1",
+    "va": "0x119bf1",
+    "encoding": "ascii",
+    "text": "PORT_SetTraceLevel"
+  },
+  {
+    "offset": "0x18204",
+    "va": "0x119c04",
+    "encoding": "ascii",
+    "text": "PORT_Test"
+  },
+  {
+    "offset": "0x1820e",
+    "va": "0x119c0e",
+    "encoding": "ascii",
+    "text": "PORT_Write"
+  },
+  {
+    "offset": "0x18219",
+    "va": "0x119c19",
+    "encoding": "ascii",
+    "text": "PORT_WriteData"
+  },
+  {
+    "offset": "0x18228",
+    "va": "0x119c28",
+    "encoding": "ascii",
+    "text": "RFCOMM_AllocateSCN"
+  },
+  {
+    "offset": "0x1823b",
+    "va": "0x119c3b",
+    "encoding": "ascii",
+    "text": "RFCOMM_CreateConnection"
+  },
+  {
+    "offset": "0x18253",
+    "va": "0x119c53",
+    "encoding": "ascii",
+    "text": "RFCOMM_FreeSCN"
+  },
+  {
+    "offset": "0x18262",
+    "va": "0x119c62",
+    "encoding": "ascii",
+    "text": "RFCOMM_RemoveConnection"
+  },
+  {
+    "offset": "0x1827a",
+    "va": "0x119c7a",
+    "encoding": "ascii",
+    "text": "SDP_AddAdditionProtoLists"
+  },
+  {
+    "offset": "0x18294",
+    "va": "0x119c94",
+    "encoding": "ascii",
+    "text": "SDP_AddAttribute"
+  },
+  {
+    "offset": "0x182a5",
+    "va": "0x119ca5",
+    "encoding": "ascii",
+    "text": "SDP_AddLanguageBaseAttrIDList"
+  },
+  {
+    "offset": "0x182c3",
+    "va": "0x119cc3",
+    "encoding": "ascii",
+    "text": "SDP_AddProfileDescriptorList"
+  },
+  {
+    "offset": "0x182e0",
+    "va": "0x119ce0",
+    "encoding": "ascii",
+    "text": "SDP_AddProtocolList"
+  },
+  {
+    "offset": "0x182f4",
+    "va": "0x119cf4",
+    "encoding": "ascii",
+    "text": "SDP_AddSequence"
+  },
+  {
+    "offset": "0x18304",
+    "va": "0x119d04",
+    "encoding": "ascii",
+    "text": "SDP_AddServiceClassIdList"
+  },
+  {
+    "offset": "0x1831e",
+    "va": "0x119d1e",
+    "encoding": "ascii",
+    "text": "SDP_AddUuidSequence"
+  },
+  {
+    "offset": "0x18332",
+    "va": "0x119d32",
+    "encoding": "ascii",
+    "text": "SDP_CreateRecord"
+  },
+  {
+    "offset": "0x18343",
+    "va": "0x119d43",
+    "encoding": "ascii",
+    "text": "SDP_CreateRecordForService"
+  },
+  {
+    "offset": "0x1835e",
+    "va": "0x119d5e",
+    "encoding": "ascii",
+    "text": "SDP_DeleteAttribute"
+  },
+  {
+    "offset": "0x18372",
+    "va": "0x119d72",
+    "encoding": "ascii",
+    "text": "SDP_DeleteRecord"
+  },
+  {
+    "offset": "0x18383",
+    "va": "0x119d83",
+    "encoding": "ascii",
+    "text": "SDP_FindAddProtoListsElemInRec"
+  },
+  {
+    "offset": "0x183a2",
+    "va": "0x119da2",
+    "encoding": "ascii",
+    "text": "SDP_FindAttributeInDb"
+  },
+  {
+    "offset": "0x183b8",
+    "va": "0x119db8",
+    "encoding": "ascii",
+    "text": "SDP_FindAttributeInRec"
+  },
+  {
+    "offset": "0x183cf",
+    "va": "0x119dcf",
+    "encoding": "ascii",
+    "text": "SDP_FindProfileVersionInRec"
+  },
+  {
+    "offset": "0x183eb",
+    "va": "0x119deb",
+    "encoding": "ascii",
+    "text": "SDP_FindProtocolListElemInRec"
+  },
+  {
+    "offset": "0x18409",
+    "va": "0x119e09",
+    "encoding": "ascii",
+    "text": "SDP_FindServiceInDb"
+  },
+  {
+    "offset": "0x1841d",
+    "va": "0x119e1d",
+    "encoding": "ascii",
+    "text": "SDP_FindServiceUUIDInDb"
+  },
+  {
+    "offset": "0x18435",
+    "va": "0x119e35",
+    "encoding": "ascii",
+    "text": "SDP_InitDiscoveryDb"
+  },
+  {
+    "offset": "0x18449",
+    "va": "0x119e49",
+    "encoding": "ascii",
+    "text": "SDP_ServiceSearchAttributeRequest"
+  },
+  {
+    "offset": "0x1846b",
+    "va": "0x119e6b",
+    "encoding": "ascii",
+    "text": "SDP_ServiceSearchRequest"
+  },
+  {
+    "offset": "0x18484",
+    "va": "0x119e84",
+    "encoding": "ascii",
+    "text": "SDP_SetTraceLevel"
+  },
+  {
+    "offset": "0x18496",
+    "va": "0x119e96",
+    "encoding": "ascii",
+    "text": "StartTimerTask"
+  },
+  {
+    "offset": "0x184a5",
+    "va": "0x119ea5",
+    "encoding": "ascii",
+    "text": "btm_initiate_rem_name"
+  },
+  {
+    "offset": "0x184bb",
+    "va": "0x119ebb",
+    "encoding": "ascii",
+    "text": "btu_deregister_event_range"
+  },
+  {
+    "offset": "0x184d6",
+    "va": "0x119ed6",
+    "encoding": "ascii",
+    "text": "btu_deregister_timer"
+  },
+  {
+    "offset": "0x184eb",
+    "va": "0x119eeb",
+    "encoding": "ascii",
+    "text": "btu_register_event_range"
+  },
+  {
+    "offset": "0x18504",
+    "va": "0x119f04",
+    "encoding": "ascii",
+    "text": "btu_register_timer"
+  },
+  {
+    "offset": "0x18517",
+    "va": "0x119f17",
+    "encoding": "ascii",
+    "text": "btu_start_timer"
+  },
+  {
+    "offset": "0x18527",
+    "va": "0x119f27",
+    "encoding": "ascii",
+    "text": "btu_stop_timer"
+  },
+  {
+    "offset": "0x18536",
+    "va": "0x119f36",
+    "encoding": "ascii",
+    "text": "obex_convert_from_8601"
+  },
+  {
+    "offset": "0x1854d",
+    "va": "0x119f4d",
+    "encoding": "ascii",
+    "text": "obex_convert_to_8601"
+  },
+  {
+    "offset": "0x18562",
+    "va": "0x119f62",
+    "encoding": "ascii",
+    "text": "obex_trace_level"
+  },
+  {
+    "offset": "0x187d8",
+    "va": "0x11a1d8",
+    "encoding": "utf-16le",
+    "text": "%s %s %02d %02d:%02d:%02d %04d"
+  },
+  {
+    "offset": "0x1882e",
+    "va": "0x11a22e",
+    "encoding": "utf-16le",
+    "text": "UBTS1:"
+  },
+  {
+    "offset": "0x1883c",
+    "va": "0x11a23c",
+    "encoding": "ascii",
+    "text": "BTU wrapper task exit"
+  },
+  {
+    "offset": "0x18858",
+    "va": "0x11a258",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Debug"
+  },
+  {
+    "offset": "0x18898",
+    "va": "0x11a298",
+    "encoding": "utf-16le",
+    "text": "LogIPAddr"
+  },
+  {
+    "offset": "0x188ac",
+    "va": "0x11a2ac",
+    "encoding": "ascii",
+    "text": "getbuf: Size is zero"
+  },
+  {
+    "offset": "0x188c4",
+    "va": "0x11a2c4",
+    "encoding": "ascii",
+    "text": "getbuf: Size is too big"
+  },
+  {
+    "offset": "0x188dc",
+    "va": "0x11a2dc",
+    "encoding": "ascii",
+    "text": "Freeing Linked Buf"
+  },
+  {
+    "offset": "0x188f0",
+    "va": "0x11a2f0",
+    "encoding": "ascii",
+    "text": "Bad Buf QId"
+  },
+  {
+    "offset": "0x188fc",
+    "va": "0x11a2fc",
+    "encoding": "ascii",
+    "text": "Free - Buf Corrupted"
+  },
+  {
+    "offset": "0x18914",
+    "va": "0x11a314",
+    "encoding": "ascii",
+    "text": "Send - Buffer corrupted"
+  },
+  {
+    "offset": "0x1892c",
+    "va": "0x11a32c",
+    "encoding": "ascii",
+    "text": "Send - buffer linked"
+  },
+  {
+    "offset": "0x18944",
+    "va": "0x11a344",
+    "encoding": "ascii",
+    "text": "Sending to unknown dest"
+  },
+  {
+    "offset": "0x1895c",
+    "va": "0x11a35c",
+    "encoding": "ascii",
+    "text": "Enqueue - Buffer corrupted"
+  },
+  {
+    "offset": "0x18978",
+    "va": "0x11a378",
+    "encoding": "ascii",
+    "text": "Eneueue - buf already linked"
+  },
+  {
+    "offset": "0x18998",
+    "va": "0x11a398",
+    "encoding": "ascii",
+    "text": "Enqueue - Buffer corrupted"
+  },
+  {
+    "offset": "0x189b4",
+    "va": "0x11a3b4",
+    "encoding": "ascii",
+    "text": "Eneueue head - buf already linked"
+  },
+  {
+    "offset": "0x189d8",
+    "va": "0x11a3d8",
+    "encoding": "ascii",
+    "text": "GKI_get_buf_start:: bad addr"
+  },
+  {
+    "offset": "0x189f8",
+    "va": "0x11a3f8",
+    "encoding": "ascii",
+    "text": "Deleting bad pool"
+  },
+  {
+    "offset": "0x18a0c",
+    "va": "0x11a40c",
+    "encoding": "ascii",
+    "text": "pool_id out of range"
+  },
+  {
+    "offset": "0x18a24",
+    "va": "0x11a424",
+    "encoding": "ascii",
+    "text": "p_first is NULL in non-empty pool"
+  },
+  {
+    "offset": "0x18a48",
+    "va": "0x11a448",
+    "encoding": "ascii",
+    "text": "last buffer in chain != p_last"
+  },
+  {
+    "offset": "0x18a68",
+    "va": "0x11a468",
+    "encoding": "ascii",
+    "text": "Free - Buf Corrupted"
+  },
+  {
+    "offset": "0x18a80",
+    "va": "0x11a480",
+    "encoding": "ascii",
+    "text": "cur_cnt != number of buffers in pool"
+  },
+  {
+    "offset": "0x18aac",
+    "va": "0x11a4ac",
+    "encoding": "ascii",
+    "text": "GKI_sched_lock still waiting"
+  },
+  {
+    "offset": "0x18acc",
+    "va": "0x11a4cc",
+    "encoding": "ascii",
+    "text": "Task %d (%s) Still waiting for CS"
+  },
+  {
+    "offset": "0x18af0",
+    "va": "0x11a4f0",
+    "encoding": "ascii",
+    "text": "NoName"
+  },
+  {
+    "offset": "0x18afc",
+    "va": "0x11a4fc",
+    "encoding": "ascii",
+    "text": "GKI_exception: Entry Code %d Message %s"
+  },
+  {
+    "offset": "0x18b28",
+    "va": "0x11a528",
+    "encoding": "ascii",
+    "text": "GKI_Exception called with code: %d"
+  },
+  {
+    "offset": "0x18b4c",
+    "va": "0x11a54c",
+    "encoding": "ascii",
+    "text": "%.8s.%03d "
+  },
+  {
+    "offset": "0x18b58",
+    "va": "0x11a558",
+    "encoding": "ascii",
+    "text": "BTKRNL: event 0x%x signalled w/o anybody waiting for it..."
+  },
+  {
+    "offset": "0x18b94",
+    "va": "0x11a594",
+    "encoding": "ascii",
+    "text": "BTKRNL: Logic error - too many events used!"
+  },
+  {
+    "offset": "0x18bc0",
+    "va": "0x11a5c0",
+    "encoding": "ascii",
+    "text": "BTKRNL: Logic error - too many events used!"
+  },
+  {
+    "offset": "0x18bec",
+    "va": "0x11a5ec",
+    "encoding": "ascii",
+    "text": "BTKRNL: attampt to reset nonexisting event 0x%x ..."
+  },
+  {
+    "offset": "0x18c20",
+    "va": "0x11a620",
+    "encoding": "ascii",
+    "text": "FLTRENV: Failure opening %s key %d"
+  },
+  {
+    "offset": "0x18c44",
+    "va": "0x11a644",
+    "encoding": "ascii",
+    "text": "FLTRENV: Failure reading %s key %s value %d"
+  },
+  {
+    "offset": "0x18c74",
+    "va": "0x11a674",
+    "encoding": "ascii",
+    "text": "FLTRENV: Failure closing %s key %d"
+  },
+  {
+    "offset": "0x18c98",
+    "va": "0x11a698",
+    "encoding": "utf-16le",
+    "text": "BtError.txt"
+  },
+  {
+    "offset": "0x18cb0",
+    "va": "0x11a6b0",
+    "encoding": "ascii",
+    "text": "BTM_IF - IOCTL_BTM_REGISTER failed"
+  },
+  {
+    "offset": "0x18cd4",
+    "va": "0x11a6d4",
+    "encoding": "ascii",
+    "text": "Unable to open BTKRNL device..."
+  },
+  {
+    "offset": "0x18cf8",
+    "va": "0x11a6f8",
+    "encoding": "ascii",
+    "text": "BTMDRV_TO_BTMAPP_GNW_CONNECT_STATUS: %d Server: %d  UUID: 0x%04x"
+  },
+  {
+    "offset": "0x18d3c",
+    "va": "0x11a73c",
+    "encoding": "ascii",
+    "text": "BTM_IF - device removed"
+  },
+  {
+    "offset": "0x18d54",
+    "va": "0x11a754",
+    "encoding": "ascii",
+    "text": "Got request from stack to load NDIS, Already Loaded: %d"
+  },
+  {
+    "offset": "0x18d8c",
+    "va": "0x11a78c",
+    "encoding": "ascii",
+    "text": "BTM_IF - BTM_PANConnect IOCtl failed, Code: %d"
+  },
+  {
+    "offset": "0x18dbc",
+    "va": "0x11a7bc",
+    "encoding": "ascii",
+    "text": "Unable to start stack, Code: %d"
+  },
+  {
+    "offset": "0x18ddc",
+    "va": "0x11a7dc",
+    "encoding": "ascii",
+    "text": "Unable to stop stack, Code: %d"
+  },
+  {
+    "offset": "0x18dfc",
+    "va": "0x11a7fc",
+    "encoding": "utf-16le",
+    "text": "NDS0:"
+  },
+  {
+    "offset": "0x18e08",
+    "va": "0x11a808",
+    "encoding": "utf-16le",
+    "text": "BTCEPAN"
+  },
+  {
+    "offset": "0x18e18",
+    "va": "0x11a818",
+    "encoding": "utf-16le",
+    "text": "BTCEPAN1"
+  },
+  {
+    "offset": "0x18e30",
+    "va": "0x11a830",
+    "encoding": "utf-16le",
+    "text": "NDS0:"
+  },
+  {
+    "offset": "0x18e3c",
+    "va": "0x11a83c",
+    "encoding": "utf-16le",
+    "text": "BTCEPAN1"
+  },
+  {
+    "offset": "0x18e54",
+    "va": "0x11a854",
+    "encoding": "utf-16le",
+    "text": "BTCEPAN1"
+  },
+  {
+    "offset": "0x18e6c",
+    "va": "0x11a86c",
+    "encoding": "utf-16le",
+    "text": "Comm\\BTCEPAN"
+  },
+  {
+    "offset": "0x18e88",
+    "va": "0x11a888",
+    "encoding": "utf-16le",
+    "text": "btcepan.dll"
+  },
+  {
+    "offset": "0x18ea0",
+    "va": "0x11a8a0",
+    "encoding": "utf-16le",
+    "text": "btcepan.dll"
+  },
+  {
+    "offset": "0x18eb8",
+    "va": "0x11a8b8",
+    "encoding": "utf-16le",
+    "text": "ImagePath"
+  },
+  {
+    "offset": "0x18ecc",
+    "va": "0x11a8cc",
+    "encoding": "utf-16le",
+    "text": "Comm\\BTCEPAN1"
+  },
+  {
+    "offset": "0x18ee8",
+    "va": "0x11a8e8",
+    "encoding": "utf-16le",
+    "text": "btcepan.dll"
+  },
+  {
+    "offset": "0x18f00",
+    "va": "0x11a900",
+    "encoding": "utf-16le",
+    "text": "btcepan.dll"
+  },
+  {
+    "offset": "0x18f18",
+    "va": "0x11a918",
+    "encoding": "utf-16le",
+    "text": "ImagePath"
+  },
+  {
+    "offset": "0x18f2c",
+    "va": "0x11a92c",
+    "encoding": "utf-16le",
+    "text": "Comm\\BTCEPAN"
+  },
+  {
+    "offset": "0x18f48",
+    "va": "0x11a948",
+    "encoding": "utf-16le",
+    "text": "doesnotexist.dll"
+  },
+  {
+    "offset": "0x18f6c",
+    "va": "0x11a96c",
+    "encoding": "utf-16le",
+    "text": "doesnotexist.dll"
+  },
+  {
+    "offset": "0x18f90",
+    "va": "0x11a990",
+    "encoding": "utf-16le",
+    "text": "ImagePath"
+  },
+  {
+    "offset": "0x18fa4",
+    "va": "0x11a9a4",
+    "encoding": "utf-16le",
+    "text": "Comm\\BTCEPAN1"
+  },
+  {
+    "offset": "0x18fc0",
+    "va": "0x11a9c0",
+    "encoding": "utf-16le",
+    "text": "doesnotexist.dll"
+  },
+  {
+    "offset": "0x18fe4",
+    "va": "0x11a9e4",
+    "encoding": "utf-16le",
+    "text": "doesnotexist.dll"
+  },
+  {
+    "offset": "0x19008",
+    "va": "0x11aa08",
+    "encoding": "utf-16le",
+    "text": "ImagePath"
+  },
+  {
+    "offset": "0x1901c",
+    "va": "0x11aa1c",
+    "encoding": "utf-16le",
+    "text": "Handsfree"
+  },
+  {
+    "offset": "0x19030",
+    "va": "0x11aa30",
+    "encoding": "ascii",
+    "text": "BTKRNL_IOCTL_HCI_WRITE failed - 0x%x..."
+  },
+  {
+    "offset": "0x1905c",
+    "va": "0x11aa5c",
+    "encoding": "ascii",
+    "text": "Unable to open BTKRNL device..."
+  },
+  {
+    "offset": "0x1907c",
+    "va": "0x11aa7c",
+    "encoding": "ascii",
+    "text": "HCI rcvd bad msg type: %d"
+  },
+  {
+    "offset": "0x19098",
+    "va": "0x11aa98",
+    "encoding": "ascii",
+    "text": "BTKRNL_IOCTL_HCI_READ: failed LastError 0x%x"
+  },
+  {
+    "offset": "0x190c8",
+    "va": "0x11aac8",
+    "encoding": "ascii",
+    "text": "HCI_IF - Read Thread Exit"
+  },
+  {
+    "offset": "0x190e4",
+    "va": "0x11aae4",
+    "encoding": "ascii",
+    "text": "Unable to open BTKRNL device..."
+  },
+  {
+    "offset": "0x19104",
+    "va": "0x11ab04",
+    "encoding": "ascii",
+    "text": "Unable to open BTKRNL device..."
+  },
+  {
+    "offset": "0x19124",
+    "va": "0x11ab24",
+    "encoding": "ascii",
+    "text": "Service Discovery"
+  },
+  {
+    "offset": "0x19138",
+    "va": "0x11ab38",
+    "encoding": "ascii",
+    "text": "Unable to open BTKRNL device..."
+  },
+  {
+    "offset": "0x1916c",
+    "va": "0x11ab6c",
+    "encoding": "ascii",
+    "text": "DEFAULT RESPONSE (0x00)"
+  },
+  {
+    "offset": "0x19184",
+    "va": "0x11ab84",
+    "encoding": "ascii",
+    "text": "RSP_CONTINUE (0x10)"
+  },
+  {
+    "offset": "0x19198",
+    "va": "0x11ab98",
+    "encoding": "ascii",
+    "text": "RSP_OK (0x20)"
+  },
+  {
+    "offset": "0x191a8",
+    "va": "0x11aba8",
+    "encoding": "ascii",
+    "text": "RSP_CREATED (0x21)"
+  },
+  {
+    "offset": "0x191bc",
+    "va": "0x11abbc",
+    "encoding": "ascii",
+    "text": "RSP_ACCEPTED (0x22)"
+  },
+  {
+    "offset": "0x191d0",
+    "va": "0x11abd0",
+    "encoding": "ascii",
+    "text": "RSP_NON_AUTHORITATIVE_INFO (0x23)"
+  },
+  {
+    "offset": "0x191f4",
+    "va": "0x11abf4",
+    "encoding": "ascii",
+    "text": "RSP_NO_CONTENT (0x24)"
+  },
+  {
+    "offset": "0x1920c",
+    "va": "0x11ac0c",
+    "encoding": "ascii",
+    "text": "RSP_RESET_CONTENT (0x25)"
+  },
+  {
+    "offset": "0x19228",
+    "va": "0x11ac28",
+    "encoding": "ascii",
+    "text": "RSP_PARTIAL_CONTENT (0x26)"
+  },
+  {
+    "offset": "0x19244",
+    "va": "0x11ac44",
+    "encoding": "ascii",
+    "text": "RSP_MULTIPLE_CHOICES (0x30)"
+  },
+  {
+    "offset": "0x19260",
+    "va": "0x11ac60",
+    "encoding": "ascii",
+    "text": "RSP_MOVED_PERMANENTLY (0x31)"
+  },
+  {
+    "offset": "0x19280",
+    "va": "0x11ac80",
+    "encoding": "ascii",
+    "text": "RSP_MOVED_TEMPORARILY (0x32)"
+  },
+  {
+    "offset": "0x192a0",
+    "va": "0x11aca0",
+    "encoding": "ascii",
+    "text": "RSP_SEE_OTHER (0x33)"
+  },
+  {
+    "offset": "0x192b8",
+    "va": "0x11acb8",
+    "encoding": "ascii",
+    "text": "RSP_NOT_MODIFIED (0x34)"
+  },
+  {
+    "offset": "0x192d0",
+    "va": "0x11acd0",
+    "encoding": "ascii",
+    "text": "RSP_USE_PROXY (0x35)"
+  },
+  {
+    "offset": "0x192e8",
+    "va": "0x11ace8",
+    "encoding": "ascii",
+    "text": "RSP_BAD_REQUEST (0x40)"
+  },
+  {
+    "offset": "0x19300",
+    "va": "0x11ad00",
+    "encoding": "ascii",
+    "text": "RSP_UNAUTHORIZED (0x41)"
+  },
+  {
+    "offset": "0x19318",
+    "va": "0x11ad18",
+    "encoding": "ascii",
+    "text": "RSP_PAYMENT_REQUIRED (0x42)"
+  },
+  {
+    "offset": "0x19334",
+    "va": "0x11ad34",
+    "encoding": "ascii",
+    "text": "RSP_FORBIDDEN (0x43)"
+  },
+  {
+    "offset": "0x1934c",
+    "va": "0x11ad4c",
+    "encoding": "ascii",
+    "text": "RSP_NOT_FOUND (0x44)"
+  },
+  {
+    "offset": "0x19364",
+    "va": "0x11ad64",
+    "encoding": "ascii",
+    "text": "RSP_METHOD_NOT_ALLOWED (0x45)"
+  },
+  {
+    "offset": "0x19384",
+    "va": "0x11ad84",
+    "encoding": "ascii",
+    "text": "RSP_NOT_ACCEPTABLE (0x46)"
+  },
+  {
+    "offset": "0x193a0",
+    "va": "0x11ada0",
+    "encoding": "ascii",
+    "text": "RSP_PROXY_AUTH (0x47)"
+  },
+  {
+    "offset": "0x193b8",
+    "va": "0x11adb8",
+    "encoding": "ascii",
+    "text": "RSP_REQUEST_TIME_OUT (0x48)"
+  },
+  {
+    "offset": "0x193d4",
+    "va": "0x11add4",
+    "encoding": "ascii",
+    "text": "RSP_CONFLICT (0x49)"
+  },
+  {
+    "offset": "0x193e8",
+    "va": "0x11ade8",
+    "encoding": "ascii",
+    "text": "RSP_GONE (0x4A)"
+  },
+  {
+    "offset": "0x193f8",
+    "va": "0x11adf8",
+    "encoding": "ascii",
+    "text": "RSP_LENGTH_REQUIRED (0x4B)"
+  },
+  {
+    "offset": "0x19414",
+    "va": "0x11ae14",
+    "encoding": "ascii",
+    "text": "RSP_PRECONDITION_FAILED (0x4C)"
+  },
+  {
+    "offset": "0x19434",
+    "va": "0x11ae34",
+    "encoding": "ascii",
+    "text": "RSP_REQUESTED_ENTITY_TOO_LARGE (0x4D)"
+  },
+  {
+    "offset": "0x1945c",
+    "va": "0x11ae5c",
+    "encoding": "ascii",
+    "text": "RSP_REQUEST_URL_TOO_LARGE (0x4E)"
+  },
+  {
+    "offset": "0x19480",
+    "va": "0x11ae80",
+    "encoding": "ascii",
+    "text": "RSP_UNSUPPORTED_MEDIA_TYPE (0x4F)"
+  },
+  {
+    "offset": "0x194a4",
+    "va": "0x11aea4",
+    "encoding": "ascii",
+    "text": "RSP_INTERNAL_SERVER_ERROR (0x50)"
+  },
+  {
+    "offset": "0x194c8",
+    "va": "0x11aec8",
+    "encoding": "ascii",
+    "text": "RSP_NOT_IMPLEMENTED (0x51)"
+  },
+  {
+    "offset": "0x194e4",
+    "va": "0x11aee4",
+    "encoding": "ascii",
+    "text": "RSP_BAD_GATEWAY (0x52)"
+  },
+  {
+    "offset": "0x194fc",
+    "va": "0x11aefc",
+    "encoding": "ascii",
+    "text": "RSP_SERVICE_UNAVAILABLE (0x53)"
+  },
+  {
+    "offset": "0x1951c",
+    "va": "0x11af1c",
+    "encoding": "ascii",
+    "text": "RSP_GATEWAY_TIMEOUT (0x54)"
+  },
+  {
+    "offset": "0x19538",
+    "va": "0x11af38",
+    "encoding": "ascii",
+    "text": "RSP_HTTP_VERSION_NOT_SUPPORTED (0x55)"
+  },
+  {
+    "offset": "0x19560",
+    "va": "0x11af60",
+    "encoding": "ascii",
+    "text": "RSP_DATABASE_FULL (0x60)"
+  },
+  {
+    "offset": "0x1957c",
+    "va": "0x11af7c",
+    "encoding": "ascii",
+    "text": "RSP_DATABASE_LOCKED  (0x61)"
+  },
+  {
+    "offset": "0x19598",
+    "va": "0x11af98",
+    "encoding": "ascii",
+    "text": "UNKNOWN OBEX RESPONSE! (%#x)"
+  },
+  {
+    "offset": "0x195b8",
+    "va": "0x11afb8",
+    "encoding": "ascii",
+    "text": "OBEX_SUCCESS (0x00)"
+  },
+  {
+    "offset": "0x195cc",
+    "va": "0x11afcc",
+    "encoding": "ascii",
+    "text": "OBEX_FAIL (0x01)"
+  },
+  {
+    "offset": "0x195e0",
+    "va": "0x11afe0",
+    "encoding": "ascii",
+    "text": "OBEX_ERROR (0x02)"
+  },
+  {
+    "offset": "0x195f4",
+    "va": "0x11aff4",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_RESOURCES (0x03)"
+  },
+  {
+    "offset": "0x19610",
+    "va": "0x11b010",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_NO_CB (0x04)"
+  },
+  {
+    "offset": "0x19628",
+    "va": "0x11b028",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_DUP_SERVER (0x05)"
+  },
+  {
+    "offset": "0x19644",
+    "va": "0x11b044",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_RESPONSE (0x06)"
+  },
+  {
+    "offset": "0x19660",
+    "va": "0x11b060",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_UNK_APP (0x07)"
+  },
+  {
+    "offset": "0x19678",
+    "va": "0x11b078",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_PARAM (0x08)"
+  },
+  {
+    "offset": "0x19690",
+    "va": "0x11b090",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_CLOSED (0x09)"
+  },
+  {
+    "offset": "0x196a8",
+    "va": "0x11b0a8",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_ABORTED (0x0a)"
+  },
+  {
+    "offset": "0x196c0",
+    "va": "0x11b0c0",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_STATE (0x0b)"
+  },
+  {
+    "offset": "0x196d8",
+    "va": "0x11b0d8",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_NA (0x0c)"
+  },
+  {
+    "offset": "0x196ec",
+    "va": "0x11b0ec",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_HEADER (0x0d)"
+  },
+  {
+    "offset": "0x19704",
+    "va": "0x11b104",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_TOO_BIG (0x0e)"
+  },
+  {
+    "offset": "0x1971c",
+    "va": "0x11b11c",
+    "encoding": "ascii",
+    "text": "OBEX_ERR_TIMEOUT (0x0f)"
+  },
+  {
+    "offset": "0x19734",
+    "va": "0x11b134",
+    "encoding": "ascii",
+    "text": "OBEX ERR UNSET| (0xff)"
+  },
+  {
+    "offset": "0x1974c",
+    "va": "0x11b14c",
+    "encoding": "ascii",
+    "text": "UNKNOWN OBEX ERROR! (%#x)"
+  },
+  {
+    "offset": "0x19768",
+    "va": "0x11b168",
+    "encoding": "ascii",
+    "text": "NOT_CONNECTED"
+  },
+  {
+    "offset": "0x19777",
+    "va": "0x11b177",
+    "encoding": "ascii",
+    "text": "  0x00"
+  },
+  {
+    "offset": "0x19780",
+    "va": "0x11b180",
+    "encoding": "ascii",
+    "text": "AUTHORIZING          0x01"
+  },
+  {
+    "offset": "0x1979c",
+    "va": "0x11b19c",
+    "encoding": "ascii",
+    "text": "SESSION_CONNECTED    0x02"
+  },
+  {
+    "offset": "0x197b8",
+    "va": "0x11b1b8",
+    "encoding": "ascii",
+    "text": "PUT_TRANSACTION      0x03"
+  },
+  {
+    "offset": "0x197d4",
+    "va": "0x11b1d4",
+    "encoding": "ascii",
+    "text": "GET_TRANSACTION      0x04"
+  },
+  {
+    "offset": "0x197f0",
+    "va": "0x11b1f0",
+    "encoding": "ascii",
+    "text": "PUT_REQ_SENT         0x05"
+  },
+  {
+    "offset": "0x1980c",
+    "va": "0x11b20c",
+    "encoding": "ascii",
+    "text": "GET_REQ_SENT         0x06"
+  },
+  {
+    "offset": "0x19828",
+    "va": "0x11b228",
+    "encoding": "ascii",
+    "text": "SETPATH_REQ_SENT     0x07"
+  },
+  {
+    "offset": "0x19844",
+    "va": "0x11b244",
+    "encoding": "ascii",
+    "text": "CONNECT_REQ_SENT     0x08"
+  },
+  {
+    "offset": "0x19860",
+    "va": "0x11b260",
+    "encoding": "ascii",
+    "text": "CLOSE_REQ_SENT       0x09"
+  },
+  {
+    "offset": "0x1987c",
+    "va": "0x11b27c",
+    "encoding": "ascii",
+    "text": "ABORT_REQ_SENT       0x0a"
+  },
+  {
+    "offset": "0x19898",
+    "va": "0x11b298",
+    "encoding": "ascii",
+    "text": "WAIT_TRAN_CLOSE      0x0b"
+  },
+  {
+    "offset": "0x198e4",
+    "va": "0x11b2e4",
+    "encoding": "ascii",
+    "text": "UNDEFINED         0x00"
+  },
+  {
+    "offset": "0x198fc",
+    "va": "0x11b2fc",
+    "encoding": "ascii",
+    "text": "PUT_REQ           0x01"
+  },
+  {
+    "offset": "0x19914",
+    "va": "0x11b314",
+    "encoding": "ascii",
+    "text": "GET_REQ           0x02"
+  },
+  {
+    "offset": "0x1992c",
+    "va": "0x11b32c",
+    "encoding": "ascii",
+    "text": "SETPATH_REQ       0x03"
+  },
+  {
+    "offset": "0x19944",
+    "va": "0x11b344",
+    "encoding": "ascii",
+    "text": "SESSION_OPEN_REQ  0x04"
+  },
+  {
+    "offset": "0x1995c",
+    "va": "0x11b35c",
+    "encoding": "ascii",
+    "text": "SESSION_CLOSE_REQ 0x05"
+  },
+  {
+    "offset": "0x19974",
+    "va": "0x11b374",
+    "encoding": "ascii",
+    "text": "ABORT_REQ         0x06"
+  },
+  {
+    "offset": "0x1998c",
+    "va": "0x11b38c",
+    "encoding": "ascii",
+    "text": "SUCCESS_RESPONSE  0x07"
+  },
+  {
+    "offset": "0x199a4",
+    "va": "0x11b3a4",
+    "encoding": "ascii",
+    "text": "CONTINUE_RESPONSE 0x08"
+  },
+  {
+    "offset": "0x199bc",
+    "va": "0x11b3bc",
+    "encoding": "ascii",
+    "text": "FAIL_RESPONSE     0x09"
+  },
+  {
+    "offset": "0x199d4",
+    "va": "0x11b3d4",
+    "encoding": "ascii",
+    "text": "TRANSPORT_CLOSED  0x0a"
+  },
+  {
+    "offset": "0x199ec",
+    "va": "0x11b3ec",
+    "encoding": "ascii",
+    "text": "TRANSMIT_COMPLETE 0x0b"
+  },
+  {
+    "offset": "0x19a04",
+    "va": "0x11b404",
+    "encoding": "ascii",
+    "text": "TIMEOUT           0x0c"
+  },
+  {
+    "offset": "0x19a50",
+    "va": "0x11b450",
+    "encoding": "ascii",
+    "text": "ET UNKNOWN     0x00"
+  },
+  {
+    "offset": "0x19a64",
+    "va": "0x11b464",
+    "encoding": "ascii",
+    "text": "ET_APP_REQ     0x01"
+  },
+  {
+    "offset": "0x19a78",
+    "va": "0x11b478",
+    "encoding": "ascii",
+    "text": "ET_TRAN_REQ    0x02"
+  },
+  {
+    "offset": "0x19a8c",
+    "va": "0x11b48c",
+    "encoding": "ascii",
+    "text": "ET_APP_CONF    0x03"
+  },
+  {
+    "offset": "0x19aa0",
+    "va": "0x11b4a0",
+    "encoding": "ascii",
+    "text": "ET_TRAN_RESP   0x04"
+  },
+  {
+    "offset": "0x19ab4",
+    "va": "0x11b4b4",
+    "encoding": "ascii",
+    "text": "ET_TRAN_NOTICE 0x05"
+  },
+  {
+    "offset": "0x19ac8",
+    "va": "0x11b4c8",
+    "encoding": "ascii",
+    "text": "ET_TRAN_COMP   0x06"
+  },
+  {
+    "offset": "0x19adc",
+    "va": "0x11b4dc",
+    "encoding": "ascii",
+    "text": "ET_TIMEOUT     0x07"
+  },
+  {
+    "offset": "0x19b15",
+    "va": "0x11b515",
+    "encoding": "ascii",
+    "text": "OFJD"
+  },
+  {
+    "offset": "0x19b1b",
+    "va": "0x11b51b",
+    "encoding": "ascii",
+    "text": "NMGL0HI"
+  },
+  {
+    "offset": "0x19b24",
+    "va": "0x11b524",
+    "encoding": "ascii",
+    "text": "%4d%2d%2d%c%2d%2d%2d%c"
+  },
+  {
+    "offset": "0x19b3c",
+    "va": "0x11b53c",
+    "encoding": "ascii",
+    "text": "%04d%02d%02dT%02d%02d%02d%c"
+  },
+  {
+    "offset": "0x19b58",
+    "va": "0x11b558",
+    "encoding": "ascii",
+    "text": "NOT_CONNECTED           0x00"
+  },
+  {
+    "offset": "0x19b78",
+    "va": "0x11b578",
+    "encoding": "ascii",
+    "text": "SESSION_CONNECTED       0x01"
+  },
+  {
+    "offset": "0x19b98",
+    "va": "0x11b598",
+    "encoding": "ascii",
+    "text": "PUT_TRANSACTION         0x02"
+  },
+  {
+    "offset": "0x19bb8",
+    "va": "0x11b5b8",
+    "encoding": "ascii",
+    "text": "GET_TRANSACTION         0x03"
+  },
+  {
+    "offset": "0x19bd8",
+    "va": "0x11b5d8",
+    "encoding": "ascii",
+    "text": "PUT_INDICATED           0x04"
+  },
+  {
+    "offset": "0x19bf8",
+    "va": "0x11b5f8",
+    "encoding": "ascii",
+    "text": "GET_INDICATED           0x05"
+  },
+  {
+    "offset": "0x19c18",
+    "va": "0x11b618",
+    "encoding": "ascii",
+    "text": "SETPATH_INDICATED       0x06"
+  },
+  {
+    "offset": "0x19c38",
+    "va": "0x11b638",
+    "encoding": "ascii",
+    "text": "CREATE_INDICATED        0x07"
+  },
+  {
+    "offset": "0x19c58",
+    "va": "0x11b658",
+    "encoding": "ascii",
+    "text": "DELETE_INDICATED        0x08"
+  },
+  {
+    "offset": "0x19c78",
+    "va": "0x11b678",
+    "encoding": "ascii",
+    "text": "OPEN_INDICATED          0x09"
+  },
+  {
+    "offset": "0x19c98",
+    "va": "0x11b698",
+    "encoding": "ascii",
+    "text": "CLOSE_INDICATED         0x0a"
+  },
+  {
+    "offset": "0x19cb8",
+    "va": "0x11b6b8",
+    "encoding": "ascii",
+    "text": "ABORT_INDICATED         0x0b"
+  },
+  {
+    "offset": "0x19d08",
+    "va": "0x11b708",
+    "encoding": "ascii",
+    "text": "UNDEFINED         0x00"
+  },
+  {
+    "offset": "0x19d20",
+    "va": "0x11b720",
+    "encoding": "ascii",
+    "text": "PUT_REQ           0x01"
+  },
+  {
+    "offset": "0x19d38",
+    "va": "0x11b738",
+    "encoding": "ascii",
+    "text": "GET_REQ           0x02"
+  },
+  {
+    "offset": "0x19d50",
+    "va": "0x11b750",
+    "encoding": "ascii",
+    "text": "SETPATH_REQ       0x03"
+  },
+  {
+    "offset": "0x19d68",
+    "va": "0x11b768",
+    "encoding": "ascii",
+    "text": "SESSION_OPEN_REQ  0x04"
+  },
+  {
+    "offset": "0x19d80",
+    "va": "0x11b780",
+    "encoding": "ascii",
+    "text": "SESSION_CLOSE_REQ 0x05"
+  },
+  {
+    "offset": "0x19d98",
+    "va": "0x11b798",
+    "encoding": "ascii",
+    "text": "ABORT_REQ         0x06"
+  },
+  {
+    "offset": "0x19db0",
+    "va": "0x11b7b0",
+    "encoding": "ascii",
+    "text": "PUT_CONFIRM       0x07"
+  },
+  {
+    "offset": "0x19dc8",
+    "va": "0x11b7c8",
+    "encoding": "ascii",
+    "text": "GET_CONFIRM       0x08"
+  },
+  {
+    "offset": "0x19de0",
+    "va": "0x11b7e0",
+    "encoding": "ascii",
+    "text": "SETPATH_CONFIRM   0x09"
+  },
+  {
+    "offset": "0x19df8",
+    "va": "0x11b7f8",
+    "encoding": "ascii",
+    "text": "CREATE_CONFIRM    0x0a"
+  },
+  {
+    "offset": "0x19e10",
+    "va": "0x11b810",
+    "encoding": "ascii",
+    "text": "DELETE_CONFIRM    0x0b"
+  },
+  {
+    "offset": "0x19e28",
+    "va": "0x11b828",
+    "encoding": "ascii",
+    "text": "OPEN_CONFIRM      0x0c"
+  },
+  {
+    "offset": "0x19e40",
+    "va": "0x11b840",
+    "encoding": "ascii",
+    "text": "CLOSE_CONFIRM     0x0d"
+  },
+  {
+    "offset": "0x19e58",
+    "va": "0x11b858",
+    "encoding": "ascii",
+    "text": "ABORT_CONFIRM     0x0e"
+  }
+]

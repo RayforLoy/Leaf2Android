@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.CAB binary
+*.cab binary
+*.dll binary
+*.exe binary
+*.jar binary
+# Preserve the exact bytes and hashes of original manufacturer media and extracted inputs.
+reference/** -text -whitespace

@@ -1,0 +1,156 @@
+{
+  "date": "2026-11-10",
+  "app_version": "0.2.0",
+  "development_basis": "User authorized v1 assuming Aptus II 5 wireless works; hardware is not a build gate.",
+  "offline_unit_tests": 25,
+  "offline_unit_tests_passed": 25,
+  "kotlin_protocol_tests": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "com.leaf2android.protocol.CommandsTest.rootAndFileDirectoryEntries",
+      "com.leaf2android.protocol.CommandsTest.directoryTraversalAndUnknownFormatRejected",
+      "com.leaf2android.protocol.CommandsTest.imageResponseMustMatchNameAndAttachment",
+      "com.leaf2android.protocol.CommandsTest.exactEvidenceBasedCommands",
+      "com.leaf2android.protocol.CommandsTest.cannotSilentlyCorruptUnmappableText",
+      "com.leaf2android.protocol.CommandsTest.unsafeAttributeInputRejected",
+      "com.leaf2android.protocol.FramingTest.sizeLimitsAndProgress",
+      "com.leaf2android.protocol.FramingTest.malformedAndHugeAttachmentLengths",
+      "com.leaf2android.protocol.FramingTest.coalescedControlsAndZeroAttachment",
+      "com.leaf2android.protocol.FramingTest.duplicateAttrsAndMissingQuote",
+      "com.leaf2android.protocol.FramingTest.rawValuesArePreserved",
+      "com.leaf2android.protocol.FramingTest.resetDropsPreviousAttachment",
+      "com.leaf2android.protocol.FramingTest.truncationDetectedAtEof",
+      "com.leaf2android.protocol.FramingTest.completedFrameSurvivesLaterMalformedControl",
+      "com.leaf2android.protocol.FramingTest.everyBoundaryAndBinaryDelimiters",
+      "com.leaf2android.protocol.FramingTest.noiseAndResync",
+      "com.leaf2android.protocol.SessionTest.timeoutClosesSessionAndPreventsLateReplyReuse",
+      "com.leaf2android.protocol.SessionTest.truncatedImageFailsPendingRequest",
+      "com.leaf2android.protocol.SessionTest.commandsAreSerializedEvenWhenCalledConcurrently",
+      "com.leaf2android.protocol.SessionTest.twentySyntheticImageResponsesKeepFileAssociation",
+      "com.leaf2android.protocol.SessionTest.notificationsDoNotConsumeImageReply",
+      "com.leaf2android.protocol.SessionTest.explicitCameraErrorIsNotSuccess",
+      "com.leaf2android.protocol.SessionTest.ackWithNonzeroErrorCodeIsNotSuccess",
+      "com.leaf2android.protocol.SessionTest.startupUsesSyncThenClockThenDirectory"
+    ]
+  },
+  "android_instrumented_tests": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "com.leaf2android.LanguageStateTest.languageChangesKeepAnActiveSyntheticSessionPhotoNotesAndZoom",
+      "com.leaf2android.LanguageStateTest.followSystemPersistsAcrossActivityRecreation",
+      "com.leaf2android.LanguageStateTest.englishAndChineseResourcesCoverTheSettingsAndRetainedErrors",
+      "com.leaf2android.RepositorySessionTest.twentySyntheticCapturesReachCorrectJpegCache",
+      "com.leaf2android.UiStateTest.demoStyleChangeAndActivityRecreationKeepSelectionAndViewport",
+      "com.leaf2android.UiStateTest.offlineDemoNeverClaimsBluetoothConnection"
+    ]
+  },
+  "android_test_device": {
+    "kind": "AOSP x86_64 emulator",
+    "avd": "Leaf2Android_API36",
+    "api": 36,
+    "density_dpi": 420
+  },
+  "application_languages": [
+    "en",
+    "zh"
+  ],
+  "default_language_selection": "system",
+  "app_product_family_label": "Aptus / Valeo",
+  "release_build": true,
+  "release_debuggable": false,
+  "lint": {
+    "errors": 0,
+    "warnings": 14,
+    "categories": [
+      "AppBundleLocaleChanges",
+      "NewerVersionAvailable",
+      "OldTargetApi",
+      "UnusedAttribute",
+      "UnusedResources",
+      "UseKtx"
+    ]
+  },
+  "release_lint": {
+    "errors": 0,
+    "warnings": 14,
+    "categories": [
+      "AppBundleLocaleChanges",
+      "NewerVersionAvailable",
+      "OldTargetApi",
+      "UnusedAttribute",
+      "UnusedResources",
+      "UseKtx"
+    ]
+  },
+  "apk_generated": true,
+  "apk": "dist\\Leaf2Android-0.2.0.apk",
+  "apk_bytes": 3105063,
+  "apk_sha256": "d3a081c242fa813d87cbd9b09d54e76c4e8a44762621e7398720c5c548c30a4c",
+  "apk_signature_verified": true,
+  "apk_zip_16k_alignment": true,
+  "elf_16k_alignment_verified": true,
+  "manufacturer_materials_in_reference_and_separate_resource_archive": true,
+  "samples_analyzed": [
+    "1.0.2",
+    "1.0.3"
+  ],
+  "fixture_origin": "synthetic",
+  "ui_screenshots_pixels": {
+    "modern-empty": [
+      1080,
+      2520
+    ],
+    "modern-narrow": [
+      1080,
+      2520
+    ],
+    "pda-narrow": [
+      1080,
+      2520
+    ],
+    "modern-wide": [
+      2208,
+      1840
+    ],
+    "pda-wide": [
+      2208,
+      1840
+    ],
+    "modern-landscape": [
+      2520,
+      1080
+    ],
+    "modern-narrow-zh": [
+      1080,
+      2520
+    ],
+    "pda-narrow-zh": [
+      1080,
+      2520
+    ],
+    "modern-wide-zh": [
+      2208,
+      1840
+    ]
+  },
+  "ui_screenshots_are_emulator_window_size_simulations": true,
+  "ui_screenshot_build": "signed minified release",
+  "ui_screenshot_apk_sha256": "d3a081c242fa813d87cbd9b09d54e76c4e8a44762621e7398720c5c548c30a4c",
+  "physical_device_tests_performed": false,
+  "physical_folding_and_one_ui_verified": false,
+  "complete_startup_handshake_verified": false,
+  "target_back_firmware": null,
+  "target_phone": "Galaxy Z Fold7 / Android 16 / One UI 8.5 (not attached)",
+  "mos_full_file_transfer_implemented": false,
+  "continuous_live_view_implemented": false,
+  "mechanical_shutter_remote_release": "Hardware unsupported in current setup",
+  "gate": "v1_delivered_under_user_wireless_assumption; physical_acceptance_pending",
+  "matching_bilingual_resource_keys": 191,
+  "old_workspace_empty": true
+}

@@ -1,0 +1,551 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-10",
+  "project": "Leaf2Android",
+  "scope": "All files under reference except this inventory and Python bytecode caches.",
+  "file_count": 51,
+  "total_bytes": 17473372,
+  "largest_file_bytes": 2729244,
+  "files_exceeding_90_mib": [],
+  "camera_back_firmware": {
+    "present": false,
+    "image_count": 0,
+    "note": "No identifiable Aptus / Valeo camera-back firmware image was supplied. Extracted ARM PE files are Windows CE WiView client components."
+  },
+  "pinned_inputs": 6,
+  "entries": [
+    {
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/00LeafCE.001",
+      "bytes": 2319872,
+      "sha256": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/BtCoreIf.005",
+      "bytes": 123392,
+      "sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/BTSDKC~1.004",
+      "bytes": 188928,
+      "sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/CabSetup.999",
+      "bytes": 23552,
+      "sha256": "88f699643246d9b67bc576f65b3ba9d94de70c4d16903c32ff24ab78659bea3a",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/LEAFCE~1.000",
+      "bytes": 861,
+      "sha256": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/LEAFWI~1.003",
+      "bytes": 10240,
+      "sha256": "9a61bc949c41c631a7cd6c25b42c8d2a731a99f1b2d357cf5bca13fa9773d78d",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/legacy-extraction/wiview-1.0.2/LEAFWI~2.002",
+      "bytes": 15360,
+      "sha256": "c6b8c1a79290de2bdb11f4b7984a56949a48615ea499cd4e98128a29181d8088",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/protocol-evidence.json",
+      "bytes": 15304,
+      "sha256": "0aa8a52f9e20abe3abb680846321d46cfb30a3584b21e99a99742cc90e7679cf",
+      "classification": "verified_static_protocol_anchors",
+      "version": null,
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB",
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/version-comparison.json",
+      "bytes": 20607,
+      "sha256": "1ed099fb6464baab6fe01e541805626654c687a9564046364397d5e440027d04",
+      "classification": "generated_static_version_comparison",
+      "version": null,
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB",
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/00LeafCE.001.strings.json",
+      "bytes": 413537,
+      "sha256": "c8bfb0b170037d37bcc3a098dd2eac6ece5e6cd57a15cbaadadabd05976f9a5a",
+      "classification": "generated_static_strings",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/binary-analysis.json",
+      "bytes": 187450,
+      "sha256": "f386db1b233ec1d58b11656543588a5b2d526c0e8dc2c7b354d3c668e7ea0b59",
+      "classification": "generated_pe_analysis",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/BtCoreIf.005.strings.json",
+      "bytes": 58202,
+      "sha256": "ccdbcb219eac8fdf7f4ab43ae757eb0d316a97bbd73bca44e4d4b294ca3abdd3",
+      "classification": "generated_static_strings",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/BTSDKC~1.004.strings.json",
+      "bytes": 132172,
+      "sha256": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174",
+      "classification": "generated_static_strings",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/CabSetup.999.strings.json",
+      "bytes": 2834,
+      "sha256": "d412f0de38dcf3791d9db8ce04d799a0df1032cf9c5e0279e8a31cfad9eb199b",
+      "classification": "generated_static_strings",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/00LeafCE.001",
+      "bytes": 2319872,
+      "sha256": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/BtCoreIf.005",
+      "bytes": 123392,
+      "sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/BTSDKC~1.004",
+      "bytes": 188928,
+      "sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/CabSetup.999",
+      "bytes": 23552,
+      "sha256": "88f699643246d9b67bc576f65b3ba9d94de70c4d16903c32ff24ab78659bea3a",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/LEAFCE~1.000",
+      "bytes": 861,
+      "sha256": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/LEAFWI~1.003",
+      "bytes": 10240,
+      "sha256": "9a61bc949c41c631a7cd6c25b42c8d2a731a99f1b2d357cf5bca13fa9773d78d",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/LEAFWI~2.002",
+      "bytes": 15360,
+      "sha256": "c6b8c1a79290de2bdb11f4b7984a56949a48615ea499cd4e98128a29181d8088",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/LEAFWI~1.003.strings.json",
+      "bytes": 2754,
+      "sha256": "90b97350ce27406408d8f5eee7625336782d94191d2ff2ae0fe553bc37c92468",
+      "classification": "generated_static_strings",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.2/LEAFWI~2.002.strings.json",
+      "bytes": 10914,
+      "sha256": "ebecd39b9becbd71a90579de343d550925afc1f4a102de9e68d341c656e2e5bf",
+      "classification": "generated_static_strings",
+      "version": "1.0.2",
+      "derived_from": [
+        "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/00LeafCE.001.strings.json",
+      "bytes": 416321,
+      "sha256": "baee47fbdffa5f2ca66db038a1e978630515e717b670458613513e35d7fc1790",
+      "classification": "generated_static_strings",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/binary-analysis.json",
+      "bytes": 187446,
+      "sha256": "64f11cd5bc174bd7b518aaf5e95b471efaf7e342b3cd7448f8c28a1980387149",
+      "classification": "generated_pe_analysis",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/BtCoreIf.005.strings.json",
+      "bytes": 58202,
+      "sha256": "ccdbcb219eac8fdf7f4ab43ae757eb0d316a97bbd73bca44e4d4b294ca3abdd3",
+      "classification": "generated_static_strings",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/BTSDKC~1.004.strings.json",
+      "bytes": 132172,
+      "sha256": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174",
+      "classification": "generated_static_strings",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/CabSetup.999.strings.json",
+      "bytes": 2834,
+      "sha256": "d412f0de38dcf3791d9db8ce04d799a0df1032cf9c5e0279e8a31cfad9eb199b",
+      "classification": "generated_static_strings",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/00LeafCE.001",
+      "bytes": 2357760,
+      "sha256": "ac6d0699870d7f9a1e00fe8bf507a35cfc38f3d2b6619e5dbae30eb248b87fe9",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/BtCoreIf.005",
+      "bytes": 123392,
+      "sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/BTSDKC~1.004",
+      "bytes": 188928,
+      "sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/CabSetup.999",
+      "bytes": 23552,
+      "sha256": "32c2a943b31fbc12cf596e649ee883f543ed13d40ab30e425cd07f20203bd109",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/LEAFCE~1.000",
+      "bytes": 861,
+      "sha256": "10cc863f1f8bb9cca7cd577cc3c712757bd2a4513cc4a7af8012d28b79e00678",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/LEAFWI~1.003",
+      "bytes": 18432,
+      "sha256": "aa864a45bf7e4b1800c648ea6565d7da9dc36922cbf06d85781a9ec3c08f1530",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/LEAFWI~2.002",
+      "bytes": 15360,
+      "sha256": "91904d568629a7a32f8aadfeadcf2ab1a582ac3c69456a2501f935dc23b8cbbf",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/LEAFWI~1.003.strings.json",
+      "bytes": 2754,
+      "sha256": "90b97350ce27406408d8f5eee7625336782d94191d2ff2ae0fe553bc37c92468",
+      "classification": "generated_static_strings",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/LEAFWI~2.002.strings.json",
+      "bytes": 10914,
+      "sha256": "ebecd39b9becbd71a90579de343d550925afc1f4a102de9e68d341c656e2e5bf",
+      "classification": "generated_static_strings",
+      "version": "1.0.3",
+      "derived_from": [
+        "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB"
+      ],
+      "provenance": "Extracted client bytes or generated static-analysis data; not camera-back firmware."
+    },
+    {
+      "path": "reference/build_inventory.py",
+      "bytes": 4408,
+      "sha256": "2fde6e029702e4ce137abe7f0bf0f77f2b655aed9f2365124df17eaa0c79967b",
+      "classification": "inventory_maintenance_tool",
+      "version": null,
+      "provenance": "Leaf2Android project-maintained reference metadata/documentation."
+    },
+    {
+      "path": "reference/firmware/README.md",
+      "bytes": 1418,
+      "sha256": "9ba296c40bc313c28205b088b85c8bea7be8a0f7ee2bdb797d05c58fe6383b90",
+      "classification": "firmware_absence_notice",
+      "version": null,
+      "provenance": "Leaf2Android project-maintained reference metadata/documentation."
+    },
+    {
+      "path": "reference/README.en.md",
+      "bytes": 7314,
+      "sha256": "ac8991604a9b3bb6e6557f106cfc9415d97b680df9737dbff1116a33a5275f0d",
+      "classification": "project_documentation",
+      "version": null,
+      "provenance": "Leaf2Android project-maintained reference metadata/documentation."
+    },
+    {
+      "path": "reference/README.md",
+      "bytes": 6648,
+      "sha256": "ccc5de9815f8452d05abf85b90d722f22cd99b52152710447a7dec79f622a228",
+      "classification": "project_documentation",
+      "version": null,
+      "provenance": "Leaf2Android project-maintained reference metadata/documentation."
+    },
+    {
+      "path": "reference/relocation-manifest.json",
+      "bytes": 21715,
+      "sha256": "94655440e8cdbfc70b407998e63e22599c5d07c8af9d4d91c1dfae389dec991a",
+      "classification": "relocation_audit",
+      "version": null,
+      "provenance": "Leaf2Android project-maintained reference metadata/documentation."
+    },
+    {
+      "path": "reference/sources.lock.json",
+      "bytes": 5311,
+      "sha256": "72186ca3a9ee5153014a8fdaa9329577c0cc066c59b184cb5e7264dabd23f5c6",
+      "classification": "pinned_input_manifest",
+      "version": null,
+      "provenance": "Leaf2Android project-maintained reference metadata/documentation."
+    },
+    {
+      "path": "reference/wiview/1.0.2/LeafWiView-1.0.2.CAB",
+      "bytes": 2683140,
+      "sha256": "5f38aab055b2cb46560e59aa87d019a76a0e7e4a2d6866fbbc58b8e5eac56f85",
+      "classification": "windows_ce_client_installer",
+      "version": "1.0.2",
+      "source_id": "LeafWiView-1.0.2.CAB",
+      "source_url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView%2011%201.0.2%20for%20PC%20installer/WiView%2011%201.0.2%20installer/installfile/Leaf%20WiView_11_1_0_2.CAB",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "path": "reference/wiview/1.0.2/WiView-1.0.2-mac-Installer.data",
+      "bytes": 835922,
+      "sha256": "6a864adb792c657d093135602c5413ba5a8ed98c87ba0730d9415cd9e30b23d4",
+      "classification": "macos_client_installer_data",
+      "version": "1.0.2",
+      "source_id": "WiView-1.0.2-mac-Installer.data",
+      "source_url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView11%201.0.2%20Installer.app/Contents/InstallerData/Installer.data",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "path": "reference/wiview/1.0.2/WiView-1.0.2-ReadMe.txt",
+      "bytes": 5570,
+      "sha256": "89e57de9c04d2a08bff0f59b0a43e6878de8940b8d21f5f4181e84e4cf8cc912",
+      "classification": "manufacturer_readme_rtf",
+      "version": "1.0.2",
+      "source_id": "WiView-1.0.2-ReadMe.txt",
+      "source_url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Software/WiView11%201.0.2%20Installer.app/Contents/Resources/ReadMe.txt",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "path": "reference/wiview/1.0.3/Leaf WiView11_1_0_3.CAB",
+      "bytes": 2729244,
+      "sha256": "0f0a34891b3b4f7c70c6681092da38cd5d0bb9cadc82ff7b6dcb793c399b4cce",
+      "classification": "windows_ce_client_installer",
+      "version": "1.0.3",
+      "source_id": "user-wiview-1.0.3-cab",
+      "source_url": null,
+      "provenance": "User supplied in this chat on 2026-10-18; original publisher not independently authenticated"
+    },
+    {
+      "path": "reference/wiview/guides/LeafWiView-1.0.3-Installation-2008.pdf",
+      "bytes": 563679,
+      "sha256": "dc2d731c083df87cc05722691b4807501818e6c075b199b6462e8c97336a8aef",
+      "classification": "manufacturer_installation_guide",
+      "version": "1.0.3",
+      "source_id": "LeafWiView-1.0.3-Installation-2008.pdf",
+      "source_url": "https://web.archive.org/web/20081230142347id_/http://www.leaf-photography.com/imgs/uploads/user%20guides/leafwiview_103_installation.pdf",
+      "provenance": "manufacturer installation guide, archived from official Leaf website"
+    },
+    {
+      "path": "reference/wiview/guides/LeafWiView-Installation-2007.pdf",
+      "bytes": 743496,
+      "sha256": "777b294d5dc1f96f014a3bc9d6871fe3d3e920281105941705b5de82bbde4f23",
+      "classification": "manufacturer_installation_guide",
+      "version": null,
+      "source_id": "LeafWiView-Installation-2007.pdf",
+      "source_url": "https://archive.org/download/leaf-capture-11/Leaf%20Cpature%2011/Leaf/Books_and_software/Leaf_Aptus/Documentation/LeafWiView_Installation_Guide.pdf",
+      "provenance": "community-uploaded original CD files; authenticity not independently established"
+    },
+    {
+      "path": "reference/wiview/provenance/downloads.json",
+      "bytes": 4383,
+      "sha256": "8e10de984e9e24070b94bd115a9a4cec4085cca99ed7baca0fe84e76e53bb6da",
+      "classification": "acquisition_provenance",
+      "version": null,
+      "provenance": "Original retrieval log or public archive metadata retained unchanged."
+    },
+    {
+      "path": "reference/wiview/provenance/leaf-capture-11-metadata.json",
+      "bytes": 114012,
+      "sha256": "93e83775fc8e10ab8491480b9a49275c25019f454ce81d940fc18e445ceabf12",
+      "classification": "acquisition_provenance",
+      "version": null,
+      "provenance": "Original retrieval log or public archive metadata retained unchanged."
+    }
+  ]
+}
