@@ -116,6 +116,10 @@ def main() -> None:
         uploaded.append({"name": path.name, "bytes": asset["size"], "sha256": digest.removeprefix("sha256:"), "url": asset["browser_download_url"]})
         print(f"Uploaded and checked: {path.name}", flush=True)
     release = github.call(github.base + "/releases/" + str(release["id"]), "PATCH", {"draft": False, "prerelease": True})
+    # GitHub changes draft asset URLs from an untagged path to the published tag.
+    published_assets = {asset["name"]: asset for asset in release["assets"]}
+    for asset in uploaded:
+        asset["url"] = published_assets[asset["name"]]["browser_download_url"]
     report = {"repository": args.repo, "tag": args.tag, "commit": args.commit, "release_url": release["html_url"], "prerelease": True, "assets": uploaded}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
