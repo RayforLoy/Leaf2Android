@@ -1,0 +1,103 @@
+Leaf Aptus II 5.041：协议静态证据
+输入：CaptureOne.Mac.7.1.6\FirmWareAptusII.UPD / .BIN。
+以下地址只对应本次已核验哈希，不能直接套用其他固件。
+
+PPC 载荷基址 0x74000；原 UPD 文件偏移 = VA - 0x74000 + 0x128。
+CE PE 的 VA、RVA、重建 PE 偏移和原 BIN 偏移各不相同。
+
+一、蓝牙与传输
+
+1. 初始化代码 VA 0x358C28 起有分支选择下列文本：
+   AptusSComm / AptusComm / AFiComm，Leaf Wi / Leaf AFi Wi。
+   disassembly\bluetooth_stack_setup.ppc.txt 保存该局部代码。
+   这些是服务/本地名称线索；具体机型的广播名和 SDP 仍需实测。
+
+2. GAP 配对口令请求日志引用 VA 0x35926C，原文件偏移 0x2E5394。
+   其后调用 0x364764 取得一个字符串，再将地址和口令传入 0x35C580。
+   仅凭该路径不能推出出厂 PIN，更不能知道实机当前设置。
+   证据：disassembly\bluetooth_gap_passkey_event.ppc.txt。
+
+3. SPP Add Port/Open/Close 事件引用位于 VA 0x35956C、0x3595B0、
+   0x359608 等；GAP 的 discoverable/connectable/link-key 处理代码也存在。
+   本次未完整还原 SDP 服务记录，未认定具体 RFCOMM 通道号。
+
+4. PPC 有相互区分的 PXAInterface 和 PDAInterface，对应内部界面及
+   外部 PDA 的明显线索。PDAInterface 的代码窗口保存于同名反汇编文件。
+   尚未完整证明每条命令在两个接口上的可达性和允许范围。
+
+二、同步与命令
+
+命令字符串返回代码（地址构造指令，并非完整 handler 入口）：
+  RequestSync       VA 0x8D6EC
+  GetImage          VA 0x98A38
+  GetCameraParam    VA 0xE51A4
+  SetCameraParam    VA 0x9BDB4
+  GetPictureParams  VA 0x88DB4
+  SetPictureParams  VA 0x89BEC
+
+PPC 在 VA 0xAFEE4 引用 ^<ReSyncResponse/>，在 0xAFF18 引用 ReSyncRequest。
+这些引用及局部机器码在 evidence\ppc_string_xrefs.json 和 disassembly 中。
+
+CE 界面程序的 UTF-16LE 字面量（偏移属于重建的 LeafCE.exe）：
+  0x135E14  ^<RequestSync />
+  0x135E38  ^<GetCameraParam GetParamList="CurrentTime" />
+  0x1366A8  ^<GetImage file_name="
+  0x136F50  ^<GetCameraParam GetParamList="battery_percent" />
+  0x137030  ^<SetCameraParam BluetoothStatus="
+  0x137284  ^<SetCameraParam CEVersion="
+  0x137408  ^<SetCameraParam NewPinCode="
+
+这是板载 CE 程序发送相应请求的字面量证据。完整的连接启动顺序还需要
+调用路径和实机通信验证。CEVersion 在这里是 SetCameraParam 的属性，
+不能由一个孤立的 CEVersion 字符串推定新的无线前置握手。
+BIN 容器头的原始版本字节也不能未经调用路径核实就填入该属性。
+
+三、GetImage 的局部实现
+
+源：disassembly\GetImage_attributes_and_transmit.ppc.txt。
+  VA 0x97E74：把 file_name 名称传给属性读取函数。
+  VA 0x97EC8：把 PacketSize 名称传给同一函数；存在时转换数值，
+              在 0x97EE8 写入对象偏移 0x31C。
+  VA 0x97E8C 起：检查文件名前缀的 '.' 和 '/'，存在去除 './' 的路径。
+  VA 0x97EFC / 0x97F28 / 0x97F54：读取 zoom / light / Alarm。
+  VA 0x982AC：把取得的图像缓冲长度写入对象偏移 0x1F8。
+  VA 0x9830C：设置内部属性名 ATTACHMENT。
+  VA 0x98334：设置内部属性名 file_name。
+  VA 0x985D8：引用 transmit start 日志。
+  VA 0x985E4～0x98604：把缓冲地址、PacketSize、长度相关值传给发送函数。
+  VA 0x9860C：引用 transmit stop 日志。
+
+这些结果把 GetImage 与二进制附件发送联系起来，并确认 PacketSize
+不是仅仅存在于帮助文本中。但本次没有完整追踪通用序列化函数、
+属性大小写转换、分包应答和重传协议，不能据此直接实现完整分包。
+zoom / light / Alarm 的存在也不代表这几个参数在所有设备/接口上可用。
+
+四、相机参数与通知
+
+GetCameraParam 相关字符串区包含 GetParamList、battery_percent、
+battery_type、battery_time、exp_left、exp_max、CurrentTime、TotalFrames、
+CameraOrientation、Annotation、Copyright、Shooting_folder 等。
+RequestSync 附近还有 BluetoothSupport；SetCameraParam 区域包含
+BluetoothStatus、NewPinCode、PinCode、CEVersion。
+已保存其字节偏移和部分代码引用，未把所有属性的存在认定为已验证的
+远程可读写能力。
+
+PictureTaken 相关区有 file_name、error_code、exp_left，旁边有
+parametersReady、imageSaved。PPC 也有 FileCommand 和图片备注命令。
+这些证据适合继续补全当前 Android 客户端的服务器侧交叉验证。
+
+五、现有 Android 协议研究可吸收的结论
+
+可确认的增量：共享固件内有蓝牙 SPP 路径、RequestSync/GetImage/
+GetCameraParam 命令实现、图像附件发送和 PIN/蓝牙状态设置路径。
+现有客户端研究中的主要命令名称已得到固件侧证据支持。
+
+仍需要实机/完整调用路径确认：
+  - 目标后背是否安装并启用了无线硬件，真实服务 UUID 和通道。
+  - 当前 PIN、配对和认证行为。
+  - 连接后完整消息先后顺序、通知应答和恢复时序。
+  - 实际编码、附件长度/大小写、JPEG 回包和目录样本。
+  - PacketSize 的允许值、分包、重传和超时行为。
+  - MOS 完整读取与连续 Live View 的可用性。
+
+本次仅保存静态证据，未改动 D:\Leaf4Android 的代码或已发表的协议结论。

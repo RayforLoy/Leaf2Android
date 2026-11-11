@@ -51,7 +51,7 @@ The original client converts control text using the PDA system code page. Receiv
 ## Specific 1.0.3 changes
 
 1. Adds `^<Nak />`. Its constructor chooses Ack / Nak using internal state and resets that state in one branch. Calls are present, but back responses and applicable timing remain unverified.
-2. Adds `^<SetCameraParam PowerSource="`, alongside FireWire, CameraBattery, powersourceselection, support and notsupport. These suggest power-source capability and settings, but do not establish support on Aptus II 5.
+2. Adds `^<SetCameraParam PowerSource="`, alongside FireWire, CameraBattery, powersourceselection, support and notsupport. Use the fields actually advertised by a wireless back; Aptus II is not a Bluetooth target.
 3. Adds AsyncCommand, polling_timeout, IfGUIIsActive and ReadyToShoot handling clues. The AsyncCommand handler reads and converts polling_timeout.
 4. Adds firmware-update prompts and UI-buffer strings, and changes main / launcher resources. The manufacturer's [1.0.3 guide](https://web.archive.org/web/20081230142347id_/http://www.leaf-photography.com/imgs/uploads/user%20guides/leafwiview_103_installation.pdf) introduces Windows Mobile 6 and VGA support on printed page 1; PDF text and rendering were checked during the original analysis.
 
@@ -63,4 +63,4 @@ Use 1.0.3 as the main baseline and 1.0.2 for comparison. Rebuild Android transpo
 
 A GetImage filename may refer to `.mos`, which does not prove a complete MOS response. JPEG-processing code is present. Original-file reading and continuous sensor view need separate evidence; RawFrameBuffer text was not accepted as proof of raw transfer.
 
-This analysis did not change back firmware, pairing settings or photos. The Aptus II 5 wireless service, complete handshake, capture previews and Android 16 link remain unverified. Aptus / Valeo interface branding does not expand that hardware evidence.
+This static analysis did not change back firmware, pairing settings or photos. On 2026-11-11 the user reported successful connection/photo reading on Valeo 22Wi and Aptus 22 and clarified that Aptus II has no Bluetooth. New control effects still require hardware validation. See the independent classic 4.701 [firmware survey](firmware-bluetooth-survey.en.md).

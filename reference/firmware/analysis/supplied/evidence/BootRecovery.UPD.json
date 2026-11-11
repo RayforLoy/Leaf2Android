@@ -1,0 +1,532 @@
+[
+  {
+    "offset": 3023176,
+    "encoding": "ascii",
+    "text": "GAP:  Get Local BD Addr Response."
+  },
+  {
+    "offset": 3023212,
+    "encoding": "ascii",
+    "text": "GAP:  Set Bluetooth Passkey Response. Status = %d."
+  },
+  {
+    "offset": 3023264,
+    "encoding": "ascii",
+    "text": "GAP:  Add Link Key Response. Status = %d."
+  },
+  {
+    "offset": 3023340,
+    "encoding": "ascii",
+    "text": "GAP:  Set Local Name Response. Status = %d."
+  },
+  {
+    "offset": 3023420,
+    "encoding": "ascii",
+    "text": "GAP:  Get Local Name Response. Name = %s."
+  },
+  {
+    "offset": 3023464,
+    "encoding": "ascii",
+    "text": "GAP:  Set Discoverable Response. Status = %d."
+  },
+  {
+    "offset": 3023548,
+    "encoding": "ascii",
+    "text": "GAP:  Set Connectable Response. Status = %d."
+  },
+  {
+    "offset": 3023628,
+    "encoding": "ascii",
+    "text": "GAP:  Remote BD Address Indication %02x:%02x:%02x:%02x:%02x:%02x."
+  },
+  {
+    "offset": 3023696,
+    "encoding": "ascii",
+    "text": "GAP:  Request Of Blootooth passkey Indication from %02x:%02x:%02x:%02x:%02x:%02x."
+  },
+  {
+    "offset": 3023780,
+    "encoding": "ascii",
+    "text": "GAP:  Set Device Class Response. Status = %d."
+  },
+  {
+    "offset": 3023868,
+    "encoding": "ascii",
+    "text": "GAP:  New Link Key Indication:"
+  },
+  {
+    "offset": 3024048,
+    "encoding": "ascii",
+    "text": "GAP:  New Link Key Indication failed."
+  },
+  {
+    "offset": 3024088,
+    "encoding": "ascii",
+    "text": "GAP: Message %x,%2d,%d,%d,%p"
+  },
+  {
+    "offset": 3024120,
+    "encoding": "ascii",
+    "text": "GAP: Unknown Message %x,%2d,%d,%d,%p"
+  },
+  {
+    "offset": 3024160,
+    "encoding": "ascii",
+    "text": "SPP:  Add Port Response: Port = %d."
+  },
+  {
+    "offset": 3024200,
+    "encoding": "ascii",
+    "text": "SPP:  Open Indication: Port = %d."
+  },
+  {
+    "offset": 3024236,
+    "encoding": "ascii",
+    "text": "SPP:  Open Indication: Port = %d."
+  },
+  {
+    "offset": 3024272,
+    "encoding": "ascii",
+    "text": "SPP:  Close Indication: Port = %d."
+  },
+  {
+    "offset": 3024308,
+    "encoding": "ascii",
+    "text": "SPP:  Close Indication: Port = %d."
+  },
+  {
+    "offset": 3024344,
+    "encoding": "ascii",
+    "text": "SPP:  Close Response: Port = %d."
+  },
+  {
+    "offset": 3024380,
+    "encoding": "ascii",
+    "text": "SPP:  Close Response: Port = %d."
+  },
+  {
+    "offset": 3024416,
+    "encoding": "ascii",
+    "text": "SPP:  Message %x,%2d,%d,%d,%p"
+  },
+  {
+    "offset": 3024448,
+    "encoding": "ascii",
+    "text": "SPP:  Unknown Message %x,%2d,%d,%d,%p"
+  },
+  {
+    "offset": 3724792,
+    "encoding": "ascii",
+    "text": "pNA+/PPC V4.1.2"
+  },
+  {
+    "offset": 3725168,
+    "encoding": "ascii",
+    "text": "@(#)(#)pVER pNA+/PPC, Version 4.1.2, Built on 01/10/2000"
+  },
+  {
+    "offset": 3831815,
+    "encoding": "ascii",
+    "text": " pNA+ NI Loopback Driver"
+  },
+  {
+    "offset": 3857928,
+    "encoding": "ascii",
+    "text": "pSOS+/PPC V2.5.4"
+  },
+  {
+    "offset": 3858024,
+    "encoding": "ascii",
+    "text": "KC_PSOSCODE"
+  },
+  {
+    "offset": 3920287,
+    "encoding": "ascii",
+    "text": " @(#)(#)pVER pSOS+/PPC, Version 2.5.4, Built on 10/25/1999"
+  },
+  {
+    "offset": 3931223,
+    "encoding": "ascii",
+    "text": "NC_PSOSCT"
+  },
+  {
+    "offset": 3954635,
+    "encoding": "ascii",
+    "text": " psosUnReadyTask  "
+  },
+  {
+    "offset": 3954656,
+    "encoding": "ascii",
+    "text": "psosReadyTask  "
+  },
+  {
+    "offset": 4052496,
+    "encoding": "ascii",
+    "text": "***PXA doesn't came up after reset brfore BIN update!!!"
+  },
+  {
+    "offset": 4052556,
+    "encoding": "ascii",
+    "text": "EV_PXA_GUI_READY received before BIN update"
+  },
+  {
+    "offset": 4052604,
+    "encoding": "ascii",
+    "text": "PXA reset done!!!"
+  },
+  {
+    "offset": 4052624,
+    "encoding": "ascii",
+    "text": "***PXA doesn't came up after BIN update!!!"
+  },
+  {
+    "offset": 4052668,
+    "encoding": "ascii",
+    "text": "EV_PXA_GUI_READY received after BIN update"
+  },
+  {
+    "offset": 4052940,
+    "encoding": "ascii",
+    "text": "***PXA doesn't came up after UPD update!!!"
+  },
+  {
+    "offset": 4052984,
+    "encoding": "ascii",
+    "text": "EV_PXA_GUI_READY received after UPD update"
+  },
+  {
+    "offset": 4056584,
+    "encoding": "ascii",
+    "text": "EV_PXA_GUI_READY sent to event handler. Main time: %d, StartUp time: %d"
+  },
+  {
+    "offset": 4057184,
+    "encoding": "ascii",
+    "text": "GetPictureParams"
+  },
+  {
+    "offset": 4058269,
+    "encoding": "ascii",
+    "text": "E+ SetPictureParams"
+  },
+  {
+    "offset": 4058456,
+    "encoding": "ascii",
+    "text": "64LocalSyncObject__ProcessMessageHandler__16SetPictureParamsFv__L0"
+  },
+  {
+    "offset": 4059804,
+    "encoding": "ascii",
+    "text": "RequestSync"
+  },
+  {
+    "offset": 4060488,
+    "encoding": "ascii",
+    "text": "BluetoothSupport"
+  },
+  {
+    "offset": 4060832,
+    "encoding": "ascii",
+    "text": "BluetoothSupport"
+  },
+  {
+    "offset": 4066473,
+    "encoding": "ascii",
+    "text": "EK`GetImage"
+  },
+  {
+    "offset": 4066528,
+    "encoding": "ascii",
+    "text": "PacketSize"
+  },
+  {
+    "offset": 4066564,
+    "encoding": "ascii",
+    "text": "GetImage attributes: file_name = %s, PacketSize = %d"
+  },
+  {
+    "offset": 4066625,
+    "encoding": "ascii",
+    "text": "*** GetImage failed"
+  },
+  {
+    "offset": 4066672,
+    "encoding": "ascii",
+    "text": "ATTACHMENT"
+  },
+  {
+    "offset": 4066728,
+    "encoding": "ascii",
+    "text": "GetImage: SendAcknowledge %s"
+  },
+  {
+    "offset": 4066760,
+    "encoding": "ascii",
+    "text": "GetImage: transmit start %s"
+  },
+  {
+    "offset": 4066788,
+    "encoding": "ascii",
+    "text": "GetImage: transmit stop %s"
+  },
+  {
+    "offset": 4066817,
+    "encoding": "ascii",
+    "text": " ***Fatal error during sending GetImage acknoledge!!!"
+  },
+  {
+    "offset": 4067764,
+    "encoding": "ascii",
+    "text": "SetCameraParam"
+  },
+  {
+    "offset": 4067944,
+    "encoding": "ascii",
+    "text": "CEVersion"
+  },
+  {
+    "offset": 4067956,
+    "encoding": "ascii",
+    "text": "CEVersion"
+  },
+  {
+    "offset": 4068336,
+    "encoding": "ascii",
+    "text": "BluetoothStatus"
+  },
+  {
+    "offset": 4068352,
+    "encoding": "ascii",
+    "text": "BluetoothStatus"
+  },
+  {
+    "offset": 4068656,
+    "encoding": "ascii",
+    "text": "Sending Error to PXA"
+  },
+  {
+    "offset": 4068720,
+    "encoding": "ascii",
+    "text": "SetCameraParam::_SetDefaultCameraSettings ERROR i=%d"
+  },
+  {
+    "offset": 4068792,
+    "encoding": "ascii",
+    "text": "SetCameraParam::_SetShootSetup ERROR i=%d"
+  },
+  {
+    "offset": 4069137,
+    "encoding": "ascii",
+    "text": " CEVersion = %s, currentStr = %s, firmWareVersionOnFlash = %d"
+  },
+  {
+    "offset": 4069465,
+    "encoding": "ascii",
+    "text": " Switch BlueTooth On"
+  },
+  {
+    "offset": 4069493,
+    "encoding": "ascii",
+    "text": " Switch BlueTooth Off"
+  },
+  {
+    "offset": 4083577,
+    "encoding": "ascii",
+    "text": "SetTaskIdToSendAckNakTo()-PXA t_ident error: 0x%x"
+  },
+  {
+    "offset": 4085179,
+    "encoding": "ascii",
+    "text": "pFileCommand"
+  },
+  {
+    "offset": 4085256,
+    "encoding": "ascii",
+    "text": "FileCommand"
+  },
+  {
+    "offset": 4085584,
+    "encoding": "ascii",
+    "text": "FileCommand"
+  },
+  {
+    "offset": 4086855,
+    "encoding": "ascii",
+    "text": "`^<ReSyncResponse/>"
+  },
+  {
+    "offset": 4087004,
+    "encoding": "ascii",
+    "text": "ReSyncRequest"
+  },
+  {
+    "offset": 4087049,
+    "encoding": "ascii",
+    "text": "***Error during handling ReSyncRequest message!!!"
+  },
+  {
+    "offset": 4120728,
+    "encoding": "ascii",
+    "text": "Show FirmWare CEVersion."
+  },
+  {
+    "offset": 4130896,
+    "encoding": "ascii",
+    "text": "After EnableThePictureTaken."
+  },
+  {
+    "offset": 4134444,
+    "encoding": "ascii",
+    "text": "GetCameraParam"
+  },
+  {
+    "offset": 4134512,
+    "encoding": "ascii",
+    "text": "GetCameraParam::SetAttributes ERROR i=%d bufferLength=%d"
+  },
+  {
+    "offset": 4141256,
+    "encoding": "ascii",
+    "text": "FirmWare CEVersion version (New concept): %d:: %d.%d.%d.%d"
+  },
+  {
+    "offset": 4141316,
+    "encoding": "ascii",
+    "text": "FirmWare CEVersion version (Old concept): %d:: %d.%d"
+  },
+  {
+    "offset": 4151240,
+    "encoding": "ascii",
+    "text": "PXA completed flash write!!! Reset the PXA"
+  },
+  {
+    "offset": 4151368,
+    "encoding": "ascii",
+    "text": "ATTACHMENT"
+  },
+  {
+    "offset": 4152089,
+    "encoding": "ascii",
+    "text": " Error during sending PXA Storage Notification message."
+  },
+  {
+    "offset": 4152193,
+    "encoding": "ascii",
+    "text": " Error during sending PXA switch mode message."
+  },
+  {
+    "offset": 4152241,
+    "encoding": "ascii",
+    "text": " Error during sending PXA is GUI active request."
+  },
+  {
+    "offset": 4152337,
+    "encoding": "ascii",
+    "text": " Error during sending PXA battery type message."
+  },
+  {
+    "offset": 4152389,
+    "encoding": "ascii",
+    "text": " Error during sending PXA sensor orientation message."
+  },
+  {
+    "offset": 4152445,
+    "encoding": "ascii",
+    "text": " Error during sending PXA delete private info message."
+  },
+  {
+    "offset": 4152501,
+    "encoding": "ascii",
+    "text": " Error during sending PXA picture dimensions message."
+  },
+  {
+    "offset": 4153224,
+    "encoding": "ascii",
+    "text": "PictureTaken"
+  },
+  {
+    "offset": 4153308,
+    "encoding": "ascii",
+    "text": "PictureTaken"
+  },
+  {
+    "offset": 4153336,
+    "encoding": "ascii",
+    "text": "PictureTaken"
+  },
+  {
+    "offset": 4153365,
+    "encoding": "ascii",
+    "text": "PictureTakenMessage:SetCommandNameToSend() param ERROR"
+  },
+  {
+    "offset": 4154568,
+    "encoding": "ascii",
+    "text": "PXAInterface"
+  },
+  {
+    "offset": 4154641,
+    "encoding": "ascii",
+    "text": "Error during create PXA Message"
+  },
+  {
+    "offset": 4154685,
+    "encoding": "ascii",
+    "text": "Error during create PXA queue"
+  },
+  {
+    "offset": 4154725,
+    "encoding": "ascii",
+    "text": "Error during create PXA TASK"
+  },
+  {
+    "offset": 4154889,
+    "encoding": "ascii",
+    "text": "***PXA Interface task was terminated ubnormal!!!"
+  },
+  {
+    "offset": 4155489,
+    "encoding": "ascii",
+    "text": "Error type of sending queue to PXA/PDA Interface"
+  },
+  {
+    "offset": 4155541,
+    "encoding": "ascii",
+    "text": "*** Error during sending message to PXA/PDA Interface queue: %d"
+  },
+  {
+    "offset": 4155809,
+    "encoding": "ascii",
+    "text": " ***Failed to create PXAInterface"
+  },
+  {
+    "offset": 4822673,
+    "encoding": "ascii",
+    "text": "Can not open file %s, PSOSFileStream constructor, err_code = 0x%x"
+  },
+  {
+    "offset": 4822757,
+    "encoding": "ascii",
+    "text": "Can not write to stream, PSOSFileStream Write, fileName = %s, err_code = 0x%x"
+  },
+  {
+    "offset": 4822837,
+    "encoding": "ascii",
+    "text": "Can not read from stream, PSOSFileStream Read, fileName = %s, err_code = 0x%x"
+  },
+  {
+    "offset": 5276592,
+    "encoding": "ascii",
+    "text": "Q3B12leaf_capture19CPSOSFlashUtilities9_PageInfo"
+  },
+  {
+    "offset": 5282032,
+    "encoding": "ascii",
+    "text": "Q2B12leaf_capture78CPSOSGainTagHandler__t_Q2B12leaf_capture36CGainTagHandler__t_15CLocoCompressor"
+  },
+  {
+    "offset": 5282192,
+    "encoding": "ascii",
+    "text": "Q2B12leaf_capture80CPSOSGainTagHandler__t_Q2B12leaf_capture38CGainTagHandler__t_17CLsJpegCompressor"
+  }
+]

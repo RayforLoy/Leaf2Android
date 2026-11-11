@@ -1,0 +1,499 @@
+00098a34 [file 00024b5c] lis       r3, 0x46
+00098a38 [file 00024b60] addi      r3, r3, -0x74b0 ; str@0x458b50 'GetImage'
+00098a3c [file 00024b64] blr       
+00098a40 [file 00024b68] stwu      r1, -8(r1)
+00098a44 [file 00024b6c] mflr      r0
+00098a48 [file 00024b70] stw       r0, 0xc(r1)
+00098a4c [file 00024b74] li        r4, 0
+00098a50 [file 00024b78] bl        0xb9ca0
+00098a54 [file 00024b7c] lwz       r0, 0xc(r1)
+00098a58 [file 00024b80] mtlr      r0
+00098a5c [file 00024b84] addi      r1, r1, 8
+00098a60 [file 00024b88] blr       
+00098a64 [file 00024b8c] stwu      r1, -0x20(r1)
+00098a68 [file 00024b90] mflr      r0
+00098a6c [file 00024b94] stw       r29, 0x14(r1)
+00098a70 [file 00024b98] stw       r30, 0x18(r1)
+00098a74 [file 00024b9c] stw       r31, 0x1c(r1)
+00098a78 [file 00024ba0] stw       r0, 0x24(r1)
+00098a7c [file 00024ba4] bl        0x99244
+00098a80 [file 00024ba8] clrlwi    r3, r3, 0x18
+00098a84 [file 00024bac] cmpwi     r3, 0
+00098a88 [file 00024bb0] beq       0x98cd8
+00098a8c [file 00024bb4] addi      r3, r1, 8
+00098a90 [file 00024bb8] addi      r4, r1, 0xc
+00098a94 [file 00024bbc] bl        0x9949c
+00098a98 [file 00024bc0] lwz       r31, 8(r1)
+00098a9c [file 00024bc4] lis       r7, 0x64
+00098aa0 [file 00024bc8] addi      r7, r7, 0x4404
+00098aa4 [file 00024bcc] stw       r31, 0(r7)
+00098aa8 [file 00024bd0] lwz       r3, 0xc(r1)
+00098aac [file 00024bd4] stw       r3, 4(r7)
+00098ab0 [file 00024bd8] bl        0x44f82c
+00098ab4 [file 00024bdc] addi      r30, r4, 0
+00098ab8 [file 00024be0] addi      r29, r3, 0
+00098abc [file 00024be4] addi      r3, r31, 0
+00098ac0 [file 00024be8] bl        0x44f82c
+00098ac4 [file 00024bec] addi      r6, r4, 0
+00098ac8 [file 00024bf0] addi      r5, r3, 0
+00098acc [file 00024bf4] lis       r3, 0x46
+00098ad0 [file 00024bf8] addi      r3, r3, -0x7294 ; str@0x458d6c 'InitTilt:dutyCycle0,\n'
+00098ad4 [file 00024bfc] addi      r8, r30, 0
+00098ad8 [file 00024c00] addi      r7, r29, 0
+00098adc [file 00024c04] bl        0x91fd8
+00098ae0 [file 00024c08] lis       r31, 0x46
+00098ae4 [file 00024c0c] addi      r31, r31, -0x72bc
+00098ae8 [file 00024c10] lwz       r9, 0(r31)
+00098aec [file 00024c14] cmpwi     r9, 0
+00098af0 [file 00024c18] bne       0x98b2c
+00098af4 [file 00024c1c] li        r12, 1
+00098af8 [file 00024c20] stw       r12, 0(r31)
+00098afc [file 00024c24] lis       r3, 0x46
+00098b00 [file 00024c28] addi      r3, r3, -0x727c ; str@0x458d84 'OrS0'
+00098b04 [file 00024c2c] lis       r6, 0x46
+00098b08 [file 00024c30] addi      r6, r6, -0x72c8
+00098b0c [file 00024c34] li        r4, 0
+00098b10 [file 00024c38] li        r5, 0
+00098b14 [file 00024c3c] bl        0x74788
+00098b18 [file 00024c40] cmpwi     r3, 0
+00098b1c [file 00024c44] beq       0x98b2c
+00098b20 [file 00024c48] lis       r3, 0x46
+00098b24 [file 00024c4c] addi      r3, r3, -0x7274 ; str@0x458d8c 'Problem creating sem1\n'
+00098b28 [file 00024c50] bl        0x92094
+00098b2c [file 00024c54] lis       r3, 0x46
+00098b30 [file 00024c58] addi      r3, r3, -0x725c ; str@0x458da4 'OrSR'
+00098b34 [file 00024c5c] lis       r6, 0x46
+00098b38 [file 00024c60] addi      r6, r6, -0x72b4
+00098b3c [file 00024c64] li        r4, 0
+00098b40 [file 00024c68] li        r5, 0
+00098b44 [file 00024c6c] bl        0x74788
+00098b48 [file 00024c70] cmpwi     r3, 0
+00098b4c [file 00024c74] beq       0x98b5c
+00098b50 [file 00024c78] lis       r3, 0x46
+00098b54 [file 00024c7c] addi      r3, r3, -0x7254 ; str@0x458dac 'Problem creating sem2\n'
+00098b58 [file 00024c80] bl        0x92094
+00098b5c [file 00024c84] lis       r3, 0x46
+00098b60 [file 00024c88] addi      r3, r3, -0x723c ; str@0x458dc4 'OrMC'
+00098b64 [file 00024c8c] lis       r6, 0x46
+00098b68 [file 00024c90] addi      r6, r6, -0x72b0
+00098b6c [file 00024c94] li        r4, 0
+00098b70 [file 00024c98] li        r5, 0
+00098b74 [file 00024c9c] bl        0x74788
+00098b78 [file 00024ca0] cmpwi     r3, 0
+00098b7c [file 00024ca4] beq       0x98b8c
+00098b80 [file 00024ca8] lis       r3, 0x46
+00098b84 [file 00024cac] addi      r3, r3, -0x7234 ; str@0x458dcc 'Problem creating sem3\n'
+00098b88 [file 00024cb0] bl        0x92094
+00098b8c [file 00024cb4] lis       r3, 0x46
+00098b90 [file 00024cb8] addi      r3, r3, -0x721c
+00098b94 [file 00024cbc] lis       r6, 0x46
+00098b98 [file 00024cc0] addi      r6, r6, -0x729c
+00098b9c [file 00024cc4] li        r4, 0
+00098ba0 [file 00024cc8] li        r5, 0
+00098ba4 [file 00024ccc] bl        0x748e0
+00098ba8 [file 00024cd0] cmpwi     r3, 0
+00098bac [file 00024cd4] beq       0x98bbc
+00098bb0 [file 00024cd8] lis       r3, 0x46
+00098bb4 [file 00024cdc] addi      r3, r3, -0x7218 ; str@0x458de8 'Problem creating mutex1\n'
+00098bb8 [file 00024ce0] bl        0x92094
+00098bbc [file 00024ce4] lis       r3, 0x46
+00098bc0 [file 00024ce8] addi      r3, r3, -0x71fc ; str@0x458e04 'OrSB'
+00098bc4 [file 00024cec] lis       r6, 0x46
+00098bc8 [file 00024cf0] addi      r6, r6, -0x72a4
+00098bcc [file 00024cf4] li        r4, 1
+00098bd0 [file 00024cf8] li        r5, 0
+00098bd4 [file 00024cfc] bl        0x74788
+00098bd8 [file 00024d00] cmpwi     r3, 0
+00098bdc [file 00024d04] beq       0x98bec
+00098be0 [file 00024d08] lis       r3, 0x46
+00098be4 [file 00024d0c] addi      r3, r3, -0x71f4 ; str@0x458e0c 'Problem creating sem4\n'
+00098be8 [file 00024d10] bl        0x92094
+00098bec [file 00024d14] li        r3, 1
+00098bf0 [file 00024d18] bl        0x4015f0
+00098bf4 [file 00024d1c] addi      r31, r3, 0
+00098bf8 [file 00024d20] bl        0x3fcc20
+00098bfc [file 00024d24] rlwinm    r3, r3, 0, 0x12, 0x10
+00098c00 [file 00024d28] bl        0x3fcc34
+00098c04 [file 00024d2c] bl        0x3f734c
+00098c08 [file 00024d30] ori       r3, r3, 2
+00098c0c [file 00024d34] bl        0x3f7360
+00098c10 [file 00024d38] addi      r3, r31, 0
+00098c14 [file 00024d3c] bl        0x4015f0
+00098c18 [file 00024d40] bl        0xe7074
+00098c1c [file 00024d44] addi      r31, r3, 0
+00098c20 [file 00024d48] cmpwi     r31, 0
+00098c24 [file 00024d4c] beq       0x98c6c
+00098c28 [file 00024d50] cmplwi    r31, 1
+00098c2c [file 00024d54] ble       0x98c4c
+00098c30 [file 00024d58] lis       r4, 0xa
+00098c34 [file 00024d5c] addi      r4, r4, -0x6a4c
+00098c38 [file 00024d60] li        r3, 0x2b
+00098c3c [file 00024d64] li        r5, 0
+00098c40 [file 00024d68] li        r6, 0
+00098c44 [file 00024d6c] bl        0xc9a40
+00098c48 [file 00024d70] b         0x98c64
+00098c4c [file 00024d74] lis       r4, 0xa
+00098c50 [file 00024d78] addi      r4, r4, -0x6ac8
+00098c54 [file 00024d7c] li        r3, 0x2b
+00098c58 [file 00024d80] li        r5, 0
+00098c5c [file 00024d84] li        r6, 0
+00098c60 [file 00024d88] bl        0xc9a40
+00098c64 [file 00024d8c] li        r3, 0x2b
+00098c68 [file 00024d90] bl        0xc9ba0
+00098c6c [file 00024d94] lis       r31, 0x46
+00098c70 [file 00024d98] addi      r31, r31, -0x72a0
+00098c74 [file 00024d9c] lis       r3, 0x46
+00098c78 [file 00024da0] addi      r3, r3, -0x71dc ; str@0x458e24 'tilT'
+00098c7c [file 00024da4] li        r4, 0x98
+00098c80 [file 00024da8] li        r5, 0x1000
+00098c84 [file 00024dac] li        r6, 0x200
+00098c88 [file 00024db0] li        r7, 0
+00098c8c [file 00024db4] addi      r8, r31, 0
+00098c90 [file 00024db8] bl        0x74568
+00098c94 [file 00024dbc] cmpwi     r3, 0
+00098c98 [file 00024dc0] beq       0x98cb0
+00098c9c [file 00024dc4] lis       r3, 0x46
+00098ca0 [file 00024dc8] addi      r3, r3, -0x71d4 ; str@0x458e2c 'Tilt task create problem\n'
+00098ca4 [file 00024dcc] bl        0x92094
+00098ca8 [file 00024dd0] li        r3, 0
+00098cac [file 00024dd4] b         0x98cdc
+00098cb0 [file 00024dd8] lwz       r3, 0(r31)
+00098cb4 [file 00024ddc] lis       r5, 0xa
+00098cb8 [file 00024de0] addi      r5, r5, -0x7114
+00098cbc [file 00024de4] li        r4, 0x2000
+00098cc0 [file 00024de8] li        r6, 0
+00098cc4 [file 00024dec] bl        0x74598
+00098cc8 [file 00024df0] cmpwi     r3, 0
+00098ccc [file 00024df4] beq       0x98cd8
+00098cd0 [file 00024df8] li        r3, 0
+00098cd4 [file 00024dfc] b         0x98cdc
+00098cd8 [file 00024e00] li        r3, 1
+00098cdc [file 00024e04] lwz       r29, 0x14(r1)
+00098ce0 [file 00024e08] lwz       r30, 0x18(r1)
+00098ce4 [file 00024e0c] lwz       r31, 0x1c(r1)
+00098ce8 [file 00024e10] lwz       r0, 0x24(r1)
+00098cec [file 00024e14] mtlr      r0
+00098cf0 [file 00024e18] addi      r1, r1, 0x20
+00098cf4 [file 00024e1c] blr       
+00098cf8 [file 00024e20] stwu      r1, -8(r1)
+00098cfc [file 00024e24] mflr      r0
+00098d00 [file 00024e28] stw       r0, 0xc(r1)
+00098d04 [file 00024e2c] bl        0x99244
+00098d08 [file 00024e30] clrlwi    r3, r3, 0x18
+00098d0c [file 00024e34] cmpwi     r3, 0
+00098d10 [file 00024e38] beq       0x98d34
+00098d14 [file 00024e3c] lis       r3, 0x46
+00098d18 [file 00024e40] lwz       r3, -0x729c(r3)
+00098d1c [file 00024e44] li        r4, 0
+00098d20 [file 00024e48] li        r5, 0
+00098d24 [file 00024e4c] bl        0x74920
+00098d28 [file 00024e50] lis       r3, 0x46
+00098d2c [file 00024e54] lwz       r3, -0x72b4(r3)
+00098d30 [file 00024e58] bl        0x747c8
+00098d34 [file 00024e5c] lwz       r0, 0xc(r1)
+00098d38 [file 00024e60] mtlr      r0
+00098d3c [file 00024e64] addi      r1, r1, 8
+00098d40 [file 00024e68] blr       
+00098d44 [file 00024e6c] stwu      r1, -0x20(r1)
+00098d48 [file 00024e70] mflr      r0
+00098d4c [file 00024e74] stmw      r27, 0xc(r1)
+00098d50 [file 00024e78] stw       r0, 0x24(r1)
+00098d54 [file 00024e7c] addi      r31, r3, 0
+00098d58 [file 00024e80] addi      r30, r4, 0
+00098d5c [file 00024e84] addi      r29, r5, 0
+00098d60 [file 00024e88] addi      r28, r6, 0
+00098d64 [file 00024e8c] addi      r27, r7, 0
+00098d68 [file 00024e90] bl        0x99244
+00098d6c [file 00024e94] clrlwi    r3, r3, 0x18
+00098d70 [file 00024e98] cmpwi     r3, 0
+00098d74 [file 00024e9c] beq       0x98dd4
+00098d78 [file 00024ea0] lis       r3, 0x46
+00098d7c [file 00024ea4] lwz       r3, -0x72b0(r3)
+00098d80 [file 00024ea8] li        r4, 0
+00098d84 [file 00024eac] li        r5, 0
+00098d88 [file 00024eb0] bl        0x747c0
+00098d8c [file 00024eb4] lis       r3, 0x64
+00098d90 [file 00024eb8] addi      r3, r3, 0x43fc
+00098d94 [file 00024ebc] lwz       r12, 0(r3)
+00098d98 [file 00024ec0] stw       r12, 0(r31)
+00098d9c [file 00024ec4] lwz       r11, 4(r3)
+00098da0 [file 00024ec8] stw       r11, 0(r30)
+00098da4 [file 00024ecc] lis       r3, 0x64
+00098da8 [file 00024ed0] addi      r3, r3, 0x43f4
+00098dac [file 00024ed4] lwz       r9, 0(r3)
+00098db0 [file 00024ed8] stw       r9, 0(r29)
+00098db4 [file 00024edc] lwz       r12, 4(r3)
+00098db8 [file 00024ee0] stw       r12, 0(r28)
+00098dbc [file 00024ee4] lis       r11, 0x46
+00098dc0 [file 00024ee8] lwz       r11, -0x72a8(r11)
+00098dc4 [file 00024eec] stw       r11, 0(r27)
+00098dc8 [file 00024ef0] lis       r3, 0x46
+00098dcc [file 00024ef4] lwz       r3, -0x729c(r3)
+00098dd0 [file 00024ef8] bl        0x74928
+00098dd4 [file 00024efc] lmw       r27, 0xc(r1)
+00098dd8 [file 00024f00] lwz       r0, 0x24(r1)
+00098ddc [file 00024f04] mtlr      r0
+00098de0 [file 00024f08] addi      r1, r1, 0x20
+00098de4 [file 00024f0c] blr       
+00098de8 [file 00024f10] stwu      r1, -8(r1)
+00098dec [file 00024f14] mflr      r0
+00098df0 [file 00024f18] stw       r0, 0xc(r1)
+00098df4 [file 00024f1c] lis       r3, 0x46
+00098df8 [file 00024f20] lwz       r3, -0x72c8(r3)
+00098dfc [file 00024f24] bl        0x747c8
+00098e00 [file 00024f28] lwz       r0, 0xc(r1)
+00098e04 [file 00024f2c] mtlr      r0
+00098e08 [file 00024f30] addi      r1, r1, 8
+00098e0c [file 00024f34] blr       
+00098e10 [file 00024f38] stwu      r1, -0x10(r1)
+00098e14 [file 00024f3c] mflr      r0
+00098e18 [file 00024f40] stw       r30, 8(r1)
+00098e1c [file 00024f44] stw       r31, 0xc(r1)
+00098e20 [file 00024f48] stw       r0, 0x14(r1)
+00098e24 [file 00024f4c] lis       r30, 0x46
+00098e28 [file 00024f50] addi      r30, r30, -0x72c4
+00098e2c [file 00024f54] lwz       r31, 0(r30)
+00098e30 [file 00024f58] cmpwi     r31, 0
+00098e34 [file 00024f5c] bne       0x98e5c
+00098e38 [file 00024f60] li        r12, 1
+00098e3c [file 00024f64] stw       r12, 0(r30)
+00098e40 [file 00024f68] bl        0xe1614
+00098e44 [file 00024f6c] lis       r11, 0x46
+00098e48 [file 00024f70] stw       r3, -0x72ac(r11)
+00098e4c [file 00024f74] bl        0x3f72d4
+00098e50 [file 00024f78] rlwinm    r3, r3, 0, 0x1f, 0x1d
+00098e54 [file 00024f7c] bl        0x3f72e8
+00098e58 [file 00024f80] b         0x98ed4
+00098e5c [file 00024f84] cmpwi     r31, 1
+00098e60 [file 00024f88] bne       0x98eac
+00098e64 [file 00024f8c] lis       r31, 0x46
+00098e68 [file 00024f90] addi      r31, r31, -0x72c0
+00098e6c [file 00024f94] bl        0xe1614
+00098e70 [file 00024f98] stw       r3, 0(r31)
+00098e74 [file 00024f9c] li        r11, 0
+00098e78 [file 00024fa0] stw       r11, 0(r30)
+00098e7c [file 00024fa4] lwz       r4, 0(r31)
+00098e80 [file 00024fa8] lis       r3, 0x46
+00098e84 [file 00024fac] lwz       r3, -0x72ac(r3)
+00098e88 [file 00024fb0] bl        0xe16c8
+00098e8c [file 00024fb4] cmplwi    r3, 0x1f4
+00098e90 [file 00024fb8] blt       0x98e9c
+00098e94 [file 00024fbc] li        r12, 2
+00098e98 [file 00024fc0] stw       r12, 0(r30)
+00098e9c [file 00024fc4] bl        0x3f72d4
+00098ea0 [file 00024fc8] ori       r3, r3, 2
+00098ea4 [file 00024fcc] bl        0x3f72e8
+00098ea8 [file 00024fd0] b         0x98ed4
+00098eac [file 00024fd4] cmpwi     r31, 2
+00098eb0 [file 00024fd8] bne       0x98ed4
+00098eb4 [file 00024fdc] li        r12, 3
+00098eb8 [file 00024fe0] stw       r12, 0(r30)
+00098ebc [file 00024fe4] bl        0xe1614
+00098ec0 [file 00024fe8] lis       r11, 0x46
+00098ec4 [file 00024fec] stw       r3, -0x72b8(r11)
+00098ec8 [file 00024ff0] lis       r3, 0x46
+00098ecc [file 00024ff4] lwz       r3, -0x72c8(r3)
+00098ed0 [file 00024ff8] bl        0x747c8
+00098ed4 [file 00024ffc] lwz       r30, 8(r1)
+00098ed8 [file 00025000] lwz       r31, 0xc(r1)
+00098edc [file 00025004] lwz       r0, 0x14(r1)
+00098ee0 [file 00025008] mtlr      r0
+00098ee4 [file 0002500c] addi      r1, r1, 0x10
+00098ee8 [file 00025010] blr       
+00098eec [file 00025014] stwu      r1, -0x18(r1)
+00098ef0 [file 00025018] mflr      r0
+00098ef4 [file 0002501c] stw       r29, 0xc(r1)
+00098ef8 [file 00025020] stw       r30, 0x10(r1)
+00098efc [file 00025024] stw       r31, 0x14(r1)
+00098f00 [file 00025028] stw       r0, 0x1c(r1)
+00098f04 [file 0002502c] lis       r29, 0x46
+00098f08 [file 00025030] addi      r29, r29, -0x72b4
+00098f0c [file 00025034] lis       r30, 0x46
+00098f10 [file 00025038] addi      r30, r30, -0x72a8
+00098f14 [file 0002503c] lis       r31, 0x46
+00098f18 [file 00025040] addi      r31, r31, -0x72b0
+00098f1c [file 00025044] lwz       r3, 0(r29)
+00098f20 [file 00025048] li        r4, 0
+00098f24 [file 0002504c] li        r5, 0
+00098f28 [file 00025050] bl        0x747c0
+00098f2c [file 00025054] li        r3, 0
+00098f30 [file 00025058] bl        0x98f80
+00098f34 [file 0002505c] li        r3, 1
+00098f38 [file 00025060] bl        0x98f80
+00098f3c [file 00025064] bl        0x991c4
+00098f40 [file 00025068] stw       r3, 0(r30)
+00098f44 [file 0002506c] b         0xb11a0
+00098f48 [file 00025070] bl        0x747c8
+00098f4c [file 00025074] bl        0xb6268
+00098f50 [file 00025078] clrlwi    r3, r3, 0x18
+00098f54 [file 0002507c] cmpwi     r3, 0
+00098f58 [file 00025080] beq       0x98f1c
+00098f5c [file 00025084] bl        0x100f58
+00098f60 [file 00025088] b         0x98f1c
+00098f64 [file 0002508c] lwz       r29, 0xc(r1)
+00098f68 [file 00025090] lwz       r30, 0x10(r1)
+00098f6c [file 00025094] lwz       r31, 0x14(r1)
+00098f70 [file 00025098] lwz       r0, 0x1c(r1)
+00098f74 [file 0002509c] mtlr      r0
+00098f78 [file 000250a0] addi      r1, r1, 0x18
+00098f7c [file 000250a4] blr       
+00098f80 [file 000250a8] stwu      r1, -0x20(r1)
+00098f84 [file 000250ac] mflr      r0
+00098f88 [file 000250b0] stmw      r27, 0xc(r1)
+00098f8c [file 000250b4] stw       r0, 0x24(r1)
+00098f90 [file 000250b8] addi      r28, r3, 0
+00098f94 [file 000250bc] li        r3, 0x1e
+00098f98 [file 000250c0] bl        0xc9c98
+00098f9c [file 000250c4] li        r3, 1
+00098fa0 [file 000250c8] bl        0x4015f0
+00098fa4 [file 000250cc] addi      r27, r3, 0
+00098fa8 [file 000250d0] bl        0x3f72d4
+00098fac [file 000250d4] ori       r3, r3, 2
+00098fb0 [file 000250d8] bl        0x3f72e8
+00098fb4 [file 000250dc] addi      r3, r27, 0
+00098fb8 [file 000250e0] bl        0x4015f0
+00098fbc [file 000250e4] lis       r27, 0x64
+00098fc0 [file 000250e8] addi      r27, r27, 0x43f4
+00098fc4 [file 000250ec] slwi      r12, r28, 2
+00098fc8 [file 000250f0] li        r11, 0
+00098fcc [file 000250f4] stwx      r11, r27, r12
+00098fd0 [file 000250f8] cmpwi     r28, 0
+00098fd4 [file 000250fc] beq       0x98fec
+00098fd8 [file 00025100] li        r3, 1
+00098fdc [file 00025104] li        r4, 1
+00098fe0 [file 00025108] li        r5, 1
+00098fe4 [file 0002510c] bl        0x961b4
+00098fe8 [file 00025110] b         0x98ffc
+00098fec [file 00025114] li        r3, 1
+00098ff0 [file 00025118] li        r4, 0
+00098ff4 [file 0002511c] li        r5, 1
+00098ff8 [file 00025120] bl        0x961b4
+00098ffc [file 00025124] lis       r12, 0x46
+00099000 [file 00025128] li        r11, 0
+00099004 [file 0002512c] stw       r11, -0x72c4(r12)
+00099008 [file 00025130] bl        0xb6268
+0009900c [file 00025134] clrlwi    r3, r3, 0x18
+00099010 [file 00025138] cmpwi     r3, 0
+00099014 [file 0002513c] beq       0x9902c
+00099018 [file 00025140] lis       r3, 0
+0009901c [file 00025144] ori       r3, r3, 0x8000
+00099020 [file 00025148] li        r4, 1
+00099024 [file 0002514c] li        r5, 0
+00099028 [file 00025150] bl        0x961b4
+0009902c [file 00025154] lis       r4, 0xa
+00099030 [file 00025158] addi      r4, r4, -0x71f0
+00099034 [file 0002515c] li        r3, 0x1e
+00099038 [file 00025160] li        r5, 0
+0009903c [file 00025164] li        r6, 0
+00099040 [file 00025168] bl        0xc9a40
+00099044 [file 0002516c] bl        0x996e4
+00099048 [file 00025170] lis       r31, 0x46
+0009904c [file 00025174] addi      r31, r31, -0x72c8
+00099050 [file 00025178] lwz       r3, 0(r31)
+00099054 [file 0002517c] li        r4, 1
+00099058 [file 00025180] li        r5, 0
+0009905c [file 00025184] bl        0x747c0
+00099060 [file 00025188] li        r3, 0x1e
+00099064 [file 0002518c] bl        0xc9ba0
+00099068 [file 00025190] lwz       r3, 0(r31)
+0009906c [file 00025194] li        r4, 0
+00099070 [file 00025198] li        r5, 0x64
+00099074 [file 0002519c] bl        0x747c0
+00099078 [file 000251a0] addi      r31, r3, 0
+0009907c [file 000251a4] li        r3, 0x1e
+00099080 [file 000251a8] bl        0xc9c98
+00099084 [file 000251ac] bl        0x99724
+00099088 [file 000251b0] cmpwi     r31, 0
+0009908c [file 000251b4] beq       0x990a4
+00099090 [file 000251b8] lis       r3, 0x46
+00099094 [file 000251bc] addi      r3, r3, -0x71b8 ; str@0x458e48 'StartTiltAngleCalculation: can`t calculate tilt %d angles\n'
+00099098 [file 000251c0] addi      r4, r28, 0
+0009909c [file 000251c4] bl        0x92094
+000990a0 [file 000251c8] b         0x991b0
+000990a4 [file 000251cc] lis       r29, 0x46
+000990a8 [file 000251d0] addi      r29, r29, -0x72ac
+000990ac [file 000251d4] lis       r31, 0x46
+000990b0 [file 000251d8] addi      r31, r31, -0x72c0
+000990b4 [file 000251dc] lwz       r3, 0(r29)
+000990b8 [file 000251e0] lwz       r4, 0(r31)
+000990bc [file 000251e4] bl        0xe16c8
+000990c0 [file 000251e8] stw       r3, 0(r31)
+000990c4 [file 000251ec] lis       r30, 0x46
+000990c8 [file 000251f0] addi      r30, r30, -0x72b8
+000990cc [file 000251f4] lwz       r3, 0(r29)
+000990d0 [file 000251f8] lwz       r4, 0(r30)
+000990d4 [file 000251fc] bl        0xe16c8
+000990d8 [file 00025200] stw       r3, 0(r30)
+000990dc [file 00025204] slwi      r29, r28, 2
+000990e0 [file 00025208] lwz       r3, 0(r30)
+000990e4 [file 0002520c] bl        0x44fa5c
+000990e8 [file 00025210] addi      r30, r3, 0
+000990ec [file 00025214] lwz       r3, 0(r31)
+000990f0 [file 00025218] bl        0x44fa5c
+000990f4 [file 0002521c] lis       r4, 0x42c8
+000990f8 [file 00025220] bl        0x44f244
+000990fc [file 00025224] addi      r4, r30, 0
+00099100 [file 00025228] bl        0x44ef00
+00099104 [file 0002522c] addi      r31, r3, 0
+00099108 [file 00025230] lis       r9, 0x64
+0009910c [file 00025234] addi      r9, r9, 0x43fc
+00099110 [file 00025238] stwx      r31, r9, r29
+00099114 [file 0002523c] lis       r12, 0x64
+00099118 [file 00025240] addi      r12, r12, 0x4404
+0009911c [file 00025244] lwzx      r29, r12, r29
+00099120 [file 00025248] lis       r30, 0x4148
+00099124 [file 0002524c] addi      r3, r31, 0
+00099128 [file 00025250] addi      r4, r29, 0
+0009912c [file 00025254] bl        0x44eef8
+00099130 [file 00025258] addi      r4, r30, 0
+00099134 [file 0002525c] bl        0x44ef00
+00099138 [file 00025260] addi      r31, r3, 0
+0009913c [file 00025264] addi      r3, r31, 0
+00099140 [file 00025268] lis       r4, 0x3f80
+00099144 [file 0002526c] bl        0x44f164
+00099148 [file 00025270] cmpwi     r3, 0
+0009914c [file 00025274] bne       0x99158
+00099150 [file 00025278] lis       r31, 0x3f80
+00099154 [file 0002527c] b         0x99170
+00099158 [file 00025280] addi      r3, r31, 0
+0009915c [file 00025284] lis       r4, -0x4080
+00099160 [file 00025288] bl        0x44f0ac
+00099164 [file 0002528c] cmpwi     r3, 0
+00099168 [file 00025290] bne       0x99170
+0009916c [file 00025294] lis       r31, -0x4080
+00099170 [file 00025298] addi      r3, r31, 0
+00099174 [file 0002529c] bl        0x44f82c
+00099178 [file 000252a0] bl        0x440738
+0009917c [file 000252a4] bl        0x44f3e8
+00099180 [file 000252a8] addi      r31, r3, 0
+00099184 [file 000252ac] addi      r3, r31, 0
+00099188 [file 000252b0] lis       r4, 0x4334
+0009918c [file 000252b4] bl        0x44f244
+00099190 [file 000252b8] lis       r4, 0x3ea2
+00099194 [file 000252bc] ori       r4, r4, 0xf96b
+00099198 [file 000252c0] bl        0x44f244
+0009919c [file 000252c4] addi      r31, r3, 0
+000991a0 [file 000252c8] addi      r3, r31, 0
+000991a4 [file 000252cc] bl        0x44f8a0
+000991a8 [file 000252d0] slwi      r10, r28, 2
+000991ac [file 000252d4] stwx      r3, r27, r10
+000991b0 [file 000252d8] lmw       r27, 0xc(r1)
+000991b4 [file 000252dc] lwz       r0, 0x24(r1)
+000991b8 [file 000252e0] mtlr      r0
+000991bc [file 000252e4] addi      r1, r1, 0x20
+000991c0 [file 000252e8] blr       
+000991c4 [file 000252ec] lis       r5, 0x64
+000991c8 [file 000252f0] addi      r5, r5, 0x43f4
+000991cc [file 000252f4] lwz       r4, 0(r5)
+000991d0 [file 000252f8] srawi     r0, r4, 0x1f
+000991d4 [file 000252fc] xor       r3, r0, r4
+000991d8 [file 00025300] subf      r3, r0, r3
+000991dc [file 00025304] lwz       r5, 4(r5)
+000991e0 [file 00025308] srawi     r0, r5, 0x1f
+000991e4 [file 0002530c] xor       r12, r0, r5
+000991e8 [file 00025310] subf      r12, r0, r12
+000991ec [file 00025314] cmpw      r12, r3
+000991f0 [file 00025318] bgt       0x9920c
+000991f4 [file 0002531c] cmpwi     r4, 0
+000991f8 [file 00025320] ble       0x99204
+000991fc [file 00025324] li        r3, 4

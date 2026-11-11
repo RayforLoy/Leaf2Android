@@ -1,0 +1,28 @@
+0035969c [file 002e57c4] clrlwi    r4, r31, 0x10
+003596a0 [file 002e57c8] clrlwi    r5, r30, 0x18
+003596a4 [file 002e57cc] clrlwi    r6, r29, 0x10
+003596a8 [file 002e57d0] clrlwi    r7, r28, 0x10
+003596ac [file 002e57d4] mr        r8, r27
+003596b0 [file 002e57d8] bl        0x91fd8
+003596b4 [file 002e57dc] b         0x3596d8
+003596b8 [file 002e57e0] lis       r3, 0x36
+003596bc [file 002e57e4] addi      r3, r3, -0x5b00 ; str@0x35a500 'SPP:  Unknown Message %x,%2d,%d,%d,%p\n'
+003596c0 [file 002e57e8] clrlwi    r4, r31, 0x10
+003596c4 [file 002e57ec] clrlwi    r5, r30, 0x18
+003596c8 [file 002e57f0] clrlwi    r6, r29, 0x10
+003596cc [file 002e57f4] clrlwi    r7, r28, 0x10
+003596d0 [file 002e57f8] mr        r8, r27
+003596d4 [file 002e57fc] bl        0x92094
+003596d8 [file 002e5800] lmw       r27, 0xc(r1)
+003596dc [file 002e5804] lwz       r0, 0x24(r1)
+003596e0 [file 002e5808] mtlr      r0
+003596e4 [file 002e580c] addi      r1, r1, 0x20
+003596e8 [file 002e5810] blr       
+003596ec [file 002e5814] stwu      r1, -0x20(r1)
+003596f0 [file 002e5818] mflr      r0
+003596f4 [file 002e581c] stw       r30, 0x18(r1)
+003596f8 [file 002e5820] stw       r31, 0x1c(r1)
+003596fc [file 002e5824] stw       r0, 0x24(r1)
+00359700 [file 002e5828] lis       r3, 0x36
+00359704 [file 002e582c] addi      r3, r3, -0x5ad8 ; str@0x35a528 'Start Init Stack.\n'
+00359708 [file 002e5830] bl        0x91fd8

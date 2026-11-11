@@ -45,7 +45,7 @@ class LeafProtocol(
                     if (n < 0) { framer.finish(); throw ProtocolException("后背已断开蓝牙连接", "The back disconnected Bluetooth.") }
                     if (n == 0) continue
                     framer.feed(buffer, n) { frame ->
-                        log("RX ${frame.header.toString(encoding.charset)} [${frame.attachment.size} bytes]")
+                        log("RX ${LabRedaction.redact(frame.header.toString(encoding.charset))} [${frame.attachment.size} bytes]")
                         val waiting = pending
                         if (waiting != null && waiting.command.accepts(frame, encoding)) {
                             waiting.reply.complete(frame)
@@ -66,7 +66,7 @@ class LeafProtocol(
         }
     }
 
-    suspend fun execute(command: LeafCommand): WireFrame = requests.withLock {
+    suspend fun execute(command: LeafCommand, validateReply: Boolean = true): WireFrame = requests.withLock {
         if (!running) throw ProtocolException("蓝牙会话未连接", "The Bluetooth session is not connected.")
         val wait = Pending(command, CompletableDeferred())
         check(pending == null)
@@ -74,13 +74,13 @@ class LeafProtocol(
         try {
             val response = withTimeout(command.timeoutMs) {
                 write(command.bytes(encoding))
-                log("TX ${command.text}")
+                log("TX ${LabRedaction.redact(command.text)}")
                 wait.reply.await()
             }
-            if (response.tag.equals("Error", true) || response.tag.equals("Nak", true))
+            if (validateReply && (response.tag.equals("Error", true) || response.tag.equals("Nak", true)))
                 throw ProtocolException("后背拒绝指令：${response.header.toString(encoding.charset)}", "The back rejected the command: ${response.header.toString(encoding.charset)}")
             val errorCode = response.value("error_code")
-            if (errorCode != null && errorCode.toLongOrNull() != 0L)
+            if (validateReply && errorCode != null && errorCode.toLongOrNull() != 0L)
                 throw ProtocolException("后背返回错误码 $errorCode：${command.text.substringBefore(' ')}", "The back returned error $errorCode: ${command.text.substringBefore(' ')}")
             response
         } catch (e: TimeoutCancellationException) {
@@ -92,6 +92,11 @@ class LeafProtocol(
     }
 
     suspend fun acknowledge() { if (running) write(Commands.ack) }
+    suspend fun sendOnly(command: LeafCommand) = requests.withLock {
+        if (!running) throw ProtocolException("蓝牙会话未连接", "The Bluetooth session is not connected.")
+        write(command.bytes(encoding))
+        log("TX ${LabRedaction.redact(command.text)} [send only]")
+    }
 
     private suspend fun write(bytes: ByteArray) = writes.withLock { transport.write(bytes) }
 

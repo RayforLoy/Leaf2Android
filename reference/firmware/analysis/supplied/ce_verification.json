@@ -1,0 +1,898 @@
+{
+  "modules_verified": 23,
+  "files_verified": 11,
+  "source_sections_verified": 79,
+  "lzx_calls": 36,
+  "modules": [
+    {
+      "name": "nk.exe",
+      "path": "ce_reconstructed/fs/Windows/nk.exe",
+      "sha256": "28f36c962b7b0ecc4b58c0d95af9fdc85a298d27291fea0518cf8d4134e8d6d8",
+      "machine": 450,
+      "image_base": 2148237312,
+      "entry_point_va": 2148241408,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 254908,
+          "sha256": "efd43ad475d36333baa439c4e818067bb5a5bff56aea25a61c1f3ef2ce42ab46",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 286720,
+          "checked_length": 1811,
+          "sha256": "cc0a3ac02ae93c356e156c858d31f31eb11b44c6a651a2b96737df224da35e9f",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 3,
+          "rva": 262144,
+          "checked_length": 7688,
+          "sha256": "5ec5a378fa1a1f0cb1b4ed9769ef1d1be9185b469c530624af63fa8cb4c9e307",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "coredll.dll",
+      "path": "ce_reconstructed/fs/Windows/coredll.dll",
+      "sha256": "2bc9ad864e9384e644074072a4266f8f70fdff405bb7e95b3acd65484fb1e0ea",
+      "machine": 450,
+      "image_base": 66650112,
+      "entry_point_va": 66669384,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 367825,
+          "sha256": "81a1dba69e674f2ee4c6600d41ffbde3a8079dddbb97eb98f6b48be79ebbadf5",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 372736,
+          "checked_length": 1172,
+          "sha256": "ac8b5b40941401a0b4292afab5d5f43723b36cfb44ae8ab06eb3aa28f095dd53",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 376832,
+          "checked_length": 15440,
+          "sha256": "bc974e4edfdc0b7c4c9583194acfac18572d6df5b400fd77aa3b051ecf9c674d",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 3,
+          "rva": 393216,
+          "checked_length": 25568,
+          "sha256": "6c29c501e35a6c3ab2438186c82e75604a3bf9add48ea968794f8ff8767aa202",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {
+        "3": 20,
+        "4": 2,
+        "5": 3,
+        "6": 10,
+        "14": 7
+      }
+    },
+    {
+      "name": "filesys.exe",
+      "path": "ce_reconstructed/fs/Windows/filesys.exe",
+      "sha256": "b93c4dc9a1d820929fc266397b711dae7957bc60a4135329ef4467315b98ce2c",
+      "machine": 450,
+      "image_base": 65536,
+      "entry_point_va": 94568,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 194324,
+          "sha256": "dc48edc2edde59101ec1d535f0bea752cf990975627cdff9cf4b7eb9b6d613b9",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 200704,
+          "checked_length": 29112,
+          "sha256": "b445f65f59075252039295f0579967290c9eb8bb320f3cb2f953a084d613b296",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 233472,
+          "checked_length": 5072,
+          "sha256": "45d9e8e60a7832a493015bd48b6a0bf4e45d02c5302325e6bdc4f049d79bebb2",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 3,
+          "rva": 241664,
+          "checked_length": 172,
+          "sha256": "491fb81ef92e9c2ab7f6dde26fe5e5daea80abaf1ec4a778f329b0f933711cbd",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {
+        "6": 1
+      }
+    },
+    {
+      "name": "gwes.exe",
+      "path": "ce_reconstructed/fs/Windows/gwes.exe",
+      "sha256": "316bf9ea8e74b8cc96db2bc95b4d233ca46b3b7fccb6bd2d9601d5446edac40d",
+      "machine": 450,
+      "image_base": 65536,
+      "entry_point_va": 90792,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 665844,
+          "sha256": "dd6d0463a3459b72761a270eb68fee3bc46a20e7c76d2bbf01cae5e8d866436c",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 671744,
+          "checked_length": 23260,
+          "sha256": "cef7b486a3d62732825bc78a4d71b80fe42f63a62d09fe3c2e4ba2d5c55979dd",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 696320,
+          "checked_length": 23176,
+          "sha256": "2e5ce8ab1ad50c94cfdbb10a02a389de1d70012a34ae9a6fe0db6c378567350c",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 3,
+          "rva": 720896,
+          "checked_length": 29464,
+          "sha256": "af552ac685ca0913efb7dd176e3e3117db93d14329ae27ce5c6cca816f9043d4",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {
+        "2": 8,
+        "3": 12,
+        "5": 3,
+        "6": 8,
+        "14": 5
+      }
+    },
+    {
+      "name": "device.exe",
+      "path": "ce_reconstructed/fs/Windows/device.exe",
+      "sha256": "133f4a09caef76f44e2df77a5cd2725b4fad03dbd21ba7fdb58abfc1d6583f54",
+      "machine": 450,
+      "image_base": 65536,
+      "entry_point_va": 78388,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 22200,
+          "sha256": "4370c2495936381b9a76bb18d2503c4464d29a0c8a1b104f5e066bbd129c2879",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 28672,
+          "checked_length": 334,
+          "sha256": "7df40dca64c27edc7d4c6e956d06cbb90d3b8fa0568b25ce884596dfc4016421",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 32768,
+          "checked_length": 1032,
+          "sha256": "91a0acd1bd48bec8470eb384fc5cf23b3064e048e2ae043cddaf3363e67c9900",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "regenum.dll",
+      "path": "ce_reconstructed/fs/Windows/regenum.dll",
+      "sha256": "c3b555038852f18946f6fa5cc50a4f46d4ab827908dc9dbe151702fde30b3bef",
+      "machine": 450,
+      "image_base": 66584576,
+      "entry_point_va": 66588924,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 3251,
+          "sha256": "2539fd5a5f22593a3322c04c17c953fccd184c254859c11ca735b8638efec3ee",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 8192,
+          "checked_length": 71,
+          "sha256": "9e31131353a18d2dc5d3a61e3f49830c6e50a374443bba3739e56287ccf4b495",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 12288,
+          "checked_length": 48,
+          "sha256": "217d9042840aada9fcd7bddafb02ec000a6a9bdd2967790d93171aff9e7965f7",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "pm.dll",
+      "path": "ce_reconstructed/fs/Windows/pm.dll",
+      "sha256": "cc0c057bafdc88f08493397533e79fa645806bb224c022c9bfe553e55612f63b",
+      "machine": 450,
+      "image_base": 66519040,
+      "entry_point_va": 66531900,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 29256,
+          "sha256": "2c9641a7dc56518154183a3023306df359b3b2fdd9803cc0b5a0e5a3200b88bd",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 36864,
+          "checked_length": 332,
+          "sha256": "b050b72658a4c5baf7bf320c48fddcf10147c74b9d07e7dc7a535fea70b2e01f",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 40960,
+          "checked_length": 1008,
+          "sha256": "70a94aa9034df8443dccd092a5883157ad7171045c07aa77c047d7bd7026fca7",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "fatfsd.dll",
+      "path": "ce_reconstructed/fs/Windows/fatfsd.dll",
+      "sha256": "e99ab5702042334aeccf50c1b8975d2967791021f8c6218d9c0eac33b5e880ca",
+      "machine": 450,
+      "image_base": 66387968,
+      "entry_point_va": 66393904,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 54053,
+          "sha256": "7e2b6e619cf30009fa4ffcbddac17b8d30f2c075541b577042159623e71b0a9f",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 61440,
+          "checked_length": 303,
+          "sha256": "0127d3b7b9a505e63ef06f97c6bfc359a349d4336114aec25aa8ccf7b95d0fe6",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 65536,
+          "checked_length": 1480,
+          "sha256": "0b8a954f56f82f5e2092933cb7b7b1c61ecc0ac8320c0e4ef4c695f0b99ee119",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "fatutil.dll",
+      "path": "ce_reconstructed/fs/Windows/fatutil.dll",
+      "sha256": "9d63e8f4760a28570f844f148edb51406c17f8950a6f7107852222a86987eeb6",
+      "machine": 450,
+      "image_base": 66322432,
+      "entry_point_va": 66326936,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 26489,
+          "sha256": "8e42c6fb9f59c868f2d5a858e074a0dfda13afde09d36c00ac3fa5afb9774ca9",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 32768,
+          "checked_length": 3144,
+          "sha256": "85a64ec2f56447413b685c1553b956f3253f944f13e06f60a5e097dc195434d9",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 36864,
+          "checked_length": 880,
+          "sha256": "8714da919e5f22863d03fc71c5f35005a712adb170c8432cea0ac158040f2548",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 3,
+          "rva": 40960,
+          "checked_length": 4452,
+          "sha256": "b5fbb92e0b96be867609490a0cc617a5b04addce6a3210ca47563e5ed7fab2c3",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {
+        "5": 3,
+        "6": 6
+      }
+    },
+    {
+      "name": "fsdmgr.dll",
+      "path": "ce_reconstructed/fs/Windows/fsdmgr.dll",
+      "sha256": "42a564a5aa50e23a2004099ae65435f0402f010ce7ecb11ff1e0a9b2d44ae38a",
+      "machine": 450,
+      "image_base": 66191360,
+      "entry_point_va": 66201380,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 53031,
+          "sha256": "ffb291cd495d2710aa571a3b70827b4b14fa731a67fd6f7fb893de6b5503ebf9",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 57344,
+          "checked_length": 768,
+          "sha256": "38009e2d06f205512deac25a5dc12af7b5bb89db7cc42f2c5f3c7c8212073289",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 61440,
+          "checked_length": 2912,
+          "sha256": "8315c5ead2e97cf7d3660905e1572cd1f90bf51ca7daa50d390b146f5a5554bc",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "mspart.dll",
+      "path": "ce_reconstructed/fs/Windows/mspart.dll",
+      "sha256": "ef8ea29edf767543fb2602ec64435aa18132973061f9466357620ba22fe1e33b",
+      "machine": 450,
+      "image_base": 66125824,
+      "entry_point_va": 66134692,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 14791,
+          "sha256": "eac8bbee641a8a5d46636ec5a74e64f1cf967c57b94ef410fb3ce25e3aae937b",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 20480,
+          "checked_length": 67,
+          "sha256": "61b6190f6a418c834240fdcbafb4d7f63a2ac9ab19d5dd98f45e6c0c851398d1",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 24576,
+          "checked_length": 288,
+          "sha256": "51c3e463b984b138c7c52bba0d29614740f308c8a1d0d9b9aa0dcbf0e3c0b664",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "waveapi.dll",
+      "path": "ce_reconstructed/fs/Windows/waveapi.dll",
+      "sha256": "5391238c70656069b295cb1850bdde1d6b60900294f20cd53abd1ccad07fabca",
+      "machine": 450,
+      "image_base": 66060288,
+      "entry_point_va": 66068668,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 44067,
+          "sha256": "e5ae495bbcbd60176bb98e19d2782da0cd74988933d882d1564bc8a425914a78",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 49152,
+          "checked_length": 1216,
+          "sha256": "f477f4e5037aa1a52fb4016509b95ba5f6f66ce269dbc217ce9c058bc395a4f6",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 53248,
+          "checked_length": 1776,
+          "sha256": "f0df0cf151235f0dce526c42ad42633cf9461078723b853ece3b2451696a4d4d",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "audevman.dll",
+      "path": "ce_reconstructed/fs/Windows/audevman.dll",
+      "sha256": "aaab84e8927e8ed046c92869ce8105a61639aa63464e8509521baead270a8d72",
+      "machine": 450,
+      "image_base": 65994752,
+      "entry_point_va": 66006144,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 22076,
+          "sha256": "802a5881bc46aa011f21778f624131bb9e2022bc00e6b2f7c5c3a7e5243cd811",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 28672,
+          "checked_length": 1548,
+          "sha256": "c67a5a4fe2eb58c43fbd4e35815a6ed4be8660709fd90ac69fb20dfd0f3fa762",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 32768,
+          "checked_length": 1032,
+          "sha256": "bd558ce037c8d38ef436c00b5c13cd91192c904cd8a47827c3342f2feb617830",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "ceddk.dll",
+      "path": "ce_reconstructed/fs/Windows/ceddk.dll",
+      "sha256": "3edd5044bad4b7b2ffe1e0682d31cdf1a67828db6da716694b7111359938235a",
+      "machine": 450,
+      "image_base": 65929216,
+      "entry_point_va": 65933676,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 4295,
+          "sha256": "e6628156db79bd4f1ead70e3d4a6fd640c623abb86ef6c7b2c12ad2194beaaba",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 12288,
+          "checked_length": 54,
+          "sha256": "c180abfb77318a4ab8cf25abcc34a89c78dccff07bb3c95187cb1c8de970f365",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 16384,
+          "checked_length": 312,
+          "sha256": "d7b73cfcd214f050e70038baf5e558de4d21b223f0f884ca5334b57809cfe996",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "mmtimer.dll",
+      "path": "ce_reconstructed/fs/Windows/mmtimer.dll",
+      "sha256": "1142b9cf91e26b73c265161e73c98a8fd53463e0ab7516b6c2eec0f30565ce71",
+      "machine": 450,
+      "image_base": 65863680,
+      "entry_point_va": 65870688,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 3659,
+          "sha256": "e2b51339e885efa913fb45f9ce857fa49268e0776dceaeb1726c44e84b667e70",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 8192,
+          "checked_length": 93,
+          "sha256": "e5fe0a627c8f85e23842dd4da226007dbc009cbcf610d5ae16b6d8488b5e4916",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 12288,
+          "checked_length": 136,
+          "sha256": "38974c537e70878ca8d653cc92bf1504ac1f8051148ca1623689cb36b820dd2b",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "LeafCE.exe",
+      "path": "ce_reconstructed/fs/Windows/LeafCE.exe",
+      "sha256": "8580a221440594108204e7a3e6eb25e0c574ad4176c95854cdb6feb9b1b0fb6f",
+      "machine": 450,
+      "image_base": 65536,
+      "entry_point_va": 1311852,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 1243208,
+          "sha256": "a17f66bc176ed565be1dc6e549ff9f668a32759c1e11f00328e4ae471785b451",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 1249280,
+          "checked_length": 295856,
+          "sha256": "9c82cb66ab5b256e0df0f88b3df2d45e7e29586f9f780f45447152b626840ff0",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 1548288,
+          "checked_length": 29932,
+          "sha256": "d4db96176432cd90704ecd0c04a7c0ba31b8440db8a8015cb5fc1c69d9395c8a",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 3,
+          "rva": 1581056,
+          "checked_length": 70888,
+          "sha256": "aaa267cb75be72eec8b424875b0701127cdf28bfb7bc325f162b8c0b743ecf88",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 4,
+          "rva": 1654784,
+          "checked_length": 12492432,
+          "sha256": "4a604b94891e26e4e0ed018d9b36404f988eb5925664810d9fe517180c576678",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {
+        "JPEG": 1,
+        "WAVE": 8,
+        "2": 504,
+        "9": 1
+      }
+    },
+    {
+      "name": "ddi.dll",
+      "path": "ce_reconstructed/fs/Windows/ddi.dll",
+      "sha256": "22997df661709ec70646074b2e55a9aafefe240c33fedc2a1cb396d733af01f1",
+      "machine": 450,
+      "image_base": 65732608,
+      "entry_point_va": 65804432,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 68634,
+          "sha256": "6c210f76afce4e585c7ac65c62481f65afa269fd8f845f532cc1ac2877a47857",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 73728,
+          "checked_length": 2108,
+          "sha256": "7779254e1381b507f23afcc72f573524aa4e53c60c513f3060e361468a436dab",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 77824,
+          "checked_length": 672,
+          "sha256": "1b087c207d20c0de1b14af2675f2b481a4bedd9dba5541f5af49e6f2c009d7d1",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 3,
+          "rva": 81920,
+          "checked_length": 384,
+          "sha256": "a8fc0e170d36eb6979ec6f10da45936869cb731caa137f0414225ebed7a2c6be",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 4,
+          "rva": 86016,
+          "checked_length": 504,
+          "sha256": "3c9904203d842752e8640ab3462c405bc63ff6b6b009167819b14846b776609b",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 5,
+          "rva": 90112,
+          "checked_length": 16376,
+          "sha256": "d586fdcbaf5724a549bc888a262777e050effed5461e7a28f1b105457a4ddaad",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 6,
+          "rva": 106496,
+          "checked_length": 2416,
+          "sha256": "4690aecf6ed7c3a15c8cb2d5d522f0a1081284f81f9fc2d4c4b88a407ed4c560",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "wavedev.dll",
+      "path": "ce_reconstructed/fs/Windows/wavedev.dll",
+      "sha256": "ad1213c9c50f03bd6bc05082ad2520566cc09ddb1dc63e33f71d997ce6490fbf",
+      "machine": 450,
+      "image_base": 65667072,
+      "entry_point_va": 65685636,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 27843,
+          "sha256": "690330b3854201023750f6cf45a68da7e8cb8d602f775777a4b772cc6360fe58",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 32768,
+          "checked_length": 177,
+          "sha256": "b481af9e69098bd58b5ab16f94f0933068dd44bea61ee5578bbf5b9d8845e8ab",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 36864,
+          "checked_length": 960,
+          "sha256": "3de2f25f6c43aeb5541603d811f274a57ba22cfd568c2baca71de73f118a4cfd",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "RkrButton.dll",
+      "path": "ce_reconstructed/fs/Windows/RkrButton.dll",
+      "sha256": "691b5071eb0caec91c506a3ba77d597f00b98dcde345b7b3621956b2f1e4e0c3",
+      "machine": 450,
+      "image_base": 65601536,
+      "entry_point_va": 65606728,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 3036,
+          "sha256": "99b7a99a8e1b63dc28e338f9c10930aa5c7363d7810bd8e1fa7b4c2270e935a4",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 8192,
+          "checked_length": 57,
+          "sha256": "974238aba0076922c403cda9693ab8b1c776b590c3f33b3dd9154a696731786b",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 12288,
+          "checked_length": 144,
+          "sha256": "04f87a76134288c56e9093825166e1d322eabbbb2523367ed38d826371f85f7b",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "kbdmouse.dll",
+      "path": "ce_reconstructed/fs/Windows/kbdmouse.dll",
+      "sha256": "8088587a8974ea2a1558a1299ee299ec1a78453578bf8bac8b7d4ab1da113b50",
+      "machine": 450,
+      "image_base": 65536000,
+      "entry_point_va": 65558596,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 22296,
+          "sha256": "546414d5745e92f4dbf9a8db7c1661ac69da32caf99e09f0b9eceddd6f3f9f98",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 28672,
+          "checked_length": 2224,
+          "sha256": "7d5e04d5f8e78617f3653996212f06891cef01fe5cf055c3e07ea952b0dccffa",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 32768,
+          "checked_length": 936,
+          "sha256": "6cbb330e179d5dd76afdc2dd29aecd314cec28f88da7527fdfe64892a2f82534",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "touch.dll",
+      "path": "ce_reconstructed/fs/Windows/touch.dll",
+      "sha256": "f4fb165b9dd47e676a1a019c6aac9b37388756924eec0ac6c629c2149c0ffbdc",
+      "machine": 450,
+      "image_base": 65470464,
+      "entry_point_va": 65482652,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 11953,
+          "sha256": "34d09e06d8cfd215f53cb9b78c5de29e81f72350c4ab7d8af7dba85494772d84",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 16384,
+          "checked_length": 532,
+          "sha256": "b4e8a4fb571c53001b4b62011dad84947c75db083fc0c615302dd06fc9228397",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 20480,
+          "checked_length": 440,
+          "sha256": "fb0be7b4dfd3e1d588c16cdb6260a9b9b8baac5cbd8e5f3fa1e2f7bace87c5f5",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "xsc1bd_serial.dll",
+      "path": "ce_reconstructed/fs/Windows/xsc1bd_serial.dll",
+      "sha256": "f160056f9e1ae79a758a1ed6350858f55cd0fe5f6cc9454df14a03b0504e8067",
+      "machine": 450,
+      "image_base": 65404928,
+      "entry_point_va": 65414388,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 37597,
+          "sha256": "26e7e7322eba44a49fc9fc3b76dce8bca98115f99065af3444e92cc48877317f",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 45056,
+          "checked_length": 273,
+          "sha256": "a18d0d50e87c774f8f0694d149a5d2137f9f063234f83c5a2486fded81134e8b",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 49152,
+          "checked_length": 1592,
+          "sha256": "fbcf90b3ab4e0801fdf18a2bcc04c5d825e825e78a33050ef9143fb74ff7ab6b",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    },
+    {
+      "name": "pmudll.dll",
+      "path": "ce_reconstructed/fs/Windows/pmudll.dll",
+      "sha256": "f106f7dca2579ea371d6280f39f35089fc777201b9e59126da020e412b9be803",
+      "machine": 450,
+      "image_base": 65339392,
+      "entry_point_va": 65345548,
+      "source_sections_verified": [
+        {
+          "index": 0,
+          "rva": 4096,
+          "checked_length": 3173,
+          "sha256": "b19011d16be844cf0f41c9eee623a28a9e92321dfdb38f6ff1d293d01a838ce9",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 1,
+          "rva": 8192,
+          "checked_length": 39,
+          "sha256": "bac3d1cbc80e53bfef900885fcde021d80a56155fca9535540b1897c88dba60a",
+          "matches_source_or_checked_lzx": true
+        },
+        {
+          "index": 2,
+          "rva": 12288,
+          "checked_length": 152,
+          "sha256": "3ee8261c7b176c1817c06ae9c36b230ec6b19eafbe0497d1cdb05626707dadc4",
+          "matches_source_or_checked_lzx": true
+        }
+      ],
+      "resource_types": {}
+    }
+  ],
+  "files": [
+    {
+      "name": "ceconfig.h",
+      "sha256": "42094254ff928c5bc0b26cd4ae5bfb06c4d339ed6714254a6890a9fa16a9729d",
+      "verified": true
+    },
+    {
+      "name": "initobj.dat",
+      "sha256": "ffe9a38673d7f0df5103cf1ae0d701ebe3ccf6d30a5cc383d511dc6b7446cf59",
+      "verified": true
+    },
+    {
+      "name": "default.fdf",
+      "sha256": "7d581141f5448bba545d3e5a6109a975920d5fda4f987205265858ac255c0aa1",
+      "verified": true
+    },
+    {
+      "name": "initdb.ini",
+      "sha256": "aff31b88a6f44284e5c92216000160b99d870132ccfd572ec9457f5e2b71f37d",
+      "verified": true
+    },
+    {
+      "name": "verdana.ttf",
+      "sha256": "886eedb1df75504d383d10cc40404e56f6361be50e50986d7568ba94ea43cac3",
+      "verified": true
+    },
+    {
+      "name": "verdanab.ttf",
+      "sha256": "2b1ec02c0463ce5e312913da8825002165999b6f370c276cd378ef0f3e16db27",
+      "verified": true
+    },
+    {
+      "name": "verdanai.ttf",
+      "sha256": "6e656fb07fea27377b53130fe3fd24c1958900c94f5020847a3aa4244b5f7710",
+      "verified": true
+    },
+    {
+      "name": "verdanaz.ttf",
+      "sha256": "9484013828b60be32207db265dcca961cc5ee96006da6b3ed8cabdd6407cf26a",
+      "verified": true
+    },
+    {
+      "name": "tahoma.ttf",
+      "sha256": "3c825d10664322d879c155288142470a1161dc5d743a048a21aacf7f45556b5b",
+      "verified": true
+    },
+    {
+      "name": "mingliu.ac3",
+      "sha256": "f03721802f3e50a0aeb99ea2a34f8ecdbe205b9c1e4a64abb76ecab7a70ab007",
+      "verified": true
+    },
+    {
+      "name": "nokiafc22.ttf",
+      "sha256": "7be68ebdfcd4f9e7f60ef9ed3695e6c6d63c6f491afb54428eb1381e81ad2515",
+      "verified": true
+    }
+  ],
+  "limitations": [
+    "PE headers are reconstructed; binaries are analysis artifacts, not flash images.",
+    "ROM split addresses and shared RVAs remain in original metadata and .cerom.",
+    "Synthetic padding is excluded from original uncompressed section comparisons."
+  ]
+}

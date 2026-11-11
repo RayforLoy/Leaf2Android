@@ -1,0 +1,290 @@
+{
+  "kernel_binary": "nk.exe",
+  "romhdr_va": "0x80253A98",
+  "romhdr": {
+    "dllfirst": "0x01FD01FD",
+    "dlllast": "0x02000000",
+    "physfirst": "0x800B8000",
+    "physlast": "0x80A1B3BC",
+    "ulRAMStart": "0x80A20000",
+    "ulRAMFree_va": "0x80A4A000",
+    "ulRAMEnd": "0x83CB8000",
+    "ulCopyEntries": 1,
+    "ulCopyOffset": "0x8015AEFC",
+    "ulKernelFlags": "0x00000000",
+    "ulFSRamPercent": "0x80808080",
+    "ulDrivglobStart": "0x00000000",
+    "ulDrivglobLen": 0,
+    "usCPUType": "0x01C2",
+    "usMiscFlags": "0x0000",
+    "pExtensions": "0x800BB4EC",
+    "ulTrackingStart": "0x00000000",
+    "ulTrackingLen": 0
+  },
+  "rompid": [
+    {
+      "name": "",
+      "type": 2260,
+      "data_b64": "",
+      "length": 87322
+    }
+  ],
+  "copy_table": [
+    {
+      "src": "0x8029383C",
+      "dst": "0x80A26000",
+      "copy_len": "0x00000713",
+      "dest_len": "0x00023374"
+    }
+  ],
+  "modules": [
+    {
+      "name": "nk.exe",
+      "shared_rva": true
+    },
+    {
+      "name": "coredll.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "filesys.exe",
+      "shared_rva": false
+    },
+    {
+      "name": "gwes.exe",
+      "shared_rva": false
+    },
+    {
+      "name": "device.exe",
+      "shared_rva": false
+    },
+    {
+      "name": "regenum.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "pm.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "fatfsd.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "fatutil.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "fsdmgr.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "mspart.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "waveapi.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "audevman.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "ceddk.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "mmtimer.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "LeafCE.exe",
+      "shared_rva": false
+    },
+    {
+      "name": "ddi.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "wavedev.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "RkrButton.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "kbdmouse.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "touch.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "xsc1bd_serial.dll",
+      "shared_rva": false
+    },
+    {
+      "name": "pmudll.dll",
+      "shared_rva": false
+    }
+  ],
+  "files": [
+    {
+      "name": "ceconfig.h",
+      "load_va": "0x8027EB40",
+      "real_size": 4798,
+      "compressed_size": 1205,
+      "compressed": true,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 4798,
+      "attributes": "0x00000801",
+      "attributes_after_extraction": "0x00000001",
+      "filetime_lo": "0xD78A9BD5",
+      "filetime_hi": "0x01CC407A",
+      "name_offset": "0x8025AFDC"
+    },
+    {
+      "name": "initobj.dat",
+      "load_va": "0x800F73BC",
+      "real_size": 17066,
+      "compressed_size": 2914,
+      "compressed": true,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 17066,
+      "attributes": "0x00000807",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xCE30F3D3",
+      "filetime_hi": "0x01CC4169",
+      "name_offset": "0x8025AFE8"
+    },
+    {
+      "name": "default.fdf",
+      "load_va": "0x804D9EE0",
+      "real_size": 12696,
+      "compressed_size": 4141,
+      "compressed": true,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 12696,
+      "attributes": "0x00000807",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xCE191C45",
+      "filetime_hi": "0x01CC4169",
+      "name_offset": "0x8025AFF4"
+    },
+    {
+      "name": "initdb.ini",
+      "load_va": "0x80253328",
+      "real_size": 5434,
+      "compressed_size": 1903,
+      "compressed": true,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 5434,
+      "attributes": "0x00000807",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xCE29CCC2",
+      "filetime_hi": "0x01CC4169",
+      "name_offset": "0x802A4FC4"
+    },
+    {
+      "name": "verdana.ttf",
+      "load_va": "0x804DAF10",
+      "real_size": 149752,
+      "compressed_size": 149752,
+      "compressed": false,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 149752,
+      "attributes": "0x00000007",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xAB804800",
+      "filetime_hi": "0x01C2EF23",
+      "name_offset": "0x802A4FD0"
+    },
+    {
+      "name": "verdanab.ttf",
+      "load_va": "0x804FF808",
+      "real_size": 137616,
+      "compressed_size": 137616,
+      "compressed": false,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 137616,
+      "attributes": "0x00000007",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xAB804800",
+      "filetime_hi": "0x01C2EF23",
+      "name_offset": "0x802A4FDC"
+    },
+    {
+      "name": "verdanai.ttf",
+      "load_va": "0x80521198",
+      "real_size": 155076,
+      "compressed_size": 155076,
+      "compressed": false,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 155076,
+      "attributes": "0x00000007",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xAB804800",
+      "filetime_hi": "0x01C2EF23",
+      "name_offset": "0x802A4FEC"
+    },
+    {
+      "name": "verdanaz.ttf",
+      "load_va": "0x80546F5C",
+      "real_size": 154800,
+      "compressed_size": 154800,
+      "compressed": false,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 154800,
+      "attributes": "0x00000007",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xAB804800",
+      "filetime_hi": "0x01C2EF23",
+      "name_offset": "0x8018AFD0"
+    },
+    {
+      "name": "tahoma.ttf",
+      "load_va": "0x8056CC0C",
+      "real_size": 128844,
+      "compressed_size": 128844,
+      "compressed": false,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 128844,
+      "attributes": "0x00000007",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xAB804800",
+      "filetime_hi": "0x01C2EF23",
+      "name_offset": "0x8018AFE0"
+    },
+    {
+      "name": "mingliu.ac3",
+      "load_va": "0x8058C358",
+      "real_size": 4763860,
+      "compressed_size": 4763860,
+      "compressed": false,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 4763860,
+      "attributes": "0x00000007",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0xAB804800",
+      "filetime_hi": "0x01C2EF23",
+      "name_offset": "0x8018AFEC"
+    },
+    {
+      "name": "nokiafc22.ttf",
+      "load_va": "0x80A1742C",
+      "real_size": 16272,
+      "compressed_size": 16272,
+      "compressed": false,
+      "compressed_after_extraction": false,
+      "compressed_size_after_extraction": 16272,
+      "attributes": "0x00000007",
+      "attributes_after_extraction": "0x00000007",
+      "filetime_lo": "0x9A545500",
+      "filetime_hi": "0x01CB5E4A",
+      "name_offset": "0x8015AEEC"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+0009b140 [file 00027268] lwz       r0, 0x34(r1)
+0009b144 [file 0002726c] mtlr      r0
+0009b148 [file 00027270] addi      r1, r1, 0x30
+0009b14c [file 00027274] blr       
+0009b150 [file 00027278] stwu      r1, -0x220(r1)
+0009b154 [file 0002727c] mflr      r0
+0009b158 [file 00027280] stw       r30, 0x218(r1)
+0009b15c [file 00027284] stw       r31, 0x21c(r1)
+0009b160 [file 00027288] stw       r0, 0x224(r1)
+0009b164 [file 0002728c] addi      r31, r3, 0
+0009b168 [file 00027290] lwz       r12, 4(r31)
+0009b16c [file 00027294] cmpwi     r12, 0
+0009b170 [file 00027298] bne       0x9b2dc
+0009b174 [file 0002729c] addi      r3, r1, 0xa
+0009b178 [file 000272a0] addi      r4, r1, 0xc
+0009b17c [file 000272a4] addi      r5, r1, 0xe
+0009b180 [file 000272a8] addi      r6, r1, 0x10
+0009b184 [file 000272ac] addi      r7, r1, 8
+0009b188 [file 000272b0] bl        0xe785c
+0009b18c [file 000272b4] addi      r30, r3, 0
+0009b190 [file 000272b8] lbz       r11, 8(r1)
+0009b194 [file 000272bc] cmpwi     r11, 0
+0009b198 [file 000272c0] bne       0x9b1b8
+0009b19c [file 000272c4] lhz       r5, 0xa(r1)
+0009b1a0 [file 000272c8] lhz       r6, 0xc(r1)
+0009b1a4 [file 000272cc] addi      r3, r1, 0x114
+0009b1a8 [file 000272d0] lis       r4, 0x46
+0009b1ac [file 000272d4] addi      r4, r4, -0x6a58 ; str@0x4595a8 '%d%03d'
+0009b1b0 [file 000272d8] bl        0x442498
+0009b1b4 [file 000272dc] b         0x9b1cc
+0009b1b8 [file 000272e0] addi      r3, r1, 0x114
+0009b1bc [file 000272e4] lis       r4, 0x46
+0009b1c0 [file 000272e8] addi      r4, r4, -0x6a50
+0009b1c4 [file 000272ec] addi      r5, r30, 0
+0009b1c8 [file 000272f0] bl        0x442498
+0009b1cc [file 000272f4] lis       r3, 0x46
+0009b1d0 [file 000272f8] addi      r3, r3, -0x6a4c ; str@0x4595b4 '\n CEVersion = %s, currentStr = %s, firmWareVersionOnFlash = %d'
+0009b1d4 [file 000272fc] addi      r4, r31, 0x1802
+0009b1d8 [file 00027300] addi      r5, r1, 0x114
+0009b1dc [file 00027304] addi      r6, r30, 0
+0009b1e0 [file 00027308] bl        0x91fd8
+0009b1e4 [file 0002730c] lbz       r9, 0x1803(r31)
+0009b1e8 [file 00027310] cmpwi     r9, 0x2e
+0009b1ec [file 00027314] bne       0x9b250
+0009b1f0 [file 00027318] lbz       r12, 0x1802(r31)
+0009b1f4 [file 0002731c] stb       r12, 0x14(r1)
+0009b1f8 [file 00027320] li        r11, 0
+0009b1fc [file 00027324] stb       r11, 0x15(r1)
+0009b200 [file 00027328] addi      r3, r1, 0x14
+0009b204 [file 0002732c] addi      r4, r31, 0x1804
+0009b208 [file 00027330] bl        0x444650
+0009b20c [file 00027334] addi      r3, r1, 0x14
+0009b210 [file 00027338] bl        0x444424
+0009b214 [file 0002733c] addi      r31, r3, 0
+0009b218 [file 00027340] clrlwi    r11, r31, 0x10
+0009b21c [file 00027344] cmpwi     r11, 4
+0009b220 [file 00027348] bge       0x9b25c
+0009b224 [file 0002734c] addi      r3, r1, 0x14
+0009b228 [file 00027350] lis       r4, 0x46
+0009b22c [file 00027354] addi      r4, r4, -0x6a0c
+0009b230 [file 00027358] bl        0x444650
+0009b234 [file 0002735c] addi      r3, r1, 0x14
+0009b238 [file 00027360] bl        0x444424
+0009b23c [file 00027364] addi      r31, r3, 0
+0009b240 [file 00027368] clrlwi    r9, r31, 0x10
+0009b244 [file 0002736c] cmpwi     r9, 4
+0009b248 [file 00027370] blt       0x9b224
+0009b24c [file 00027374] b         0x9b25c
+0009b250 [file 00027378] addi      r3, r1, 0x14
+0009b254 [file 0002737c] addi      r4, r31, 0x1802
+0009b258 [file 00027380] bl        0x44449c
+0009b25c [file 00027384] addi      r3, r1, 0x14
+0009b260 [file 00027388] addi      r4, r1, 0x114
+0009b264 [file 0002738c] bl        0x444540
+0009b268 [file 00027390] cmpwi     r3, 0
+0009b26c [file 00027394] bne       0x9b280
+0009b270 [file 00027398] lis       r3, 0x46
+0009b274 [file 0002739c] addi      r3, r3, -0x6a08 ; str@0x4595f8 "\nLeafCE version doesn't changed"
+0009b278 [file 000273a0] bl        0x91fd8
+0009b27c [file 000273a4] b         0x9b298
+0009b280 [file 000273a8] lis       r3, 0x46
+0009b284 [file 000273ac] addi      r3, r3, -0x69e8 ; str@0x459618 '\nchange LeafCE version on Flash tempStr = %s'
+0009b288 [file 000273b0] addi      r4, r1, 0x14
+0009b28c [file 000273b4] bl        0x91fd8
+0009b290 [file 000273b8] addi      r3, r1, 0x14
+0009b294 [file 000273bc] bl        0xe7924
+0009b298 [file 000273c0] bl        0x9d0b0
+0009b29c [file 000273c4] clrlwi    r3, r3, 0x18
+0009b2a0 [file 000273c8] cmpwi     r3, 0
+0009b2a4 [file 000273cc] bne       0x9b2ac
+0009b2a8 [file 000273d0] bl        0xa0f0c
+0009b2ac [file 000273d4] bl        0x865ac
+0009b2b0 [file 000273d8] lis       r12, 0x46
+0009b2b4 [file 000273dc] li        r11, 1
+0009b2b8 [file 000273e0] stb       r11, -0x1a4c(r12)
+0009b2bc [file 000273e4] bl        0xa11e0
+0009b2c0 [file 000273e8] clrlwi    r3, r3, 0x18
+0009b2c4 [file 000273ec] cmpwi     r3, 0
+0009b2c8 [file 000273f0] beq       0x9b2dc
+0009b2cc [file 000273f4] li        r3, 1
+0009b2d0 [file 000273f8] li        r4, 0
+0009b2d4 [file 000273fc] li        r5, 1
+0009b2d8 [file 00027400] bl        0x9d5cc
+0009b2dc [file 00027404] li        r3, 1
+0009b2e0 [file 00027408] lwz       r30, 0x218(r1)
+0009b2e4 [file 0002740c] lwz       r31, 0x21c(r1)
+0009b2e8 [file 00027410] lwz       r0, 0x224(r1)
+0009b2ec [file 00027414] mtlr      r0
+0009b2f0 [file 00027418] addi      r1, r1, 0x220
+0009b2f4 [file 0002741c] blr       
+0009b2f8 [file 00027420] stwu      r1, -8(r1)
+0009b2fc [file 00027424] mflr      r0
+0009b300 [file 00027428] stw       r0, 0xc(r1)
+0009b304 [file 0002742c] addi      r3, r3, 0x1902
+0009b308 [file 00027430] bl        0x443bf8
+0009b30c [file 00027434] bl        0x95ee8
+0009b310 [file 00027438] li        r3, 1
+0009b314 [file 0002743c] lwz       r0, 0xc(r1)
+0009b318 [file 00027440] mtlr      r0
+0009b31c [file 00027444] addi      r1, r1, 8
+0009b320 [file 00027448] blr       
+0009b324 [file 0002744c] stwu      r1, -8(r1)
+0009b328 [file 00027450] mflr      r0
+0009b32c [file 00027454] stw       r0, 0xc(r1)
+0009b330 [file 00027458] addi      r3, r3, 0x1a02
+0009b334 [file 0002745c] bl        0x9c644
+0009b338 [file 00027460] lwz       r0, 0xc(r1)
+0009b33c [file 00027464] mtlr      r0
+0009b340 [file 00027468] addi      r1, r1, 8
+0009b344 [file 0002746c] blr       
+0009b348 [file 00027470] stwu      r1, -8(r1)
+0009b34c [file 00027474] mflr      r0
+0009b350 [file 00027478] stw       r0, 0xc(r1)
+0009b354 [file 0002747c] addi      r3, r3, 0x1b02
+0009b358 [file 00027480] bl        0x9c750
+0009b35c [file 00027484] lwz       r0, 0xc(r1)
+0009b360 [file 00027488] mtlr      r0
+0009b364 [file 0002748c] addi      r1, r1, 8
+0009b368 [file 00027490] blr       
+0009b36c [file 00027494] stwu      r1, -0x20(r1)
+0009b370 [file 00027498] mflr      r0
+0009b374 [file 0002749c] stmw      r27, 0xc(r1)
+0009b378 [file 000274a0] stw       r0, 0x24(r1)
+0009b37c [file 000274a4] addi      r29, r4, 0
+0009b380 [file 000274a8] addi      r27, r5, 0
+0009b384 [file 000274ac] li        r30, 0
+0009b388 [file 000274b0] li        r31, 0
+0009b38c [file 000274b4] lis       r28, 0x46
+0009b390 [file 000274b8] addi      r28, r28, -0x7050
+0009b394 [file 000274bc] lwz       r4, 0(r28)
+0009b398 [file 000274c0] addi      r3, r29, 0
+0009b39c [file 000274c4] bl        0x444540
+0009b3a0 [file 000274c8] cmpwi     r3, 0
+0009b3a4 [file 000274cc] beq       0x9b3d0
+0009b3a8 [file 000274d0] addi      r31, r31, 1
+0009b3ac [file 000274d4] clrlwi    r11, r31, 0x10
+0009b3b0 [file 000274d8] cmplwi    r11, 2
+0009b3b4 [file 000274dc] bge       0x9b3d0
+0009b3b8 [file 000274e0] rlwinm    r12, r31, 2, 0xe, 0x1d
+0009b3bc [file 000274e4] lwzx      r4, r28, r12
+0009b3c0 [file 000274e8] addi      r3, r29, 0
+0009b3c4 [file 000274ec] bl        0x444540
+0009b3c8 [file 000274f0] cmpwi     r3, 0
+0009b3cc [file 000274f4] bne       0x9b3a8
+0009b3d0 [file 000274f8] clrlwi    r12, r31, 0x10
+0009b3d4 [file 000274fc] cmpwi     r12, 2
+0009b3d8 [file 00027500] bne       0x9b3f0
+0009b3dc [file 00027504] lis       r3, 0x46
+0009b3e0 [file 00027508] addi      r3, r3, -0x69b8 ; str@0x459648 'SetCompression problem. Not support compression type: %s\n'
+0009b3e4 [file 0002750c] addi      r4, r29, 0
+0009b3e8 [file 00027510] bl        0x76488
+0009b3ec [file 00027514] b         0x9b494
+0009b3f0 [file 00027518] addi      r12, r31, 1
+0009b3f4 [file 0002751c] clrlwi    r29, r12, 0x10
+0009b3f8 [file 00027520] cmpwi     r29, 3
+0009b3fc [file 00027524] bne       0x9b488
+0009b400 [file 00027528] lbz       r12, 0(r27)
+0009b404 [file 0002752c] cmpwi     r12, 0
+0009b408 [file 00027530] bne       0x9b41c
+0009b40c [file 00027534] lis       r3, 0x46
+0009b410 [file 00027538] addi      r3, r3, -0x697c ; str@0x459684 'SetCompression problem. No nearly lossless param.\n'
+0009b414 [file 0002753c] bl        0x76488
+0009b418 [file 00027540] b         0x9b494
+0009b41c [file 00027544] li        r31, 0
+0009b420 [file 00027548] lis       r30, 0x46
+0009b424 [file 0002754c] addi      r30, r30, -0x7048
+0009b428 [file 00027550] lwz       r4, 0(r30)
+0009b42c [file 00027554] addi      r3, r27, 0
+0009b430 [file 00027558] bl        0x444540
+0009b434 [file 0002755c] cmpwi     r3, 0
+0009b438 [file 00027560] beq       0x9b464
+0009b43c [file 00027564] addi      r31, r31, 1
+0009b440 [file 00027568] clrlwi    r11, r31, 0x10
+0009b444 [file 0002756c] cmplwi    r11, 3
+0009b448 [file 00027570] bge       0x9b464
+0009b44c [file 00027574] rlwinm    r12, r31, 2, 0xe, 0x1d
+0009b450 [file 00027578] lwzx      r4, r30, r12
+0009b454 [file 0002757c] addi      r3, r27, 0
+0009b458 [file 00027580] bl        0x444540
+0009b45c [file 00027584] cmpwi     r3, 0
+0009b460 [file 00027588] bne       0x9b43c
+0009b464 [file 0002758c] clrlwi    r12, r31, 0x10
+0009b468 [file 00027590] cmpwi     r12, 3
+0009b46c [file 00027594] bne       0x9b484
+0009b470 [file 00027598] lis       r3, 0x46
+0009b474 [file 0002759c] addi      r3, r3, -0x6948 ; str@0x4596b8 'SetCompression problem. Not support nearly lossless type: %s\n'
+0009b478 [file 000275a0] addi      r4, r27, 0
+0009b47c [file 000275a4] bl        0x76488
+0009b480 [file 000275a8] b         0x9b494
+0009b484 [file 000275ac] addi      r30, r31, 1
+0009b488 [file 000275b0] clrlwi    r4, r30, 0x10
+0009b48c [file 000275b4] addi      r3, r29, 0
+0009b490 [file 000275b8] bl        0xfccb4
+0009b494 [file 000275bc] li        r3, 1
+0009b498 [file 000275c0] lmw       r27, 0xc(r1)
+0009b49c [file 000275c4] lwz       r0, 0x24(r1)
+0009b4a0 [file 000275c8] mtlr      r0
+0009b4a4 [file 000275cc] addi      r1, r1, 0x20
+0009b4a8 [file 000275d0] blr       
+0009b4ac [file 000275d4] stwu      r1, -0x10(r1)
+0009b4b0 [file 000275d8] mflr      r0
+0009b4b4 [file 000275dc] stw       r30, 8(r1)
+0009b4b8 [file 000275e0] stw       r31, 0xc(r1)
+0009b4bc [file 000275e4] stw       r0, 0x14(r1)
+0009b4c0 [file 000275e8] addi      r31, r3, 0
+0009b4c4 [file 000275ec] bl        0x103888
+0009b4c8 [file 000275f0] addi      r30, r3, 0
+0009b4cc [file 000275f4] addi      r3, r31, 0x1d02
+0009b4d0 [file 000275f8] lis       r4, 0x46
+0009b4d4 [file 000275fc] addi      r4, r4, -0x6908
+0009b4d8 [file 00027600] bl        0x444540
+0009b4dc [file 00027604] cmpwi     r3, 0
+0009b4e0 [file 00027608] bne       0x9b4f8
+0009b4e4 [file 0002760c] lis       r3, 0x46
+0009b4e8 [file 00027610] addi      r3, r3, -0x6904 ; str@0x4596fc '\n Switch BlueTooth On'
+0009b4ec [file 00027614] bl        0x91fd8
+0009b4f0 [file 00027618] li        r31, 1
+0009b4f4 [file 0002761c] b         0x9b52c
+0009b4f8 [file 00027620] addi      r3, r31, 0x1d02
+0009b4fc [file 00027624] lis       r4, 0x46
+0009b500 [file 00027628] addi      r4, r4, -0x68ec
+0009b504 [file 0002762c] bl        0x444540
+0009b508 [file 00027630] cmpwi     r3, 0
+0009b50c [file 00027634] bne       0x9b524
+0009b510 [file 00027638] lis       r3, 0x46
+0009b514 [file 0002763c] addi      r3, r3, -0x68e8 ; str@0x459718 '\n Switch BlueTooth Off'
+0009b518 [file 00027640] bl        0x91fd8
+0009b51c [file 00027644] li        r31, 0
+0009b520 [file 00027648] b         0x9b52c
+0009b524 [file 0002764c] li        r3, 0
+0009b528 [file 00027650] b         0x9b544
+0009b52c [file 00027654] addi      r3, r30, 0
+0009b530 [file 00027658] li        r4, 1
+0009b534 [file 0002765c] addi      r5, r31, 0
+0009b538 [file 00027660] bl        0x103ed8
+0009b53c [file 00027664] addi      r30, r3, 0
+0009b540 [file 00027668] addi      r3, r30, 0
+0009b544 [file 0002766c] lwz       r30, 8(r1)
+0009b548 [file 00027670] lwz       r31, 0xc(r1)
+0009b54c [file 00027674] lwz       r0, 0x14(r1)
+0009b550 [file 00027678] mtlr      r0
+0009b554 [file 0002767c] addi      r1, r1, 0x10
+0009b558 [file 00027680] blr       
+0009b55c [file 00027684] stwu      r1, -0x10(r1)
+0009b560 [file 00027688] mflr      r0
+0009b564 [file 0002768c] stw       r30, 8(r1)
+0009b568 [file 00027690] stw       r31, 0xc(r1)
+0009b56c [file 00027694] stw       r0, 0x14(r1)
+0009b570 [file 00027698] addi      r30, r3, 0
+0009b574 [file 0002769c] lwz       r31, 0x1e0(r30)
+0009b578 [file 000276a0] bl        0x103888
+0009b57c [file 000276a4] lis       r4, 0x46
+0009b580 [file 000276a8] addi      r4, r4, -0x68d0 ; str@0x459730 'CameraParamChange'
+0009b584 [file 000276ac] addi      r3, r30, 0x2c
+0009b588 [file 000276b0] lswi      r5, r4, 0x12
+0009b58c [file 000276b4] stswi     r5, r3, 0x12
+0009b590 [file 000276b8] addi      r3, r30, 0x2c
+0009b594 [file 000276bc] bl        0x444424
+0009b598 [file 000276c0] stw       r3, 0x4c(r30)
+0009b59c [file 000276c4] lwz       r3, 0x2608(r30)

@@ -1,15 +1,29 @@
 {
-  "date": "2026-11-10",
-  "app_version": "0.2.0",
-  "development_basis": "User authorized v1 assuming Aptus II 5 wireless works; hardware is not a build gate.",
+  "date": "2026-11-11",
+  "app_version": "0.3.0",
+  "development_basis": "WiView 1.0.2/1.0.3 plus classic Aptus 4.701 and shared 5.041 static firmware evidence; user-reported Valeo 22Wi/Aptus 22 connection and photo reading. Aptus II is not a Bluetooth hardware target.",
   "offline_unit_tests": 25,
   "offline_unit_tests_passed": 25,
   "kotlin_protocol_tests": {
-    "tests": 24,
+    "tests": 71,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "cases": [
+      "com.leaf2android.protocol.CameraControlsTest.nestedSetupDelimiterInjectionIsRejectedBeforeWrite",
+      "com.leaf2android.protocol.CameraControlsTest.isoEditPreservesEveryOtherSettingAndUsesNestedShootSetup",
+      "com.leaf2android.protocol.CameraControlsTest.fileOperationsUseCompleteCameraPathsAndRefuseTraversalOrRootRemoval",
+      "com.leaf2android.protocol.CameraControlsTest.onlyAnExplicitBackProvidedLightMayBypassThePresetList",
+      "com.leaf2android.protocol.CameraControlsTest.unsupportedIsoAndUnadvertisedWhiteBalanceCannotBeWritten",
+      "com.leaf2android.protocol.CameraControlsTest.nearlyLosslessRequiresAndPreservesItsOwnParameter",
+      "com.leaf2android.protocol.CameraControlsTest.globalDirectionAndColorArePreservedExceptForTheVendorsDotOneBranch",
+      "com.leaf2android.protocol.CameraControlsTest.incompleteAndAmbiguousSetupsCannotBecomeWritable",
+      "com.leaf2android.protocol.CameraSystemControlsTest.cameraClockAndDefaultNotesUseTheEvidencedSyntax",
+      "com.leaf2android.protocol.CameraSystemControlsTest.notificationRequestsDoNotRepresentShutterReleaseAndPowerValuesAreClosed",
+      "com.leaf2android.protocol.CameraSystemControlsTest.cameraSettingsIsoIsSeparateFromItsChoicesAndUsesTheFirmwareDialect",
+      "com.leaf2android.protocol.CameraSystemControlsTest.incompleteOrUnadvertisedImageSettingsCannotBeWritten",
+      "com.leaf2android.protocol.CameraSystemControlsTest.completeImageSettingsKeepUnknownFieldsAndChangeOnlyAdvertisedProcessingValues",
+      "com.leaf2android.protocol.CameraSystemControlsTest.unadvertisedValuesUnprovenCompressionAndLongerPrefixesStayBlocked",
       "com.leaf2android.protocol.CommandsTest.rootAndFileDirectoryEntries",
       "com.leaf2android.protocol.CommandsTest.directoryTraversalAndUnknownFormatRejected",
       "com.leaf2android.protocol.CommandsTest.imageResponseMustMatchNameAndAttachment",
@@ -26,6 +40,30 @@
       "com.leaf2android.protocol.FramingTest.completedFrameSurvivesLaterMalformedControl",
       "com.leaf2android.protocol.FramingTest.everyBoundaryAndBinaryDelimiters",
       "com.leaf2android.protocol.FramingTest.noiseAndResync",
+      "com.leaf2android.protocol.ImageOperationsTest.evidenceBasedPreviewGroupsHaveExactWireFormatAndPhotoCorrelation",
+      "com.leaf2android.protocol.ImageOperationsTest.coordinatesAndPathsAreValidatedBeforeSending",
+      "com.leaf2android.protocol.ImageOperationsTest.malformedOrUnboundedHistogramCannotBecomeMisleadingChartData",
+      "com.leaf2android.protocol.ImageOperationsTest.grayBalanceCommitAndRestoreAreSeparateFromCaptureExposure",
+      "com.leaf2android.protocol.ImageOperationsTest.pixelProbeUsesCoordinatesDespiteFstopsSpellingAndKeepsUnknownValueFormat",
+      "com.leaf2android.protocol.ImageOperationsTest.histogramsHaveIndependentArbitraryBinCountsAndBackProvenance",
+      "com.leaf2android.protocol.ImageOperationsTest.fitOmitsCoordinatesAndEachBackZoomUsesTheVendorFactor",
+      "com.leaf2android.protocol.LabExperimentsTest.truncatedSecretValuesAreRedactedBeforeAnExportCanRevealThem",
+      "com.leaf2android.protocol.LabExperimentsTest.timeUsesTheOriginalColonSeparatedFormatAndDoesNotDefaultToNow",
+      "com.leaf2android.protocol.LabExperimentsTest.unknownExpectedTagFilenameAndAttachmentMatchingRemainConfigurable",
+      "com.leaf2android.protocol.LabExperimentsTest.counterAndBothClientVersionConstantsAreExactAndDistinct",
+      "com.leaf2android.protocol.LabExperimentsTest.destructiveStorageTargetsAreRequiredAndSlashesAreNotDuplicated",
+      "com.leaf2android.protocol.LabExperimentsTest.factoryRequestUsesExplicitInputsAndOriginalAttributeOrder",
+      "com.leaf2android.protocol.LabExperimentsTest.invalidObservationSettingsAndUnsafeSubstitutionsFailBeforeSending",
+      "com.leaf2android.protocol.LabExperimentsTest.pinEncodingAndLoggingAreSeparateAndNoDefaultPinExists",
+      "com.leaf2android.protocol.LabExperimentsTest.brightnessAcceptsExplicitInt32WithoutInventingAHardwareRange",
+      "com.leaf2android.protocol.LabExperimentsTest.catalogueContainsOnlyExplicitExperimentsWithEvidenceAndEffects",
+      "com.leaf2android.protocol.LabExperimentsTest.rawExperimentRejectsMultipleIncompleteOrMalformedControls",
+      "com.leaf2android.protocol.LabExperimentsTest.notificationParameterDoesNotClaimNoDisablesNotifications",
+      "com.leaf2android.protocol.LabExperimentsTest.controlAndProbeTemplatesKeepUnknownSemanticsExplicit",
+      "com.leaf2android.protocol.LabExperimentsTest.redactionCoversPinAliasesWhitespaceQuotesAndPrivacyFields",
+      "com.leaf2android.protocol.LabExperimentsTest.firstFrameAndSendOnlyModesCannotSilentlyIgnoreMatchingFilters",
+      "com.leaf2android.protocol.LabExperimentsTest.rawHeaderLimitIsOnEncodedBytesAndPreservesTheChosenEncoding",
+      "com.leaf2android.protocol.LabExperimentsTest.xmpTemplatesKeepTheSuppliedPacketAndDoNotSilentlyRewriteFlags",
       "com.leaf2android.protocol.SessionTest.timeoutClosesSessionAndPreventsLateReplyReuse",
       "com.leaf2android.protocol.SessionTest.truncatedImageFailsPendingRequest",
       "com.leaf2android.protocol.SessionTest.commandsAreSerializedEvenWhenCalledConcurrently",
@@ -33,15 +71,41 @@
       "com.leaf2android.protocol.SessionTest.notificationsDoNotConsumeImageReply",
       "com.leaf2android.protocol.SessionTest.explicitCameraErrorIsNotSuccess",
       "com.leaf2android.protocol.SessionTest.ackWithNonzeroErrorCodeIsNotSuccess",
-      "com.leaf2android.protocol.SessionTest.startupUsesSyncThenClockThenDirectory"
+      "com.leaf2android.protocol.SessionTest.startupUsesSyncThenClockThenDirectory",
+      "com.leaf2android.protocol.XmpMetadataTest.ambiguousOrStructuredFlagsAreRejectedInsteadOfOverwritingMetadata",
+      "com.leaf2android.protocol.XmpMetadataTest.addingFlagsAvoidsAnExistingDifferentLeafNamespacePrefix",
+      "com.leaf2android.protocol.XmpMetadataTest.sizeAndDepthLimitsProtectParserAndOutput",
+      "com.leaf2android.protocol.XmpMetadataTest.noDtdOrExternalEntityCanBeResolved",
+      "com.leaf2android.protocol.XmpMetadataTest.thirdFlagCharacterChangesAndOtherNamespacesMetadataAndBitsSurvive",
+      "com.leaf2android.protocol.XmpMetadataTest.malformedBase64Utf8AndNonXmpXmlFailExplicitly",
+      "com.leaf2android.protocol.XmpMetadataTest.missingAndShortFlagsUseVendorDefaultsWithoutReplacingThePacket",
+      "com.leaf2android.protocol.XmpMetadataTest.onlyTheVerifiedBase64HeaderAttributeIsAccepted",
+      "com.leaf2android.protocol.XmpMetadataTest.attributeRepresentationAndOtherFlagBitsArePreserved"
     ]
   },
   "android_instrumented_tests": {
-    "tests": 6,
+    "tests": 23,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "cases": [
+      "com.leaf2android.BackControlsSessionTest.xmpRoundTripsOnAndroidAndKeepsOtherMetadata",
+      "com.leaf2android.BackControlsSessionTest.unintendedChangeToAnUntouchedSettingFailsFullReadback",
+      "com.leaf2android.BackControlsSessionTest.backProvidedGrayBalanceCanUpdateTheFutureSetupWithoutChangingIso",
+      "com.leaf2android.BackControlsSessionTest.legacyIsoUsesFullSetupAndConfirmsCurrentIsoInsteadOfOptionList",
+      "com.leaf2android.BackControlsSessionTest.changedOrUnsupportedIsoNeverSendsASetter",
+      "com.leaf2android.BackControlsSessionTest.incompleteMoveDoesNotClaimSuccessWhenSourceRemains",
+      "com.leaf2android.BackControlsSessionTest.fileCreationAndDeletionCheckTheDirectoryAndRejectExistingNames",
+      "com.leaf2android.BackControlsSessionTest.cameraParamNotificationsDoNotOverwriteAdvertisedChoiceLists",
+      "com.leaf2android.BackControlsSessionTest.readbackMismatchAndRejectedWriteAreNotReportedAsSuccess",
+      "com.leaf2android.BackControlsSessionTest.directIsoDialectUsesCameraSettingsAndReadsBack",
+      "com.leaf2android.BackControlsUiTest.laboratoryRequiresAnExplicitSendAndLabelsTheReplyAsUnverified",
+      "com.leaf2android.BackControlsUiTest.isoSelectionAppliesTheCompleteSetupAndSurvivesLanguageChanges",
+      "com.leaf2android.LaboratorySessionTest.pinBytesAreSentButNeverStoredInHeadersHexOrTransportLogs",
+      "com.leaf2android.LaboratorySessionTest.laboratoryPausesAutomaticCaptureRequestsAndCanLeaveWithoutSending",
+      "com.leaf2android.LaboratorySessionTest.rejectedAndUnknownRepliesAreEvidenceRatherThanSuccessOrForcedSessionFailure",
+      "com.leaf2android.LaboratorySessionTest.attachmentsArePreservedAndExportedAndTheNextExperimentCanRun",
+      "com.leaf2android.LaboratorySessionTest.timeoutIsRecordedAsAWaitFailureAndClosesTheUncertainStream",
       "com.leaf2android.LanguageStateTest.languageChangesKeepAnActiveSyntheticSessionPhotoNotesAndZoom",
       "com.leaf2android.LanguageStateTest.followSystemPersistsAcrossActivityRecreation",
       "com.leaf2android.LanguageStateTest.englishAndChineseResourcesCoverTheSettingsAndRetainedErrors",
@@ -66,11 +130,12 @@
   "release_debuggable": false,
   "lint": {
     "errors": 0,
-    "warnings": 14,
+    "warnings": 17,
     "categories": [
       "AppBundleLocaleChanges",
       "NewerVersionAvailable",
       "OldTargetApi",
+      "TypographyDashes",
       "UnusedAttribute",
       "UnusedResources",
       "UseKtx"
@@ -78,20 +143,21 @@
   },
   "release_lint": {
     "errors": 0,
-    "warnings": 14,
+    "warnings": 17,
     "categories": [
       "AppBundleLocaleChanges",
       "NewerVersionAvailable",
       "OldTargetApi",
+      "TypographyDashes",
       "UnusedAttribute",
       "UnusedResources",
       "UseKtx"
     ]
   },
   "apk_generated": true,
-  "apk": "dist\\Leaf2Android-0.2.0.apk",
-  "apk_bytes": 3105063,
-  "apk_sha256": "d3a081c242fa813d87cbd9b09d54e76c4e8a44762621e7398720c5c548c30a4c",
+  "apk": "dist\\Leaf2Android-0.3.0.apk",
+  "apk_bytes": 3499160,
+  "apk_sha256": "3089764328f8664f887314ee143a43c82fc79a1a43367fc7c54e87580ac36fbd",
   "apk_signature_verified": true,
   "apk_zip_16k_alignment": true,
   "elf_16k_alignment_verified": true,
@@ -101,6 +167,30 @@
     "1.0.3"
   ],
   "fixture_origin": "synthetic",
+  "firmware_samples_analyzed": [
+    "classic Aptus 4.701 (includes Aptus 22 model code)",
+    "shared 5.041 (not proof of Aptus II Bluetooth hardware)"
+  ],
+  "laboratory": {
+    "implemented": true,
+    "manual_only": true,
+    "single_header_host_limit_bytes": 61440,
+    "timeout_host_limit_seconds": [
+      1,
+      300
+    ],
+    "attachment_host_limit_mib_options": [
+      16,
+      64
+    ],
+    "original_client_templates": 16,
+    "first_frame_observation_is_uncorrelated": true,
+    "ack_is_not_effect_confirmation": true,
+    "original_binary_export": true,
+    "known_sensitive_header_fields_redacted": true,
+    "automatic_fuzzing": false,
+    "firmware_uploader": false
+  },
   "ui_screenshots_pixels": {
     "modern-empty": [
       1080,
@@ -137,20 +227,62 @@
     "modern-wide-zh": [
       2208,
       1840
+    ],
+    "laboratory-empty-en": [
+      1080,
+      2520
+    ],
+    "laboratory-empty-zh": [
+      1080,
+      2520
     ]
   },
   "ui_screenshots_are_emulator_window_size_simulations": true,
   "ui_screenshot_build": "signed minified release",
-  "ui_screenshot_apk_sha256": "d3a081c242fa813d87cbd9b09d54e76c4e8a44762621e7398720c5c548c30a4c",
+  "ui_screenshot_apk_sha256": "3089764328f8664f887314ee143a43c82fc79a1a43367fc7c54e87580ac36fbd",
   "physical_device_tests_performed": false,
   "physical_folding_and_one_ui_verified": false,
+  "user_reported_hardware_tests": [
+    {
+      "date": "2026-11-11",
+      "model": "Valeo 22Wi",
+      "connection": "passed",
+      "photo_reading": "passed",
+      "firmware": null,
+      "phone_environment": null,
+      "new_control_writes_verified": false
+    },
+    {
+      "date": "2026-11-11",
+      "model": "Aptus 22",
+      "connection": "passed",
+      "photo_reading": "passed",
+      "firmware": null,
+      "phone_environment": null,
+      "new_control_writes_verified": false
+    }
+  ],
   "complete_startup_handshake_verified": false,
   "target_back_firmware": null,
   "target_phone": "Galaxy Z Fold7 / Android 16 / One UI 8.5 (not attached)",
   "mos_full_file_transfer_implemented": false,
   "continuous_live_view_implemented": false,
   "mechanical_shutter_remote_release": "Hardware unsupported in current setup",
-  "gate": "v1_delivered_under_user_wireless_assumption; physical_acceptance_pending",
-  "matching_bilingual_resource_keys": 191,
+  "gate": "user_reported_basic_sessions; new_control_effects_and_laboratory_hypotheses_require_device_validation",
+  "matching_bilingual_resource_keys": 353,
+  "control_ui_captures": {
+    "back-controls-en": {
+      "file": "docs/screenshots/back-controls-en.png",
+      "build": "debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "back-controls-zh": {
+      "file": "docs/screenshots/back-controls-zh.png",
+      "build": "debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "laboratory-en": {
+      "file": "docs/screenshots/laboratory-en.png",
+      "build": "debug instrumented UI with synthetic peer; no Bluetooth camera"
+    }
+  },
   "old_workspace_empty": true
 }

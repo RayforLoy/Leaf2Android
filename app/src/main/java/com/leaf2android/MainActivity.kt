@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                 },
                 shareFile = { file ->
                     val uri = FileProvider.getUriForFile(this, "$packageName.files", file)
-                    val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_STREAM, uri)
+                    val send = Intent(Intent.ACTION_SEND).setType(if (file.extension.equals("zip", true)) "application/zip" else "text/plain").putExtra(Intent.EXTRA_STREAM, uri)
                         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     startActivity(Intent.createChooser(send, tr(R.string.export_back_session_diagnostics_5563b)))
                 },

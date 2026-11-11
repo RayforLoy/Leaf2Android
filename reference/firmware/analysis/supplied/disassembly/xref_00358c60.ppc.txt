@@ -1,0 +1,28 @@
+00358c40 [file 002e4d68] mr        r30, r4
+00358c44 [file 002e4d6c] stw       r31, -0x7258(r13)
+00358c48 [file 002e4d70] stw       r30, -0x7254(r13)
+00358c4c [file 002e4d74] bl        0xe6a0c
+00358c50 [file 002e4d78] clrlwi    r3, r3, 0x18
+00358c54 [file 002e4d7c] cmpwi     r3, 0
+00358c58 [file 002e4d80] beq       0x358c78
+00358c5c [file 002e4d84] lis       r12, 0x36
+00358c60 [file 002e4d88] addi      r12, r12, -0x6134 ; str@0x359ecc 'AptusSComm'
+00358c64 [file 002e4d8c] stw       r12, -0x67d0(r13)
+00358c68 [file 002e4d90] lis       r11, 0x36
+00358c6c [file 002e4d94] addi      r11, r11, -0x6128 ; str@0x359ed8 'Leaf Wi'
+00358c70 [file 002e4d98] b         0xb40bc
+00358c74 [file 002e4d9c] b         0x358cbc
+00358c78 [file 002e4da0] bl        0xe6c54
+00358c7c [file 002e4da4] clrlwi    r3, r3, 0x18
+00358c80 [file 002e4da8] cmpwi     r3, 0
+00358c84 [file 002e4dac] beq       0x358ca4
+00358c88 [file 002e4db0] lis       r12, 0x36
+00358c8c [file 002e4db4] addi      r12, r12, -0x6120 ; str@0x359ee0 'AFiComm'
+00358c90 [file 002e4db8] stw       r12, -0x67d0(r13)
+00358c94 [file 002e4dbc] lis       r11, 0x36
+00358c98 [file 002e4dc0] addi      r11, r11, -0x6118 ; str@0x359ee8 'Leaf AFi Wi'
+00358c9c [file 002e4dc4] stw       r11, -0x67cc(r13)
+00358ca0 [file 002e4dc8] b         0x358cbc
+00358ca4 [file 002e4dcc] lis       r12, 0x36
+00358ca8 [file 002e4dd0] addi      r12, r12, -0x610c ; str@0x359ef4 'AptusComm'
+00358cac [file 002e4dd4] stw       r12, -0x67d0(r13)

@@ -16,6 +16,7 @@ data class LeafCommand(
     val directory: String? = null,
     val timeoutMs: Long = 20_000,
     val requiresAttachment: Boolean = false,
+    val acceptAnyFrame: Boolean = false,
 ) {
     fun bytes(encoding: WireEncoding): ByteArray {
         val encoder = encoding.charset.newEncoder().onUnmappableCharacter(CodingErrorAction.REPORT)
@@ -27,6 +28,7 @@ data class LeafCommand(
     }
     fun accepts(frame: WireFrame, encoding: WireEncoding): Boolean {
         if (frame.tag.equals("Error", true) || frame.tag.equals("Nak", true)) return true
+        if (acceptAnyFrame) return true
         if (!frame.tag.equals(responseTag, true)) return false
         if (fileName != null && frame.value("file_name", encoding.charset) != fileName) return false
         if (requiresAttachment && frame.value("attachment") == null) return false

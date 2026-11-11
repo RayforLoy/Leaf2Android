@@ -6,6 +6,7 @@ import hashlib
 import json
 import mimetypes
 import os
+import posixpath
 from pathlib import Path
 import re
 import subprocess
@@ -59,10 +60,30 @@ class Github:
             time.sleep(0.5 * 2 ** attempt)
 
 
+def render_notes(path: Path, repository: str, tag: str) -> str:
+    """Release pages do not resolve links relative to docs/releases; pin local links to the tag."""
+    root = Path(__file__).resolve().parents[1]
+    folder = path.resolve().parent.relative_to(root).as_posix()
+    def link(match):
+        target = match.group(2).strip("<>")
+        parsed = urllib.parse.urlsplit(target)
+        if parsed.scheme or target.startswith("#"):
+            return match.group(0)
+        relative = posixpath.normpath(posixpath.join(folder, urllib.parse.unquote(parsed.path)))
+        if relative == ".." or relative.startswith("../") or not (root / relative).exists():
+            raise ValueError("Invalid local release-note link: " + target)
+        route = "tree" if (root / relative).is_dir() else "blob"
+        url = f"https://github.com/{repository}/{route}/{urllib.parse.quote(tag, safe='')}/{urllib.parse.quote(relative, safe='/')}"
+        if parsed.fragment:
+            url += "#" + parsed.fragment
+        return match.group(1) + "(" + url + ")"
+    return re.sub(r"(\[[^\]]+\])\((<[^>]+>|[^)\s]+)\)", link, path.read_text(encoding="utf-8"))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", default="RayforLoy/Leaf2Android")
-    parser.add_argument("--tag", default="v0.2.0")
+    parser.add_argument("--tag", default="v0.3.0")
     parser.add_argument("--commit", required=True)
     parser.add_argument("--notes", type=Path, required=True)
     parser.add_argument("--asset", type=Path, action="append", required=True)
@@ -90,8 +111,8 @@ def main() -> None:
         else:
             release = github.call(github.base + "/releases", "POST", {
                 "tag_name": args.tag, "target_commitish": args.commit,
-                "name": f"Leaf2Android {args.tag} — Bilingual preview / 双语预览版",
-                "body": args.notes.read_text(encoding="utf-8") + f"\n\nSource commit: `{args.commit}`\n",
+                "name": f"Leaf2Android {args.tag} — Back controls and laboratory / 后背控制与实验室",
+                "body": render_notes(args.notes, args.repo, args.tag) + f"\n\nSource commit: `{args.commit}`\n",
                 "draft": True, "prerelease": True,
             })
     if not release["draft"]:

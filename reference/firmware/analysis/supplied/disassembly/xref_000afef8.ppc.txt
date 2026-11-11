@@ -1,0 +1,28 @@
+000afed8 [file 0003c000] cmpwi     r3, 0
+000afedc [file 0003c004] beq       0xafef4
+000afee0 [file 0003c008] lis       r4, 0x46
+000afee4 [file 0003c00c] addi      r4, r4, -0x24b8 ; str@0x45db48 '^<ReSyncResponse/>'
+000afee8 [file 0003c010] li        r5, 0x12
+000afeec [file 0003c014] bl        0x1034a0
+000afef0 [file 0003c018] b         0xaff00
+000afef4 [file 0003c01c] lis       r3, 0x46
+000afef8 [file 0003c020] addi      r3, r3, -0x23f8 ; str@0x45dc08 '\n***Error during handling ReSyncRequest message!!!'
+000afefc [file 0003c024] bl        0x92094
+000aff00 [file 0003c028] lwz       r31, 0xc(r1)
+000aff04 [file 0003c02c] lwz       r0, 0x14(r1)
+000aff08 [file 0003c030] mtlr      r0
+000aff0c [file 0003c034] addi      r1, r1, 0x10
+000aff10 [file 0003c038] blr       
+000aff14 [file 0003c03c] lis       r3, 0x46
+000aff18 [file 0003c040] addi      r3, r3, -0x2424 ; str@0x45dbdc 'ReSyncRequest'
+000aff1c [file 0003c044] blr       
+000aff20 [file 0003c048] stwu      r1, -8(r1)
+000aff24 [file 0003c04c] mflr      r0
+000aff28 [file 0003c050] stw       r0, 0xc(r1)
+000aff2c [file 0003c054] li        r4, 0
+000aff30 [file 0003c058] bl        0xb9ca0
+000aff34 [file 0003c05c] lwz       r0, 0xc(r1)
+000aff38 [file 0003c060] mtlr      r0
+000aff3c [file 0003c064] addi      r1, r1, 8
+000aff40 [file 0003c068] blr       
+000aff44 [file 0003c06c] stwu      r1, -0x20(r1)

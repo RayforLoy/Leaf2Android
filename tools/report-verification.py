@@ -39,14 +39,14 @@ def main() -> None:
     release_issues = [node.attrib for node in release_lint.findall("issue")]
     assert not any(i["severity"] in {"Error", "Fatal"} for i in release_issues)
     screenshots = {}
-    for name in ["modern-empty", "modern-narrow", "pda-narrow", "modern-wide", "pda-wide", "modern-landscape", "modern-narrow-zh", "pda-narrow-zh", "modern-wide-zh"]:
+    for name in ["modern-empty", "modern-narrow", "pda-narrow", "modern-wide", "pda-wide", "modern-landscape", "modern-narrow-zh", "pda-narrow-zh", "modern-wide-zh", "laboratory-empty-en", "laboratory-empty-zh"]:
         path = ROOT / "docs/screenshots" / (name + ".png")
         header = path.read_bytes()[:24]
         assert header[:8] == b"\x89PNG\r\n\x1a\n"
         screenshots[name] = list(struct.unpack(">II", header[16:24]))
     report = {
-        "date": "2026-11-10", "app_version": "0.2.0",
-        "development_basis": "User authorized v1 assuming Aptus II 5 wireless works; hardware is not a build gate.",
+        "date": "2026-11-11", "app_version": "0.3.0",
+        "development_basis": "WiView 1.0.2/1.0.3 plus classic Aptus 4.701 and shared 5.041 static firmware evidence; user-reported Valeo 22Wi/Aptus 22 connection and photo reading. Aptus II is not a Bluetooth hardware target.",
         "offline_unit_tests": int(match[1]), "offline_unit_tests_passed": int(match[1]),
         "kotlin_protocol_tests": suites("protocol/build/test-results/test/TEST-*.xml"),
         "android_instrumented_tests": suites("app/build/outputs/androidTest-results/connected/debug/TEST-*.xml"),
@@ -60,14 +60,21 @@ def main() -> None:
         "apk_signature_verified": apk["signature_verified"], "apk_zip_16k_alignment": apk["zip_16k_alignment"],
         "elf_16k_alignment_verified": True, "manufacturer_materials_in_reference_and_separate_resource_archive": True,
         "samples_analyzed": ["1.0.2", "1.0.3"], "fixture_origin": "synthetic",
+        "firmware_samples_analyzed": ["classic Aptus 4.701 (includes Aptus 22 model code)", "shared 5.041 (not proof of Aptus II Bluetooth hardware)"],
+        "laboratory": {"implemented": True, "manual_only": True, "single_header_host_limit_bytes": 61440,
+                       "timeout_host_limit_seconds": [1,300], "attachment_host_limit_mib_options": [16,64],
+                       "original_client_templates": 16, "first_frame_observation_is_uncorrelated": True,
+                       "ack_is_not_effect_confirmation": True, "original_binary_export": True,
+                       "known_sensitive_header_fields_redacted": True, "automatic_fuzzing": False, "firmware_uploader": False},
         "ui_screenshots_pixels": screenshots, "ui_screenshots_are_emulator_window_size_simulations": True,
         "ui_screenshot_build": "signed minified release", "ui_screenshot_apk_sha256": apk["sha256"],
         "physical_device_tests_performed": False, "physical_folding_and_one_ui_verified": False,
+        "user_reported_hardware_tests": [{"date": "2026-11-11", "model": model, "connection": "passed", "photo_reading": "passed", "firmware": None, "phone_environment": None, "new_control_writes_verified": False} for model in ["Valeo 22Wi", "Aptus 22"]],
         "complete_startup_handshake_verified": False,
         "target_back_firmware": None, "target_phone": "Galaxy Z Fold7 / Android 16 / One UI 8.5 (not attached)",
         "mos_full_file_transfer_implemented": False, "continuous_live_view_implemented": False,
         "mechanical_shutter_remote_release": "Hardware unsupported in current setup",
-        "gate": "v1_delivered_under_user_wireless_assumption; physical_acceptance_pending",
+        "gate": "user_reported_basic_sessions; new_control_effects_and_laboratory_hypotheses_require_device_validation",
     }
     english = E.parse(ROOT / "app/src/main/res/values/strings.xml").getroot()
     chinese = E.parse(ROOT / "app/src/main/res/values-zh/strings.xml").getroot()
@@ -75,6 +82,9 @@ def main() -> None:
     zh_values = {node.attrib["name"]: node.text or "" for node in chinese.findall("string")}
     assert en_values.keys() == zh_values.keys()
     report["matching_bilingual_resource_keys"] = len(en_values)
+    report["control_ui_captures"] = {name: {"file": "docs/screenshots/" + name + ".png", "build": "debug instrumented UI with synthetic peer; no Bluetooth camera"}
+                                      for name in ["back-controls-en", "back-controls-zh", "laboratory-en"]}
+    assert (ROOT / "app/src/main/assets/lab-firmware-candidates.json").read_bytes() == (ROOT / "reference/analysis/lab-candidates.json").read_bytes()
     report["old_workspace_empty"] = not any(Path(r"D:\Leaf4Android").iterdir()) if Path(r"D:\Leaf4Android").exists() else True
     assert report["old_workspace_empty"]
     target = ROOT / "research/reports/verification-status.json"

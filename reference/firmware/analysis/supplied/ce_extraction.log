@@ -1,0 +1,24 @@
+Reading D:\leaf\firmware\analysis\extracted\FirmWareAptusII.BIN.payload.bin...
+  9810123 bytes (9.4 MB)
+  B000FF: 30 sections, VA range 0x800B8000..0x80A1B3BC (9613 KB)
+
+Format: B000FF (section container)
+
+Extracting XIP regions...
+  XIP @ 0x40: 23 modules, 11 files (load=0x800B8000)
+    -> 23 modules, 11 files
+
+Writing Sections/ (full)...
+  30 sections dumped -> D:\leaf\firmware\analysis\ce_reconstructed\Sections
+
+Directory structure (from initobj.dat):
+  15 directories created
+  0 files placed
+
+Registry files:
+  1 boot registry (.fdf) converted to .reg -> D:\leaf\firmware\analysis\ce_reconstructed\Registry
+  attribute map (34 entries) -> D:\leaf\firmware\analysis\ce_reconstructed\attributes.ini
+  rom_meta (23 modules, 11 files) -> D:\leaf\firmware\analysis\ce_reconstructed\rom_meta.json
+
+Done -> D:\leaf\firmware\analysis\ce_reconstructed
+Strict LZX validation: 36 successful decompressions

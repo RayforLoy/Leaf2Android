@@ -1,0 +1,260 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\ControlPanel\Comm]
+"Cnct"="`USB Default"
+[HKEY_LOCAL_MACHINE\Keyboard Layout\Preload\4]
+@="00000409"
+[HKEY_LOCAL_MACHINE\Windows CE Tools]
+"Platform"="{6AD29044-2221-4312-852E-B7F0C93C6C90}"
+[HKEY_LOCAL_MACHINE\Comm\DefaultConnections]
+"`USB Default"=hex(7):55,00,53,00,42,00,20,00,43,00,61,00,62,00,6c,00,65,00,3a,00,00,00,31,00,31,00,35,00,32,00,30,00,30,00,00,00,00,00
+[HKEY_LOCAL_MACHINE\ExtModems\HayesCompat]
+"FriendlyName"="Hayes Compatible on COM1:"
+"DeviceType"=dword:00000001
+"Port"="COM1:"
+[HKEY_LOCAL_MACHINE\Audio\SoftwareMixer]
+"BufferSize"=dword:00001000
+[HKEY_LOCAL_MACHINE\ControlPanel]
+"InputConfig"=dword:00000002
+[HKEY_LOCAL_MACHINE\Platform]
+"Type"=dword:00000002
+"Name"="Microsoft Windows CE Hardware Reference Platform"
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\MOUSE]
+"EnableWake"=dword:00000001
+"PllBase"=dword:bf700200
+"MouseBase"=dword:bf700c00
+"SysIntr"=dword:0000001b
+"DriverName"="kbdmouse.dll"
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\TOUCH]
+"CalibrationData"="127,120 53,187 52,54 201,54 201,187 "
+"MaxCalError"=dword:00000010
+"DriverName"="touch.dll"
+[HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\KEYBD]
+"EnableWake"=dword:00000001
+"TaskManVKey"=dword:0000002e
+"ContMoreVKey"=dword:00000000
+"ContLessVKey"=dword:00000000
+"CalVKey"=dword:00000000
+"PllBase"=dword:bf700200
+"KbBase"=dword:bf700a00
+"SysIntr"=dword:00000010
+"DriverName"="kbdmouse.dll"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Pim]
+"Version"="3.1"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\International]
+"ACP"=dword:000004e4
+"LCID"=dword:00000409
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\FontLink\SkipTable]
+"Courier New"="005c"
+"Arial"="005c"
+"Tahoma"="005c,00a5,007e,0391-03c9,2026,2116,221a,25a0-25ff"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\FontLink\SystemLink]
+"Symbol"="\\Windows\\mingliu.ac3,PMingLiU"
+"Times New Roman"="\\Windows\\mingliu.ac3,PMingLiU"
+"Arial"="\\Windows\\mingliu.ac3,PMingLiU"
+"Courier New"="\\Windows\\mingliu.ac3,PMingLiU"
+"Tahoma"="\\Windows\\mingliu.ac3,PMingLiU"
+[HKEY_LOCAL_MACHINE\System\GDI]
+"FontLinkMethods"=dword:00000001
+[HKEY_LOCAL_MACHINE\System\GDI\SYSFNT]
+"CS"=dword:00000000
+"Wt"=dword:00000190
+"It"=dword:00000000
+"Ht"=dword:fffffff4
+"Nm"="Tahoma"
+[HKEY_LOCAL_MACHINE\System\StorageManager]
+"PNPUnloadDelay"=dword:00000000
+"Dll"="fsdmgr.dll"
+[HKEY_LOCAL_MACHINE\System\StorageManager\PartitionTable]
+"22"="XIP"
+"21"="BINFS"
+"20"="BOOT"
+"0F"="FATFS"
+"0E"="FATFS"
+"0C"="FATFS"
+"0B"="FATFS"
+"07"="NTFS"
+"06"="FATFS"
+"04"="FATFS"
+"01"="FATFS"
+[HKEY_LOCAL_MACHINE\System\StorageManager\Profiles]
+"ActivityEvent"="PowerManager/ActivityTimer/SystemActivity"
+"Folder"="Mounted Volume"
+"PartitionDriver"="mspart.dll"
+"DefaultFileSystem"=""
+"MountFlags"=dword:00000000
+"AutoFormat"=dword:00000000
+"AutoPart"=dword:00000000
+"AutoMount"=dword:00000001
+[HKEY_LOCAL_MACHINE\System\StorageManager\Profiles\CDProfile]
+"PartitionDriver"=""
+"DefaultFileSystem"="UDFS"
+"Folder"="CDROM Drive"
+"Name"="IDE CDROM/DVD Drive"
+[HKEY_LOCAL_MACHINE\System\StorageManager\Profiles\CDProfile\PartitionTable]
+[HKEY_LOCAL_MACHINE\System\StorageManager\Profiles\PCMCIA]
+"Folder"="Storage Card"
+"Name"="PCMCIA/Compact Flash Device"
+[HKEY_LOCAL_MACHINE\System\StorageManager\FATFS]
+"Util"="fatutil.dll"
+"CacheSize"=dword:00000000
+"EnableCache"=dword:00000001
+"Paging"=dword:00000001
+"Flags"=dword:00000024
+"Dll"="fatfsd.dll"
+"FriendlyName"="FAT FileSystem"
+[HKEY_LOCAL_MACHINE\System\GWE]
+"ActivityEvent"="PowerManager/ActivityTimer/UserActivity"
+[HKEY_LOCAL_MACHINE\System\GWE\Button]
+"FontWeight"=dword:000002bc
+[HKEY_LOCAL_MACHINE\System\GWE\OOMFnt]
+"CS"=dword:00000000
+"Wt"=dword:00000190
+"It"=dword:00000000
+"Ht"=dword:fffffff4
+"Nm"="Tahoma"
+[HKEY_LOCAL_MACHINE\System\GWE\Menu]
+"BarTMrg"=dword:00000002
+[HKEY_LOCAL_MACHINE\System\GWE\Menu\PopFnt]
+"CS"=dword:00000000
+"Wt"=dword:00000190
+"It"=dword:00000000
+"Ht"=dword:fffffff4
+"Nm"="Tahoma"
+[HKEY_LOCAL_MACHINE\System\GWE\Menu\BarFnt]
+"CS"=dword:00000000
+"Wt"=dword:000002bc
+"It"=dword:00000000
+"Ht"=dword:fffffff4
+"Nm"="Tahoma"
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Layouts\00000409]
+"PS2_AT"="kbdmouse.dll"
+"Layout Text"="US"
+"Layout File"="kbdmouse.dll"
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power]
+"DisableGwesPowerOff"=dword:00000001
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\Timeouts]
+"BattResumingSuspendTimeout"=dword:00000000
+"BattSuspendTimeout"=dword:000000b4
+"ACResumingSuspendTimeout"=dword:00000000
+"ACSuspendTimeout"=dword:00000000
+"BattSuspend"=dword:0000012c
+"BattSystemIdle"=dword:000000b4
+"BattUserIdle"=dword:0000003c
+"ACSuspend"=dword:00000000
+"ACSystemIdle"=dword:0000012c
+"ACUserIdle"=dword:0000003c
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\ActivityTimers\SystemActivity]
+"Timeout"=dword:0000000a
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\ActivityTimers\UserActivity]
+"Timeout"=dword:0000000a
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\State\Reboot]
+"Flags"=dword:00800000
+@=dword:00000004
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\State\Suspend]
+"Flags"=dword:00200000
+@=dword:00000003
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\State\SystemIdle]
+"Flags"=dword:00000000
+@=dword:00000002
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\State\SystemIdle\{EB91C7C9-8BF6-4a2d-9AB8-69724EED97D1}]
+@=dword:00000004
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\State\UserIdle]
+"Flags"=dword:00000000
+@=dword:00000001
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\State\On]
+"Flags"=dword:00010000
+@=dword:00000000
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\Interfaces]
+"{EB91C7C9-8BF6-4a2d-9AB8-69724EED97D1}"="Power-manageable display"
+"{8DD679CE-8AB4-43c8-A14A-EA4963FAA715}"="Power-manageable block devices"
+"{A32942B7-920C-486b-B0E6-92A702A99B35}"="Generic power-manageable devices"
+[HKEY_LOCAL_MACHINE\System\Events]
+"SYSTEM/GweApiSetReady"="Event triggered after GWES registers its API sets"
+"SYSTEM/PowerManagerReady"="Power Manager APIs"
+[HKEY_LOCAL_MACHINE\Drivers]
+"RootKey"="Drivers\\BuiltIn"
+[HKEY_LOCAL_MACHINE\Drivers\Unimodem]
+"DevConfig"=hex:10,00,00,00,78,00,00,00,10,01,00,00,00,4b,00,00,00,00,08,00,00,00,00,00,00
+[HKEY_LOCAL_MACHINE\Drivers\Unimodem\Settings]
+"Reset"="ATZ<cr>"
+"CallSetupFailTimeout"="ATS7=<#><cr>"
+"Blind_On"="X3"
+"Blind_Off"="X4"
+"Tone"="T"
+"Pulse"="P"
+"DialSuffix"=";"
+"DialPrefix"="D"
+"Terminator"="<cr>"
+"Prefix"="AT"
+[HKEY_LOCAL_MACHINE\Drivers\Unimodem\Init]
+"2"="ATE0V1&C1&D2<cr>"
+"1"="AT<cr>"
+[HKEY_LOCAL_MACHINE\Drivers\Display\Intel]
+"Bpp"=dword:00000010
+"CyScreen"=dword:000000f0
+"CxScreen"=dword:00000140
+"DisplayType"="TFT"
+[HKEY_LOCAL_MACHINE\Drivers\Resources\IO]
+"Ranges"="0-0xFFFF"
+"Space"=dword:00010000
+"Minimum"=dword:00000000
+"Identifier"=dword:00000002
+[HKEY_LOCAL_MACHINE\Drivers\Resources\IRQ]
+"Ranges"="0x10-0x30"
+"Space"=dword:00000020
+"Minimum"=dword:00000010
+"Identifier"=dword:00000001
+[HKEY_LOCAL_MACHINE\Drivers\PCMCIA]
+"StatusChangeActivityEvent"="PowerManager/ActivityTimer/SystemActivity"
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn]
+"Dll"="RegEnum.dll"
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\Serial2]
+"DevConfig"=hex:10,00,00,00,05,00,00,00,10,01,00,00,00,4b,00,00,00,00,08,00,00,00,00,00,00
+"FriendlyName"="Serial Cable on SP2:"
+"DeviceType"=dword:00000000
+"Priority256"=dword:00000050
+"Index"=dword:00000005
+"Order"=dword:00000000
+"Prefix"="COM"
+"DeviceArrayIndex"=dword:00000002
+"Tsp"="Unimodem.dll"
+"Irq"=dword:00000023
+"IoLen"=dword:00000024
+"IoBase"=dword:a6400000
+"Dll"="xsc1bd_serial.Dll"
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\PWRBUTTON]
+"Ioctl"=dword:00000004
+"Order"=dword:00000002
+"Dll"="RkrButton.Dll"
+"Prefix"="RKR"
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\WaveDev]
+"Priority256"=dword:00000095
+"Order"=dword:00000000
+"Index"=dword:00000001
+"Dll"="wavedev.dll"
+"Prefix"="WAV"
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\sdmmcloader]
+"Ioctl"=dword:00000004
+"Order"=dword:00000002
+"Prefix"="SML"
+"Dll"="sdmmc_loader.dll"
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\WAPIMAN]
+"Priority256"=dword:00000096
+"Order"=dword:00000001
+"Index"=dword:00000001
+"Dll"="waveapi.dll"
+"Prefix"="WAM"
+[HKEY_LOCAL_MACHINE\init]
+"Depend50"=hex:14,00,1e,00
+"Launch50"="LeafCE.exe"
+"Launch10"="shell.exe"
+"Depend30"=hex:14,00
+"Launch30"="gwes.exe"
+"Launch20"="device.exe"
+[HKEY_LOCAL_MACHINE\init\BootVars]
+"Start DevMgr"=dword:00000000
+"PROFILEDIR"="Documents and Settings"
+"SYSTEMHIVE"="Documents and Settings\\system.hv"
+[HKEY_LOCAL_MACHINE\nls]
+"DefaultLCID"=dword:00000409

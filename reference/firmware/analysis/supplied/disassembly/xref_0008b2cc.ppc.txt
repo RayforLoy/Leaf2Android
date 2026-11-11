@@ -1,0 +1,28 @@
+0008b2ac [file 000173d4] slwi      r9, r31, 2
+0008b2b0 [file 000173d8] add       r9, r30, r9
+0008b2b4 [file 000173dc] addi      r12, r30, 0x1140
+0008b2b8 [file 000173e0] stw       r12, 0x50(r9)
+0008b2bc [file 000173e4] addi      r31, r31, 1
+0008b2c0 [file 000173e8] slwi      r10, r31, 2
+0008b2c4 [file 000173ec] add       r10, r30, r10
+0008b2c8 [file 000173f0] lis       r12, 0x45
+0008b2cc [file 000173f4] addi      r12, r12, 0x7544 ; str@0x457544 'BluetoothSupport'
+0008b2d0 [file 000173f8] stw       r12, 0x50(r10)
+0008b2d4 [file 000173fc] addi      r31, r31, 1
+0008b2d8 [file 00017400] slwi      r9, r31, 2
+0008b2dc [file 00017404] add       r9, r30, r9
+0008b2e0 [file 00017408] addi      r12, r30, 0x1240
+0008b2e4 [file 0001740c] stw       r12, 0x50(r9)
+0008b2e8 [file 00017410] addi      r31, r31, 1
+0008b2ec [file 00017414] stw       r31, 0x1e0(r30)
+0008b2f0 [file 00017418] lwz       r28, 8(r1)
+0008b2f4 [file 0001741c] lwz       r29, 0xc(r1)
+0008b2f8 [file 00017420] lwz       r30, 0x10(r1)
+0008b2fc [file 00017424] lwz       r31, 0x14(r1)
+0008b300 [file 00017428] lwz       r0, 0x1c(r1)
+0008b304 [file 0001742c] mtlr      r0
+0008b308 [file 00017430] addi      r1, r1, 0x18
+0008b30c [file 00017434] blr       
+0008b310 [file 00017438] stwu      r1, -0x10(r1)
+0008b314 [file 0001743c] mflr      r0
+0008b318 [file 00017440] stw       r31, 0xc(r1)

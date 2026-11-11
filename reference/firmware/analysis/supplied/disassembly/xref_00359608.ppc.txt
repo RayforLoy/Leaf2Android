@@ -1,0 +1,28 @@
+003595e8 [file 002e5710] li        r3, 2
+003595ec [file 002e5714] li        r4, 0x23
+003595f0 [file 002e5718] li        r5, 0xa
+003595f4 [file 002e571c] li        r6, 0x23
+003595f8 [file 002e5720] bl        0xa3b00
+003595fc [file 002e5724] b         0x3596d8
+00359600 [file 002e5728] lbz       r30, -0x725c(r13)
+00359604 [file 002e572c] lis       r3, 0x36
+00359608 [file 002e5730] addi      r3, r3, -0x5bb0 ; str@0x35a450 'SPP:  Close Indication: Port = %d.\n'
+0035960c [file 002e5734] clrlwi    r4, r30, 0x18
+00359610 [file 002e5738] bl        0x91fd8
+00359614 [file 002e573c] lis       r3, 0x36
+00359618 [file 002e5740] addi      r3, r3, -0x5b8c ; str@0x35a474 'SPP:  Close Indication: Port = %d.'
+0035961c [file 002e5744] clrlwi    r4, r30, 0x18
+00359620 [file 002e5748] bl        0xd3f20
+00359624 [file 002e574c] li        r11, 0
+00359628 [file 002e5750] stb       r11, -0x725c(r13)
+0035962c [file 002e5754] b         0x3596d8
+00359630 [file 002e5758] lbz       r30, -0x725c(r13)
+00359634 [file 002e575c] lis       r3, 0x36
+00359638 [file 002e5760] addi      r3, r3, -0x5b68 ; str@0x35a498 'SPP:  Close Response: Port = %d.\n'
+0035963c [file 002e5764] clrlwi    r4, r30, 0x18
+00359640 [file 002e5768] bl        0x91fd8
+00359644 [file 002e576c] lis       r3, 0x36
+00359648 [file 002e5770] addi      r3, r3, -0x5b44 ; str@0x35a4bc 'SPP:  Close Response: Port = %d.'
+0035964c [file 002e5774] clrlwi    r4, r30, 0x18
+00359650 [file 002e5778] bl        0xd3f20
+00359654 [file 002e577c] li        r3, 0x3e8

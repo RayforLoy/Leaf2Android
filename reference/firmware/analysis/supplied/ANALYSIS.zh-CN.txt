@@ -1,0 +1,245 @@
+Leaf Aptus II 固件静态解析报告
+分析日期：2026-10-19（Asia/Hong_Kong）
+输入目录：D:\leaf\firmware
+输出目录：D:\leaf\firmware\analysis
+
+解析结果
+
+1. 已验证三套来源的完整性。CaptureOne.Mac.7.1.4、Mac.7.1.6 和
+   Win.11.3.2 各有 84 个文件、138,723,283 字节；相同相对路径的文件
+   在三个来源中全部相同。252 个文件合计 73 种不同内容。
+   与三个原始 manifest 的大小、SHA-256 比较全部一致。
+
+2. Aptus II 主更新文件是 5.041。FirmWareAptusII.UPD、
+   FirmWareAptusII4056.UPD、FirmWareAptusII80.UPD 完全相同，
+   不是三个不同的主程序。该结论只覆盖这三个本地来源，不代表所有
+   Capture One 版本，也不表示已经取得或分析 5.048。
+
+3. 固件包含两套处理器软件环境：PowerPC 大端 / pSOS+ 主控程序，
+   ARM / Windows CE 4.2 界面系统。还另带 FPGA 配置数据。
+   对具体处理器型号、板卡修订和芯片实装情况，样本只能给出家族线索。
+
+4. 已解出 Windows CE 的 30 个加载记录、23 个模块和 11 个普通文件，
+   恢复 LeafCE.exe，提取 514 项界面资源。23 个模块中 79 个有数据的段
+   以及全部 11 个普通文件已与源字节或经过检查的 LZX 解压结果核对。
+
+5. PowerPC 程序含真实的蓝牙 GAP/SPP 事件处理代码、PDAInterface，
+   以及 RequestSync / GetImage / GetCameraParam 等协议实现线索。
+   这证明这个共享固件中存在相关功能；具体后背是否装有无线模块、
+   功能是否启用、实际 SDP 服务和配对口令仍需实机确认。
+
+主要输入
+
+文件                         文件大小       版本/标识
+FirmWareAptusII.UPD            6,021,144      UPD 版本整数 5041，即 5.041
+FirmWareAptusII.BIN            9,810,419      版本字段原始字节 03 00 05 00
+BootRecovery.UPD               6,113,344      特殊字段 0xFFFFFFFE
+
+SHA-256：
+UPD  80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6
+BIN  2be7ce63460de2908c81c48d5bd26cdec834b9b4d7ffd2a33928160f2cd83549
+BOOT 4f71ebe188f8dd301dc0afcaa52e059296f29f851114ea7237c41df23bada535
+
+主 UPD 也与 FirmwareAFi.UPD、FirmwareAFiLegacy.UPD、
+FirmWareMamiyaDM.UPD、FirmWareMamiyaDM4056.UPD 相同。
+主 BIN 也与 FirmWareAFi.BIN、FirmWareAFiLegacy.BIN、
+FirmWareMamiyaDM.BIN 相同。这是共享软件映像的证据，不能据文件名
+认定这些机型在硬件或功能上完全一致。
+
+LEAF FRM 容器结构
+
+已识别并检查 249 个 LEAF FRM 容器；另外三个文件是 Firmware.config。
+所有容器的头长均为 0x128，即 296 字节，载荷紧随其后。
+
+偏移         长度    本次能够确认的含义
+0x000        8       ASCII "LEAF FRM"
+0x008        4       大端字段；样本 UPD/UBF 为 0，BIN 为 1
+0x00C        4       大端载荷长度，等于文件大小减 296
+0x010        4       大端存储的 XOR 校验结果
+0x014        4       版本/标识字段，不同文件类别的解释不同
+0x018        256     描述区域；UBF 中包含 <Desc> XML，主 UPD/BIN 为空
+0x118        16      4 个大端字；完整保存，未统一认定其字段语义
+0x128        ...     原始载荷
+
+本次在全部 249 个容器上验证的 XOR 算法：
+  从载荷起点开始，把每个完整的四字节组按 little-endian DWORD 读取，
+  逐组 XOR；最后不足四字节的 1～3 字节不计入校验。
+  将结果与头部 0x010 处的大端整数比较。
+不能把尾部补零后也参与 XOR；多个 UBF 的尾部 FF 字节会暴露该区别。
+该字段是 XOR 完整性校验，不是密码学签名验证。
+
+UPD 的版本整数可按整数 / 1000 显示为 5.041、4.701、4.700。
+BootRecovery 的 0xFFFFFFFE 是特殊标识；BIN 的 03 00 05 00 和 UBF 的
+机型相关编号单独保留，不能直接套用主 UPD 的版本换算。
+
+PowerPC 主控程序
+
+提取文件：extracted\FirmWareAptusII.UPD.payload.bin
+载荷大小：6,020,848 字节。
+指令格式：32 位 PowerPC，大端。
+导入反汇编器的基址：0x00074000；该值来自头部 0x120，并由多组
+字符串地址构造指令及对应源文件偏移相互核对。头部 0x124 为 0x74004。
+原始文件偏移和此 UPD 的 VA 之间关系：
+  文件偏移 = VA - 0x74000 + 0x128
+此公式不能用于 CE BIN 的分段加载记录。
+
+嵌入组件标识：
+  pSOS+/PPC V2.5.4                  文件偏移 0x003B1DE8
+  pNA+/PPC Version 4.1.2            文件偏移 0x00391750
+  pMONT+/PPC Version 1.5.4          文件偏移 0x003C97D0
+  pREPC+/PPC Version 2.5.2          文件偏移 0x003D3F7B
+这些组件自带的 1999/2000 年日期不是整个固件的构建日期。
+
+字符串和局部代码还显示：存储/CF 管理、1394 控制、JPEG 处理、
+拍摄参数、PXA 界面通信，以及 STILLS/VIDEO/CHIPSET Altera 版本管理。
+本次提供可复核的局部反汇编，没有宣称已完整恢复所有函数或源代码。
+
+Windows CE 界面镜像
+
+提取容器：extracted\FirmWareAptusII.BIN.payload.bin
+签名：B000FF\n。
+外层 BIN 是地址化的加载记录，不是可以从零偏移整体执行的 ARM 程序。
+记录数：30；所有记录的加法校验均通过。
+加载地址范围：[0x800B8000, 0x80A1B3BC)，长度 0x9633BC。
+加载入口：0x800B9000。
+ECEC 签名位置：0x800B8040；ROMHDR 地址：0x80253A98。
+ROMHDR CPUType：0x01C2（ARM/Thumb / ARMV4I 环境）。
+系统路径含 WINCE420 和 INTEL_DBPXA250，模块 subsystem 字段为 4.20。
+启动代码还包含 PXA250/255/210/215 的识别文本；这些文本不是单个
+具体硬件型号已被确认的证据。
+
+23 个模块：
+  nk.exe, coredll.dll, filesys.exe, gwes.exe, device.exe, regenum.dll,
+  pm.dll, fatfsd.dll, fatutil.dll, fsdmgr.dll, mspart.dll, waveapi.dll,
+  audevman.dll, ceddk.dll, mmtimer.dll, LeafCE.exe, ddi.dll,
+  wavedev.dll, RkrButton.dll, kbdmouse.dll, touch.dll,
+  xsc1bd_serial.dll, pmudll.dll。
+
+11 个普通文件：
+  ceconfig.h, initobj.dat, default.fdf, initdb.ini, verdana.ttf,
+  verdanab.ttf, verdanai.ttf, verdanaz.ttf, tahoma.ttf,
+  mingliu.ac3, nokiafc22.ttf。
+
+恢复的 LeafCE.exe：
+  路径：ce_reconstructed\fs\Windows\LeafCE.exe
+  文件大小：14,135,296 字节（重建的 PE，含分析元数据节）
+  ImageBase：0x00010000；入口 VA：0x0014046C。
+  原 ROM 内 .text 压缩数据地址：0x802B78C4。
+  原 ROM 内 .text：存储 0x844BB 字节，虚拟大小 0x12F848。
+  原 ROM 内 .rsrc：存储 0x17BBCF 字节，虚拟大小 0xBE9E90。
+  TOC 所记录的 LeafCE 文件时间：2011-07-13 22:31:10（UTC+8）。
+  该时间是映像元数据，不是对编译或刷写时间的独立证明。
+
+解压验证：共 36 次 LZX 解压（32 个模块段和 4 个普通文件）。
+检查每个压缩对象的块偏移、初始化数据长度和解压返回长度；未使用
+第三方工具默认的“解压失败后全零填充”路径。11 个模块段的初始化
+数据短于其虚拟段长，对虚拟尾部按零初始化处理并逐项记录。
+PE 段数据与独立解析的原始段或已验证解压结果逐段 SHA-256 一致。
+
+这些 PE 是供静态分析的重建产物，头部和 .cerom 节由工具生成。
+原始 ROM 的 split address、共享 RVA 等信息保存在 ce_inventory.json
+及 .cerom；不能把重建 PE 当作原始刷机文件。
+平坦 CE 镜像中的记录空洞使用合成 FF 填充，真实字节以 records 为准。
+
+注册表与资源
+
+注册表：ce_reconstructed\Registry\default.reg。
+  HKLM\init\Launch50 = LeafCE.exe
+  显示配置 CxScreen=0x140，CyScreen=0xF0，Bpp=0x10，即 320×240、16 位色。
+  International\ACP=0x4E4，即 1252；LCID=0x409。
+该 ACP 是本镜像的系统配置，不足以单独证明所有无线文件名/备注都采用
+同一编码，也不能证明别的固件和实机设置相同。
+
+资源已按 PE 资源表原样提取：
+  504 个 RT_BITMAP（DIB），1 个 JPEG，8 个 WAVE，1 个加速键表，共 514 项。
+  所有 505 个图像资源均能被图像解码器读取。
+  resources_manifest.json 记录资源类型、ID、语言、RVA、重建 PE 内偏移、
+  SHA-256 和图像尺寸。RVA/重建 PE 偏移不能混作原始压缩 BIN 文件偏移。
+
+FPGA 配置
+
+每个来源包含 65 个 UBF，剥离容器后得到 41 种不同载荷。
+UBF 的 <Desc> 给出 RBF 类别、Backs 内部机型代码、Interfaces 相机接口。
+FPGA 相关判断结合文件目录 FirmWareRBFs、描述字段和 Altera 版本管理
+文本；本次未确定 FPGA 的具体器件型号，也未恢复 HDL/网表。
+
+Aptus II 相关映射（名称缩写均保留原始文件含义）：
+Chipset2_AptusII40       CHIPSET  AT40 AM40                 None
+Chipset2_AptusII56_4outputs
+                        CHIPSET  RF10 AT10 AM56 AR10       None
+Chipset2_AptusII80       CHIPSET  AT80 AM80 AR80 RF12       None
+MarkIIAptus_IIVideo22    VIDEO    AT54 AM22                 Mamiya/Hasselblad/Contax/H1
+MarkIIAptus_IIVideo28    VIDEO    AT65 AM28                 Mamiya/Hasselblad/Contax/H1
+MarkIIAptus_IIVideo33    VIDEO    AT75 AM33                 Mamiya/Hasselblad/Contax/H1
+MarkIIMamiyaAptus_IIStill22 STILL AT54 AM22                 Mamiya
+MarkIIMamiyaAptus_IIStill28 STILL AT65 AM28                 Mamiya
+MarkIIMamiyaAptus_IIStill33 STILL AT75 AM33                 Mamiya
+
+上述三个 VIDEO 文件的载荷相同，三个 Mamiya STILL 文件的载荷也相同，
+但容器描述/版本字段不同。不能只依照载荷相同就忽略机型描述。
+这九个相关原始载荷已提取到 extracted\fpga\*.rbf。
+完整 65 项描述见 fpga_inventory.json。
+
+无线及相机协议证据
+
+全部地址详见 PROTOCOL.zh-CN.txt、evidence\ppc_string_xrefs.json 和
+disassembly\。下列地址是明确的字符串地址构造指令，不能直接当作
+对应命令处理函数入口：
+  RequestSync       VA 0x0008D6EC，原 UPD 文件偏移 0x00019814
+  GetImage          VA 0x00098A38，原 UPD 文件偏移 0x00024B60
+  GetCameraParam    VA 0x000E51A4，原 UPD 文件偏移 0x000712CC
+  SetCameraParam    VA 0x0009BDB4，原 UPD 文件偏移 0x00027EDC
+  GetPictureParams  VA 0x00088DB4，原 UPD 文件偏移 0x00014EDC
+  SetPictureParams  VA 0x00089BEC，原 UPD 文件偏移 0x00015D14
+
+已明确看到 GetImage 读取 file_name、PacketSize，生成 ATTACHMENT 和
+file_name 回复字段，并进入图像发送路径。大小写转换和完整发包格式
+尚未全部追踪，不能把内部 ATTACHMENT 字面量当作线上属性大小写结论。
+CE 界面程序有 ^<RequestSync />、CurrentTime 查询和 GetImage 等请求
+字面量；PPC 中有 ^<ReSyncResponse/>。这些证据与现有 WiView 客户端
+研究相互印证，但 CE 与 PPC 之间的内部链路不自动等同于无线链路。
+
+蓝牙栈包含 GAP 配对口令事件、SPP 端口添加/开启/关闭事件，初始化代码
+引用 AptusSComm / AptusComm / AFiComm、Leaf Wi / Leaf AFi Wi。
+这些名称可作为服务/设备名称候选线索，尚未替代实机 SDP/广播结果。
+
+仍未由本次静态解析确定：具体后背的无线硬件/功能开关，出厂或当前 PIN，
+完整握手先后顺序，所有命令的权限/适用接口，真实 JPEG 回包参数，
+完整 MOS/Live View 行为，以及分包确认、重传和超时处理。
+本次没有连接后背、执行厂商二进制、刷写固件或修改 Android 项目。
+
+输出与复现
+
+ANALYSIS.zh-CN.txt                 本报告
+PROTOCOL.zh-CN.txt                 协议证据与待确认项
+validation.json                   输入/跨来源/容器校验结果
+inventory.json                    全部 252 个文件的头部与哈希
+duplicate_groups.json              文件内容相同组
+ce_inventory.json                 独立解析的 CE 记录、ROMHDR、模块和文件
+ce_decompression.json             每次 LZX 的源/输出哈希及虚拟零尾
+ce_verification.json              重建结果逐段校验
+fpga_inventory.json               全部 FPGA 描述与载荷哈希
+resources_manifest.json           界面资源索引
+third-party-tools.json            外部解析工具版本、来源和本地修改说明
+strings\                         带偏移的 ASCII / ASCII 子集 UTF-16LE 字符串
+disassembly\                     带源文件偏移和字符串注释的 PPC 局部反汇编
+extracted\                       去头载荷、CE 平坦镜像、九个 FPGA 载荷
+ce_raw\                          CE 原始压缩段与普通文件存储字节
+ce_reconstructed\               CE 重建模块、文件系统、注册表和记录原始字节
+resources\                       原样资源文件
+
+运行示例（已在 D:\Leaf4Android 的既有 Python 虚拟环境验证）：
+  & D:\Leaf4Android\.venv\Scripts\python.exe D:\leaf\firmware\analysis\analyze_firmware.py
+  & D:\Leaf4Android\.venv\Scripts\python.exe D:\leaf\firmware\analysis\verify_ce.py
+  & D:\Leaf4Android\.venv\Scripts\python.exe D:\leaf\firmware\analysis\analyze_ppc.py
+  & D:\Leaf4Android\.venv\Scripts\python.exe D:\leaf\firmware\analysis\extract_resources.py
+
+reconstruct_ce.py 首次运行生成 ce_reconstructed；为了保护已有结果，它
+拒绝覆盖这个目录。如需另做一次提取，应先保留现有目录，再执行该脚本。
+analyze_firmware.py 只需 Python 标准库；其他脚本还用到已有环境内的
+capstone、pefile、Pillow。输入目录仅被读取，输出均在 analysis 中。
+
+格式与工具参考（主机解析工具源代码；设备结论以本地样本字节为依据）：
+https://github.com/gweslab/extract-wince-rom
+https://github.com/KodaSec/wince-decompr
+https://github.com/pinkavaj/romtools/blob/master/dumprom.cpp

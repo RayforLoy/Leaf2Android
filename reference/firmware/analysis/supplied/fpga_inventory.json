@@ -1,0 +1,2383 @@
+[
+  {
+    "file": "FirmWareRBFs/Chipset.ubf",
+    "sha256": "7d2f0510f9794ac7bb649286852c00fc6a57bfcd925316cfbfb5d671199ef8b3",
+    "size": 988165,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "03565c41db6493cc2ec6791aea88fbbb365976e1f6883cb5be92c4246e24357d",
+    "field_08_be": 0,
+    "payload_length_be": 987869,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x44805a1a",
+    "checksum_computed_xor32le": "0x44805a1a",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 1,
+    "field_14_be": 33303,
+    "field_14_bytes": "00008217",
+    "description": "<Desc>\n<RBF> \"CHIPSET\" </RBF>\n<Backs> \"AP17\" \"AP22\" \"AP65\" \"AP75\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "CHIPSET"
+      ],
+      "Backs": [
+        "AP17",
+        "AP22",
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/Chipset2.ubf",
+    "sha256": "91846d6fc4b55b6341a1c765fe3460d788ed40edf58f9633e824e3792dc1f8e2",
+    "size": 2119274,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "a245bd1378ec435f0782ba1c67a385a908d573711e4e00ce39cb78c5de223a23",
+    "field_08_be": 0,
+    "payload_length_be": 2118978,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xd605ed19",
+    "checksum_computed_xor32le": "0xd605ed19",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75314,
+    "field_14_bytes": "00012632",
+    "description": "<Desc>\n<RBF> \"CHIPSET\" </RBF>\n<Backs> \"AF54\" \"AF65\" \"AF75\" \"SK67\" \"RK67\" \"RF75\" \"AT65\" \"AT75\" \"TF65\" \"AT54\" \"AM22\" \"AM28\" \"AM33\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "CHIPSET"
+      ],
+      "Backs": [
+        "AF54",
+        "AF65",
+        "AF75",
+        "SK67",
+        "RK67",
+        "RF75",
+        "AT65",
+        "AT75",
+        "TF65",
+        "AT54",
+        "AM22",
+        "AM28",
+        "AM33"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/Chipset2_AptusII40.ubf",
+    "sha256": "d7859893d989f19cf796f8899f691b22f60efa9de57a7904f8d80383b8db5d23",
+    "size": 2119274,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "44dbe759e0f54c16055e0cd9dc4a2845f8790d1a1a2e520b1617b06a3490e6ed",
+    "field_08_be": 0,
+    "payload_length_be": 2118978,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xeb140355",
+    "checksum_computed_xor32le": "0xeb140355",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 40301,
+    "field_14_bytes": "00009d6d",
+    "description": "<Desc>\n<RBF> \"CHIPSET\" </RBF>\n<Backs> \"AT40\" \"AM40\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "CHIPSET"
+      ],
+      "Backs": [
+        "AT40",
+        "AM40"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/Chipset2_AptusII56_4outputs.ubf",
+    "sha256": "b612195d930c79da477e1522041d700b5253f0592bb4f495ef6fb02ab6fb583c",
+    "size": 2119274,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "32f02212ce604dc23d8559105adb45b66994b7303296cc4f5a14512f006c8dbe",
+    "field_08_be": 0,
+    "payload_length_be": 2118978,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x3be1d120",
+    "checksum_computed_xor32le": "0x3be1d120",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 96309,
+    "field_14_bytes": "00017835",
+    "description": "<Desc>\n<RBF> \"CHIPSET\" </RBF>\n<Backs> \"RF10\" \"AT10\" \"AM56\" \"AR10\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "CHIPSET"
+      ],
+      "Backs": [
+        "RF10",
+        "AT10",
+        "AM56",
+        "AR10"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/Chipset2_AptusII80.ubf",
+    "sha256": "8a4170f881aa8e6268d65186340e2f23dd0a6e23a691e5bb2882d2de208c4bf7",
+    "size": 2119274,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "854acdee02bb542f1ddee3c7b784d4db7cf001f4ad4ed787dc94dc291b23565f",
+    "field_08_be": 0,
+    "payload_length_be": 2118978,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xa59eed5b",
+    "checksum_computed_xor32le": "0xa59eed5b",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 80305,
+    "field_14_bytes": "000139b1",
+    "description": "<Desc>\n<RBF> \"CHIPSET\" </RBF>\n<Backs> \"AT80\" \"AM80\" \"AR80\" \"RF12\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "CHIPSET"
+      ],
+      "Backs": [
+        "AT80",
+        "AM80",
+        "AR80",
+        "RF12"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/Chipset2_AptusS.ubf",
+    "sha256": "e095992ada0225431d04020ce38d63432058f1c1c6bb1114d70344b498699e11",
+    "size": 2119274,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "289f4cce9b165a8b35254386396f80d605684bd8ea4700b237dc04b8d165353c",
+    "field_08_be": 0,
+    "payload_length_be": 2118978,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x8613a655",
+    "checksum_computed_xor32le": "0x8613a655",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75309,
+    "field_14_bytes": "0001262d",
+    "description": "<Desc>\n<RBF> \"CHIPSET\" </RBF>\n<Backs> \"AS54\" \"AS65\" \"AS75\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "CHIPSET"
+      ],
+      "Backs": [
+        "AS54",
+        "AS65",
+        "AS75"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/ChipsetDecompress.ubf",
+    "sha256": "7640c63e5fb6994ecdc1ae5a3cf3319788d99fa945234c70a35bbae8c0288588",
+    "size": 988165,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "d46cdd7f7187de1cee012b32b439fe05489b70a836b079baa84b1ad4821115c4",
+    "field_08_be": 0,
+    "payload_length_be": 987869,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x7bd5ef90",
+    "checksum_computed_xor32le": "0x7bd5ef90",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 1,
+    "field_14_be": 33102,
+    "field_14_bytes": "0000814e",
+    "description": "<Desc>\n<RBF> \"CHIPSET_DECOMPRESS\" </RBF>\n<Backs> \"AP17\" \"AP22\" \"AP65\" \"AP75\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "CHIPSET_DECOMPRESS"
+      ],
+      "Backs": [
+        "AP17",
+        "AP22",
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/ContaxStill22.ubf",
+    "sha256": "11aa0af40f3b2db0f43db0f9b0f0ffab6304ade93aa03d59e11ad4d43422ed09",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "baa6365df3297498a757397a118d67678872a892482e9cca62badd0329a40e2a",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xbf37d446",
+    "checksum_computed_xor32le": "0xbf37d446",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 22501,
+    "field_14_bytes": "000057e5",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP22\"\r\n    \"AP17\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"Contax\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP22",
+        "AP17"
+      ],
+      "Interfaces": [
+        "Contax"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/ContaxStill75.ubf",
+    "sha256": "462393eececa2c9724b38716d92001835077ed5b3fcd9286c44b08ec4b7a6f96",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "d1e91f6aead74b451e40dbedd0ceccf533cf5e8b84d8744f873309626efc0239",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x4a5cd37f",
+    "checksum_computed_xor32le": "0x4a5cd37f",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 33501,
+    "field_14_bytes": "000082dd",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP65\"\r\n    \"AP75\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"Contax\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "Contax"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/H1Still22.ubf",
+    "sha256": "1a4dba85f81af7048237cc29afa293b00b20f81b5631c3f94b878a2c1a9b4670",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "fff5f2266701577c9030f3fba327741ae8b495f156e07d079902fba4c0807f09",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x58e10c79",
+    "checksum_computed_xor32le": "0x58e10c79",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 22601,
+    "field_14_bytes": "00005849",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP22\"\r\n    \"AP17\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"H1\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP22",
+        "AP17"
+      ],
+      "Interfaces": [
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/H1Still75.ubf",
+    "sha256": "be36131cb1cbbdfb285d99d7fd1473eb0e0a7903dd9ced07c92e864b6c951ef1",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "8c39380179c3ac8ec056aec113dd40f78598e9ebe71c74e788ad0cdff84f548f",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xe8cb922e",
+    "checksum_computed_xor32le": "0xe8cb922e",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 33601,
+    "field_14_bytes": "00008341",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP65\"\r\n    \"AP75\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"H1\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/HasselbladStill22.ubf",
+    "sha256": "7af70b92602f51e16977132de0e70dc811d49b103167559dfa92187562ad27b0",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "8cc77809c759660f1d44ed23b6007e7157d24ba5cf91ea42623e3133a6cbbb5e",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xd831155c",
+    "checksum_computed_xor32le": "0xd831155c",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 22401,
+    "field_14_bytes": "00005781",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP22\"\r\n    \"AP17\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"Hasselblad\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP22",
+        "AP17"
+      ],
+      "Interfaces": [
+        "Hasselblad"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/HasselbladStill75.ubf",
+    "sha256": "d79aaad55f7749f5a1c91a2e3c766e000ea4b7a4df97a33bc4d3c4d23cb2d318",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "f9e244cebd0683a0533b7b6feeebd9221d4bafa9956ee9df55120c0d64452e01",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xc8087147",
+    "checksum_computed_xor32le": "0xc8087147",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 33401,
+    "field_14_bytes": "00008279",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP65\"\r\n    \"AP75\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"Hasselblad\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "Hasselblad"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/LargeFormatStill22.ubf",
+    "sha256": "e4d587991c21deca22495d3683b4292fa017538053c49a2b9767b5d82735e17c",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "8cc77809c759660f1d44ed23b6007e7157d24ba5cf91ea42623e3133a6cbbb5e",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xd831155c",
+    "checksum_computed_xor32le": "0xd831155c",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 22401,
+    "field_14_bytes": "00005781",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"LARGE_FORMAT\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP22\"\r\n    \"AP17\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"None\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AP22",
+        "AP17"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/LargeFormatStill75.ubf",
+    "sha256": "a29e6d5011cfcd81720c9aef82a2cd46286258b7fe97081bb7e9662b4f4af02c",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "f9e244cebd0683a0533b7b6feeebd9221d4bafa9956ee9df55120c0d64452e01",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xc8087147",
+    "checksum_computed_xor32le": "0xc8087147",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 33401,
+    "field_14_bytes": "00008279",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"LARGE_FORMAT\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP65\"\r\n    \"AP75\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"None\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MamiyaStill22.ubf",
+    "sha256": "174077bff825dd36c000530e9e6341c7a3d98e13ca07f0474fa486ad61a8ffd8",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "376f30c65d95281e93cfadb3a9841db5b5d0f838c9f3baefdb5e255730571f07",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x8146c14f",
+    "checksum_computed_xor32le": "0x8146c14f",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 22201,
+    "field_14_bytes": "000056b9",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP22\"\r\n    \"AP17\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"Mamiya\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP22",
+        "AP17"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MamiyaStill75.ubf",
+    "sha256": "d54afd2979f2893ada36346b1966418021c953cae71fe2cf0925b7269fb0c2fb",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "b996f039e11f58ff6ed79bffe405416a47ad4b9ff57939aab01f72fc55a5a3f7",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x0919fd06",
+    "checksum_computed_xor32le": "0x0919fd06",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 33201,
+    "field_14_bytes": "000081b1",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"STILL\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP65\"\r\n    \"AP75\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"Mamiya\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFi_IILargeFormatStill33.ubf",
+    "sha256": "e55f9b73ce3e846cdd127b5f0e23a160c21156d150acc35e2ac06bc24ee6d7a0",
+    "size": 93634,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "225dd268f6dae275eae7220a406efaa5ed2d81e4bd7e8664d42ba165f04fd594",
+    "field_08_be": 0,
+    "payload_length_be": 93338,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xd4fdff9a",
+    "checksum_computed_xor32le": "0xd4fdff9a",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75413,
+    "field_14_bytes": "00012695",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"RF75\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "RF75"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFi_IIStill33.ubf",
+    "sha256": "b02e7e4df178a518ae2ed8842f2aac8f489436ef2537d99e7fee1be56b76f1cc",
+    "size": 93634,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "225dd268f6dae275eae7220a406efaa5ed2d81e4bd7e8664d42ba165f04fd594",
+    "field_08_be": 0,
+    "payload_length_be": 93338,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xd4fdff9a",
+    "checksum_computed_xor32le": "0xd4fdff9a",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75413,
+    "field_14_bytes": "00012695",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"RF75\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "RF75"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFi_IIVideo33.ubf",
+    "sha256": "09f5dfafb755c9cac9959efc1c966d451e19dea1dcc3d1e3e701106e051a6d7c",
+    "size": 95747,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "86e20c560047aa810016d7197c7c23e755df991dd39f9e0a4113d9ddb88df216",
+    "field_08_be": 0,
+    "payload_length_be": 95451,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xa2a03bf4",
+    "checksum_computed_xor32le": "0xa2a03bf4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 75010,
+    "field_14_bytes": "00012502",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"RF75\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "RF75"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiLargeFormatStill56.ubf",
+    "sha256": "d646306ea93473a57e01c5ff8ca1f4643ce7514c4c3798a8377df6dd7d200d39",
+    "size": 139612,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "a07fcb31d577bd72e4532caddb289f528c424857e7f91e5e08f6aaf60fe8a878",
+    "field_08_be": 0,
+    "payload_length_be": 139316,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xe0f9053d",
+    "checksum_computed_xor32le": "0xe0f9053d",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 96418,
+    "field_14_bytes": "000178a2",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"RF10\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "RF10"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiStill22.ubf",
+    "sha256": "67dedb3b4f8ab3c5290f4a11e27425e26b157288865307e979b4ceb00c851499",
+    "size": 96151,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "2d4ae69e80946c5cc85fa40a3ed3fcebd36e05db62f56f05c01e7df5d2150146",
+    "field_08_be": 0,
+    "payload_length_be": 95855,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xc9b16d03",
+    "checksum_computed_xor32le": "0xc9b16d03",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 54406,
+    "field_14_bytes": "0000d486",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AF54\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AF54"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiStill28.ubf",
+    "sha256": "3f55abd87234a58c5f7d0124a23dbdf3ac2bc66a10487870022bd0e2f6760bcb",
+    "size": 93827,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "a470e48b5b8ac9ff835e2ef1ac1c2a31ce834424dddf87b368dae46605b00c6c",
+    "field_08_be": 0,
+    "payload_length_be": 93531,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x191d8bdb",
+    "checksum_computed_xor32le": "0x191d8bdb",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 65402,
+    "field_14_bytes": "0000ff7a",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AF65\" \"TF65\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AF65",
+        "TF65"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiStill33.ubf",
+    "sha256": "2bb1a0eeb5bb83308891256b11c88eab703d4cffe8b1ceaca5fa3ec95f14bef4",
+    "size": 96565,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "d6eecf0415a005bef68ad5d0c23e58fe511fd9fc723ba0c6e5cad0ec18bc865c",
+    "field_08_be": 0,
+    "payload_length_be": 96269,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xcbe9d44f",
+    "checksum_computed_xor32le": "0xcbe9d44f",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 1,
+    "field_14_be": 75412,
+    "field_14_bytes": "00012694",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AF75\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AF75"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiStill56.ubf",
+    "sha256": "8dcb3fc8d1abb92268af83239c1fe637bde5aa2d53082d73b888d95fc87436d4",
+    "size": 139612,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "a07fcb31d577bd72e4532caddb289f528c424857e7f91e5e08f6aaf60fe8a878",
+    "field_08_be": 0,
+    "payload_length_be": 139316,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xe0f9053d",
+    "checksum_computed_xor32le": "0xe0f9053d",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 96418,
+    "field_14_bytes": "000178a2",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"RF10\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "RF10"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiVideo22.ubf",
+    "sha256": "60677baee2e6956d95bd352f1be4b61cc2f46a63f80c3da2e780ff456e810d23",
+    "size": 99951,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "be07bb5a6dd9ae747177f02559b065b394b2c3963d2ddc295a7dff4aecba7aed",
+    "field_08_be": 0,
+    "payload_length_be": 99655,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x2f551f97",
+    "checksum_computed_xor32le": "0x2f551f97",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 54007,
+    "field_14_bytes": "0000d2f7",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AF54\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AF54"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiVideo28.ubf",
+    "sha256": "9e98d3df43e4154d9ae5adaf3b1a0c6352c3a8e4558409c6345fd3d3b8eacf1d",
+    "size": 95747,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "86e20c560047aa810016d7197c7c23e755df991dd39f9e0a4113d9ddb88df216",
+    "field_08_be": 0,
+    "payload_length_be": 95451,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xa2a03bf4",
+    "checksum_computed_xor32le": "0xa2a03bf4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 65003,
+    "field_14_bytes": "0000fdeb",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AF65\" \"TF65\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AF65",
+        "TF65"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAFiVideo33.ubf",
+    "sha256": "19a6c9c2dd35d89239030a9db417b8c1d2e68f864403c59ce63364e7d8320508",
+    "size": 95747,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "86e20c560047aa810016d7197c7c23e755df991dd39f9e0a4113d9ddb88df216",
+    "field_08_be": 0,
+    "payload_length_be": 95451,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xa2a03bf4",
+    "checksum_computed_xor32le": "0xa2a03bf4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 75010,
+    "field_14_bytes": "00012502",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AF75\" </Backs>\n<Interfaces> \"AFi\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AF75"
+      ],
+      "Interfaces": [
+        "AFi"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAptus_IIVideo22.ubf",
+    "sha256": "c2047af8c2f7ffe10e21e5b60875b413cf5663fb2e60b28032f3f5078738b4a4",
+    "size": 96914,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "d84ca381b2e82e952ae39d896f5f4fd4f906b4ff5f032c6df98d118a335a57cb",
+    "field_08_be": 0,
+    "payload_length_be": 96618,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1350c4a4",
+    "checksum_computed_xor32le": "0x1350c4a4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 54011,
+    "field_14_bytes": "0000d2fb",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AT54\" \"AM22\" </Backs>\n<Interfaces> \"Mamiya\" \"Hasselblad\" \"Contax\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AT54",
+        "AM22"
+      ],
+      "Interfaces": [
+        "Mamiya",
+        "Hasselblad",
+        "Contax",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAptus_IIVideo28.ubf",
+    "sha256": "c6321ed2087b79decdfde4a8555a92b12d39d372dbce67b9c33a2a4d492540b7",
+    "size": 96914,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "d84ca381b2e82e952ae39d896f5f4fd4f906b4ff5f032c6df98d118a335a57cb",
+    "field_08_be": 0,
+    "payload_length_be": 96618,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1350c4a4",
+    "checksum_computed_xor32le": "0x1350c4a4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 65005,
+    "field_14_bytes": "0000fded",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AT65\" \"AM28\" </Backs>\n<Interfaces> \"Mamiya\" \"Hasselblad\" \"Contax\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AT65",
+        "AM28"
+      ],
+      "Interfaces": [
+        "Mamiya",
+        "Hasselblad",
+        "Contax",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIAptus_IIVideo33.ubf",
+    "sha256": "cff21bac5df4169e2ebb76850dcd71f02ae82a3b0a79cd635bd8971f7010bb2f",
+    "size": 96914,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "d84ca381b2e82e952ae39d896f5f4fd4f906b4ff5f032c6df98d118a335a57cb",
+    "field_08_be": 0,
+    "payload_length_be": 96618,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1350c4a4",
+    "checksum_computed_xor32le": "0x1350c4a4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75012,
+    "field_14_bytes": "00012504",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AT75\" \"AM33\" </Backs>\n<Interfaces> \"Mamiya\" \"Hasselblad\" \"Contax\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AT75",
+        "AM33"
+      ],
+      "Interfaces": [
+        "Mamiya",
+        "Hasselblad",
+        "Contax",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIContaxStill22.ubf",
+    "sha256": "c0d7c2e7e6ce32531da6c8326d586bcd24f2ef6948e1684999cc691b6af2ea51",
+    "size": 96611,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "e39169dfa79559d6b536b037ccd0922eeb19c131f8d30646dceb6bc2965babff",
+    "field_08_be": 0,
+    "payload_length_be": 96315,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x3470413c",
+    "checksum_computed_xor32le": "0x3470413c",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 54502,
+    "field_14_bytes": "0000d4e6",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS54\" \"AT54\" </Backs>\n<Interfaces> \"Contax\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS54",
+        "AT54"
+      ],
+      "Interfaces": [
+        "Contax"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIContaxStill33.ubf",
+    "sha256": "4db3a626ab9271cc791d3fb2b1f29adf6c2402f5a31cab4302013aaad7c6efe0",
+    "size": 96406,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "52b4f5c572626c8faf5d2ca6e53aacde27445f78e0150b0d6f913f213b4604a4",
+    "field_08_be": 0,
+    "payload_length_be": 96110,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xbb58dc1c",
+    "checksum_computed_xor32le": "0xbb58dc1c",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75411,
+    "field_14_bytes": "00012693",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS75\" \"AT75\" </Backs>\n<Interfaces> \"Contax\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS75",
+        "AT75"
+      ],
+      "Interfaces": [
+        "Contax"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill22.ubf",
+    "sha256": "bda3f33ed52e8b59b376ac5993109c83c6e8f64b88593ef4c5ea518048d2442d",
+    "size": 95292,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "7d51befec833232618f2a1251920e75ae301dd67905b80f8fd1bf7eb03482190",
+    "field_08_be": 0,
+    "payload_length_be": 94996,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x7dcac0b8",
+    "checksum_computed_xor32le": "0x7dcac0b8",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 54407,
+    "field_14_bytes": "0000d487",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"AS54\" \"AF54\" \"AT54\" \"AM22\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AS54",
+        "AF54",
+        "AT54",
+        "AM22"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill28.ubf",
+    "sha256": "7660dc52909f9cf353b051f3593f86aea0105095c7b52159a787a321d7fd31ec",
+    "size": 96618,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "f14223339682d0d1cbb24f4e521c3dffb640e7cb7e95c013a95bcc3fcd90a7af",
+    "field_08_be": 0,
+    "payload_length_be": 96322,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xe43025ae",
+    "checksum_computed_xor32le": "0xe43025ae",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 65401,
+    "field_14_bytes": "0000ff79",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"AS65\" \"AF65\" \"AT65\" \"TF65\" \"AM28\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AS65",
+        "AF65",
+        "AT65",
+        "TF65",
+        "AM28"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill31K.ubf",
+    "sha256": "5a344e7247853ae3a4535bcd9d43b3c42b42ccbb2bdf7f11f79adf710f0242cc",
+    "size": 124597,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "dfde2eac59d755392d73f81afb3a80a262b5633012501298501f0867e95fae61",
+    "field_08_be": 0,
+    "payload_length_be": 124301,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xd8d2f9c2",
+    "checksum_computed_xor32le": "0xd8d2f9c2",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 1,
+    "field_14_be": 67402,
+    "field_14_bytes": "0001074a",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"SK67\" \"RK67\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "SK67",
+        "RK67"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill33.ubf",
+    "sha256": "03c8b016b42d79d7865432326b68028f1e0bf9b3d099d78884c4b3a79d8361ac",
+    "size": 95190,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "08dae9a37916ca73b0f3149c9bed0580b2d1890493016860c7503a2a721d0644",
+    "field_08_be": 0,
+    "payload_length_be": 94894,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1d2cadf6",
+    "checksum_computed_xor32le": "0x1d2cadf6",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75410,
+    "field_14_bytes": "00012692",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"AS75\" \"AF75\" \"AT75\" \"AM33\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AS75",
+        "AF75",
+        "AT75",
+        "AM33"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill40.ubf",
+    "sha256": "e92d8bbbca79abfe801187b4004d57c2304a27c8188211f906f15b0299316320",
+    "size": 139852,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "3bd667ba7704dc0f45f57d7f6708e52b93f8ff2c6d9d6353d8b101594542856e",
+    "field_08_be": 0,
+    "payload_length_be": 139556,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xfcdc8c57",
+    "checksum_computed_xor32le": "0xfcdc8c57",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 40404,
+    "field_14_bytes": "00009dd4",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"AT40\" \"AM40\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AT40",
+        "AM40"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill56.ubf",
+    "sha256": "1fb4b5ba19dc1c69415f5e97f535a7d25bae53ec366bdb1e3eb4a3e16e440909",
+    "size": 142592,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "6ad1f5ea3401b8dae499004be0b33e394960c33da142adb446b299aa3e84e75f",
+    "field_08_be": 0,
+    "payload_length_be": 142296,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x8daf3853",
+    "checksum_computed_xor32le": "0x8daf3853",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 96423,
+    "field_14_bytes": "000178a7",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"AT10\" \"AM56\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AT10",
+        "AM56"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill56R.ubf",
+    "sha256": "a416a570a676044b6a5ff5e62d696a119d501c1dd9dd631d932241723bf88003",
+    "size": 141521,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "e62cd29cff136fedceceb219e4a86ccc10e4dc78b31b91a12796a87df71b8f05",
+    "field_08_be": 0,
+    "payload_length_be": 141225,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x444e3a89",
+    "checksum_computed_xor32le": "0x444e3a89",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 1,
+    "field_14_be": 96421,
+    "field_14_bytes": "000178a5",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"AR10\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AR10"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIILargeFormatStill80.ubf",
+    "sha256": "68a98fc1e97babbcd9f6b5fd617fbc1a4ed2182ddfc372dd74a482d11ac88ebc",
+    "size": 128600,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "a16058851013f5c3898f4733946bd1539f7d22013c59eabcbebc81b7fcf2b4ce",
+    "field_08_be": 0,
+    "payload_length_be": 128304,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1001c436",
+    "checksum_computed_xor32le": "0x1001c436",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 80409,
+    "field_14_bytes": "00013a19",
+    "description": "<Desc>\n<RBF> \"LARGE_FORMAT\" </RBF>\n<Backs> \"AT80\" \"AM80\" \"AR80\" \"RF12\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "LARGE_FORMAT"
+      ],
+      "Backs": [
+        "AT80",
+        "AM80",
+        "AR80",
+        "RF12"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill22.ubf",
+    "sha256": "0866b30a36ddee36341a73294c93336a9c33d04af0fe44e940edee7265a8b4a1",
+    "size": 95984,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "e18b8d7dfee4601283dddf76697f8f48e9b998e0068cd7c1996ad808df869447",
+    "field_08_be": 0,
+    "payload_length_be": 95688,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x96ddbcb4",
+    "checksum_computed_xor32le": "0x96ddbcb4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 54410,
+    "field_14_bytes": "0000d48a",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AT54\" \"AM22\" </Backs>\n<Interfaces> \"Mamiya\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AT54",
+        "AM22"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill28.ubf",
+    "sha256": "9ae0bc933306372dfc5d35772942333823345e1d468fea5d93e945bf4e263a7a",
+    "size": 95984,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "e18b8d7dfee4601283dddf76697f8f48e9b998e0068cd7c1996ad808df869447",
+    "field_08_be": 0,
+    "payload_length_be": 95688,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x96ddbcb4",
+    "checksum_computed_xor32le": "0x96ddbcb4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 65406,
+    "field_14_bytes": "0000ff7e",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AT65\" \"AM28\" </Backs>\n<Interfaces> \"Mamiya\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AT65",
+        "AM28"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill33.ubf",
+    "sha256": "00396f9621918cb123d57df5c07f144cc082a5b3f333ec49f2b9784c095461d4",
+    "size": 95984,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "e18b8d7dfee4601283dddf76697f8f48e9b998e0068cd7c1996ad808df869447",
+    "field_08_be": 0,
+    "payload_length_be": 95688,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x96ddbcb4",
+    "checksum_computed_xor32le": "0x96ddbcb4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 75417,
+    "field_14_bytes": "00012699",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AT75\" \"AM33\" </Backs>\n<Interfaces> \"Mamiya\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AT75",
+        "AM33"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIMamiyaStill22.ubf",
+    "sha256": "e7409c03a6721f7eb74b9461c8fcd512712ecb228cd3efd02c1b396a862239ae",
+    "size": 95292,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "7d51befec833232618f2a1251920e75ae301dd67905b80f8fd1bf7eb03482190",
+    "field_08_be": 0,
+    "payload_length_be": 94996,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x7dcac0b8",
+    "checksum_computed_xor32le": "0x7dcac0b8",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 54407,
+    "field_14_bytes": "0000d487",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS54\" </Backs>\n<Interfaces> \"Mamiya\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS54"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIMamiyaStill28.ubf",
+    "sha256": "03c6a6961b704919fecb79aa8d6af90e8efb0138557cae8074f940c8693e7c4f",
+    "size": 96618,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "f14223339682d0d1cbb24f4e521c3dffb640e7cb7e95c013a95bcc3fcd90a7af",
+    "field_08_be": 0,
+    "payload_length_be": 96322,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xe43025ae",
+    "checksum_computed_xor32le": "0xe43025ae",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 65401,
+    "field_14_bytes": "0000ff79",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS65\" </Backs>\n<Interfaces> \"Mamiya\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS65"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIMamiyaStill33.ubf",
+    "sha256": "06b5cb0859715d622ec1ff2f4dffb4490f8c3d13c72f2f008454ecd7b885fd9a",
+    "size": 95190,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "08dae9a37916ca73b0f3149c9bed0580b2d1890493016860c7503a2a721d0644",
+    "field_08_be": 0,
+    "payload_length_be": 94894,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1d2cadf6",
+    "checksum_computed_xor32le": "0x1d2cadf6",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75410,
+    "field_14_bytes": "00012692",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS75\" </Backs>\n<Interfaces> \"Mamiya\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS75"
+      ],
+      "Interfaces": [
+        "Mamiya"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill22.ubf",
+    "sha256": "a0749664fd76ed4f112ea2243673b26e47fe26981a761a07231db6ae07f6c197",
+    "size": 95292,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "7d51befec833232618f2a1251920e75ae301dd67905b80f8fd1bf7eb03482190",
+    "field_08_be": 0,
+    "payload_length_be": 94996,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x7dcac0b8",
+    "checksum_computed_xor32le": "0x7dcac0b8",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 54407,
+    "field_14_bytes": "0000d487",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS54\" \"AT54\" \"AM22\" </Backs>\n<Interfaces> \"Hasselblad\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS54",
+        "AT54",
+        "AM22"
+      ],
+      "Interfaces": [
+        "Hasselblad",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill28.ubf",
+    "sha256": "f52d5639ee1cc0467ec424fab5af52d1b3a0cef446da4c96b0ceafb53ab0992c",
+    "size": 96618,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "f14223339682d0d1cbb24f4e521c3dffb640e7cb7e95c013a95bcc3fcd90a7af",
+    "field_08_be": 0,
+    "payload_length_be": 96322,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xe43025ae",
+    "checksum_computed_xor32le": "0xe43025ae",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 65401,
+    "field_14_bytes": "0000ff79",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS65\" \"AT65\" \"AM28\" </Backs>\n<Interfaces> \"Hasselblad\" \"Contax\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS65",
+        "AT65",
+        "AM28"
+      ],
+      "Interfaces": [
+        "Hasselblad",
+        "Contax",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill31K.ubf",
+    "sha256": "1675e2d0c68bf3bd77cf33f1a58d12f3a39c0048fabf1e149fecd8689e3104e1",
+    "size": 124597,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "dfde2eac59d755392d73f81afb3a80a262b5633012501298501f0867e95fae61",
+    "field_08_be": 0,
+    "payload_length_be": 124301,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xd8d2f9c2",
+    "checksum_computed_xor32le": "0xd8d2f9c2",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 1,
+    "field_14_be": 67402,
+    "field_14_bytes": "0001074a",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"SK67\" \"RK67\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "SK67",
+        "RK67"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill33.ubf",
+    "sha256": "1c25d13fb0a1f6c269266ff1d9268f85615d28485796f15d87203068a594c23b",
+    "size": 95190,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "08dae9a37916ca73b0f3149c9bed0580b2d1890493016860c7503a2a721d0644",
+    "field_08_be": 0,
+    "payload_length_be": 94894,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1d2cadf6",
+    "checksum_computed_xor32le": "0x1d2cadf6",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75410,
+    "field_14_bytes": "00012692",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AS75\" \"AT75\" \"AM33\" </Backs>\n<Interfaces> \"Hasselblad\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AS75",
+        "AT75",
+        "AM33"
+      ],
+      "Interfaces": [
+        "Hasselblad",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill40.ubf",
+    "sha256": "258e213519ba87397fb56a9c326a71d19ad7793f0849aa54f1b4f295ffca9967",
+    "size": 139852,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "3bd667ba7704dc0f45f57d7f6708e52b93f8ff2c6d9d6353d8b101594542856e",
+    "field_08_be": 0,
+    "payload_length_be": 139556,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xfcdc8c57",
+    "checksum_computed_xor32le": "0xfcdc8c57",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 40404,
+    "field_14_bytes": "00009dd4",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AT40\" \"AM40\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AT40",
+        "AM40"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill56.ubf",
+    "sha256": "23b3a0ec83326a9706b9e586d25d6e568bb666c095221e47f23e898b4ee399dc",
+    "size": 142592,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "6ad1f5ea3401b8dae499004be0b33e394960c33da142adb446b299aa3e84e75f",
+    "field_08_be": 0,
+    "payload_length_be": 142296,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x8daf3853",
+    "checksum_computed_xor32le": "0x8daf3853",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 96423,
+    "field_14_bytes": "000178a7",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AT10\" \"AM56\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AT10",
+        "AM56"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill56R.ubf",
+    "sha256": "9ad5c3e9d04587d7bb5ffe1f837a95df6431bddf088b5d63c27de0c4d134ddad",
+    "size": 141521,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "e62cd29cff136fedceceb219e4a86ccc10e4dc78b31b91a12796a87df71b8f05",
+    "field_08_be": 0,
+    "payload_length_be": 141225,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x444e3a89",
+    "checksum_computed_xor32le": "0x444e3a89",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 1,
+    "field_14_be": 96421,
+    "field_14_bytes": "000178a5",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AR10\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AR10"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIStill80.ubf",
+    "sha256": "e6973cd216907a2e61844020c9b3aeadc6bacf9dcd544e98ddd4d30d3d2bda2e",
+    "size": 128600,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "a16058851013f5c3898f4733946bd1539f7d22013c59eabcbebc81b7fcf2b4ce",
+    "field_08_be": 0,
+    "payload_length_be": 128304,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x1001c436",
+    "checksum_computed_xor32le": "0x1001c436",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 80409,
+    "field_14_bytes": "00013a19",
+    "description": "<Desc>\n<RBF> \"STILL\" </RBF>\n<Backs> \"AT80\" \"AM80\" \"AR80\" \"RF12\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "STILL"
+      ],
+      "Backs": [
+        "AT80",
+        "AM80",
+        "AR80",
+        "RF12"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo22.ubf",
+    "sha256": "297e943967a6d5f10adc4ecb7ed842c201ac72d1705246542c83eaf6584071ca",
+    "size": 99951,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "be07bb5a6dd9ae747177f02559b065b394b2c3963d2ddc295a7dff4aecba7aed",
+    "field_08_be": 0,
+    "payload_length_be": 99655,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x2f551f97",
+    "checksum_computed_xor32le": "0x2f551f97",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 54007,
+    "field_14_bytes": "0000d2f7",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AS54\" </Backs>\n<Interfaces> \"Mamiya\" \"Hasselblad\" \"Contax\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AS54"
+      ],
+      "Interfaces": [
+        "Mamiya",
+        "Hasselblad",
+        "Contax",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo28.ubf",
+    "sha256": "5a1ae55b32ea188007adcdc766323de08760bf9bc5f91ea668e3d38a6640bf36",
+    "size": 100442,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "92d0bc58035f31e4f3a0bfd8863ffe803b2de1d724be9baebc2fadba52538031",
+    "field_08_be": 0,
+    "payload_length_be": 100146,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x7d6af673",
+    "checksum_computed_xor32le": "0x7d6af673",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 65002,
+    "field_14_bytes": "0000fdea",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AS65\" </Backs>\n<Interfaces> \"Mamiya\" \"Hasselblad\" \"Contax\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AS65"
+      ],
+      "Interfaces": [
+        "Mamiya",
+        "Hasselblad",
+        "Contax",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo31K.ubf",
+    "sha256": "32341279552272bac85822e86a282d4f52b456b8e6370e9464165e21e939cca8",
+    "size": 100442,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "92d0bc58035f31e4f3a0bfd8863ffe803b2de1d724be9baebc2fadba52538031",
+    "field_08_be": 0,
+    "payload_length_be": 100146,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x7d6af673",
+    "checksum_computed_xor32le": "0x7d6af673",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 67001,
+    "field_14_bytes": "000105b9",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"SK67\" \"RK67\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "SK67",
+        "RK67"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo33.ubf",
+    "sha256": "a08a171ee044b9cd34f24edba7c005259815333328581f8530b622f9dfbecc11",
+    "size": 100442,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "92d0bc58035f31e4f3a0bfd8863ffe803b2de1d724be9baebc2fadba52538031",
+    "field_08_be": 0,
+    "payload_length_be": 100146,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x7d6af673",
+    "checksum_computed_xor32le": "0x7d6af673",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 75008,
+    "field_14_bytes": "00012500",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AS75\" </Backs>\n<Interfaces> \"Mamiya\" \"Hasselblad\" \"Contax\" \"H1\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AS75"
+      ],
+      "Interfaces": [
+        "Mamiya",
+        "Hasselblad",
+        "Contax",
+        "H1"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo40.ubf",
+    "sha256": "0aaf6f067f23e40a8f62e82e8f099958bb6a63305df76b7e511b6b4b81cdd10a",
+    "size": 134456,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "2a76241b338e9849e3466d562f2d7b1d72436d22bc72cbf93c6b55d0f8da7697",
+    "field_08_be": 0,
+    "payload_length_be": 134160,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xa8ad12bd",
+    "checksum_computed_xor32le": "0xa8ad12bd",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 0,
+    "field_14_be": 40006,
+    "field_14_bytes": "00009c46",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AT40\" \"AM40\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AT40",
+        "AM40"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo56.ubf",
+    "sha256": "292edf35afc28e89a4bb803ea6147cb27d60f763ccc73505828f4405e7b7405a",
+    "size": 133499,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "8fa9af37c45c299f16eed6f45d721048bdc6fd0a0a55ecca15180a2b63cc20ab",
+    "field_08_be": 0,
+    "payload_length_be": 133203,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x38c2c595",
+    "checksum_computed_xor32le": "0x38c2c595",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 96012,
+    "field_14_bytes": "0001770c",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"RF10\" \"AT10\" \"AM56\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "RF10",
+        "AT10",
+        "AM56"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo56R.ubf",
+    "sha256": "5c84af87d97a82d90e2fc932eee649dee7f6680a2c9987565320ad7f428b4185",
+    "size": 131419,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "e1d31de895cb0a10a72d7dca7d6db52eb165a3d01005bc580c8d1c89638dbe27",
+    "field_08_be": 0,
+    "payload_length_be": 131123,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0xac212807",
+    "checksum_computed_xor32le": "0xac212807",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 96011,
+    "field_14_bytes": "0001770b",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AR10\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AR10"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/MarkIIVideo80.ubf",
+    "sha256": "4abe243b94a37ef0226e412487d67ad85772bc4c48317a0ecce5f0e6d3ee14c3",
+    "size": 134534,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "cde47c4bc5869c0173f762ed57401cfa30188e2494be75e37bb8c78d20e91d71",
+    "field_08_be": 0,
+    "payload_length_be": 134238,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x4bca37eb",
+    "checksum_computed_xor32le": "0x4bca37eb",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 2,
+    "field_14_be": 80006,
+    "field_14_bytes": "00013886",
+    "description": "<Desc>\n<RBF> \"VIDEO\" </RBF>\n<Backs> \"AT80\" \"AM80\" \"AR80\" \"RF12\" </Backs>\n<Interfaces> \"None\" </Interfaces>\n</Desc>\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0x00000000",
+      "0x00000000",
+      "0x00000000"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AT80",
+        "AM80",
+        "AR80",
+        "RF12"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/Video22.ubf",
+    "sha256": "425790b2bafc30bd95102c97912c938695ecf32a7329f2a38893ac0185f8fb88",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "21656acd78a0113ae3a0e8189294604ae6daea6d9e1efed99a80563e8ae51020",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x244212a4",
+    "checksum_computed_xor32le": "0x244212a4",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 22001,
+    "field_14_bytes": "000055f1",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"VIDEO\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP22\"\r\n    \"AP17\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"None\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AP22",
+        "AP17"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  },
+  {
+    "file": "FirmWareRBFs/Video75.ubf",
+    "sha256": "ca8baab33c7555361b44ce913fb419d599df840d70515ae3de95121bf099c5e7",
+    "size": 98319,
+    "magic": "LEAF FRM",
+    "header_size": 296,
+    "payload_sha256": "83c923ec1b8102e7c3083a3231cb1afde0e52832407ace4d7e90afc5d85cd7fc",
+    "field_08_be": 0,
+    "payload_length_be": 98023,
+    "payload_length_matches": true,
+    "checksum_stored_be": "0x986e68d2",
+    "checksum_computed_xor32le": "0x986e68d2",
+    "checksum_matches": true,
+    "checksum_trailing_bytes_excluded": 3,
+    "field_14_be": 33001,
+    "field_14_bytes": "000080e9",
+    "description": "<Desc>\r\n  <RBF>\r\n    \"VIDEO\"\r\n  </RBF>\r\n  \r\n  <Backs>\r\n    \"AP65\"\r\n    \"AP75\"\r\n  </Backs>\r\n\r\n  <Interfaces>\r\n    \"None\"\r\n  </Interfaces>\r\n</Desc>\r\n",
+    "trailing_header_words_be": [
+      "0x01900000",
+      "0xff600000",
+      "0x00074000",
+      "0x00074004"
+    ],
+    "rbf_metadata": {
+      "RBF": [
+        "VIDEO"
+      ],
+      "Backs": [
+        "AP65",
+        "AP75"
+      ],
+      "Interfaces": [
+        "None"
+      ]
+    }
+  }
+]

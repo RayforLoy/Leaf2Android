@@ -1,0 +1,28 @@
+003595a0 [file 002e56c8] bl        0x35a5d4
+003595a4 [file 002e56cc] b         0x3596d8
+003595a8 [file 002e56d0] stb       r30, -0x725c(r13)
+003595ac [file 002e56d4] lis       r3, 0x36
+003595b0 [file 002e56d8] addi      r3, r3, -0x5bf8 ; str@0x35a408 'SPP:  Open Indication: Port = %d.\n'
+003595b4 [file 002e56dc] clrlwi    r4, r30, 0x18
+003595b8 [file 002e56e0] bl        0x91fd8
+003595bc [file 002e56e4] lis       r3, 0x36
+003595c0 [file 002e56e8] addi      r3, r3, -0x5bd4 ; str@0x35a42c 'SPP:  Open Indication: Port = %d.'
+003595c4 [file 002e56ec] clrlwi    r4, r30, 0x18
+003595c8 [file 002e56f0] bl        0xd3f20
+003595cc [file 002e56f4] li        r3, 3
+003595d0 [file 002e56f8] bl        0xa3c20
+003595d4 [file 002e56fc] li        r3, 3
+003595d8 [file 002e5700] li        r4, 0
+003595dc [file 002e5704] li        r5, 0
+003595e0 [file 002e5708] li        r6, 0
+003595e4 [file 002e570c] bl        0xa3b00
+003595e8 [file 002e5710] li        r3, 2
+003595ec [file 002e5714] li        r4, 0x23
+003595f0 [file 002e5718] li        r5, 0xa
+003595f4 [file 002e571c] li        r6, 0x23
+003595f8 [file 002e5720] bl        0xa3b00
+003595fc [file 002e5724] b         0x3596d8
+00359600 [file 002e5728] lbz       r30, -0x725c(r13)
+00359604 [file 002e572c] lis       r3, 0x36
+00359608 [file 002e5730] addi      r3, r3, -0x5bb0 ; str@0x35a450 'SPP:  Close Indication: Port = %d.\n'
+0035960c [file 002e5734] clrlwi    r4, r30, 0x18

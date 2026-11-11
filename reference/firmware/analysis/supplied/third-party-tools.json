@@ -1,0 +1,31 @@
+{
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "D:\\Leaf4Android\\.venv\\Scripts\\python.exe",
+  "packages": {
+    "capstone": "5.0.6",
+    "pefile": "2024.8.26",
+    "Pillow": "12.3.0"
+  },
+  "tools": [
+    {
+      "repository": "https://github.com/gweslab/extract-wince-rom",
+      "commit": "5eedf30beced801fa753b9ab693cd06bb5068133",
+      "local_path": "D:\\leaf\\firmware\\analysis\\vendor\\extract-wince-rom",
+      "mode": "raw; sections=full; no heuristic relocation or rebasing",
+      "upstream_source_modified": false
+    },
+    {
+      "repository": "https://github.com/KodaSec/wince-decompr",
+      "commit": "d08163aeda0dec22dbcc363dabf80606413d119c",
+      "local_path": "D:\\leaf\\firmware\\analysis\\vendor\\extract-wince-rom\\wince_decompr",
+      "license": "MIT"
+    }
+  ],
+  "local_wrapper": "reconstruct_ce.py replaces permissive fallback with exact LZX framing/initialized-size validation and declared virtual zero tails. All target EXEs/DLLs are parsed only, never executed.",
+  "format_reference": "https://github.com/pinkavaj/romtools/blob/master/dumprom.cpp",
+  "source_manifests": {
+    "CaptureOne.Mac.7.1.4-manifest.json": "78225e7c6dddb15454e2d0d8986cbe78ec0a2c64a567c5c09dd0566240e4df9f",
+    "CaptureOne.Mac.7.1.6-manifest.json": "fe58bc25c0b3d283a109e5c0f5ce424729d43a070db02abfbde8d3de82059379",
+    "CaptureOne.Win.11.3.2-manifest.json": "0b4d03ef717dde17bc3db321df6242cd4e1abbb52c0a2660d4fc2790418af220"
+  }
+}

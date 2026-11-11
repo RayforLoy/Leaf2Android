@@ -1,0 +1,19 @@
+{
+  "sources": [
+    "CaptureOne.Mac.7.1.4",
+    "CaptureOne.Mac.7.1.6",
+    "CaptureOne.Win.11.3.2"
+  ],
+  "file_count": 252,
+  "unique_contents": 73,
+  "per_source_count": {
+    "CaptureOne.Mac.7.1.4": 84,
+    "CaptureOne.Mac.7.1.6": 84,
+    "CaptureOne.Win.11.3.2": 84
+  },
+  "manifest_issues": [],
+  "header_validation_failures": [],
+  "cross_source_differences": [],
+  "all_sources_identical_by_relative_path": true,
+  "header_file_count": 249
+}

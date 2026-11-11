@@ -42,7 +42,7 @@ import java.io.File
 
 private enum class Page(private val titleResource: Int, val icon: ImageVector) {
     SHOOT(R.string.page_shoot, Icons.Default.CameraAlt), LIBRARY(R.string.page_library, Icons.Default.PhotoLibrary),
-    CONNECT(R.string.page_connect, Icons.Default.Bluetooth), SETTINGS(R.string.page_settings, Icons.Default.Tune);
+    CONNECT(R.string.page_connect, Icons.Default.Bluetooth), BACK(R.string.page_back, Icons.Default.Tune), SETTINGS(R.string.page_settings, Icons.Default.Settings);
     val title: String get() = tr(titleResource)
     val classic: String get() = title
 }
@@ -134,6 +134,7 @@ fun LeafApp(
                     Page.SHOOT -> ShootPage(state, settings, repository, { pageName = Page.CONNECT.name })
                     Page.LIBRARY -> LibraryPage(state, repository) { pageName = Page.SHOOT.name }
                     Page.CONNECT -> ConnectionPage(state, devices, repository, discovery, requestPermissions, enableBluetooth, connect, disconnect)
+                    Page.BACK -> CameraControlsPage(state, repository, shareFile)
                     Page.SETTINGS -> SettingsPage(settings, state, repository, shareFile, selectedLanguage)
                 }
             }
@@ -160,7 +161,7 @@ fun LeafApp(
                 label = { Text(tr(R.string.follow_new_644b5)) }, leadingIcon = { Icon(Icons.Default.Sync, null, Modifier.size(16.dp)) })
         }
         }
-        val cameraStatus = listOfNotNull(state.camera["battery_percent"]?.let { tr(R.string.back_battery_1_s_cbba0 , it) }, state.camera["iso"]?.let { "ISO $it" }, state.camera["exp_left"]?.let { tr(R.string.frames_left_afc47 , it) })
+        val cameraStatus = listOfNotNull(state.camera["battery_percent"]?.let { tr(R.string.back_battery_1_s_cbba0 , it) }, state.currentIso?.let { "ISO $it" }, state.camera["exp_left"]?.let { tr(R.string.frames_left_afc47 , it) })
         if (cameraStatus.isNotEmpty()) Text(cameraStatus.joinToString("   ·   "), Modifier.padding(horizontal = 20.dp, vertical = 3.dp), style = MaterialTheme.typography.labelSmall)
         if (state.operation.isNotBlank()) {
             Column(Modifier.padding(horizontal = 20.dp)) {

@@ -1,0 +1,176 @@
+00358b80 [file 002e4ca8] addi      r1, r1, 8
+00358b84 [file 002e4cac] blr       
+00358b88 [file 002e4cb0] stwu      r1, -8(r1)
+00358b8c [file 002e4cb4] mflr      r0
+00358b90 [file 002e4cb8] stw       r0, 0xc(r1)
+00358b94 [file 002e4cbc] lwz       r0, 0xc(r1)
+00358b98 [file 002e4cc0] mtlr      r0
+00358b9c [file 002e4cc4] addi      r1, r1, 8
+00358ba0 [file 002e4cc8] blr       
+00358ba4 [file 002e4ccc] stwu      r1, -0x10(r1)
+00358ba8 [file 002e4cd0] mflr      r0
+00358bac [file 002e4cd4] stw       r31, 0xc(r1)
+00358bb0 [file 002e4cd8] stw       r0, 0x14(r1)
+00358bb4 [file 002e4cdc] mr        r31, r3
+00358bb8 [file 002e4ce0] lwz       r12, -0x7250(r13)
+00358bbc [file 002e4ce4] add       r12, r12, r31
+00358bc0 [file 002e4ce8] stw       r12, -0x7250(r13)
+00358bc4 [file 002e4cec] lwz       r11, -0x7250(r13)
+00358bc8 [file 002e4cf0] lwz       r10, -0x724c(r13)
+00358bcc [file 002e4cf4] subf      r11, r10, r11
+00358bd0 [file 002e4cf8] cmpwi     r11, 0
+00358bd4 [file 002e4cfc] blt       0x358bec
+00358bd8 [file 002e4d00] lis       r3, 0x36
+00358bdc [file 002e4d04] addi      r3, r3, -0x6164 ; str@0x359e9c '\n LOG Buffer Overflow!!!'
+00358be0 [file 002e4d08] bl        0x92094
+00358be4 [file 002e4d0c] lwz       r11, -0x724c(r13)
+00358be8 [file 002e4d10] stw       r11, -0x7250(r13)
+00358bec [file 002e4d14] lwz       r31, 0xc(r1)
+00358bf0 [file 002e4d18] lwz       r0, 0x14(r1)
+00358bf4 [file 002e4d1c] mtlr      r0
+00358bf8 [file 002e4d20] addi      r1, r1, 0x10
+00358bfc [file 002e4d24] blr       
+00358c00 [file 002e4d28] stwu      r1, -8(r1)
+00358c04 [file 002e4d2c] mflr      r0
+00358c08 [file 002e4d30] stw       r0, 0xc(r1)
+00358c0c [file 002e4d34] lis       r3, 0x36
+00358c10 [file 002e4d38] addi      r3, r3, -0x6148 ; str@0x359eb8 '\nBT LOG is disable'
+00358c14 [file 002e4d3c] bl        0x92094
+00358c18 [file 002e4d40] lwz       r0, 0xc(r1)
+00358c1c [file 002e4d44] mtlr      r0
+00358c20 [file 002e4d48] addi      r1, r1, 8
+00358c24 [file 002e4d4c] blr       
+00358c28 [file 002e4d50] stwu      r1, -0x10(r1)
+00358c2c [file 002e4d54] mflr      r0
+00358c30 [file 002e4d58] stw       r30, 8(r1)
+00358c34 [file 002e4d5c] stw       r31, 0xc(r1)
+00358c38 [file 002e4d60] stw       r0, 0x14(r1)
+00358c3c [file 002e4d64] mr        r31, r3
+00358c40 [file 002e4d68] mr        r30, r4
+00358c44 [file 002e4d6c] stw       r31, -0x7258(r13)
+00358c48 [file 002e4d70] stw       r30, -0x7254(r13)
+00358c4c [file 002e4d74] bl        0xe6a0c
+00358c50 [file 002e4d78] clrlwi    r3, r3, 0x18
+00358c54 [file 002e4d7c] cmpwi     r3, 0
+00358c58 [file 002e4d80] beq       0x358c78
+00358c5c [file 002e4d84] lis       r12, 0x36
+00358c60 [file 002e4d88] addi      r12, r12, -0x6134 ; str@0x359ecc 'AptusSComm'
+00358c64 [file 002e4d8c] stw       r12, -0x67d0(r13)
+00358c68 [file 002e4d90] lis       r11, 0x36
+00358c6c [file 002e4d94] addi      r11, r11, -0x6128 ; str@0x359ed8 'Leaf Wi'
+00358c70 [file 002e4d98] b         0xb40bc
+00358c74 [file 002e4d9c] b         0x358cbc
+00358c78 [file 002e4da0] bl        0xe6c54
+00358c7c [file 002e4da4] clrlwi    r3, r3, 0x18
+00358c80 [file 002e4da8] cmpwi     r3, 0
+00358c84 [file 002e4dac] beq       0x358ca4
+00358c88 [file 002e4db0] lis       r12, 0x36
+00358c8c [file 002e4db4] addi      r12, r12, -0x6120 ; str@0x359ee0 'AFiComm'
+00358c90 [file 002e4db8] stw       r12, -0x67d0(r13)
+00358c94 [file 002e4dbc] lis       r11, 0x36
+00358c98 [file 002e4dc0] addi      r11, r11, -0x6118 ; str@0x359ee8 'Leaf AFi Wi'
+00358c9c [file 002e4dc4] stw       r11, -0x67cc(r13)
+00358ca0 [file 002e4dc8] b         0x358cbc
+00358ca4 [file 002e4dcc] lis       r12, 0x36
+00358ca8 [file 002e4dd0] addi      r12, r12, -0x610c ; str@0x359ef4 'AptusComm'
+00358cac [file 002e4dd4] stw       r12, -0x67d0(r13)
+00358cb0 [file 002e4dd8] lis       r11, 0x36
+00358cb4 [file 002e4ddc] addi      r11, r11, -0x6128 ; str@0x359ed8 'Leaf Wi'
+00358cb8 [file 002e4de0] stw       r11, -0x67cc(r13)
+00358cbc [file 002e4de4] lis       r3, 0x36
+00358cc0 [file 002e4de8] addi      r3, r3, -0x72f4
+00358cc4 [file 002e4dec] bl        0x35ae9c
+00358cc8 [file 002e4df0] lis       r3, 0x36
+00358ccc [file 002e4df4] addi      r3, r3, -0x71e8
+00358cd0 [file 002e4df8] bl        0x35a5a8
+00358cd4 [file 002e4dfc] lis       r3, 0x36
+00358cd8 [file 002e4e00] addi      r3, r3, -0x70bc
+00358cdc [file 002e4e04] bl        0x35bc30
+00358ce0 [file 002e4e08] lis       r3, 0x36
+00358ce4 [file 002e4e0c] addi      r3, r3, -0x6b28
+00358ce8 [file 002e4e10] bl        0x35ce58
+00358cec [file 002e4e14] bl        0x35d850
+00358cf0 [file 002e4e18] bl        0x35b8d4
+00358cf4 [file 002e4e1c] lwz       r30, 8(r1)
+00358cf8 [file 002e4e20] lwz       r31, 0xc(r1)
+00358cfc [file 002e4e24] lwz       r0, 0x14(r1)
+00358d00 [file 002e4e28] mtlr      r0
+00358d04 [file 002e4e2c] addi      r1, r1, 0x10
+00358d08 [file 002e4e30] blr       
+00358d0c [file 002e4e34] stwu      r1, -0x20(r1)
+00358d10 [file 002e4e38] mflr      r0
+00358d14 [file 002e4e3c] stmw      r26, 8(r1)
+00358d18 [file 002e4e40] stw       r0, 0x24(r1)
+00358d1c [file 002e4e44] mr        r31, r3
+00358d20 [file 002e4e48] mr        r30, r4
+00358d24 [file 002e4e4c] mr        r29, r5
+00358d28 [file 002e4e50] mr        r28, r6
+00358d2c [file 002e4e54] mr        r27, r7
+00358d30 [file 002e4e58] clrlwi    r11, r31, 0x10
+00358d34 [file 002e4e5c] lis       r12, 0
+00358d38 [file 002e4e60] ori       r12, r12, 0xc001
+00358d3c [file 002e4e64] cmpw      r11, r12
+00358d40 [file 002e4e68] beq       0x358d68
+00358d44 [file 002e4e6c] lis       r12, 0
+00358d48 [file 002e4e70] ori       r12, r12, 0xc002
+00358d4c [file 002e4e74] cmpw      r11, r12
+00358d50 [file 002e4e78] beq       0x358d88
+00358d54 [file 002e4e7c] lis       r12, 0
+00358d58 [file 002e4e80] ori       r12, r12, 0xc003
+00358d5c [file 002e4e84] cmpw      r11, r12
+00358d60 [file 002e4e88] beq       0x358d90
+00358d64 [file 002e4e8c] b         0x358de4
+00358d68 [file 002e4e90] lis       r3, 0x36
+00358d6c [file 002e4e94] addi      r3, r3, -0x6100 ; str@0x359f00 'IB Stack System Init: %2d,%d,%d,%p.\n'
+00358d70 [file 002e4e98] clrlwi    r4, r30, 0x18
+00358d74 [file 002e4e9c] clrlwi    r5, r29, 0x10
+00358d78 [file 002e4ea0] clrlwi    r6, r28, 0x10
+00358d7c [file 002e4ea4] mr        r7, r27
+00358d80 [file 002e4ea8] bl        0x91fd8
+00358d84 [file 002e4eac] b         0x358e04
+00358d88 [file 002e4eb0] bl        0x3596ec
+00358d8c [file 002e4eb4] b         0x358e04
+00358d90 [file 002e4eb8] lis       r3, 0x36
+00358d94 [file 002e4ebc] addi      r3, r3, -0x60d8 ; str@0x359f28 'IB Stack Fatal Memory error: %2d,%d,('
+00358d98 [file 002e4ec0] clrlwi    r4, r30, 0x18
+00358d9c [file 002e4ec4] clrlwi    r5, r29, 0x10
+00358da0 [file 002e4ec8] bl        0x92094
+00358da4 [file 002e4ecc] li        r26, 0
+00358da8 [file 002e4ed0] rlwinm    r12, r28, 0x1e, 0x12, 0x1f
+00358dac [file 002e4ed4] cmplw     r12, r26
+00358db0 [file 002e4ed8] ble       0x358dd0
+00358db4 [file 002e4edc] slwi      r12, r26, 2
+00358db8 [file 002e4ee0] lwzx      r4, r27, r12
+00358dbc [file 002e4ee4] lis       r3, 0x36
+00358dc0 [file 002e4ee8] addi      r3, r3, -0x60b0
+00358dc4 [file 002e4eec] bl        0x91fd8
+00358dc8 [file 002e4ef0] addi      r26, r26, 1
+00358dcc [file 002e4ef4] b         0x358da8
+00358dd0 [file 002e4ef8] lis       r3, 0x36
+00358dd4 [file 002e4efc] addi      r3, r3, -0x60ac
+00358dd8 [file 002e4f00] bl        0x92094
+00358ddc [file 002e4f04] li        r3, 0x64
+00358de0 [file 002e4f08] bl        0x74800
+00358de4 [file 002e4f0c] lis       r3, 0x36
+00358de8 [file 002e4f10] addi      r3, r3, -0x60a8 ; str@0x359f58 'Unexpected status Message %x,%2d,%d,%d,%p\n'
+00358dec [file 002e4f14] clrlwi    r4, r31, 0x10
+00358df0 [file 002e4f18] clrlwi    r5, r30, 0x18
+00358df4 [file 002e4f1c] clrlwi    r6, r29, 0x10
+00358df8 [file 002e4f20] clrlwi    r7, r28, 0x10
+00358dfc [file 002e4f24] mr        r8, r27
+00358e00 [file 002e4f28] bl        0x91fd8
+00358e04 [file 002e4f2c] lmw       r26, 8(r1)
+00358e08 [file 002e4f30] lwz       r0, 0x24(r1)
+00358e0c [file 002e4f34] mtlr      r0
+00358e10 [file 002e4f38] addi      r1, r1, 0x20
+00358e14 [file 002e4f3c] blr       
+00358e18 [file 002e4f40] stwu      r1, -0x20(r1)
+00358e1c [file 002e4f44] mflr      r0
+00358e20 [file 002e4f48] stmw      r26, 8(r1)
+00358e24 [file 002e4f4c] stw       r0, 0x24(r1)
+00358e28 [file 002e4f50] mr        r31, r3
+00358e2c [file 002e4f54] mr        r30, r4
+00358e30 [file 002e4f58] mr        r29, r5
+00358e34 [file 002e4f5c] mr        r28, r6
+00358e38 [file 002e4f60] mr        r27, r7
+00358e3c [file 002e4f64] clrlwi    r11, r31, 0x10

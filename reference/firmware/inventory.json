@@ -1,0 +1,2808 @@
+{
+  "schema_version": 1,
+  "project": "Leaf2Android",
+  "scope": "reference/firmware; inventory.json excludes itself",
+  "integrity": "SHA-256 over exact file bytes, independent of paths and timestamps",
+  "source_entry_count": 310,
+  "unique_original_payload_count": 89,
+  "unique_original_payload_bytes": 83696381,
+  "file_count": 198,
+  "total_bytes": 109095277,
+  "single_files_over_90_mib": [],
+  "files": [
+    {
+      "path": "analysis/controls-5.041/brightness-driver.ppc.txt",
+      "size": 3358,
+      "sha256": "412c508130885a7663cc538d2996fe3271865909ff300e5061ca48ecdb3f8953",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/camera-settings-storage.ppc.txt",
+      "size": 33164,
+      "sha256": "f021d93b50972a0576bcbbf33649e4b0e1249957149d8dee8639e5a7303dfce4",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/extraction.json",
+      "size": 58881,
+      "sha256": "e0b567ba7553d4287cdf7fae8cdecfe7773d6dfbce3392d46e7044ba9aaea547",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/get-camera-params.ppc.txt",
+      "size": 71005,
+      "sha256": "fc9433ad5c63f54214f994aa8f4b417e6ede57874c3d3c1baba12d988e0a12ef",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/get-picture-params.ppc.txt",
+      "size": 56755,
+      "sha256": "8c8d424442ba28cb21ce449abcc666e8d5263a986be43195685f9c13c9bd00a8",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/image-settings-storage.ppc.txt",
+      "size": 12123,
+      "sha256": "ddb0d21317daba93572a4e1754f00ee310c317cfd7b7d3b70d7a33247c181bee",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/interface-selectors.ppc.txt",
+      "size": 1874,
+      "sha256": "719fe26f63fbd4228229faa6dc83d33ff7f31da8eba3bdf66648e2534f8fc328",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/iso-storage.ppc.txt",
+      "size": 5645,
+      "sha256": "bf4828aefdd266d3f2b6b1d1c8dc05776f47afe62827ab0179384026160f1476",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/marking-storage.ppc.txt",
+      "size": 4172,
+      "sha256": "32c65d28f1765573abacf1638779e8e2e7132376a8fc090290e77d54a3bd334f",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/pda-message-catalog.ppc.txt",
+      "size": 7232,
+      "sha256": "d0a7920376e290ca01b847a9bddda049d79a2c9215efd38de124670f5fd9a303",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/pin-storage.ppc.txt",
+      "size": 5384,
+      "sha256": "ca6893432dfdfa55668facefb70720d3e9bd86c5af9143e2ce5f05d78081e718",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/set-camera-params.ppc.txt",
+      "size": 116475,
+      "sha256": "4db4cd07a85c5ce49bd6ed5fdfd5d0047c27d07aa994b6dae7a3ea19aed0b181",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/set-picture-params.ppc.txt",
+      "size": 26396,
+      "sha256": "bb3fc22f4ae4729ee7fe6ec731023499884270a3ba0c5ee0ae18956e3c7893b4",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-5.041/sync-camera-params.ppc.txt",
+      "size": 160677,
+      "sha256": "5b63b4946eadefc7fd72e9cf24951394ab89ca86c39decede37e18ad721f947a",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "5.041",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/evidence.json",
+      "size": 36677,
+      "sha256": "5fcaf3b1b95ac7c7d9e69db58fb50a490f1bd40e3dff5d2642ca6b49e359bd49",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/extract_evidence.py",
+      "size": 12727,
+      "sha256": "8cd6ef575429ff6e0263fd939fb853694bc44f11b38993b1744f53dd7cbc061c",
+      "classification": "leaf2android-reproduction-tool",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/file-command.ppc.txt",
+      "size": 71506,
+      "sha256": "fe9f82f4339500b42dc8bd5057f5b43dca3a7226dbe8b656732e83986c146143",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/FirmwareAptus-4.701.payload.bin",
+      "size": 4235352,
+      "sha256": "52718040da6175f4a4a2c3c57df2078ad140613d3515ab26ede7ac787029dfa8",
+      "classification": "derived-powerpc-payload-not-flashable",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/get-camera-params.ppc.txt",
+      "size": 70021,
+      "sha256": "5797c33adc01d97470ab69d157b89dfd9ee53a14884ba90693873f4904c2a69c",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/get-image.ppc.txt",
+      "size": 43032,
+      "sha256": "7d3c23edf4e595089e8856e533b4308126bc197129faa6ad93a2bb6825017ffa",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/get-picture-params.ppc.txt",
+      "size": 55345,
+      "sha256": "050e57c55361a9cbaeabd3da825fb765515f871be0bb9403d4d442a1a5468e77",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/image-function.ppc.txt",
+      "size": 41408,
+      "sha256": "41f1a6550e5b04ef2616f4ec7b24cebcd3a12a160981b99a4a42093a03655636",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/marking-storage.ppc.txt",
+      "size": 4139,
+      "sha256": "720fdbf5c61ec34730ac009b7d039e1dc99d41f5f9684d2f203fce1459a1e1a5",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/model-name-and-id-getters.ppc.txt",
+      "size": 1063,
+      "sha256": "1420330981242926710e0f06c329caaeb6e2144b433e43f89c9a1315b410de19",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/pda-message-catalog.ppc.txt",
+      "size": 7161,
+      "sha256": "8b1ee2d40332c1f7dccfaf0a8ecab4320cf43c95fa622a6d4742a7fe8dfb8541",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/pxa-boot-registration.ppc.txt",
+      "size": 7120,
+      "sha256": "a715341d7135ad351ede0c2bffe7d426c68f1ba9698c57139447445fa68504c1",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/README.md",
+      "size": 1833,
+      "sha256": "359d2fdfa8696596dc61d76f3480f033aa9edc8d0ca5cf6ced71710db30c57e2",
+      "classification": "leaf2android-documentation",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/request-sync.ppc.txt",
+      "size": 122042,
+      "sha256": "f96fc87303a9016000b962a4cd2714f9c06043c6a3133bd41023117c184fa20c",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/set-camera-params.ppc.txt",
+      "size": 93832,
+      "sha256": "93427d405b4ccdcd6b2b6240cd457a62882886ba53dc502a5260a0cd8f5fc180",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/set-picture-params.ppc.txt",
+      "size": 27175,
+      "sha256": "61da9e6948ddd5180e973aa90b6dd4442f26d59324aaf115ed1c70bf93810068",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/controls-aptus-classic/shoot-setup-storage.ppc.txt",
+      "size": 8921,
+      "sha256": "479af89aa577e76fae34b5047191121679762d9093f3d2a5a31fb3e56c2fa578",
+      "classification": "leaf2android-static-control-evidence",
+      "version": "4.701",
+      "derived_from": [
+        "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD"
+      ]
+    },
+    {
+      "path": "analysis/CONTROLS.en.md",
+      "size": 10590,
+      "sha256": "86abd8f2bc939cbfdd8d5627395039f85d8f977a7f6aade4842ad09384f165a8",
+      "classification": "leaf2android-static-analysis"
+    },
+    {
+      "path": "analysis/CONTROLS.zh-CN.md",
+      "size": 10240,
+      "sha256": "21eb4f2b4ee9e59d52e7b513e525e9b1d4568066e8941590bc11404248b7a5a8",
+      "classification": "leaf2android-static-analysis"
+    },
+    {
+      "path": "analysis/supplied/ANALYSIS.zh-CN.txt",
+      "size": 13721,
+      "sha256": "0f70b618d86a9e800f8f595fb0b5d4e40e04049995075b1e3c205038e3cf2d0a",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ANALYSIS.zh-CN.txt"
+    },
+    {
+      "path": "analysis/supplied/analyze_firmware.py",
+      "size": 15155,
+      "sha256": "4b10fa64091a18013eb0df97605a3cdcbedae2d61c9ca9e50ce51ae88a5e46d7",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "analyze_firmware.py"
+    },
+    {
+      "path": "analysis/supplied/analyze_ppc.py",
+      "size": 5314,
+      "sha256": "d6c4a0eae583eda96631e78208c600223efcd608a6d4bfabca195092e5997372",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "analyze_ppc.py"
+    },
+    {
+      "path": "analysis/supplied/ce_decompression.json",
+      "size": 11631,
+      "sha256": "06a3c3155431740339c78569e3995cf51487108e31cf4a77a26637aa444b6876",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ce_decompression.json"
+    },
+    {
+      "path": "analysis/supplied/ce_extraction.log",
+      "size": 928,
+      "sha256": "c5a2f1abb49a568dc7b7f0fc9abf913a214c660b3302c86728c6a4c4acd5d14d",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ce_extraction.log"
+    },
+    {
+      "path": "analysis/supplied/ce_inventory.json",
+      "size": 64549,
+      "sha256": "bdd5b7bb2df1a7691730865cdc4d92e0c91125a4fb271e319f516d01b4476dbf",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ce_inventory.json"
+    },
+    {
+      "path": "analysis/supplied/ce_reconstructed/attributes.ini",
+      "size": 2176,
+      "sha256": "ebc8322c529e237c48f0ffa8982db9f48f54c6b890eeb02e5df13465a19c33bd",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ce_reconstructed/attributes.ini"
+    },
+    {
+      "path": "analysis/supplied/ce_reconstructed/fs/Windows/LeafCE.exe",
+      "size": 14135296,
+      "sha256": "8580a221440594108204e7a3e6eb25e0c574ad4176c95854cdb6feb9b1b0fb6f",
+      "classification": "derived-windows-ce-ui-executable-not-flashable",
+      "supplied_analysis_relative_path": "ce_reconstructed/fs/Windows/LeafCE.exe"
+    },
+    {
+      "path": "analysis/supplied/ce_reconstructed/Registry/default.reg",
+      "size": 8740,
+      "sha256": "6c5ca3826354eeff2dc1a1107553d58ce7070cf7b724f81a0a1e7cf45b8bf126",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ce_reconstructed/Registry/default.reg"
+    },
+    {
+      "path": "analysis/supplied/ce_reconstructed/rom_meta.json",
+      "size": 7621,
+      "sha256": "c8bf8c70529f3e6d6d382812a6723eb39b3999f1366a36ebe3cb82937d7897f7",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ce_reconstructed/rom_meta.json"
+    },
+    {
+      "path": "analysis/supplied/ce_verification.json",
+      "size": 29764,
+      "sha256": "d15c35eb69197199e7b5ee9fa23df9754bd46542cd4cd2df02f2ef72f0f13d7a",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "ce_verification.json"
+    },
+    {
+      "path": "analysis/supplied/disassembly/bluetooth_gap_passkey_event.ppc.txt",
+      "size": 2307,
+      "sha256": "e7f1563db4d1418b61b23934f6bda8916b4beaced7692b70a33ec7b6e0ab6801",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/bluetooth_gap_passkey_event.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/bluetooth_stack_setup.ppc.txt",
+      "size": 8660,
+      "sha256": "aeb472ceb811f7004c3bb95346b664e3e3013721872b58b4d89c63109dab2b01",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/bluetooth_stack_setup.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/CEVersion_and_bluetooth_settings.ppc.txt",
+      "size": 13507,
+      "sha256": "02b100580691560eae39e21f17f2fc2fddb1245e143d868a79e63b661e360bf8",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/CEVersion_and_bluetooth_settings.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/entry.ppc.txt",
+      "size": 1694,
+      "sha256": "a00e0cdeb15d3fbd4e5b2ec5bde48d4f9004b7039e4f7a9f0332fc2f8febcf3c",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/entry.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/GetCameraParam_local.ppc.txt",
+      "size": 13720,
+      "sha256": "eb0e91160453ffb310db5c3731260d701ee515229cedf2c2dc846be4a3f8b601",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/GetCameraParam_local.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/GetCameraParam_name_and_adjacent_code.ppc.txt",
+      "size": 13720,
+      "sha256": "eb0e91160453ffb310db5c3731260d701ee515229cedf2c2dc846be4a3f8b601",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/GetCameraParam_name_and_adjacent_code.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/GetImage_attributes_and_transmit.ppc.txt",
+      "size": 38877,
+      "sha256": "5e85c6714d0551db2c348b29928048916116aa6684e4e142777930674571d0b0",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/GetImage_attributes_and_transmit.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/GetImage_local.ppc.txt",
+      "size": 23384,
+      "sha256": "46ab0d381cba4e91eecf78b05a4f7473af919db7c3f2f49b5138bb257eb80ca2",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/GetImage_local.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/PDAInterface_local.ppc.txt",
+      "size": 22594,
+      "sha256": "14716d82d3b46e6463d51500703c41b2a213ada60ed7f2536c3d01882a2f80a4",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/PDAInterface_local.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_0008b2cc.ppc.txt",
+      "size": 1382,
+      "sha256": "fd3903743f26ea8e1169e6f313bb18331aa8905064c5d1511d8b2f9939ca5f0e",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_0008b2cc.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_0009b4e8.ppc.txt",
+      "size": 1366,
+      "sha256": "e6c362ec89483e0cc775d6076167452a8ca8b4cc97b38f0cc2589fa0ad6db803",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_0009b4e8.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_0009b514.ppc.txt",
+      "size": 1313,
+      "sha256": "4c106a29ccbde900c7ec42291d4a4c9d3615108df80e946c0034f90b1bd18a37",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_0009b514.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_000afef8.ppc.txt",
+      "size": 1391,
+      "sha256": "919745049924c8d0f7dc57adef62cb20260903f16c49fb122aabe318e4191a7b",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_000afef8.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_000aff18.ppc.txt",
+      "size": 1367,
+      "sha256": "074db91232db3b61a079eee3be1a34b08c77d4ccbab3bec708f2ce51d0fe3461",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_000aff18.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00358c60.ppc.txt",
+      "size": 1496,
+      "sha256": "b17019e422e1a4f360ba0e3dd5082da70af35961674ae8ad0de459f3eb134193",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00358c60.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00358c6c.ppc.txt",
+      "size": 1523,
+      "sha256": "6c9ec79fa0e1d45a59e4790d713655c8967f55515d8910c6912e72902768659a",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00358c6c.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00358c8c.ppc.txt",
+      "size": 1496,
+      "sha256": "1b0d68bca842ae0a19d6cab5ed39dab418668fd30252ad30b0b57a6344460e94",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00358c8c.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00358ca8.ppc.txt",
+      "size": 1472,
+      "sha256": "13a2f1d67ed7f0c40ff137b41b56a9a16cbbbf58254897ef59d76f21e2a6692b",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00358ca8.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00358cb4.ppc.txt",
+      "size": 1430,
+      "sha256": "8316a63f682c5cafdaa024fb5669c9e7bb8852dabcd686c880bd0cd95ed8217b",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00358cb4.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00359130.ppc.txt",
+      "size": 1606,
+      "sha256": "8857762dd864e739ec0e876f58fde86511d18c4523f4b42f6dd386e6a9ac7383",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00359130.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_0035926c.ppc.txt",
+      "size": 1484,
+      "sha256": "2d7f825218ba6cb476b90a93d55df4c655441b8a1bc7825a5cba22b7e782ef41",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_0035926c.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_0035956c.ppc.txt",
+      "size": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_0035956c.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_003595b0.ppc.txt",
+      "size": 1376,
+      "sha256": "91356603a903bee603e6580bb2a8f49319170ea0222c99108bb7fa4825d43027",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_003595b0.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_003595c0.ppc.txt",
+      "size": 1448,
+      "sha256": "717bda550437d52bdcebea569f559a15dc1cbcfc56e3fc4baff370e386ae1bef",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_003595c0.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00359608.ppc.txt",
+      "size": 1533,
+      "sha256": "ccda40813029803b4cbf932b09b3729ab98ca1d1e3498c81b29f4333b7d303fc",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00359608.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00359618.ppc.txt",
+      "size": 1535,
+      "sha256": "596f121494b9834d5ed7f2d88a192e86a82547e9b0e1fa7d55b3c0bda8fc524d",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00359618.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00359638.ppc.txt",
+      "size": 1469,
+      "sha256": "a9b9aedcf51157b1f6c2973ecef0438be6287983cb5605d7b8886f594c851387",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00359638.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00359648.ppc.txt",
+      "size": 1407,
+      "sha256": "6b57ea028c442ef3a32d0b97d39e1c0e62df3e2a36951829762b8fcc7053b070",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00359648.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_00359698.ppc.txt",
+      "size": 1424,
+      "sha256": "83fa1f897dfeeaf32c4b52f889141589c397621010e09289afe45674946d2164",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_00359698.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/disassembly/xref_003596bc.ppc.txt",
+      "size": 1414,
+      "sha256": "ed3942183ff2710e37f5fe529893050e54f415cb9fef39b3b85daba95eb112bd",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "disassembly/xref_003596bc.ppc.txt"
+    },
+    {
+      "path": "analysis/supplied/duplicate_groups.json",
+      "size": 21119,
+      "sha256": "d8e73d9473e3961d0cf4f6a898c0081dc4cfad60e8e030a61476aafa324dfd86",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "duplicate_groups.json"
+    },
+    {
+      "path": "analysis/supplied/entropy/BootRecovery.UPD.json",
+      "size": 7685,
+      "sha256": "5e80d61bcfcbc0986ef14a15f2df5d730e3be483acc668f47c2a513e9052d256",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "entropy/BootRecovery.UPD.json"
+    },
+    {
+      "path": "analysis/supplied/entropy/FirmWareAptusII.BIN.json",
+      "size": 12270,
+      "sha256": "34bfa5a80fb2c99fa8ab25c2eb04acd444bb44068983a717745d7b5d056c1822",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "entropy/FirmWareAptusII.BIN.json"
+    },
+    {
+      "path": "analysis/supplied/entropy/FirmWareAptusII.UPD.json",
+      "size": 7519,
+      "sha256": "69fcd42a0b9834c32119ed26b12b782f3f722d91e42416f41b73621b9d52e1b0",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "entropy/FirmWareAptusII.UPD.json"
+    },
+    {
+      "path": "analysis/supplied/evidence/BootRecovery.UPD.json",
+      "size": 11967,
+      "sha256": "6b5c37b526c9f5daf012b8d8431cc23806268b16ea0869c1a4a617debd7fdb83",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "evidence/BootRecovery.UPD.json"
+    },
+    {
+      "path": "analysis/supplied/evidence/FirmWareAptusII.BIN.json",
+      "size": 5829,
+      "sha256": "cf1d93112486be8501ab1b09602453b4fcd600985df1f31f3a9a6d180c8e734a",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "evidence/FirmWareAptusII.BIN.json"
+    },
+    {
+      "path": "analysis/supplied/evidence/FirmWareAptusII.UPD.json",
+      "size": 11961,
+      "sha256": "c4f691a78186634f220cd64dc49ed1df4b15c654de292044343bcb1cf33caee4",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "evidence/FirmWareAptusII.UPD.json"
+    },
+    {
+      "path": "analysis/supplied/evidence/LeafCE.reconstructed.json",
+      "size": 5172,
+      "sha256": "0c7b194c267a06240ba673498b6745161a46d53938a6ea076e1a755e0fbf3ce9",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "evidence/LeafCE.reconstructed.json"
+    },
+    {
+      "path": "analysis/supplied/evidence/ppc_string_xrefs.json",
+      "size": 34469,
+      "sha256": "b4c2e4bd222ef549ac55f0ba2b2e5c2508855bba35192a8cbea09f44aaebda8c",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "evidence/ppc_string_xrefs.json"
+    },
+    {
+      "path": "analysis/supplied/extract_resources.py",
+      "size": 2393,
+      "sha256": "d710d48879ec231ec77c6dd759caeccfaa3e1169c2afe62458d5be78ba6f01f1",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "extract_resources.py"
+    },
+    {
+      "path": "analysis/supplied/fpga_inventory.json",
+      "size": 72038,
+      "sha256": "968d0dbb185a6605b38c01a84f68a3af9893278722c5b0f1491e46bbf2814b2e",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "fpga_inventory.json"
+    },
+    {
+      "path": "analysis/supplied/inventory.json",
+      "size": 289418,
+      "sha256": "34abe0a4f259c38a4fb67215e47a5ba14eb14d96a275421374753056c00eeb99",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "inventory.json"
+    },
+    {
+      "path": "analysis/supplied/outputs_manifest.json",
+      "size": 126910,
+      "sha256": "6147b33b0986dc8fb3128e70fd4a4d012e40b949111556b438b15d4f66f51e08",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "outputs_manifest.json"
+    },
+    {
+      "path": "analysis/supplied/PROTOCOL.zh-CN.txt",
+      "size": 5401,
+      "sha256": "ce26bf522de2cd26099da8bd1fa5a4c92cdd185ee7d104f2cea22d2865935e30",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "PROTOCOL.zh-CN.txt"
+    },
+    {
+      "path": "analysis/supplied/reconstruct_ce.py",
+      "size": 3033,
+      "sha256": "f41fb294570bcb4fd55d8b3d49f454b14c8c5f1e819193dd1714cff5a4a58955",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "reconstruct_ce.py"
+    },
+    {
+      "path": "analysis/supplied/resources_manifest.json",
+      "size": 201071,
+      "sha256": "fa6c6a0cea2e1f95be917bc8f14eb78ca0a39c9fa8b5bc8ed08d7a632faf664f",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "resources_manifest.json"
+    },
+    {
+      "path": "analysis/supplied/strings/BootRecovery.UPD.txt",
+      "size": 744180,
+      "sha256": "4bc912ece752a1a584e47cf31f1575686deddee3b7a7ba3072aa971fa3ad3c97",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "strings/BootRecovery.UPD.txt"
+    },
+    {
+      "path": "analysis/supplied/strings/FirmWareAptusII.BIN.txt",
+      "size": 1222293,
+      "sha256": "3d21a27ed38916733d32fa40197452db3c8708e9c03cbb172e4550bd967bfb29",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "strings/FirmWareAptusII.BIN.txt"
+    },
+    {
+      "path": "analysis/supplied/strings/FirmWareAptusII.UPD.txt",
+      "size": 744359,
+      "sha256": "715808e820110bfa62b405f83923483ca5c9d97022da6afd3d5b2b56e75c3407",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "strings/FirmWareAptusII.UPD.txt"
+    },
+    {
+      "path": "analysis/supplied/strings/LeafCE.reconstructed.txt",
+      "size": 1423356,
+      "sha256": "10fce5e131250e43fb15cfb08ffda04b125e638e05760c12d3216d50ac855b88",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "strings/LeafCE.reconstructed.txt"
+    },
+    {
+      "path": "analysis/supplied/third-party-tools.json",
+      "size": 1553,
+      "sha256": "d573f8fcc2e50624ce050b8e4e36059919b6c3934d866193272eaace329025ac",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "third-party-tools.json"
+    },
+    {
+      "path": "analysis/supplied/validation.json",
+      "size": 470,
+      "sha256": "d5ab32d90990558feb347995031740975a1740d840094b2c9295c735aad97f5d",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "validation.json"
+    },
+    {
+      "path": "analysis/supplied/verify_ce.py",
+      "size": 4810,
+      "sha256": "5b7e3c9bc0d6bbcb9e16128cb7127434406a87d5cf2e69fa02b26ff0a4c01e95",
+      "classification": "supplied-static-analysis-or-reconstruction",
+      "supplied_analysis_relative_path": "verify_ce.py"
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/BootRecovery.UPD",
+      "size": 6113344,
+      "sha256": "4f71ebe188f8dd301dc0afcaa52e059296f29f851114ea7237c41df23bada535",
+      "classification": "original-recovery-image",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "BootRecovery.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "BootRecovery.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "BootRecovery.UPD"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/Firmware.config",
+      "size": 74,
+      "sha256": "e989a960fb59cbec5cee54147612085477bc747a93028e58253b46be7d5329ed",
+      "classification": "original-manufacturer-configuration",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "Firmware.config"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "Firmware.config"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "Firmware.config"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareAptus.BIN",
+      "size": 7730663,
+      "sha256": "4a0d32186d95bd0aaf0a741d161b98712e30beac595d7d5d10dabffaa86397c0",
+      "classification": "original-windows-ce-load-record-image",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAptus.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAptus.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAptus.BIN"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareAptus.BIN"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD",
+      "size": 4235648,
+      "sha256": "a2287716927a18c9bbd7834be327f592289f8a48aa2859b4d252b813cc82741a",
+      "classification": "original-main-firmware-image",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmwareAptus.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmwareAptusS.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmwareAptus.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmwareAptusS.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmwareAptus.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmwareAptusS.UPD"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmwareAptus.UPD"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmwareAptusS.UPD"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.BIN",
+      "size": 9810419,
+      "sha256": "2be7ce63460de2908c81c48d5bd26cdec834b9b4d7ffd2a33928160f2cd83549",
+      "classification": "original-windows-ce-load-record-image",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAptusII.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAFi.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAFiLegacy.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareMamiyaDM.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAptusII.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAFi.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAFiLegacy.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareMamiyaDM.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAptusII.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAFi.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAFiLegacy.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareMamiyaDM.BIN"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "classification": "original-main-firmware-image",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAptusII.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAptusII4056.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAptusII80.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareMamiyaDM.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareMamiyaDM4056.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmwareAFi.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmwareAFiLegacy.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAptusII.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAptusII4056.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAptusII80.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareMamiyaDM.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareMamiyaDM4056.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmwareAFi.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmwareAFiLegacy.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAptusII.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAptusII4056.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAptusII80.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareMamiyaDM.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareMamiyaDM4056.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmwareAFi.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmwareAFiLegacy.UPD"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareAptusLegacy.BIN",
+      "size": 7733491,
+      "sha256": "0e702ce6dfefd40808a4aca12211ede761b3a94be6e6359e353b993b6bddcd3c",
+      "classification": "original-windows-ce-load-record-image",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareAptusLegacy.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareAptusLegacy.BIN"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareAptusLegacy.BIN"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmwareAptusLegacy.UPD",
+      "size": 4234728,
+      "sha256": "71b338044ef61b39ee0ef356bc8508da42bbbff6758fba88ccf47cdb5e048ed8",
+      "classification": "original-main-firmware-image",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmwareAptusLegacy.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmwareAptusSLegacy.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmwareAptusLegacy.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmwareAptusSLegacy.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmwareAptusLegacy.UPD"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmwareAptusSLegacy.UPD"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Chipset.ubf",
+      "size": 988165,
+      "sha256": "7d2f0510f9794ac7bb649286852c00fc6a57bfcd925316cfbfb5d671199ef8b3",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Chipset.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Chipset.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Chipset.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Chipset.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Chipset2.ubf",
+      "size": 2119274,
+      "sha256": "91846d6fc4b55b6341a1c765fe3460d788ed40edf58f9633e824e3792dc1f8e2",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Chipset2.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Chipset2.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Chipset2.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Chipset2.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Chipset2_AptusII40.ubf",
+      "size": 2119274,
+      "sha256": "d7859893d989f19cf796f8899f691b22f60efa9de57a7904f8d80383b8db5d23",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII40.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Chipset2_AptusII56_4outputs.ubf",
+      "size": 2119274,
+      "sha256": "b612195d930c79da477e1522041d700b5253f0592bb4f495ef6fb02ab6fb583c",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII56_4outputs.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII56_4outputs.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII56_4outputs.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Chipset2_AptusII80.ubf",
+      "size": 2119274,
+      "sha256": "8a4170f881aa8e6268d65186340e2f23dd0a6e23a691e5bb2882d2de208c4bf7",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII80.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Chipset2_AptusS.ubf",
+      "size": 2119274,
+      "sha256": "e095992ada0225431d04020ce38d63432058f1c1c6bb1114d70344b498699e11",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusS.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusS.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusS.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusS.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/ChipsetDecompress.ubf",
+      "size": 988165,
+      "sha256": "7640c63e5fb6994ecdc1ae5a3cf3319788d99fa945234c70a35bbae8c0288588",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/ChipsetDecompress.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/ChipsetDecompress.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/ChipsetDecompress.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/ChipsetDecompress.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/ContaxStill22.ubf",
+      "size": 98319,
+      "sha256": "11aa0af40f3b2db0f43db0f9b0f0ffab6304ade93aa03d59e11ad4d43422ed09",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/ContaxStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/ContaxStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/ContaxStill22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/ContaxStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/ContaxStill75.ubf",
+      "size": 98319,
+      "sha256": "462393eececa2c9724b38716d92001835077ed5b3fcd9286c44b08ec4b7a6f96",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/ContaxStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/ContaxStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/ContaxStill75.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/ContaxStill75.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/H1Still22.ubf",
+      "size": 98319,
+      "sha256": "1a4dba85f81af7048237cc29afa293b00b20f81b5631c3f94b878a2c1a9b4670",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/H1Still22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/H1Still22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/H1Still22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/H1Still22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/H1Still75.ubf",
+      "size": 98319,
+      "sha256": "be36131cb1cbbdfb285d99d7fd1473eb0e0a7903dd9ced07c92e864b6c951ef1",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/H1Still75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/H1Still75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/H1Still75.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/H1Still75.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/HasselbladStill22.ubf",
+      "size": 98319,
+      "sha256": "7af70b92602f51e16977132de0e70dc811d49b103167559dfa92187562ad27b0",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/HasselbladStill75.ubf",
+      "size": 98319,
+      "sha256": "d79aaad55f7749f5a1c91a2e3c766e000ea4b7a4df97a33bc4d3c4d23cb2d318",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill75.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/HasselbladStill75.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/LargeFormatStill22.ubf",
+      "size": 98319,
+      "sha256": "e4d587991c21deca22495d3683b4292fa017538053c49a2b9767b5d82735e17c",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/LargeFormatStill75.ubf",
+      "size": 98319,
+      "sha256": "a29e6d5011cfcd81720c9aef82a2cd46286258b7fe97081bb7e9662b4f4af02c",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill75.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/LargeFormatStill75.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MamiyaStill22.ubf",
+      "size": 98319,
+      "sha256": "174077bff825dd36c000530e9e6341c7a3d98e13ca07f0474fa486ad61a8ffd8",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MamiyaStill75.ubf",
+      "size": 98319,
+      "sha256": "d54afd2979f2893ada36346b1966418021c953cae71fe2cf0925b7269fb0c2fb",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill75.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MamiyaStill75.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFi_IILargeFormatStill33.ubf",
+      "size": 93634,
+      "sha256": "e55f9b73ce3e846cdd127b5f0e23a160c21156d150acc35e2ac06bc24ee6d7a0",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IILargeFormatStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IILargeFormatStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IILargeFormatStill33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IILargeFormatStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFi_IIStill33.ubf",
+      "size": 93634,
+      "sha256": "b02e7e4df178a518ae2ed8842f2aac8f489436ef2537d99e7fee1be56b76f1cc",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIStill33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFi_IIVideo33.ubf",
+      "size": 95747,
+      "sha256": "09f5dfafb755c9cac9959efc1c966d451e19dea1dcc3d1e3e701106e051a6d7c",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIVideo33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFi_IIVideo33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiLargeFormatStill56.ubf",
+      "size": 139612,
+      "sha256": "d646306ea93473a57e01c5ff8ca1f4643ce7514c4c3798a8377df6dd7d200d39",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiLargeFormatStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiLargeFormatStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiLargeFormatStill56.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiLargeFormatStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiStill22.ubf",
+      "size": 96151,
+      "sha256": "67dedb3b4f8ab3c5290f4a11e27425e26b157288865307e979b4ceb00c851499",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiStill28.ubf",
+      "size": 93827,
+      "sha256": "3f55abd87234a58c5f7d0124a23dbdf3ac2bc66a10487870022bd0e2f6760bcb",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill28.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiStill33.ubf",
+      "size": 96565,
+      "sha256": "2bb1a0eeb5bb83308891256b11c88eab703d4cffe8b1ceaca5fa3ec95f14bef4",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiStill56.ubf",
+      "size": 139612,
+      "sha256": "8dcb3fc8d1abb92268af83239c1fe637bde5aa2d53082d73b888d95fc87436d4",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill56.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiVideo22.ubf",
+      "size": 99951,
+      "sha256": "60677baee2e6956d95bd352f1be4b61cc2f46a63f80c3da2e780ff456e810d23",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiVideo28.ubf",
+      "size": 95747,
+      "sha256": "9e98d3df43e4154d9ae5adaf3b1a0c6352c3a8e4558409c6345fd3d3b8eacf1d",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo28.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAFiVideo33.ubf",
+      "size": 95747,
+      "sha256": "19a6c9c2dd35d89239030a9db417b8c1d2e68f864403c59ce63364e7d8320508",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAFiVideo33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAptus_IIVideo22.ubf",
+      "size": 96914,
+      "sha256": "c2047af8c2f7ffe10e21e5b60875b413cf5663fb2e60b28032f3f5078738b4a4",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAptus_IIVideo28.ubf",
+      "size": 96914,
+      "sha256": "c6321ed2087b79decdfde4a8555a92b12d39d372dbce67b9c33a2a4d492540b7",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIAptus_IIVideo33.ubf",
+      "size": 96914,
+      "sha256": "cff21bac5df4169e2ebb76850dcd71f02ae82a3b0a79cd635bd8971f7010bb2f",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIContaxStill22.ubf",
+      "size": 96611,
+      "sha256": "c0d7c2e7e6ce32531da6c8326d586bcd24f2ef6948e1684999cc691b6af2ea51",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIContaxStill33.ubf",
+      "size": 96406,
+      "sha256": "4db3a626ab9271cc791d3fb2b1f29adf6c2402f5a31cab4302013aaad7c6efe0",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIContaxStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill22.ubf",
+      "size": 95292,
+      "sha256": "bda3f33ed52e8b59b376ac5993109c83c6e8f64b88593ef4c5ea518048d2442d",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill28.ubf",
+      "size": 96618,
+      "sha256": "7660dc52909f9cf353b051f3593f86aea0105095c7b52159a787a321d7fd31ec",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill28.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill31K.ubf",
+      "size": 124597,
+      "sha256": "5a344e7247853ae3a4535bcd9d43b3c42b42ccbb2bdf7f11f79adf710f0242cc",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill31K.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill31K.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill31K.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill31K.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill33.ubf",
+      "size": 95190,
+      "sha256": "03c8b016b42d79d7865432326b68028f1e0bf9b3d099d78884c4b3a79d8361ac",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill40.ubf",
+      "size": 139852,
+      "sha256": "e92d8bbbca79abfe801187b4004d57c2304a27c8188211f906f15b0299316320",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill40.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill56.ubf",
+      "size": 142592,
+      "sha256": "1fb4b5ba19dc1c69415f5e97f535a7d25bae53ec366bdb1e3eb4a3e16e440909",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill56R.ubf",
+      "size": 141521,
+      "sha256": "a416a570a676044b6a5ff5e62d696a119d501c1dd9dd631d932241723bf88003",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill56R.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill56R.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill56R.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIILargeFormatStill80.ubf",
+      "size": 128600,
+      "sha256": "68a98fc1e97babbcd9f6b5fd617fbc1a4ed2182ddfc372dd74a482d11ac88ebc",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill80.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIMamiyaAptus_IIStill22.ubf",
+      "size": 95984,
+      "sha256": "0866b30a36ddee36341a73294c93336a9c33d04af0fe44e940edee7265a8b4a1",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIMamiyaAptus_IIStill28.ubf",
+      "size": 95984,
+      "sha256": "9ae0bc933306372dfc5d35772942333823345e1d468fea5d93e945bf4e263a7a",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIMamiyaAptus_IIStill33.ubf",
+      "size": 95984,
+      "sha256": "00396f9621918cb123d57df5c07f144cc082a5b3f333ec49f2b9784c095461d4",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIMamiyaStill22.ubf",
+      "size": 95292,
+      "sha256": "e7409c03a6721f7eb74b9461c8fcd512712ecb228cd3efd02c1b396a862239ae",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIMamiyaStill28.ubf",
+      "size": 96618,
+      "sha256": "03c6a6961b704919fecb79aa8d6af90e8efb0138557cae8074f940c8693e7c4f",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIMamiyaStill33.ubf",
+      "size": 95190,
+      "sha256": "06b5cb0859715d622ec1ff2f4dffb4490f8c3d13c72f2f008454ecd7b885fd9a",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIMamiyaStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill22.ubf",
+      "size": 95292,
+      "sha256": "a0749664fd76ed4f112ea2243673b26e47fe26981a761a07231db6ae07f6c197",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill28.ubf",
+      "size": 96618,
+      "sha256": "f52d5639ee1cc0467ec424fab5af52d1b3a0cef446da4c96b0ceafb53ab0992c",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill31K.ubf",
+      "size": 124597,
+      "sha256": "1675e2d0c68bf3bd77cf33f1a58d12f3a39c0048fabf1e149fecd8689e3104e1",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill31K.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill31K.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill31K.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill31K.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill33.ubf",
+      "size": 95190,
+      "sha256": "1c25d13fb0a1f6c269266ff1d9268f85615d28485796f15d87203068a594c23b",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill40.ubf",
+      "size": 139852,
+      "sha256": "258e213519ba87397fb56a9c326a71d19ad7793f0849aa54f1b4f295ffca9967",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill40.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill56.ubf",
+      "size": 142592,
+      "sha256": "23b3a0ec83326a9706b9e586d25d6e568bb666c095221e47f23e898b4ee399dc",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill56R.ubf",
+      "size": 141521,
+      "sha256": "9ad5c3e9d04587d7bb5ffe1f837a95df6431bddf088b5d63c27de0c4d134ddad",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill56R.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill56R.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill56R.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIStill80.ubf",
+      "size": 128600,
+      "sha256": "e6973cd216907a2e61844020c9b3aeadc6bacf9dcd544e98ddd4d30d3d2bda2e",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill80.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo22.ubf",
+      "size": 99951,
+      "sha256": "297e943967a6d5f10adc4ecb7ed842c201ac72d1705246542c83eaf6584071ca",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo28.ubf",
+      "size": 100442,
+      "sha256": "5a1ae55b32ea188007adcdc766323de08760bf9bc5f91ea668e3d38a6640bf36",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo28.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo28.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo31K.ubf",
+      "size": 100442,
+      "sha256": "32341279552272bac85822e86a282d4f52b456b8e6370e9464165e21e939cca8",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo31K.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo31K.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo31K.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo31K.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo33.ubf",
+      "size": 100442,
+      "sha256": "a08a171ee044b9cd34f24edba7c005259815333328581f8530b622f9dfbecc11",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo33.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo33.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo40.ubf",
+      "size": 134456,
+      "sha256": "0aaf6f067f23e40a8f62e82e8f099958bb6a63305df76b7e511b6b4b81cdd10a",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo40.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo40.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo56.ubf",
+      "size": 133499,
+      "sha256": "292edf35afc28e89a4bb803ea6147cb27d60f763ccc73505828f4405e7b7405a",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo56.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo56R.ubf",
+      "size": 131419,
+      "sha256": "5c84af87d97a82d90e2fc932eee649dee7f6680a2c9987565320ad7f428b4185",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo56R.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo56R.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo56R.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/MarkIIVideo80.ubf",
+      "size": 134534,
+      "sha256": "4abe243b94a37ef0226e412487d67ad85772bc4c48317a0ecce5f0e6d3ee14c3",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo80.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo80.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Video22.ubf",
+      "size": 98319,
+      "sha256": "425790b2bafc30bd95102c97912c938695ecf32a7329f2a38893ac0185f8fb88",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Video22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Video22.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Video22.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Video22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/CaptureOne.Mac.7.1.6/FirmWareRBFs/Video75.ubf",
+      "size": 98319,
+      "sha256": "ca8baab33c7555361b44ce913fb419d599df840d70515ae3de95121bf099c5e7",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "CaptureOne.Mac.7.1.6",
+          "original_relative_path": "FirmWareRBFs/Video75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Mac.7.1.4",
+          "original_relative_path": "FirmWareRBFs/Video75.ubf"
+        },
+        {
+          "source_set": "CaptureOne.Win.11.3.2",
+          "original_relative_path": "FirmWareRBFs/Video75.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Video75.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmwareAFi.UPD",
+      "size": 5607856,
+      "sha256": "d8bef47d455e1d6f55fafb17e3ec58492bbb46ccdb8015fc2e9e5d6b2abf3e68",
+      "classification": "original-main-firmware-image",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmwareAFi.UPD"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareAptusII.BIN",
+      "size": 7752771,
+      "sha256": "007a146bcf70f81642e7a0f2cc3f2b44b0c0dd38a53154b61d6f953b53336edc",
+      "classification": "original-windows-ce-load-record-image",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareAptusII.BIN"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/AFiII_10_CcdBoardVers_A/MarkIILargeFormatStill56.ubf",
+      "size": 139313,
+      "sha256": "58ae7ef5eb0e5c745f3b93980747a2701ad01905f3aebb4de618db3413e1e0e7",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/AFiII_10_CcdBoardVers_A/MarkIILargeFormatStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/AFiII_10_CcdBoardVers_A/MarkIIStill56.ubf",
+      "size": 139313,
+      "sha256": "dd905d85f52bd88ac38a8f9049bee54901bf089e185498a100314f33b114ac49",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/AFiII_10_CcdBoardVers_A/MarkIIStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/AFiII_10_CcdBoardVers_A/MarkIIVideo56.ubf",
+      "size": 131556,
+      "sha256": "6c070b1b21327ed32103facb2c91df099c859e12ce25328ccff80effd9d59580",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/AFiII_10_CcdBoardVers_A/MarkIIVideo56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/Chipset2_2outputs/Chipset2_AptusII56_2outputs.ubf",
+      "size": 2119274,
+      "sha256": "946efbb28072f3bb31aecddb9d1b03a874669ff97eaf8d9f7935dd7448b604eb",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Chipset2_2outputs/Chipset2_AptusII56_2outputs.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/Chipset2_4outputs/Chipset2_AptusII56_4outputs.ubf",
+      "size": 2119274,
+      "sha256": "134abf41484421e130f5482a6e3e618291f4e9448c0c510b25928e393ec9a8ed",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Chipset2_4outputs/Chipset2_AptusII56_4outputs.ubf"
+        },
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/Chipset2_AptusII56_4outputs.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIAptus_IIVideo22.ubf",
+      "size": 99951,
+      "sha256": "05aa6591ea72984888e681c7d500d92cd032454abcd5b0a3b669bc23ccf5a9a4",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIAptus_IIVideo28.ubf",
+      "size": 95747,
+      "sha256": "6ad6edf488e79fa314c9bfd2d8b6bb1c2834338562abba5b467b97add21e405b",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIAptus_IIVideo33.ubf",
+      "size": 95747,
+      "sha256": "2adcf9da7d1f7fe7c6e8d43460eb96199eab4de4e08e67959a4c9c21f4c96d0a",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIAptus_IIVideo33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIILargeFormatStill56.ubf",
+      "size": 140833,
+      "sha256": "a9ba999133340676bc0b58883147b3ad0026fe1d400b38205c791ce2492b803d",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIILargeFormatStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIStill22.ubf",
+      "size": 95292,
+      "sha256": "38e27915d0917d5b5773038b42059704ea662bb45ceb4106acb6d4a3bda77ca8",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill22.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIStill28.ubf",
+      "size": 96618,
+      "sha256": "1bb1885ba8322d8e7532d37917790407cd3e5d3880a1d763fc3e587a57c0ba32",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill28.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIStill33.ubf",
+      "size": 95190,
+      "sha256": "a1d1c9ca7344315f6f9865e49ae39594082c62c67b45ce8fc9372f0b94bae897",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill33.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIStill56.ubf",
+      "size": 140833,
+      "sha256": "56e6d17de325f71965ea09711878e4acbb22b23d3f9eab0f1f1ec41bf0c76f55",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIStill56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "originals/LeafCapture.Win.11.2.9/FirmWareRBFs/MarkIIVideo56.ubf",
+      "size": 132027,
+      "sha256": "0c5905d10c7d58a6a7c8d36fc15e64098583811567cd9030e5c6dbdf1f1474bd",
+      "classification": "original-board-fpga-payload",
+      "original_sources": [
+        {
+          "source_set": "LeafCapture.Win.11.2.9",
+          "original_relative_path": "FirmWareRBFs/MarkIIVideo56.ubf"
+        }
+      ]
+    },
+    {
+      "path": "provenance/analysis-selection.json",
+      "size": 249839,
+      "sha256": "ccc4390e8d1aaf188627a6f96d201afc2cfc0b2e5158cf7e0bcac2937f3e5b0f",
+      "classification": "provenance-and-source-alias-manifest"
+    },
+    {
+      "path": "provenance/CaptureOne.Mac.7.1.4-manifest.json",
+      "size": 16166,
+      "sha256": "78225e7c6dddb15454e2d0d8986cbe78ec0a2c64a567c5c09dd0566240e4df9f",
+      "classification": "provenance-and-source-alias-manifest"
+    },
+    {
+      "path": "provenance/CaptureOne.Mac.7.1.6-manifest.json",
+      "size": 15845,
+      "sha256": "fe58bc25c0b3d283a109e5c0f5ce424729d43a070db02abfbde8d3de82059379",
+      "classification": "provenance-and-source-alias-manifest"
+    },
+    {
+      "path": "provenance/CaptureOne.Win.11.3.2-manifest.json",
+      "size": 15859,
+      "sha256": "0b4d03ef717dde17bc3db321df6242cd4e1abbb52c0a2660d4fc2790418af220",
+      "classification": "provenance-and-source-alias-manifest"
+    },
+    {
+      "path": "provenance/LeafCapture.Win.11.2.9-manifest.json",
+      "size": 26678,
+      "sha256": "5f71cce24561d47c58e82f57f113c15a5b0c264fd0dfe9bf8d80b1ed76da8ae3",
+      "classification": "provenance-and-source-alias-manifest"
+    },
+    {
+      "path": "provenance/original-README.txt",
+      "size": 1838,
+      "sha256": "78d4b2935170f3dfe96e60f7e3eb4a124006968f8f04a1ddfef9b69c1c124173",
+      "classification": "provenance-and-source-alias-manifest"
+    },
+    {
+      "path": "provenance/source-aliases.json",
+      "size": 187920,
+      "sha256": "3eaa5cd76eac313677e6c9937800fbb06e40ee2fe0c4b17205c337c75f059ebc",
+      "classification": "provenance-and-source-alias-manifest"
+    },
+    {
+      "path": "README.en.md",
+      "size": 10407,
+      "sha256": "f49fd8a4e630629b73b4ec4b049ff623d1aa515588274df6b8fc66372f643220",
+      "classification": "leaf2android-documentation"
+    },
+    {
+      "path": "README.md",
+      "size": 9750,
+      "sha256": "7bc6b4bece55bc8aba068186b1b1f5511eeb48307b2d147286002264d97ceab1",
+      "classification": "leaf2android-documentation"
+    },
+    {
+      "path": "tools/build_inventory.py",
+      "size": 5205,
+      "sha256": "8e0a75a1ad016bfe1f9febd8b479843862226462cae76e9209f325e3d9b27ef7",
+      "classification": "leaf2android-reproduction-tool"
+    },
+    {
+      "path": "tools/extract_control_evidence.py",
+      "size": 6458,
+      "sha256": "75f8b35dcd8843454527053a6f0062a735ec58b900e89a77ca43437d292eeba4",
+      "classification": "leaf2android-reproduction-tool"
+    },
+    {
+      "path": "tools/import_sources.py",
+      "size": 8038,
+      "sha256": "c38dee53a8f261fd7bb0063c0bfb397daa368bc4d88f195f94731db9156e7065",
+      "classification": "leaf2android-reproduction-tool"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "offset": 1258540,
+    "encoding": "utf-16le",
+    "text": "FileCommand"
+  },
+  {
+    "offset": 1259624,
+    "encoding": "utf-16le",
+    "text": "CurrentTime"
+  },
+  {
+    "offset": 1260272,
+    "encoding": "utf-16le",
+    "text": "PictureTaken"
+  },
+  {
+    "offset": 1268088,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"qformat\" Subject=\""
+  },
+  {
+    "offset": 1268184,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"recovery\" Subject=\""
+  },
+  {
+    "offset": 1268520,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"del\" Subject=\""
+  },
+  {
+    "offset": 1269268,
+    "encoding": "utf-16le",
+    "text": "^<RequestSync />"
+  },
+  {
+    "offset": 1269304,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"CurrentTime\" />"
+  },
+  {
+    "offset": 1269400,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"dir\" Subject=\""
+  },
+  {
+    "offset": 1269504,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />"
+  },
+  {
+    "offset": 1270704,
+    "encoding": "utf-16le",
+    "text": "bluetoothsupport"
+  },
+  {
+    "offset": 1271464,
+    "encoding": "utf-16le",
+    "text": "^<GetImage file_name=\""
+  },
+  {
+    "offset": 1271604,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam CurrentTime=\""
+  },
+  {
+    "offset": 1272428,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam "
+  },
+  {
+    "offset": 1272680,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"move\" Subject=\""
+  },
+  {
+    "offset": 1272792,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"copy\" Subject=\""
+  },
+  {
+    "offset": 1272904,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+  },
+  {
+    "offset": 1273040,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"rename\" Subject=\""
+  },
+  {
+    "offset": 1273208,
+    "encoding": "utf-16le",
+    "text": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+  },
+  {
+    "offset": 1273320,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"Histogram_scale\" />"
+  },
+  {
+    "offset": 1273424,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"exp_left\" />"
+  },
+  {
+    "offset": 1273512,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"CameraOrientation\" />"
+  },
+  {
+    "offset": 1273680,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"battery_percent\" />"
+  },
+  {
+    "offset": 1273804,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam ManualLens=\""
+  },
+  {
+    "offset": 1273904,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam BluetoothStatus=\""
+  },
+  {
+    "offset": 1274100,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam Brightness=\""
+  },
+  {
+    "offset": 1274208,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam PowerSource=\""
+  },
+  {
+    "offset": 1274296,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam EnableTakenPicture=\""
+  },
+  {
+    "offset": 1274500,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam CEVersion=\""
+  },
+  {
+    "offset": 1274888,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam NewPinCode=\""
+  },
+  {
+    "offset": 1274968,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"TotalFrames\" />"
+  },
+  {
+    "offset": 1275112,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam ResetCounter=\"yes\" />"
+  },
+  {
+    "offset": 1275216,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />"
+  },
+  {
+    "offset": 1275568,
+    "encoding": "utf-16le",
+    "text": "^<SetCameraParam UserGain=\""
+  },
+  {
+    "offset": 1275648,
+    "encoding": "utf-16le",
+    "text": "^<GetCameraParam GetParamList=\"Gain\" />"
+  },
+  {
+    "offset": 1312524,
+    "encoding": "utf-16le",
+    "text": "BluetoothEnabled"
+  },
+  {
+    "offset": 1337734,
+    "encoding": "utf-16le",
+    "text": " Bluetooth."
+  },
+  {
+    "offset": 1368936,
+    "encoding": "utf-16le",
+    "text": "Konnte Bluetooth-Kommunikation zu initialisieren."
+  },
+  {
+    "offset": 1385442,
+    "encoding": "utf-16le",
+    "text": "chec d'initialisation de la communication Bluetooth."
+  },
+  {
+    "offset": 1402074,
+    "encoding": "utf-16le",
+    "text": "n Bluetooth."
+  },
+  {
+    "offset": 1416784,
+    "encoding": "utf-16le",
+    "text": "Failed to initialize Bluetooth communication."
+  },
+  {
+    "offset": 1424564,
+    "encoding": "utf-16le",
+    "text": "Bluetooth"
+  },
+  {
+    "offset": 1424612,
+    "encoding": "utf-16le",
+    "text": "Bluetooth"
+  },
+  {
+    "offset": 1454164,
+    "encoding": "utf-16le",
+    "text": "MaximizeImageOnPictureTaken"
+  },
+  {
+    "offset": 1454220,
+    "encoding": "utf-16le",
+    "text": "ClearOverlaysOnPictureTaken"
+  }
+]

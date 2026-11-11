@@ -1,0 +1,28 @@
+0035924c [file 002e5374] mr        r26, r27
+00359250 [file 002e5378] lbz       r5, 1(r26)
+00359254 [file 002e537c] lbz       r6, 2(r26)
+00359258 [file 002e5380] lbz       r7, 3(r26)
+0035925c [file 002e5384] lbz       r8, 4(r26)
+00359260 [file 002e5388] lbz       r9, 5(r26)
+00359264 [file 002e538c] lbz       r4, 0(r26)
+00359268 [file 002e5390] lis       r3, 0x36
+0035926c [file 002e5394] addi      r3, r3, -0x5df0 ; str@0x35a210 'GAP:  Request Of Blootooth passkey Indication from %02x:%02x:%02x:%02x:%02x:%02x.\n'
+00359270 [file 002e5398] bl        0x91fd8
+00359274 [file 002e539c] addi      r3, r1, 0x54
+00359278 [file 002e53a0] bl        0x364764
+0035927c [file 002e53a4] addi      r11, r1, 0x4c
+00359280 [file 002e53a8] mr        r12, r26
+00359284 [file 002e53ac] lswi      r7, r12, 6
+00359288 [file 002e53b0] stswi     r7, r11, 6
+0035928c [file 002e53b4] addi      r3, r1, 0x54
+00359290 [file 002e53b8] bl        0x444424
+00359294 [file 002e53bc] clrlwi    r3, r3, 0x18
+00359298 [file 002e53c0] addi      r4, r1, 0x54
+0035929c [file 002e53c4] addi      r5, r1, 0x4c
+003592a0 [file 002e53c8] bl        0x35c580
+003592a4 [file 002e53cc] mr        r3, r27
+003592a8 [file 002e53d0] bl        0x35b2a4
+003592ac [file 002e53d4] b         0x3594c4
+003592b0 [file 002e53d8] lis       r3, 0x36
+003592b4 [file 002e53dc] addi      r3, r3, -0x5d9c ; str@0x35a264 'GAP:  Set Device Class Response. Status = %d.\n'
+003592b8 [file 002e53e0] clrlwi    r4, r29, 0x10

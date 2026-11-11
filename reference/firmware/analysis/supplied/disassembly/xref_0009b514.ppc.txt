@@ -1,0 +1,28 @@
+0009b4f4 [file 0002761c] b         0x9b52c
+0009b4f8 [file 00027620] addi      r3, r31, 0x1d02
+0009b4fc [file 00027624] lis       r4, 0x46
+0009b500 [file 00027628] addi      r4, r4, -0x68ec
+0009b504 [file 0002762c] bl        0x444540
+0009b508 [file 00027630] cmpwi     r3, 0
+0009b50c [file 00027634] bne       0x9b524
+0009b510 [file 00027638] lis       r3, 0x46
+0009b514 [file 0002763c] addi      r3, r3, -0x68e8 ; str@0x459718 '\n Switch BlueTooth Off'
+0009b518 [file 00027640] bl        0x91fd8
+0009b51c [file 00027644] li        r31, 0
+0009b520 [file 00027648] b         0x9b52c
+0009b524 [file 0002764c] li        r3, 0
+0009b528 [file 00027650] b         0x9b544
+0009b52c [file 00027654] addi      r3, r30, 0
+0009b530 [file 00027658] li        r4, 1
+0009b534 [file 0002765c] addi      r5, r31, 0
+0009b538 [file 00027660] bl        0x103ed8
+0009b53c [file 00027664] addi      r30, r3, 0
+0009b540 [file 00027668] addi      r3, r30, 0
+0009b544 [file 0002766c] lwz       r30, 8(r1)
+0009b548 [file 00027670] lwz       r31, 0xc(r1)
+0009b54c [file 00027674] lwz       r0, 0x14(r1)
+0009b550 [file 00027678] mtlr      r0
+0009b554 [file 0002767c] addi      r1, r1, 0x10
+0009b558 [file 00027680] blr       
+0009b55c [file 00027684] stwu      r1, -0x10(r1)
+0009b560 [file 00027688] mflr      r0

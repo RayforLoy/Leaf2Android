@@ -19,7 +19,7 @@ Original media, extracted components and static analysis live under `reference/`
 | Inventory and hashes | `reference/inventory.json` |
 | Back-firmware status | `reference/firmware/README.md` |
 
-No image confirmed as actual digital-back firmware has been found. Windows CE client EXEs / DLLs in a CAB are not back firmware. Original names and bytes remain unchanged; hashes identify inputs but are not manufacturer signature authentication.
+On 2026-11-11 the real firmware supplied from `D:\leaf` was included: 310 source entries deduplicated into 89 original files, comprising main and recovery UPDs, CE BINs, FPGA UBFs and configuration, with core reconstruction and static analysis. See the [firmware provenance and inventory](../reference/firmware/README.en.md). WiView client EXEs / DLLs are classified separately. Hashes identify original bytes, not manufacturer signature authentication. No vendor program was executed and no back was flashed.
 
 Version 1.0.2 came from a community Leaf Capture 11 disc backup on Internet Archive; the user supplied 1.0.3. Historical acquisition records keep their former paths. The source lock and inventory specify current locations. See the bilingual reference guide for provenance.
 

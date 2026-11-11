@@ -2,7 +2,9 @@
 
 [简体中文](protocol.md) · [Project home](../README.en.md) · [Reproduction](research.en.md)
 
-Status: static code provides concrete evidence, but there is no verified capture from the target back. The complete real session protocol is not confirmed. UI localization in 0.2.0 does not expand protocol support.
+Status: static code provides concrete evidence; complete target-back communication captures remain unavailable. On 2026-11-11 the user reported successful connection and photo reading on Valeo 22Wi and Aptus 22, without new-control write validation or detailed firmware/phone information.
+
+Version 0.3.0 cross-checks the classic shared 4.701 firmware containing an Aptus 22 model table, independently of the newer 5.041 shared implementation. The user clarified that Aptus II has no Bluetooth; shared PDA code does not establish hardware support. See the [firmware Bluetooth survey](firmware-bluetooth-survey.en.md), [client gap audit](protocol-gap-audit.md) and [feature matrix](feature-gap-matrix.en.md). ShootSetup and CameraSettings / ImageSettings are distinct dialects. The laboratory permits explicit manual experiments with unresolved interfaces without treating replies as proof of support.
 
 ## Evidence locations
 
@@ -66,11 +68,11 @@ A CEVersion prefix is present, but its target-session call conditions and value 
 - Only one command awaits a response at a time. GetImage needs matching `file_name` and `attachment`; wrong-name replies are not assigned to a photo. A timeout closes the stream so a late reply cannot be mistaken for the next request.
 - Ack alone is not success: a nonzero or uninterpretable `error_code` reports failure rather than confirming a note write.
 - `PictureTaken` fields `file_name`, `busy` and `imageSaved` have static anchors starting at `0x28718`. Busy or explicitly unsaved images are not requested yet. Complete asynchronous-Ack timing remains a device-test item.
-- GetPictureParams and SetPictureParams are connected. Unknown XMP attachments are not guessed into metadata, and an acknowledgement is not a completed firmware acceptance test.
+- GetPictureParams and SetPictureParams are connected. XMP is decoded only from the verified Base64 header attribute; unverified attachments are rejected. Targeted Flags updates preserve other XMP metadata. An acknowledgement is not a completed hardware acceptance test.
 - Control values reject quotes, control characters and `& < > ^` until escaping is verified. Unencodable text is rejected rather than silently damaged.
 - The Android session limits an attachment to 16 MiB; the research parser defaults to 64 MiB. Both use a 64 KiB host control-header limit. These are host choices, not measured back specifications.
 
-Unknown MOS full-file operations, continuous live view, marking / Good write values and destructive file commands remain disabled. See [capabilities](implementation-status.en.md).
+Version 0.3.0 connects ISO, complete configurations, image inspection, Good / Unmarked and internal file operations with explicit confirmation. Complete configuration readback checks both changed and preserved fields. Photo writes require a preview read from the current back in this connection. Full MOS reads, continuous live view, formatting / recovery and other unresolved operations retain the limits in the [feature matrix](feature-gap-matrix.en.md).
 
 ## Offline parser boundary
 
@@ -86,7 +88,7 @@ Unknown MOS full-file operations, continuous live view, marking / Good write val
 
 | Item | Status |
 | --- | --- |
-| Target Aptus II 5 SDP advertisement | No physical inspection |
+| Valeo 22Wi / Aptus 22 SDP and firmware details | Basic connection and photo reading reported by user; broadcast details not supplied. Aptus II is not a Bluetooth target |
 | PIN, authentication, Android 16 encryption | Not verified |
 | Complete startup, CEVersion negotiation | Partial static sequence only |
 | Non-ASCII paths, notes, XMP encoding | Not verified |

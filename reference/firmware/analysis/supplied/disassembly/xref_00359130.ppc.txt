@@ -1,0 +1,28 @@
+00359110 [file 002e5238] cmpwi     r12, 1
+00359114 [file 002e523c] bne       0x3594c4
+00359118 [file 002e5240] b         0x3594c4
+0035911c [file 002e5244] lis       r3, 0x36
+00359120 [file 002e5248] addi      r3, r3, -0x5ff8 ; str@0x35a008 'GAP:  Get Local BD Addr Response.\n'
+00359124 [file 002e524c] bl        0x91fd8
+00359128 [file 002e5250] b         0x3594c4
+0035912c [file 002e5254] lis       r3, 0x36
+00359130 [file 002e5258] addi      r3, r3, -0x5fd4 ; str@0x35a02c 'GAP:  Set Bluetooth Passkey Response. Status = %d.\n'
+00359134 [file 002e525c] clrlwi    r4, r29, 0x10
+00359138 [file 002e5260] bl        0x91fd8
+0035913c [file 002e5264] b         0x3594c4
+00359140 [file 002e5268] lis       r3, 0x36
+00359144 [file 002e526c] addi      r3, r3, -0x5fa0 ; str@0x35a060 'GAP:  Add Link Key Response. Status = %d.\n'
+00359148 [file 002e5270] clrlwi    r4, r29, 0x10
+0035914c [file 002e5274] bl        0x91fd8
+00359150 [file 002e5278] clrlwi    r10, r29, 0x10
+00359154 [file 002e527c] cmpwi     r10, 0
+00359158 [file 002e5280] beq       0x3594c4
+0035915c [file 002e5284] lis       r3, 0x36
+00359160 [file 002e5288] addi      r3, r3, -0x5f74 ; str@0x35a08c 'Add Link Key Failed !!!!!!!\n'
+00359164 [file 002e528c] clrlwi    r4, r29, 0x10
+00359168 [file 002e5290] bl        0x92094
+0035916c [file 002e5294] b         0x3594c4
+00359170 [file 002e5298] lis       r3, 0x36
+00359174 [file 002e529c] addi      r3, r3, -0x5f54 ; str@0x35a0ac 'GAP:  Set Local Name Response. Status = %d.\n'
+00359178 [file 002e52a0] clrlwi    r4, r29, 0x10
+0035917c [file 002e52a4] bl        0x91fd8

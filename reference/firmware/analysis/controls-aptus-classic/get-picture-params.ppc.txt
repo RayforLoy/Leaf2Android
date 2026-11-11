@@ -1,0 +1,1189 @@
+# classic 4.701 VA 0x8261c..0x838ac, exclusive
+0008261c [UPD 0000e744] stwu      r1, -0x20(r1)
+00082620 [UPD 0000e748] mflr      r0
+00082624 [UPD 0000e74c] stw       r30, 0x18(r1)
+00082628 [UPD 0000e750] stw       r31, 0x1c(r1)
+0008262c [UPD 0000e754] stw       r0, 0x24(r1)
+00082630 [UPD 0000e758] addi      r31, r3, 0
+00082634 [UPD 0000e75c] addi      r30, r4, 0
+00082638 [UPD 0000e760] bl        0x3c7f0c
+0008263c [UPD 0000e764] lwz       r12, 0(r3)
+00082640 [UPD 0000e768] stw       r12, 8(r1)
+00082644 [UPD 0000e76c] addi      r11, r1, 8
+00082648 [UPD 0000e770] stw       r11, 0(r3)
+0008264c [UPD 0000e774] lis       r10, 0x3d
+00082650 [UPD 0000e778] addi      r10, r10, -0x3d14
+00082654 [UPD 0000e77c] stw       r10, 0xc(r1)
+00082658 [UPD 0000e780] addi      r3, r1, 0x10
+0008265c [UPD 0000e784] li        r4, 0
+00082660 [UPD 0000e788] li        r5, 4
+00082664 [UPD 0000e78c] bl        0x3bbbcc
+00082668 [UPD 0000e790] cmpwi     r31, 0
+0008266c [UPD 0000e794] bne       0x82684
+00082670 [UPD 0000e798] bl        0x3c7f0c
+00082674 [UPD 0000e79c] lwz       r12, 8(r1)
+00082678 [UPD 0000e7a0] stw       r12, 0(r3)
+0008267c [UPD 0000e7a4] li        r3, 0
+00082680 [UPD 0000e7a8] b         0x826c8
+00082684 [UPD 0000e7ac] addi      r3, r31, 0
+00082688 [UPD 0000e7b0] addi      r4, r30, 0
+0008268c [UPD 0000e7b4] li        r5, 6
+00082690 [UPD 0000e7b8] bl        0xb0a2c
+00082694 [UPD 0000e7bc] lbz       r3, 0(r3)
+00082698 [UPD 0000e7c0] stw       r31, 0x10(r1)
+0008269c [UPD 0000e7c4] lis       r11, 0x3d
+000826a0 [UPD 0000e7c8] addi      r11, r11, -0x3e08
+000826a4 [UPD 0000e7cc] stw       r11, 0x17c(r31)
+000826a8 [UPD 0000e7d0] li        r10, 0
+000826ac [UPD 0000e7d4] stw       r10, 0x2abc(r31)
+000826b0 [UPD 0000e7d8] addi      r3, r31, 0
+000826b4 [UPD 0000e7dc] bl        0x82b94
+000826b8 [UPD 0000e7e0] bl        0x3c7f0c
+000826bc [UPD 0000e7e4] lwz       r12, 8(r1)
+000826c0 [UPD 0000e7e8] stw       r12, 0(r3)
+000826c4 [UPD 0000e7ec] addi      r3, r31, 0
+000826c8 [UPD 0000e7f0] lwz       r30, 0x18(r1)
+000826cc [UPD 0000e7f4] lwz       r31, 0x1c(r1)
+000826d0 [UPD 0000e7f8] lwz       r0, 0x24(r1)
+000826d4 [UPD 0000e7fc] mtlr      r0
+000826d8 [UPD 0000e800] addi      r1, r1, 0x20
+000826dc [UPD 0000e804] blr       
+000826e0 [UPD 0000e808] stwu      r1, -0x20(r1)
+000826e4 [UPD 0000e80c] mflr      r0
+000826e8 [UPD 0000e810] stw       r30, 0x18(r1)
+000826ec [UPD 0000e814] stw       r31, 0x1c(r1)
+000826f0 [UPD 0000e818] stw       r0, 0x24(r1)
+000826f4 [UPD 0000e81c] addi      r31, r3, 0
+000826f8 [UPD 0000e820] addi      r30, r4, 0
+000826fc [UPD 0000e824] bl        0x3c7f0c
+00082700 [UPD 0000e828] lwz       r12, 0(r3)
+00082704 [UPD 0000e82c] stw       r12, 8(r1)
+00082708 [UPD 0000e830] addi      r11, r1, 8
+0008270c [UPD 0000e834] stw       r11, 0(r3)
+00082710 [UPD 0000e838] lis       r10, 0x3d
+00082714 [UPD 0000e83c] addi      r10, r10, -0x3d08
+00082718 [UPD 0000e840] stw       r10, 0xc(r1)
+0008271c [UPD 0000e844] addi      r3, r1, 0x10
+00082720 [UPD 0000e848] li        r4, 0
+00082724 [UPD 0000e84c] li        r5, 4
+00082728 [UPD 0000e850] bl        0x3bbbcc
+0008272c [UPD 0000e854] stw       r31, 0x10(r1)
+00082730 [UPD 0000e858] lis       r10, 0x3d
+00082734 [UPD 0000e85c] addi      r10, r10, -0x3e08
+00082738 [UPD 0000e860] stw       r10, 0x17c(r31)
+0008273c [UPD 0000e864] lwz       r3, 0x2abc(r31)
+00082740 [UPD 0000e868] cmpwi     r3, 0
+00082744 [UPD 0000e86c] beq       0x82754
+00082748 [UPD 0000e870] bl        0x3bdd20
+0008274c [UPD 0000e874] li        r12, 0
+00082750 [UPD 0000e878] stw       r12, 0x2abc(r31)
+00082754 [UPD 0000e87c] li        r12, 0
+00082758 [UPD 0000e880] stw       r12, 0x10(r1)
+0008275c [UPD 0000e884] addi      r3, r31, 0
+00082760 [UPD 0000e888] li        r4, 1
+00082764 [UPD 0000e88c] bl        0xb0ae4
+00082768 [UPD 0000e890] rlwinm    r10, r30, 0, 0x1e, 0x1e
+0008276c [UPD 0000e894] cmpwi     r10, 0
+00082770 [UPD 0000e898] beq       0x8277c
+00082774 [UPD 0000e89c] addi      r3, r31, 0
+00082778 [UPD 0000e8a0] bl        0x3c7f88
+0008277c [UPD 0000e8a4] bl        0x3c7f0c
+00082780 [UPD 0000e8a8] lwz       r12, 8(r1)
+00082784 [UPD 0000e8ac] stw       r12, 0(r3)
+00082788 [UPD 0000e8b0] lwz       r30, 0x18(r1)
+0008278c [UPD 0000e8b4] lwz       r31, 0x1c(r1)
+00082790 [UPD 0000e8b8] lwz       r0, 0x24(r1)
+00082794 [UPD 0000e8bc] mtlr      r0
+00082798 [UPD 0000e8c0] addi      r1, r1, 0x20
+0008279c [UPD 0000e8c4] blr       
+000827a0 [UPD 0000e8c8] stwu      r1, -0x118(r1)
+000827a4 [UPD 0000e8cc] mflr      r0
+000827a8 [UPD 0000e8d0] stw       r29, 0x10c(r1)
+000827ac [UPD 0000e8d4] stw       r30, 0x110(r1)
+000827b0 [UPD 0000e8d8] stw       r31, 0x114(r1)
+000827b4 [UPD 0000e8dc] stw       r0, 0x11c(r1)
+000827b8 [UPD 0000e8e0] addi      r31, r3, 0
+000827bc [UPD 0000e8e4] addi      r29, r4, 0
+000827c0 [UPD 0000e8e8] li        r30, 0
+000827c4 [UPD 0000e8ec] lwz       r11, 0x17c(r31)
+000827c8 [UPD 0000e8f0] lwz       r11, 0x28(r11)
+000827cc [UPD 0000e8f4] mtlr      r11
+000827d0 [UPD 0000e8f8] addi      r3, r31, 0
+000827d4 [UPD 0000e8fc] blrl      
+000827d8 [UPD 0000e900] cmpwi     r29, 0
+000827dc [UPD 0000e904] beq       0x82858
+000827e0 [UPD 0000e908] lis       r4, 0x3d
+000827e4 [UPD 0000e90c] addi      r4, r4, -0x3bdc ; ASCII 'file_name'
+000827e8 [UPD 0000e910] addi      r5, r1, 8
+000827ec [UPD 0000e914] addi      r3, r29, 0
+000827f0 [UPD 0000e918] bl        0x77014
+000827f4 [UPD 0000e91c] addi      r30, r3, 0
+000827f8 [UPD 0000e920] cmpwi     r30, 1
+000827fc [UPD 0000e924] bne       0x82834
+00082800 [UPD 0000e928] lbz       r12, 8(r1)
+00082804 [UPD 0000e92c] cmpwi     r12, 0x2e
+00082808 [UPD 0000e930] bne       0x82828
+0008280c [UPD 0000e934] lbz       r12, 9(r1)
+00082810 [UPD 0000e938] cmpwi     r12, 0x2f
+00082814 [UPD 0000e93c] bne       0x82828
+00082818 [UPD 0000e940] addi      r3, r31, 0x180
+0008281c [UPD 0000e944] addi      r4, r1, 0xa
+00082820 [UPD 0000e948] bl        0x3bb81c
+00082824 [UPD 0000e94c] b         0x82834
+00082828 [UPD 0000e950] addi      r3, r31, 0x180
+0008282c [UPD 0000e954] addi      r4, r1, 8
+00082830 [UPD 0000e958] bl        0x3bb81c
+00082834 [UPD 0000e95c] lis       r4, 0x3d
+00082838 [UPD 0000e960] addi      r4, r4, -0x3bd0 ; ASCII 'XMP_tag'
+0008283c [UPD 0000e964] addi      r5, r1, 8
+00082840 [UPD 0000e968] addi      r3, r29, 0
+00082844 [UPD 0000e96c] bl        0x77014
+00082848 [UPD 0000e970] cmpwi     r3, 1
+0008284c [UPD 0000e974] bne       0x82858
+00082850 [UPD 0000e978] li        r12, 1
+00082854 [UPD 0000e97c] stb       r12, 0x2ac0(r31)
+00082858 [UPD 0000e980] addi      r3, r30, 0
+0008285c [UPD 0000e984] lwz       r29, 0x10c(r1)
+00082860 [UPD 0000e988] lwz       r30, 0x110(r1)
+00082864 [UPD 0000e98c] lwz       r31, 0x114(r1)
+00082868 [UPD 0000e990] lwz       r0, 0x11c(r1)
+0008286c [UPD 0000e994] mtlr      r0
+00082870 [UPD 0000e998] addi      r1, r1, 0x118
+00082874 [UPD 0000e99c] blr       
+00082878 [UPD 0000e9a0] stwu      r1, -0x10(r1)
+0008287c [UPD 0000e9a4] mflr      r0
+00082880 [UPD 0000e9a8] stw       r31, 0xc(r1)
+00082884 [UPD 0000e9ac] stw       r0, 0x14(r1)
+00082888 [UPD 0000e9b0] addi      r31, r3, 0
+0008288c [UPD 0000e9b4] bl        0xe7f20
+00082890 [UPD 0000e9b8] addi      r4, r31, 0
+00082894 [UPD 0000e9bc] bl        0xe8140
+00082898 [UPD 0000e9c0] lwz       r31, 0xc(r1)
+0008289c [UPD 0000e9c4] lwz       r0, 0x14(r1)
+000828a0 [UPD 0000e9c8] mtlr      r0
+000828a4 [UPD 0000e9cc] addi      r1, r1, 0x10
+000828a8 [UPD 0000e9d0] blr       
+000828ac [UPD 0000e9d4] stwu      r1, -0x140(r1)
+000828b0 [UPD 0000e9d8] mflr      r0
+000828b4 [UPD 0000e9dc] stmw      r27, 0x12c(r1)
+000828b8 [UPD 0000e9e0] stw       r0, 0x144(r1)
+000828bc [UPD 0000e9e4] addi      r31, r3, 0
+000828c0 [UPD 0000e9e8] li        r29, 0
+000828c4 [UPD 0000e9ec] li        r27, 1
+000828c8 [UPD 0000e9f0] li        r30, 0
+000828cc [UPD 0000e9f4] stw       r30, 8(r1)
+000828d0 [UPD 0000e9f8] stw       r30, 0xc(r1)
+000828d4 [UPD 0000e9fc] stw       r30, 0x10(r1)
+000828d8 [UPD 0000ea00] stw       r30, 0x14(r1)
+000828dc [UPD 0000ea04] bl        0xe84fc
+000828e0 [UPD 0000ea08] addi      r28, r3, 0
+000828e4 [UPD 0000ea0c] addi      r9, r31, 0x180
+000828e8 [UPD 0000ea10] cmpwi     r9, 0
+000828ec [UPD 0000ea14] beq       0x82b68
+000828f0 [UPD 0000ea18] addi      r3, r28, 0
+000828f4 [UPD 0000ea1c] bl        0x839a0
+000828f8 [UPD 0000ea20] clrlwi    r3, r3, 0x18
+000828fc [UPD 0000ea24] cmpwi     r3, 0
+00082900 [UPD 0000ea28] beq       0x82918
+00082904 [UPD 0000ea2c] addi      r3, r31, 0
+00082908 [UPD 0000ea30] li        r4, 0x1ff3
+0008290c [UPD 0000ea34] bl        0xb0ca4
+00082910 [UPD 0000ea38] li        r3, 0
+00082914 [UPD 0000ea3c] b         0x82b80
+00082918 [UPD 0000ea40] bl        0x1bbb44
+0008291c [UPD 0000ea44] addi      r30, r3, 0
+00082920 [UPD 0000ea48] addi      r4, r31, 0x180
+00082924 [UPD 0000ea4c] addi      r5, r1, 0x120
+00082928 [UPD 0000ea50] addi      r3, r28, 0
+0008292c [UPD 0000ea54] bl        0xe9688
+00082930 [UPD 0000ea58] addi      r29, r3, 0
+00082934 [UPD 0000ea5c] cmpwi     r29, 1
+00082938 [UPD 0000ea60] bne       0x82b68
+0008293c [UPD 0000ea64] addi      r3, r31, 0x2794
+00082940 [UPD 0000ea68] li        r4, 0
+00082944 [UPD 0000ea6c] li        r5, 0x100
+00082948 [UPD 0000ea70] bl        0x3bbbcc
+0008294c [UPD 0000ea74] lis       r4, 0x3d
+00082950 [UPD 0000ea78] addi      r4, r4, -0x3bc8 ; ASCII 'Yes'
+00082954 [UPD 0000ea7c] addi      r3, r31, 0x299e
+00082958 [UPD 0000ea80] lswi      r5, r4, 4
+0008295c [UPD 0000ea84] stswi     r5, r3, 4
+00082960 [UPD 0000ea88] addi      r4, r1, 0x120
+00082964 [UPD 0000ea8c] addi      r3, r31, 0
+00082968 [UPD 0000ea90] bl        0x83194
+0008296c [UPD 0000ea94] addi      r4, r1, 0x120
+00082970 [UPD 0000ea98] addi      r5, r31, 0x2280
+00082974 [UPD 0000ea9c] addi      r3, r30, 0
+00082978 [UPD 0000eaa0] bl        0x1c0ae0
+0008297c [UPD 0000eaa4] addi      r4, r1, 0x120
+00082980 [UPD 0000eaa8] addi      r5, r31, 0x2380
+00082984 [UPD 0000eaac] addi      r3, r30, 0
+00082988 [UPD 0000eab0] bl        0x1c081c
+0008298c [UPD 0000eab4] addi      r4, r1, 0x120
+00082990 [UPD 0000eab8] addi      r5, r31, 0x2480
+00082994 [UPD 0000eabc] addi      r6, r1, 8
+00082998 [UPD 0000eac0] addi      r7, r1, 0xc
+0008299c [UPD 0000eac4] addi      r8, r1, 0x10
+000829a0 [UPD 0000eac8] addi      r9, r1, 0x14
+000829a4 [UPD 0000eacc] addi      r3, r30, 0
+000829a8 [UPD 0000ead0] bl        0x1c0954
+000829ac [UPD 0000ead4] addi      r3, r1, 0x20
+000829b0 [UPD 0000ead8] li        r4, 0
+000829b4 [UPD 0000eadc] li        r5, 0x100
+000829b8 [UPD 0000eae0] bl        0x3bbbcc
+000829bc [UPD 0000eae4] lwz       r5, 0xc(r1)
+000829c0 [UPD 0000eae8] lwz       r6, 8(r1)
+000829c4 [UPD 0000eaec] lwz       r7, 0x14(r1)
+000829c8 [UPD 0000eaf0] lwz       r8, 0x10(r1)
+000829cc [UPD 0000eaf4] addi      r3, r1, 0x20
+000829d0 [UPD 0000eaf8] lis       r4, 0x3d
+000829d4 [UPD 0000eafc] addi      r4, r4, -0x3bc4 ; ASCII ',%d,%d,%d,%d'
+000829d8 [UPD 0000eb00] bl        0x3b9818
+000829dc [UPD 0000eb04] addi      r3, r31, 0x2480
+000829e0 [UPD 0000eb08] bl        0x3bb7a4
+000829e4 [UPD 0000eb0c] addi      r29, r3, 0
+000829e8 [UPD 0000eb10] addi      r3, r1, 0x20
+000829ec [UPD 0000eb14] bl        0x3bb7a4
+000829f0 [UPD 0000eb18] add       r3, r3, r29
+000829f4 [UPD 0000eb1c] cmplwi    r3, 0x100
+000829f8 [UPD 0000eb20] bge       0x82a08
+000829fc [UPD 0000eb24] addi      r3, r31, 0x2480
+00082a00 [UPD 0000eb28] addi      r4, r1, 0x20
+00082a04 [UPD 0000eb2c] bl        0x3bb9d0
+00082a08 [UPD 0000eb30] addi      r4, r1, 0x120
+00082a0c [UPD 0000eb34] addi      r5, r31, 0x2580
+00082a10 [UPD 0000eb38] addi      r3, r30, 0
+00082a14 [UPD 0000eb3c] bl        0x1c09f8
+00082a18 [UPD 0000eb40] addi      r4, r1, 0x120
+00082a1c [UPD 0000eb44] addi      r5, r31, 0x2680
+00082a20 [UPD 0000eb48] addi      r3, r30, 0
+00082a24 [UPD 0000eb4c] bl        0x1c0a6c
+00082a28 [UPD 0000eb50] addi      r4, r1, 0x120
+00082a2c [UPD 0000eb54] addi      r3, r30, 0
+00082a30 [UPD 0000eb58] bl        0x1c05f4
+00082a34 [UPD 0000eb5c] clrlwi    r3, r3, 0x18
+00082a38 [UPD 0000eb60] cmpwi     r3, 0
+00082a3c [UPD 0000eb64] bne       0x82a5c
+00082a40 [UPD 0000eb68] lis       r4, 0x3d
+00082a44 [UPD 0000eb6c] addi      r4, r4, -0x3bb4 ; ASCII 'No'
+00082a48 [UPD 0000eb70] addi      r3, r31, 0x278a
+00082a4c [UPD 0000eb74] lswi      r5, r4, 3
+00082a50 [UPD 0000eb78] stswi     r5, r3, 3
+00082a54 [UPD 0000eb7c] li        r27, 0
+00082a58 [UPD 0000eb80] b         0x82aa0
+00082a5c [UPD 0000eb84] addi      r4, r1, 0x120
+00082a60 [UPD 0000eb88] addi      r3, r30, 0
+00082a64 [UPD 0000eb8c] bl        0x1c0650
+00082a68 [UPD 0000eb90] clrlwi    r3, r3, 0x18
+00082a6c [UPD 0000eb94] cmpwi     r3, 0
+00082a70 [UPD 0000eb98] beq       0x82a8c
+00082a74 [UPD 0000eb9c] lis       r4, 0x3d
+00082a78 [UPD 0000eba0] addi      r4, r4, -0x3bb0 ; ASCII 'Process'
+00082a7c [UPD 0000eba4] addi      r3, r31, 0x278a
+00082a80 [UPD 0000eba8] lswi      r5, r4, 8
+00082a84 [UPD 0000ebac] stswi     r5, r3, 8
+00082a88 [UPD 0000ebb0] b         0x82aa0
+00082a8c [UPD 0000ebb4] lis       r4, 0x3d
+00082a90 [UPD 0000ebb8] addi      r4, r4, -0x3ba8 ; ASCII 'Yes'
+00082a94 [UPD 0000ebbc] addi      r3, r31, 0x278a
+00082a98 [UPD 0000ebc0] lswi      r5, r4, 4
+00082a9c [UPD 0000ebc4] stswi     r5, r3, 4
+00082aa0 [UPD 0000ebc8] li        r12, 0
+00082aa4 [UPD 0000ebcc] stw       r12, 0x124(r1)
+00082aa8 [UPD 0000ebd0] bl        0x98e74
+00082aac [UPD 0000ebd4] clrlwi    r3, r3, 0x18
+00082ab0 [UPD 0000ebd8] cmpwi     r3, 0
+00082ab4 [UPD 0000ebdc] beq       0x82b00
+00082ab8 [UPD 0000ebe0] addi      r4, r1, 0x120
+00082abc [UPD 0000ebe4] addi      r5, r1, 0x124
+00082ac0 [UPD 0000ebe8] addi      r3, r30, 0
+00082ac4 [UPD 0000ebec] bl        0x1c06b0
+00082ac8 [UPD 0000ebf0] cmpwi     r3, 0
+00082acc [UPD 0000ebf4] blt       0x82b00
+00082ad0 [UPD 0000ebf8] lwz       r3, 0x124(r1)
+00082ad4 [UPD 0000ebfc] bl        0x3bb7a4
+00082ad8 [UPD 0000ec00] stw       r3, 0x18(r1)
+00082adc [UPD 0000ec04] li        r11, 0x100
+00082ae0 [UPD 0000ec08] stw       r11, 0x1c(r1)
+00082ae4 [UPD 0000ec0c] addi      r3, r1, 0x18
+00082ae8 [UPD 0000ec10] addi      r4, r1, 0x1c
+00082aec [UPD 0000ec14] bl        0x838ac
+00082af0 [UPD 0000ec18] lwz       r5, 0(r3)
+00082af4 [UPD 0000ec1c] lwz       r4, 0x124(r1)
+00082af8 [UPD 0000ec20] addi      r3, r31, 0x2794
+00082afc [UPD 0000ec24] bl        0x3bba90
+00082b00 [UPD 0000ec28] addi      r4, r1, 0x120
+00082b04 [UPD 0000ec2c] addi      r5, r31, 0x2894
+00082b08 [UPD 0000ec30] addi      r3, r30, 0
+00082b0c [UPD 0000ec34] bl        0x1c0c94
+00082b10 [UPD 0000ec38] cmpwi     r27, 0
+00082b14 [UPD 0000ec3c] bne       0x82b38
+00082b18 [UPD 0000ec40] addi      r3, r31, 0
+00082b1c [UPD 0000ec44] bl        0x8344c
+00082b20 [UPD 0000ec48] addi      r4, r1, 0x120
+00082b24 [UPD 0000ec4c] addi      r3, r31, 0
+00082b28 [UPD 0000ec50] bl        0x835a0
+00082b2c [UPD 0000ec54] addi      r4, r1, 0x120
+00082b30 [UPD 0000ec58] addi      r3, r31, 0
+00082b34 [UPD 0000ec5c] bl        0x83674
+00082b38 [UPD 0000ec60] lbz       r12, 0x2ac0(r31)
+00082b3c [UPD 0000ec64] cmpwi     r12, 0
+00082b40 [UPD 0000ec68] beq       0x82b50
+00082b44 [UPD 0000ec6c] addi      r4, r1, 0x120
+00082b48 [UPD 0000ec70] addi      r3, r31, 0
+00082b4c [UPD 0000ec74] bl        0x836dc
+00082b50 [UPD 0000ec78] addi      r3, r31, 0
+00082b54 [UPD 0000ec7c] bl        0x82cf4
+00082b58 [UPD 0000ec80] addi      r4, r1, 0x120
+00082b5c [UPD 0000ec84] addi      r3, r28, 0
+00082b60 [UPD 0000ec88] bl        0xe9850
+00082b64 [UPD 0000ec8c] li        r29, 1
+00082b68 [UPD 0000ec90] cmpwi     r29, 1
+00082b6c [UPD 0000ec94] beq       0x82b7c
+00082b70 [UPD 0000ec98] addi      r3, r31, 0
+00082b74 [UPD 0000ec9c] li        r4, 3
+00082b78 [UPD 0000eca0] bl        0xb0b74
+00082b7c [UPD 0000eca4] addi      r3, r29, 0
+00082b80 [UPD 0000eca8] lmw       r27, 0x12c(r1)
+00082b84 [UPD 0000ecac] lwz       r0, 0x144(r1)
+00082b88 [UPD 0000ecb0] mtlr      r0
+00082b8c [UPD 0000ecb4] addi      r1, r1, 0x140
+00082b90 [UPD 0000ecb8] blr       
+00082b94 [UPD 0000ecbc] stwu      r1, -0x10(r1)
+00082b98 [UPD 0000ecc0] mflr      r0
+00082b9c [UPD 0000ecc4] stw       r31, 0xc(r1)
+00082ba0 [UPD 0000ecc8] stw       r0, 0x14(r1)
+00082ba4 [UPD 0000eccc] addi      r31, r3, 0
+00082ba8 [UPD 0000ecd0] addi      r3, r31, 0x2794
+00082bac [UPD 0000ecd4] li        r4, 0
+00082bb0 [UPD 0000ecd8] li        r5, 0x100
+00082bb4 [UPD 0000ecdc] bl        0x3bbbcc
+00082bb8 [UPD 0000ece0] addi      r3, r31, 0x2780
+00082bbc [UPD 0000ece4] li        r4, 0
+00082bc0 [UPD 0000ece8] li        r5, 0xa
+00082bc4 [UPD 0000ecec] bl        0x3bbbcc
+00082bc8 [UPD 0000ecf0] addi      r3, r31, 0x289e
+00082bcc [UPD 0000ecf4] li        r4, 0
+00082bd0 [UPD 0000ecf8] li        r5, 0x100
+00082bd4 [UPD 0000ecfc] bl        0x3bbbcc
+00082bd8 [UPD 0000ed00] lis       r4, 0x3d
+00082bdc [UPD 0000ed04] addi      r4, r4, -0x3ba4 ; ASCII '0:00:00:00:00:00'
+00082be0 [UPD 0000ed08] addi      r3, r31, 0x289e
+00082be4 [UPD 0000ed0c] lswi      r5, r4, 0x11
+00082be8 [UPD 0000ed10] stswi     r5, r3, 0x11
+00082bec [UPD 0000ed14] addi      r3, r31, 0x299e
+00082bf0 [UPD 0000ed18] li        r4, 0
+00082bf4 [UPD 0000ed1c] li        r5, 0x100
+00082bf8 [UPD 0000ed20] bl        0x3bbbcc
+00082bfc [UPD 0000ed24] lis       r4, 0x3d
+00082c00 [UPD 0000ed28] addi      r4, r4, -0x3b90 ; ASCII 'No'
+00082c04 [UPD 0000ed2c] addi      r3, r31, 0x299e
+00082c08 [UPD 0000ed30] lswi      r5, r4, 3
+00082c0c [UPD 0000ed34] stswi     r5, r3, 3
+00082c10 [UPD 0000ed38] addi      r3, r31, 0x180
+00082c14 [UPD 0000ed3c] li        r4, 0
+00082c18 [UPD 0000ed40] li        r5, 0x100
+00082c1c [UPD 0000ed44] bl        0x3bbbcc
+00082c20 [UPD 0000ed48] addi      r3, r31, 0x2480
+00082c24 [UPD 0000ed4c] li        r4, 0
+00082c28 [UPD 0000ed50] li        r5, 0x100
+00082c2c [UPD 0000ed54] bl        0x3bbbcc
+00082c30 [UPD 0000ed58] addi      r3, r31, 0x2680
+00082c34 [UPD 0000ed5c] li        r4, 0
+00082c38 [UPD 0000ed60] li        r5, 0x100
+00082c3c [UPD 0000ed64] bl        0x3bbbcc
+00082c40 [UPD 0000ed68] addi      r3, r31, 0x2280
+00082c44 [UPD 0000ed6c] li        r4, 0
+00082c48 [UPD 0000ed70] li        r5, 0x100
+00082c4c [UPD 0000ed74] bl        0x3bbbcc
+00082c50 [UPD 0000ed78] addi      r3, r31, 0x2380
+00082c54 [UPD 0000ed7c] li        r4, 0
+00082c58 [UPD 0000ed80] li        r5, 0x100
+00082c5c [UPD 0000ed84] bl        0x3bbbcc
+00082c60 [UPD 0000ed88] addi      r3, r31, 0x2580
+00082c64 [UPD 0000ed8c] li        r4, 0
+00082c68 [UPD 0000ed90] li        r5, 0x100
+00082c6c [UPD 0000ed94] bl        0x3bbbcc
+00082c70 [UPD 0000ed98] addi      r3, r31, 0x2894
+00082c74 [UPD 0000ed9c] li        r4, 0
+00082c78 [UPD 0000eda0] li        r5, 0xa
+00082c7c [UPD 0000eda4] bl        0x3bbbcc
+00082c80 [UPD 0000eda8] addi      r3, r31, 0x278a
+00082c84 [UPD 0000edac] li        r4, 0
+00082c88 [UPD 0000edb0] li        r5, 0xa
+00082c8c [UPD 0000edb4] bl        0x3bbbcc
+00082c90 [UPD 0000edb8] addi      r3, r31, 0x2a9e
+00082c94 [UPD 0000edbc] li        r4, 0
+00082c98 [UPD 0000edc0] li        r5, 0xa
+00082c9c [UPD 0000edc4] bl        0x3bbbcc
+00082ca0 [UPD 0000edc8] addi      r3, r31, 0x2aa8
+00082ca4 [UPD 0000edcc] li        r4, 0
+00082ca8 [UPD 0000edd0] li        r5, 0xa
+00082cac [UPD 0000edd4] bl        0x3bbbcc
+00082cb0 [UPD 0000edd8] addi      r3, r31, 0x2ab2
+00082cb4 [UPD 0000eddc] li        r4, 0
+00082cb8 [UPD 0000ede0] li        r5, 0xa
+00082cbc [UPD 0000ede4] bl        0x3bbbcc
+00082cc0 [UPD 0000ede8] lwz       r3, 0x2abc(r31)
+00082cc4 [UPD 0000edec] cmpwi     r3, 0
+00082cc8 [UPD 0000edf0] beq       0x82cd8
+00082ccc [UPD 0000edf4] bl        0x3bdd20
+00082cd0 [UPD 0000edf8] li        r12, 0
+00082cd4 [UPD 0000edfc] stw       r12, 0x2abc(r31)
+00082cd8 [UPD 0000ee00] li        r12, 0
+00082cdc [UPD 0000ee04] stb       r12, 0x2ac0(r31)
+00082ce0 [UPD 0000ee08] lwz       r31, 0xc(r1)
+00082ce4 [UPD 0000ee0c] lwz       r0, 0x14(r1)
+00082ce8 [UPD 0000ee10] mtlr      r0
+00082cec [UPD 0000ee14] addi      r1, r1, 0x10
+00082cf0 [UPD 0000ee18] blr       
+00082cf4 [UPD 0000ee1c] stwu      r1, -0x118(r1)
+00082cf8 [UPD 0000ee20] mflr      r0
+00082cfc [UPD 0000ee24] stw       r28, 0x108(r1)
+00082d00 [UPD 0000ee28] stw       r29, 0x10c(r1)
+00082d04 [UPD 0000ee2c] stw       r30, 0x110(r1)
+00082d08 [UPD 0000ee30] stw       r31, 0x114(r1)
+00082d0c [UPD 0000ee34] stw       r0, 0x11c(r1)
+00082d10 [UPD 0000ee38] addi      r31, r3, 0
+00082d14 [UPD 0000ee3c] lis       r4, 0x3d
+00082d18 [UPD 0000ee40] addi      r4, r4, -0x3b8c ; ASCII 'Ack'
+00082d1c [UPD 0000ee44] addi      r3, r31, 8
+00082d20 [UPD 0000ee48] lswi      r5, r4, 4
+00082d24 [UPD 0000ee4c] stswi     r5, r3, 4
+00082d28 [UPD 0000ee50] li        r10, 3
+00082d2c [UPD 0000ee54] stw       r10, 0x28(r31)
+00082d30 [UPD 0000ee58] lis       r28, 0x3d
+00082d34 [UPD 0000ee5c] addi      r28, r28, -0x3ddc
+00082d38 [UPD 0000ee60] lwz       r12, 0(r28)
+00082d3c [UPD 0000ee64] stw       r12, 0x50(r31)
+00082d40 [UPD 0000ee68] lbz       r11, 0x180(r31)
+00082d44 [UPD 0000ee6c] cmpwi     r11, 0x2e
+00082d48 [UPD 0000ee70] beq       0x82d78
+00082d4c [UPD 0000ee74] lbz       r12, 0x181(r31)
+00082d50 [UPD 0000ee78] cmpwi     r12, 0x2f
+00082d54 [UPD 0000ee7c] beq       0x82d78
+00082d58 [UPD 0000ee80] addi      r3, r1, 8
+00082d5c [UPD 0000ee84] addi      r4, r31, 0x180
+00082d60 [UPD 0000ee88] bl        0x3bb81c
+00082d64 [UPD 0000ee8c] addi      r3, r31, 0x180
+00082d68 [UPD 0000ee90] lis       r4, 0x3d
+00082d6c [UPD 0000ee94] addi      r4, r4, -0x3b88 ; ASCII './%s'
+00082d70 [UPD 0000ee98] addi      r5, r1, 8
+00082d74 [UPD 0000ee9c] bl        0x3b9818
+00082d78 [UPD 0000eea0] addi      r3, r1, 8
+00082d7c [UPD 0000eea4] addi      r4, r31, 0x180
+00082d80 [UPD 0000eea8] bl        0x3bb81c
+00082d84 [UPD 0000eeac] addi      r3, r1, 8
+00082d88 [UPD 0000eeb0] li        r4, 0
+00082d8c [UPD 0000eeb4] bl        0x9af98
+00082d90 [UPD 0000eeb8] addi      r3, r31, 0x180
+00082d94 [UPD 0000eebc] li        r4, 0
+00082d98 [UPD 0000eec0] li        r5, 0x100
+00082d9c [UPD 0000eec4] bl        0x3bbbcc
+00082da0 [UPD 0000eec8] addi      r3, r31, 0x180
+00082da4 [UPD 0000eecc] addi      r4, r1, 8
+00082da8 [UPD 0000eed0] bl        0x3bb81c
+00082dac [UPD 0000eed4] addi      r11, r31, 0x180
+00082db0 [UPD 0000eed8] stw       r11, 0x54(r31)
+00082db4 [UPD 0000eedc] lwz       r10, 4(r28)
+00082db8 [UPD 0000eee0] stw       r10, 0x58(r31)
+00082dbc [UPD 0000eee4] addi      r9, r31, 0x2280
+00082dc0 [UPD 0000eee8] stw       r9, 0x5c(r31)
+00082dc4 [UPD 0000eeec] lwz       r12, 8(r28)
+00082dc8 [UPD 0000eef0] stw       r12, 0x60(r31)
+00082dcc [UPD 0000eef4] addi      r11, r31, 0x2380
+00082dd0 [UPD 0000eef8] stw       r11, 0x64(r31)
+00082dd4 [UPD 0000eefc] lwz       r10, 0xc(r28)
+00082dd8 [UPD 0000ef00] stw       r10, 0x68(r31)
+00082ddc [UPD 0000ef04] addi      r9, r31, 0x2480
+00082de0 [UPD 0000ef08] stw       r9, 0x6c(r31)
+00082de4 [UPD 0000ef0c] lwz       r12, 0x10(r28)
+00082de8 [UPD 0000ef10] stw       r12, 0x70(r31)
+00082dec [UPD 0000ef14] addi      r11, r31, 0x2580
+00082df0 [UPD 0000ef18] stw       r11, 0x74(r31)
+00082df4 [UPD 0000ef1c] lwz       r10, 0x14(r28)
+00082df8 [UPD 0000ef20] stw       r10, 0x78(r31)
+00082dfc [UPD 0000ef24] addi      r9, r31, 0x2680
+00082e00 [UPD 0000ef28] stw       r9, 0x7c(r31)
+00082e04 [UPD 0000ef2c] lwz       r12, 0x18(r28)
+00082e08 [UPD 0000ef30] stw       r12, 0x80(r31)
+00082e0c [UPD 0000ef34] addi      r11, r31, 0x280
+00082e10 [UPD 0000ef38] stw       r11, 0x84(r31)
+00082e14 [UPD 0000ef3c] li        r30, 0xe
+00082e18 [UPD 0000ef40] bl        0xad5c0
+00082e1c [UPD 0000ef44] clrlwi    r3, r3, 0x18
+00082e20 [UPD 0000ef48] cmpwi     r3, 0
+00082e24 [UPD 0000ef4c] beq       0x82e64
+00082e28 [UPD 0000ef50] lwz       r12, 0x1c(r28)
+00082e2c [UPD 0000ef54] stw       r12, 0x88(r31)
+00082e30 [UPD 0000ef58] addi      r11, r31, 0x680
+00082e34 [UPD 0000ef5c] stw       r11, 0x8c(r31)
+00082e38 [UPD 0000ef60] lwz       r10, 0x20(r28)
+00082e3c [UPD 0000ef64] stw       r10, 0x90(r31)
+00082e40 [UPD 0000ef68] addi      r9, r31, 0xa80
+00082e44 [UPD 0000ef6c] stw       r9, 0x94(r31)
+00082e48 [UPD 0000ef70] lwz       r12, 0x24(r28)
+00082e4c [UPD 0000ef74] stw       r12, 0x98(r31)
+00082e50 [UPD 0000ef78] li        r29, 0xa
+00082e54 [UPD 0000ef7c] addi      r10, r31, 0xe80
+00082e58 [UPD 0000ef80] stw       r10, 0x9c(r31)
+00082e5c [UPD 0000ef84] li        r30, 0x14
+00082e60 [UPD 0000ef88] b         0x82e68
+00082e64 [UPD 0000ef8c] li        r29, 0xa
+00082e68 [UPD 0000ef90] lbz       r12, 0x2ac0(r31)
+00082e6c [UPD 0000ef94] cmpwi     r12, 0
+00082e70 [UPD 0000ef98] beq       0x82e7c
+00082e74 [UPD 0000ef9c] addi      r29, r29, 1
+00082e78 [UPD 0000efa0] b         0x82ec4
+00082e7c [UPD 0000efa4] bl        0x98e74
+00082e80 [UPD 0000efa8] clrlwi    r3, r3, 0x18
+00082e84 [UPD 0000efac] cmpwi     r3, 0
+00082e88 [UPD 0000efb0] beq       0x82ec0
+00082e8c [UPD 0000efb4] slwi      r12, r30, 2
+00082e90 [UPD 0000efb8] add       r12, r31, r12
+00082e94 [UPD 0000efbc] slwi      r11, r29, 2
+00082e98 [UPD 0000efc0] lwzx      r11, r28, r11
+00082e9c [UPD 0000efc4] stw       r11, 0x50(r12)
+00082ea0 [UPD 0000efc8] addi      r30, r30, 1
+00082ea4 [UPD 0000efcc] addi      r29, r29, 1
+00082ea8 [UPD 0000efd0] slwi      r9, r30, 2
+00082eac [UPD 0000efd4] add       r9, r31, r9
+00082eb0 [UPD 0000efd8] addi      r11, r31, 0x2794
+00082eb4 [UPD 0000efdc] stw       r11, 0x50(r9)
+00082eb8 [UPD 0000efe0] addi      r30, r30, 1
+00082ebc [UPD 0000efe4] b         0x82ec4
+00082ec0 [UPD 0000efe8] addi      r29, r29, 1
+00082ec4 [UPD 0000efec] addi      r29, r29, 2
+00082ec8 [UPD 0000eff0] slwi      r11, r30, 2
+00082ecc [UPD 0000eff4] add       r11, r31, r11
+00082ed0 [UPD 0000eff8] slwi      r10, r29, 2
+00082ed4 [UPD 0000effc] lwzx      r10, r28, r10
+00082ed8 [UPD 0000f000] stw       r10, 0x50(r11)
+00082edc [UPD 0000f004] addi      r30, r30, 1
+00082ee0 [UPD 0000f008] addi      r29, r29, 1
+00082ee4 [UPD 0000f00c] slwi      r9, r30, 2
+00082ee8 [UPD 0000f010] add       r9, r31, r9
+00082eec [UPD 0000f014] addi      r12, r31, 0x1a80
+00082ef0 [UPD 0000f018] stw       r12, 0x50(r9)
+00082ef4 [UPD 0000f01c] addi      r30, r30, 1
+00082ef8 [UPD 0000f020] slwi      r10, r30, 2
+00082efc [UPD 0000f024] add       r10, r31, r10
+00082f00 [UPD 0000f028] slwi      r12, r29, 2
+00082f04 [UPD 0000f02c] lwzx      r12, r28, r12
+00082f08 [UPD 0000f030] stw       r12, 0x50(r10)
+00082f0c [UPD 0000f034] addi      r30, r30, 1
+00082f10 [UPD 0000f038] addi      r29, r29, 1
+00082f14 [UPD 0000f03c] slwi      r9, r30, 2
+00082f18 [UPD 0000f040] add       r9, r31, r9
+00082f1c [UPD 0000f044] addi      r12, r31, 0x1e80
+00082f20 [UPD 0000f048] stw       r12, 0x50(r9)
+00082f24 [UPD 0000f04c] addi      r30, r30, 1
+00082f28 [UPD 0000f050] slwi      r10, r30, 2
+00082f2c [UPD 0000f054] add       r10, r31, r10
+00082f30 [UPD 0000f058] slwi      r12, r29, 2
+00082f34 [UPD 0000f05c] lwzx      r12, r28, r12
+00082f38 [UPD 0000f060] stw       r12, 0x50(r10)
+00082f3c [UPD 0000f064] addi      r30, r30, 1
+00082f40 [UPD 0000f068] addi      r29, r29, 1
+00082f44 [UPD 0000f06c] slwi      r9, r30, 2
+00082f48 [UPD 0000f070] add       r9, r31, r9
+00082f4c [UPD 0000f074] addi      r12, r31, 0x278a
+00082f50 [UPD 0000f078] stw       r12, 0x50(r9)
+00082f54 [UPD 0000f07c] addi      r30, r30, 1
+00082f58 [UPD 0000f080] slwi      r10, r30, 2
+00082f5c [UPD 0000f084] add       r10, r31, r10
+00082f60 [UPD 0000f088] slwi      r12, r29, 2
+00082f64 [UPD 0000f08c] lwzx      r12, r28, r12
+00082f68 [UPD 0000f090] stw       r12, 0x50(r10)
+00082f6c [UPD 0000f094] addi      r30, r30, 1
+00082f70 [UPD 0000f098] addi      r29, r29, 1
+00082f74 [UPD 0000f09c] slwi      r9, r30, 2
+00082f78 [UPD 0000f0a0] add       r9, r31, r9
+00082f7c [UPD 0000f0a4] addi      r12, r31, 0x2894
+00082f80 [UPD 0000f0a8] stw       r12, 0x50(r9)
+00082f84 [UPD 0000f0ac] addi      r30, r30, 1
+00082f88 [UPD 0000f0b0] bl        0xad5c0
+00082f8c [UPD 0000f0b4] clrlwi    r3, r3, 0x18
+00082f90 [UPD 0000f0b8] cmpwi     r3, 0
+00082f94 [UPD 0000f0bc] beq       0x82fc8
+00082f98 [UPD 0000f0c0] slwi      r12, r30, 2
+00082f9c [UPD 0000f0c4] add       r12, r31, r12
+00082fa0 [UPD 0000f0c8] slwi      r11, r29, 2
+00082fa4 [UPD 0000f0cc] lwzx      r11, r28, r11
+00082fa8 [UPD 0000f0d0] stw       r11, 0x50(r12)
+00082fac [UPD 0000f0d4] addi      r30, r30, 1
+00082fb0 [UPD 0000f0d8] addi      r29, r29, 1
+00082fb4 [UPD 0000f0dc] slwi      r9, r30, 2
+00082fb8 [UPD 0000f0e0] add       r9, r31, r9
+00082fbc [UPD 0000f0e4] addi      r11, r31, 0x2780
+00082fc0 [UPD 0000f0e8] stw       r11, 0x50(r9)
+00082fc4 [UPD 0000f0ec] addi      r30, r30, 1
+00082fc8 [UPD 0000f0f0] addi      r3, r31, 0x278a
+00082fcc [UPD 0000f0f4] lis       r4, 0x3d
+00082fd0 [UPD 0000f0f8] addi      r4, r4, -0x3b80 ; ASCII 'No'
+00082fd4 [UPD 0000f0fc] bl        0x3bb8c0
+00082fd8 [UPD 0000f100] cmpwi     r3, 0
+00082fdc [UPD 0000f104] bne       0x830b4
+00082fe0 [UPD 0000f108] bl        0xad5c0
+00082fe4 [UPD 0000f10c] clrlwi    r3, r3, 0x18
+00082fe8 [UPD 0000f110] cmpwi     r3, 0
+00082fec [UPD 0000f114] bne       0x83020
+00082ff0 [UPD 0000f118] slwi      r12, r30, 2
+00082ff4 [UPD 0000f11c] add       r12, r31, r12
+00082ff8 [UPD 0000f120] slwi      r11, r29, 2
+00082ffc [UPD 0000f124] lwzx      r11, r28, r11
+00083000 [UPD 0000f128] stw       r11, 0x50(r12)
+00083004 [UPD 0000f12c] addi      r30, r30, 1
+00083008 [UPD 0000f130] addi      r29, r29, 1
+0008300c [UPD 0000f134] slwi      r9, r30, 2
+00083010 [UPD 0000f138] add       r9, r31, r9
+00083014 [UPD 0000f13c] addi      r11, r31, 0x2780
+00083018 [UPD 0000f140] stw       r11, 0x50(r9)
+0008301c [UPD 0000f144] addi      r30, r30, 1
+00083020 [UPD 0000f148] slwi      r12, r30, 2
+00083024 [UPD 0000f14c] add       r12, r31, r12
+00083028 [UPD 0000f150] slwi      r11, r29, 2
+0008302c [UPD 0000f154] lwzx      r11, r28, r11
+00083030 [UPD 0000f158] stw       r11, 0x50(r12)
+00083034 [UPD 0000f15c] addi      r30, r30, 1
+00083038 [UPD 0000f160] addi      r29, r29, 1
+0008303c [UPD 0000f164] slwi      r9, r30, 2
+00083040 [UPD 0000f168] add       r9, r31, r9
+00083044 [UPD 0000f16c] addi      r11, r31, 0x2a9e
+00083048 [UPD 0000f170] stw       r11, 0x50(r9)
+0008304c [UPD 0000f174] addi      r30, r30, 1
+00083050 [UPD 0000f178] slwi      r10, r30, 2
+00083054 [UPD 0000f17c] add       r10, r31, r10
+00083058 [UPD 0000f180] slwi      r11, r29, 2
+0008305c [UPD 0000f184] lwzx      r11, r28, r11
+00083060 [UPD 0000f188] stw       r11, 0x50(r10)
+00083064 [UPD 0000f18c] addi      r30, r30, 1
+00083068 [UPD 0000f190] addi      r29, r29, 1
+0008306c [UPD 0000f194] slwi      r9, r30, 2
+00083070 [UPD 0000f198] add       r9, r31, r9
+00083074 [UPD 0000f19c] addi      r12, r31, 0x2aa8
+00083078 [UPD 0000f1a0] stw       r12, 0x50(r9)
+0008307c [UPD 0000f1a4] addi      r30, r30, 1
+00083080 [UPD 0000f1a8] slwi      r10, r30, 2
+00083084 [UPD 0000f1ac] add       r10, r31, r10
+00083088 [UPD 0000f1b0] slwi      r12, r29, 2
+0008308c [UPD 0000f1b4] lwzx      r12, r28, r12
+00083090 [UPD 0000f1b8] stw       r12, 0x50(r10)
+00083094 [UPD 0000f1bc] addi      r30, r30, 1
+00083098 [UPD 0000f1c0] addi      r29, r29, 1
+0008309c [UPD 0000f1c4] slwi      r9, r30, 2
+000830a0 [UPD 0000f1c8] add       r9, r31, r9
+000830a4 [UPD 0000f1cc] addi      r12, r31, 0x2ab2
+000830a8 [UPD 0000f1d0] stw       r12, 0x50(r9)
+000830ac [UPD 0000f1d4] addi      r30, r30, 1
+000830b0 [UPD 0000f1d8] b         0x830d0
+000830b4 [UPD 0000f1dc] bl        0xad5c0
+000830b8 [UPD 0000f1e0] clrlwi    r3, r3, 0x18
+000830bc [UPD 0000f1e4] cmpwi     r3, 0
+000830c0 [UPD 0000f1e8] beq       0x830cc
+000830c4 [UPD 0000f1ec] addi      r29, r29, 3
+000830c8 [UPD 0000f1f0] b         0x830d0
+000830cc [UPD 0000f1f4] addi      r29, r29, 4
+000830d0 [UPD 0000f1f8] lbz       r12, 0x2ac0(r31)
+000830d4 [UPD 0000f1fc] cmpwi     r12, 0
+000830d8 [UPD 0000f200] beq       0x83110
+000830dc [UPD 0000f204] slwi      r12, r30, 2
+000830e0 [UPD 0000f208] add       r12, r31, r12
+000830e4 [UPD 0000f20c] slwi      r11, r29, 2
+000830e8 [UPD 0000f210] lwzx      r11, r28, r11
+000830ec [UPD 0000f214] stw       r11, 0x50(r12)
+000830f0 [UPD 0000f218] addi      r29, r29, 2
+000830f4 [UPD 0000f21c] addi      r30, r30, 1
+000830f8 [UPD 0000f220] slwi      r9, r30, 2
+000830fc [UPD 0000f224] add       r9, r31, r9
+00083100 [UPD 0000f228] lwz       r11, 0x2abc(r31)
+00083104 [UPD 0000f22c] stw       r11, 0x50(r9)
+00083108 [UPD 0000f230] addi      r30, r30, 1
+0008310c [UPD 0000f234] b         0x83144
+00083110 [UPD 0000f238] addi      r29, r29, 1
+00083114 [UPD 0000f23c] slwi      r11, r30, 2
+00083118 [UPD 0000f240] add       r11, r31, r11
+0008311c [UPD 0000f244] slwi      r10, r29, 2
+00083120 [UPD 0000f248] lwzx      r10, r28, r10
+00083124 [UPD 0000f24c] stw       r10, 0x50(r11)
+00083128 [UPD 0000f250] addi      r30, r30, 1
+0008312c [UPD 0000f254] addi      r29, r29, 1
+00083130 [UPD 0000f258] slwi      r9, r30, 2
+00083134 [UPD 0000f25c] add       r9, r31, r9
+00083138 [UPD 0000f260] addi      r12, r31, 0x289e
+0008313c [UPD 0000f264] stw       r12, 0x50(r9)
+00083140 [UPD 0000f268] addi      r30, r30, 1
+00083144 [UPD 0000f26c] slwi      r12, r30, 2
+00083148 [UPD 0000f270] add       r12, r31, r12
+0008314c [UPD 0000f274] slwi      r11, r29, 2
+00083150 [UPD 0000f278] lwzx      r11, r28, r11
+00083154 [UPD 0000f27c] stw       r11, 0x50(r12)
+00083158 [UPD 0000f280] addi      r30, r30, 1
+0008315c [UPD 0000f284] slwi      r12, r30, 2
+00083160 [UPD 0000f288] add       r12, r31, r12
+00083164 [UPD 0000f28c] addi      r11, r31, 0x299e
+00083168 [UPD 0000f290] stw       r11, 0x50(r12)
+0008316c [UPD 0000f294] addi      r30, r30, 1
+00083170 [UPD 0000f298] stw       r30, 0x168(r31)
+00083174 [UPD 0000f29c] lwz       r28, 0x108(r1)
+00083178 [UPD 0000f2a0] lwz       r29, 0x10c(r1)
+0008317c [UPD 0000f2a4] lwz       r30, 0x110(r1)
+00083180 [UPD 0000f2a8] lwz       r31, 0x114(r1)
+00083184 [UPD 0000f2ac] lwz       r0, 0x11c(r1)
+00083188 [UPD 0000f2b0] mtlr      r0
+0008318c [UPD 0000f2b4] addi      r1, r1, 0x118
+00083190 [UPD 0000f2b8] blr       
+00083194 [UPD 0000f2bc] stwu      r1, -0x1170(r1)
+00083198 [UPD 0000f2c0] mflr      r0
+0008319c [UPD 0000f2c4] stmw      r22, 0x1148(r1)
+000831a0 [UPD 0000f2c8] stw       r0, 0x1174(r1)
+000831a4 [UPD 0000f2cc] addi      r25, r3, 0
+000831a8 [UPD 0000f2d0] addi      r29, r4, 0
+000831ac [UPD 0000f2d4] bl        0xad5c0
+000831b0 [UPD 0000f2d8] clrlwi    r3, r3, 0x18
+000831b4 [UPD 0000f2dc] cmpwi     r3, 0
+000831b8 [UPD 0000f2e0] beq       0x831c4
+000831bc [UPD 0000f2e4] li        r24, 4
+000831c0 [UPD 0000f2e8] b         0x831c8
+000831c4 [UPD 0000f2ec] li        r24, 1
+000831c8 [UPD 0000f2f0] bl        0x1bbb44
+000831cc [UPD 0000f2f4] addi      r23, r3, 0
+000831d0 [UPD 0000f2f8] addi      r5, r1, 0x12c
+000831d4 [UPD 0000f2fc] addi      r3, r23, 0
+000831d8 [UPD 0000f300] addi      r4, r29, 0
+000831dc [UPD 0000f304] li        r6, 0x1018
+000831e0 [UPD 0000f308] li        r7, 9
+000831e4 [UPD 0000f30c] bl        0x1be174
+000831e8 [UPD 0000f310] cmpwi     r3, 0
+000831ec [UPD 0000f314] blt       0x83438
+000831f0 [UPD 0000f318] li        r27, 0
+000831f4 [UPD 0000f31c] cmpwi     r24, 0
+000831f8 [UPD 0000f320] ble       0x83318
+000831fc [UPD 0000f324] addi      r29, r1, 0x18
+00083200 [UPD 0000f328] li        r31, 0
+00083204 [UPD 0000f32c] add       r10, r1, r31
+00083208 [UPD 0000f330] addi      r26, r10, 0x12c
+0008320c [UPD 0000f334] add       r12, r25, r31
+00083210 [UPD 0000f338] addi      r30, r12, 0x280
+00083214 [UPD 0000f33c] addi      r22, r25, 0x280
+00083218 [UPD 0000f340] li        r28, 0
+0008321c [UPD 0000f344] stwu      r26, 4(r29)
+00083220 [UPD 0000f348] addi      r4, r1, 8
+00083224 [UPD 0000f34c] addi      r5, r1, 0xc
+00083228 [UPD 0000f350] addi      r3, r23, 0
+0008322c [UPD 0000f354] bl        0x1be1c0
+00083230 [UPD 0000f358] li        r31, 0
+00083234 [UPD 0000f35c] lwz       r12, 8(r1)
+00083238 [UPD 0000f360] cmpwi     r12, 0
+0008323c [UPD 0000f364] ble       0x8327c
+00083240 [UPD 0000f368] lwz       r12, 0(r29)
+00083244 [UPD 0000f36c] slwi      r11, r31, 2
+00083248 [UPD 0000f370] lwzx      r5, r12, r11
+0008324c [UPD 0000f374] addi      r3, r1, 0x10
+00083250 [UPD 0000f378] lis       r4, 0x3d
+00083254 [UPD 0000f37c] addi      r4, r4, -0x3b7c ; ASCII '%d'
+00083258 [UPD 0000f380] bl        0x3b9818
+0008325c [UPD 0000f384] addi      r3, r1, 0x10
+00083260 [UPD 0000f388] bl        0x3bb7a4
+00083264 [UPD 0000f38c] add       r3, r3, r28
+00083268 [UPD 0000f390] addi      r28, r3, 1
+0008326c [UPD 0000f394] addi      r31, r31, 1
+00083270 [UPD 0000f398] lwz       r11, 8(r1)
+00083274 [UPD 0000f39c] cmpw      r31, r11
+00083278 [UPD 0000f3a0] blt       0x83240
+0008327c [UPD 0000f3a4] addi      r3, r30, 0
+00083280 [UPD 0000f3a8] li        r4, 0
+00083284 [UPD 0000f3ac] li        r5, 0x400
+00083288 [UPD 0000f3b0] bl        0x3bbbcc
+0008328c [UPD 0000f3b4] cmpwi     r22, 0
+00083290 [UPD 0000f3b8] beq       0x832a4
+00083294 [UPD 0000f3bc] lis       r4, 0x3d
+00083298 [UPD 0000f3c0] addi      r4, r4, -0x3b78
+0008329c [UPD 0000f3c4] addi      r3, r30, 0
+000832a0 [UPD 0000f3c8] bl        0x3b9818
+000832a4 [UPD 0000f3cc] li        r31, 0
+000832a8 [UPD 0000f3d0] lwz       r11, 8(r1)
+000832ac [UPD 0000f3d4] cmpwi     r11, 0
+000832b0 [UPD 0000f3d8] ble       0x83304
+000832b4 [UPD 0000f3dc] cmpwi     r31, 0
+000832b8 [UPD 0000f3e0] beq       0x832cc
+000832bc [UPD 0000f3e4] lis       r4, 0x3d
+000832c0 [UPD 0000f3e8] addi      r4, r4, -0x3b74
+000832c4 [UPD 0000f3ec] addi      r3, r30, 0
+000832c8 [UPD 0000f3f0] bl        0x3bb9d0
+000832cc [UPD 0000f3f4] lwz       r12, 0(r29)
+000832d0 [UPD 0000f3f8] slwi      r11, r31, 2
+000832d4 [UPD 0000f3fc] lwzx      r5, r12, r11
+000832d8 [UPD 0000f400] addi      r3, r1, 0x10
+000832dc [UPD 0000f404] lis       r4, 0x3d
+000832e0 [UPD 0000f408] addi      r4, r4, -0x3b70 ; ASCII '%d'
+000832e4 [UPD 0000f40c] bl        0x3b9818
+000832e8 [UPD 0000f410] addi      r4, r1, 0x10
+000832ec [UPD 0000f414] addi      r3, r30, 0
+000832f0 [UPD 0000f418] bl        0x3bb9d0
+000832f4 [UPD 0000f41c] addi      r31, r31, 1
+000832f8 [UPD 0000f420] lwz       r10, 8(r1)
+000832fc [UPD 0000f424] cmpw      r31, r10
+00083300 [UPD 0000f428] blt       0x832b4
+00083304 [UPD 0000f42c] addi      r26, r26, 0x400
+00083308 [UPD 0000f430] addi      r30, r30, 0x400
+0008330c [UPD 0000f434] addi      r27, r27, 1
+00083310 [UPD 0000f438] cmpw      r27, r24
+00083314 [UPD 0000f43c] blt       0x83218
+00083318 [UPD 0000f440] lwz       r5, 0x1140(r1)
+0008331c [UPD 0000f444] addi      r3, r1, 0x2c
+00083320 [UPD 0000f448] lis       r4, 0x3d
+00083324 [UPD 0000f44c] addi      r4, r4, -0x3b6c ; ASCII '%d'
+00083328 [UPD 0000f450] bl        0x3b9818
+0008332c [UPD 0000f454] addi      r3, r25, 0x1a80
+00083330 [UPD 0000f458] li        r4, 0
+00083334 [UPD 0000f45c] li        r5, 0x400
+00083338 [UPD 0000f460] bl        0x3bbbcc
+0008333c [UPD 0000f464] addi      r3, r25, 0x1a80
+00083340 [UPD 0000f468] addi      r4, r1, 0x2c
+00083344 [UPD 0000f46c] bl        0x3b9818
+00083348 [UPD 0000f470] lwz       r3, 0x113c(r1)
+0008334c [UPD 0000f474] bl        0x3c6bac
+00083350 [UPD 0000f478] addi      r6, r4, 0
+00083354 [UPD 0000f47c] addi      r5, r3, 0
+00083358 [UPD 0000f480] addi      r3, r1, 0x2c
+0008335c [UPD 0000f484] lis       r4, 0x3d
+00083360 [UPD 0000f488] addi      r4, r4, -0x3b68 ; ASCII '%+3.2f'
+00083364 [UPD 0000f48c] bl        0x3b9818
+00083368 [UPD 0000f490] addi      r3, r25, 0x1280
+0008336c [UPD 0000f494] li        r4, 0
+00083370 [UPD 0000f498] li        r5, 0x400
+00083374 [UPD 0000f49c] bl        0x3bbbcc
+00083378 [UPD 0000f4a0] lwz       r3, 0x113c(r1)
+0008337c [UPD 0000f4a4] bl        0x3c6bac
+00083380 [UPD 0000f4a8] addi      r6, r4, 0
+00083384 [UPD 0000f4ac] addi      r5, r3, 0
+00083388 [UPD 0000f4b0] addi      r3, r25, 0x1280
+0008338c [UPD 0000f4b4] lis       r4, 0x3d
+00083390 [UPD 0000f4b8] addi      r4, r4, -0x3b60 ; ASCII '%+3.1f'
+00083394 [UPD 0000f4bc] bl        0x3b9818
+00083398 [UPD 0000f4c0] lwz       r5, 0x1130(r1)
+0008339c [UPD 0000f4c4] addi      r3, r1, 0x2c
+000833a0 [UPD 0000f4c8] lis       r4, 0x3d
+000833a4 [UPD 0000f4cc] addi      r4, r4, -0x3b58 ; ASCII '%d'
+000833a8 [UPD 0000f4d0] bl        0x3b9818
+000833ac [UPD 0000f4d4] addi      r3, r25, 0x1e80
+000833b0 [UPD 0000f4d8] li        r4, 0
+000833b4 [UPD 0000f4dc] li        r5, 0x400
+000833b8 [UPD 0000f4e0] bl        0x3bbbcc
+000833bc [UPD 0000f4e4] addi      r3, r25, 0x1e80
+000833c0 [UPD 0000f4e8] addi      r4, r1, 0x2c
+000833c4 [UPD 0000f4ec] bl        0x3b9818
+000833c8 [UPD 0000f4f0] lwz       r3, 0x112c(r1)
+000833cc [UPD 0000f4f4] bl        0x3c6bac
+000833d0 [UPD 0000f4f8] addi      r6, r4, 0
+000833d4 [UPD 0000f4fc] addi      r5, r3, 0
+000833d8 [UPD 0000f500] addi      r3, r1, 0x2c
+000833dc [UPD 0000f504] lis       r4, 0x3d
+000833e0 [UPD 0000f508] addi      r4, r4, -0x3b54 ; ASCII '%+3.2f'
+000833e4 [UPD 0000f50c] bl        0x3b9818
+000833e8 [UPD 0000f510] addi      r3, r25, 0x1680
+000833ec [UPD 0000f514] li        r4, 0
+000833f0 [UPD 0000f518] li        r5, 0x400
+000833f4 [UPD 0000f51c] bl        0x3bbbcc
+000833f8 [UPD 0000f520] lwz       r3, 0x112c(r1)
+000833fc [UPD 0000f524] bl        0x3c6bac
+00083400 [UPD 0000f528] addi      r6, r4, 0
+00083404 [UPD 0000f52c] addi      r5, r3, 0
+00083408 [UPD 0000f530] addi      r3, r25, 0x1680
+0008340c [UPD 0000f534] lis       r4, 0x3d
+00083410 [UPD 0000f538] addi      r4, r4, -0x3b4c ; ASCII '%+3.1f'
+00083414 [UPD 0000f53c] bl        0x3b9818
+00083418 [UPD 0000f540] lwz       r3, 0x1134(r1)
+0008341c [UPD 0000f544] bl        0x3c6bac
+00083420 [UPD 0000f548] addi      r6, r4, 0
+00083424 [UPD 0000f54c] addi      r5, r3, 0
+00083428 [UPD 0000f550] addi      r3, r25, 0x2780
+0008342c [UPD 0000f554] lis       r4, 0x3d
+00083430 [UPD 0000f558] addi      r4, r4, -0x3b44 ; ASCII '%+3.2f'
+00083434 [UPD 0000f55c] bl        0x3b9818
+00083438 [UPD 0000f560] lmw       r22, 0x1148(r1)
+0008343c [UPD 0000f564] lwz       r0, 0x1174(r1)
+00083440 [UPD 0000f568] mtlr      r0
+00083444 [UPD 0000f56c] addi      r1, r1, 0x1170
+00083448 [UPD 0000f570] blr       
+0008344c [UPD 0000f574] stwu      r1, -0x90(r1)
+00083450 [UPD 0000f578] mflr      r0
+00083454 [UPD 0000f57c] stw       r31, 0x8c(r1)
+00083458 [UPD 0000f580] stw       r0, 0x94(r1)
+0008345c [UPD 0000f584] addi      r31, r3, 0
+00083460 [UPD 0000f588] addi      r3, r31, 0x180
+00083464 [UPD 0000f58c] addi      r4, r1, 0x1c
+00083468 [UPD 0000f590] bl        0x95f84
+0008346c [UPD 0000f594] cmpwi     r3, 0
+00083470 [UPD 0000f598] bne       0x8358c
+00083474 [UPD 0000f59c] lwz       r5, 0x78(r1)
+00083478 [UPD 0000f5a0] cmplwi    r5, 0xa
+0008347c [UPD 0000f5a4] bge       0x83494
+00083480 [UPD 0000f5a8] addi      r3, r1, 8
+00083484 [UPD 0000f5ac] lis       r4, 0x3d
+00083488 [UPD 0000f5b0] addi      r4, r4, -0x3b3c ; ASCII '0%d'
+0008348c [UPD 0000f5b4] bl        0x3b9818
+00083490 [UPD 0000f5b8] b         0x834a4
+00083494 [UPD 0000f5bc] addi      r3, r1, 8
+00083498 [UPD 0000f5c0] lis       r4, 0x3d
+0008349c [UPD 0000f5c4] addi      r4, r4, -0x3b38 ; ASCII '%d'
+000834a0 [UPD 0000f5c8] bl        0x3b9818
+000834a4 [UPD 0000f5cc] lwz       r5, 0x74(r1)
+000834a8 [UPD 0000f5d0] cmplwi    r5, 0xa
+000834ac [UPD 0000f5d4] bge       0x834c4
+000834b0 [UPD 0000f5d8] addi      r3, r1, 0xc
+000834b4 [UPD 0000f5dc] lis       r4, 0x3d
+000834b8 [UPD 0000f5e0] addi      r4, r4, -0x3b34 ; ASCII '0%d'
+000834bc [UPD 0000f5e4] bl        0x3b9818
+000834c0 [UPD 0000f5e8] b         0x834d4
+000834c4 [UPD 0000f5ec] addi      r3, r1, 0xc
+000834c8 [UPD 0000f5f0] lis       r4, 0x3d
+000834cc [UPD 0000f5f4] addi      r4, r4, -0x3b30 ; ASCII '%d'
+000834d0 [UPD 0000f5f8] bl        0x3b9818
+000834d4 [UPD 0000f5fc] lwz       r5, 0x80(r1)
+000834d8 [UPD 0000f600] cmplwi    r5, 0xa
+000834dc [UPD 0000f604] bge       0x834f4
+000834e0 [UPD 0000f608] addi      r3, r1, 0x10
+000834e4 [UPD 0000f60c] lis       r4, 0x3d
+000834e8 [UPD 0000f610] addi      r4, r4, -0x3b2c ; ASCII '0%d'
+000834ec [UPD 0000f614] bl        0x3b9818
+000834f0 [UPD 0000f618] b         0x83504
+000834f4 [UPD 0000f61c] addi      r3, r1, 0x10
+000834f8 [UPD 0000f620] lis       r4, 0x3d
+000834fc [UPD 0000f624] addi      r4, r4, -0x3b28 ; ASCII '%d'
+00083500 [UPD 0000f628] bl        0x3b9818
+00083504 [UPD 0000f62c] lwz       r5, 0x84(r1)
+00083508 [UPD 0000f630] cmplwi    r5, 0xa
+0008350c [UPD 0000f634] bge       0x83524
+00083510 [UPD 0000f638] addi      r3, r1, 0x14
+00083514 [UPD 0000f63c] lis       r4, 0x3d
+00083518 [UPD 0000f640] addi      r4, r4, -0x3b24 ; ASCII '0%d'
+0008351c [UPD 0000f644] bl        0x3b9818
+00083520 [UPD 0000f648] b         0x83534
+00083524 [UPD 0000f64c] addi      r3, r1, 0x14
+00083528 [UPD 0000f650] lis       r4, 0x3d
+0008352c [UPD 0000f654] addi      r4, r4, -0x3b20 ; ASCII '%d'
+00083530 [UPD 0000f658] bl        0x3b9818
+00083534 [UPD 0000f65c] lwz       r5, 0x88(r1)
+00083538 [UPD 0000f660] cmplwi    r5, 0xa
+0008353c [UPD 0000f664] bge       0x83554
+00083540 [UPD 0000f668] addi      r3, r1, 0x18
+00083544 [UPD 0000f66c] lis       r4, 0x3d
+00083548 [UPD 0000f670] addi      r4, r4, -0x3b1c ; ASCII '0%d'
+0008354c [UPD 0000f674] bl        0x3b9818
+00083550 [UPD 0000f678] b         0x83564
+00083554 [UPD 0000f67c] addi      r3, r1, 0x18
+00083558 [UPD 0000f680] lis       r4, 0x3d
+0008355c [UPD 0000f684] addi      r4, r4, -0x3b18 ; ASCII '%d'
+00083560 [UPD 0000f688] bl        0x3b9818
+00083564 [UPD 0000f68c] lwz       r5, 0x7c(r1)
+00083568 [UPD 0000f690] addi      r3, r31, 0x289e
+0008356c [UPD 0000f694] lis       r4, 0x3d
+00083570 [UPD 0000f698] addi      r4, r4, -0x3b14 ; ASCII '%d:%s:%s:%s:%s:%s'
+00083574 [UPD 0000f69c] addi      r6, r1, 8
+00083578 [UPD 0000f6a0] addi      r7, r1, 0xc
+0008357c [UPD 0000f6a4] addi      r8, r1, 0x10
+00083580 [UPD 0000f6a8] addi      r9, r1, 0x14
+00083584 [UPD 0000f6ac] addi      r10, r1, 0x18
+00083588 [UPD 0000f6b0] bl        0x3b9818
+0008358c [UPD 0000f6b4] lwz       r31, 0x8c(r1)
+00083590 [UPD 0000f6b8] lwz       r0, 0x94(r1)
+00083594 [UPD 0000f6bc] mtlr      r0
+00083598 [UPD 0000f6c0] addi      r1, r1, 0x90
+0008359c [UPD 0000f6c4] blr       
+000835a0 [UPD 0000f6c8] stwu      r1, -0x18(r1)
+000835a4 [UPD 0000f6cc] mflr      r0
+000835a8 [UPD 0000f6d0] stw       r30, 0x10(r1)
+000835ac [UPD 0000f6d4] stw       r31, 0x14(r1)
+000835b0 [UPD 0000f6d8] stw       r0, 0x1c(r1)
+000835b4 [UPD 0000f6dc] addi      r31, r3, 0
+000835b8 [UPD 0000f6e0] addi      r30, r4, 0
+000835bc [UPD 0000f6e4] lwz       r30, 0(r30)
+000835c0 [UPD 0000f6e8] bl        0x1bbb44
+000835c4 [UPD 0000f6ec] lwz       r11, 0(r30)
+000835c8 [UPD 0000f6f0] lwz       r11, 0x28(r11)
+000835cc [UPD 0000f6f4] mtlr      r11
+000835d0 [UPD 0000f6f8] addi      r4, r1, 8
+000835d4 [UPD 0000f6fc] addi      r3, r30, 0
+000835d8 [UPD 0000f700] li        r5, 4
+000835dc [UPD 0000f704] li        r6, 8
+000835e0 [UPD 0000f708] blrl      
+000835e4 [UPD 0000f70c] cmpwi     r3, 0
+000835e8 [UPD 0000f710] bne       0x8365c
+000835ec [UPD 0000f714] lhz       r12, 8(r1)
+000835f0 [UPD 0000f718] cmpwi     r12, 0
+000835f4 [UPD 0000f71c] bne       0x83610
+000835f8 [UPD 0000f720] lis       r4, 0x3d
+000835fc [UPD 0000f724] addi      r4, r4, -0x3b00 ; ASCII 'No'
+00083600 [UPD 0000f728] addi      r3, r31, 0x2aa8
+00083604 [UPD 0000f72c] lswi      r5, r4, 3
+00083608 [UPD 0000f730] stswi     r5, r3, 3
+0008360c [UPD 0000f734] b         0x83624
+00083610 [UPD 0000f738] lis       r4, 0x3d
+00083614 [UPD 0000f73c] addi      r4, r4, -0x3afc ; ASCII 'Yes'
+00083618 [UPD 0000f740] addi      r3, r31, 0x2aa8
+0008361c [UPD 0000f744] lswi      r5, r4, 4
+00083620 [UPD 0000f748] stswi     r5, r3, 4
+00083624 [UPD 0000f74c] lhz       r12, 0xa(r1)
+00083628 [UPD 0000f750] cmpwi     r12, 0x3fff
+0008362c [UPD 0000f754] bne       0x83648
+00083630 [UPD 0000f758] lis       r4, 0x3d
+00083634 [UPD 0000f75c] addi      r4, r4, -0x3af8 ; ASCII 'No'
+00083638 [UPD 0000f760] addi      r3, r31, 0x2ab2
+0008363c [UPD 0000f764] lswi      r5, r4, 3
+00083640 [UPD 0000f768] stswi     r5, r3, 3
+00083644 [UPD 0000f76c] b         0x8365c
+00083648 [UPD 0000f770] lis       r4, 0x3d
+0008364c [UPD 0000f774] addi      r4, r4, -0x3af4 ; ASCII 'Yes'
+00083650 [UPD 0000f778] addi      r3, r31, 0x2ab2
+00083654 [UPD 0000f77c] lswi      r5, r4, 4
+00083658 [UPD 0000f780] stswi     r5, r3, 4
+0008365c [UPD 0000f784] lwz       r30, 0x10(r1)
+00083660 [UPD 0000f788] lwz       r31, 0x14(r1)
+00083664 [UPD 0000f78c] lwz       r0, 0x1c(r1)
+00083668 [UPD 0000f790] mtlr      r0
+0008366c [UPD 0000f794] addi      r1, r1, 0x18
+00083670 [UPD 0000f798] blr       
+00083674 [UPD 0000f79c] stwu      r1, -0x10(r1)
+00083678 [UPD 0000f7a0] mflr      r0
+0008367c [UPD 0000f7a4] stw       r31, 0xc(r1)
+00083680 [UPD 0000f7a8] stw       r0, 0x14(r1)
+00083684 [UPD 0000f7ac] addi      r31, r3, 0
+00083688 [UPD 0000f7b0] bl        0x1bbb44
+0008368c [UPD 0000f7b4] bl        0x8398c
+00083690 [UPD 0000f7b8] clrlwi    r3, r3, 0x18
+00083694 [UPD 0000f7bc] cmpwi     r3, 0
+00083698 [UPD 0000f7c0] beq       0x836b4
+0008369c [UPD 0000f7c4] lis       r4, 0x3d
+000836a0 [UPD 0000f7c8] addi      r4, r4, -0x3af0 ; ASCII 'Yes'
+000836a4 [UPD 0000f7cc] addi      r3, r31, 0x2a9e
+000836a8 [UPD 0000f7d0] lswi      r5, r4, 4
+000836ac [UPD 0000f7d4] stswi     r5, r3, 4
+000836b0 [UPD 0000f7d8] b         0x836c8
+000836b4 [UPD 0000f7dc] lis       r4, 0x3d
+000836b8 [UPD 0000f7e0] addi      r4, r4, -0x3aec ; ASCII 'No'
+000836bc [UPD 0000f7e4] addi      r3, r31, 0x2a9e
+000836c0 [UPD 0000f7e8] lswi      r5, r4, 3
+000836c4 [UPD 0000f7ec] stswi     r5, r3, 3
+000836c8 [UPD 0000f7f0] lwz       r31, 0xc(r1)
+000836cc [UPD 0000f7f4] lwz       r0, 0x14(r1)
+000836d0 [UPD 0000f7f8] mtlr      r0
+000836d4 [UPD 0000f7fc] addi      r1, r1, 0x10
+000836d8 [UPD 0000f800] blr       
+000836dc [UPD 0000f804] stwu      r1, -0x20(r1)
+000836e0 [UPD 0000f808] mflr      r0
+000836e4 [UPD 0000f80c] stw       r30, 0x18(r1)
+000836e8 [UPD 0000f810] stw       r31, 0x1c(r1)
+000836ec [UPD 0000f814] stw       r0, 0x24(r1)
+000836f0 [UPD 0000f818] addi      r30, r3, 0
+000836f4 [UPD 0000f81c] addi      r31, r4, 0
+000836f8 [UPD 0000f820] lwz       r31, 0(r31)
+000836fc [UPD 0000f824] li        r11, 0
+00083700 [UPD 0000f828] stw       r11, 8(r1)
+00083704 [UPD 0000f82c] lwz       r3, 0x2abc(r30)
+00083708 [UPD 0000f830] cmpwi     r3, 0
+0008370c [UPD 0000f834] beq       0x8371c
+00083710 [UPD 0000f838] bl        0x3bdd20
+00083714 [UPD 0000f83c] li        r12, 0
+00083718 [UPD 0000f840] stw       r12, 0x2abc(r30)
+0008371c [UPD 0000f844] lwz       r12, 0(r31)
+00083720 [UPD 0000f848] lwz       r12, 0x28(r12)
+00083724 [UPD 0000f84c] mtlr      r12
+00083728 [UPD 0000f850] addi      r4, r1, 8
+0008372c [UPD 0000f854] addi      r3, r31, 0
+00083730 [UPD 0000f858] li        r5, 4
+00083734 [UPD 0000f85c] li        r6, 0xc
+00083738 [UPD 0000f860] blrl      
+0008373c [UPD 0000f864] cmpwi     r3, 0
+00083740 [UPD 0000f868] blt       0x837a8
+00083744 [UPD 0000f86c] lwz       r12, 0(r31)
+00083748 [UPD 0000f870] lwz       r12, 0x28(r12)
+0008374c [UPD 0000f874] mtlr      r12
+00083750 [UPD 0000f878] addi      r4, r1, 0xc
+00083754 [UPD 0000f87c] addi      r3, r31, 0
+00083758 [UPD 0000f880] li        r5, 4
+0008375c [UPD 0000f884] li        r6, 0xb
+00083760 [UPD 0000f888] blrl      
+00083764 [UPD 0000f88c] cmpwi     r3, 0
+00083768 [UPD 0000f890] blt       0x837a8
+0008376c [UPD 0000f894] addi      r31, r1, 0x10
+00083770 [UPD 0000f898] addi      r3, r31, 0
+00083774 [UPD 0000f89c] bl        0xe4880
+00083778 [UPD 0000f8a0] lbz       r3, 0(r3)
+0008377c [UPD 0000f8a4] addi      r31, r1, 0x10
+00083780 [UPD 0000f8a8] lwz       r4, 8(r1)
+00083784 [UPD 0000f8ac] addi      r5, r30, 0x2abc
+00083788 [UPD 0000f8b0] addi      r3, r31, 0
+0008378c [UPD 0000f8b4] bl        0xe47b8
+00083790 [UPD 0000f8b8] addi      r31, r1, 0x10
+00083794 [UPD 0000f8bc] lwz       r4, 0xc(r1)
+00083798 [UPD 0000f8c0] lwz       r5, 8(r1)
+0008379c [UPD 0000f8c4] lwz       r6, 0x2abc(r30)
+000837a0 [UPD 0000f8c8] addi      r3, r31, 0
+000837a4 [UPD 0000f8cc] bl        0xe4610
+000837a8 [UPD 0000f8d0] lwz       r12, 0x2abc(r30)
+000837ac [UPD 0000f8d4] cmpwi     r12, 0
+000837b0 [UPD 0000f8d8] bne       0x837bc
+000837b4 [UPD 0000f8dc] li        r12, 0
+000837b8 [UPD 0000f8e0] stb       r12, 0x2ac0(r30)
+000837bc [UPD 0000f8e4] lwz       r30, 0x18(r1)
+000837c0 [UPD 0000f8e8] lwz       r31, 0x1c(r1)
+000837c4 [UPD 0000f8ec] lwz       r0, 0x24(r1)
+000837c8 [UPD 0000f8f0] mtlr      r0
+000837cc [UPD 0000f8f4] addi      r1, r1, 0x20
+000837d0 [UPD 0000f8f8] blr       
+000837d4 [UPD 0000f8fc] stwu      r1, -0x28(r1)
+000837d8 [UPD 0000f900] mflr      r0
+000837dc [UPD 0000f904] stw       r30, 0x20(r1)
+000837e0 [UPD 0000f908] stw       r31, 0x24(r1)
+000837e4 [UPD 0000f90c] stw       r0, 0x2c(r1)
+000837e8 [UPD 0000f910] addi      r31, r4, 0
+000837ec [UPD 0000f914] li        r30, 0
+000837f0 [UPD 0000f918] lwz       r31, 0(r31)
+000837f4 [UPD 0000f91c] lwz       r10, 0(r31)
+000837f8 [UPD 0000f920] lwz       r10, 0x28(r10)
+000837fc [UPD 0000f924] mtlr      r10
+00083800 [UPD 0000f928] addi      r4, r1, 8
+00083804 [UPD 0000f92c] addi      r3, r31, 0
+00083808 [UPD 0000f930] li        r5, 0x14
+0008380c [UPD 0000f934] li        r6, 0xd
+00083810 [UPD 0000f938] blrl      
+00083814 [UPD 0000f93c] cmpwi     r3, 0
+00083818 [UPD 0000f940] bne       0x8382c
+0008381c [UPD 0000f944] lwz       r12, 8(r1)
+00083820 [UPD 0000f948] cmpwi     r12, 1
+00083824 [UPD 0000f94c] bne       0x8382c
+00083828 [UPD 0000f950] li        r30, 1
+0008382c [UPD 0000f954] clrlwi    r3, r30, 0x18
+00083830 [UPD 0000f958] lwz       r30, 0x20(r1)
+00083834 [UPD 0000f95c] lwz       r31, 0x24(r1)
+00083838 [UPD 0000f960] lwz       r0, 0x2c(r1)
+0008383c [UPD 0000f964] mtlr      r0
+00083840 [UPD 0000f968] addi      r1, r1, 0x28
+00083844 [UPD 0000f96c] blr       
+00083848 [UPD 0000f970] stwu      r1, -8(r1)
+0008384c [UPD 0000f974] mflr      r0
+00083850 [UPD 0000f978] stw       r0, 0xc(r1)
+00083854 [UPD 0000f97c] lis       r3, 0x48
+00083858 [UPD 0000f980] addi      r3, r3, 0x558
+0008385c [UPD 0000f984] bl        0x838c8
+00083860 [UPD 0000f988] lbz       r3, 0(r3)
+00083864 [UPD 0000f98c] lwz       r0, 0xc(r1)
+00083868 [UPD 0000f990] mtlr      r0
+0008386c [UPD 0000f994] addi      r1, r1, 8
+00083870 [UPD 0000f998] blr       
+00083874 [UPD 0000f99c] stwu      r1, -8(r1)
+00083878 [UPD 0000f9a0] mflr      r0
+0008387c [UPD 0000f9a4] stw       r0, 0xc(r1)
+00083880 [UPD 0000f9a8] lis       r3, 0x48
+00083884 [UPD 0000f9ac] addi      r3, r3, 0x558
+00083888 [UPD 0000f9b0] li        r4, 0
+0008388c [UPD 0000f9b4] bl        0x83924
+00083890 [UPD 0000f9b8] lwz       r0, 0xc(r1)
+00083894 [UPD 0000f9bc] mtlr      r0
+00083898 [UPD 0000f9c0] addi      r1, r1, 8
+0008389c [UPD 0000f9c4] blr       
+000838a0 [UPD 0000f9c8] lis       r3, 0x3d
+000838a4 [UPD 0000f9cc] addi      r3, r3, -0x3cfc ; ASCII 'GetPictureParams'
+000838a8 [UPD 0000f9d0] blr       

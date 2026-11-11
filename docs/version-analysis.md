@@ -51,7 +51,7 @@
 ## 1.0.3 的具体变化
 
 1. 新增命令字符串 `^<Nak />`。其构造函数根据内部状态在 `Ack` 与 `Nak` 之间选择，并在一个分支中重置该状态。已确认有调用代码，尚未确认后背对它的实际响应和适用时序。
-2. 新增 `^<SetCameraParam PowerSource="`，并出现 `FireWire`、`CameraBattery`、`powersourceselection`、`support`、`notsupport`。这为供电来源能力判断与设置提供了线索，Aptus II 5 是否报告该能力待实测。
+2. 新增 `^<SetCameraParam PowerSource="`，并出现 `FireWire`、`CameraBattery`、`powersourceselection`、`support`、`notsupport`。这为供电来源能力判断与设置提供线索，应按具体无线后背下发字段判断；Aptus II 不作为蓝牙目标。
 3. 新增 `AsyncCommand`、`polling_timeout`、`IfGUIIsActive`、`ReadyToShoot` 等通知或状态处理线索。其中 `AsyncCommand` 处理函数实际读取并转换 `polling_timeout` 字段。
 4. 新增固件更新提示及界面缓冲相关字符串，主程序和启动器资源也有变化。原厂 [1.0.3 安装指南](https://web.archive.org/web/20081230142347id_/http://www.leaf-photography.com/imgs/uploads/user%20guides/leafwiview_103_installation.pdf) 的印刷第 1 页明确介绍 Windows Mobile 6 与 VGA 支持；已核对 PDF 文本及渲染页面。
 
@@ -63,5 +63,5 @@
 
 `GetImage` 中的文件名可以指向 `.mos` 拍摄文件，这不足以证明返回的是完整 MOS 文件。程序含 JPEG 处理代码；完整原片读取与连续传感器取景仍需分别确认。`RawFrameBuffer` 字符串也没有被当作原片传输证据。
 
-此阶段没有修改后背固件、配对设置或照片。Aptus II 5 的无线服务、完整握手、拍后预览和 Android 16 的连接结果均为待验证。
+此静态分析阶段没有修改后背固件、配对设置或照片。2026-11-11 用户补充 Valeo 22Wi、Aptus 22 可连接和读图，并纠正 Aptus II 没有蓝牙。新增控制仍需实测；经典 4.701 固件二次验证见 [固件调查](firmware-bluetooth-survey.md)。
 

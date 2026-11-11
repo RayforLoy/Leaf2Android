@@ -1,0 +1,36 @@
+00074000 [file 00000128] mr        r3, r3
+00074004 [file 0000012c] mr        r3, r3
+00074008 [file 00000130] lis       r2, 0x46
+0007400c [file 00000134] addi      r2, r2, -0x4bd8 ; str@0x45b428 ' Product'
+00074010 [file 00000138] lis       r13, 0x64
+00074014 [file 0000013c] addi      r13, r13, -0x7490
+00074018 [file 00000140] b         0x400764
+0007401c [file 00000144] li        r5, 0
+00074020 [file 00000148] cmpwi     r4, 0
+00074024 [file 0000014c] beq       0x7407c
+00074028 [file 00000150] clrlwi    r12, r4, 0x1f
+0007402c [file 00000154] cmpwi     r12, 0
+00074030 [file 00000158] beq       0x74050
+00074034 [file 0000015c] addi      r4, r4, -1
+00074038 [file 00000160] lbz       r11, 0(r3)
+0007403c [file 00000164] clrlwi    r11, r11, 0x18
+00074040 [file 00000168] add       r5, r5, r11
+00074044 [file 0000016c] addi      r3, r3, 1
+00074048 [file 00000170] cmpwi     r4, 0
+0007404c [file 00000174] beq       0x7407c
+00074050 [file 00000178] srwi      r4, r4, 1
+00074054 [file 0000017c] addi      r3, r3, -2
+00074058 [file 00000180] lbzu      r12, 2(r3)
+0007405c [file 00000184] clrlwi    r12, r12, 0x18
+00074060 [file 00000188] add       r5, r5, r12
+00074064 [file 0000018c] addi      r4, r4, -1
+00074068 [file 00000190] lbz       r10, 1(r3)
+0007406c [file 00000194] clrlwi    r10, r10, 0x18
+00074070 [file 00000198] add       r5, r5, r10
+00074074 [file 0000019c] cmpwi     r4, 0
+00074078 [file 000001a0] bne       0x74058
+0007407c [file 000001a4] clrlwi    r3, r5, 0x10
+00074080 [file 000001a8] blr       
+00074084 [file 000001ac] lis       r3, 0x89
+00074088 [file 000001b0] addi      r3, r3, 0x5448
+0007408c [file 000001b4] lbz       r11, 0x1c(r3)

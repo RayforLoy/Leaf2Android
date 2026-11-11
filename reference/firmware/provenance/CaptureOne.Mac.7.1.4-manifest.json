@@ -1,0 +1,473 @@
+{
+  "source": "CaptureOne.Mac.7.1.4",
+  "installer_url": "https://web.archive.org/web/20140212192058id_/http://captureintegration.com/download/CaptureOne7.1.4.dmg",
+  "installer_sha1": "8de417314e4734cff19e31b70f40106554c34103",
+  "app_version": [
+    {
+      "CFBundleName": "Capture One",
+      "CFBundleIdentifier": "com.phaseone.captureone7",
+      "CFBundleShortVersionString": "7.1.4.92",
+      "CFBundleVersion": "7.1.4.92"
+    }
+  ],
+  "file_count": 84,
+  "total_bytes": 138723283,
+  "files": [
+    {
+      "file": "BootRecovery.UPD",
+      "size": 6113344,
+      "sha256": "4f71ebe188f8dd301dc0afcaa52e059296f29f851114ea7237c41df23bada535",
+      "header_magic": "LEAF FRM",
+      "header_version": 4294967294,
+      "firmware_version": null
+    },
+    {
+      "file": "Firmware.config",
+      "size": 74,
+      "sha256": "e989a960fb59cbec5cee54147612085477bc747a93028e58253b46be7d5329ed"
+    },
+    {
+      "file": "FirmWareAFi.BIN",
+      "size": 9810419,
+      "sha256": "2be7ce63460de2908c81c48d5bd26cdec834b9b4d7ffd2a33928160f2cd83549"
+    },
+    {
+      "file": "FirmwareAFi.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "header_magic": "LEAF FRM",
+      "header_version": 5041,
+      "firmware_version": "5.041"
+    },
+    {
+      "file": "FirmWareAFiLegacy.BIN",
+      "size": 9810419,
+      "sha256": "2be7ce63460de2908c81c48d5bd26cdec834b9b4d7ffd2a33928160f2cd83549"
+    },
+    {
+      "file": "FirmwareAFiLegacy.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "header_magic": "LEAF FRM",
+      "header_version": 5041,
+      "firmware_version": "5.041"
+    },
+    {
+      "file": "FirmWareAptus.BIN",
+      "size": 7730663,
+      "sha256": "4a0d32186d95bd0aaf0a741d161b98712e30beac595d7d5d10dabffaa86397c0"
+    },
+    {
+      "file": "FirmwareAptus.UPD",
+      "size": 4235648,
+      "sha256": "a2287716927a18c9bbd7834be327f592289f8a48aa2859b4d252b813cc82741a",
+      "header_magic": "LEAF FRM",
+      "header_version": 4701,
+      "firmware_version": "4.701"
+    },
+    {
+      "file": "FirmWareAptusII.BIN",
+      "size": 9810419,
+      "sha256": "2be7ce63460de2908c81c48d5bd26cdec834b9b4d7ffd2a33928160f2cd83549"
+    },
+    {
+      "file": "FirmWareAptusII.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "header_magic": "LEAF FRM",
+      "header_version": 5041,
+      "firmware_version": "5.041"
+    },
+    {
+      "file": "FirmWareAptusII4056.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "header_magic": "LEAF FRM",
+      "header_version": 5041,
+      "firmware_version": "5.041"
+    },
+    {
+      "file": "FirmWareAptusII80.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "header_magic": "LEAF FRM",
+      "header_version": 5041,
+      "firmware_version": "5.041"
+    },
+    {
+      "file": "FirmWareAptusLegacy.BIN",
+      "size": 7733491,
+      "sha256": "0e702ce6dfefd40808a4aca12211ede761b3a94be6e6359e353b993b6bddcd3c"
+    },
+    {
+      "file": "FirmwareAptusLegacy.UPD",
+      "size": 4234728,
+      "sha256": "71b338044ef61b39ee0ef356bc8508da42bbbff6758fba88ccf47cdb5e048ed8",
+      "header_magic": "LEAF FRM",
+      "header_version": 4700,
+      "firmware_version": "4.700"
+    },
+    {
+      "file": "FirmwareAptusS.UPD",
+      "size": 4235648,
+      "sha256": "a2287716927a18c9bbd7834be327f592289f8a48aa2859b4d252b813cc82741a",
+      "header_magic": "LEAF FRM",
+      "header_version": 4701,
+      "firmware_version": "4.701"
+    },
+    {
+      "file": "FirmwareAptusSLegacy.UPD",
+      "size": 4234728,
+      "sha256": "71b338044ef61b39ee0ef356bc8508da42bbbff6758fba88ccf47cdb5e048ed8",
+      "header_magic": "LEAF FRM",
+      "header_version": 4700,
+      "firmware_version": "4.700"
+    },
+    {
+      "file": "FirmWareMamiyaDM.BIN",
+      "size": 9810419,
+      "sha256": "2be7ce63460de2908c81c48d5bd26cdec834b9b4d7ffd2a33928160f2cd83549"
+    },
+    {
+      "file": "FirmWareMamiyaDM.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "header_magic": "LEAF FRM",
+      "header_version": 5041,
+      "firmware_version": "5.041"
+    },
+    {
+      "file": "FirmWareMamiyaDM4056.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+      "header_magic": "LEAF FRM",
+      "header_version": 5041,
+      "firmware_version": "5.041"
+    },
+    {
+      "file": "FirmWareRBFs/Chipset.ubf",
+      "size": 988165,
+      "sha256": "7d2f0510f9794ac7bb649286852c00fc6a57bfcd925316cfbfb5d671199ef8b3"
+    },
+    {
+      "file": "FirmWareRBFs/Chipset2.ubf",
+      "size": 2119274,
+      "sha256": "91846d6fc4b55b6341a1c765fe3460d788ed40edf58f9633e824e3792dc1f8e2"
+    },
+    {
+      "file": "FirmWareRBFs/Chipset2_AptusII40.ubf",
+      "size": 2119274,
+      "sha256": "d7859893d989f19cf796f8899f691b22f60efa9de57a7904f8d80383b8db5d23"
+    },
+    {
+      "file": "FirmWareRBFs/Chipset2_AptusII56_4outputs.ubf",
+      "size": 2119274,
+      "sha256": "b612195d930c79da477e1522041d700b5253f0592bb4f495ef6fb02ab6fb583c"
+    },
+    {
+      "file": "FirmWareRBFs/Chipset2_AptusII80.ubf",
+      "size": 2119274,
+      "sha256": "8a4170f881aa8e6268d65186340e2f23dd0a6e23a691e5bb2882d2de208c4bf7"
+    },
+    {
+      "file": "FirmWareRBFs/Chipset2_AptusS.ubf",
+      "size": 2119274,
+      "sha256": "e095992ada0225431d04020ce38d63432058f1c1c6bb1114d70344b498699e11"
+    },
+    {
+      "file": "FirmWareRBFs/ChipsetDecompress.ubf",
+      "size": 988165,
+      "sha256": "7640c63e5fb6994ecdc1ae5a3cf3319788d99fa945234c70a35bbae8c0288588"
+    },
+    {
+      "file": "FirmWareRBFs/ContaxStill22.ubf",
+      "size": 98319,
+      "sha256": "11aa0af40f3b2db0f43db0f9b0f0ffab6304ade93aa03d59e11ad4d43422ed09"
+    },
+    {
+      "file": "FirmWareRBFs/ContaxStill75.ubf",
+      "size": 98319,
+      "sha256": "462393eececa2c9724b38716d92001835077ed5b3fcd9286c44b08ec4b7a6f96"
+    },
+    {
+      "file": "FirmWareRBFs/H1Still22.ubf",
+      "size": 98319,
+      "sha256": "1a4dba85f81af7048237cc29afa293b00b20f81b5631c3f94b878a2c1a9b4670"
+    },
+    {
+      "file": "FirmWareRBFs/H1Still75.ubf",
+      "size": 98319,
+      "sha256": "be36131cb1cbbdfb285d99d7fd1473eb0e0a7903dd9ced07c92e864b6c951ef1"
+    },
+    {
+      "file": "FirmWareRBFs/HasselbladStill22.ubf",
+      "size": 98319,
+      "sha256": "7af70b92602f51e16977132de0e70dc811d49b103167559dfa92187562ad27b0"
+    },
+    {
+      "file": "FirmWareRBFs/HasselbladStill75.ubf",
+      "size": 98319,
+      "sha256": "d79aaad55f7749f5a1c91a2e3c766e000ea4b7a4df97a33bc4d3c4d23cb2d318"
+    },
+    {
+      "file": "FirmWareRBFs/LargeFormatStill22.ubf",
+      "size": 98319,
+      "sha256": "e4d587991c21deca22495d3683b4292fa017538053c49a2b9767b5d82735e17c"
+    },
+    {
+      "file": "FirmWareRBFs/LargeFormatStill75.ubf",
+      "size": 98319,
+      "sha256": "a29e6d5011cfcd81720c9aef82a2cd46286258b7fe97081bb7e9662b4f4af02c"
+    },
+    {
+      "file": "FirmWareRBFs/MamiyaStill22.ubf",
+      "size": 98319,
+      "sha256": "174077bff825dd36c000530e9e6341c7a3d98e13ca07f0474fa486ad61a8ffd8"
+    },
+    {
+      "file": "FirmWareRBFs/MamiyaStill75.ubf",
+      "size": 98319,
+      "sha256": "d54afd2979f2893ada36346b1966418021c953cae71fe2cf0925b7269fb0c2fb"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiLargeFormatStill56.ubf",
+      "size": 139612,
+      "sha256": "d646306ea93473a57e01c5ff8ca1f4643ce7514c4c3798a8377df6dd7d200d39"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiStill22.ubf",
+      "size": 96151,
+      "sha256": "67dedb3b4f8ab3c5290f4a11e27425e26b157288865307e979b4ceb00c851499"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiStill28.ubf",
+      "size": 93827,
+      "sha256": "3f55abd87234a58c5f7d0124a23dbdf3ac2bc66a10487870022bd0e2f6760bcb"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiStill33.ubf",
+      "size": 96565,
+      "sha256": "2bb1a0eeb5bb83308891256b11c88eab703d4cffe8b1ceaca5fa3ec95f14bef4"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiStill56.ubf",
+      "size": 139612,
+      "sha256": "8dcb3fc8d1abb92268af83239c1fe637bde5aa2d53082d73b888d95fc87436d4"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiVideo22.ubf",
+      "size": 99951,
+      "sha256": "60677baee2e6956d95bd352f1be4b61cc2f46a63f80c3da2e780ff456e810d23"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiVideo28.ubf",
+      "size": 95747,
+      "sha256": "9e98d3df43e4154d9ae5adaf3b1a0c6352c3a8e4558409c6345fd3d3b8eacf1d"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFiVideo33.ubf",
+      "size": 95747,
+      "sha256": "19a6c9c2dd35d89239030a9db417b8c1d2e68f864403c59ce63364e7d8320508"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFi_IILargeFormatStill33.ubf",
+      "size": 93634,
+      "sha256": "e55f9b73ce3e846cdd127b5f0e23a160c21156d150acc35e2ac06bc24ee6d7a0"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFi_IIStill33.ubf",
+      "size": 93634,
+      "sha256": "b02e7e4df178a518ae2ed8842f2aac8f489436ef2537d99e7fee1be56b76f1cc"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAFi_IIVideo33.ubf",
+      "size": 95747,
+      "sha256": "09f5dfafb755c9cac9959efc1c966d451e19dea1dcc3d1e3e701106e051a6d7c"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAptus_IIVideo22.ubf",
+      "size": 96914,
+      "sha256": "c2047af8c2f7ffe10e21e5b60875b413cf5663fb2e60b28032f3f5078738b4a4"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAptus_IIVideo28.ubf",
+      "size": 96914,
+      "sha256": "c6321ed2087b79decdfde4a8555a92b12d39d372dbce67b9c33a2a4d492540b7"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIAptus_IIVideo33.ubf",
+      "size": 96914,
+      "sha256": "cff21bac5df4169e2ebb76850dcd71f02ae82a3b0a79cd635bd8971f7010bb2f"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIContaxStill22.ubf",
+      "size": 96611,
+      "sha256": "c0d7c2e7e6ce32531da6c8326d586bcd24f2ef6948e1684999cc691b6af2ea51"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIContaxStill33.ubf",
+      "size": 96406,
+      "sha256": "4db3a626ab9271cc791d3fb2b1f29adf6c2402f5a31cab4302013aaad7c6efe0"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill22.ubf",
+      "size": 95292,
+      "sha256": "bda3f33ed52e8b59b376ac5993109c83c6e8f64b88593ef4c5ea518048d2442d"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill28.ubf",
+      "size": 96618,
+      "sha256": "7660dc52909f9cf353b051f3593f86aea0105095c7b52159a787a321d7fd31ec"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill31K.ubf",
+      "size": 124597,
+      "sha256": "5a344e7247853ae3a4535bcd9d43b3c42b42ccbb2bdf7f11f79adf710f0242cc"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill33.ubf",
+      "size": 95190,
+      "sha256": "03c8b016b42d79d7865432326b68028f1e0bf9b3d099d78884c4b3a79d8361ac"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill40.ubf",
+      "size": 139852,
+      "sha256": "e92d8bbbca79abfe801187b4004d57c2304a27c8188211f906f15b0299316320"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill56.ubf",
+      "size": 142592,
+      "sha256": "1fb4b5ba19dc1c69415f5e97f535a7d25bae53ec366bdb1e3eb4a3e16e440909"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill56R.ubf",
+      "size": 141521,
+      "sha256": "a416a570a676044b6a5ff5e62d696a119d501c1dd9dd631d932241723bf88003"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIILargeFormatStill80.ubf",
+      "size": 128600,
+      "sha256": "68a98fc1e97babbcd9f6b5fd617fbc1a4ed2182ddfc372dd74a482d11ac88ebc"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill22.ubf",
+      "size": 95984,
+      "sha256": "0866b30a36ddee36341a73294c93336a9c33d04af0fe44e940edee7265a8b4a1"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill28.ubf",
+      "size": 95984,
+      "sha256": "9ae0bc933306372dfc5d35772942333823345e1d468fea5d93e945bf4e263a7a"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIMamiyaAptus_IIStill33.ubf",
+      "size": 95984,
+      "sha256": "00396f9621918cb123d57df5c07f144cc082a5b3f333ec49f2b9784c095461d4"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIMamiyaStill22.ubf",
+      "size": 95292,
+      "sha256": "e7409c03a6721f7eb74b9461c8fcd512712ecb228cd3efd02c1b396a862239ae"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIMamiyaStill28.ubf",
+      "size": 96618,
+      "sha256": "03c6a6961b704919fecb79aa8d6af90e8efb0138557cae8074f940c8693e7c4f"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIMamiyaStill33.ubf",
+      "size": 95190,
+      "sha256": "06b5cb0859715d622ec1ff2f4dffb4490f8c3d13c72f2f008454ecd7b885fd9a"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill22.ubf",
+      "size": 95292,
+      "sha256": "a0749664fd76ed4f112ea2243673b26e47fe26981a761a07231db6ae07f6c197"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill28.ubf",
+      "size": 96618,
+      "sha256": "f52d5639ee1cc0467ec424fab5af52d1b3a0cef446da4c96b0ceafb53ab0992c"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill31K.ubf",
+      "size": 124597,
+      "sha256": "1675e2d0c68bf3bd77cf33f1a58d12f3a39c0048fabf1e149fecd8689e3104e1"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill33.ubf",
+      "size": 95190,
+      "sha256": "1c25d13fb0a1f6c269266ff1d9268f85615d28485796f15d87203068a594c23b"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill40.ubf",
+      "size": 139852,
+      "sha256": "258e213519ba87397fb56a9c326a71d19ad7793f0849aa54f1b4f295ffca9967"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill56.ubf",
+      "size": 142592,
+      "sha256": "23b3a0ec83326a9706b9e586d25d6e568bb666c095221e47f23e898b4ee399dc"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill56R.ubf",
+      "size": 141521,
+      "sha256": "9ad5c3e9d04587d7bb5ffe1f837a95df6431bddf088b5d63c27de0c4d134ddad"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIStill80.ubf",
+      "size": 128600,
+      "sha256": "e6973cd216907a2e61844020c9b3aeadc6bacf9dcd544e98ddd4d30d3d2bda2e"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo22.ubf",
+      "size": 99951,
+      "sha256": "297e943967a6d5f10adc4ecb7ed842c201ac72d1705246542c83eaf6584071ca"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo28.ubf",
+      "size": 100442,
+      "sha256": "5a1ae55b32ea188007adcdc766323de08760bf9bc5f91ea668e3d38a6640bf36"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo31K.ubf",
+      "size": 100442,
+      "sha256": "32341279552272bac85822e86a282d4f52b456b8e6370e9464165e21e939cca8"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo33.ubf",
+      "size": 100442,
+      "sha256": "a08a171ee044b9cd34f24edba7c005259815333328581f8530b622f9dfbecc11"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo40.ubf",
+      "size": 134456,
+      "sha256": "0aaf6f067f23e40a8f62e82e8f099958bb6a63305df76b7e511b6b4b81cdd10a"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo56.ubf",
+      "size": 133499,
+      "sha256": "292edf35afc28e89a4bb803ea6147cb27d60f763ccc73505828f4405e7b7405a"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo56R.ubf",
+      "size": 131419,
+      "sha256": "5c84af87d97a82d90e2fc932eee649dee7f6680a2c9987565320ad7f428b4185"
+    },
+    {
+      "file": "FirmWareRBFs/MarkIIVideo80.ubf",
+      "size": 134534,
+      "sha256": "4abe243b94a37ef0226e412487d67ad85772bc4c48317a0ecce5f0e6d3ee14c3"
+    },
+    {
+      "file": "FirmWareRBFs/Video22.ubf",
+      "size": 98319,
+      "sha256": "425790b2bafc30bd95102c97912c938695ecf32a7329f2a38893ac0185f8fb88"
+    },
+    {
+      "file": "FirmWareRBFs/Video75.ubf",
+      "size": 98319,
+      "sha256": "ca8baab33c7555361b44ce913fb419d599df840d70515ae3de95121bf099c5e7"
+    }
+  ]
+}

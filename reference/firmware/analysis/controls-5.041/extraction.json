@@ -1,0 +1,2385 @@
+{
+  "schema_version": 1,
+  "source": "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD",
+  "source_sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+  "source_size": 6021144,
+  "firmware_version": "5.041",
+  "architecture": "PowerPC 32-bit big-endian",
+  "capstone_version": "5.0.6",
+  "address_mapping": "UPD file offset = virtual address - 0x74000 + 0x128",
+  "scope": "Static evidence only; no hardware or Bluetooth session was run",
+  "disassembly": [
+    {
+      "file": "pda-message-catalog.ppc.txt",
+      "ranges": [
+        [
+          1058468,
+          1059104
+        ]
+      ],
+      "sha256": "d0a7920376e290ca01b847a9bddda049d79a2c9215efd38de124670f5fd9a303",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 1059056,
+          "string_va": 4648496,
+          "text": "Problem with m_MessageCatalog max size: %d"
+        }
+      ]
+    },
+    {
+      "file": "get-picture-params.ppc.txt",
+      "ranges": [
+        [
+          555740,
+          560576
+        ]
+      ],
+      "sha256": "8c8d424442ba28cb21ce449abcc666e8d5263a986be43195685f9c13c9bd00a8",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 556196,
+          "string_va": 4548656,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 556280,
+          "string_va": 4548668,
+          "text": "XMP_tag"
+        },
+        {
+          "instruction_va": 556560,
+          "string_va": 4548676,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 556704,
+          "string_va": 4548680,
+          "text": ",%d,%d,%d,%d"
+        },
+        {
+          "instruction_va": 556816,
+          "string_va": 4548696,
+          "text": "No"
+        },
+        {
+          "instruction_va": 556844,
+          "string_va": 4548700,
+          "text": "Process"
+        },
+        {
+          "instruction_va": 557180,
+          "string_va": 4548708,
+          "text": "0:00:00:00:00:00"
+        },
+        {
+          "instruction_va": 557216,
+          "string_va": 4548728,
+          "text": "No"
+        },
+        {
+          "instruction_va": 557496,
+          "string_va": 4548732,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 557580,
+          "string_va": 4548736,
+          "text": "./%s"
+        },
+        {
+          "instruction_va": 558192,
+          "string_va": 4548744,
+          "text": "No"
+        },
+        {
+          "instruction_va": 558884,
+          "string_va": 4548748,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559024,
+          "string_va": 4548760,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559092,
+          "string_va": 4548764,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559152,
+          "string_va": 4548768,
+          "text": "%+3.2f"
+        },
+        {
+          "instruction_va": 559200,
+          "string_va": 4548776,
+          "text": "%+3.1f"
+        },
+        {
+          "instruction_va": 559220,
+          "string_va": 4548784,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559280,
+          "string_va": 4548788,
+          "text": "%+3.2f"
+        },
+        {
+          "instruction_va": 559328,
+          "string_va": 4548796,
+          "text": "%+3.1f"
+        },
+        {
+          "instruction_va": 559360,
+          "string_va": 4548804,
+          "text": "%+3.2f"
+        },
+        {
+          "instruction_va": 559448,
+          "string_va": 4548812,
+          "text": "0%d"
+        },
+        {
+          "instruction_va": 559468,
+          "string_va": 4548816,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559496,
+          "string_va": 4548820,
+          "text": "0%d"
+        },
+        {
+          "instruction_va": 559516,
+          "string_va": 4548824,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559544,
+          "string_va": 4548828,
+          "text": "0%d"
+        },
+        {
+          "instruction_va": 559564,
+          "string_va": 4548832,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559592,
+          "string_va": 4548836,
+          "text": "0%d"
+        },
+        {
+          "instruction_va": 559612,
+          "string_va": 4548840,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559640,
+          "string_va": 4548844,
+          "text": "0%d"
+        },
+        {
+          "instruction_va": 559660,
+          "string_va": 4548848,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 559680,
+          "string_va": 4548852,
+          "text": "%d:%s:%s:%s:%s:%s"
+        },
+        {
+          "instruction_va": 559820,
+          "string_va": 4548872,
+          "text": "No"
+        },
+        {
+          "instruction_va": 559844,
+          "string_va": 4548876,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 559876,
+          "string_va": 4548880,
+          "text": "No"
+        },
+        {
+          "instruction_va": 559900,
+          "string_va": 4548884,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 559984,
+          "string_va": 4548888,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 560008,
+          "string_va": 4548892,
+          "text": "No"
+        },
+        {
+          "instruction_va": 560528,
+          "string_va": 4548896,
+          "text": "%d,%d"
+        },
+        {
+          "instruction_va": 560564,
+          "string_va": 4548356,
+          "text": "GetPictureParams"
+        }
+      ]
+    },
+    {
+      "file": "set-picture-params.ppc.txt",
+      "ranges": [
+        [
+          561948,
+          564212
+        ]
+      ],
+      "sha256": "bb3fc22f4ae4729ee7fe6ec731023499884270a3ba0c5ee0ae18956e3c7893b4",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 562364,
+          "string_va": 4549492,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 562444,
+          "string_va": 4549504,
+          "text": "annotation"
+        },
+        {
+          "instruction_va": 562472,
+          "string_va": 4549516,
+          "text": "Marking"
+        },
+        {
+          "instruction_va": 562500,
+          "string_va": 4549524,
+          "text": "imageUpdate"
+        },
+        {
+          "instruction_va": 562532,
+          "string_va": 4549536,
+          "text": "XMP_tag"
+        },
+        {
+          "instruction_va": 562824,
+          "string_va": 4549588,
+          "text": "\nNo legal file name!\n"
+        },
+        {
+          "instruction_va": 562936,
+          "string_va": 4549612,
+          "text": "no"
+        },
+        {
+          "instruction_va": 563720,
+          "string_va": 4549696,
+          "text": "***Critical Error InterfaceCatalog doesn't exists!!!\n"
+        },
+        {
+          "instruction_va": 563764,
+          "string_va": 4549752,
+          "text": "***Error Interface id = %d doesn't exists!!!\n"
+        },
+        {
+          "instruction_va": 563800,
+          "string_va": 4549800,
+          "text": "***Error Interface send buffer doesn't exists!!!\n"
+        },
+        {
+          "instruction_va": 563856,
+          "string_va": 4549852,
+          "text": "PXIT"
+        },
+        {
+          "instruction_va": 563968,
+          "string_va": 4549860,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 563988,
+          "string_va": 4549864,
+          "text": "ImageChange"
+        },
+        {
+          "instruction_va": 564012,
+          "string_va": 4549876,
+          "text": "PictureParamsChange"
+        },
+        {
+          "instruction_va": 564092,
+          "string_va": 4549896,
+          "text": "./%s"
+        },
+        {
+          "instruction_va": 564116,
+          "string_va": 4549904,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 564204,
+          "string_va": 4549444,
+          "text": "SetPictureParams"
+        }
+      ]
+    },
+    {
+      "file": "marking-storage.ppc.txt",
+      "ranges": [
+        [
+          1867184,
+          1867544
+        ]
+      ],
+      "sha256": "32c65d28f1765573abacf1638779e8e2e7132376a8fc090290e77d54a3bd334f",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 1867268,
+          "string_va": 4702084,
+          "text": "Good"
+        },
+        {
+          "instruction_va": 1867484,
+          "string_va": 4702092,
+          "text": "Good"
+        },
+        {
+          "instruction_va": 1867504,
+          "string_va": 4702100,
+          "text": "UnMarked"
+        }
+      ]
+    },
+    {
+      "file": "set-camera-params.ppc.txt",
+      "ranges": [
+        [
+          628564,
+          638428
+        ]
+      ],
+      "sha256": "4db4cd07a85c5ce49bd6ed5fdfd5d0047c27d07aa994b6dae7a3ea19aed0b181",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 629084,
+          "string_va": 4559036,
+          "text": "ShootingFolder"
+        },
+        {
+          "instruction_va": 629104,
+          "string_va": 4559052,
+          "text": "ShootingFolder"
+        },
+        {
+          "instruction_va": 629144,
+          "string_va": 4559068,
+          "text": "SensorCrop"
+        },
+        {
+          "instruction_va": 629164,
+          "string_va": 4559080,
+          "text": "SensorCrop"
+        },
+        {
+          "instruction_va": 629212,
+          "string_va": 4559092,
+          "text": "CurrentTime"
+        },
+        {
+          "instruction_va": 629232,
+          "string_va": 4559104,
+          "text": "CurrentTime"
+        },
+        {
+          "instruction_va": 629272,
+          "string_va": 4559116,
+          "text": "CEVersion"
+        },
+        {
+          "instruction_va": 629292,
+          "string_va": 4559128,
+          "text": "CEVersion"
+        },
+        {
+          "instruction_va": 629332,
+          "string_va": 4559140,
+          "text": "Copyright"
+        },
+        {
+          "instruction_va": 629352,
+          "string_va": 4559152,
+          "text": "Copyright"
+        },
+        {
+          "instruction_va": 629392,
+          "string_va": 4559164,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 629412,
+          "string_va": 4559176,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 629460,
+          "string_va": 4559188,
+          "text": "DefaultCameraSettings"
+        },
+        {
+          "instruction_va": 629480,
+          "string_va": 4559212,
+          "text": "DefaultCameraSettings"
+        },
+        {
+          "instruction_va": 629520,
+          "string_va": 4559236,
+          "text": "DefaultImageSettings"
+        },
+        {
+          "instruction_va": 629540,
+          "string_va": 4559260,
+          "text": "DefaultImageSettings"
+        },
+        {
+          "instruction_va": 629588,
+          "string_va": 4559284,
+          "text": "FactorySettings"
+        },
+        {
+          "instruction_va": 629608,
+          "string_va": 4559300,
+          "text": "FactorySettings"
+        },
+        {
+          "instruction_va": 629648,
+          "string_va": 4559316,
+          "text": "FileCompression"
+        },
+        {
+          "instruction_va": 629668,
+          "string_va": 4559332,
+          "text": "FileCompression"
+        },
+        {
+          "instruction_va": 629716,
+          "string_va": 4559348,
+          "text": "Orientation"
+        },
+        {
+          "instruction_va": 629736,
+          "string_va": 4559360,
+          "text": "Orientation"
+        },
+        {
+          "instruction_va": 629784,
+          "string_va": 4559372,
+          "text": "NewPinCode"
+        },
+        {
+          "instruction_va": 629804,
+          "string_va": 4559384,
+          "text": "NewPinCode"
+        },
+        {
+          "instruction_va": 629852,
+          "string_va": 4559396,
+          "text": "PinEncryption"
+        },
+        {
+          "instruction_va": 629872,
+          "string_va": 4559412,
+          "text": "PinEncryption"
+        },
+        {
+          "instruction_va": 629900,
+          "string_va": 4559428,
+          "text": "PinCode"
+        },
+        {
+          "instruction_va": 629920,
+          "string_va": 4559436,
+          "text": "PinCode"
+        },
+        {
+          "instruction_va": 629960,
+          "string_va": 4559444,
+          "text": "Prefix"
+        },
+        {
+          "instruction_va": 629980,
+          "string_va": 4559452,
+          "text": "Prefix"
+        },
+        {
+          "instruction_va": 630020,
+          "string_va": 4559460,
+          "text": "PowerSource"
+        },
+        {
+          "instruction_va": 630040,
+          "string_va": 4559472,
+          "text": "PowerSource"
+        },
+        {
+          "instruction_va": 630088,
+          "string_va": 4559484,
+          "text": "Brightness"
+        },
+        {
+          "instruction_va": 630108,
+          "string_va": 4559496,
+          "text": "Brightness"
+        },
+        {
+          "instruction_va": 630148,
+          "string_va": 4559508,
+          "text": "BluetoothStatus"
+        },
+        {
+          "instruction_va": 630168,
+          "string_va": 4559524,
+          "text": "BluetoothStatus"
+        },
+        {
+          "instruction_va": 630216,
+          "string_va": 4559540,
+          "text": "Annotation"
+        },
+        {
+          "instruction_va": 630236,
+          "string_va": 4559552,
+          "text": "Annotation"
+        },
+        {
+          "instruction_va": 630276,
+          "string_va": 4559564,
+          "text": "ActiveImageSettings"
+        },
+        {
+          "instruction_va": 630296,
+          "string_va": 4559584,
+          "text": "ActiveImageSettings"
+        },
+        {
+          "instruction_va": 630344,
+          "string_va": 4559604,
+          "text": "EnableTakenPicture"
+        },
+        {
+          "instruction_va": 630392,
+          "string_va": 4559624,
+          "text": "ResetCounter"
+        },
+        {
+          "instruction_va": 630440,
+          "string_va": 4559640,
+          "text": "ImageSettings"
+        },
+        {
+          "instruction_va": 630460,
+          "string_va": 4559656,
+          "text": "ImageSettings"
+        },
+        {
+          "instruction_va": 630500,
+          "string_va": 4559672,
+          "text": "ISO"
+        },
+        {
+          "instruction_va": 630520,
+          "string_va": 4559676,
+          "text": "ISO"
+        },
+        {
+          "instruction_va": 630568,
+          "string_va": 4559680,
+          "text": "UserGain"
+        },
+        {
+          "instruction_va": 630588,
+          "string_va": 4559692,
+          "text": "UserGain"
+        },
+        {
+          "instruction_va": 630636,
+          "string_va": 4559704,
+          "text": "ManualLens"
+        },
+        {
+          "instruction_va": 630656,
+          "string_va": 4559716,
+          "text": "ManualLens"
+        },
+        {
+          "instruction_va": 630976,
+          "string_va": 4559728,
+          "text": "_SetImageSettings() failed\n"
+        },
+        {
+          "instruction_va": 631028,
+          "string_va": 4559756,
+          "text": "_SetActiveImageSettings() failed\n"
+        },
+        {
+          "instruction_va": 631848,
+          "string_va": 4559792,
+          "text": "Sending Ack with errorCode = 0x%X\n"
+        },
+        {
+          "instruction_va": 631904,
+          "string_va": 4559828,
+          "text": "Sending Error to PXA\n"
+        },
+        {
+          "instruction_va": 632308,
+          "string_va": 4559852,
+          "text": "CheckIfFolderIsFull ERROR_A\n"
+        },
+        {
+          "instruction_va": 632868,
+          "string_va": 4559892,
+          "text": "SetCameraParam::_SetDefaultCameraSettings ERROR i=%d\n"
+        },
+        {
+          "instruction_va": 633768,
+          "string_va": 4559964,
+          "text": "SetCameraParam::_SetShootSetup ERROR i=%d\n"
+        },
+        {
+          "instruction_va": 633788,
+          "string_va": 4560008,
+          "text": "SetupName"
+        },
+        {
+          "instruction_va": 633928,
+          "string_va": 4560028,
+          "text": "SetupName"
+        },
+        {
+          "instruction_va": 633968,
+          "string_va": 4560040,
+          "text": "SharpTable"
+        },
+        {
+          "instruction_va": 634008,
+          "string_va": 4560052,
+          "text": "Saturation"
+        },
+        {
+          "instruction_va": 634424,
+          "string_va": 4560064,
+          "text": "Failed to find original shoot setup\n"
+        },
+        {
+          "instruction_va": 634636,
+          "string_va": 4560104,
+          "text": "***ERROR can't change to uncompress. No space on disk\n"
+        },
+        {
+          "instruction_va": 634652,
+          "string_va": 4560160,
+          "text": "***ERROR CF is not exist. Couldn't know if we have space for uncompress files.\n"
+        },
+        {
+          "instruction_va": 634672,
+          "string_va": 4560240,
+          "text": "CheckIfFolderIsFull ERROR_A\n"
+        },
+        {
+          "instruction_va": 635308,
+          "string_va": 4560296,
+          "text": "%d%03d"
+        },
+        {
+          "instruction_va": 635328,
+          "string_va": 4560304,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 635344,
+          "string_va": 4560308,
+          "text": "\n CEVersion = %s, currentStr = %s, firmWareVersionOnFlash = %d"
+        },
+        {
+          "instruction_va": 635508,
+          "string_va": 4560376,
+          "text": "\nLeafCE version doesn't changed"
+        },
+        {
+          "instruction_va": 635524,
+          "string_va": 4560408,
+          "text": "\nchange LeafCE version on Flash tempStr = %s"
+        },
+        {
+          "instruction_va": 635872,
+          "string_va": 4560456,
+          "text": "SetCompression problem. Not support compression type: %s\n"
+        },
+        {
+          "instruction_va": 635920,
+          "string_va": 4560516,
+          "text": "SetCompression problem. No nearly lossless param.\n"
+        },
+        {
+          "instruction_va": 636020,
+          "string_va": 4560568,
+          "text": "SetCompression problem. Not support nearly lossless type: %s\n"
+        },
+        {
+          "instruction_va": 636116,
+          "string_va": 4560632,
+          "text": "on"
+        },
+        {
+          "instruction_va": 636136,
+          "string_va": 4560636,
+          "text": "\n Switch BlueTooth On"
+        },
+        {
+          "instruction_va": 636160,
+          "string_va": 4560660,
+          "text": "off"
+        },
+        {
+          "instruction_va": 636180,
+          "string_va": 4560664,
+          "text": "\n Switch BlueTooth Off"
+        },
+        {
+          "instruction_va": 636288,
+          "string_va": 4560688,
+          "text": "CameraParamChange"
+        },
+        {
+          "instruction_va": 636364,
+          "string_va": 4560708,
+          "text": "CurrentTime"
+        },
+        {
+          "instruction_va": 636432,
+          "string_va": 4560720,
+          "text": "ActiveImageSettings"
+        },
+        {
+          "instruction_va": 636496,
+          "string_va": 4560740,
+          "text": "ImageSettings"
+        },
+        {
+          "instruction_va": 636560,
+          "string_va": 4560756,
+          "text": "Orientation"
+        },
+        {
+          "instruction_va": 636624,
+          "string_va": 4560768,
+          "text": "Annotation"
+        },
+        {
+          "instruction_va": 636688,
+          "string_va": 4560780,
+          "text": "Copyright"
+        },
+        {
+          "instruction_va": 636764,
+          "string_va": 4560792,
+          "text": "ShootingFolder"
+        },
+        {
+          "instruction_va": 636832,
+          "string_va": 4560808,
+          "text": "ISO"
+        },
+        {
+          "instruction_va": 636896,
+          "string_va": 4560812,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 636960,
+          "string_va": 4560824,
+          "text": "Prefix"
+        },
+        {
+          "instruction_va": 637024,
+          "string_va": 4560832,
+          "text": "FileCompression"
+        },
+        {
+          "instruction_va": 637088,
+          "string_va": 4560848,
+          "text": "UserGain"
+        },
+        {
+          "instruction_va": 637152,
+          "string_va": 4560860,
+          "text": "SensorCrop"
+        },
+        {
+          "instruction_va": 637284,
+          "string_va": 4560872,
+          "text": "***Critical Error InterfaceCatalog doesn't exists!!!\n"
+        },
+        {
+          "instruction_va": 637328,
+          "string_va": 4560928,
+          "text": "***Error Interface id = %d doesn't exists!!!\n"
+        },
+        {
+          "instruction_va": 637364,
+          "string_va": 4560976,
+          "text": "***Error Interface send buffer doesn't exists!!!\n"
+        },
+        {
+          "instruction_va": 637420,
+          "string_va": 4561028,
+          "text": "PXIT"
+        },
+        {
+          "instruction_va": 637700,
+          "string_va": 4561036,
+          "text": "CameraBattery"
+        },
+        {
+          "instruction_va": 637732,
+          "string_va": 4561052,
+          "text": "FireWire"
+        },
+        {
+          "instruction_va": 638388,
+          "string_va": 4558936,
+          "text": "SetCameraParam"
+        }
+      ]
+    },
+    {
+      "file": "get-camera-params.ppc.txt",
+      "ranges": [
+        [
+          932456,
+          938412
+        ]
+      ],
+      "sha256": "fc9433ad5c63f54214f994aa8f4b417e6ede57874c3d3c1baba12d988e0a12ef",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 932924,
+          "string_va": 4626432,
+          "text": "GetParamList"
+        },
+        {
+          "instruction_va": 933088,
+          "string_va": 4626456,
+          "text": "GetCameraParam::SetAttributes ERROR i=%d bufferLength=%d\n"
+        },
+        {
+          "instruction_va": 933252,
+          "string_va": 4626516,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 933360,
+          "string_va": 4626520,
+          "text": "Histogram_scale"
+        },
+        {
+          "instruction_va": 933404,
+          "string_va": 4626536,
+          "text": "%d;%d"
+        },
+        {
+          "instruction_va": 933556,
+          "string_va": 4626548,
+          "text": "Color"
+        },
+        {
+          "instruction_va": 933688,
+          "string_va": 4626556,
+          "text": "Toning"
+        },
+        {
+          "instruction_va": 933820,
+          "string_va": 4626564,
+          "text": "Light"
+        },
+        {
+          "instruction_va": 933952,
+          "string_va": 4626572,
+          "text": "SharpTable"
+        },
+        {
+          "instruction_va": 934108,
+          "string_va": 4626584,
+          "text": "battery_percent"
+        },
+        {
+          "instruction_va": 934232,
+          "string_va": 4626600,
+          "text": "battery_type"
+        },
+        {
+          "instruction_va": 934348,
+          "string_va": 4626616,
+          "text": "battery_time"
+        },
+        {
+          "instruction_va": 934496,
+          "string_va": 4626632,
+          "text": "exp_left"
+        },
+        {
+          "instruction_va": 934528,
+          "string_va": 4626644,
+          "text": "-1"
+        },
+        {
+          "instruction_va": 934580,
+          "string_va": 4626648,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 934672,
+          "string_va": 4626652,
+          "text": "exp_max"
+        },
+        {
+          "instruction_va": 934704,
+          "string_va": 4626660,
+          "text": "-1"
+        },
+        {
+          "instruction_va": 934756,
+          "string_va": 4626664,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 934848,
+          "string_va": 4626668,
+          "text": "CameraOrientation"
+        },
+        {
+          "instruction_va": 934968,
+          "string_va": 4626688,
+          "text": "CurrentTime"
+        },
+        {
+          "instruction_va": 935088,
+          "string_va": 4626700,
+          "text": "TotalFrames"
+        },
+        {
+          "instruction_va": 935140,
+          "string_va": 4626712,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 935268,
+          "string_va": 4626716,
+          "text": "Copyright"
+        },
+        {
+          "instruction_va": 935436,
+          "string_va": 4626732,
+          "text": "Annotation"
+        },
+        {
+          "instruction_va": 935820,
+          "string_va": 4626748,
+          "text": "Shooting_folder"
+        },
+        {
+          "instruction_va": 935860,
+          "string_va": 4626764,
+          "text": "SharpTable"
+        },
+        {
+          "instruction_va": 935900,
+          "string_va": 4626776,
+          "text": "SensorCrop"
+        },
+        {
+          "instruction_va": 935948,
+          "string_va": 4626788,
+          "text": "ISO"
+        },
+        {
+          "instruction_va": 935988,
+          "string_va": 4626792,
+          "text": "ImageQuality"
+        },
+        {
+          "instruction_va": 936028,
+          "string_va": 4626808,
+          "text": "InputProfile"
+        },
+        {
+          "instruction_va": 936076,
+          "string_va": 4626824,
+          "text": "Color"
+        },
+        {
+          "instruction_va": 936116,
+          "string_va": 4626832,
+          "text": "CurrentTime"
+        },
+        {
+          "instruction_va": 936156,
+          "string_va": 4626844,
+          "text": "CameraOrientation"
+        },
+        {
+          "instruction_va": 936196,
+          "string_va": 4626864,
+          "text": "Copyright"
+        },
+        {
+          "instruction_va": 936244,
+          "string_va": 4626876,
+          "text": "Framing"
+        },
+        {
+          "instruction_va": 936292,
+          "string_va": 4626884,
+          "text": "Toning"
+        },
+        {
+          "instruction_va": 936332,
+          "string_va": 4626892,
+          "text": "TotalFrames"
+        },
+        {
+          "instruction_va": 936380,
+          "string_va": 4626904,
+          "text": "Light"
+        },
+        {
+          "instruction_va": 936428,
+          "string_va": 4626912,
+          "text": "Histogram_scale"
+        },
+        {
+          "instruction_va": 936476,
+          "string_va": 4626928,
+          "text": "battery_percent"
+        },
+        {
+          "instruction_va": 936516,
+          "string_va": 4626944,
+          "text": "battery_time"
+        },
+        {
+          "instruction_va": 936564,
+          "string_va": 4626960,
+          "text": "exp_left"
+        },
+        {
+          "instruction_va": 936604,
+          "string_va": 4626972,
+          "text": "exp_max"
+        },
+        {
+          "instruction_va": 936652,
+          "string_va": 4626980,
+          "text": "DefaultShootSetup"
+        },
+        {
+          "instruction_va": 936700,
+          "string_va": 4627000,
+          "text": "Gain"
+        },
+        {
+          "instruction_va": 936748,
+          "string_va": 4627008,
+          "text": "Annotation"
+        },
+        {
+          "instruction_va": 936976,
+          "string_va": 4627020,
+          "text": "-2"
+        },
+        {
+          "instruction_va": 937004,
+          "string_va": 4627024,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 937024,
+          "string_va": 4627028,
+          "text": "-1"
+        },
+        {
+          "instruction_va": 937104,
+          "string_va": 4627032,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 937124,
+          "string_va": 4627036,
+          "text": "-1"
+        },
+        {
+          "instruction_va": 937176,
+          "string_va": 4627040,
+          "text": "CameraBattery"
+        },
+        {
+          "instruction_va": 937200,
+          "string_va": 4627056,
+          "text": "BackBattery"
+        },
+        {
+          "instruction_va": 937380,
+          "string_va": 4627068,
+          "text": "%04d:%02d:%02d:%02d:%02d:%02d"
+        },
+        {
+          "instruction_va": 937420,
+          "string_va": 4627100,
+          "text": "RTC not supported (not SDRAM 256M)\n"
+        },
+        {
+          "instruction_va": 937468,
+          "string_va": 4627136,
+          "text": "%04d:%02d:%02d:%02d:%02d:%02d"
+        },
+        {
+          "instruction_va": 937952,
+          "string_va": 4627168,
+          "text": "UserGainStorage"
+        },
+        {
+          "instruction_va": 938016,
+          "string_va": 4627184,
+          "text": "UserGainList"
+        },
+        {
+          "instruction_va": 938404,
+          "string_va": 4626388,
+          "text": "GetCameraParam"
+        }
+      ]
+    },
+    {
+      "file": "sync-camera-params.ppc.txt",
+      "ranges": [
+        [
+          565684,
+          579328
+        ]
+      ],
+      "sha256": "5b63b4946eadefc7fd72e9cf24951394ab89ca86c39decede37e18ad721f947a",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 566004,
+          "string_va": 4551760,
+          "text": "Sync"
+        },
+        {
+          "instruction_va": 567920,
+          "string_va": 4551796,
+          "text": "Sync"
+        },
+        {
+          "instruction_va": 568704,
+          "string_va": 4551804,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 568964,
+          "string_va": 4551808,
+          "text": "Opposite"
+        },
+        {
+          "instruction_va": 569204,
+          "string_va": 4551820,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 569252,
+          "string_va": 4551824,
+          "text": "Support"
+        },
+        {
+          "instruction_va": 569276,
+          "string_va": 4551832,
+          "text": "NotSupport"
+        },
+        {
+          "instruction_va": 569712,
+          "string_va": 4551844,
+          "text": "NewTetheredMode"
+        },
+        {
+          "instruction_va": 569728,
+          "string_va": 4551864,
+          "text": "TetheredMode"
+        },
+        {
+          "instruction_va": 569740,
+          "string_va": 4551880,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 569788,
+          "string_va": 4551884,
+          "text": "PictureDimensions"
+        },
+        {
+          "instruction_va": 569820,
+          "string_va": 4551904,
+          "text": "dcb_version"
+        },
+        {
+          "instruction_va": 569880,
+          "string_va": 4551916,
+          "text": "SaveRegistryNotification"
+        },
+        {
+          "instruction_va": 569904,
+          "string_va": 4551944,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 569928,
+          "string_va": 4551948,
+          "text": "BackManufacturer"
+        },
+        {
+          "instruction_va": 569972,
+          "string_va": 4551968,
+          "text": "SensorOrientation"
+        },
+        {
+          "instruction_va": 570016,
+          "string_va": 4551988,
+          "text": "MamiyaLsSupport"
+        },
+        {
+          "instruction_va": 570060,
+          "string_va": 4552004,
+          "text": "BluetoothSupport"
+        },
+        {
+          "instruction_va": 570980,
+          "string_va": 4552024,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571016,
+          "string_va": 4552028,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571052,
+          "string_va": 4552032,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571088,
+          "string_va": 4552036,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571272,
+          "string_va": 4552040,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571356,
+          "string_va": 4552044,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571440,
+          "string_va": 4552048,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571524,
+          "string_va": 4552052,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 571624,
+          "string_va": 4552056,
+          "text": "\n Allocation problem!!! len = %d, l = %d"
+        },
+        {
+          "instruction_va": 573000,
+          "string_va": 4552100,
+          "text": "%d.%03d"
+        },
+        {
+          "instruction_va": 573300,
+          "string_va": 4552108,
+          "text": "ALLOCATION ERROR !!!"
+        },
+        {
+          "instruction_va": 573620,
+          "string_va": 4552256,
+          "text": "Framing"
+        },
+        {
+          "instruction_va": 573640,
+          "string_va": 4552264,
+          "text": "Toning"
+        },
+        {
+          "instruction_va": 573660,
+          "string_va": 4552272,
+          "text": "Light"
+        },
+        {
+          "instruction_va": 573680,
+          "string_va": 4552280,
+          "text": "SharpTable"
+        },
+        {
+          "instruction_va": 573700,
+          "string_va": 4552292,
+          "text": "InputProfile"
+        },
+        {
+          "instruction_va": 573720,
+          "string_va": 4552308,
+          "text": "OutputProfile"
+        },
+        {
+          "instruction_va": 573740,
+          "string_va": 4552324,
+          "text": "ICCFlag"
+        },
+        {
+          "instruction_va": 573760,
+          "string_va": 4552332,
+          "text": "Grain"
+        },
+        {
+          "instruction_va": 573780,
+          "string_va": 4552340,
+          "text": "MoireReduction"
+        },
+        {
+          "instruction_va": 573800,
+          "string_va": 4552356,
+          "text": "Saturation"
+        },
+        {
+          "instruction_va": 573824,
+          "string_va": 4552140,
+          "text": "%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s;"
+        },
+        {
+          "instruction_va": 573832,
+          "string_va": 4552220,
+          "text": "SetupName"
+        },
+        {
+          "instruction_va": 573840,
+          "string_va": 4552232,
+          "text": "ImageQuality"
+        },
+        {
+          "instruction_va": 573852,
+          "string_va": 4552248,
+          "text": "Color"
+        },
+        {
+          "instruction_va": 574200,
+          "string_va": 4552440,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 574220,
+          "string_va": 4552452,
+          "text": "Prefix"
+        },
+        {
+          "instruction_va": 574240,
+          "string_va": 4552460,
+          "text": "SensorCrop"
+        },
+        {
+          "instruction_va": 574264,
+          "string_va": 4552368,
+          "text": "%s=./%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s"
+        },
+        {
+          "instruction_va": 574272,
+          "string_va": 4552408,
+          "text": "ShootingFolder"
+        },
+        {
+          "instruction_va": 574284,
+          "string_va": 4552424,
+          "text": "ISO"
+        },
+        {
+          "instruction_va": 574296,
+          "string_va": 4552428,
+          "text": "Orientation"
+        },
+        {
+          "instruction_va": 574508,
+          "string_va": 4552472,
+          "text": ",%s=%s"
+        },
+        {
+          "instruction_va": 574516,
+          "string_va": 4552480,
+          "text": "FileCompression"
+        },
+        {
+          "instruction_va": 574544,
+          "string_va": 4552496,
+          "text": ",%s=%s"
+        },
+        {
+          "instruction_va": 574552,
+          "string_va": 4552504,
+          "text": "FileCompression"
+        },
+        {
+          "instruction_va": 574604,
+          "string_va": 4552592,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 574624,
+          "string_va": 4552604,
+          "text": "Prefix"
+        },
+        {
+          "instruction_va": 574644,
+          "string_va": 4552612,
+          "text": "SensorCrop"
+        },
+        {
+          "instruction_va": 574668,
+          "string_va": 4552520,
+          "text": "%s=./%s,%s=%s,%s=%s,%s=%s,%s=%s,%s=%s"
+        },
+        {
+          "instruction_va": 574676,
+          "string_va": 4552560,
+          "text": "ShootingFolder"
+        },
+        {
+          "instruction_va": 574688,
+          "string_va": 4552576,
+          "text": "ISO"
+        },
+        {
+          "instruction_va": 574700,
+          "string_va": 4552580,
+          "text": "Orientation"
+        },
+        {
+          "instruction_va": 574820,
+          "string_va": 4552624,
+          "text": "SetupName"
+        },
+        {
+          "instruction_va": 574852,
+          "string_va": 4552636,
+          "text": "ImageQuality"
+        },
+        {
+          "instruction_va": 574888,
+          "string_va": 4552652,
+          "text": "Color"
+        },
+        {
+          "instruction_va": 574924,
+          "string_va": 4552660,
+          "text": "Framing"
+        },
+        {
+          "instruction_va": 574960,
+          "string_va": 4552668,
+          "text": "Toning"
+        },
+        {
+          "instruction_va": 574996,
+          "string_va": 4552676,
+          "text": "Light"
+        },
+        {
+          "instruction_va": 575032,
+          "string_va": 4552684,
+          "text": "SharpTable"
+        },
+        {
+          "instruction_va": 575068,
+          "string_va": 4552696,
+          "text": "InputProfile"
+        },
+        {
+          "instruction_va": 575104,
+          "string_va": 4552712,
+          "text": "OutputProfile"
+        },
+        {
+          "instruction_va": 575128,
+          "string_va": 4552728,
+          "text": "ICCFlag"
+        },
+        {
+          "instruction_va": 575160,
+          "string_va": 4552736,
+          "text": "Grain"
+        },
+        {
+          "instruction_va": 575196,
+          "string_va": 4552744,
+          "text": "MoireReduction"
+        },
+        {
+          "instruction_va": 575232,
+          "string_va": 4552760,
+          "text": "Saturation"
+        },
+        {
+          "instruction_va": 575328,
+          "string_va": 4552772,
+          "text": "ShootingFolder"
+        },
+        {
+          "instruction_va": 575360,
+          "string_va": 4552788,
+          "text": "ISO"
+        },
+        {
+          "instruction_va": 575396,
+          "string_va": 4552792,
+          "text": "Orientation"
+        },
+        {
+          "instruction_va": 575432,
+          "string_va": 4552804,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 575468,
+          "string_va": 4552816,
+          "text": "Prefix"
+        },
+        {
+          "instruction_va": 575504,
+          "string_va": 4552824,
+          "text": "SensorCrop"
+        },
+        {
+          "instruction_va": 575528,
+          "string_va": 4552836,
+          "text": "FileCompression"
+        },
+        {
+          "instruction_va": 575548,
+          "string_va": 4552852,
+          "text": "NLCompression"
+        },
+        {
+          "instruction_va": 575668,
+          "string_va": 4552868,
+          "text": "-2"
+        },
+        {
+          "instruction_va": 575700,
+          "string_va": 4552872,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 575716,
+          "string_va": 4552876,
+          "text": "-1"
+        },
+        {
+          "instruction_va": 575828,
+          "string_va": 4552880,
+          "text": "-1"
+        },
+        {
+          "instruction_va": 575856,
+          "string_va": 4552884,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 575880,
+          "string_va": 4552888,
+          "text": "-1"
+        },
+        {
+          "instruction_va": 575908,
+          "string_va": 4552892,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 576008,
+          "string_va": 4552896,
+          "text": "%d,%d"
+        },
+        {
+          "instruction_va": 576096,
+          "string_va": 4552904,
+          "text": "%d;%d"
+        },
+        {
+          "instruction_va": 576188,
+          "string_va": 4552912,
+          "text": "%d;2"
+        },
+        {
+          "instruction_va": 576304,
+          "string_va": 4552920,
+          "text": "0x%08x%08x"
+        },
+        {
+          "instruction_va": 577132,
+          "string_va": 4552936,
+          "text": "FileCompression"
+        },
+        {
+          "instruction_va": 577304,
+          "string_va": 4552960,
+          "text": "NLCompression"
+        },
+        {
+          "instruction_va": 577936,
+          "string_va": 4552980,
+          "text": "CameraBattery"
+        },
+        {
+          "instruction_va": 577960,
+          "string_va": 4552996,
+          "text": "BackBattery"
+        },
+        {
+          "instruction_va": 578036,
+          "string_va": 4553008,
+          "text": "valid"
+        },
+        {
+          "instruction_va": 578060,
+          "string_va": 4553016,
+          "text": "not valid"
+        },
+        {
+          "instruction_va": 578136,
+          "string_va": 4553028,
+          "text": "Mamiya"
+        },
+        {
+          "instruction_va": 578160,
+          "string_va": 4553036,
+          "text": "Leaf"
+        },
+        {
+          "instruction_va": 578256,
+          "string_va": 4553044,
+          "text": "Landscape"
+        },
+        {
+          "instruction_va": 578280,
+          "string_va": 4553056,
+          "text": "Portrait"
+        },
+        {
+          "instruction_va": 578304,
+          "string_va": 4553068,
+          "text": "1x1"
+        },
+        {
+          "instruction_va": 578328,
+          "string_va": 4553072,
+          "text": "14x9_Landscape"
+        },
+        {
+          "instruction_va": 578352,
+          "string_va": 4553088,
+          "text": "14x9_Portrait"
+        },
+        {
+          "instruction_va": 578376,
+          "string_va": 4553104,
+          "text": "4x3_Landscape"
+        },
+        {
+          "instruction_va": 578400,
+          "string_va": 4553120,
+          "text": "4x3_Portrait"
+        },
+        {
+          "instruction_va": 578424,
+          "string_va": 4553136,
+          "text": "None"
+        },
+        {
+          "instruction_va": 578504,
+          "string_va": 4553144,
+          "text": "adaptor_rev"
+        },
+        {
+          "instruction_va": 578556,
+          "string_va": 4553156,
+          "text": "Extended"
+        },
+        {
+          "instruction_va": 578580,
+          "string_va": 4553168,
+          "text": "Normal"
+        },
+        {
+          "instruction_va": 578604,
+          "string_va": 4553176,
+          "text": "None"
+        },
+        {
+          "instruction_va": 578668,
+          "string_va": 4553184,
+          "text": "serial_revision"
+        },
+        {
+          "instruction_va": 578708,
+          "string_va": 4553200,
+          "text": "Support"
+        },
+        {
+          "instruction_va": 578732,
+          "string_va": 4553208,
+          "text": "NotSupport"
+        },
+        {
+          "instruction_va": 579308,
+          "string_va": 4550976,
+          "text": "RequestSync"
+        }
+      ]
+    },
+    {
+      "file": "iso-storage.ppc.txt",
+      "ranges": [
+        [
+          1860056,
+          1860368
+        ],
+        [
+          1883648,
+          1883824
+        ]
+      ],
+      "sha256": "bf4828aefdd266d3f2b6b1d1c8dc05776f47afe62827ab0179384026160f1476",
+      "resolved_ascii_references": []
+    },
+    {
+      "file": "image-settings-storage.ppc.txt",
+      "ranges": [
+        [
+          1856908,
+          1857568
+        ],
+        [
+          1883256,
+          1883648
+        ]
+      ],
+      "sha256": "ddb0d21317daba93572a4e1754f00ee310c317cfd7b7d3b70d7a33247c181bee",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 1857312,
+          "string_va": 4701860,
+          "text": "SetImageSettings(). Problem to allocate theSettingsClass\n"
+        },
+        {
+          "instruction_va": 1857392,
+          "string_va": 4701920,
+          "text": "SetImageSettings(). Problem to allocate theCameraProfile\n"
+        }
+      ]
+    },
+    {
+      "file": "camera-settings-storage.ppc.txt",
+      "ranges": [
+        [
+          1856764,
+          1856908
+        ],
+        [
+          1859224,
+          1859896
+        ],
+        [
+          1860368,
+          1861272
+        ],
+        [
+          1868524,
+          1869172
+        ],
+        [
+          1893588,
+          1894132
+        ]
+      ],
+      "sha256": "f021d93b50972a0576bcbbf33649e4b0e1249957149d8dee8639e5a7303dfce4",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 1859244,
+          "string_va": 4702012,
+          "text": "%s"
+        },
+        {
+          "instruction_va": 1859820,
+          "string_va": 4702016,
+          "text": "%s"
+        }
+      ]
+    },
+    {
+      "file": "pin-storage.ppc.txt",
+      "ranges": [
+        [
+          3513280,
+          3513376
+        ],
+        [
+          3557220,
+          3557596
+        ]
+      ],
+      "sha256": "ca6893432dfdfa55668facefb70720d3e9bd86c5af9143e2ce5f05d78081e718",
+      "resolved_ascii_references": [
+        {
+          "instruction_va": 3557288,
+          "string_va": 3559196,
+          "text": "1234"
+        }
+      ]
+    },
+    {
+      "file": "brightness-driver.ppc.txt",
+      "ranges": [
+        [
+          614120,
+          614416
+        ]
+      ],
+      "sha256": "412c508130885a7663cc538d2996fe3271865909ff300e5061ca48ecdb3f8953",
+      "resolved_ascii_references": []
+    },
+    {
+      "file": "interface-selectors.ppc.txt",
+      "ranges": [
+        [
+          659888,
+          660056
+        ]
+      ],
+      "sha256": "719fe26f63fbd4228229faa6dc83d33ff7f31da8eba3bdf66648e2534f8fc328",
+      "resolved_ascii_references": []
+    }
+  ],
+  "tables": {
+    "sync_fields": [
+      {
+        "index": 0,
+        "pointer_va": 4550260,
+        "string_va": 4550988,
+        "field": "battery_percent"
+      },
+      {
+        "index": 1,
+        "pointer_va": 4550264,
+        "string_va": 4551004,
+        "field": "exp_left"
+      },
+      {
+        "index": 2,
+        "pointer_va": 4550268,
+        "string_va": 4551016,
+        "field": "max_exp"
+      },
+      {
+        "index": 3,
+        "pointer_va": 4550272,
+        "string_va": 4551024,
+        "field": "ImageQuality"
+      },
+      {
+        "index": 4,
+        "pointer_va": 4550276,
+        "string_va": 4551040,
+        "field": "Color"
+      },
+      {
+        "index": 5,
+        "pointer_va": 4550280,
+        "string_va": 4551048,
+        "field": "Framing"
+      },
+      {
+        "index": 6,
+        "pointer_va": 4550284,
+        "string_va": 4551056,
+        "field": "Toning"
+      },
+      {
+        "index": 7,
+        "pointer_va": 4550288,
+        "string_va": 4551064,
+        "field": "Light"
+      },
+      {
+        "index": 8,
+        "pointer_va": 4550292,
+        "string_va": 4551072,
+        "field": "Orientation"
+      },
+      {
+        "index": 9,
+        "pointer_va": 4550296,
+        "string_va": 4551084,
+        "field": "SharpTable"
+      },
+      {
+        "index": 10,
+        "pointer_va": 4550300,
+        "string_va": 4551096,
+        "field": "ISO"
+      },
+      {
+        "index": 11,
+        "pointer_va": 4550304,
+        "string_va": 4551100,
+        "field": "InputProfile"
+      },
+      {
+        "index": 12,
+        "pointer_va": 4550308,
+        "string_va": 4551116,
+        "field": "OutputProfile"
+      },
+      {
+        "index": 13,
+        "pointer_va": 4550312,
+        "string_va": 4551132,
+        "field": "CameraType"
+      },
+      {
+        "index": 14,
+        "pointer_va": 4550316,
+        "string_va": 4551144,
+        "field": "DiskID"
+      },
+      {
+        "index": 15,
+        "pointer_va": 4550320,
+        "string_va": 4551152,
+        "field": "ImageSettings"
+      },
+      {
+        "index": 16,
+        "pointer_va": 4550324,
+        "string_va": 4551168,
+        "field": "ActiveImageSettings"
+      },
+      {
+        "index": 17,
+        "pointer_va": 4550328,
+        "string_va": 4551188,
+        "field": "FactoryDefaultImageSettings"
+      },
+      {
+        "index": 18,
+        "pointer_va": 4550332,
+        "string_va": 4551216,
+        "field": "CameraSettings"
+      },
+      {
+        "index": 19,
+        "pointer_va": 4550336,
+        "string_va": 4551232,
+        "field": "DefaultCameraSettings"
+      },
+      {
+        "index": 20,
+        "pointer_va": 4550340,
+        "string_va": 4551256,
+        "field": "PictureDimensions"
+      },
+      {
+        "index": 21,
+        "pointer_va": 4550344,
+        "string_va": 4551276,
+        "field": "Battery_threshold_list"
+      },
+      {
+        "index": 22,
+        "pointer_va": 4550348,
+        "string_va": 4551300,
+        "field": "Disk_threshold_list"
+      },
+      {
+        "index": 23,
+        "pointer_va": 4550352,
+        "string_va": 4551320,
+        "field": "dcb_version"
+      },
+      {
+        "index": 24,
+        "pointer_va": 4550356,
+        "string_va": 4551332,
+        "field": "DefaultColor"
+      },
+      {
+        "index": 25,
+        "pointer_va": 4550360,
+        "string_va": 4551348,
+        "field": "DefaultOrientation"
+      },
+      {
+        "index": 26,
+        "pointer_va": 4550364,
+        "string_va": 4551368,
+        "field": "FileCompression"
+      },
+      {
+        "index": 27,
+        "pointer_va": 4550368,
+        "string_va": 4551384,
+        "field": "NLCompression"
+      },
+      {
+        "index": 28,
+        "pointer_va": 4550372,
+        "string_va": 4551400,
+        "field": "SaveRegistryNotification"
+      },
+      {
+        "index": 29,
+        "pointer_va": 4550376,
+        "string_va": 4551428,
+        "field": "UserGainList"
+      },
+      {
+        "index": 30,
+        "pointer_va": 4550380,
+        "string_va": 4551444,
+        "field": "ActiveUserGain"
+      },
+      {
+        "index": 31,
+        "pointer_va": 4550384,
+        "string_va": 4551460,
+        "field": "UserGainStorage"
+      },
+      {
+        "index": 32,
+        "pointer_va": 4550388,
+        "string_va": 4551476,
+        "field": "FactoryGain"
+      },
+      {
+        "index": 33,
+        "pointer_va": 4550392,
+        "string_va": 4551488,
+        "field": "RockerDirection"
+      },
+      {
+        "index": 34,
+        "pointer_va": 4550396,
+        "string_va": 4551504,
+        "field": "Saturation"
+      },
+      {
+        "index": 35,
+        "pointer_va": 4550400,
+        "string_va": 4551516,
+        "field": "MoireReduction"
+      },
+      {
+        "index": 36,
+        "pointer_va": 4550404,
+        "string_va": 4551532,
+        "field": "Grain"
+      },
+      {
+        "index": 37,
+        "pointer_va": 4550408,
+        "string_va": 4551540,
+        "field": "SplitTable"
+      },
+      {
+        "index": 38,
+        "pointer_va": 4550412,
+        "string_va": 4551552,
+        "field": "PowerSourceSelection"
+      },
+      {
+        "index": 39,
+        "pointer_va": 4550416,
+        "string_va": 4551576,
+        "field": "battery_type"
+      },
+      {
+        "index": 40,
+        "pointer_va": 4550420,
+        "string_va": 4551592,
+        "field": "ManualLens"
+      },
+      {
+        "index": 41,
+        "pointer_va": 4550424,
+        "string_va": 4551604,
+        "field": "BackManufacturer"
+      },
+      {
+        "index": 42,
+        "pointer_va": 4550428,
+        "string_va": 4551624,
+        "field": "SensorOrientation"
+      },
+      {
+        "index": 43,
+        "pointer_va": 4550432,
+        "string_va": 4551644,
+        "field": "MamiyaLsSupport"
+      },
+      {
+        "index": 44,
+        "pointer_va": 4550436,
+        "string_va": 4551660,
+        "field": "BluetoothSupport"
+      },
+      {
+        "index": 45,
+        "pointer_va": 4550440,
+        "string_va": 4551680,
+        "field": "SensorCrop"
+      }
+    ],
+    "picture_fields": [
+      {
+        "index": 0,
+        "pointer_va": 4548128,
+        "string_va": 4548376,
+        "field": "file_name"
+      },
+      {
+        "index": 1,
+        "pointer_va": 4548132,
+        "string_va": 4548388,
+        "field": "Orientation"
+      },
+      {
+        "index": 2,
+        "pointer_va": 4548136,
+        "string_va": 4548400,
+        "field": "Color"
+      },
+      {
+        "index": 3,
+        "pointer_va": 4548140,
+        "string_va": 4548408,
+        "field": "frame"
+      },
+      {
+        "index": 4,
+        "pointer_va": 4548144,
+        "string_va": 4548416,
+        "field": "Toning"
+      },
+      {
+        "index": 5,
+        "pointer_va": 4548148,
+        "string_va": 4548424,
+        "field": "Light"
+      },
+      {
+        "index": 6,
+        "pointer_va": 4548152,
+        "string_va": 4548432,
+        "field": "Histogram"
+      },
+      {
+        "index": 7,
+        "pointer_va": 4548156,
+        "string_va": 4548444,
+        "field": "HistogramR"
+      },
+      {
+        "index": 8,
+        "pointer_va": 4548160,
+        "string_va": 4548456,
+        "field": "HistogramG"
+      },
+      {
+        "index": 9,
+        "pointer_va": 4548164,
+        "string_va": 4548468,
+        "field": "HistogramB"
+      },
+      {
+        "index": 10,
+        "pointer_va": 4548168,
+        "string_va": 4548480,
+        "field": "text"
+      },
+      {
+        "index": 11,
+        "pointer_va": 4548172,
+        "string_va": 4548488,
+        "field": "Hwhite"
+      },
+      {
+        "index": 12,
+        "pointer_va": 4548176,
+        "string_va": 4548496,
+        "field": "Hdark"
+      },
+      {
+        "index": 13,
+        "pointer_va": 4548180,
+        "string_va": 4548504,
+        "field": "HwhiteLoc"
+      },
+      {
+        "index": 14,
+        "pointer_va": 4548184,
+        "string_va": 4548516,
+        "field": "HdarkLoc"
+      },
+      {
+        "index": 15,
+        "pointer_va": 4548188,
+        "string_va": 4548528,
+        "field": "NewPicture"
+      },
+      {
+        "index": 16,
+        "pointer_va": 4548192,
+        "string_va": 4548540,
+        "field": "Marking"
+      },
+      {
+        "index": 17,
+        "pointer_va": 4548196,
+        "string_va": 4548548,
+        "field": "Average"
+      },
+      {
+        "index": 18,
+        "pointer_va": 4548200,
+        "string_va": 4548556,
+        "field": "zoom"
+      },
+      {
+        "index": 19,
+        "pointer_va": 4548204,
+        "string_va": 4548564,
+        "field": "alarm_dark"
+      },
+      {
+        "index": 20,
+        "pointer_va": 4548208,
+        "string_va": 4548576,
+        "field": "alarm_white"
+      },
+      {
+        "index": 21,
+        "pointer_va": 4548212,
+        "string_va": 4548588,
+        "field": "XMP_tag"
+      },
+      {
+        "index": 22,
+        "pointer_va": 4548216,
+        "string_va": 4548596,
+        "field": "Date"
+      },
+      {
+        "index": 23,
+        "pointer_va": 4548220,
+        "string_va": 4548604,
+        "field": "ZoomEnable"
+      },
+      {
+        "index": 24,
+        "pointer_va": 4548224,
+        "string_va": 4548616,
+        "field": "Dimension"
+      }
+    ],
+    "compression_labels": [
+      {
+        "index": 0,
+        "pointer_va": 4558768,
+        "string_va": 4558952,
+        "field": "None"
+      },
+      {
+        "index": 1,
+        "pointer_va": 4558772,
+        "string_va": 4558960,
+        "field": "Lossless"
+      },
+      {
+        "index": 2,
+        "pointer_va": 4558776,
+        "string_va": 4558972,
+        "field": "Max Quality"
+      },
+      {
+        "index": 3,
+        "pointer_va": 4558780,
+        "string_va": 4558984,
+        "field": "Standard"
+      },
+      {
+        "index": 4,
+        "pointer_va": 4558784,
+        "string_va": 4558996,
+        "field": "Min Size"
+      }
+    ],
+    "orientation_labels": [
+      {
+        "index": 0,
+        "pointer_va": 6493132,
+        "string_va": 4700000,
+        "field": "Portrait CW"
+      },
+      {
+        "index": 1,
+        "pointer_va": 6493136,
+        "string_va": 4700012,
+        "field": "Portrait CCW"
+      },
+      {
+        "index": 2,
+        "pointer_va": 6493140,
+        "string_va": 4700028,
+        "field": "Landscape"
+      },
+      {
+        "index": 3,
+        "pointer_va": 6493144,
+        "string_va": 4700040,
+        "field": "Landscape 180"
+      },
+      {
+        "index": 4,
+        "pointer_va": 6493148,
+        "string_va": 4700056,
+        "field": "Auto"
+      }
+    ]
+  }
+}

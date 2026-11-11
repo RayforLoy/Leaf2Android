@@ -1,0 +1,25 @@
+# classic 4.701 VA 0x210890..0x2108f0, exclusive
+00210890 [UPD 0019c9b8] mtlr      r0
+00210894 [UPD 0019c9bc] addi      r1, r1, 0x40
+00210898 [UPD 0019c9c0] blr       
+0021089c [UPD 0019c9c4] stwu      r1, -8(r1)
+002108a0 [UPD 0019c9c8] mflr      r0
+002108a4 [UPD 0019c9cc] stw       r0, 0xc(r1)
+002108a8 [UPD 0019c9d0] addi      r3, r4, 0
+002108ac [UPD 0019c9d4] bl        0x1b24f4
+002108b0 [UPD 0019c9d8] clrlwi    r3, r3, 0x18
+002108b4 [UPD 0019c9dc] lwz       r0, 0xc(r1)
+002108b8 [UPD 0019c9e0] mtlr      r0
+002108bc [UPD 0019c9e4] addi      r1, r1, 8
+002108c0 [UPD 0019c9e8] blr       
+002108c4 [UPD 0019c9ec] li        r3, 0xc
+002108c8 [UPD 0019c9f0] blr       
+002108cc [UPD 0019c9f4] lis       r3, 0x48
+002108d0 [UPD 0019c9f8] lwz       r3, -0x2424(r3)
+002108d4 [UPD 0019c9fc] blr       
+002108d8 [UPD 0019ca00] cmpwi     r5, 0
+002108dc [UPD 0019ca04] beq       0x2108e8
+002108e0 [UPD 0019ca08] li        r3, 5
+002108e4 [UPD 0019ca0c] b         0x2108ec
+002108e8 [UPD 0019ca10] li        r3, 3
+002108ec [UPD 0019ca14] blr       

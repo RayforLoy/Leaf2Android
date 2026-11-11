@@ -1,0 +1,212 @@
+[
+  {
+    "offset": 1817,
+    "encoding": "ascii",
+    "text": "         CPU ID     = A1 PXA250"
+  },
+  {
+    "offset": 1853,
+    "encoding": "ascii",
+    "text": "         CPU ID     = B0 PXA250"
+  },
+  {
+    "offset": 1889,
+    "encoding": "ascii",
+    "text": "         CPU ID     = B1 PXA250"
+  },
+  {
+    "offset": 1925,
+    "encoding": "ascii",
+    "text": "         CPU ID     = B2 PXA250"
+  },
+  {
+    "offset": 1961,
+    "encoding": "ascii",
+    "text": "         CPU ID     = C0 PXA250"
+  },
+  {
+    "offset": 1997,
+    "encoding": "ascii",
+    "text": "         CPU ID     = A0 PXA255"
+  },
+  {
+    "offset": 2033,
+    "encoding": "ascii",
+    "text": "         CPU ID     = A1 PXA210"
+  },
+  {
+    "offset": 2069,
+    "encoding": "ascii",
+    "text": "         CPU ID     = B0 PXA210"
+  },
+  {
+    "offset": 2105,
+    "encoding": "ascii",
+    "text": "         CPU ID     = B1 PXA210"
+  },
+  {
+    "offset": 2141,
+    "encoding": "ascii",
+    "text": "         CPU ID     = B2 PXA210"
+  },
+  {
+    "offset": 2177,
+    "encoding": "ascii",
+    "text": "         CPU ID     = C0 PXA210"
+  },
+  {
+    "offset": 2213,
+    "encoding": "ascii",
+    "text": "         CPU ID     = A0 PXA215"
+  },
+  {
+    "offset": 12229,
+    "encoding": "utf-16le",
+    "text": "CIntel(R) PXA250"
+  },
+  {
+    "offset": 12267,
+    "encoding": "utf-16le",
+    "text": "Intel(R) PXA250"
+  },
+  {
+    "offset": 12319,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\kern.pdb"
+  },
+  {
+    "offset": 279811,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\coredll.pdb"
+  },
+  {
+    "offset": 615790,
+    "encoding": "ascii",
+    "text": "CeLogReSync"
+  },
+  {
+    "offset": 616046,
+    "encoding": "ascii",
+    "text": "CeResyncFilesys"
+  },
+  {
+    "offset": 622856,
+    "encoding": "ascii",
+    "text": "ImageList_GetImageCount"
+  },
+  {
+    "offset": 622880,
+    "encoding": "ascii",
+    "text": "ImageList_GetImageInfo"
+  },
+  {
+    "offset": 667103,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\filesys.pdb"
+  },
+  {
+    "offset": 878151,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\gwes.pdb"
+  },
+  {
+    "offset": 1396415,
+    "encoding": "ascii",
+    "text": "xtmvaehvperppxamxtmhaehhdaehxmdhacolridgmgpf tvcpamcHSTLCSBECLBETDBE2/SOfylg"
+  },
+  {
+    "offset": 1558943,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\device.pdb"
+  },
+  {
+    "offset": 1582143,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\regenum.pdb"
+  },
+  {
+    "offset": 1588075,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\pm.pdb"
+  },
+  {
+    "offset": 1616079,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\fatfsd.pdb"
+  },
+  {
+    "offset": 1672787,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\fatutil.pdb"
+  },
+  {
+    "offset": 1709991,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\fsdmgr.pdb"
+  },
+  {
+    "offset": 1758927,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\mspart.pdb"
+  },
+  {
+    "offset": 1777283,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\waveapi.pdb"
+  },
+  {
+    "offset": 1823243,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\audevman.pdb"
+  },
+  {
+    "offset": 1845147,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\ceddk.pdb"
+  },
+  {
+    "offset": 1849287,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\PUBLIC\\LEAFCE~1\\WINCE420\\INTEL_DBPXA250\\cesysgen\\oak\\target\\ARMV4I\\retail\\mmtimer.pdb"
+  },
+  {
+    "offset": 1855915,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\sa2video.pdb"
+  },
+  {
+    "offset": 1938623,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\wavedev.pdb"
+  },
+  {
+    "offset": 1960891,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\RkrButton.pdb"
+  },
+  {
+    "offset": 1966255,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\KbdXscXTMsEngUs1.pdb"
+  },
+  {
+    "offset": 1989947,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\touch.pdb"
+  },
+  {
+    "offset": 2004643,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\xsc1bd_serial.pdb"
+  },
+  {
+    "offset": 2039291,
+    "encoding": "ascii",
+    "text": "C:\\WINCE420\\platform\\INTEL_DBPXA250\\target\\ARMV4I\\retail\\pmudll.pdb"
+  },
+  {
+    "offset": 6752659,
+    "encoding": "ascii",
+    "text": "pXab'"
+  }
+]

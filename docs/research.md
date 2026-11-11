@@ -19,7 +19,7 @@
 | 库存与校验 | `reference/inventory.json` |
 | 后背固件状态 | `reference/firmware/README.md` |
 
-没有发现可确认为数码后背本体固件的镜像。CAB 中的 Windows CE 客户端 EXE / DLL 不能当成后背固件。原文件名与字节保留，哈希用于锁定输入，不代替厂商签名认证。
+2026-11-11 已收录用户在 `D:\leaf` 找到的真实固件：310 个来源条目去重为 89 份原始文件，包含主 UPD、恢复 UPD、CE BIN、FPGA UBF 和配置，并保留核心重建与分析。见 [固件来源与清单](../reference/firmware/README.md)。WiView CAB 中的客户端 EXE / DLL 与这些后背固件分别分类。哈希锁定原字节，不代替厂商签名认证；本次不执行厂商程序、不刷写后背。
 
 1.0.2 来自 Internet Archive 的 Leaf Capture 11 社区光盘文件备份；1.0.3 由用户提供。历史获取记录中的旧路径反映当时获取位置，当前有效位置以 source lock 和 inventory 为准。详见双语参考说明。
 

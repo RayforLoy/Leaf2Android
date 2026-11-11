@@ -1,0 +1,1082 @@
+{
+  "source": "D:\\leaf\\firmware\\CaptureOne.Mac.7.1.6\\FirmWareAptusII.UPD",
+  "source_sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6",
+  "payload_base_va": 475136,
+  "file_offset_for_va": "VA - 0x74000 + 0x128 (this UPD only)",
+  "all_ascii_address_constructions_count": 4956,
+  "limitations": "String references establish code presence, not model enablement or runtime reachability.",
+  "selected": [
+    {
+      "instruction_va": 505480,
+      "instruction_file_offset": 30640,
+      "string_va": 4541120,
+      "string_file_offset": 4066280,
+      "text": "Size: %d[Bytes]\tDelayBeforeStart: %d[usec]\tTransferTime: %d[usec]\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 507420,
+      "instruction_file_offset": 32580,
+      "string_va": 4541632,
+      "string_file_offset": 4066792,
+      "text": "Skip image buffer. BytesToSkip %d, CB addr after skip 0x%X\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 560564,
+      "instruction_file_offset": 85724,
+      "string_va": 4548356,
+      "string_file_offset": 4073516,
+      "text": "GetPictureParams",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 564204,
+      "instruction_file_offset": 89364,
+      "string_va": 4549444,
+      "string_file_offset": 4074604,
+      "text": "SetPictureParams",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 570060,
+      "instruction_file_offset": 95220,
+      "string_va": 4552004,
+      "string_file_offset": 4077164,
+      "text": "BluetoothSupport",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 579308,
+      "instruction_file_offset": 104468,
+      "string_va": 4550976,
+      "string_file_offset": 4076136,
+      "text": "RequestSync",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 622280,
+      "instruction_file_offset": 147440,
+      "string_va": 4557700,
+      "string_file_offset": 4082860,
+      "text": "PacketSize",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 622468,
+      "instruction_file_offset": 147628,
+      "string_va": 4557736,
+      "string_file_offset": 4082896,
+      "text": "GetImage attributes: file_name = %s, PacketSize = %d",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 623260,
+      "instruction_file_offset": 148420,
+      "string_va": 4557796,
+      "string_file_offset": 4082956,
+      "text": "\n*** GetImage failed",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 623372,
+      "instruction_file_offset": 148532,
+      "string_va": 4557844,
+      "string_file_offset": 4083004,
+      "text": "ATTACHMENT",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 624020,
+      "instruction_file_offset": 149180,
+      "string_va": 4557900,
+      "string_file_offset": 4083060,
+      "text": "GetImage: SendAcknowledge %s",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 624088,
+      "instruction_file_offset": 149248,
+      "string_va": 4557932,
+      "string_file_offset": 4083092,
+      "text": "GetImage: transmit start %s",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 624140,
+      "instruction_file_offset": 149300,
+      "string_va": 4557960,
+      "string_file_offset": 4083120,
+      "text": "GetImage: transmit stop %s",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 624232,
+      "instruction_file_offset": 149392,
+      "string_va": 4557988,
+      "string_file_offset": 4083148,
+      "text": "\n ***Fatal error during sending GetImage acknoledge!!!",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 625208,
+      "instruction_file_offset": 150368,
+      "string_va": 4557648,
+      "string_file_offset": 4082808,
+      "text": "GetImage",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 629272,
+      "instruction_file_offset": 154432,
+      "string_va": 4559116,
+      "string_file_offset": 4084276,
+      "text": "CEVersion",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 629292,
+      "instruction_file_offset": 154452,
+      "string_va": 4559128,
+      "string_file_offset": 4084288,
+      "text": "CEVersion",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 629784,
+      "instruction_file_offset": 154944,
+      "string_va": 4559372,
+      "string_file_offset": 4084532,
+      "text": "NewPinCode",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 629804,
+      "instruction_file_offset": 154964,
+      "string_va": 4559384,
+      "string_file_offset": 4084544,
+      "text": "NewPinCode",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 629900,
+      "instruction_file_offset": 155060,
+      "string_va": 4559428,
+      "string_file_offset": 4084588,
+      "text": "PinCode",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 629920,
+      "instruction_file_offset": 155080,
+      "string_va": 4559436,
+      "string_file_offset": 4084596,
+      "text": "PinCode",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 630148,
+      "instruction_file_offset": 155308,
+      "string_va": 4559508,
+      "string_file_offset": 4084668,
+      "text": "BluetoothStatus",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 630168,
+      "instruction_file_offset": 155328,
+      "string_va": 4559524,
+      "string_file_offset": 4084684,
+      "text": "BluetoothStatus",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 632868,
+      "instruction_file_offset": 158028,
+      "string_va": 4559892,
+      "string_file_offset": 4085052,
+      "text": "SetCameraParam::_SetDefaultCameraSettings ERROR i=%d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 633768,
+      "instruction_file_offset": 158928,
+      "string_va": 4559964,
+      "string_file_offset": 4085124,
+      "text": "SetCameraParam::_SetShootSetup ERROR i=%d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 635344,
+      "instruction_file_offset": 160504,
+      "string_va": 4560308,
+      "string_file_offset": 4085468,
+      "text": "\n CEVersion = %s, currentStr = %s, firmWareVersionOnFlash = %d",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 636136,
+      "instruction_file_offset": 161296,
+      "string_va": 4560636,
+      "string_file_offset": 4085796,
+      "text": "\n Switch BlueTooth On",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 636180,
+      "instruction_file_offset": 161340,
+      "string_va": 4560664,
+      "string_file_offset": 4085824,
+      "text": "\n Switch BlueTooth Off",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 638388,
+      "instruction_file_offset": 163548,
+      "string_va": 4558936,
+      "string_file_offset": 4084096,
+      "text": "SetCameraParam",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 638716,
+      "instruction_file_offset": 163876,
+      "string_va": 4561176,
+      "string_file_offset": 4086336,
+      "text": "\nRPSoftware Root Task started. RamSize: %dMbytes\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 657560,
+      "instruction_file_offset": 182720,
+      "string_va": 4571624,
+      "string_file_offset": 4096784,
+      "text": "The number of bytes to read is more then the file size.",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 703244,
+      "instruction_file_offset": 228404,
+      "string_va": 4574868,
+      "string_file_offset": 4100028,
+      "text": "CalculateNumberOfBTPackets problem. MtuSize or MaxAclLenght is zero.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 706100,
+      "instruction_file_offset": 231260,
+      "string_va": 4575620,
+      "string_file_offset": 4100780,
+      "text": "ev_receive EV_PACKET_ACK error.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 706576,
+      "instruction_file_offset": 231736,
+      "string_va": 4575776,
+      "string_file_offset": 4100936,
+      "text": "ev_receive EV_PACKET_ACK error.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 708916,
+      "instruction_file_offset": 234076,
+      "string_va": 4576444,
+      "string_file_offset": 4101604,
+      "text": "FileCommand",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 713816,
+      "instruction_file_offset": 238976,
+      "string_va": 4576772,
+      "string_file_offset": 4101932,
+      "text": "FileCommand",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 714648,
+      "instruction_file_offset": 239808,
+      "string_va": 4576368,
+      "string_file_offset": 4101528,
+      "text": "FileCommand",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 720612,
+      "instruction_file_offset": 245772,
+      "string_va": 4578120,
+      "string_file_offset": 4103280,
+      "text": "^<ReSyncResponse/>",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 720632,
+      "instruction_file_offset": 245792,
+      "string_va": 4578312,
+      "string_file_offset": 4103472,
+      "text": "\n***Error during handling ReSyncRequest message!!!",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 720664,
+      "instruction_file_offset": 245824,
+      "string_va": 4578268,
+      "string_file_offset": 4103428,
+      "text": "ReSyncRequest",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 837288,
+      "instruction_file_offset": 362448,
+      "string_va": 4599024,
+      "string_file_offset": 4124184,
+      "text": "Enter number of bytes to write: ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 837360,
+      "instruction_file_offset": 362520,
+      "string_va": 4599060,
+      "string_file_offset": 4124220,
+      "text": "Enter number of bytes to read: ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 839476,
+      "instruction_file_offset": 364636,
+      "string_va": 4599640,
+      "string_file_offset": 4124800,
+      "text": "\nRegin 0 info: Largest block - %d(%d Kb), FreeBytes - %d(%d Kb), Error - 0x%X\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 839528,
+      "instruction_file_offset": 364688,
+      "string_va": 4599720,
+      "string_file_offset": 4124880,
+      "text": "Regin 1 info: Largest block - %d(%d Kb), FreeBytes - %d(%d Kb), Error - 0x%X\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 840332,
+      "instruction_file_offset": 365492,
+      "string_va": 4600060,
+      "string_file_offset": 4125220,
+      "text": "Enter size to write (give a size in bytes that is devided by 2): ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 841420,
+      "instruction_file_offset": 366580,
+      "string_va": 4600680,
+      "string_file_offset": 4125840,
+      "text": "Enter number of bytes to write: ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 842552,
+      "instruction_file_offset": 367712,
+      "string_va": 4601256,
+      "string_file_offset": 4126416,
+      "text": "Enter number of bytes to read: ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 842684,
+      "instruction_file_offset": 367844,
+      "string_va": 4601356,
+      "string_file_offset": 4126516,
+      "text": "The number of bytes to read is more then the file size.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 845672,
+      "instruction_file_offset": 370832,
+      "string_va": 4603236,
+      "string_file_offset": 4128396,
+      "text": "CfgRom length = %d bytes",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 853108,
+      "instruction_file_offset": 378268,
+      "string_va": 4607652,
+      "string_file_offset": 4132812,
+      "text": "Enter sdram start address [in bytes]: ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 853264,
+      "instruction_file_offset": 378424,
+      "string_va": 4607732,
+      "string_file_offset": 4132892,
+      "text": "Enter sdram start address [in bytes]: ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 853604,
+      "instruction_file_offset": 378764,
+      "string_va": 4607908,
+      "string_file_offset": 4133068,
+      "text": "Enter chipset sdram start address [in bytes]: ",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 859712,
+      "instruction_file_offset": 384872,
+      "string_va": 4611192,
+      "string_file_offset": 4136352,
+      "text": "Number bytes of parameter(1, 2):",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 861620,
+      "instruction_file_offset": 386780,
+      "string_va": 4612560,
+      "string_file_offset": 4137720,
+      "text": "Show FirmWare CEVersion.",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 905132,
+      "instruction_file_offset": 430292,
+      "string_va": 4622840,
+      "string_file_offset": 4148000,
+      "text": "After EnableThePictureTaken.",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 932924,
+      "instruction_file_offset": 458084,
+      "string_va": 4626432,
+      "string_file_offset": 4151592,
+      "text": "GetParamList",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 933088,
+      "instruction_file_offset": 458248,
+      "string_va": 4626456,
+      "string_file_offset": 4151616,
+      "text": "GetCameraParam::SetAttributes ERROR i=%d bufferLength=%d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 938404,
+      "instruction_file_offset": 463564,
+      "string_va": 4626388,
+      "string_file_offset": 4151548,
+      "text": "GetCameraParam",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 948668,
+      "instruction_file_offset": 473828,
+      "string_va": 4633396,
+      "string_file_offset": 4158556,
+      "text": "FirmWare CEVersion version (New concept): %d:: %d.%d.%d.%d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 948692,
+      "instruction_file_offset": 473852,
+      "string_va": 4633456,
+      "string_file_offset": 4158616,
+      "text": "FirmWare CEVersion version (Old concept): %d:: %d.%d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1044712,
+      "instruction_file_offset": 569872,
+      "string_va": 4644556,
+      "string_file_offset": 4169716,
+      "text": "ATTACHMENT",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1046200,
+      "instruction_file_offset": 571360,
+      "string_va": 4645192,
+      "string_file_offset": 4170352,
+      "text": "\nERROR SendShutDownCommand(): EV_PACKET_ACK\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1047012,
+      "instruction_file_offset": 572172,
+      "string_va": 4645480,
+      "string_file_offset": 4170640,
+      "text": "\nERROR SendIfGUIIsActive(): EV_PACKET_ACK\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1050104,
+      "instruction_file_offset": 575264,
+      "string_va": 4646412,
+      "string_file_offset": 4171572,
+      "text": "PictureTaken",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1050424,
+      "instruction_file_offset": 575584,
+      "string_va": 4646496,
+      "string_file_offset": 4171656,
+      "text": "PictureTaken",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1050496,
+      "instruction_file_offset": 575656,
+      "string_va": 4646524,
+      "string_file_offset": 4171684,
+      "text": "PictureTaken",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1050568,
+      "instruction_file_offset": 575728,
+      "string_va": 4646552,
+      "string_file_offset": 4171712,
+      "text": "\nPictureTakenMessage:SetCommandNameToSend() param ERROR\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1055868,
+      "instruction_file_offset": 581028,
+      "string_va": 4647756,
+      "string_file_offset": 4172916,
+      "text": "PXAInterface",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1057776,
+      "instruction_file_offset": 582936,
+      "string_va": 4648220,
+      "string_file_offset": 4173380,
+      "text": "PDAInterface",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1059404,
+      "instruction_file_offset": 584564,
+      "string_va": 4648540,
+      "string_file_offset": 4173700,
+      "text": "\n***PDA Interface task was terminated ubnormal!!!",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1061236,
+      "instruction_file_offset": 586396,
+      "string_va": 4648676,
+      "string_file_offset": 4173836,
+      "text": "\nError type of sending queue to PXA/PDA Interface\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1061256,
+      "instruction_file_offset": 586416,
+      "string_va": 4648728,
+      "string_file_offset": 4173888,
+      "text": "\n*** Error during sending message to PXA/PDA Interface queue: %d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1063232,
+      "instruction_file_offset": 588392,
+      "string_va": 4648996,
+      "string_file_offset": 4174156,
+      "text": "\n ***Failed to create PXAInterface",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1063336,
+      "instruction_file_offset": 588496,
+      "string_va": 4649032,
+      "string_file_offset": 4174192,
+      "text": "\n ***Failed to create PDAInterface",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1082448,
+      "instruction_file_offset": 607608,
+      "string_va": 1084076,
+      "string_file_offset": 609236,
+      "text": "CfgRom length = %ld bytes",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1100956,
+      "instruction_file_offset": 626116,
+      "string_va": 1118348,
+      "string_file_offset": 643508,
+      "text": "Sid Packet inconsistent  %x,%x\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1101072,
+      "instruction_file_offset": 626232,
+      "string_va": 1118380,
+      "string_file_offset": 643540,
+      "text": "No Sid Packets \n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1109140,
+      "instruction_file_offset": 634300,
+      "string_va": 1118712,
+      "string_file_offset": 643872,
+      "text": "OhciGetArQuadData:Next addr Null before packet complete \n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1109464,
+      "instruction_file_offset": 634624,
+      "string_va": 1118772,
+      "string_file_offset": 643932,
+      "text": "Incomplete Packet in mem err 0x%X\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1117236,
+      "instruction_file_offset": 642396,
+      "string_va": 1119472,
+      "string_file_offset": 644632,
+      "text": "OhciCheckDataAvl:Next addr Null before packet complete Quad 1\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1117628,
+      "instruction_file_offset": 642788,
+      "string_va": 1119536,
+      "string_file_offset": 644696,
+      "text": "OhciCheckDataAvl:Next addr Null before packet complete quad %d \n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1117768,
+      "instruction_file_offset": 642928,
+      "string_va": 1119604,
+      "string_file_offset": 644764,
+      "text": "OhciCheckDataAvl:Next addr Null before packet complete , payload\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1130112,
+      "instruction_file_offset": 655272,
+      "string_va": 1141800,
+      "string_file_offset": 666960,
+      "text": "%s [%d bytes]",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1163380,
+      "instruction_file_offset": 688540,
+      "string_va": 1185560,
+      "string_file_offset": 710720,
+      "text": "Bytecount mismatch: %d bytes delivered, should have been %d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1163456,
+      "instruction_file_offset": 688616,
+      "string_va": 1185624,
+      "string_file_offset": 710784,
+      "text": "Print done: EndTime=%d,TotalBytes=%d,Thruput=%d KBps/%d Kbps, MaxPages=%d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1184312,
+      "instruction_file_offset": 709472,
+      "string_va": 1188748,
+      "string_file_offset": 713908,
+      "text": "No Of Bytes Already Printed  = %d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1195224,
+      "instruction_file_offset": 720384,
+      "string_va": 1197088,
+      "string_file_offset": 722248,
+      "text": "===packet xmit ack 0x%X; type error\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1218212,
+      "instruction_file_offset": 743372,
+      "string_va": 1220372,
+      "string_file_offset": 745532,
+      "text": "%s [%d bytes]",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1232408,
+      "instruction_file_offset": 757568,
+      "string_va": 1234284,
+      "string_file_offset": 759444,
+      "text": "PrnServiceBytes: ulLptNo = %d\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1254176,
+      "instruction_file_offset": 779336,
+      "string_va": 1256416,
+      "string_file_offset": 781576,
+      "text": ",data Size=%d bytes",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 1881772,
+      "instruction_file_offset": 1406932,
+      "string_va": 4703684,
+      "string_file_offset": 4228844,
+      "text": "ReadPacket FAILED!!!\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2213780,
+      "instruction_file_offset": 1738940,
+      "string_va": 4719600,
+      "string_file_offset": 4244760,
+      "text": "<?xpacket end='w'?>",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2214096,
+      "instruction_file_offset": 1739256,
+      "string_va": 4719600,
+      "string_file_offset": 4244760,
+      "text": "<?xpacket end='w'?>",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2286508,
+      "instruction_file_offset": 1811668,
+      "string_va": 5264168,
+      "string_file_offset": 4789328,
+      "text": "Can not replace packet content",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2286712,
+      "instruction_file_offset": 1811872,
+      "string_va": 5264200,
+      "string_file_offset": 4789360,
+      "text": "CStreamPacketsAdaptor::AddPacket(). can`t write packet header. %s\nError will not be detected!!!",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2286808,
+      "instruction_file_offset": 1811968,
+      "string_va": 5264296,
+      "string_file_offset": 4789456,
+      "text": "CStreamPacketsAdaptor::AddPacket(). can`t write packet data. %s\nError will not be detected!!!",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2551888,
+      "instruction_file_offset": 2077048,
+      "string_va": 5326816,
+      "string_file_offset": 4851976,
+      "text": "Can not find property \"%s\" in packets stream",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2552032,
+      "instruction_file_offset": 2077192,
+      "string_va": 5326864,
+      "string_file_offset": 4852024,
+      "text": "Packet size does not match \"byte\" property",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2552164,
+      "instruction_file_offset": 2077324,
+      "string_va": 5326908,
+      "string_file_offset": 4852068,
+      "text": "Packet size does not match \"short\" property",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2552296,
+      "instruction_file_offset": 2077456,
+      "string_va": 5326952,
+      "string_file_offset": 4852112,
+      "text": "Packet size does not match \"long\" property",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2552392,
+      "instruction_file_offset": 2077552,
+      "string_va": 5326996,
+      "string_file_offset": 4852156,
+      "text": "Packet size does not match \"float\" property",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2552496,
+      "instruction_file_offset": 2077656,
+      "string_va": 5327040,
+      "string_file_offset": 4852200,
+      "text": "Packet size does not match \"double\" property",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2552708,
+      "instruction_file_offset": 2077868,
+      "string_va": 5327088,
+      "string_file_offset": 4852248,
+      "text": "Packet size does not match \"Rect\" property",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 2552804,
+      "instruction_file_offset": 2077964,
+      "string_va": 5327132,
+      "string_file_offset": 4852292,
+      "text": "Packet size does not match \"pointer\" property",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3509344,
+      "instruction_file_offset": 3034504,
+      "string_va": 3514060,
+      "string_file_offset": 3039220,
+      "text": "AptusSComm",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3509356,
+      "instruction_file_offset": 3034516,
+      "string_va": 3514072,
+      "string_file_offset": 3039232,
+      "text": "Leaf Wi",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3509388,
+      "instruction_file_offset": 3034548,
+      "string_va": 3514080,
+      "string_file_offset": 3039240,
+      "text": "AFiComm",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3509416,
+      "instruction_file_offset": 3034576,
+      "string_va": 3514100,
+      "string_file_offset": 3039260,
+      "text": "AptusComm",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3509428,
+      "instruction_file_offset": 3034588,
+      "string_va": 3514072,
+      "string_file_offset": 3039232,
+      "text": "Leaf Wi",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510560,
+      "instruction_file_offset": 3035720,
+      "string_va": 3514376,
+      "string_file_offset": 3039536,
+      "text": "GAP:  Get Local BD Addr Response.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510576,
+      "instruction_file_offset": 3035736,
+      "string_va": 3514412,
+      "string_file_offset": 3039572,
+      "text": "GAP:  Set Bluetooth Passkey Response. Status = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510596,
+      "instruction_file_offset": 3035756,
+      "string_va": 3514464,
+      "string_file_offset": 3039624,
+      "text": "GAP:  Add Link Key Response. Status = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510644,
+      "instruction_file_offset": 3035804,
+      "string_va": 3514540,
+      "string_file_offset": 3039700,
+      "text": "GAP:  Set Local Name Response. Status = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510692,
+      "instruction_file_offset": 3035852,
+      "string_va": 3514620,
+      "string_file_offset": 3039780,
+      "text": "GAP:  Get Local Name Response. Name = %s.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510720,
+      "instruction_file_offset": 3035880,
+      "string_va": 3514664,
+      "string_file_offset": 3039824,
+      "text": "GAP:  Set Discoverable Response. Status = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510768,
+      "instruction_file_offset": 3035928,
+      "string_va": 3514748,
+      "string_file_offset": 3039908,
+      "text": "GAP:  Set Connectable Response. Status = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510840,
+      "instruction_file_offset": 3036000,
+      "string_va": 3514828,
+      "string_file_offset": 3039988,
+      "text": "GAP:  Remote BD Address Indication %02x:%02x:%02x:%02x:%02x:%02x.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510892,
+      "instruction_file_offset": 3036052,
+      "string_va": 3514896,
+      "string_file_offset": 3040056,
+      "text": "GAP:  Request Of Blootooth passkey Indication from %02x:%02x:%02x:%02x:%02x:%02x.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3510964,
+      "instruction_file_offset": 3036124,
+      "string_va": 3514980,
+      "string_file_offset": 3040140,
+      "text": "GAP:  Set Device Class Response. Status = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511384,
+      "instruction_file_offset": 3036544,
+      "string_va": 3515068,
+      "string_file_offset": 3040228,
+      "text": "GAP:  New Link Key Indication:\n Key Type %02x. Address  %02x:%02x:%02x:%02x:%02x:%02x.\n LKey     %02x:%02x:%02x:%02x-%02x:%02x:%02x:%02x-%02x:%02x:%02x:%02x-%02x:%02x:%02x:%02x.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511412,
+      "instruction_file_offset": 3036572,
+      "string_va": 3515248,
+      "string_file_offset": 3040408,
+      "text": "GAP:  New Link Key Indication failed.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511428,
+      "instruction_file_offset": 3036588,
+      "string_va": 3515288,
+      "string_file_offset": 3040448,
+      "text": "GAP: Message %x,%2d,%d,%d,%p\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511464,
+      "instruction_file_offset": 3036624,
+      "string_va": 3515320,
+      "string_file_offset": 3040480,
+      "text": "GAP: Unknown Message %x,%2d,%d,%d,%p\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511660,
+      "instruction_file_offset": 3036820,
+      "string_va": 3515360,
+      "string_file_offset": 3040520,
+      "text": "SPP:  Add Port Response: Port = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511728,
+      "instruction_file_offset": 3036888,
+      "string_va": 3515400,
+      "string_file_offset": 3040560,
+      "text": "SPP:  Open Indication: Port = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511744,
+      "instruction_file_offset": 3036904,
+      "string_va": 3515436,
+      "string_file_offset": 3040596,
+      "text": "SPP:  Open Indication: Port = %d.",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511816,
+      "instruction_file_offset": 3036976,
+      "string_va": 3515472,
+      "string_file_offset": 3040632,
+      "text": "SPP:  Close Indication: Port = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511832,
+      "instruction_file_offset": 3036992,
+      "string_va": 3515508,
+      "string_file_offset": 3040668,
+      "text": "SPP:  Close Indication: Port = %d.",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511864,
+      "instruction_file_offset": 3037024,
+      "string_va": 3515544,
+      "string_file_offset": 3040704,
+      "text": "SPP:  Close Response: Port = %d.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511880,
+      "instruction_file_offset": 3037040,
+      "string_va": 3515580,
+      "string_file_offset": 3040740,
+      "text": "SPP:  Close Response: Port = %d.",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511960,
+      "instruction_file_offset": 3037120,
+      "string_va": 3515616,
+      "string_file_offset": 3040776,
+      "text": "SPP:  Message %x,%2d,%d,%d,%p\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3511996,
+      "instruction_file_offset": 3037156,
+      "string_va": 3515648,
+      "string_file_offset": 3040808,
+      "text": "SPP:  Unknown Message %x,%2d,%d,%d,%p\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3512848,
+      "instruction_file_offset": 3038008,
+      "string_va": 3515752,
+      "string_file_offset": 3040912,
+      "text": "...%d bytes.\n",
+      "basis": "adjacent lis/addi pair"
+    },
+    {
+      "instruction_va": 3512872,
+      "instruction_file_offset": 3038032,
+      "string_va": 3515768,
+      "string_file_offset": 3040928,
+      "text": "Long message: %d bytes.\n",
+      "basis": "adjacent lis/addi pair"
+    }
+  ]
+}

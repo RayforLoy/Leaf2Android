@@ -1,0 +1,91 @@
+# classic 4.701 VA 0x1c0bd0..0x1c0d38, exclusive
+001c0bd0 [UPD 0014ccf8] stwu      r1, -0x18(r1)
+001c0bd4 [UPD 0014ccfc] mflr      r0
+001c0bd8 [UPD 0014cd00] stw       r30, 0x10(r1)
+001c0bdc [UPD 0014cd04] stw       r31, 0x14(r1)
+001c0be0 [UPD 0014cd08] stw       r0, 0x1c(r1)
+001c0be4 [UPD 0014cd0c] addi      r30, r5, 0
+001c0be8 [UPD 0014cd10] lwz       r31, 0(r4)
+001c0bec [UPD 0014cd14] lwz       r11, 0(r31)
+001c0bf0 [UPD 0014cd18] lwz       r11, 0x20(r11)
+001c0bf4 [UPD 0014cd1c] mtlr      r11
+001c0bf8 [UPD 0014cd20] addi      r4, r1, 8
+001c0bfc [UPD 0014cd24] addi      r3, r31, 0
+001c0c00 [UPD 0014cd28] li        r5, 2
+001c0c04 [UPD 0014cd2c] li        r6, 0x65
+001c0c08 [UPD 0014cd30] blrl      
+001c0c0c [UPD 0014cd34] addi      r4, r3, 0
+001c0c10 [UPD 0014cd38] cmpwi     r4, 0
+001c0c14 [UPD 0014cd3c] beq       0x1c0c20
+001c0c18 [UPD 0014cd40] addi      r3, r4, 0
+001c0c1c [UPD 0014cd44] b         0x1c0c7c
+001c0c20 [UPD 0014cd48] lis       r4, 0x3f
+001c0c24 [UPD 0014cd4c] addi      r4, r4, 0x90 ; ASCII 'Good'
+001c0c28 [UPD 0014cd50] addi      r3, r30, 0
+001c0c2c [UPD 0014cd54] bl        0x3bb8c0
+001c0c30 [UPD 0014cd58] cmpwi     r3, 0
+001c0c34 [UPD 0014cd5c] bne       0x1c0c48
+001c0c38 [UPD 0014cd60] lha       r12, 8(r1)
+001c0c3c [UPD 0014cd64] ori       r12, r12, 1
+001c0c40 [UPD 0014cd68] sth       r12, 8(r1)
+001c0c44 [UPD 0014cd6c] b         0x1c0c54
+001c0c48 [UPD 0014cd70] lha       r12, 8(r1)
+001c0c4c [UPD 0014cd74] rlwinm    r12, r12, 0, 0x10, 0x1e
+001c0c50 [UPD 0014cd78] sth       r12, 8(r1)
+001c0c54 [UPD 0014cd7c] lwz       r12, 0(r31)
+001c0c58 [UPD 0014cd80] lwz       r12, 0x24(r12)
+001c0c5c [UPD 0014cd84] mtlr      r12
+001c0c60 [UPD 0014cd88] addi      r4, r1, 8
+001c0c64 [UPD 0014cd8c] addi      r3, r31, 0
+001c0c68 [UPD 0014cd90] li        r5, 2
+001c0c6c [UPD 0014cd94] li        r6, 0x65
+001c0c70 [UPD 0014cd98] blrl      
+001c0c74 [UPD 0014cd9c] addi      r4, r3, 0
+001c0c78 [UPD 0014cda0] addi      r3, r4, 0
+001c0c7c [UPD 0014cda4] lwz       r30, 0x10(r1)
+001c0c80 [UPD 0014cda8] lwz       r31, 0x14(r1)
+001c0c84 [UPD 0014cdac] lwz       r0, 0x1c(r1)
+001c0c88 [UPD 0014cdb0] mtlr      r0
+001c0c8c [UPD 0014cdb4] addi      r1, r1, 0x18
+001c0c90 [UPD 0014cdb8] blr       
+001c0c94 [UPD 0014cdbc] stwu      r1, -0x18(r1)
+001c0c98 [UPD 0014cdc0] mflr      r0
+001c0c9c [UPD 0014cdc4] stw       r30, 0x10(r1)
+001c0ca0 [UPD 0014cdc8] stw       r31, 0x14(r1)
+001c0ca4 [UPD 0014cdcc] stw       r0, 0x1c(r1)
+001c0ca8 [UPD 0014cdd0] addi      r31, r4, 0
+001c0cac [UPD 0014cdd4] addi      r30, r5, 0
+001c0cb0 [UPD 0014cdd8] lwz       r31, 0(r31)
+001c0cb4 [UPD 0014cddc] lwz       r11, 0(r31)
+001c0cb8 [UPD 0014cde0] lwz       r11, 0x20(r11)
+001c0cbc [UPD 0014cde4] mtlr      r11
+001c0cc0 [UPD 0014cde8] addi      r4, r1, 8
+001c0cc4 [UPD 0014cdec] addi      r3, r31, 0
+001c0cc8 [UPD 0014cdf0] li        r5, 2
+001c0ccc [UPD 0014cdf4] li        r6, 0x65
+001c0cd0 [UPD 0014cdf8] blrl      
+001c0cd4 [UPD 0014cdfc] addi      r31, r3, 0
+001c0cd8 [UPD 0014ce00] cmpwi     r31, 0
+001c0cdc [UPD 0014ce04] beq       0x1c0ce8
+001c0ce0 [UPD 0014ce08] addi      r3, r31, 0
+001c0ce4 [UPD 0014ce0c] b         0x1c0d20
+001c0ce8 [UPD 0014ce10] lha       r12, 8(r1)
+001c0cec [UPD 0014ce14] clrlwi    r12, r12, 0x1f
+001c0cf0 [UPD 0014ce18] cmpwi     r12, 0
+001c0cf4 [UPD 0014ce1c] beq       0x1c0d0c
+001c0cf8 [UPD 0014ce20] lis       r4, 0x3f
+001c0cfc [UPD 0014ce24] addi      r4, r4, 0x98 ; ASCII 'Good'
+001c0d00 [UPD 0014ce28] addi      r3, r30, 0
+001c0d04 [UPD 0014ce2c] bl        0x3b9818
+001c0d08 [UPD 0014ce30] b         0x1c0d1c
+001c0d0c [UPD 0014ce34] lis       r4, 0x3f
+001c0d10 [UPD 0014ce38] addi      r4, r4, 0xa0 ; ASCII 'UnMarked'
+001c0d14 [UPD 0014ce3c] addi      r3, r30, 0
+001c0d18 [UPD 0014ce40] bl        0x3b9818
+001c0d1c [UPD 0014ce44] li        r3, 0
+001c0d20 [UPD 0014ce48] lwz       r30, 0x10(r1)
+001c0d24 [UPD 0014ce4c] lwz       r31, 0x14(r1)
+001c0d28 [UPD 0014ce50] lwz       r0, 0x1c(r1)
+001c0d2c [UPD 0014ce54] mtlr      r0
+001c0d30 [UPD 0014ce58] addi      r1, r1, 0x18
+001c0d34 [UPD 0014ce5c] blr       

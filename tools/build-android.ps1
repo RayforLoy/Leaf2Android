@@ -44,7 +44,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Android build/checks failed.' }
     $output = Join-Path $projectRoot 'dist'
     New-Item -ItemType Directory -Path $output -Force | Out-Null
-    $artifactName = if ($Release) { 'Leaf2Android-0.2.0.apk' } else { 'Leaf2Android-0.2.0-debug.apk' }
+    $artifactName = if ($Release) { 'Leaf2Android-0.3.0.apk' } else { 'Leaf2Android-0.3.0-debug.apk' }
     $builtApk = if ($Release) { '.\app\build\outputs\apk\release\app-release.apk' } else { '.\app\build\outputs\apk\debug\app-debug.apk' }
     $apk = Join-Path $output $artifactName
     Copy-Item -LiteralPath $builtApk -Destination $apk

@@ -1,9 +1,9 @@
 {
-  "apk": "dist\\Leaf2Android-0.2.0.apk",
-  "bytes": 3105063,
-  "sha256": "d3a081c242fa813d87cbd9b09d54e76c4e8a44762621e7398720c5c548c30a4c",
+  "apk": "dist\\Leaf2Android-0.3.0.apk",
+  "bytes": 3499160,
+  "sha256": "3089764328f8664f887314ee143a43c82fc79a1a43367fc7c54e87580ac36fbd",
   "application_id": "com.leaf2android",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "min_sdk": 31,
   "target_sdk": 36,
   "build_type": "release",

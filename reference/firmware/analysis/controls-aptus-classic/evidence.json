@@ -1,0 +1,1343 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-11",
+  "source": "originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD",
+  "source_sha256": "a2287716927a18c9bbd7834be327f592289f8a48aa2859b4d252b813cc82741a",
+  "source_size": 4235648,
+  "version": "4.701",
+  "payload_file": "FirmwareAptus-4.701.payload.bin",
+  "payload_size": 4235352,
+  "payload_sha256": "52718040da6175f4a4a2c3c57df2078ad140613d3515ab26ede7ac787029dfa8",
+  "mapping": "UPD file offset = VA - 0x74000 + 0x128; payload offset = VA - 0x74000",
+  "capstone_version": "5.0.6",
+  "scope": "Static code/containers only; no vendor code, Bluetooth traffic or flash operation executed.",
+  "catalogue": [
+    {
+      "tag": "ReSyncRequest",
+      "pda_registration_call_va": 943180,
+      "constructor_va": 686328,
+      "name_getter_va": 686768,
+      "vtable_va": 4008044,
+      "interface_id": 1,
+      "image_branch_conditional": false
+    },
+    {
+      "tag": "GetImage",
+      "pda_registration_call_va": 943260,
+      "constructor_va": 592440,
+      "name_getter_va": 596016,
+      "vtable_va": 3989712,
+      "interface_id": 1,
+      "image_branch_conditional": true
+    },
+    {
+      "tag": "GetPictureParams",
+      "pda_registration_call_va": 943316,
+      "constructor_va": 534044,
+      "name_getter_va": 538784,
+      "vtable_va": 3981816,
+      "interface_id": 1,
+      "image_branch_conditional": true
+    },
+    {
+      "tag": "FileCommand",
+      "pda_registration_call_va": 943372,
+      "constructor_va": 674564,
+      "name_getter_va": 680780,
+      "vtable_va": 4006224,
+      "interface_id": 1,
+      "image_branch_conditional": true
+    },
+    {
+      "tag": "ImageFunction",
+      "pda_registration_call_va": 943428,
+      "constructor_va": 686984,
+      "name_getter_va": 690572,
+      "vtable_va": 4008364,
+      "interface_id": 1,
+      "image_branch_conditional": true
+    },
+    {
+      "tag": "SetPictureParams",
+      "pda_registration_call_va": 943484,
+      "constructor_va": 540396,
+      "name_getter_va": 542736,
+      "vtable_va": 3982828,
+      "interface_id": 1,
+      "image_branch_conditional": true
+    },
+    {
+      "tag": "RequestSync",
+      "pda_registration_call_va": 943536,
+      "constructor_va": 544416,
+      "name_getter_va": 554916,
+      "vtable_va": 3983896,
+      "interface_id": 1,
+      "image_branch_conditional": false
+    },
+    {
+      "tag": "SetCameraParam",
+      "pda_registration_call_va": 943584,
+      "constructor_va": 598892,
+      "name_getter_va": 606928,
+      "vtable_va": 3990852,
+      "interface_id": 1,
+      "image_branch_conditional": false
+    },
+    {
+      "tag": "GetCameraParam",
+      "pda_registration_call_va": 943632,
+      "constructor_va": 864688,
+      "name_getter_va": 870632,
+      "vtable_va": 4051696,
+      "interface_id": 1,
+      "image_branch_conditional": false
+    }
+  ],
+  "disassembly": [
+    {
+      "path": "pda-message-catalog.ppc.txt",
+      "ranges": [
+        [
+          943116,
+          943748
+        ]
+      ],
+      "sha256": "8b1ee2d40332c1f7dccfaf0a8ecab4320cf43c95fa622a6d4742a7fe8dfb8541"
+    },
+    {
+      "path": "pxa-boot-registration.ppc.txt",
+      "ranges": [
+        [
+          940800,
+          941424
+        ]
+      ],
+      "sha256": "a715341d7135ad351ede0c2bffe7d426c68f1ba9698c57139447445fa68504c1"
+    },
+    {
+      "path": "request-sync.ppc.txt",
+      "ranges": [
+        [
+          544416,
+          554928
+        ]
+      ],
+      "sha256": "f96fc87303a9016000b962a4cd2714f9c06043c6a3133bd41023117c184fa20c"
+    },
+    {
+      "path": "set-camera-params.ppc.txt",
+      "ranges": [
+        [
+          598892,
+          606940
+        ]
+      ],
+      "sha256": "93427d405b4ccdcd6b2b6240cd457a62882886ba53dc502a5260a0cd8f5fc180"
+    },
+    {
+      "path": "get-camera-params.ppc.txt",
+      "ranges": [
+        [
+          864688,
+          870644
+        ]
+      ],
+      "sha256": "5797c33adc01d97470ab69d157b89dfd9ee53a14884ba90693873f4904c2a69c"
+    },
+    {
+      "path": "get-image.ppc.txt",
+      "ranges": [
+        [
+          592440,
+          596028
+        ],
+        [
+          610864,
+          610980
+        ]
+      ],
+      "sha256": "7d3c23edf4e595089e8856e533b4308126bc197129faa6ad93a2bb6825017ffa"
+    },
+    {
+      "path": "get-picture-params.ppc.txt",
+      "ranges": [
+        [
+          534044,
+          538796
+        ]
+      ],
+      "sha256": "050e57c55361a9cbaeabd3da825fb765515f871be0bb9403d4d442a1a5468e77"
+    },
+    {
+      "path": "set-picture-params.ppc.txt",
+      "ranges": [
+        [
+          540396,
+          542748
+        ]
+      ],
+      "sha256": "61da9e6948ddd5180e973aa90b6dd4442f26d59324aaf115ed1c70bf93810068"
+    },
+    {
+      "path": "marking-storage.ppc.txt",
+      "ranges": [
+        [
+          1838032,
+          1838392
+        ]
+      ],
+      "sha256": "720fdbf5c61ec34730ac009b7d039e1dc99d41f5f9684d2f203fce1459a1e1a5"
+    },
+    {
+      "path": "shoot-setup-storage.ppc.txt",
+      "ranges": [
+        [
+          1828996,
+          1829496
+        ],
+        [
+          1831468,
+          1831748
+        ]
+      ],
+      "sha256": "479af89aa577e76fae34b5047191121679762d9093f3d2a5a31fb3e56c2fa578"
+    },
+    {
+      "path": "model-name-and-id-getters.ppc.txt",
+      "ranges": [
+        [
+          2164880,
+          2164976
+        ]
+      ],
+      "sha256": "1420330981242926710e0f06c329caaeb6e2144b433e43f89c9a1315b410de19"
+    },
+    {
+      "path": "file-command.ppc.txt",
+      "ranges": [
+        [
+          674564,
+          680792
+        ]
+      ],
+      "sha256": "fe9f82f4339500b42dc8bd5057f5b43dca3a7226dbe8b656732e83986c146143"
+    },
+    {
+      "path": "image-function.ppc.txt",
+      "ranges": [
+        [
+          686984,
+          690584
+        ]
+      ],
+      "sha256": "41f1a6550e5b04ef2616f4ec7b24cebcd3a12a160981b99a4a42093a03655636"
+    }
+  ],
+  "classic_ce_container": {
+    "source": "originals/CaptureOne.Mac.7.1.6/FirmWareAptus.BIN",
+    "source_size": 7730663,
+    "sha256": "4a0d32186d95bd0aaf0a741d161b98712e30beac595d7d5d10dabffaa86397c0",
+    "interface_version": "1.8.6",
+    "wrapper_version_bytes": "01080600",
+    "format": "B000FF Windows CE load records",
+    "image_start": 2148237312,
+    "image_length": 7764512,
+    "entry": 2148241408,
+    "record_count": 27,
+    "all_record_checksums_valid": true,
+    "records": [
+      {
+        "address": 2148237312,
+        "size": 4,
+        "checksum": 491
+      },
+      {
+        "address": 2148237376,
+        "size": 8,
+        "checksum": 647
+      },
+      {
+        "address": 2148241408,
+        "size": 257824,
+        "checksum": 26341193
+      },
+      {
+        "address": 2148499456,
+        "size": 8188,
+        "checksum": 526563
+      },
+      {
+        "address": 2148507648,
+        "size": 367828,
+        "checksum": 37231674
+      },
+      {
+        "address": 2148875476,
+        "size": 29208,
+        "checksum": 1981868
+      },
+      {
+        "address": 2148904960,
+        "size": 196780,
+        "checksum": 19618368
+      },
+      {
+        "address": 2149105664,
+        "size": 665460,
+        "checksum": 68740363
+      },
+      {
+        "address": 2149771124,
+        "size": 31652,
+        "checksum": 3744699
+      },
+      {
+        "address": 2149806080,
+        "size": 57928,
+        "checksum": 5434958
+      },
+      {
+        "address": 2149867520,
+        "size": 55960,
+        "checksum": 5623452
+      },
+      {
+        "address": 2149923480,
+        "size": 84,
+        "checksum": 4206
+      },
+      {
+        "address": 2149923564,
+        "size": 932,
+        "checksum": 80341
+      },
+      {
+        "address": 2149924864,
+        "size": 33124,
+        "checksum": 3153019
+      },
+      {
+        "address": 2149961728,
+        "size": 138820,
+        "checksum": 13919810
+      },
+      {
+        "address": 2150100992,
+        "size": 4296,
+        "checksum": 381649
+      },
+      {
+        "address": 2150109184,
+        "size": 81864,
+        "checksum": 8712234
+      },
+      {
+        "address": 2150191104,
+        "size": 384,
+        "checksum": 45189
+      },
+      {
+        "address": 2150195200,
+        "size": 504,
+        "checksum": 48301
+      },
+      {
+        "address": 2150199296,
+        "size": 107232,
+        "checksum": 10459251
+      },
+      {
+        "address": 2150309888,
+        "size": 22748,
+        "checksum": 2692812
+      },
+      {
+        "address": 2150332636,
+        "size": 426408,
+        "checksum": 52623012
+      },
+      {
+        "address": 2150759044,
+        "size": 110764,
+        "checksum": 13631473
+      },
+      {
+        "address": 2150869808,
+        "size": 223040,
+        "checksum": 27097144
+      },
+      {
+        "address": 2151092848,
+        "size": 128844,
+        "checksum": 7504881
+      },
+      {
+        "address": 2151221692,
+        "size": 4763860,
+        "checksum": 555895814
+      },
+      {
+        "address": 2155985552,
+        "size": 16272,
+        "checksum": 658896
+      }
+    ],
+    "scope": "Container/header verification only; compressed CE modules were not reconstructed in this increment."
+  },
+  "clients": [
+    {
+      "path": "reference/analysis/wiview-1.0.2/extracted/00LeafCE.001",
+      "sha256": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d",
+      "referenced_construction_tags": [
+        "Ack",
+        "FileCommand",
+        "GetCameraParam",
+        "GetImage",
+        "GetPictureParams",
+        "ImageFunction",
+        "ReSyncRequest",
+        "RequestSync",
+        "SetCameraParam",
+        "SetPictureParams"
+      ],
+      "literal_references": [
+        {
+          "instruction_va": 180796,
+          "literal_va": 1097648,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"recovery\" Subject=\""
+        },
+        {
+          "instruction_va": 180860,
+          "literal_va": 1097552,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"qformat\" Subject=\""
+        },
+        {
+          "instruction_va": 181292,
+          "literal_va": 1098056,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"del\" Subject=\""
+        },
+        {
+          "instruction_va": 181344,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 181440,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 181536,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 181668,
+          "literal_va": 1097856,
+          "tag": "GetPictureParams",
+          "literal": "^<GetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 182096,
+          "literal_va": 1098056,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"del\" Subject=\""
+        },
+        {
+          "instruction_va": 188744,
+          "literal_va": 1099176,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"dir\" Subject=\""
+        },
+        {
+          "instruction_va": 188860,
+          "literal_va": 1099080,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"CurrentTime\" />"
+        },
+        {
+          "instruction_va": 188872,
+          "literal_va": 1099040,
+          "tag": "RequestSync",
+          "literal": "^<RequestSync />"
+        },
+        {
+          "instruction_va": 189048,
+          "literal_va": 1099280,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />"
+        },
+        {
+          "instruction_va": 196148,
+          "literal_va": 1099176,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"dir\" Subject=\""
+        },
+        {
+          "instruction_va": 197816,
+          "literal_va": 1097856,
+          "tag": "GetPictureParams",
+          "literal": "^<GetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 198296,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 199908,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 200656,
+          "literal_va": 1100864,
+          "tag": "ReSyncRequest",
+          "literal": "^<ReSyncRequest />"
+        },
+        {
+          "instruction_va": 200804,
+          "literal_va": 1100924,
+          "tag": "Ack",
+          "literal": "^<Ack />"
+        },
+        {
+          "instruction_va": 201052,
+          "literal_va": 1100964,
+          "tag": "GetImage",
+          "literal": "^<GetImage file_name=\""
+        },
+        {
+          "instruction_va": 203568,
+          "literal_va": 1101724,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam CurrentTime=\""
+        },
+        {
+          "instruction_va": 203936,
+          "literal_va": 1102428,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam "
+        },
+        {
+          "instruction_va": 205032,
+          "literal_va": 1102508,
+          "tag": "ImageFunction",
+          "literal": "^<ImageFunction file_name=\""
+        },
+        {
+          "instruction_va": 205820,
+          "literal_va": 1102680,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"move\" Subject=\""
+        },
+        {
+          "instruction_va": 206296,
+          "literal_va": 1102680,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"move\" Subject=\""
+        },
+        {
+          "instruction_va": 206648,
+          "literal_va": 1102792,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"copy\" Subject=\""
+        },
+        {
+          "instruction_va": 207308,
+          "literal_va": 1102904,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+        },
+        {
+          "instruction_va": 207524,
+          "literal_va": 1102904,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+        },
+        {
+          "instruction_va": 207836,
+          "literal_va": 1103040,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rename\" Subject=\""
+        },
+        {
+          "instruction_va": 208308,
+          "literal_va": 1103040,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rename\" Subject=\""
+        },
+        {
+          "instruction_va": 208652,
+          "literal_va": 1103208,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+        },
+        {
+          "instruction_va": 208988,
+          "literal_va": 1103208,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+        },
+        {
+          "instruction_va": 209616,
+          "literal_va": 1103424,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"exp_left\" />"
+        },
+        {
+          "instruction_va": 209624,
+          "literal_va": 1103320,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"Histogram_scale\" />"
+        },
+        {
+          "instruction_va": 211104,
+          "literal_va": 1103832,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"battery_percent\" />"
+        },
+        {
+          "instruction_va": 211960,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 212312,
+          "literal_va": 1104060,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam Brightness=\""
+        },
+        {
+          "instruction_va": 212544,
+          "literal_va": 1104144,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam EnableTakenPicture=\""
+        },
+        {
+          "instruction_va": 212780,
+          "literal_va": 1102428,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam "
+        },
+        {
+          "instruction_va": 213404,
+          "literal_va": 1104328,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam CEVersion=\""
+        },
+        {
+          "instruction_va": 213708,
+          "literal_va": 1097856,
+          "tag": "GetPictureParams",
+          "literal": "^<GetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 214336,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 214800,
+          "literal_va": 1097980,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 215220,
+          "literal_va": 1102428,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam "
+        },
+        {
+          "instruction_va": 215636,
+          "literal_va": 1104620,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam NewPinCode=\""
+        },
+        {
+          "instruction_va": 215864,
+          "literal_va": 1104704,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"TotalFrames\" />"
+        },
+        {
+          "instruction_va": 216412,
+          "literal_va": 1104928,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam ResetCounter=\"yes\" />"
+        },
+        {
+          "instruction_va": 216612,
+          "literal_va": 1105032,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />"
+        },
+        {
+          "instruction_va": 217356,
+          "literal_va": 1100964,
+          "tag": "GetImage",
+          "literal": "^<GetImage file_name=\""
+        },
+        {
+          "instruction_va": 219056,
+          "literal_va": 1105544,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"Copyright;Annotation\" />"
+        }
+      ],
+      "scope": "ARM LDR literal references establish construction text, not successful camera effects."
+    },
+    {
+      "path": "reference/analysis/wiview-1.0.3/extracted/00LeafCE.001",
+      "sha256": "ac6d0699870d7f9a1e00fe8bf507a35cfc38f3d2b6619e5dbae30eb248b87fe9",
+      "referenced_construction_tags": [
+        "Ack",
+        "FileCommand",
+        "GetCameraParam",
+        "GetImage",
+        "GetPictureParams",
+        "ImageFunction",
+        "Nak",
+        "ReSyncRequest",
+        "RequestSync",
+        "SetCameraParam",
+        "SetPictureParams"
+      ],
+      "literal_references": [
+        {
+          "instruction_va": 183944,
+          "literal_va": 1106672,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"recovery\" Subject=\""
+        },
+        {
+          "instruction_va": 184008,
+          "literal_va": 1106576,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"qformat\" Subject=\""
+        },
+        {
+          "instruction_va": 184440,
+          "literal_va": 1107080,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"del\" Subject=\""
+        },
+        {
+          "instruction_va": 184492,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 184588,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 184684,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 184816,
+          "literal_va": 1106880,
+          "tag": "GetPictureParams",
+          "literal": "^<GetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 185248,
+          "literal_va": 1107080,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"del\" Subject=\""
+        },
+        {
+          "instruction_va": 191896,
+          "literal_va": 1108200,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"dir\" Subject=\""
+        },
+        {
+          "instruction_va": 192012,
+          "literal_va": 1108104,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"CurrentTime\" />"
+        },
+        {
+          "instruction_va": 192024,
+          "literal_va": 1108064,
+          "tag": "RequestSync",
+          "literal": "^<RequestSync />"
+        },
+        {
+          "instruction_va": 192200,
+          "literal_va": 1108304,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"dir\" Subject=\"./\" Retransmission=\"TRUE\" />"
+        },
+        {
+          "instruction_va": 199624,
+          "literal_va": 1108200,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"dir\" Subject=\""
+        },
+        {
+          "instruction_va": 201292,
+          "literal_va": 1106880,
+          "tag": "GetPictureParams",
+          "literal": "^<GetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 201772,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 203380,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 204128,
+          "literal_va": 1110000,
+          "tag": "ReSyncRequest",
+          "literal": "^<ReSyncRequest />"
+        },
+        {
+          "instruction_va": 204276,
+          "literal_va": 1110060,
+          "tag": "Ack",
+          "literal": "^<Ack />"
+        },
+        {
+          "instruction_va": 204496,
+          "literal_va": 1110060,
+          "tag": "Ack",
+          "literal": "^<Ack />"
+        },
+        {
+          "instruction_va": 204524,
+          "literal_va": 1110100,
+          "tag": "Nak",
+          "literal": "^<Nak />"
+        },
+        {
+          "instruction_va": 204724,
+          "literal_va": 1110140,
+          "tag": "GetImage",
+          "literal": "^<GetImage file_name=\""
+        },
+        {
+          "instruction_va": 207244,
+          "literal_va": 1110900,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam CurrentTime=\""
+        },
+        {
+          "instruction_va": 207612,
+          "literal_va": 1111604,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam "
+        },
+        {
+          "instruction_va": 208708,
+          "literal_va": 1111684,
+          "tag": "ImageFunction",
+          "literal": "^<ImageFunction file_name=\""
+        },
+        {
+          "instruction_va": 209496,
+          "literal_va": 1111856,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"move\" Subject=\""
+        },
+        {
+          "instruction_va": 209972,
+          "literal_va": 1111856,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"move\" Subject=\""
+        },
+        {
+          "instruction_va": 210324,
+          "literal_va": 1111968,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"copy\" Subject=\""
+        },
+        {
+          "instruction_va": 210984,
+          "literal_va": 1112080,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+        },
+        {
+          "instruction_va": 211200,
+          "literal_va": 1112080,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rmdir\" Subject=\""
+        },
+        {
+          "instruction_va": 211512,
+          "literal_va": 1112216,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rename\" Subject=\""
+        },
+        {
+          "instruction_va": 211984,
+          "literal_va": 1112216,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"rename\" Subject=\""
+        },
+        {
+          "instruction_va": 212328,
+          "literal_va": 1112384,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+        },
+        {
+          "instruction_va": 212664,
+          "literal_va": 1112384,
+          "tag": "FileCommand",
+          "literal": "^<FileCommand FileCommand=\"mkdir\" Subject=\""
+        },
+        {
+          "instruction_va": 213292,
+          "literal_va": 1112600,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"exp_left\" />"
+        },
+        {
+          "instruction_va": 213300,
+          "literal_va": 1112496,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"Histogram_scale\" />"
+        },
+        {
+          "instruction_va": 214780,
+          "literal_va": 1113008,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"battery_percent\" />"
+        },
+        {
+          "instruction_va": 215636,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 215988,
+          "literal_va": 1113236,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam Brightness=\""
+        },
+        {
+          "instruction_va": 216224,
+          "literal_va": 1113344,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam PowerSource=\""
+        },
+        {
+          "instruction_va": 216620,
+          "literal_va": 1113432,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam EnableTakenPicture=\""
+        },
+        {
+          "instruction_va": 216856,
+          "literal_va": 1111604,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam "
+        },
+        {
+          "instruction_va": 217480,
+          "literal_va": 1113616,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam CEVersion=\""
+        },
+        {
+          "instruction_va": 217780,
+          "literal_va": 1106880,
+          "tag": "GetPictureParams",
+          "literal": "^<GetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 218408,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 218872,
+          "literal_va": 1107004,
+          "tag": "SetPictureParams",
+          "literal": "^<SetPictureParams file_name=\""
+        },
+        {
+          "instruction_va": 219292,
+          "literal_va": 1111604,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam "
+        },
+        {
+          "instruction_va": 219708,
+          "literal_va": 1113908,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam NewPinCode=\""
+        },
+        {
+          "instruction_va": 219936,
+          "literal_va": 1113992,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"TotalFrames\" />"
+        },
+        {
+          "instruction_va": 220484,
+          "literal_va": 1114216,
+          "tag": "SetCameraParam",
+          "literal": "^<SetCameraParam ResetCounter=\"yes\" />"
+        },
+        {
+          "instruction_va": 220684,
+          "literal_va": 1114320,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"exp_max;exp_left\" />"
+        },
+        {
+          "instruction_va": 221428,
+          "literal_va": 1110140,
+          "tag": "GetImage",
+          "literal": "^<GetImage file_name=\""
+        },
+        {
+          "instruction_va": 223128,
+          "literal_va": 1114840,
+          "tag": "GetCameraParam",
+          "literal": "^<GetCameraParam GetParamList=\"Copyright;Annotation\" />"
+        }
+      ],
+      "scope": "ARM LDR literal references establish construction text, not successful camera effects."
+    }
+  ],
+  "model_association": {
+    "level": "Compiled shared-firmware model descriptor; not a model-exclusive flashing/compatibility proof",
+    "model_label_va": 4152188,
+    "model_label": "Leaf Aptus 22",
+    "model_name_pointer_va": 4709340,
+    "model_name_getter_va": 2164940,
+    "descriptor_id_getter_va": 2164932,
+    "descriptor_id_constant": 12,
+    "descriptor_vtable_entries": [
+      4151736,
+      4151740
+    ],
+    "iso_adjuster_rtti_va": 4268460,
+    "iso_adjuster_rtti": "21CAptus22_ISO_Adjuster",
+    "firmware_config": "<FirmwareConfig>\n<EnforceUploading>0</EnforceUploading>\n</FirmwareConfig>\n",
+    "config_maps_a_model": false
+  },
+  "field_tables": {
+    "sync": [
+      {
+        "index": 0,
+        "pointer_va": 3983940,
+        "field": "battery_percent"
+      },
+      {
+        "index": 1,
+        "pointer_va": 3983944,
+        "field": "exp_left"
+      },
+      {
+        "index": 2,
+        "pointer_va": 3983948,
+        "field": "max_exp"
+      },
+      {
+        "index": 3,
+        "pointer_va": 3983952,
+        "field": "ImageQuality"
+      },
+      {
+        "index": 4,
+        "pointer_va": 3983956,
+        "field": "Color"
+      },
+      {
+        "index": 5,
+        "pointer_va": 3983960,
+        "field": "Framing"
+      },
+      {
+        "index": 6,
+        "pointer_va": 3983964,
+        "field": "Toning"
+      },
+      {
+        "index": 7,
+        "pointer_va": 3983968,
+        "field": "Light"
+      },
+      {
+        "index": 8,
+        "pointer_va": 3983972,
+        "field": "Orientation"
+      },
+      {
+        "index": 9,
+        "pointer_va": 3983976,
+        "field": "SharpTable"
+      },
+      {
+        "index": 10,
+        "pointer_va": 3983980,
+        "field": "ISO"
+      },
+      {
+        "index": 11,
+        "pointer_va": 3983984,
+        "field": "InputProfile"
+      },
+      {
+        "index": 12,
+        "pointer_va": 3983988,
+        "field": "OutputProfile"
+      },
+      {
+        "index": 13,
+        "pointer_va": 3983992,
+        "field": "CameraType"
+      },
+      {
+        "index": 14,
+        "pointer_va": 3983996,
+        "field": "DiskID"
+      },
+      {
+        "index": 15,
+        "pointer_va": 3984000,
+        "field": "ShootSetup"
+      },
+      {
+        "index": 16,
+        "pointer_va": 3984004,
+        "field": "DefaultShootSetup"
+      },
+      {
+        "index": 17,
+        "pointer_va": 3984008,
+        "field": "FactoryDefaultShootSetup"
+      },
+      {
+        "index": 18,
+        "pointer_va": 3984012,
+        "field": "PictureDimensions"
+      },
+      {
+        "index": 19,
+        "pointer_va": 3984016,
+        "field": "Battery_threshold_list"
+      },
+      {
+        "index": 20,
+        "pointer_va": 3984020,
+        "field": "Disk_threshold_list"
+      },
+      {
+        "index": 21,
+        "pointer_va": 3984024,
+        "field": "dcb_version"
+      },
+      {
+        "index": 22,
+        "pointer_va": 3984028,
+        "field": "DefaultColor"
+      },
+      {
+        "index": 23,
+        "pointer_va": 3984032,
+        "field": "DefaultOrientation"
+      },
+      {
+        "index": 24,
+        "pointer_va": 3984036,
+        "field": "FileCompression"
+      },
+      {
+        "index": 25,
+        "pointer_va": 3984040,
+        "field": "NLCompression"
+      },
+      {
+        "index": 26,
+        "pointer_va": 3984044,
+        "field": "SaveRegistryNotification"
+      },
+      {
+        "index": 27,
+        "pointer_va": 3984048,
+        "field": "UserGainList"
+      },
+      {
+        "index": 28,
+        "pointer_va": 3984052,
+        "field": "ActiveUserGain"
+      },
+      {
+        "index": 29,
+        "pointer_va": 3984056,
+        "field": "UserGainStorage"
+      },
+      {
+        "index": 30,
+        "pointer_va": 3984060,
+        "field": "FactoryGain"
+      },
+      {
+        "index": 31,
+        "pointer_va": 3984064,
+        "field": "RockerDirection"
+      },
+      {
+        "index": 32,
+        "pointer_va": 3984068,
+        "field": "PowerSourceSelection"
+      }
+    ],
+    "picture": [
+      {
+        "index": 0,
+        "pointer_va": 3981860,
+        "field": "file_name"
+      },
+      {
+        "index": 1,
+        "pointer_va": 3981864,
+        "field": "Orientation"
+      },
+      {
+        "index": 2,
+        "pointer_va": 3981868,
+        "field": "Color"
+      },
+      {
+        "index": 3,
+        "pointer_va": 3981872,
+        "field": "frame"
+      },
+      {
+        "index": 4,
+        "pointer_va": 3981876,
+        "field": "Toning"
+      },
+      {
+        "index": 5,
+        "pointer_va": 3981880,
+        "field": "Light"
+      },
+      {
+        "index": 6,
+        "pointer_va": 3981884,
+        "field": "Histogram"
+      },
+      {
+        "index": 7,
+        "pointer_va": 3981888,
+        "field": "HistogramR"
+      },
+      {
+        "index": 8,
+        "pointer_va": 3981892,
+        "field": "HistogramG"
+      },
+      {
+        "index": 9,
+        "pointer_va": 3981896,
+        "field": "HistogramB"
+      },
+      {
+        "index": 10,
+        "pointer_va": 3981900,
+        "field": "text"
+      },
+      {
+        "index": 11,
+        "pointer_va": 3981904,
+        "field": "Hwhite"
+      },
+      {
+        "index": 12,
+        "pointer_va": 3981908,
+        "field": "Hdark"
+      },
+      {
+        "index": 13,
+        "pointer_va": 3981912,
+        "field": "HwhiteLoc"
+      },
+      {
+        "index": 14,
+        "pointer_va": 3981916,
+        "field": "HdarkLoc"
+      },
+      {
+        "index": 15,
+        "pointer_va": 3981920,
+        "field": "NewPicture"
+      },
+      {
+        "index": 16,
+        "pointer_va": 3981924,
+        "field": "Marking"
+      },
+      {
+        "index": 17,
+        "pointer_va": 3981928,
+        "field": "Average"
+      },
+      {
+        "index": 18,
+        "pointer_va": 3981932,
+        "field": "zoom"
+      },
+      {
+        "index": 19,
+        "pointer_va": 3981936,
+        "field": "alarm_dark"
+      },
+      {
+        "index": 20,
+        "pointer_va": 3981940,
+        "field": "alarm_white"
+      },
+      {
+        "index": 21,
+        "pointer_va": 3981944,
+        "field": "XMP_tag"
+      },
+      {
+        "index": 22,
+        "pointer_va": 3981948,
+        "field": "Date"
+      },
+      {
+        "index": 23,
+        "pointer_va": 3981952,
+        "field": "ZoomEnable"
+      }
+    ]
+  }
+}

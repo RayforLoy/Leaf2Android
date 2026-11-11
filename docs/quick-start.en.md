@@ -1,16 +1,16 @@
-# Leaf2Android 0.2.0: installation, use and build
+# Leaf2Android 0.3.0: installation, use and build
 
-[简体中文](quick-start.md) · [Project home](../README.en.md) · [Capabilities](implementation-status.en.md)
+[简体中文](quick-start.md) · [Project home](../README.en.md) · [Capabilities](implementation-status.en.md) · [Full gap matrix](feature-gap-matrix.en.md)
 
 ## Choose an attachment
 
-Use the [v0.2.0 pre-release](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.2.0) or local `dist/`.
+**0.3.0 is a pre-release.** Use the [v0.3.0 pre-release](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.0) or local `dist/`. See the [release notes](releases/v0.3.0.en.md) for functionality and verification boundaries. New back operations in this guide are implemented in code; physical effects still need testing.
 
 | File | Purpose |
 | --- | --- |
-| `Leaf2Android-0.2.0.apk` | Release test app signed with the publisher's release key |
-| `Leaf2Android-0.2.0-debug.apk` | Development APK; signature may differ from release |
-| `Leaf2Android-0.2.0-source.zip` | Buildable source and documentation |
+| `Leaf2Android-0.3.0.apk` | Release test app signed with the publisher's release key |
+| `Leaf2Android-0.3.0-debug.apk` | Development APK; signature may differ from release |
+| `Leaf2Android-0.3.0-source.zip` | Buildable source and documentation |
 | Reference-material archive | Original WiView media, analysis and provenance; not embedded runtime libraries |
 | `*.sha256` / checksum manifest | Corresponding attachment checksums |
 
@@ -21,7 +21,7 @@ The release page lists its actual attachments. App ID: `com.leaf2android`; minim
 Transfer the APK to the phone, open it in a file manager and follow Android's prompt to allow that installation source. With a connected development device:
 
 ```powershell
-adb install -r .\dist\Leaf2Android-0.2.0.apk
+adb install -r .\dist\Leaf2Android-0.3.0.apk
 ```
 
 An in-place update requires the same application ID and signing key. If moving from debug to release produces `INSTALL_FAILED_UPDATE_INCOMPATIBLE`, save needed previews and separately record local notes / marks before uninstalling the old package and installing the new one. Uninstalling removes private app data. Earlier incorrectly named packages have a different ID from `com.leaf2android`; their data is not migrated automatically.
@@ -53,11 +53,109 @@ Open the demo from the shooting page or settings. The app generates and labels i
 5. Release the technical camera's mechanical shutter manually. A saved-photo notification with a usable filename queues the preview. Follow new photos selects the newest received preview.
 6. Playback supports back subfolders, name / receive-time sorting and local-star filtering. Uncached previews need an active connection.
 
-The original hardware target is the Aptus II 5. Family branding does not automatically establish another model's compatibility. Record exact back model, firmware, phone system and advertised service during first testing. Full sessions and actual previews are not yet accepted on real hardware.
+On 2026-11-11 the user reported working Bluetooth and photo reading on Valeo 22Wi and Aptus 22, without the actual phone / system, firmware, app version or logs. This does not establish a 20-photo sequence or the new writes below. The user also corrected that Aptus II itself has no Bluetooth and is not a current wireless target; the early Aptus II 5 plan is historical. 5.041 PDAInterface is shared code, not evidence of Aptus II Bluetooth hardware. Family branding is not universal compatibility.
+
+Classic Aptus **4.701** has been independently checked as primary evidence, containing the Aptus 22 model and nine PDA command classes; see the [firmware Bluetooth survey](firmware-bluetooth-survey.en.md). It is not a dedicated Aptus 22 flash image or proof of installed user firmware. 5.041 settings are used only when the device's Sync supplies that structure.
+
+## Configure shooting from the Back page
+
+After connecting, open **Back** in the bottom navigation and refresh Sync. Inspect current settings and device-provided choices. Controls depend on the actual dialect, complete configuration and advertised options; an absent control is not proof that every firmware in the family lacks support. The first ISO option is not necessarily the current value. Do not borrow another model's ISO steps.
+
+- **Legacy dialect:** current ISO belongs to the full `ShootSetup` matched by `DefaultShootSetup`. Select an existing back setup or edit the current one. Preserve untouched values and submit a complete setup; this is not a universal `SetCameraParam ISO="…"` writer.
+- **5.041 dialect:** recognized `Sync.CameraSettings` enables independent ISO, Orientation, CameraType, SensorCrop, FileCompression, Prefix and ShootingFolder writes. SensorCrop accepts only device-advertised name-only choices. Compression accepts advertised `None` / `Lossless`, separate from legacy Nearly Lossless.
+- ISO choices come from the device, without hardcoded steps. Read again before writing to avoid overwriting newer back changes with a stale complete setup. Request Sync afterward and compare the complete expected configuration, untouched fields and required globals; an ISO-only change does not replace full verification.
+- An ambiguous / incomplete setup, unclear allowed value, unsafe encoding or mismatching read-back must stop the operation or report it unconfirmed, not fill missing fields with invented defaults.
+
+The legacy scope covers ISO, image quality, framing, toning, Light, sharpening, input / output ICC, camera type, ICCFlag, filename prefix, shooting folder, ordinary / Nearly Lossless compression with NLCompression, orientation and Color. Light is a device-provided illuminant / white-balance choice, not an arbitrary Kelvin / tint value. Selecting an existing setup is not restoring FactorySettings.
+
+Independent 5.041 Prefix edits are capped at 23 UTF-16 code units and cannot exceed the current known prefix's UTF-8 byte length. This is a conservative implementation limit, not a manufacturer hardware specification. The shooting folder must exist; changing that setting does not implicitly create it.
+
+## Image-processing settings
+
+When Sync supplies `ImageSettings`, the Back page can select an existing `ActiveImageSettings` or edit the complete current processing preset. Fields include ImageQuality, Color, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, ICCFlag, Grain, MoireReduction and Saturation. Fields requiring device choices are editable only when Sync provides options.
+
+ImageSettings and CameraSettings are separate; ISO is not an image-processing field. Change selected fields while preserving the rest, reread before writing and compare the complete read-back afterward. Missing settings are not filled with guesses.
+
+These new writes have not been verified by the user on a real back. ISO and image-processing settings are not mechanical shutter-speed, aperture or remote-release controls.
+
+## Check photo provenance before writing
+
+Standard marking, notes, gray balance, deletion and copy / move require a preview from the connected back read in this connection. Reconnect, upgrade or process restart requires refreshing before standard writes; demos, older caches without provenance and other-back caches cannot be used directly. Laboratory raw requests use the entered target without all photo-provenance and semantic checks. An identical path does not prove photo identity.
+
+## Back marking versus phone stars
+
+Phone stars are local only. Back `Good / Unmarked` is a separate operation; changing a phone star does not prove a back-side write.
+
+Strict Base64 / UTF-8 XMP decoding reads GetPictureParams's `xmp_tag` header. Good / Unmarked changes only the third Leaf `Flags` character while retaining other characters, namespaces and fields. Classic 4.701 and shared 5.041 independently evidence Marking without XMP. Sync shootsetup / camerasettings enables that path; existing XMP is still preserved and updated, and damaged XMP is not treated as editable. Without XMP or a recognized dialect, the standard path refuses rather than creating an empty packet. Read marking back; physical effects remain unverified. Manual laboratory probes are separate.
+
+## Back folders and photos
+
+The 0.3.0 scope is folder creation, empty-folder deletion, folder rename, photo deletion and internal copy / move. It does not create arbitrary files or transfer complete MOS originals to the phone.
+
+1. Refresh folders and select the exact back path. Copy / move also needs a destination folder on the back.
+2. Review source, destination and action. Existing destinations must not be silently overwritten; non-empty folders are not treated as empty.
+3. Send only after explicit user confirmation. Connecting, previewing or refreshing a directory does not automatically delete anything.
+4. Read the affected directories afterward. An error or mismatching read-back is not success; changing a phone-side path alone is not proof of completion on the back.
+
+Deletion changes back storage. A laboratory recovery request is not a verified undo guarantee. These storage operations remain untested by the user on hardware.
+
+## Back-processed previews, gray balance and exposure inspection
+
+These controls are implemented; effects on actual firmware remain unverified. They request processing for the current photo on the back and are displayed separately from phone-side JPEG processing.
+
+1. **Processed preview:** select the original zoom `1 / 2 / 4 / 8` and optionally request highlight, shadow or both Alarm indicators. The back returns a processed JPEG. This is separate from local pinch zoom.
+2. **Original-image coordinates:** enter protocol coordinates manually as needed. The full mapping from Compose points, fit-to-screen, cropped viewports and photo orientation to the original image has not been verified. Screen taps and JPEG thumbnail coordinates are not automatically guessed into back coordinates. Do not guess when actual orientation or original dimensions are unknown.
+3. **Gray balance:** inspect the sampled preview and returned Light string. Confirm separately to write the current photo or apply it to future captures; preview restore is another action. Sampling does not submit automatically. Future captures use complete legacy ShootSetup.Light / 5.041 ImageSettings.Light. Only a sample returned by this back in this connection and still tied to the current photo may bypass the static illuminant list; CSV delimiters remain rejected, other fields are preserved and Sync verifies the result. Arbitrary typed values cannot bypass validation.
+4. **Pixel / exposure picking:** send `ImageFunction fstops="x;y"` for the chosen coordinates and display returned histogramlocation / histogramvalue. Here fstops carries coordinates, not aperture.
+5. **Back histograms:** show the actual histogram / r / g / b bin counts rather than assuming 256. Label them “from back; RAW / JPEG source unconfirmed.” The phone's local JPEG histogram remains separate.
+
+Gray-balance confirmation / restore Ack means the back received the request. Reread metadata and previews and check the physical effect; Ack is not a measured color change. None of these functions is continuous live view or complete MOS transfer.
+
+## Clock, future-capture notes and session requests
+
+The Back page also provides these actions:
+
+| Action | Verification and boundary |
+| --- | --- |
+| Clock synchronization | Send phone-local time, then read CurrentTime; no protocol time-zone transport is claimed |
+| Default Annotation / Copyright | Read, edit, submit and read back defaults for future captures; do not alter current or existing photos |
+| FireWire / CameraBattery | Available only with powersourceselection=support; Ack does not establish the current physical power source |
+
+EnableTakenPicture is now in the laboratory. no has not been proved to stop notifications, so the main UI does not offer an unproven pause switch. This parameter, Follow new photos and manual shutter release are recorded separately.
+
+## Laboratory manual testing
+
+At the top of **Back**, choose **Open laboratory** for a full-screen workbench. It exposes original-client calls, firmware candidates and user hypotheses for active testing. Unresolved scope or semantics remain experimental rather than verified standard functions. Opening the page, choosing a template or generating a request does not send automatically.
+
+1. **Record the device context.** Note exact back model, firmware, phone system and app version. Wait for ordinary operations to finish. Experiments pause normal post-capture image reads and configuration refresh.
+2. **Choose a template or raw header.** The 16 WiView templates cover Brightness, CurrentTime, ResetCounter, PIN, two CEVersion values, FactorySettings, qformat / recovery, XMP-only / annotation+XMP, EnableTakenPicture, Ack / ReSyncRequest and GetCameraParam / single-attribute SetCameraParam probes. Read evidence, effects and unknowns; supply actual inputs and generate the request. There is no default PIN, brightness range or storage root.
+3. **Set matching and timeout.** Send one encoded control header up to 60 KiB, without outbound binary attachments or concatenated commands. The 1–300 second timeout is a phone setting. Select Ack, Sync or another valid reply tag, optionally exact file_name and required attachment. `*` observes the first complete frame, which may be an asynchronous notification and does not prove causality. An empty tag sends only. Those two modes cannot also match filenames / attachments.
+4. **Review the target and complete request.** Review request before sending displays the back and header with known sensitive fields masked. Writes require explicit confirmation; storage erasure has an extra confirmation. Template checks validate format, not a safe hardware range or physical effect. Raw requests do not inherit all standard configuration / photo-operation checks.
+5. **Inspect received, error, cancelled or send-only records separately.** Original headers, Error, nonzero Ack, timeout and unmatched frames are retained without standard success validation. Cancel disconnects to end the wait; it does not promise to undo a write already received by the back.
+6. **Export before finishing.** Leaving after sending an experiment disconnects to keep late frames out of normal work. Reconnect, synchronize and reread previews before using standard functions.
+
+### Firmware research entries and user hypotheses
+
+| Entry | What can be tested |
+| --- | --- |
+| Gain query and Sync gain fields | Classic 4.701 parser-to-reply chain is evidenced, returning UserGainStorage / UserGainList; list semantics, units and model differences need testing |
+| UserGain write | Firmware handler evidenced; accepted values, calibration meaning, persistence and read-back remain unresolved, with unknown values entered by the user |
+| ManualLens | Handler found only in shared 5.041, not classic 4.701; no default 0 / 1 and no mechanical-shutter claim |
+| GetImage FP / fp | Classic parser recognizes a special zoom; actual image area / resolution unverified, not complete MOS or continuous live view |
+| FactoryGain / BootRequest / GetFile / LiveView | Create an explicit hypothesis probe generates a candidate GetParamList or generic empty header labelled **USER HYPOTHESIS**, defaulting to `*`; this is not extracted manufacturer wireless syntax |
+| Internal calibration | An internal class without a known wireless tag does not generate a command; the user may still enter one header in the raw console, recording it as a hypothesis |
+
+Brightness, ResetCounter, PIN, FactorySettings, formatting and recovery templates retain original-client or firmware evidence. Unknown ranges, scope, recovery and side effects do not become established facts because a template exists. The laboratory does not automatically enumerate candidates, fuzz or flash firmware. See the [feature gap matrix](feature-gap-matrix.en.md) and [firmware Bluetooth survey](firmware-bluetooth-survey.en.md).
+
+### Attachments, records and redacted export
+
+Choose a 16 / 64 MiB per-attachment phone limit while disconnected; reconnect to apply it. This is not a back specification. Received binaries are saved as `.bin`, with actual length, SHA-256 and the first 256-byte hex. Keep at most 30 experiment records with a 256 MiB attachment-cache budget.
+
+The ZIP includes complete redacted request / response headers, non-sensitive header hex, original binary attachments, transport logs and unmatched frames. Known NewPinCode / PinCode / Pin, Annotation, Copyright and XMP_tag header fields are masked; their original header hex is omitted, without changing transmitted bytes. **Binary attachments remain original and are not automatically redacted.** Paths and unknown fields may also contain personal data; inspect records and attachments before sharing.
 
 ## Photo information, notes and files
 
-Information shows received preview dimensions, size, SHA-256 and parsed attributes. Back metadata can be requested while connected. Uninterpreted XMP attachments are not presented as successfully parsed metadata.
+Information shows received preview dimensions, size, SHA-256 and attributes; back metadata and decoded XMP can be requested while connected. Standard parsing uses the evidenced header rather than guessing attachments as XMP or displaying failed parsing as complete metadata. Separate full-XMP / annotation+XMP laboratory templates retain Base64 / XML checks. Supplying a complete packet does not establish that the app has verified every field's semantics or the write's effect.
 
 Save local note writes only to the phone. Write back note uses `SetPictureParams` and needs a matching success response. Nonzero or unrecognized error codes are not success; effects still need a read-back check on real firmware. Quotes, control characters and `& < > ^` are rejected until escaping is verified.
 

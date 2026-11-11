@@ -1,0 +1,264 @@
+000e51a0 [file 000712c8] lis       r3, 0x47
+000e51a4 [file 000712cc] addi      r3, r3, -0x682c ; str@0x4697d4 'GetCameraParam'
+000e51a8 [file 000712d0] blr       
+000e51ac [file 000712d4] stwu      r1, -8(r1)
+000e51b0 [file 000712d8] mflr      r0
+000e51b4 [file 000712dc] stw       r0, 0xc(r1)
+000e51b8 [file 000712e0] li        r4, 0
+000e51bc [file 000712e4] bl        0xb9ca0
+000e51c0 [file 000712e8] lwz       r0, 0xc(r1)
+000e51c4 [file 000712ec] mtlr      r0
+000e51c8 [file 000712f0] addi      r1, r1, 8
+000e51cc [file 000712f4] blr       
+000e51d0 [file 000712f8] stwu      r1, -0x48(r1)
+000e51d4 [file 000712fc] mflr      r0
+000e51d8 [file 00071300] stw       r28, 0x38(r1)
+000e51dc [file 00071304] stw       r29, 0x3c(r1)
+000e51e0 [file 00071308] stw       r30, 0x40(r1)
+000e51e4 [file 0007130c] stw       r31, 0x44(r1)
+000e51e8 [file 00071310] stw       r0, 0x4c(r1)
+000e51ec [file 00071314] li        r30, 0
+000e51f0 [file 00071318] li        r28, 0
+000e51f4 [file 0007131c] li        r29, 0
+000e51f8 [file 00071320] addi      r3, r1, 8
+000e51fc [file 00071324] bl        0xf12b4
+000e5200 [file 00071328] lis       r3, 0x47
+000e5204 [file 0007132c] addi      r3, r3, -0x578c ; str@0x46a874 'camera_type'
+000e5208 [file 00071330] addi      r4, r1, 8
+000e520c [file 00071334] li        r5, 0
+000e5210 [file 00071338] bl        0xe2e00
+000e5214 [file 0007133c] lis       r3, 0x47
+000e5218 [file 00071340] addi      r3, r3, -0x5780 ; str@0x46a880 'monitor_prints'
+000e521c [file 00071344] li        r4, 0
+000e5220 [file 00071348] li        r5, 0
+000e5224 [file 0007134c] bl        0xe2d70
+000e5228 [file 00071350] lis       r3, 0x47
+000e522c [file 00071354] addi      r3, r3, -0x5770 ; str@0x46a890 'firmware_version'
+000e5230 [file 00071358] li        r4, 0x13b1
+000e5234 [file 0007135c] li        r5, 1
+000e5238 [file 00071360] bl        0xe2ce0
+000e523c [file 00071364] lis       r3, 0x47
+000e5240 [file 00071368] addi      r3, r3, -0x575c ; str@0x46a8a4 'lines_2_skip'
+000e5244 [file 0007136c] li        r4, 3
+000e5248 [file 00071370] li        r5, 0
+000e524c [file 00071374] bl        0xe2ce0
+000e5250 [file 00071378] lis       r3, 0x47
+000e5254 [file 0007137c] addi      r3, r3, -0x574c ; str@0x46a8b4 'fan_power'
+000e5258 [file 00071380] li        r4, 0x3f
+000e525c [file 00071384] li        r5, 0
+000e5260 [file 00071388] bl        0xe2ce0
+000e5264 [file 0007138c] lis       r3, 0x47
+000e5268 [file 00071390] addi      r3, r3, -0x5740 ; str@0x46a8c0 'camera_interface'
+000e526c [file 00071394] lis       r4, 0x47
+000e5270 [file 00071398] addi      r4, r4, -0x572c
+000e5274 [file 0007139c] li        r5, 0
+000e5278 [file 000713a0] bl        0xe2e00
+000e527c [file 000713a4] lis       r3, 0x47
+000e5280 [file 000713a8] addi      r3, r3, -0x5728 ; str@0x46a8d8 'camera_body_serial'
+000e5284 [file 000713ac] lis       r4, 0x47
+000e5288 [file 000713b0] addi      r4, r4, -0x5714 ; str@0x46a8ec '00000000000'
+000e528c [file 000713b4] li        r5, 0
+000e5290 [file 000713b8] bl        0xe2e00
+000e5294 [file 000713bc] lis       r3, 0x47
+000e5298 [file 000713c0] addi      r3, r3, -0x5708 ; str@0x46a8f8 'sensor_serial_num'
+000e529c [file 000713c4] lis       r4, 0x47
+000e52a0 [file 000713c8] addi      r4, r4, -0x56f4 ; str@0x46a90c '0000000'
+000e52a4 [file 000713cc] li        r5, 0
+000e52a8 [file 000713d0] bl        0xe2e00
+000e52ac [file 000713d4] lis       r3, 0x47
+000e52b0 [file 000713d8] addi      r3, r3, -0x56ec ; str@0x46a914 'sensor_batch_num'
+000e52b4 [file 000713dc] lis       r4, 0x47
+000e52b8 [file 000713e0] addi      r4, r4, -0x56d8 ; str@0x46a928 '00000'
+000e52bc [file 000713e4] li        r5, 0
+000e52c0 [file 000713e8] bl        0xe2e00
+000e52c4 [file 000713ec] addi      r3, r1, 8
+000e52c8 [file 000713f0] lis       r4, 0x47
+000e52cc [file 000713f4] addi      r4, r4, -0x56d0
+000e52d0 [file 000713f8] li        r5, 0x11
+000e52d4 [file 000713fc] bl        0x442498
+000e52d8 [file 00071400] lis       r3, 0x47
+000e52dc [file 00071404] addi      r3, r3, -0x56cc ; str@0x46a934 'sensor_board_id'
+000e52e0 [file 00071408] addi      r4, r1, 8
+000e52e4 [file 0007140c] li        r5, 0
+000e52e8 [file 00071410] bl        0xe2e00
+000e52ec [file 00071414] lis       r3, 0x47
+000e52f0 [file 00071418] addi      r3, r3, -0x56bc ; str@0x46a944 'sensor_board_serial_num'
+000e52f4 [file 0007141c] lis       r4, 0x47
+000e52f8 [file 00071420] addi      r4, r4, -0x56a4 ; str@0x46a95c '0000000'
+000e52fc [file 00071424] li        r5, 0
+000e5300 [file 00071428] bl        0xe2e00
+000e5304 [file 0007142c] lis       r3, 0x47
+000e5308 [file 00071430] addi      r3, r3, -0x569c ; str@0x46a964 'sensor_board_rev'
+000e530c [file 00071434] lis       r4, 0x47
+000e5310 [file 00071438] addi      r4, r4, -0x5688
+000e5314 [file 0007143c] li        r5, 0
+000e5318 [file 00071440] bl        0xe2e00
+000e531c [file 00071444] lis       r3, 0x47
+000e5320 [file 00071448] addi      r3, r3, -0x5684 ; str@0x46a97c 'sensor_board_comp_level'
+000e5324 [file 0007144c] lis       r4, 0x47
+000e5328 [file 00071450] addi      r4, r4, -0x566c
+000e532c [file 00071454] li        r5, 0
+000e5330 [file 00071458] bl        0xe2e00
+000e5334 [file 0007145c] addi      r3, r1, 8
+000e5338 [file 00071460] lis       r4, 0x47
+000e533c [file 00071464] addi      r4, r4, -0x5668
+000e5340 [file 00071468] li        r5, 2
+000e5344 [file 0007146c] bl        0x442498
+000e5348 [file 00071470] lis       r3, 0x47
+000e534c [file 00071474] addi      r3, r3, -0x5664 ; str@0x46a99c 'sensor_control_board_id'
+000e5350 [file 00071478] addi      r4, r1, 8
+000e5354 [file 0007147c] li        r5, 0
+000e5358 [file 00071480] bl        0xe2e00
+000e535c [file 00071484] lis       r3, 0x47
+000e5360 [file 00071488] addi      r3, r3, -0x564c ; str@0x46a9b4 'sensor_control_board_rev'
+000e5364 [file 0007148c] lis       r4, 0x47
+000e5368 [file 00071490] addi      r4, r4, -0x5630
+000e536c [file 00071494] li        r5, 0
+000e5370 [file 00071498] bl        0xe2e00
+000e5374 [file 0007149c] lis       r3, 0x47
+000e5378 [file 000714a0] addi      r3, r3, -0x562c ; str@0x46a9d4 'sensor_control_board_comp_level'
+000e537c [file 000714a4] lis       r4, 0x47
+000e5380 [file 000714a8] addi      r4, r4, -0x560c
+000e5384 [file 000714ac] li        r5, 0
+000e5388 [file 000714b0] bl        0xe2e00
+000e538c [file 000714b4] addi      r3, r1, 8
+000e5390 [file 000714b8] lis       r4, 0x47
+000e5394 [file 000714bc] addi      r4, r4, -0x5608
+000e5398 [file 000714c0] li        r5, 7
+000e539c [file 000714c4] bl        0x442498
+000e53a0 [file 000714c8] lis       r3, 0x47
+000e53a4 [file 000714cc] addi      r3, r3, -0x5604 ; str@0x46a9fc 'rp_board_id'
+000e53a8 [file 000714d0] addi      r4, r1, 8
+000e53ac [file 000714d4] li        r5, 0
+000e53b0 [file 000714d8] bl        0xe2e00
+000e53b4 [file 000714dc] lis       r3, 0x47
+000e53b8 [file 000714e0] addi      r3, r3, -0x55f8 ; str@0x46aa08 'rp_board_rev'
+000e53bc [file 000714e4] lis       r4, 0x47
+000e53c0 [file 000714e8] addi      r4, r4, -0x55e8
+000e53c4 [file 000714ec] li        r5, 0
+000e53c8 [file 000714f0] bl        0xe2e00
+000e53cc [file 000714f4] lis       r3, 0x47
+000e53d0 [file 000714f8] addi      r3, r3, -0x55e4 ; str@0x46aa1c 'rp_board_comp_level'
+000e53d4 [file 000714fc] lis       r4, 0x47
+000e53d8 [file 00071500] addi      r4, r4, -0x55d0
+000e53dc [file 00071504] li        r5, 0
+000e53e0 [file 00071508] bl        0xe2e00
+000e53e4 [file 0007150c] addi      r3, r1, 8
+000e53e8 [file 00071510] lis       r4, 0x47
+000e53ec [file 00071514] addi      r4, r4, -0x55cc
+000e53f0 [file 00071518] li        r5, 2
+000e53f4 [file 0007151c] bl        0x442498
+000e53f8 [file 00071520] lis       r3, 0x47
+000e53fc [file 00071524] addi      r3, r3, -0x55c8 ; str@0x46aa38 'fw_board_id'
+000e5400 [file 00071528] addi      r4, r1, 8
+000e5404 [file 0007152c] li        r5, 0
+000e5408 [file 00071530] bl        0xe2e00
+000e540c [file 00071534] lis       r3, 0x47
+000e5410 [file 00071538] addi      r3, r3, -0x55bc ; str@0x46aa44 'fw_board_rev'
+000e5414 [file 0007153c] lis       r4, 0x47
+000e5418 [file 00071540] addi      r4, r4, -0x55ac
+000e541c [file 00071544] li        r5, 0
+000e5420 [file 00071548] bl        0xe2e00
+000e5424 [file 0007154c] lis       r3, 0x47
+000e5428 [file 00071550] addi      r3, r3, -0x55a8 ; str@0x46aa58 'fw_board_comp_level'
+000e542c [file 00071554] lis       r4, 0x47
+000e5430 [file 00071558] addi      r4, r4, -0x5594
+000e5434 [file 0007155c] li        r5, 0
+000e5438 [file 00071560] bl        0xe2e00
+000e543c [file 00071564] addi      r3, r1, 8
+000e5440 [file 00071568] lis       r4, 0x47
+000e5444 [file 0007156c] addi      r4, r4, -0x5590
+000e5448 [file 00071570] li        r5, 0
+000e544c [file 00071574] bl        0x442498
+000e5450 [file 00071578] lis       r3, 0x47
+000e5454 [file 0007157c] addi      r3, r3, -0x558c ; str@0x46aa74 'blue_tooth_board_id'
+000e5458 [file 00071580] addi      r4, r1, 8
+000e545c [file 00071584] li        r5, 0
+000e5460 [file 00071588] bl        0xe2e00
+000e5464 [file 0007158c] lis       r3, 0x47
+000e5468 [file 00071590] addi      r3, r3, -0x5578 ; str@0x46aa88 'blue_tooth_board_rev'
+000e546c [file 00071594] lis       r4, 0x47
+000e5470 [file 00071598] addi      r4, r4, -0x5560
+000e5474 [file 0007159c] li        r5, 0
+000e5478 [file 000715a0] bl        0xe2e00
+000e547c [file 000715a4] lis       r3, 0x47
+000e5480 [file 000715a8] addi      r3, r3, -0x555c ; str@0x46aaa4 'blue_tooth_board_comp_level'
+000e5484 [file 000715ac] lis       r4, 0x47
+000e5488 [file 000715b0] addi      r4, r4, -0x5540
+000e548c [file 000715b4] li        r5, 0
+000e5490 [file 000715b8] bl        0xe2e00
+000e5494 [file 000715bc] lis       r3, 0x47
+000e5498 [file 000715c0] addi      r3, r3, -0x553c ; str@0x46aac4 'sensor_size'
+000e549c [file 000715c4] lis       r4, 0x47
+000e54a0 [file 000715c8] addi      r4, r4, -0x5530
+000e54a4 [file 000715cc] li        r5, 0
+000e54a8 [file 000715d0] bl        0xe2e00
+000e54ac [file 000715d4] lis       r3, 0x47
+000e54b0 [file 000715d8] addi      r3, r3, -0x552c ; str@0x46aad4 'sensor_color'
+000e54b4 [file 000715dc] lis       r4, 0x47
+000e54b8 [file 000715e0] addi      r4, r4, -0x551c
+000e54bc [file 000715e4] li        r5, 0
+000e54c0 [file 000715e8] bl        0xe2e00
+000e54c4 [file 000715ec] lis       r3, 0x47
+000e54c8 [file 000715f0] addi      r3, r3, -0x5518 ; str@0x46aae8 'ir_filter'
+000e54cc [file 000715f4] lis       r4, 0x47
+000e54d0 [file 000715f8] addi      r4, r4, -0x550c
+000e54d4 [file 000715fc] li        r5, 0
+000e54d8 [file 00071600] bl        0xe2e00
+000e54dc [file 00071604] lis       r3, 0x47
+000e54e0 [file 00071608] addi      r3, r3, -0x5508 ; str@0x46aaf8 'anti_alias_filter'
+000e54e4 [file 0007160c] lis       r4, 0x47
+000e54e8 [file 00071610] addi      r4, r4, -0x54f4
+000e54ec [file 00071614] li        r5, 0
+000e54f0 [file 00071618] bl        0xe2e00
+000e54f4 [file 0007161c] lis       r3, 0x47
+000e54f8 [file 00071620] addi      r3, r3, -0x54f0 ; str@0x46ab10 'serial_revision'
+000e54fc [file 00071624] lis       r4, 0x47
+000e5500 [file 00071628] addi      r4, r4, -0x54e0
+000e5504 [file 0007162c] li        r5, 0
+000e5508 [file 00071630] bl        0xe2e00
+000e550c [file 00071634] lis       r3, 0x47
+000e5510 [file 00071638] addi      r3, r3, -0x54dc ; str@0x46ab24 'd2a_blackref'
+000e5514 [file 0007163c] lis       r4, 0x47
+000e5518 [file 00071640] addi      r4, r4, -0x54cc ; str@0x46ab34 '0x5DC'
+000e551c [file 00071644] li        r5, 0
+000e5520 [file 00071648] bl        0xe2e00
+000e5524 [file 0007164c] lis       r3, 0x47
+000e5528 [file 00071650] addi      r3, r3, -0x54c4 ; str@0x46ab3c 'd2a_gain'
+000e552c [file 00071654] lis       r4, 0x47
+000e5530 [file 00071658] addi      r4, r4, -0x54b8 ; str@0x46ab48 '0x99C'
+000e5534 [file 0007165c] li        r5, 0
+000e5538 [file 00071660] bl        0xe2e00
+000e553c [file 00071664] lis       r3, 0x47
+000e5540 [file 00071668] addi      r3, r3, -0x54b0 ; str@0x46ab50 'd2a_testinput'
+000e5544 [file 0007166c] lis       r4, 0x47
+000e5548 [file 00071670] addi      r4, r4, -0x54a0 ; str@0x46ab60 '0xFFF'
+000e554c [file 00071674] li        r5, 0
+000e5550 [file 00071678] bl        0xe2e00
+000e5554 [file 0007167c] lis       r3, 0x47
+000e5558 [file 00071680] addi      r3, r3, -0x5498 ; str@0x46ab68 'd2a_vinb'
+000e555c [file 00071684] lis       r4, 0x47
+000e5560 [file 00071688] addi      r4, r4, -0x548c ; str@0x46ab74 '0xFFF'
+000e5564 [file 0007168c] li        r5, 0
+000e5568 [file 00071690] bl        0xe2e00
+000e556c [file 00071694] lis       r3, 0x47
+000e5570 [file 00071698] addi      r3, r3, -0x5484 ; str@0x46ab7c 'sensor_gain_control'
+000e5574 [file 0007169c] lis       r4, 0x47
+000e5578 [file 000716a0] addi      r4, r4, -0x5470
+000e557c [file 000716a4] li        r5, 0
+000e5580 [file 000716a8] bl        0xe2e00
+000e5584 [file 000716ac] lis       r3, 0x47
+000e5588 [file 000716b0] addi      r3, r3, -0x546c ; str@0x46ab94 'sensor_rev'
+000e558c [file 000716b4] lis       r4, 0x47
+000e5590 [file 000716b8] addi      r4, r4, -0x5460
+000e5594 [file 000716bc] li        r5, 0
+000e5598 [file 000716c0] bl        0xe2e00
+000e559c [file 000716c4] lis       r3, 0x47
+000e55a0 [file 000716c8] addi      r3, r3, -0x545c ; str@0x46aba4 'dark_refernce'
+000e55a4 [file 000716cc] lis       r4, 0x47
+000e55a8 [file 000716d0] addi      r4, r4, -0x544c
+000e55ac [file 000716d4] li        r5, 0
+000e55b0 [file 000716d8] bl        0xe2e00
+000e55b4 [file 000716dc] lis       r3, 0x47
+000e55b8 [file 000716e0] addi      r3, r3, -0x5448 ; str@0x46abb8 'adaptor_rev'
+000e55bc [file 000716e4] lis       r4, 0x47
