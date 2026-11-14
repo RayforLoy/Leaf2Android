@@ -1,5 +1,7 @@
 package com.leaf2android.protocol
 
+enum class ShootSetupDialect { WIVIEW, DP67 }
+
 /** The names and order are from WiView 1.0.3 CShootSetup command construction, not invented ISO attributes. */
 enum class ShootField(val wireName: String, val choiceKey: String? = wireName.lowercase()) {
     NAME("SetupName", null), FOLDER("ShootingFolder", null), ISO("ISO"), QUALITY("ImageQuality"),
@@ -14,9 +16,13 @@ enum class ShootField(val wireName: String, val choiceKey: String? = wireName.lo
 data class ShootSetup(val values: Map<String, String>) {
     operator fun get(field: ShootField): String? = values.entries.firstOrNull { it.key.equals(field.wireName, true) }?.value
     val name: String get() = get(ShootField.NAME).orEmpty()
-    val missingFields: List<String> get() = ShootField.legacy.filter {
+    val missingFields: List<String> get() = missingFields(ShootSetupDialect.WIVIEW)
+    fun missingFields(dialect: ShootSetupDialect): List<String> = fields(dialect).filter {
         it != ShootField.NL_COMPRESSION && get(it) == null
-    }.map { it.wireName } + if (get(ShootField.COMPRESSION) == "Nearly Lossless" && get(ShootField.NL_COMPRESSION) == null) listOf("NLCompression") else emptyList()
+    }.map { it.wireName } + if (dialect == ShootSetupDialect.WIVIEW && get(ShootField.COMPRESSION) == "Nearly Lossless" && get(ShootField.NL_COMPRESSION) == null) listOf("NLCompression") else emptyList()
+
+    fun fields(dialect: ShootSetupDialect): List<ShootField> = if (dialect == ShootSetupDialect.WIVIEW) ShootField.legacy else
+        ShootField.legacy.takeWhile { it != ShootField.PREFIX } + if (get(ShootField.PREFIX) != null) listOf(ShootField.PREFIX) else emptyList()
 
     fun changed(changes: Map<ShootField, String>): ShootSetup {
         val result = values.toMutableMap()
@@ -27,13 +33,14 @@ data class ShootSetup(val values: Map<String, String>) {
         return ShootSetup(result)
     }
 
-    fun serialize(): String {
-        if (missingFields.isNotEmpty()) throw ProtocolException(
-            "后背未提供完整拍摄配置，缺少：${missingFields.joinToString()}。已禁止写入以保留其他设置。",
-            "The back did not provide a complete shooting setup: ${missingFields.joinToString()}. Writing is disabled to preserve the other settings.")
+    fun serialize(dialect: ShootSetupDialect = ShootSetupDialect.WIVIEW): String {
+        val missing = missingFields(dialect)
+        if (missing.isNotEmpty()) throw ProtocolException(
+            "后背未提供完整拍摄配置，缺少：${missing.joinToString()}。已禁止写入以保留其他设置。",
+            "The back did not provide a complete shooting setup: ${missing.joinToString()}. Writing is disabled to preserve the other settings.")
         if (get(ShootField.ICC) !in setOf("0", "1")) throw ProtocolException("ICCFlag 必须为 0 或 1", "ICCFlag must be 0 or 1.")
-        if (get(ShootField.COLOR) !in setOf("color", "BW")) throw ProtocolException("未知 Color 值", "Unknown Color value.")
-        return ShootField.legacy.filter { it != ShootField.NL_COMPRESSION || get(ShootField.COMPRESSION) == "Nearly Lossless" }
+        if (dialect == ShootSetupDialect.WIVIEW && get(ShootField.COLOR) !in setOf("color", "BW")) throw ProtocolException("未知 Color 值", "Unknown Color value.")
+        return fields(dialect).filter { it != ShootField.NL_COMPRESSION || get(ShootField.COMPRESSION) == "Nearly Lossless" }
             .joinToString(",") { field -> "${field.wireName}=${setupValue(get(field).orEmpty())}" }
     }
 
@@ -61,12 +68,14 @@ data class SetupGlobals(val orientation: String?, val color: String?) {
     }
 }
 
-data class ShootingConfiguration(val setups: List<ShootSetup>, val activeName: String?, val choices: Map<ShootField, List<String>>, val globals: SetupGlobals) {
+data class ShootingConfiguration(val setups: List<ShootSetup>, val activeName: String?, val choices: Map<ShootField, List<String>>, val globals: SetupGlobals,
+    val dialect: ShootSetupDialect = ShootSetupDialect.WIVIEW) {
     val active: ShootSetup? get() = setups.singleOrNull { it.name == activeName }
     fun validateChanges(setup: ShootSetup, changes: Map<ShootField, String>, backProvidedLight: String? = null): ShootSetup {
-        globals.attributesFor(setup.name)
+        if (setup.name.isBlank()) throw ProtocolException("拍摄配置名称为空，禁止写入", "The shooting setup name is empty; writing is disabled.")
+        if (dialect == ShootSetupDialect.WIVIEW) globals.attributesFor(setup.name)
         changes.forEach { (field, value) ->
-            if (field !in ShootField.legacy) throw ProtocolException("此字段不属于旧版 ShootSetup", "This field does not belong to the legacy ShootSetup.")
+            if (field !in setup.fields(dialect)) throw ProtocolException("当前拍摄配置方言不支持写入 ${field.wireName}", "The current shooting dialect does not support writing ${field.wireName}.")
             setupValue(value)
             when (field) {
                 ShootField.NAME -> throw ProtocolException("请从后背已有配置中选择配置名", "Select a setup already supplied by the back.")
@@ -76,10 +85,14 @@ data class ShootingConfiguration(val setups: List<ShootSetup>, val activeName: S
                 else -> if (field != ShootField.LIGHT || value != backProvidedLight) requireChoice(value, choices[field].orEmpty(), field)
             }
         }
-        return setup.changed(changes).also { it.serialize() }
+        val updated = setup.changed(changes)
+        // DP-67 SetImgProp clones a predefined setup into its .1 modified slot before SaveShootSetup.
+        val result = if (dialect == ShootSetupDialect.DP67 && !setup.name.contains(".1"))
+            updated.changed(mapOf(ShootField.NAME to (setup.name + ".1"))) else updated
+        return result.also { it.serialize(dialect) }
     }
     companion object {
-        fun from(attributes: Map<String, String>): ShootingConfiguration {
+        fun from(attributes: Map<String, String>, dialect: ShootSetupDialect = ShootSetupDialect.WIVIEW): ShootingConfiguration {
             val a = attributes.mapKeys { it.key.lowercase() }
             val setups = a["shootsetup"].orEmpty().split(';').filter(String::isNotEmpty).map(ShootSetup::parse)
             if (setups.map { it.name }.distinct().size != setups.size) throw ProtocolException("后背返回重复的拍摄配置名", "The back returned duplicate shooting setup names.")
@@ -91,7 +104,7 @@ data class ShootingConfiguration(val setups: List<ShootSetup>, val activeName: S
                     parts[0]
                 }.distinct() else raw.split(';').filter(String::isNotEmpty).distinct()
             }
-            return ShootingConfiguration(setups, a["defaultshootsetup"], choices, SetupGlobals(a["defaultorientation"], a["defaultcolor"]))
+            return ShootingConfiguration(setups, a["defaultshootsetup"], choices, SetupGlobals(a["defaultorientation"], a["defaultcolor"]), dialect)
         }
     }
 }
@@ -126,8 +139,17 @@ object CameraPaths {
 enum class BackMark(val wireValue: String) { GOOD("Good"), UNMARKED("Unmarked") }
 
 object ControlCommands {
-    fun shootSetup(setup: ShootSetup, globals: SetupGlobals) = LeafCommand("^<SetCameraParam ShootSetup=\"${setup.serialize()}\"${globals.attributesFor(setup.name)} />")
+    fun shootSetup(setup: ShootSetup, globals: SetupGlobals, dialect: ShootSetupDialect = ShootSetupDialect.WIVIEW): LeafCommand {
+        if (dialect == ShootSetupDialect.DP67 && !setup.name.contains(".1"))
+            throw ProtocolException("DP-67 完整写入需要 .1 修改配置", "A complete DP-67 write requires a .1 modified setup.")
+        return LeafCommand("^<SetCameraParam ShootSetup=\"${setup.serialize(dialect)}\"${if (dialect == ShootSetupDialect.WIVIEW) globals.attributesFor(setup.name) else ""} />")
+    }
     fun selectSetup(name: String, globals: SetupGlobals) = LeafCommand("^<SetCameraParam DefaultShootSetup=\"${setupValue(name)}\"${globals.attributesFor(name)} />")
+    fun selectSetup(setup: ShootSetup, globals: SetupGlobals, dialect: ShootSetupDialect): LeafCommand = when {
+        dialect == ShootSetupDialect.WIVIEW -> selectSetup(setup.name, globals)
+        setup.name.contains(".1") -> shootSetup(setup, globals, dialect)
+        else -> LeafCommand("^<SetCameraParam DefaultShootSetup=\"${setupValue(setup.name)}\" />")
+    }
     fun marking(path: String, mark: BackMark, xmp: String? = null): LeafCommand {
         if (xmp != null && (xmp.length > 48 * 1024 || !Regex("[A-Za-z0-9+/]*={0,2}").matches(xmp)))
             throw ProtocolException("XMP 编码无效或超过控制头上限", "The encoded XMP is invalid or exceeds the control-header limit.")

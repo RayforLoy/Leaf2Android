@@ -1,0 +1,1889 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "hardware_tested": false,
+  "scope": "Static vendor binaries only; user reports about stability are not device test results.",
+  "client": {
+    "file": "extracted/LEAFDP~2.001",
+    "sha256": "d0e67119db4a8e49a2cf8ec264143ccdf5da2d67623f835df9ace5fdf9c620b7",
+    "file_version": "1, 2, 1, 2"
+  },
+  "functions": [
+    {
+      "file": "analysis/disassembly/save-shoot-setup.arm.txt",
+      "begin_va": 106248,
+      "end_va_exclusive": 107680,
+      "sha256": "6f6690addcd20cb3546e9a4edf7562071d50132d01e3b25938831a3ccd407431",
+      "literal_references": [
+        {
+          "instruction_va": 106456,
+          "literal_va": 582696,
+          "text": "SetupName="
+        },
+        {
+          "instruction_va": 106524,
+          "literal_va": 582708,
+          "text": ",ShootingFolder="
+        },
+        {
+          "instruction_va": 106588,
+          "literal_va": 582728,
+          "text": ",ISO="
+        },
+        {
+          "instruction_va": 106652,
+          "literal_va": 582736,
+          "text": ",ImageQuality="
+        },
+        {
+          "instruction_va": 106716,
+          "literal_va": 582752,
+          "text": ",Framing="
+        },
+        {
+          "instruction_va": 106780,
+          "literal_va": 582764,
+          "text": ",Toning="
+        },
+        {
+          "instruction_va": 106844,
+          "literal_va": 582776,
+          "text": ",Light="
+        },
+        {
+          "instruction_va": 106908,
+          "literal_va": 582784,
+          "text": ",SharpTable="
+        },
+        {
+          "instruction_va": 106972,
+          "literal_va": 582800,
+          "text": ",InputProfile="
+        },
+        {
+          "instruction_va": 107036,
+          "literal_va": 582816,
+          "text": ",OutputProfile="
+        },
+        {
+          "instruction_va": 107100,
+          "literal_va": 582832,
+          "text": ",CameraType="
+        },
+        {
+          "instruction_va": 107164,
+          "literal_va": 582848,
+          "text": ",ICCFlag="
+        },
+        {
+          "instruction_va": 107248,
+          "literal_va": 582860,
+          "text": ",Prefix="
+        },
+        {
+          "instruction_va": 107336,
+          "literal_va": 582872,
+          "text": "ShootSetup"
+        },
+        {
+          "instruction_va": 107464,
+          "literal_va": 582884,
+          "text": "DefaultShootSetup"
+        },
+        {
+          "instruction_va": 107564,
+          "literal_va": 516552,
+          "text": "Failed to set new camera parameters."
+        },
+        {
+          "instruction_va": 107572,
+          "literal_va": 582904,
+          "text": "CControlApplication::SaveShootSetup()"
+        },
+        {
+          "instruction_va": 107588,
+          "literal_va": 582980,
+          "text": "ControlApplication.cpp"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/set-image-property.arm.txt",
+      "begin_va": 105692,
+      "end_va_exclusive": 106248,
+      "sha256": "8d47d937652e434a587fe6af5775bccc6131adae3dec3a3ee7e8022e3310a6b9",
+      "literal_references": [
+        {
+          "instruction_va": 106180,
+          "literal_va": 582448,
+          "text": "Failed to find default shoot setup in the array of shoot setups"
+        },
+        {
+          "instruction_va": 106188,
+          "literal_va": 582576,
+          "text": "CControlApplication::SetImgProp"
+        },
+        {
+          "instruction_va": 106204,
+          "literal_va": 582640,
+          "text": "ControlApplication.cpp"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/clone-modified-slot.arm.txt",
+      "begin_va": 104736,
+      "end_va_exclusive": 105692,
+      "sha256": "ded3f844bc4ea9e5d1f53539e05e948c20b85a623096712b1484088d77c84d68",
+      "literal_references": []
+    },
+    {
+      "file": "analysis/disassembly/light-property-caller.arm.txt",
+      "begin_va": 194556,
+      "end_va_exclusive": 194604,
+      "sha256": "69d5b2e8f1b0c916e60ef2d261126b2e38e634db339786cce1a6e5f9a4cb3676",
+      "literal_references": []
+    },
+    {
+      "file": "analysis/disassembly/directory-set-camera-wrapper.arm.txt",
+      "begin_va": 174644,
+      "end_va_exclusive": 174996,
+      "sha256": "1fb76c2e75f15487af9032513138c32d7f8402ccdc6939b6a177088a31cf7fe2",
+      "literal_references": [
+        {
+          "instruction_va": 174908,
+          "literal_va": 633164,
+          "text": "Cache.cpp"
+        },
+        {
+          "instruction_va": 174924,
+          "literal_va": 633184,
+          "text": "CDOSDirectory::SetCameraParam SetCameraParam failed Error:"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/sync-property-parser.arm.txt",
+      "begin_va": 87904,
+      "end_va_exclusive": 95072,
+      "sha256": "0bd9569c08d5dc1b1fca6d517240109b61239b0fe4e7edac9e9672e2ad504e65",
+      "literal_references": [
+        {
+          "instruction_va": 87924,
+          "literal_va": 572904,
+          "text": "CControlApplication::OnSynchronize"
+        },
+        {
+          "instruction_va": 87944,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 87952,
+          "literal_va": 572976,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 88344,
+          "literal_va": 573032,
+          "text": "battery_percent"
+        },
+        {
+          "instruction_va": 88420,
+          "literal_va": 573064,
+          "text": "battery_time"
+        },
+        {
+          "instruction_va": 88492,
+          "literal_va": 573092,
+          "text": "exp_left"
+        },
+        {
+          "instruction_va": 88564,
+          "literal_va": 573112,
+          "text": "max_exp"
+        },
+        {
+          "instruction_va": 88708,
+          "literal_va": 573140,
+          "text": "incorrect ISO - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 88716,
+          "literal_va": 573220,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 88732,
+          "literal_va": 573296,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 88776,
+          "literal_va": 573344,
+          "text": "ImageQuality"
+        },
+        {
+          "instruction_va": 88852,
+          "literal_va": 573376,
+          "text": "incorrect ImageQuality - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 88860,
+          "literal_va": 573476,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 88876,
+          "literal_va": 573552,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 88920,
+          "literal_va": 573600,
+          "text": "Color"
+        },
+        {
+          "instruction_va": 89000,
+          "literal_va": 573612,
+          "text": "incorrect Color - FillEnumArr() failed"
+        },
+        {
+          "instruction_va": 89008,
+          "literal_va": 573692,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 89020,
+          "literal_va": 573768,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 89064,
+          "literal_va": 573816,
+          "text": "DefaultColor"
+        },
+        {
+          "instruction_va": 89164,
+          "literal_va": 573844,
+          "text": "Framing"
+        },
+        {
+          "instruction_va": 89232,
+          "literal_va": 573860,
+          "text": "incorrect Framing - FillFraming() failed"
+        },
+        {
+          "instruction_va": 89240,
+          "literal_va": 573944,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 89256,
+          "literal_va": 574020,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 89296,
+          "literal_va": 574068,
+          "text": "Toning"
+        },
+        {
+          "instruction_va": 89368,
+          "literal_va": 574088,
+          "text": "incorrect Toning - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 89376,
+          "literal_va": 574176,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 89392,
+          "literal_va": 574252,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 89436,
+          "literal_va": 574300,
+          "text": "Light"
+        },
+        {
+          "instruction_va": 89512,
+          "literal_va": 574316,
+          "text": "incorrect Light - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 89520,
+          "literal_va": 574400,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 89536,
+          "literal_va": 574476,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 89580,
+          "literal_va": 574524,
+          "text": "Orientation"
+        },
+        {
+          "instruction_va": 89660,
+          "literal_va": 574548,
+          "text": "incorrect Orientation - FillEnumArr() failed"
+        },
+        {
+          "instruction_va": 89668,
+          "literal_va": 574640,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 89684,
+          "literal_va": 574716,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 89728,
+          "literal_va": 574764,
+          "text": "DefaultOrientation"
+        },
+        {
+          "instruction_va": 89828,
+          "literal_va": 574804,
+          "text": "SharpTable"
+        },
+        {
+          "instruction_va": 89904,
+          "literal_va": 574832,
+          "text": "incorrect SharpTable - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 89912,
+          "literal_va": 574928,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 89928,
+          "literal_va": 575004,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 89972,
+          "literal_va": 575052,
+          "text": "InputProfile"
+        },
+        {
+          "instruction_va": 90048,
+          "literal_va": 575084,
+          "text": "incorrect InputProfile - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 90056,
+          "literal_va": 575184,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 90072,
+          "literal_va": 575260,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 90116,
+          "literal_va": 575308,
+          "text": "OutputProfile"
+        },
+        {
+          "instruction_va": 90192,
+          "literal_va": 575340,
+          "text": "incorrect OutputProfile - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 90200,
+          "literal_va": 575440,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 90216,
+          "literal_va": 575516,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 90260,
+          "literal_va": 575564,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 90336,
+          "literal_va": 575592,
+          "text": "incorrect CameraType - FillComBSTRArr() failed"
+        },
+        {
+          "instruction_va": 90344,
+          "literal_va": 575688,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 90360,
+          "literal_va": 575764,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 90404,
+          "literal_va": 575812,
+          "text": "Disk_threshold_list"
+        },
+        {
+          "instruction_va": 90476,
+          "literal_va": 575852,
+          "text": "incorrect Disk_threshold_list - FillIntArr() failed"
+        },
+        {
+          "instruction_va": 90484,
+          "literal_va": 575956,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 90500,
+          "literal_va": 576032,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 90540,
+          "literal_va": 576080,
+          "text": "Histogram_scale"
+        },
+        {
+          "instruction_va": 90608,
+          "literal_va": 576112,
+          "text": "incorrect Histogram_scale - FillIntArr() failed"
+        },
+        {
+          "instruction_va": 90616,
+          "literal_va": 576208,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 90632,
+          "literal_va": 576284,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 90732,
+          "literal_va": 576332,
+          "text": "DiskID"
+        },
+        {
+          "instruction_va": 90776,
+          "literal_va": 524288,
+          "text": "Software\\Creo\\Leaf DP-67"
+        },
+        {
+          "instruction_va": 90824,
+          "literal_va": 524552,
+          "text": "DiskID"
+        },
+        {
+          "instruction_va": 90916,
+          "literal_va": 524552,
+          "text": "DiskID"
+        },
+        {
+          "instruction_va": 91024,
+          "literal_va": 576348,
+          "text": "PictureDimensions"
+        },
+        {
+          "instruction_va": 91228,
+          "literal_va": 576388,
+          "text": "DefaultShootSetup"
+        },
+        {
+          "instruction_va": 91288,
+          "literal_va": 576424,
+          "text": "ShootSetup"
+        },
+        {
+          "instruction_va": 91424,
+          "literal_va": 576456,
+          "text": "Actual number of shoot setup items is wrong"
+        },
+        {
+          "instruction_va": 91432,
+          "literal_va": 576544,
+          "text": "CControlApplication::OnSynchronize"
+        },
+        {
+          "instruction_va": 91448,
+          "literal_va": 576616,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 91588,
+          "literal_va": 576664,
+          "text": "SetupName"
+        },
+        {
+          "instruction_va": 91676,
+          "literal_va": 576684,
+          "text": "ShootingFolder"
+        },
+        {
+          "instruction_va": 92060,
+          "literal_va": 576728,
+          "text": "ImageQuality"
+        },
+        {
+          "instruction_va": 92148,
+          "literal_va": 576756,
+          "text": "Framing"
+        },
+        {
+          "instruction_va": 92236,
+          "literal_va": 576772,
+          "text": "Toning"
+        },
+        {
+          "instruction_va": 92324,
+          "literal_va": 576788,
+          "text": "Light"
+        },
+        {
+          "instruction_va": 92412,
+          "literal_va": 576800,
+          "text": "SharpTable"
+        },
+        {
+          "instruction_va": 92500,
+          "literal_va": 576824,
+          "text": "InputProfile"
+        },
+        {
+          "instruction_va": 92588,
+          "literal_va": 576852,
+          "text": "OutputProfile"
+        },
+        {
+          "instruction_va": 92676,
+          "literal_va": 576880,
+          "text": "CameraType"
+        },
+        {
+          "instruction_va": 92764,
+          "literal_va": 576904,
+          "text": "Prefix"
+        },
+        {
+          "instruction_va": 92848,
+          "literal_va": 576920,
+          "text": "ICCFlag"
+        },
+        {
+          "instruction_va": 92976,
+          "literal_va": 576936,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93020,
+          "literal_va": 576952,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93064,
+          "literal_va": 576968,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93108,
+          "literal_va": 576984,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93152,
+          "literal_va": 577000,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93196,
+          "literal_va": 577016,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93240,
+          "literal_va": 577032,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93328,
+          "literal_va": 577052,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93372,
+          "literal_va": 577068,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93416,
+          "literal_va": 577084,
+          "text": "Default"
+        },
+        {
+          "instruction_va": 93648,
+          "literal_va": 577104,
+          "text": "dcb_version"
+        },
+        {
+          "instruction_va": 93872,
+          "literal_va": 577140,
+          "text": "CControlApplication::OnSynchronize(). bResult = %s"
+        },
+        {
+          "instruction_va": 93888,
+          "literal_va": 577244,
+          "text": "true"
+        },
+        {
+          "instruction_va": 93892,
+          "literal_va": 577256,
+          "text": "false"
+        },
+        {
+          "instruction_va": 93940,
+          "literal_va": 577268,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 94328,
+          "literal_va": 522448,
+          "text": "Failed to fill current directory "
+        },
+        {
+          "instruction_va": 94336,
+          "literal_va": 577316,
+          "text": "CControlApplication::OnSynchronize()"
+        },
+        {
+          "instruction_va": 94352,
+          "literal_va": 577392,
+          "text": "ControlApplication.cpp"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/framing-list-parser.arm.txt",
+      "begin_va": 98592,
+      "end_va_exclusive": 99340,
+      "sha256": "c54296b87935e6dc451ed4078e4e408e784a6891c419202c7d67d38a4f414430",
+      "literal_references": [
+        {
+          "instruction_va": 98692,
+          "literal_va": 579752,
+          "text": "No Selection"
+        },
+        {
+          "instruction_va": 98784,
+          "literal_va": 579780,
+          "text": "No Framing parameter received"
+        },
+        {
+          "instruction_va": 98792,
+          "literal_va": 579840,
+          "text": "CControlApplication::FillFraming()"
+        },
+        {
+          "instruction_va": 98808,
+          "literal_va": 579912,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 99124,
+          "literal_va": 579964,
+          "text": "CControlApplication::FillFraming  Incorrect Framing: %s"
+        },
+        {
+          "instruction_va": 99180,
+          "literal_va": 580076,
+          "text": "ControlApplication.cpp"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/set-camera-param.arm.txt",
+      "begin_va": 162280,
+      "end_va_exclusive": 163016,
+      "sha256": "6371e3486d4f44404a108a085400762528ace639549bba703b217614a34adcb9",
+      "literal_references": [
+        {
+          "instruction_va": 162296,
+          "literal_va": 624628,
+          "text": "CProtocolLayer::SetCameraParam"
+        },
+        {
+          "instruction_va": 162324,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 162332,
+          "literal_va": 624692,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 162412,
+          "literal_va": 624728,
+          "text": "Can't perform requsted command. PDA is out of sync"
+        },
+        {
+          "instruction_va": 162420,
+          "literal_va": 624832,
+          "text": "CProtocolLayer::SetCameraParam"
+        },
+        {
+          "instruction_va": 162436,
+          "literal_va": 624896,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 162480,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 162560,
+          "literal_va": 624932,
+          "text": "SetCameraParam"
+        },
+        {
+          "instruction_va": 162720,
+          "literal_va": 624948,
+          "text": "error"
+        },
+        {
+          "instruction_va": 162884,
+          "literal_va": 624956,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 162888,
+          "literal_va": 624992,
+          "text": "true"
+        },
+        {
+          "instruction_va": 162896,
+          "literal_va": 625004,
+          "text": "false"
+        },
+        {
+          "instruction_va": 162900,
+          "literal_va": 625016,
+          "text": "CProtocolLayer::SetCameraParam() returned:"
+        },
+        {
+          "instruction_va": 162952,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 162960,
+          "literal_va": 624628,
+          "text": "CProtocolLayer::SetCameraParam"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/execute-transaction.arm.txt",
+      "begin_va": 165772,
+      "end_va_exclusive": 167928,
+      "sha256": "8ffa5e5253dc8820047ff5c761cf10e27a5a9c024e8421dc0e2706daf73db75b",
+      "literal_references": [
+        {
+          "instruction_va": 165792,
+          "literal_va": 627500,
+          "text": "CProtocolLayer::ExecuteCommandTransaction"
+        },
+        {
+          "instruction_va": 165820,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 165828,
+          "literal_va": 627584,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 165900,
+          "literal_va": 627620,
+          "text": "command send failed because DSR is off"
+        },
+        {
+          "instruction_va": 165908,
+          "literal_va": 627700,
+          "text": "CProtocolLayer::ExecuteCommandTransaction()"
+        },
+        {
+          "instruction_va": 165924,
+          "literal_va": 627788,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 165952,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 166060,
+          "literal_va": 627824,
+          "text": "command send failed because in busy mode"
+        },
+        {
+          "instruction_va": 166068,
+          "literal_va": 627908,
+          "text": "CProtocolLayer::ExecuteCommandTransaction()"
+        },
+        {
+          "instruction_va": 166084,
+          "literal_va": 627996,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 166112,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 166608,
+          "literal_va": 628064,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 166632,
+          "literal_va": 628100,
+          "text": "CProtocolLayer::ExecuteCommandTransaction Sending command: "
+        },
+        {
+          "instruction_va": 166728,
+          "literal_va": 628220,
+          "text": "SetThreadPriority failed"
+        },
+        {
+          "instruction_va": 166736,
+          "literal_va": 628272,
+          "text": "CProtocolLayer::ExecuteCommandTransaction"
+        },
+        {
+          "instruction_va": 166752,
+          "literal_va": 628356,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 166796,
+          "literal_va": 628392,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 166996,
+          "literal_va": 628436,
+          "text": "DSR Off"
+        },
+        {
+          "instruction_va": 167004,
+          "literal_va": 628452,
+          "text": "CProtocolLayer::ExecuteCommandTransaction()"
+        },
+        {
+          "instruction_va": 167020,
+          "literal_va": 628540,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167072,
+          "literal_va": 628576,
+          "text": "Busy detected"
+        },
+        {
+          "instruction_va": 167080,
+          "literal_va": 628604,
+          "text": "CProtocolLayer::ExecuteCommandTransaction()"
+        },
+        {
+          "instruction_va": 167096,
+          "literal_va": 628692,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167112,
+          "literal_va": 628728,
+          "text": "CProtocolLayer::ExecuteCommandTransaction() Error while waiting for response for %d msec. Code %d"
+        },
+        {
+          "instruction_va": 167172,
+          "literal_va": 628924,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167236,
+          "literal_va": 628960,
+          "text": "SetThreadPriority failed"
+        },
+        {
+          "instruction_va": 167244,
+          "literal_va": 629012,
+          "text": "CProtocolLayer::ExecuteCommandTransaction"
+        },
+        {
+          "instruction_va": 167260,
+          "literal_va": 629096,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167328,
+          "literal_va": 629132,
+          "text": "WriteData failed"
+        },
+        {
+          "instruction_va": 167336,
+          "literal_va": 629168,
+          "text": "CProtocolLayer::ExecuteCommandTransaction"
+        },
+        {
+          "instruction_va": 167352,
+          "literal_va": 629252,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167428,
+          "literal_va": 629288,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167472,
+          "literal_va": 629332,
+          "text": "CProtocolLayer::ExecuteCommandTransaction() failed: %s"
+        },
+        {
+          "instruction_va": 167516,
+          "literal_va": 629444,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167592,
+          "literal_va": 629480,
+          "text": "succeeded"
+        },
+        {
+          "instruction_va": 167600,
+          "literal_va": 629500,
+          "text": "CProtocolLayer::ExecuteCommandTransaction "
+        },
+        {
+          "instruction_va": 167616,
+          "literal_va": 629588,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167700,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 167708,
+          "literal_va": 627500,
+          "text": "CProtocolLayer::ExecuteCommandTransaction"
+        },
+        {
+          "instruction_va": 167764,
+          "literal_va": 629624,
+          "text": "CProtocolLayer::ExecuteCommandTransaction() Invalid parameters szCommandName: %s, pResponseCommand: %p"
+        },
+        {
+          "instruction_va": 167816,
+          "literal_va": 629832,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 167860,
+          "literal_va": 584448,
+          "text": "- leave"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/receive-command.arm.txt",
+      "begin_va": 150084,
+      "end_va_exclusive": 151848,
+      "sha256": "5daae4f4300d6cc695d690d0d8c8b1915d1f0514a6d24504e244ddc90bc0fe60",
+      "literal_references": [
+        {
+          "instruction_va": 150128,
+          "literal_va": 615656,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150136,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 150144,
+          "literal_va": 615724,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150264,
+          "literal_va": 615760,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150268,
+          "literal_va": 615796,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150272,
+          "literal_va": 615864,
+          "text": "Error reading packet size or packet size is zero"
+        },
+        {
+          "instruction_va": 150276,
+          "literal_va": 615964,
+          "text": "ATTACHMENT"
+        },
+        {
+          "instruction_va": 150336,
+          "literal_va": 615988,
+          "text": "Size"
+        },
+        {
+          "instruction_va": 150572,
+          "literal_va": 616000,
+          "text": "ReadAndDecompressImage failed"
+        },
+        {
+          "instruction_va": 150580,
+          "literal_va": 616060,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150596,
+          "literal_va": 616128,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150696,
+          "literal_va": 616164,
+          "text": "ReadImage failed"
+        },
+        {
+          "instruction_va": 150704,
+          "literal_va": 616200,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150716,
+          "literal_va": 616268,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150808,
+          "literal_va": 616304,
+          "text": "Asynchronous incoming command came"
+        },
+        {
+          "instruction_va": 150816,
+          "literal_va": 616376,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150832,
+          "literal_va": 616444,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150868,
+          "literal_va": 616480,
+          "text": "CProtocolLayer::OnReceiveCommand Unexpected command came: %s, Expected command %s"
+        },
+        {
+          "instruction_va": 150932,
+          "literal_va": 616644,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151056,
+          "literal_va": 616680,
+          "text": "PostMessage failed"
+        },
+        {
+          "instruction_va": 151064,
+          "literal_va": 616720,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151076,
+          "literal_va": 616788,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151168,
+          "literal_va": 616824,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 151256,
+          "literal_va": 616844,
+          "text": "Handling PICTURE_TAKEN command"
+        },
+        {
+          "instruction_va": 151264,
+          "literal_va": 616908,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151280,
+          "literal_va": 616976,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151324,
+          "literal_va": 617020,
+          "text": "busy"
+        },
+        {
+          "instruction_va": 151504,
+          "literal_va": 617032,
+          "text": "PostMessage failed"
+        },
+        {
+          "instruction_va": 151512,
+          "literal_va": 617072,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151528,
+          "literal_va": 617140,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151604,
+          "literal_va": 617176,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151624,
+          "literal_va": 617212,
+          "text": "CProtocolLayer::OnReceiveCommand(). Expected command received: "
+        },
+        {
+          "instruction_va": 151712,
+          "literal_va": 617340,
+          "text": "Expected command came"
+        },
+        {
+          "instruction_va": 151720,
+          "literal_va": 617384,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151736,
+          "literal_va": 617452,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151768,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 151776,
+          "literal_va": 615656,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/synchronize.arm.txt",
+      "begin_va": 157540,
+      "end_va_exclusive": 157980,
+      "sha256": "724a9a2cbdcb78e36ce91499c70885291bd6a21d90593170eaa08481b7be1e34",
+      "literal_references": [
+        {
+          "instruction_va": 157556,
+          "literal_va": 621656,
+          "text": "CProtocolLayer::Synchronize"
+        },
+        {
+          "instruction_va": 157576,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 157584,
+          "literal_va": 621712,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 157668,
+          "literal_va": 621748,
+          "text": "ReSyncRequest"
+        },
+        {
+          "instruction_va": 157744,
+          "literal_va": 621764,
+          "text": "ExecuteCommandTransaction failed"
+        },
+        {
+          "instruction_va": 157752,
+          "literal_va": 621832,
+          "text": "CProtocolLayer::Synchronize"
+        },
+        {
+          "instruction_va": 157768,
+          "literal_va": 621888,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 157800,
+          "literal_va": 621924,
+          "text": "CProtocolLayer::Synchronize returned:"
+        },
+        {
+          "instruction_va": 157804,
+          "literal_va": 622000,
+          "text": "true"
+        },
+        {
+          "instruction_va": 157812,
+          "literal_va": 622012,
+          "text": "false"
+        },
+        {
+          "instruction_va": 157820,
+          "literal_va": 622024,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 157880,
+          "literal_va": 584448,
+          "text": "- leave"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/resync.arm.txt",
+      "begin_va": 148748,
+      "end_va_exclusive": 149800,
+      "sha256": "a43e3c8cad8373b2239d55844736eb8c7faf18708a2877b3b381d4c42273ccc9",
+      "literal_references": [
+        {
+          "instruction_va": 148776,
+          "literal_va": 614648,
+          "text": "CProtocolLayer::ReSync"
+        },
+        {
+          "instruction_va": 148804,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 148812,
+          "literal_va": 614696,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 148892,
+          "literal_va": 614732,
+          "text": "ReSync failed because in busy mode"
+        },
+        {
+          "instruction_va": 148900,
+          "literal_va": 614804,
+          "text": "CProtocolLayer::ReSync()"
+        },
+        {
+          "instruction_va": 148916,
+          "literal_va": 614856,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 148952,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 149044,
+          "literal_va": 614892,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 149056,
+          "literal_va": 614928,
+          "text": "CProtocolLayer::ReSync Synchronize failed Attempt: %d"
+        },
+        {
+          "instruction_va": 149228,
+          "literal_va": 615036,
+          "text": "In sync"
+        },
+        {
+          "instruction_va": 149236,
+          "literal_va": 615052,
+          "text": "CProtocolLayer::ReSync"
+        },
+        {
+          "instruction_va": 149248,
+          "literal_va": 615100,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 149288,
+          "literal_va": 615136,
+          "text": "Synchronize failed"
+        },
+        {
+          "instruction_va": 149296,
+          "literal_va": 615176,
+          "text": "CProtocolLayer::ReSync"
+        },
+        {
+          "instruction_va": 149308,
+          "literal_va": 615224,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 149380,
+          "literal_va": 615260,
+          "text": "PostMessage failed"
+        },
+        {
+          "instruction_va": 149388,
+          "literal_va": 615300,
+          "text": "CProtocolLayer::ReSync"
+        },
+        {
+          "instruction_va": 149404,
+          "literal_va": 615348,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 149440,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 149448,
+          "literal_va": 614648,
+          "text": "CProtocolLayer::ReSync"
+        },
+        {
+          "instruction_va": 149592,
+          "literal_va": 615384,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 149604,
+          "literal_va": 615420,
+          "text": "CProtocolLayer::ReSync(). RequestSync failed Error: "
+        },
+        {
+          "instruction_va": 149656,
+          "literal_va": 615528,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 149660,
+          "literal_va": 615564,
+          "text": "true"
+        },
+        {
+          "instruction_va": 149668,
+          "literal_va": 615576,
+          "text": "false"
+        },
+        {
+          "instruction_va": 149676,
+          "literal_va": 615588,
+          "text": "CProtocolLayer::ReSync returned:"
+        },
+        {
+          "instruction_va": 149720,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 149728,
+          "literal_va": 614648,
+          "text": "CProtocolLayer::ReSync"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/set-picture-params.arm.txt",
+      "begin_va": 161544,
+      "end_va_exclusive": 162280,
+      "sha256": "6a6b7aa2bba31faac297a4bfeb740c2db3ff1a4e3ad2abab99e81001424ad33a",
+      "literal_references": [
+        {
+          "instruction_va": 161560,
+          "literal_va": 624136,
+          "text": "CProtocolLayer::SetPictureParams"
+        },
+        {
+          "instruction_va": 161588,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 161596,
+          "literal_va": 624204,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 161676,
+          "literal_va": 624240,
+          "text": "Can't perform requsted command. PDA is out of sync"
+        },
+        {
+          "instruction_va": 161684,
+          "literal_va": 624344,
+          "text": "CProtocolLayer::SetPictureParams"
+        },
+        {
+          "instruction_va": 161696,
+          "literal_va": 624412,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 161740,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 161820,
+          "literal_va": 624448,
+          "text": "SetPictureParams"
+        },
+        {
+          "instruction_va": 161980,
+          "literal_va": 624468,
+          "text": "error"
+        },
+        {
+          "instruction_va": 162144,
+          "literal_va": 624476,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 162148,
+          "literal_va": 624512,
+          "text": "true"
+        },
+        {
+          "instruction_va": 162156,
+          "literal_va": 624524,
+          "text": "false"
+        },
+        {
+          "instruction_va": 162164,
+          "literal_va": 624536,
+          "text": "CProtocolLayer::SetPictureParams() returned:"
+        },
+        {
+          "instruction_va": 162216,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 162224,
+          "literal_va": 624136,
+          "text": "CProtocolLayer::SetPictureParams"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/image-function.arm.txt",
+      "begin_va": 163740,
+      "end_va_exclusive": 164464,
+      "sha256": "d6f64f94f7abebdd97a6ebe782f9427c13a7e967abdaaf3a325140bd5eff507a",
+      "literal_references": [
+        {
+          "instruction_va": 163756,
+          "literal_va": 625580,
+          "text": "CProtocolLayer::ImageFunction"
+        },
+        {
+          "instruction_va": 163784,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 163792,
+          "literal_va": 625640,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 163864,
+          "literal_va": 625676,
+          "text": "Can't perform requsted command. PDA is out of sync"
+        },
+        {
+          "instruction_va": 163872,
+          "literal_va": 625780,
+          "text": "CProtocolLayer::ImageFunction"
+        },
+        {
+          "instruction_va": 163888,
+          "literal_va": 625840,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 163924,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 164004,
+          "literal_va": 625876,
+          "text": "ImageFunction"
+        },
+        {
+          "instruction_va": 164172,
+          "literal_va": 625892,
+          "text": "error"
+        },
+        {
+          "instruction_va": 164336,
+          "literal_va": 625900,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 164340,
+          "literal_va": 625936,
+          "text": "true"
+        },
+        {
+          "instruction_va": 164348,
+          "literal_va": 625948,
+          "text": "false"
+        },
+        {
+          "instruction_va": 164356,
+          "literal_va": 625960,
+          "text": "CProtocolLayer::ImageFunction() returned:"
+        },
+        {
+          "instruction_va": 164400,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 164408,
+          "literal_va": 625580,
+          "text": "CProtocolLayer::ImageFunction"
+        }
+      ]
+    },
+    {
+      "file": "analysis/disassembly/widcomm-link-timeout-setting.arm.txt",
+      "begin_va": 144196,
+      "end_va_exclusive": 144456,
+      "sha256": "d21ffdbbf22423994773bd8310b48a025ea3cfa7c07e304e0f15a1003ff30f19",
+      "literal_references": [
+        {
+          "instruction_va": 144212,
+          "literal_va": 611792,
+          "text": "CBtManager::SetLinkSupervisionTimeout"
+        },
+        {
+          "instruction_va": 144236,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 144244,
+          "literal_va": 611868,
+          "text": "BtManager.cpp"
+        },
+        {
+          "instruction_va": 144388,
+          "literal_va": 584448,
+          "text": "- leave"
+        }
+      ]
+    }
+  ],
+  "csv_literal_order": [
+    {
+      "instruction_va": 106456,
+      "literal": "SetupName="
+    },
+    {
+      "instruction_va": 106524,
+      "literal": ",ShootingFolder="
+    },
+    {
+      "instruction_va": 106588,
+      "literal": ",ISO="
+    },
+    {
+      "instruction_va": 106652,
+      "literal": ",ImageQuality="
+    },
+    {
+      "instruction_va": 106716,
+      "literal": ",Framing="
+    },
+    {
+      "instruction_va": 106780,
+      "literal": ",Toning="
+    },
+    {
+      "instruction_va": 106844,
+      "literal": ",Light="
+    },
+    {
+      "instruction_va": 106908,
+      "literal": ",SharpTable="
+    },
+    {
+      "instruction_va": 106972,
+      "literal": ",InputProfile="
+    },
+    {
+      "instruction_va": 107036,
+      "literal": ",OutputProfile="
+    },
+    {
+      "instruction_va": 107100,
+      "literal": ",CameraType="
+    },
+    {
+      "instruction_va": 107164,
+      "literal": ",ICCFlag="
+    },
+    {
+      "instruction_va": 107248,
+      "literal": ",Prefix="
+    }
+  ],
+  "required_csv_fields": [
+    "SetupName",
+    "ShootingFolder",
+    "ISO",
+    "ImageQuality",
+    "Framing",
+    "Toning",
+    "Light",
+    "SharpTable",
+    "InputProfile",
+    "OutputProfile",
+    "CameraType",
+    "ICCFlag"
+  ],
+  "conditional_csv_fields": [
+    "Prefix"
+  ],
+  "missing_in_this_writer": [
+    "Orientation",
+    "Color",
+    "FileCompression",
+    "NLCompression"
+  ],
+  "save_branch": {
+    "classifier_range": "0x19f70..0x19f88",
+    "modified_name_rule": "contains .1, not an exact suffix test",
+    "modified_name_property": "ShootSetup",
+    "ordinary_name_property": "DefaultShootSetup",
+    "ordinary_name_branch": "0x1a3c0..0x1a3e0",
+    "directory_wrapper": "0x2aa34..0x2ab94",
+    "wrapper_call": 174856,
+    "wrapper_semantics": "Forwards only the supplied property names/values; no global Orientation or Color append."
+  },
+  "modified_slot": {
+    "set_property_function": 105692,
+    "clone_helper": 104736,
+    "clone_call": 106052,
+    "name_test": 106352,
+    "semantics": "Changed property on a name without '.1': reuse/create name+'.1', copy 12 source values into a 13-element row, edit the returned slot, make it active. Existing modified slots are reused.",
+    "light_caller": {
+      "function": 194556,
+      "property_index": 6
+    },
+    "iso_ui_path_status": "Generic dialog path not completely mapped in this bounded audit; ISO is model column 2 in SaveShootSetup, but no invented UI clone call is asserted."
+  },
+  "prefix_support": {
+    "flag_offset": "0x1bb",
+    "sync_parser": "0x16a58..0x16b04",
+    "semantics": "Global flag set when a ShootSetup Prefix or ICCFlag key is parsed; not a separate Sync PrefixSupport attribute."
+  },
+  "framing": {
+    "parser": 98592,
+    "item_count_check": 98916,
+    "list_delimiter_load": 98612,
+    "record_delimiter_load": 98896,
+    "semantics": "Semicolon list of comma-separated records, exactly name plus four integer values; only the name belongs in ShootSetup.Framing."
+  },
+  "set_camera_transaction": {
+    "function": 162280,
+    "timeout_ms": 12000,
+    "attempt_limit": 3,
+    "expected_command_id": 13,
+    "expected_command": "Ack",
+    "notes": [
+      "Requires already-synchronized state; no per-write pre-Sync in this function.",
+      "On transport failure while still synchronized, original code may ReSync and retry. This is historical behavior, not a recommendation to automatically repeat state-changing commands.",
+      "Directory wrapper forwards exactly the supplied property array; it does not append global Orientation/Color."
+    ]
+  },
+  "command_ids": [
+    {
+      "id": 0,
+      "name": "none"
+    },
+    {
+      "id": 1,
+      "name": "ReSyncRequest"
+    },
+    {
+      "id": 2,
+      "name": "RequestSync"
+    },
+    {
+      "id": 3,
+      "name": "FileCommand"
+    },
+    {
+      "id": 4,
+      "name": "GetImage"
+    },
+    {
+      "id": 5,
+      "name": "ImageFunction"
+    },
+    {
+      "id": 6,
+      "name": "GetPictureParams"
+    },
+    {
+      "id": 7,
+      "name": "SetCameraParam"
+    },
+    {
+      "id": 8,
+      "name": "GetCameraParam"
+    },
+    {
+      "id": 9,
+      "name": "ReSyncLive"
+    },
+    {
+      "id": 10,
+      "name": "ReSyncResponse"
+    },
+    {
+      "id": 11,
+      "name": "Sync"
+    },
+    {
+      "id": 12,
+      "name": "PictureTaken"
+    },
+    {
+      "id": 13,
+      "name": "Ack"
+    },
+    {
+      "id": 14,
+      "name": "Error"
+    }
+  ],
+  "receive_routing": {
+    "matching": "0x24cec..0x24d04",
+    "async_picture": "0x24d40..0x24d48",
+    "semantics": "Pending reply matched by command ID; Error is accepted separately; PictureTaken is asynchronous. No transaction ID was established."
+  },
+  "startup_literal_absence": {
+    "CEVersion": {
+      "ascii": 0,
+      "utf-16-le": 0
+    },
+    "EnableTakenPicture": {
+      "ascii": 0,
+      "utf-16-le": 0
+    }
+  },
+  "spp_service_uuid": "00001101-0000-1000-8000-00805f9b34fb",
+  "sdk_comparison": [
+    {
+      "wiview_version": "1.0.2",
+      "dp67_module": "BtCoreIf.003",
+      "wiview_module": "BtCoreIf.005",
+      "exact_file_equal": false,
+      "matching_normalized_sections": [
+        ".text",
+        ".rdata",
+        ".data",
+        ".pdata",
+        ".rsrc",
+        ".reloc"
+      ],
+      "dp67_sha256": "f61cfd82e761ebf544766d93a8f79d5a835d4056b5917b87d6936b3e430e0dbf",
+      "wiview_sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2"
+    },
+    {
+      "wiview_version": "1.0.2",
+      "dp67_module": "BTSDKC~1.002",
+      "wiview_module": "BTSDKC~1.004",
+      "exact_file_equal": false,
+      "matching_normalized_sections": [
+        ".text",
+        ".rdata",
+        ".data",
+        ".pdata",
+        ".rsrc",
+        ".reloc"
+      ],
+      "dp67_sha256": "64a72ba3b525ad834c4621b1b8c9f08f0b38f11e33615d6341e5eff027238449",
+      "wiview_sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14"
+    },
+    {
+      "wiview_version": "1.0.3",
+      "dp67_module": "BtCoreIf.003",
+      "wiview_module": "BtCoreIf.005",
+      "exact_file_equal": false,
+      "matching_normalized_sections": [
+        ".text",
+        ".rdata",
+        ".data",
+        ".pdata",
+        ".rsrc",
+        ".reloc"
+      ],
+      "dp67_sha256": "f61cfd82e761ebf544766d93a8f79d5a835d4056b5917b87d6936b3e430e0dbf",
+      "wiview_sha256": "0032ea28ebea0bb9beb83a00564ce805987d38c7038403737f746dac7b1c1bb2"
+    },
+    {
+      "wiview_version": "1.0.3",
+      "dp67_module": "BTSDKC~1.002",
+      "wiview_module": "BTSDKC~1.004",
+      "exact_file_equal": false,
+      "matching_normalized_sections": [
+        ".text",
+        ".rdata",
+        ".data",
+        ".pdata",
+        ".rsrc",
+        ".reloc"
+      ],
+      "dp67_sha256": "64a72ba3b525ad834c4621b1b8c9f08f0b38f11e33615d6341e5eff027238449",
+      "wiview_sha256": "0e07c5dc360bc5dd77bc394b07294f2513fe863e02f1acc9c4c9bc6ea5a3aa14"
+    }
+  ],
+  "remaining_limits": [
+    "No physical Valeo setting write or Bluetooth capture was performed.",
+    "Absence of a literal is bounded static evidence, not proof that every indirect construction is impossible.",
+    "DP-67 differences suggest a compatibility experiment, not a proven cause/fix for a reported disconnect.",
+    "No complete comparison of every reconnect/heartbeat/image-packet code path is claimed."
+  ]
+}

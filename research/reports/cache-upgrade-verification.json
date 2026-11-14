@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-14",
+  "avd": "Leaf2Android_API36",
+  "api": 36,
+  "physical_devices_used": false,
+  "app_data_reset_only_on_owned_avd": true,
+  "old_apk_sha256": "3089764328f8664f887314ee143a43c82fc79a1a43367fc7c54e87580ac36fbd",
+  "new_apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7",
+  "checks": {
+    "legacy_256_upgrades_to_1024": true,
+    "later_256_choice_survives_restart": true,
+    "existing_64_choice_retained": true,
+    "fresh_default_1024": true,
+    "explicit_dp67_persists_across_restart": true,
+    "explicit_dp67_survives_language_change": true
+  }
+}

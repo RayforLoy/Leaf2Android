@@ -1,16 +1,16 @@
-# Leaf2Android 0.3.0 安装、使用与构建
+# Leaf2Android 0.3.1 安装、使用与构建
 
 [English](quick-start.en.md) · [项目首页](../README.md) · [功能支持表](implementation-status.md) · [完整缺口对照](feature-gap-matrix.md)
 
 ## 选择安装包
 
-**0.3.0 预发布。** 从 [v0.3.0 预发布页](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.0) 下载附件，或使用本地 `dist/`；功能与验证边界见 [本版说明](releases/v0.3.0.md)。本页新增后背操作已接入代码，硬件效果尚待验证。
+**0.3.1（versionCode 4）实验性预发布；更新于 2026-11-14。** 从 [v0.3.1 页面](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.1) 下载附件，或使用本地 `dist/`；变更见 [本版说明](releases/v0.3.1.md)。DP-67 写入与事务修正仍待真实 Valeo 验证，不宣称设置超时已经解决。
 
 | 文件 | 用途 |
 | --- | --- |
-| `Leaf2Android-0.3.0.apk` | 发布密钥签名的 release 测试应用 |
-| `Leaf2Android-0.3.0-debug.apk` | 开发调试包，签名可能与 release 不同 |
-| `Leaf2Android-0.3.0-source.zip` | 可构建源码与文档 |
+| `Leaf2Android-0.3.1.apk` | 发布密钥签名的 release 测试应用 |
+| `Leaf2Android-0.3.1-debug.apk` | 开发调试包，签名可能与 release 不同 |
+| `Leaf2Android-0.3.1-source.zip` | 可构建源码与文档 |
 | 参考资料压缩包 | 原版 WiView、静态分析与来源记录，不作为 APK 内嵌运行库 |
 | `*.sha256` / 校验清单 | 对应附件的 SHA-256 |
 
@@ -21,7 +21,7 @@
 将 APK 传到手机，在文件管理器中打开安装，根据 Android 提示允许当前来源安装应用。连接开发环境后也可执行：
 
 ```powershell
-adb install -r .\dist\Leaf2Android-0.3.0.apk
+adb install -r .\dist\Leaf2Android-0.3.1.apk
 ```
 
 同应用 ID 的覆盖更新还要求签名一致。若从 debug 切换 release 时出现 `INSTALL_FAILED_UPDATE_INCOMPATIBLE`，先保存需要的预览并另行记录本机备注 / 标记，再卸载旧包后安装。卸载会删除应用私有数据。此前误名测试包与 `com.leaf2android` 是不同应用，不会自动迁移数据。
@@ -33,6 +33,10 @@ adb install -r .\dist\Leaf2Android-0.3.0.apk
 首次启动使用现代界面，语言跟随系统。设置中可选择跟随系统、简体中文或 English；风格可独立选择现代或经典 PDA。两者使用共享照片与会话仓库，保留放大位置。
 
 语言只控制界面文案，不翻译设备实际名称、原始照片路径、用户备注或后背元数据。后背协议编码另行选择，不能用“界面切换英文”推断无线编码已经改变。
+
+## 预览缓存与升级
+
+预览缓存默认 **1024 MiB**，可在设置中选择 64 / 256 / 1024 MiB。首次升级到本轮规则时，旧存储值 256 MiB 会迁为 1024 MiB，原有 64 MiB 保留；迁移只执行一次。之后手动改回 256 MiB 或其他值，不会在下次启动被再次改成 1024。它只影响已收到的预览，不会增加后背图像分辨率，也不是 MOS 原片容量。实验室附件的 256 MiB 缓存预算保持独立。
 
 ## 先检查离线演示
 
@@ -55,20 +59,42 @@ adb install -r .\dist\Leaf2Android-0.3.0.apk
 
 用户于 2026-11-11 报告 Valeo 22Wi 和 Aptus 22 可正常蓝牙连接、读取照片，未提供实际手机 / 系统、后背固件、应用版本和日志。不据此推定 20 张连拍或下列新写入已通过。用户另已纠正 Aptus II 本身无蓝牙，不是当前无线目标；原始 Aptus II 5 计划仅作历史记录。5.041 的 PDAInterface 是共享代码，不是 Aptus II 蓝牙硬件证据；系列名称也不代表所有型号兼容。
 
+2026-11-14 的新反馈为 Valeo 读图正常、修改设置时超时，具体字段未说明；截图是 App 等待应答超时后主动断开。它不能独立证明物理蓝牙先断、后背拒写或某个软件更稳定。本轮是候选修正，仍待同一设备复测，见 [网络反馈核查](valeo-connection-research.md)。
+
 经典 Aptus **4.701** 已作为独立主证据复核，含 Aptus 22 模型与 9 类 PDA 命令，见 [固件蓝牙调查](firmware-bluetooth-survey.md)。该镜像不是 Aptus 22 专用可刷包，不推定用户实际安装版本。5.041 配置只在设备 Sync 返回对应结构时使用。
 
 ## 从“后背”页设置拍摄参数
 
 连接后打开底栏 **“后背 / Back”** 页，刷新 Sync，检查当前配置和设备给出的选项。控件依后背实际方言、完整配置和允许值开放；没有某个控件不等于同系列所有固件都不支持。不要把 ISO 选项列表第一项当成当前值，也不要按其他型号的档位猜测输入。
 
-- **legacy 方言：** 当前 ISO 位于与 `DefaultShootSetup` 匹配的完整 `ShootSetup` 中。可选择后背已有配置，或编辑当前配置。只改变指定字段，保留其余配置原值后完整提交；这不是 `SetCameraParam ISO="…"` 的通用直接写法。
+- **WiView legacy：** 当前 ISO 位于与 `DefaultShootSetup` 匹配的完整 `ShootSetup` 中。可选择已有配置或编辑当前项，只改变指定字段并保留其余原值；它不是通用独立 ISO 写法。DP-67 的较小格式见下节。
 - **5.041 方言：** 识别到对应 `Sync.CameraSettings` 后，可独立写 ISO、Orientation、CameraType、SensorCrop、FileCompression、Prefix 和 ShootingFolder。SensorCrop 只接受设备下发的纯名称列表，压缩只接受设备下发的 `None` / `Lossless`，不混用 legacy 的 Nearly Lossless。
 - ISO 档位来自设备，不硬编码。写入前重新读取当前状态，防止用较早的整份配置覆盖后背上的新改动；写入后再次 Sync，核对整份预期配置、未改字段和必要的全局值。只看到 ISO 变化不能代替完整核对。
 - 缺少唯一完整配置、允许项不明确、字符无法安全编码或回读不一致时，停止或报告未确认，不用默认值补齐缺失字段。
 
-legacy 完整配置的本轮范围包括 ISO、画质、取景框、色调、Light、锐化、输入 / 输出 ICC、机身类型、ICCFlag、文件名前缀、拍摄目录、普通 / Nearly Lossless 压缩及 NLCompression、方向和 Color。Light 是设备提供的光源 / 白平衡项，不是任意 Kelvin / tint 数字；已有配置选择也不是恢复 FactorySettings。
+WiView legacy 完整配置包括 ISO、画质、取景框、色调、Light、锐化、输入 / 输出 ICC、机身类型、ICCFlag、文件名前缀、拍摄目录、普通 / Nearly Lossless 压缩及 NLCompression、方向和 Color；此列表不作为 DP-67 的字段列表。Light 使用设备光源选项，不能任填 Kelvin / tint；选择已有配置不是恢复 FactorySettings。
 
 5.041 独立 Prefix 编辑最多 23 个 UTF-16 代码单元，且新值的 UTF-8 字节长度不能超过当前已知前缀；这是保守实现限制，不是原厂硬件长度规格。拍摄目录须存在，不会用设置目录的操作隐式创建目录。
+
+## 选择 DP-67／WiView 兼容路径
+
+断开后，在设置的 **“拍摄配置兼容模式”** 选择：
+
+| 选项 | 行为 |
+| --- | --- |
+| 自动（AUTO） | 蓝牙名称含 Valeo，且 Sync 下发 shootsetup 时启用 DP-67；否则保留 WiView 路径 |
+| WiView / Aptus（WIVIEW） | 显式使用 WiView 拍摄配置路径；5.041 独立设置仍须实际 Sync 结构支持 |
+| DP-67 / Valeo（DP67） | 显式使用 DP-67 小字段集；适合名称已被改过而 AUTO 未匹配的后背，缺完整配置仍拒写 |
+
+此项改变拍摄配置写入格式，不更改蓝牙配对、SPP 服务或后背硬件，也不修改 CEVersion。AUTO 是可复核的软件选择规则，不是已验证的全型号识别。DP-67 刷新控制页只请求 Sync 与 CurrentTime，不自动追加其他 getter；需要研究的读取可在实验室显式发送。
+
+DP-67 完整提交的 **12 个核心字段**为 SetupName、ShootingFolder、ISO、ImageQuality、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、CameraType、ICCFlag。只有当前配置已提供 Prefix 时才保留该字段，不为缺少的字段造空值。使用后背允许项，保留未编辑的现有值；配置不完整、状态已变或值不能安全编码时停止写入。
+
+**DP-67 不附带 WiView 的 FileCompression / NLCompression、Orientation 或 Color，拍摄配置面板隐藏这些写字段。** 它们仍可由用户在实验室明确探测，不等于本轮已验证支持。
+
+编辑原预设会提交到 `原名.1` 修改槽；沿用原 DP-67 的名称判定，名称已包含 `.1` 时保留现有修改槽。确认框会显示将写入的槽位，并提示同名槽位已存在时会被更新。提交后必须读回目标值、新 active 名称及原预设未被改写；不把修改槽更新称为备份或可自动撤销。
+
+选择原预设只发 DefaultShootSetup；选择已有 `.1` 修改配置则发完整 DP-67 CSV。预同步、设置与回读作为一整个操作排队，自动 GetImage 不插入其中；通知 Ack 仍可及时发送。原版 DP-67 的 12 秒×3 重发策略没有照搬，本应用写入不自动重试，超时仍断流。静态依据与包来源见 [DP-67 分析](dp67-analysis.md)。
 
 ## 图像处理配置
 
@@ -90,7 +116,7 @@ ImageSettings 与 CameraSettings 分开，ISO 不属于图像处理配置。只�
 
 ## 后背目录与照片管理
 
-0.3.0 的文件操作范围是新建目录、删除空目录、目录改名、删除照片、后背内部复制 / 移动。不是创建任意文件，也不是把 MOS 原片传到手机。
+0.3.1 的文件操作范围是新建目录、删除空目录、目录改名、删除照片、后背内部复制 / 移动。不是创建任意文件，也不是把 MOS 原片传到手机。
 
 1. 刷新目录，选择具体后背路径；复制 / 移动还需选择后背上的目标目录。
 2. 确认源、目标和操作类型。已有目标不得被静默覆盖，非空目录不作为空目录删除。
@@ -168,6 +194,10 @@ Brightness、ResetCounter、PIN、FactorySettings、格式化与 recovery 的模
 配对失效或 PIN 错误时，在 Android 蓝牙设置忘记旧配对并重配，同时确认没有其他客户端占用。仅在旧固件需要时，断开后尝试不安全 RFCOMM；该选项不能保证绕过 Android 的链路要求。
 
 连接等待约 35 秒，普通指令约 20 秒，图像约 60 秒；这些是主机配置，不是后背实测规格。超时关闭会话后需手动重连，避免迟到回复与下一张照片错配。
+
+本轮超时诊断摘要会指出未获回复的请求 tag 和属性名，不含属性值；结合阶段日志区分预同步、设置 Ack 或回读。它比通用“断开”提示更具体，仍不能单独判断后背没发回复、解析失败还是更早的物理失联。
+
+自动 CameraShootSetupChangeNotification 刷新现在保留最近手动操作的 error / notice，避免后台 Sync 擦掉成功或回读不一致结果；新手动操作才清除旧提示。这修正的是 App 显示／验证结果被覆盖的问题，不是已证实的后背掉线根因。
 
 设置中可查看 / 导出日志。应用不记录系统配对 PIN，日志仍可能包含路径、相机属性和用户元数据，分享前检查。问题报告请附版本、手机系统、准确后背型号 / 固件、步骤与脱敏日志；不要公开签名材料或私人照片。
 

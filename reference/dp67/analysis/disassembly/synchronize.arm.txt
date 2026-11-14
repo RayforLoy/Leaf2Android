@@ -1,0 +1,111 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+00026764 [file 00015b64] push      {r4, r5, r6, r7, r8, fp, lr}
+00026768 [file 00015b68] sub       sp, sp, #0x30
+0002676c [file 00015b6c] ldr       r5, [pc, #0x1a4]
+00026770 [file 00015b70] mov       r4, r0
+00026774 [file 00015b74] ldr       r8, [pc, #0x198] ; 'CProtocolLayer::Synchronize'
+00026778 [file 00015b78] mov       r6, r1
+0002677c [file 00015b7c] ldr       r0, [r5]
+00026780 [file 00015b80] cmp       r0, #0
+00026784 [file 00015b84] beq       #0x267b0
+00026788 [file 00015b88] ldr       r0, [pc, #0x180] ; '- enter'
+0002678c [file 00015b8c] mov       r2, #0x6b0
+00026790 [file 00015b90] ldr       r1, [pc, #0x174] ; 'ProtocolLayer.cpp'
+00026794 [file 00015b94] mov       r3, r8
+00026798 [file 00015b98] str       r0, [sp]
+0002679c [file 00015b9c] orr       r2, r2, #0xc
+000267a0 [file 00015ba0] ldr       fp, [r5]
+000267a4 [file 00015ba4] mov       r0, #3
+000267a8 [file 00015ba8] mov       lr, pc
+000267ac [file 00015bac] mov       pc, fp
+000267b0 [file 00015bb0] add       r7, r4, #0x18
+000267b4 [file 00015bb4] mov       r0, r7
+000267b8 [file 00015bb8] bl        #0x7c99c
+000267bc [file 00015bbc] ldr       r0, [r4]
+000267c0 [file 00015bc0] ldr       r3, [r0]
+000267c4 [file 00015bc4] ldr       r3, [r3, #0x28]
+000267c8 [file 00015bc8] mov       lr, pc
+000267cc [file 00015bcc] mov       pc, r3
+000267d0 [file 00015bd0] mov       r3, #0
+000267d4 [file 00015bd4] add       r0, sp, #0x1c
+000267d8 [file 00015bd8] str       r3, [sp, #0x14]
+000267dc [file 00015bdc] bl        #0x1dff8
+000267e0 [file 00015be0] add       r3, sp, #0x14
+000267e4 [file 00015be4] ldr       r1, [pc, #0x11c] ; 'ReSyncRequest'
+000267e8 [file 00015be8] str       r3, [sp, #0xc]
+000267ec [file 00015bec] mov       r3, #0xfa0
+000267f0 [file 00015bf0] str       r3, [sp, #8]
+000267f4 [file 00015bf4] add       r3, sp, #0x1c
+000267f8 [file 00015bf8] str       r3, [sp, #4]
+000267fc [file 00015bfc] mov       r3, #0xa
+00026800 [file 00015c00] str       r3, [sp]
+00026804 [file 00015c04] mov       r2, #0
+00026808 [file 00015c08] mov       r3, #0
+0002680c [file 00015c0c] strb      r6, [sp, #0x10]
+00026810 [file 00015c10] mov       r0, r4
+00026814 [file 00015c14] bl        #0x2878c
+00026818 [file 00015c18] mov       r6, r0
+0002681c [file 00015c1c] ands      r4, r6, #0xff
+00026820 [file 00015c20] bne       #0x26858
+00026824 [file 00015c24] ldr       r0, [r5]
+00026828 [file 00015c28] cmp       r0, #0
+0002682c [file 00015c2c] beq       #0x26894
+00026830 [file 00015c30] ldr       r0, [pc, #0xcc] ; 'ExecuteCommandTransaction failed'
+00026834 [file 00015c34] mov       r2, #0x6c0
+00026838 [file 00015c38] ldr       r3, [pc, #0xc0] ; 'CProtocolLayer::Synchronize'
+0002683c [file 00015c3c] orr       r2, r2, #8
+00026840 [file 00015c40] str       r0, [sp]
+00026844 [file 00015c44] mov       r0, #1
+00026848 [file 00015c48] ldr       r1, [pc, #0xac] ; 'ProtocolLayer.cpp'
+0002684c [file 00015c4c] ldr       fp, [r5]
+00026850 [file 00015c50] mov       lr, pc
+00026854 [file 00015c54] mov       pc, fp
+00026858 [file 00015c58] ldr       r0, [r5]
+0002685c [file 00015c5c] cmp       r0, #0
+00026860 [file 00015c60] beq       #0x26894
+00026864 [file 00015c64] cmp       r4, #0
+00026868 [file 00015c68] ldr       r3, [pc, #0x88] ; 'CProtocolLayer::Synchronize returned:'
+0002686c [file 00015c6c] ldrne     r0, [pc, #0x80] ; 'true'
+00026870 [file 00015c70] mov       r2, #0x6c0
+00026874 [file 00015c74] ldreq     r0, [pc, #0x74] ; 'false'
+00026878 [file 00015c78] orr       r2, r2, #0xb
+0002687c [file 00015c7c] ldr       r1, [pc, #0x68] ; 'ProtocolLayer.cpp'
+00026880 [file 00015c80] str       r0, [sp]
+00026884 [file 00015c84] mov       r0, #3
+00026888 [file 00015c88] ldr       fp, [r5]
+0002688c [file 00015c8c] mov       lr, pc
+00026890 [file 00015c90] mov       pc, fp
+00026894 [file 00015c94] add       r0, sp, #0x1c
+00026898 [file 00015c98] bl        #0x1e014
+0002689c [file 00015c9c] ldr       r0, [sp, #0x14]
+000268a0 [file 00015ca0] bl        #0x7d71c
+000268a4 [file 00015ca4] mov       r0, r7
+000268a8 [file 00015ca8] bl        #0x7c990
+000268ac [file 00015cac] ldr       r0, [r5]
+000268b0 [file 00015cb0] cmp       r0, #0
+000268b4 [file 00015cb4] beq       #0x268dc
+000268b8 [file 00015cb8] ldr       r0, [pc, #0x28] ; '- leave'
+000268bc [file 00015cbc] mov       r3, r8
+000268c0 [file 00015cc0] ldr       fp, [r5]
+000268c4 [file 00015cc4] mov       r2, #0
+000268c8 [file 00015cc8] str       r0, [sp]
+000268cc [file 00015ccc] mov       r1, #0
+000268d0 [file 00015cd0] mov       r0, #3
+000268d4 [file 00015cd4] mov       lr, pc
+000268d8 [file 00015cd8] mov       pc, fp
+000268dc [file 00015cdc] mov       r0, r6
+000268e0 [file 00015ce0] add       sp, sp, #0x30
+000268e4 [file 00015ce4] pop       {r4, r5, r6, r7, r8, fp, pc}
+000268e8 [file 00015ce8] andeq     lr, r8, r0, lsl #22
+000268ec [file 00015cec] andeq     r7, sb, r8, asr #27
+000268f0 [file 00015cf0] strheq    r7, [sb], -ip
+000268f4 [file 00015cf4] strheq    r7, [sb], -r0
+000268f8 [file 00015cf8] andeq     r7, sb, r4, ror #26
+000268fc [file 00015cfc] andeq     r7, sb, r0, asr #26
+00026900 [file 00015d00] andeq     r7, sb, r8, lsl #26
+00026904 [file 00015d04] andeq     r7, sb, r4, asr #25
+00026908 [file 00015d08] strheq    r7, [sb], -r4
+0002690c [file 00015d0c] muleq     sb, r0, ip
+00026910 [file 00015d10] andeq     lr, r8, r0, lsl fp
+00026914 [file 00015d14] andeq     r7, sb, r8, asr ip
+00026918 [file 00015d18] andeq     lr, r8, r4, ror #23

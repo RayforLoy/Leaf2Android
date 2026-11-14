@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-11",
-  "app_version": "0.3.0",
-  "development_basis": "WiView 1.0.2/1.0.3 plus classic Aptus 4.701 and shared 5.041 static firmware evidence; user-reported Valeo 22Wi/Aptus 22 connection and photo reading. Aptus II is not a Bluetooth hardware target.",
+  "date": "2026-11-14",
+  "app_version": "0.3.1",
+  "development_basis": "WiView 1.0.2/1.0.3, supplied DP-67 1.2.1.2 and classic Aptus 4.701/shared 5.041 static evidence. User reports Valeo settings time out while photo reading works. DP-67 compatibility changes await physical verification; Aptus II has no Bluetooth hardware.",
   "offline_unit_tests": 25,
   "offline_unit_tests_passed": 25,
   "kotlin_protocol_tests": {
-    "tests": 71,
+    "tests": 78,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
@@ -30,6 +30,12 @@
       "com.leaf2android.protocol.CommandsTest.exactEvidenceBasedCommands",
       "com.leaf2android.protocol.CommandsTest.cannotSilentlyCorruptUnmappableText",
       "com.leaf2android.protocol.CommandsTest.unsafeAttributeInputRejected",
+      "com.leaf2android.protocol.Dp67ControlsTest.selectingAPresetAndSelectingAModifiedSetupUseDifferentCommands",
+      "com.leaf2android.protocol.Dp67ControlsTest.modifiedNamesAndWhiteBalanceCannotInjectAnotherField",
+      "com.leaf2android.protocol.Dp67ControlsTest.unsupportedFieldsAndIncompleteOldSetupsFailBeforeWriting",
+      "com.leaf2android.protocol.Dp67ControlsTest.editingAPresetCreatesItsModifiedSlotAndSendsOnlyDp67Fields",
+      "com.leaf2android.protocol.Dp67ControlsTest.aTwelveFieldSetupNeedsNoInventedPrefixColorOrCompression",
+      "com.leaf2android.protocol.Dp67ControlsTest.existingModifiedNamesFollowTheOriginalContainsDotOneRule",
       "com.leaf2android.protocol.FramingTest.sizeLimitsAndProgress",
       "com.leaf2android.protocol.FramingTest.malformedAndHugeAttachmentLengths",
       "com.leaf2android.protocol.FramingTest.coalescedControlsAndZeroAttachment",
@@ -66,6 +72,7 @@
       "com.leaf2android.protocol.LabExperimentsTest.xmpTemplatesKeepTheSuppliedPacketAndDoNotSilentlyRewriteFlags",
       "com.leaf2android.protocol.SessionTest.timeoutClosesSessionAndPreventsLateReplyReuse",
       "com.leaf2android.protocol.SessionTest.truncatedImageFailsPendingRequest",
+      "com.leaf2android.protocol.SessionTest.timeoutIdentifiesTheUnansweredSettingWithoutRevealingItsValue",
       "com.leaf2android.protocol.SessionTest.commandsAreSerializedEvenWhenCalledConcurrently",
       "com.leaf2android.protocol.SessionTest.twentySyntheticImageResponsesKeepFileAssociation",
       "com.leaf2android.protocol.SessionTest.notificationsDoNotConsumeImageReply",
@@ -84,11 +91,12 @@
     ]
   },
   "android_instrumented_tests": {
-    "tests": 23,
+    "tests": 28,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "cases": [
+      "com.leaf2android.BackControlsSessionTest.captureNotificationAcknowledgesImmediatelyWithoutInterruptingIsoTransaction",
       "com.leaf2android.BackControlsSessionTest.xmpRoundTripsOnAndroidAndKeepsOtherMetadata",
       "com.leaf2android.BackControlsSessionTest.unintendedChangeToAnUntouchedSettingFailsFullReadback",
       "com.leaf2android.BackControlsSessionTest.backProvidedGrayBalanceCanUpdateTheFutureSetupWithoutChangingIso",
@@ -100,7 +108,11 @@
       "com.leaf2android.BackControlsSessionTest.readbackMismatchAndRejectedWriteAreNotReportedAsSuccess",
       "com.leaf2android.BackControlsSessionTest.directIsoDialectUsesCameraSettingsAndReadsBack",
       "com.leaf2android.BackControlsUiTest.laboratoryRequiresAnExplicitSendAndLabelsTheReplyAsUnverified",
+      "com.leaf2android.BackControlsUiTest.valeoAutomaticDialectEditsModifiedSlotAndPreservesItAcrossBothLanguages",
       "com.leaf2android.BackControlsUiTest.isoSelectionAppliesTheCompleteSetupAndSurvivesLanguageChanges",
+      "com.leaf2android.Dp67ControlsSessionTest.aLostSettingIsNotConfirmedAndTheSessionCanStillReadStatus",
+      "com.leaf2android.Dp67ControlsSessionTest.valeoAutoUsesTheModifiedDp67SlotAndPreservesTheFactoryPreset",
+      "com.leaf2android.Dp67ControlsSessionTest.anExistingModifiedSlotIsUpdatedAndAnExistingPresetCanBeSelected",
       "com.leaf2android.LaboratorySessionTest.pinBytesAreSentButNeverStoredInHeadersHexOrTransportLogs",
       "com.leaf2android.LaboratorySessionTest.laboratoryPausesAutomaticCaptureRequestsAndCanLeaveWithoutSending",
       "com.leaf2android.LaboratorySessionTest.rejectedAndUnknownRepliesAreEvidenceRatherThanSuccessOrForcedSessionFailure",
@@ -130,7 +142,7 @@
   "release_debuggable": false,
   "lint": {
     "errors": 0,
-    "warnings": 17,
+    "warnings": 18,
     "categories": [
       "AppBundleLocaleChanges",
       "NewerVersionAvailable",
@@ -143,7 +155,7 @@
   },
   "release_lint": {
     "errors": 0,
-    "warnings": 17,
+    "warnings": 18,
     "categories": [
       "AppBundleLocaleChanges",
       "NewerVersionAvailable",
@@ -155,9 +167,9 @@
     ]
   },
   "apk_generated": true,
-  "apk": "dist\\Leaf2Android-0.3.0.apk",
-  "apk_bytes": 3499160,
-  "apk_sha256": "3089764328f8664f887314ee143a43c82fc79a1a43367fc7c54e87580ac36fbd",
+  "apk": "dist\\Leaf2Android-0.3.1.apk",
+  "apk_bytes": 3519856,
+  "apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7",
   "apk_signature_verified": true,
   "apk_zip_16k_alignment": true,
   "elf_16k_alignment_verified": true,
@@ -166,6 +178,7 @@
     "1.0.2",
     "1.0.3"
   ],
+  "dp67_sample_analyzed": "1.2.1.2",
   "fixture_origin": "synthetic",
   "firmware_samples_analyzed": [
     "classic Aptus 4.701 (includes Aptus 22 model code)",
@@ -238,7 +251,7 @@
     ]
   },
   "ui_screenshots_are_emulator_window_size_simulations": true,
-  "ui_screenshot_build": "signed minified release",
+  "ui_screenshot_build": "historical signed minified v0.3.0 release; unchanged regular/offline screenshots",
   "ui_screenshot_apk_sha256": "3089764328f8664f887314ee143a43c82fc79a1a43367fc7c54e87580ac36fbd",
   "physical_device_tests_performed": false,
   "physical_folding_and_one_ui_verified": false,
@@ -262,6 +275,36 @@
       "new_control_writes_verified": false
     }
   ],
+  "user_reported_setting_issue": {
+    "date": "2026-11-14",
+    "model_name_on_screenshot": "Leaf Valeo Wi",
+    "photo_reading": "works",
+    "changing_settings": "disconnects",
+    "screenshot_error": "app response timeout closes session",
+    "specific_setting": null,
+    "raw_session_log_available": false,
+    "root_cause_confirmed": false,
+    "fix_hardware_verified": false
+  },
+  "dp67_compatibility": {
+    "implemented": true,
+    "automatic_name_contains": "Valeo",
+    "requires_legacy_shootsetup_in_auto": true,
+    "manual_override": [
+      "AUTO",
+      "WIVIEW",
+      "DP67"
+    ],
+    "core_fields": 12,
+    "prefix_only_when_provided_in_setup": true,
+    "modified_slot": ".1",
+    "factory_preset_preservation_checked": true,
+    "whole_operation_serialization": true,
+    "notifications_ack_bypasses_operation_lock": true,
+    "background_refresh_preserves_result": true,
+    "automatic_write_retries": false,
+    "physical_validation": false
+  },
   "complete_startup_handshake_verified": false,
   "target_back_firmware": null,
   "target_phone": "Galaxy Z Fold7 / Android 16 / One UI 8.5 (not attached)",
@@ -269,19 +312,58 @@
   "continuous_live_view_implemented": false,
   "mechanical_shutter_remote_release": "Hardware unsupported in current setup",
   "gate": "user_reported_basic_sessions; new_control_effects_and_laboratory_hypotheses_require_device_validation",
-  "matching_bilingual_resource_keys": 353,
+  "matching_bilingual_resource_keys": 360,
   "control_ui_captures": {
     "back-controls-en": {
       "file": "docs/screenshots/back-controls-en.png",
-      "build": "debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
     },
     "back-controls-zh": {
       "file": "docs/screenshots/back-controls-zh.png",
-      "build": "debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
     },
     "laboratory-en": {
       "file": "docs/screenshots/laboratory-en.png",
-      "build": "debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "valeo-dp67-en": {
+      "file": "docs/screenshots/valeo-dp67-en.png",
+      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "valeo-dp67-zh": {
+      "file": "docs/screenshots/valeo-dp67-zh.png",
+      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    }
+  },
+  "cache_and_settings_upgrade": {
+    "date": "2026-11-14",
+    "avd": "Leaf2Android_API36",
+    "api": 36,
+    "physical_devices_used": false,
+    "app_data_reset_only_on_owned_avd": true,
+    "old_apk_sha256": "3089764328f8664f887314ee143a43c82fc79a1a43367fc7c54e87580ac36fbd",
+    "new_apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7",
+    "checks": {
+      "legacy_256_upgrades_to_1024": true,
+      "later_256_choice_survives_restart": true,
+      "existing_64_choice_retained": true,
+      "fresh_default_1024": true,
+      "explicit_dp67_persists_across_restart": true,
+      "explicit_dp67_survives_language_change": true
+    }
+  },
+  "current_release_settings_captures": {
+    "settings-cache-en": {
+      "file": "docs/screenshots/settings-cache-en.png",
+      "apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7"
+    },
+    "settings-compatibility-en": {
+      "file": "docs/screenshots/settings-compatibility-en.png",
+      "apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7"
+    },
+    "settings-compatibility-zh": {
+      "file": "docs/screenshots/settings-compatibility-zh.png",
+      "apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7"
     }
   },
   "old_workspace_empty": true

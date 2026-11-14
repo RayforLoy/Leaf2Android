@@ -42,11 +42,13 @@ private fun fieldTitle(field: ShootField): String = tr(when (field) {
 
 @Composable
 internal fun CameraControlsPage(state: SessionState, repo: LeafRepository, shareFile: (File) -> Unit) {
-    val parsed = remember(state.camera) { runCatching { ShootingConfiguration.from(state.camera) } }
+    val settings by repo.settings.collectAsState()
+    val dialect = settings.shootingCompatibility.dialect(state.deviceName, state.camera)
+    val parsed = remember(state.camera, dialect) { runCatching { ShootingConfiguration.from(state.camera, dialect) } }
     val configuration = parsed.getOrNull()
     val active = configuration?.active
-    val direct = remember(state.camera) { runCatching { DirectCameraSettings.from(state.camera) }.getOrNull() }
-    val imageConfiguration = remember(state.camera) { runCatching { ImageSettingsConfiguration.from(state.camera) }.getOrNull() }
+    val direct = remember(state.camera, dialect) { if (dialect == ShootSetupDialect.DP67) null else runCatching { DirectCameraSettings.from(state.camera) }.getOrNull() }
+    val imageConfiguration = remember(state.camera, dialect) { if (dialect == ShootSetupDialect.DP67) null else runCatching { ImageSettingsConfiguration.from(state.camera) }.getOrNull() }
     val activeImage = imageConfiguration?.active
     val enabled = state.connected && !state.controlsBusy
     var changes by rememberSaveable(active?.values) { mutableStateOf(emptyMap<String, String>()) }
@@ -90,7 +92,8 @@ internal fun CameraControlsPage(state: SessionState, repo: LeafRepository, share
             }
             if (active == null && direct == null) Text(tr(R.string.complete_setup_unavailable), style = MaterialTheme.typography.bodySmall)
             parsed.exceptionOrNull()?.let { Text(if (it is ProtocolException) it.messageForLanguage(com.leaf2android.localization.L10n.isChinese) else it.message.orEmpty(), style = MaterialTheme.typography.bodySmall) }
-            if (active != null && active.missingFields.isNotEmpty()) Text(tr(R.string.setup_missing_fields, active.missingFields.joinToString()), style = MaterialTheme.typography.bodySmall)
+            if (dialect == ShootSetupDialect.DP67) Text(tr(R.string.dp67_active_hint), style = MaterialTheme.typography.bodySmall)
+            if (active != null && active.missingFields(dialect).isNotEmpty()) Text(tr(R.string.setup_missing_fields, active.missingFields(dialect).joinToString()), style = MaterialTheme.typography.bodySmall)
         }
         if (direct != null) item {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -108,7 +111,7 @@ internal fun CameraControlsPage(state: SessionState, repo: LeafRepository, share
         if (active != null && configuration != null) {
             item {
                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    ShootField.legacy.filter { it != ShootField.NAME }.forEach { field ->
+                    active.fields(dialect).filter { it != ShootField.NAME }.forEach { field ->
                         if (field == ShootField.NL_COMPRESSION && (edits[ShootField.COMPRESSION] ?: active[ShootField.COMPRESSION]) != "Nearly Lossless") return@forEach
                         val current = edits[field] ?: active[field].orEmpty()
                         val choices = if (field == ShootField.ICC) listOf("0", "1") else configuration.choices[field].orEmpty()
@@ -245,6 +248,10 @@ internal fun CameraControlsPage(state: SessionState, repo: LeafRepository, share
         Column(Modifier.verticalScroll(rememberScrollState())) {
             edits.forEach { (field, value) -> Text("${fieldTitle(field)}: ${active[field].orEmpty()} → $value") }
             Text(tr(R.string.shooting_apply_effect), Modifier.padding(top = 12.dp), style = MaterialTheme.typography.bodySmall)
+            if (dialect == ShootSetupDialect.DP67 && configuration != null) {
+                val target = runCatching { configuration.validateChanges(active, edits).name }.getOrDefault(active.name)
+                Text(tr(R.string.dp67_modified_slot, target), Modifier.padding(top = 8.dp), style = MaterialTheme.typography.bodySmall)
+            }
         }
     }, confirmButton = { TextButton(onClick = { repo.applyShootSetup(active, edits); confirmSetup = false }, enabled = enabled && valid) { Text(tr(R.string.apply_and_read_back)) } }, dismissButton = { TextButton(onClick = { confirmSetup = false }) { Text(tr(R.string.cancel_4d0b4)) } })
     selectedSetup?.let { name -> AlertDialog(onDismissRequest = { selectedSetup = null }, title = { Text(tr(R.string.selecting_shooting_setup)) }, text = { Text(name) },

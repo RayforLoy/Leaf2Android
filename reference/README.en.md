@@ -2,7 +2,9 @@
 
 [简体中文](README.md)
 
-Organized on 2026-11-11. This directory holds original Leaf WiView media, manufacturer guides, acquisition provenance, extracted client components, genuine user-supplied camera-back firmware, and static client/firmware protocol analysis. The Android source is in the project-level `app/` and `protocol/` directories. Synthetic wire fixtures remain in `research/fixtures/`.
+Organized on 2026-11-14. This directory holds original Leaf WiView and DP-67 media, manufacturer guides, provenance, extracted client components, genuine user-supplied camera-back firmware, and static client/firmware protocol analysis. The Android source is in the project-level `app/` and `protocol/` directories. Synthetic wire fixtures remain in `research/fixtures/`.
+
+The new [DP-67 1.2.1 analysis](../docs/dp67-analysis.en.md) retains only the manufacturer's Setup.exe from the user ZIP, its embedded CAB, static extractions and reproducible evidence in [dp67/](dp67/). The complete ZIP containing PDA backups and all four PBF backup contents are excluded from publication. See [provenance.json](dp67/provenance.json); this material remains independent of the six WiView inputs and the back-firmware source lock.
 
 ## Layout and classification
 
@@ -13,6 +15,7 @@ reference/
 ├── inventory.json                 # All reference files, including nested independent inventories
 ├── relocation-manifest.json       # Original/current paths and byte hashes at relocation
 ├── build_inventory.py             # Build or read-only --verify using the Python standard library
+├── dp67/                          # Vendor installer, CAB, extracted files, evidence and independent inventory
 ├── firmware/
 │   ├── README.md / README.en.md    # Firmware origins, versions, classification and reproduction
 │   ├── originals/                 # 89 deduplicated original manufacturer files

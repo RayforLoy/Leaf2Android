@@ -1,0 +1,66 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+00023344 [file 00012744] push      {r4, r5, r6, r7, r8, sb, fp, lr}
+00023348 [file 00012748] sub       sp, sp, #0xc
+0002334c [file 0001274c] ldr       r4, [pc, #0xf0]
+00023350 [file 00012750] mov       r5, r0
+00023354 [file 00012754] ldr       r6, [pc, #0xe4] ; 'CBtManager::SetLinkSupervisionTimeout'
+00023358 [file 00012758] mov       r8, r1
+0002335c [file 0001275c] ldr       r3, [r4]
+00023360 [file 00012760] mov       sb, r2
+00023364 [file 00012764] cmp       r3, #0
+00023368 [file 00012768] beq       #0x23394
+0002336c [file 0001276c] ldr       r0, [pc, #0xc8] ; '- enter'
+00023370 [file 00012770] mov       r2, #0x630
+00023374 [file 00012774] ldr       r1, [pc, #0xbc] ; 'BtManager.cpp'
+00023378 [file 00012778] mov       r3, r6
+0002337c [file 0001277c] str       r0, [sp]
+00023380 [file 00012780] orr       r2, r2, #3
+00023384 [file 00012784] ldr       fp, [r4]
+00023388 [file 00012788] mov       r0, #3
+0002338c [file 0001278c] mov       lr, pc
+00023390 [file 00012790] mov       pc, fp
+00023394 [file 00012794] ldrb      r3, [r5, #0x7c]
+00023398 [file 00012798] mov       r7, #0
+0002339c [file 0001279c] cmp       r3, #0
+000233a0 [file 000127a0] beq       #0x233f8
+000233a4 [file 000127a4] mov       r0, r8
+000233a8 [file 000127a8] bl        #0x432c0
+000233ac [file 000127ac] add       r3, sp, #4
+000233b0 [file 000127b0] ldrb      r2, [r0]
+000233b4 [file 000127b4] mov       r1, sb
+000233b8 [file 000127b8] strb      r2, [r3]
+000233bc [file 000127bc] ldrb      r2, [r0, #1]
+000233c0 [file 000127c0] strb      r2, [r3, #1]
+000233c4 [file 000127c4] ldrb      r2, [r0, #2]
+000233c8 [file 000127c8] strb      r2, [r3, #2]
+000233cc [file 000127cc] ldrb      r2, [r0, #3]
+000233d0 [file 000127d0] strb      r2, [r3, #3]
+000233d4 [file 000127d4] ldrb      r2, [r0, #4]
+000233d8 [file 000127d8] strb      r2, [r3, #4]
+000233dc [file 000127dc] ldrb      r2, [r0, #5]
+000233e0 [file 000127e0] add       r0, sp, #4
+000233e4 [file 000127e4] strb      r2, [r3, #5]
+000233e8 [file 000127e8] ldr       r3, [r5, #0x78]
+000233ec [file 000127ec] mov       lr, pc
+000233f0 [file 000127f0] mov       pc, r3
+000233f4 [file 000127f4] mov       r7, r0
+000233f8 [file 000127f8] ldr       r3, [r4]
+000233fc [file 000127fc] cmp       r3, #0
+00023400 [file 00012800] beq       #0x23428
+00023404 [file 00012804] ldr       r0, [pc, #0x28] ; '- leave'
+00023408 [file 00012808] mov       r3, r6
+0002340c [file 0001280c] ldr       fp, [r4]
+00023410 [file 00012810] mov       r2, #0
+00023414 [file 00012814] str       r0, [sp]
+00023418 [file 00012818] mov       r1, #0
+0002341c [file 0001281c] mov       r0, #3
+00023420 [file 00012820] mov       lr, pc
+00023424 [file 00012824] mov       pc, fp
+00023428 [file 00012828] mov       r0, r7
+0002342c [file 0001282c] add       sp, sp, #0xc
+00023430 [file 00012830] pop       {r4, r5, r6, r7, r8, sb, fp, pc}
+00023434 [file 00012834] andeq     lr, r8, r0, lsl #22
+00023438 [file 00012838] andeq     r5, sb, ip, lsl r6
+0002343c [file 0001283c] andeq     lr, r8, r0, lsl fp
+00023440 [file 00012840] ldrdeq    r5, r6, [sb], -r0
+00023444 [file 00012844] andeq     lr, r8, r4, ror #23

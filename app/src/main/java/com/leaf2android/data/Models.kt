@@ -10,8 +10,17 @@ import com.leaf2android.protocol.ShootField
 import com.leaf2android.protocol.DirectCameraSettings
 import com.leaf2android.protocol.BackPixelProbe
 import com.leaf2android.protocol.BackHistograms
+import com.leaf2android.protocol.ShootSetupDialect
 
 enum class UiStyle { MODERN, PDA }
+enum class ShootingCompatibility {
+    AUTO, WIVIEW, DP67;
+    fun dialect(deviceName: String, camera: Map<String, String>): ShootSetupDialect = when {
+        this == DP67 -> ShootSetupDialect.DP67
+        this == AUTO && deviceName.contains("valeo", true) && camera.keys.any { it.equals("shootsetup", true) } -> ShootSetupDialect.DP67
+        else -> ShootSetupDialect.WIVIEW
+    }
+}
 const val BACK_FAMILY = "Aptus / Valeo"
 
 enum class SessionPhase(private val labelResource: Int) {
@@ -43,11 +52,12 @@ data class LeafSettings(
     val insecure: Boolean = false,
     val autoFollow: Boolean = true,
     val keepAwake: Boolean = true,
-    val cacheMiB: Int = 256,
+    val cacheMiB: Int = 1024,
     val showHistogram: Boolean = false,
     val showHighlights: Boolean = false,
     val showShadows: Boolean = false,
     val attachmentLimitMiB: Int = 16,
+    val shootingCompatibility: ShootingCompatibility = ShootingCompatibility.AUTO,
 )
 
 enum class PhotoSource(private val labelResource: Int) {
@@ -93,6 +103,7 @@ data class SessionState(
     val photos: List<LeafPhoto> = emptyList(),
     val selectedPath: String? = null,
     val camera: Map<String, String> = emptyMap(),
+    val shootingDialect: ShootSetupDialect = ShootSetupDialect.WIVIEW,
     val error: UiText? = null,
     val notice: UiText? = null,
     val previewCount: Int = 0,
@@ -111,5 +122,8 @@ data class SessionState(
     val connected: Boolean get() = phase == SessionPhase.READY
     val active: Boolean get() = phase in setOf(SessionPhase.CONNECTING, SessionPhase.SYNCING, SessionPhase.READY)
     val selected: LeafPhoto? get() = photos.firstOrNull { it.path == selectedPath }
-    val currentIso: String? get() = runCatching { DirectCameraSettings.from(camera)?.iso ?: ShootingConfiguration.from(camera).active?.get(ShootField.ISO) }.getOrNull()
+    val currentIso: String? get() = runCatching {
+        if (shootingDialect == ShootSetupDialect.DP67) ShootingConfiguration.from(camera, shootingDialect).active?.get(ShootField.ISO)
+        else DirectCameraSettings.from(camera)?.iso ?: ShootingConfiguration.from(camera).active?.get(ShootField.ISO)
+    }.getOrNull()
 }

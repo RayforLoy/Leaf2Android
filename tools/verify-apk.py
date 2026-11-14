@@ -39,7 +39,7 @@ def main() -> None:
     parser.add_argument("apk", type=Path)
     parser.add_argument("--sdk", type=Path, default=Path(os.environ["LOCALAPPDATA"]) / "Android/Sdk")
     parser.add_argument("--output", type=Path, default=Path("research/reports/apk-verification.json"))
-    parser.add_argument("--version", default="0.3.0")
+    parser.add_argument("--version", default="0.3.1")
     parser.add_argument("--release", action="store_true", help="Require a non-debuggable APK signed with a release certificate")
     args = parser.parse_args()
     tools = args.sdk / "build-tools/36.0.0"

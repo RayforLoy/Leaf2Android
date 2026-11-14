@@ -2,7 +2,9 @@
 
 [English](README.en.md)
 
-最后整理：2026-11-11。这里集中保存原版 Leaf WiView 安装介质、原厂说明、下载来源记录、安装包提取结果、用户提供的真实后背固件，以及客户端与固件的静态协议研究。Android 应用源码位于项目根目录的 `app/`、`protocol/`；人工通信夹具位于 `research/fixtures/`。
+最后整理：2026-11-14。这里集中保存原版 Leaf WiView 与 DP-67 安装介质、原厂说明、来源记录、安装包提取结果、用户提供的真实后背固件，以及客户端与固件的静态协议研究。Android 应用源码位于项目根目录的 `app/`、`protocol/`；人工通信夹具位于 `research/fixtures/`。
+
+本轮新增 [DP-67 1.2.1 包分析](../docs/dp67-analysis.md)。[dp67/](dp67/) 只保留用户 ZIP 中的厂商 Setup.exe、内嵌 CAB、静态提取和可重现证据；不保留含 PDA 备份的完整 ZIP，也不发布四份 PBF 备份内容。来源及哈希见 [provenance.json](dp67/provenance.json)，与六个 WiView 原始输入和后背固件各自独立。
 
 ## 目录与资料性质
 
@@ -13,6 +15,7 @@ reference/
 ├── inventory.json                 # 全部资料清单，包含嵌套的独立 inventory
 ├── relocation-manifest.json       # 整理前后路径及搬移时的原始字节校验
 ├── build_inventory.py             # 重建或 --verify 只读校验，Python 标准库即可运行
+├── dp67/                          # 厂商安装器、CAB、静态提取、证据、来源及独立清单
 ├── firmware/
 │   ├── README.md / README.en.md    # 固件来源、版本、分类与重现说明
 │   ├── originals/                 # 去重后的 89 个原始厂商文件

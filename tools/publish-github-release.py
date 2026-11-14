@@ -83,7 +83,7 @@ def render_notes(path: Path, repository: str, tag: str) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", default="RayforLoy/Leaf2Android")
-    parser.add_argument("--tag", default="v0.3.0")
+    parser.add_argument("--tag", default="v0.3.1")
     parser.add_argument("--commit", required=True)
     parser.add_argument("--notes", type=Path, required=True)
     parser.add_argument("--asset", type=Path, action="append", required=True)
@@ -111,7 +111,7 @@ def main() -> None:
         else:
             release = github.call(github.base + "/releases", "POST", {
                 "tag_name": args.tag, "target_commitish": args.commit,
-                "name": f"Leaf2Android {args.tag} — Back controls and laboratory / 后背控制与实验室",
+                "name": f"Leaf2Android {args.tag} — Valeo DP-67 compatibility / Valeo DP-67 兼容",
                 "body": render_notes(args.notes, args.repo, args.tag) + f"\n\nSource commit: `{args.commit}`\n",
                 "draft": True, "prerelease": True,
             })

@@ -8,6 +8,10 @@ Version 0.3.0 cross-checks the classic shared 4.701 firmware containing an Aptus
 
 ## Evidence locations
 
+2026-11-14 addition: the supplied DP-67 installer was independently inspected; its main PE version is 1.2.1.2. Its ShootSetup writer emits 12 core fields and conditional Prefix, reuses/creates a `.1` modified slot for preset edits, and does not append global orientation/color. It is separate from WiView's 16/17-field format. See the [DP-67 analysis](dp67-analysis.en.md) for pinned samples, exact addresses and reproduction. Version 0.3.1 implements a separate compatibility dialect, automatically selected for Bluetooth names containing Valeo when legacy ShootSetup is supplied, with a manual override. Other known fields remain available for readback comparison but are not sent in this DP-67 setup.
+
+Whole read/write/readback operations now exclude automatic preview transfers, while notification Ack bypasses that lock. Background refresh preserves the preceding result or error. Timeouts still close the old stream, identify the unanswered command and attribute names, and never automatically repeat a write. Synthetic peer checks do not prove that the real setting-timeout cause is fixed; the [public-feedback review](valeo-connection-research.en.md) found no controlled same-device DP-67/WiView stability comparison.
+
 Addresses below are preferred virtual addresses in the sample PE, not file offsets or Android addresses. The original main-program member is `00LeafCE.001`.
 
 | Behavior | WiView 1.0.2 | WiView 1.0.3 |

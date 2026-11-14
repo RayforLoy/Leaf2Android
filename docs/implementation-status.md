@@ -2,7 +2,7 @@
 
 [English](implementation-status.en.md) · [项目首页](../README.md) · [完整缺口对照](feature-gap-matrix.md)
 
-更新：2026-11-11。**0.3.0 预发布**；应用 ID `com.leaf2android`。下列新功能已接入代码，硬件效果尚待验证；最终构建和测试结果以本轮完成记录为准。
+更新：2026-11-14。**0.3.1（versionCode 4）实验性预发布**；应用 ID `com.leaf2android`。下列变更已接入代码，真实 Valeo 设置超时的候选修正仍待设备复测；最终构建和测试以本轮报告为准。
 
 ## 范围与证据
 
@@ -22,6 +22,12 @@
 
 “用户报告正常”是型号级使用记录，不冒充维护者独立复测或完整验收。报告没有确认至少 20 张连拍、照片对应关系、目录细项、ISO 等参数读取 / 写入、后背标记、备注回读、锁屏 / 后台、原片或实时取景。也没有把测试手机认定为原先计划的 Z Fold7，更不能推定 Aptus II 5 或整个 Aptus / Valeo 系列已通过。
 
+### 2026-11-14：设置超时事件
+
+用户补充 Valeo 读图正常、修改设置才断开，未说明具体字段；截图是 App 等待应答超时后主动关闭会话。缺 Ack、解析 / 匹配、自动取图互插或更早的物理失联尚未由截图区分。0.3.1 增加完整操作互斥、请求摘要和独立 DP-67 写入路径，**不将这些变更写成已解决真实设备问题**。
+
+离线测试另发现 CameraShootSetupChangeNotification 引发的后台 Sync 会清掉用户刚得到的成功或回读不一致结果。代码已改为自动刷新保留 error / notice，新手动操作才清除；这是 App 显示／验证结果被覆盖的问题，不是已证实的后背断线根因。网络证据与未确认项见 [独立调查](valeo-connection-research.md)。
+
 ## 功能表
 
 以下记录已有行为、本轮按证据接入的标准功能及实验室入口。新增参数、图像处理、标记、存储和会话控制尚未由用户在 Valeo 22Wi 或 Aptus 22 上验证。实验室提供候选探测和证据记录，不把未解释的回复认定为功能生效。
@@ -30,12 +36,15 @@
 | --- | --- | --- |
 | 发现、配对、SPP | 公开 API，安全与可选不安全 RFCOMM | Valeo 22Wi、Aptus 22 连接已有用户成功回报；PIN、安全模式、手机 / 系统和固件明细待补 |
 | 同步与目录 | RequestSync → CurrentTime → dir；失败不报就绪 | 两型号可读图已有用户回报；完整握手、目录字段与日期语法未单独验收 |
-| legacy 拍摄配置 / ISO | Sync 下发完整 ShootSetup 和选项；匹配当前配置，保留未编辑值后全量提交 | 不硬编码 ISO；写前重读、写后 Sync 回读；新增写入未实机验证 |
-| 已有拍摄配置选择 | 选择后背下发的 DefaultShootSetup 名称 | 不等于 FactorySettings，不猜不存在的配置；需回读当前项 |
+| 拍摄兼容模式 | 离线选择 AUTO / WIVIEW / DP67；AUTO 要求蓝牙名含 Valeo 且 Sync 有 shootsetup | 只改变拍摄配置格式，不改配对 / CEVersion；改名设备可显式选模式，非硬件能力判定 |
+| WiView legacy / ISO | 完整 ShootSetup 和设备选项；保留未编辑值后全量提交 | 不把其压缩、方向、Color 扩展带入 DP-67；写前 / 后 Sync，效果待测 |
+| DP-67 / ISO | 12 核心字段，当前已有 Prefix 才保留；原预设编辑至 .1 修改槽 | 不写压缩、Orientation、Color；确认槽位更新，核对 new active、目标值与原预设未变；真实效果待测 |
+| 已有拍摄配置选择 | DP-67 原预设只 DefaultShootSetup；已有修改配置提交完整 CSV | 不等于 FactorySettings；沿用 contains(".1") 名称判定，需回读当前项 |
+| 整操作互斥与提示 | operationLock 覆盖预 Sync、set、回读；自动 GetImage 不插入，通知 Ack 绕过锁；自动刷新保留操作结果 | 不自动重试写入；超时仍断流，新摘要仅列 tag / 属性名；真实 Valeo 超时仍待复测 |
 | 5.041 相机设置 | 按已识别的 Sync.CameraSettings 独立写 ISO、Orientation、CameraType、SensorCrop、FileCompression、Prefix、ShootingFolder | 值由设备下发；SensorCrop 仅纯名称列表，压缩仅 None / Lossless，前缀限制见下文；全量回读，硬件效果待验证 |
 | 5.041 图像处理配置 | 完整 ImageSettings 编辑、已有 ActiveImageSettings 选择；保留未改字段 | 包含 Grain / MoireReduction / Saturation，仅设备 Sync 下发允许项时可编辑；写前重读、写后全量核对；效果待验证 |
 | 拍后自动显示 | 拍摄通知、文件名核对、附件长度、串行队列 | 至少 20 张真实拍摄对应关系待测 |
-| JPEG 缓存与回放 | 原字节、SHA-256、64 / 256 / 1024 MiB 配额 | 两型号读取照片已有用户回报；原字节比对、实际分辨率、速度和稳定性待测 |
+| JPEG 缓存与回放 | 原字节、SHA-256，默认 1024 MiB，可选 64 / 256 / 1024 | 旧 256 首次迁 1024，旧 64 保留，之后手选不再重置；实际字节、分辨率与速度待测 |
 | 放大与曝光检查 | 双指 / 双击、JPEG 直方图及明暗警示 | 实拍细节范围待核对；不使用 RAW 像素 |
 | 图像信息与 XMP | GetPictureParams 属性、严格 Base64 / UTF-8 XMP 解码，保留无关字段；标记仅改 Flags 第三位 | 无 xmp_tag 头属性不合成空包；损坏或不安全 XMP 拒绝改写；实际属性、单位待测 |
 | 星标、本机备注 | 本机持久保存，明确标为本机操作 | 不依赖后背 |
@@ -64,9 +73,13 @@
 
 ## 配置与方言边界
 
-legacy ShootSetup 的本轮编辑范围为 ISO、ImageQuality、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、CameraType、ICCFlag、Prefix、ShootingFolder、FileCompression / NLCompression、Orientation 和 Color。允许项优先采用后背下发数据；ICCFlag 等已确认结构值与任意猜测的设备档位不同。读取不到唯一完整当前配置、值无法安全编码或回读不一致时，不能报告写入已确认。
+WiView legacy 的完整 ShootSetup 包括 ISO、ImageQuality、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、CameraType、ICCFlag、Prefix、ShootingFolder、FileCompression / NLCompression、Orientation、Color。DP-67 使用独立字段集：SetupName、ShootingFolder、ISO、ImageQuality、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、CameraType、ICCFlag；Prefix 仅在当前配置存在时保留。缺核心字段或未提供允许值时不补猜测，ICCFlag 仍按已证 0 / 1。
 
-legacy 的 ISO 在完整 ShootSetup 内；5.041 Sync.CameraSettings 的直接设置由独立服务端证据支持。不能只因字符串中存在 ISO 就把两种方言混用，也不能用列表第一项代替当前 ISO。提交前重新 Sync，提交后核对整份预期配置、所有未改字段及必要的全局方向 / Color，不能只看到 ISO 改变就报成功。
+legacy ISO 位于完整配置；5.041 CameraSettings 独立路径仅在对应结构存在且当前非 DP-67 时使用。DP-67 不附 WiView 压缩和全局 Orientation / Color，也不改 CEVersion；标准面板隐藏这些字段，实验室仍能手动探测。DP-67 控制刷新只发 Sync + CurrentTime，避免自动追加尚不明确的 getter。
+
+编辑原 DP-67 预设时，名称不含 `.1` 就克隆至 `原名.1`，含 `.1` 则保留现有修改槽；确认界面显示目的槽位和已有则更新。提交前刷新并核对当前配置，提交后确认新 active、应写值、可见未改字段／全局值及原预设保持。不复制原程序的 12 秒×3 重发；超时保留断流，须手动重连，不自动重试。字段顺序、clone 与包装依据见 [DP-67 静态分析](dp67-analysis.md)。
+
+同一用户操作的预同步、写入和回读共享 operationLock，自动图像队列不能插入；通知 Ack 不等待此锁。该锁管理手机端排队，不承诺锁住后背或其他客户端。超时请求摘要列 tag 与属性名、不列值，以区分写 Ack 和回读等待；它不是物理掉线原因判断。
 
 5.041 的相机设置与 ImageSettings 是两种结构，ISO 不属于 ImageSettings。图像处理配置包括 ImageQuality、Color、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、ICCFlag、Grain、MoireReduction、Saturation；完整结构不齐或没有设备允许值时不猜值。独立 SensorCrop 只接受纯名称列表，不猜复合裁切记录。独立压缩仅采用下发的 None / Lossless，不混入 legacy 的 Nearly Lossless。独立 Prefix 最多 23 个 UTF-16 代码单元，且不增加当前已知前缀的 UTF-8 字节长度；这是实现限制，不宣称是原厂硬件上限。拍摄目录写前核对目录存在。
 
@@ -88,11 +101,13 @@ Gain / UserGain / ManualLens / GetImage FP 等按固件证据等级列为候选�
 
 本轮将 `D:\leaf` 的固件参考资料按内容去重收录 89 份唯一原始文件（约 83.7 MB）和核心重建 / 分析，具体来源、型号、大小、哈希以 `reference/firmware` 清单为准。个人 MOS、校准文件和约 113 MB 安装器不纳入发布资料。收录与静态解析不等于手机刷写支持，也不等于用户两台后背已安装这些固件。
 
+DP-67 用户包只收录原始 Setup.exe、提取 CAB 及研究记录，含私人 PBF 的完整 ZIP 排除；不把安装包分析当成真实后背复测，见 [包分析](dp67-analysis.md)。
+
 ## 离线与模拟器验证
 
 当前测试计数、APK 校验、Lint、签名及对齐结果由 [verification-status.json](../research/reports/verification-status.json) 和 [apk-verification.json](../research/reports/apk-verification.json) 记录。上述用户硬件回报与工具执行的测试属于不同证据类型；不要把用户回报改写成维护者已复测，也不要把旧报告、旧 APK 或旧测试计数当作本次发布结果。
 
-本轮协议与 API 36 模拟器测试覆盖真实界面选择 ISO、确认和完整配置回读、语言切换、Android XMP DOM 冒烟、拒写、回读不一致、未改字段意外重置、ISO 通知不污染候选及部分 move 检测。灰平衡用于后续拍摄的新路径、最终通过项数、Python 研究工具和 release APK 结果以本轮同版本机器报告为准，不预填尚未完成的新计数。
+本轮协议与 API 36 模拟器测试覆盖真实界面选择 ISO、确认和完整配置回读、语言切换、Android XMP DOM 冒烟、拒写、回读不一致、未改字段意外重置、ISO 通知不污染候选及部分 move 检测。Python、协议与 Android 检查均已通过，具体结果见上述同版本机器报告；签名覆盖升级、缓存迁移和显式 DP67 跨重启 / 语言检查见 [cache-upgrade-verification.json](../research/reports/cache-upgrade-verification.json)。这些离线结果不代表真实 Valeo 设置超时已解决。
 
 协议测试包含逐字节拆分、合包、二进制分隔符、重复属性、异常长度、截断、重置、串行请求、通知穿插、超时关闭和错误回复。仓库测试通过模拟传输接收实际可解码的合成 JPEG，检查文件名、尺寸、SHA-256 和缓存字节。界面测试检查风格、语言和状态保持。
 
@@ -107,7 +122,9 @@ Gain / UserGain / ManualLens / GetImage FP 等按固件证据等级列为候选�
 | 配对 | 首次配对、错误 PIN、遗忘 / 失效后的恢复 |
 | 会话 | 重启后背、超时、断线、重新连接、锁屏与后台 |
 | 拍摄 | 至少 20 张，内容、名称、顺序及自动预览逐张对应 |
-| 配置 / ISO | 记录原值、设备允许值、方言与提交后 Sync；核对只改目标字段，其他配置保持；断线或回读不一致不得算成功 |
+| 配置 / ISO | 记录 AUTO / WIVIEW / DP67、原值、设备允许值、完整请求摘要与回读；DP-67 核对 .1 目标、新 active、原预设未变和已有槽位确认；超时不算成功 |
+| 操作与后台事件 | 同时到达的拍摄 / 配置通知不能使 GetImage 插入预同步 / set / 回读；通知 Ack 仍及时；自动刷新不清除成功或不一致结果 |
+| 缓存迁移 | 旧 256 → 1024、旧 64 保留；迁移后改回 256 并重启不再被重置；与实验室附件预算分开 |
 | 后背标记 / 备注 | Good / Unmarked 与手机星标分开；写后回读，比较未编辑 XMP 命名空间和 Flags 其余字符；确认重连、升级和进程重启缓存不能直接写入 |
 | 存储操作 | 使用可删除的测试照片和空目录，记录源 / 目标、确认、无覆盖及操作后目录内容；断线后先回读实际状态 |
 | 服务端图像检查 | 核对 1 / 2 / 4 / 8、Alarm、手填坐标与实际方向、灰平衡取样 / 当前照片确认 / 后续拍摄单独确认 / 恢复、像素拾取与直方图来源 |

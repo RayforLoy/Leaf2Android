@@ -18,6 +18,9 @@ class BackControlsSessionTest {
         val input = Channel<ByteArray>(Channel.UNLIMITED)
         val commands = Channel<String>(Channel.UNLIMITED)
         val writes = mutableListOf<String>()
+        var beforeSyncReply: (suspend (Int) -> Unit)? = null
+        var onWrite: ((String) -> Unit)? = null
+        private var syncRequests = 0
         var iso = "100"
         var reject = false
         var ignoreWrite = false
@@ -31,7 +34,12 @@ class BackControlsSessionTest {
             val bytes = input.receiveCatching().getOrNull() ?: return -1
             bytes.copyInto(buffer); return bytes.size
         }
-        override suspend fun write(bytes: ByteArray) { commands.send(bytes.toString(Charsets.US_ASCII)) }
+        override suspend fun write(bytes: ByteArray) {
+            val command = bytes.toString(Charsets.US_ASCII)
+            // Observe the actual write even while the synthetic back is holding a reply.
+            onWrite?.invoke(command)
+            commands.send(command)
+        }
         override fun close() { input.close() }
         suspend fun reply(header: String) { input.send(header.toByteArray()) }
         fun setup() = "SetupName=Default,ShootingFolder=./Shots/,ISO=$iso,ImageQuality=RAW,Framing=Full,Toning=Normal,Light=$light,SharpTable=Normal,InputProfile=Back,OutputProfile=RGB,CameraType=Technical,ICCFlag=1,Prefix=IMG,FileCompression=None,Orientation=Landscape,Color=color"
@@ -40,8 +48,12 @@ class BackControlsSessionTest {
                 writes.add(command)
                 val frame = HeaderParser.parse(command.toByteArray())
                 when (frame.tag) {
-                    "RequestSync" -> reply(if (modern) "^<Sync ISO='50;100;200' CameraSettings='ShootingFolder=./Shots/,ISO=$iso,Orientation=Landscape,CameraType=Technical,Prefix=IMG,SensorCrop=Full,FileCompression=None' />"
-                        else "^<Sync iso='50;100;200' defaultshootsetup='Default' shootsetup='${setup()}' light='Daylight;Tungsten' defaultorientation='Landscape' defaultcolor='color' />")
+                    "RequestSync" -> {
+                        syncRequests++
+                        beforeSyncReply?.invoke(syncRequests)
+                        reply(if (modern) "^<Sync ISO='50;100;200' CameraSettings='ShootingFolder=./Shots/,ISO=$iso,Orientation=Landscape,CameraType=Technical,Prefix=IMG,SensorCrop=Full,FileCompression=None' />"
+                            else "^<Sync iso='50;100;200' defaultshootsetup='Default' shootsetup='${setup()}' light='Daylight;Tungsten' defaultorientation='Landscape' defaultcolor='color' />")
+                    }
                     "GetCameraParam" -> reply("^<Ack CurrentTime='2008:01:01:00:00:00' />")
                     "SetCameraParam" -> {
                         if (reject) reply("^<Ack error_code='5' />") else {
@@ -117,6 +129,56 @@ class BackControlsSessionTest {
         assertEquals("200", repo.state.value.currentIso)
         assertTrue(peer.writes.contains("^<SetCameraParam ISO=\"200\" />"))
         assertFalse(peer.writes.any { it.contains("ShootSetup=") })
+    }
+    @Test fun captureNotificationAcknowledgesImmediatelyWithoutInterruptingIsoTransaction() = session { repo, peer ->
+        val observedWrites = Channel<WireFrame>(Channel.UNLIMITED)
+        val preSyncHeld = CompletableDeferred<Unit>()
+        val releasePreSync = CompletableDeferred<Unit>()
+        // A fresh path also excludes a persisted preview from an earlier instrumented test.
+        val photoPath = "./iso-transaction-${System.nanoTime()}.mos"
+        peer.onWrite = { command ->
+            check(observedWrites.trySend(HeaderParser.parse(command.toByteArray(Charsets.US_ASCII))).isSuccess)
+        }
+        peer.beforeSyncReply = { number ->
+            if (number == 2) { // Initial connection Sync is #1; this is the setter's preflight Sync.
+                peer.reply("^<PictureTaken file_name='$photoPath' imageSaved='yes' />")
+                preSyncHeld.complete(Unit)
+                releasePreSync.await()
+            }
+        }
+        suspend fun nextWrite() = withTimeout(3_000) { observedWrites.receive() }
+        try {
+            edit(repo, "200")
+            withTimeout(3_000) { preSyncHeld.await() }
+            assertEquals("RequestSync", nextWrite().tag)
+            // Ack must bypass the operation lock, before the back releases its pending Sync.
+            assertEquals("Ack", nextWrite().tag)
+            assertFalse(releasePreSync.isCompleted)
+            waitFor { repo.state.value.photos.any { it.path == photoPath } }
+            withContext(Dispatchers.Main) {
+                repo.refreshStatus() // A second user action must wait for the whole transaction too.
+                yield() // Let the notification's queued image worker reach its operation lock.
+            }
+            assertNull("No other command may run while preflight Sync is outstanding", observedWrites.tryReceive().getOrNull())
+            releasePreSync.complete(Unit)
+            assertEquals("SetCameraParam", nextWrite().tag)
+            assertEquals("RequestSync", nextWrite().tag)
+            // Both automatic image transfer and the complete queued status action run afterwards.
+            val afterReadback = List(4) { nextWrite() }
+            assertEquals(1, afterReadback.count { it.tag == "GetImage" && it.value("file_name") == photoPath })
+            assertEquals(3, afterReadback.count { it.tag == "GetCameraParam" })
+            waitFor {
+                repo.state.value.currentIso == "200" && repo.state.value.photos.any {
+                    it.path == photoPath && it.cacheFile != null && it.connectionGeneration == repo.state.value.connectionGeneration
+                } && !repo.state.value.controlsBusy
+            }
+            assertTrue(repo.state.value.connected)
+            assertNull(repo.state.value.error)
+        } finally {
+            releasePreSync.complete(Unit)
+            peer.onWrite = null
+            peer.beforeSyncReply = null
+        }
     }
     @Test fun readbackMismatchAndRejectedWriteAreNotReportedAsSuccess() = session { repo, peer ->
         peer.ignoreWrite = true

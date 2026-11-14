@@ -14,7 +14,7 @@ from pathlib import Path
 
 REFERENCE = Path(__file__).resolve().parent
 ROOT = REFERENCE.parent
-REPORT_DATE = "2026-11-11"  # Evidence revision date, deliberately not today's clock.
+REPORT_DATE = "2026-11-14"  # Evidence revision date, deliberately not today's clock.
 FIRMWARE_PREFIX = "reference/firmware/"
 FIRMWARE_LOCK = FIRMWARE_PREFIX + "provenance/source-aliases.json"
 
@@ -29,6 +29,18 @@ def sha256(path: Path) -> str:
 
 def category(relative: str) -> str:
     name = Path(relative).name
+    if relative.startswith("reference/dp67/"):
+        if "/original/" in relative:
+            return "windows_ce_bootstrap_client_installer" if relative.lower().endswith(".exe") else "windows_ce_client_installer"
+        if "/extracted/" in relative:
+            return "extracted_windows_ce_client_component"
+        if "/analysis/" in relative:
+            return "generated_static_dp67_client_evidence"
+        if name == "inventory.json":
+            return "nested_dp67_client_inventory"
+        if name == "provenance.json":
+            return "user_supplied_dp67_client_provenance"
+        return "dp67_static_evidence_tool" if name.endswith(".py") else "dp67_reference_documentation"
     if relative.startswith(FIRMWARE_PREFIX + "originals/"):
         suffix = Path(relative).suffix.lower()
         if suffix == ".upd":
@@ -137,7 +149,7 @@ def build_report() -> dict:
             continue
         relative = path.relative_to(ROOT).as_posix()
         source = sources.get(relative)
-        version = "1.0.3" if "1.0.3" in relative or "_1_0_3" in relative else "1.0.2" if "1.0.2" in relative else None
+        version = "1.2.1.2" if relative.startswith("reference/dp67/") else "1.0.3" if "1.0.3" in relative or "_1_0_3" in relative else "1.0.2" if "1.0.2" in relative else None
         row = {
             "path": relative,
             "bytes": path.stat().st_size,
@@ -181,6 +193,10 @@ def build_report() -> dict:
             elif "/controls-5.041/" in relative:
                 row["version"] = "5.041"
                 row["derived_from"] = [FIRMWARE_PREFIX + "originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD"]
+        elif relative.startswith("reference/dp67/"):
+            row["source_lock"] = "reference/dp67/inventory.json"
+            row["provenance_manifest"] = "reference/dp67/provenance.json"
+            row["provenance"] = "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
         elif relative == "reference/analysis/lab-candidates.json":
             row["derived_from"] = [
                 "reference/analysis/wiview-control-evidence.json",

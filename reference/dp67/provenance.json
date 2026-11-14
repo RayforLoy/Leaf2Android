@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "source_kind": "user_provided_zip",
+  "source_zip_name": "Leaf DP-67 app.zip",
+  "source_zip_sha256": "c166a2bda7601c7f6dcb21bcf9f163e84894dfd00611ec681d9c2caaddb98140",
+  "source_zip_size": 2454492,
+  "source_zip_entries": 41,
+  "source_zip_uncompressed_bytes": 7479685,
+  "retained_zip_member": "Leaf DP-67 app/Leaf DP-67 V1.2.1/Setup.exe",
+  "installer_sha256": "c0b8de1e4700b27764aa4d755bde730736c649f8de5e72196daa160eaa980126",
+  "cab_sha256": "41d6966acb4b2cb676a6bfef3b534ce802feb37cbeaf6ac9beaac196d29d13f4",
+  "cab_resource": "BIN/103",
+  "cab_resource_rva": 39328,
+  "public_download_url": null,
+  "omitted": {
+    "source_zip_retained": false,
+    "backup_count": 4,
+    "backup_header_classification": [
+      "POCKETPCIMAG"
+    ],
+    "backup_contents_read": false,
+    "note": "Only the first 12 bytes of the backup magic were read for classification (POCKETPCIMAG). No PBF contents, device credentials, backup bytes, Mac metadata or temporary folders were retained."
+  },
+  "method": "Static PE resource extraction, Windows expand.exe CAB decompression and Python pefile/Capstone parsing. Supplied executables/DLLs were never loaded or run."
+}

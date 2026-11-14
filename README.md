@@ -1,18 +1,20 @@
 # Leaf2Android
 
-[English](README.en.md) · [安装与使用](docs/quick-start.md) · [应用架构](docs/architecture.md) · [功能与验收状态](docs/implementation-status.md) · [完整缺口对照](docs/feature-gap-matrix.md) · [0.3.0 变更](docs/releases/v0.3.0.md) · [v0.3.0 发布页](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.0)
+[English](README.en.md) · [安装与使用](docs/quick-start.md) · [应用架构](docs/architecture.md) · [功能与验收状态](docs/implementation-status.md) · [完整缺口对照](docs/feature-gap-matrix.md) · [0.3.1 变更](docs/releases/v0.3.1.md) · [v0.3.1 发布页](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.1)
 
 将 Leaf WiView 的 HP iPAQ / Windows Mobile 工作流迁移到原生 Android，让手机直接连接 Leaf **Aptus / Valeo** 数码后背。应用使用 Kotlin、Jetpack Compose 和协程，不执行原厂 Windows CE 程序，不依赖电脑中转。
 
-**0.3.0 是实验性预发布。** 本轮已按原客户端与固件的交叉证据接入拍摄与图像处理配置、ISO、后背预览与曝光检查、灰平衡、标记、存储管理和会话控制，保留双风格与中英文界面。代码已实现不代表硬件效果已验证；新增功能尚待实测，范围见 [本轮发布说明](docs/releases/v0.3.0.md)。Aptus / Valeo 是系列名称，**不代表全部型号和固件已验收**。用户已纠正：**Aptus II 本身没有蓝牙，不作为当前无线目标**；早期 Aptus II 5 计划只保留为历史记录。Galaxy Z Fold7 / Android 16 / One UI 8.5 的手机验收仍需单独记录。
+**0.3.1（versionCode 4）实验性预发布；更新于 2026-11-14。** 本轮扩大默认预览缓存，隔离完整设置事务，增加请求诊断与 Valeo 的 DP-67 兼容路径。它们是针对“读图正常、改设置超时”的候选修正，**尚未证明已解决真实后背问题**，见 [本版说明](docs/releases/v0.3.1.md)。既有双风格、中英文、图像检查和实验室保留。Aptus / Valeo 是系列名称，不代表全系列已验收；用户已纠正 **Aptus II 本身无蓝牙，不是当前无线目标**，II 5 早期计划仅为历史。Galaxy Z Fold7 / Android 16 / One UI 8.5 的实机验收另行记录。
 
 **硬件回报更新（2026-11-11）：用户已报告 Valeo 22Wi 和 Aptus 22 均能正常蓝牙连接、读取照片。** 这是两个具体型号的使用回报，不推定 Aptus II 5 或整个系列兼容；后背固件、实际手机 / 系统环境、应用版本和测试日志尚未随报告提供。
+
+2026-11-14 的 Valeo 反馈进一步定位为读图可用、修改设置时超时，未说明具体改哪项。截图只能证明 App 超时后主动关闭会话，不能区分未收到 Ack、解析 / 匹配失败、事务互插或较早物理失联。网络有一般 iPAQ 掉线经验，尚无 WiView 1.0.3 同机 A/B 证明 DP-67 更稳，也无写 ISO 立即断线的直接证实；见 [独立研究](docs/valeo-connection-research.md)。
 
 已重新核对经典 `FirmwareAptus.UPD` **4.701**：镜像含 Aptus 22 模型，独立追踪 PDAInterface 的 9 类命令、完整 ShootSetup、Marking 和图像扩展。它是含 Aptus 22 模型的共享固件，不是 Aptus 22 专用可刷包，也未证明安装在用户后背上。详见 [固件蓝牙复核](docs/firmware-bluetooth-survey.md)。5.041 的 PDAInterface 同样只证明共享代码；本文的 5.041 设置指软件方言，不能证明 Aptus II 具有蓝牙硬件。
 
 ## 下载与开始使用
 
-从 [v0.3.0 预发布页](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.0) 下载签名的 `Leaf2Android-0.3.0.apk`。附件提供源码、参考资源和 SHA-256 校验值；实际文件以发布页为准。
+从 [v0.3.1 预发布页](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.1) 下载签名的 `Leaf2Android-0.3.1.apk`。附件提供源码、参考资源和 SHA-256，实际文件以发布页为准。[0.3.0 历史说明](docs/releases/v0.3.0.md) 保留。
 
 1. 将 APK 传到手机并安装。应用 ID 为 `com.leaf2android`，最低 Android 12 / API 31。
 2. 未连接后背时，打开离线演示，检查缩放、JPEG 直方图、本机标记和两种界面风格。
@@ -27,10 +29,12 @@
 | --- | --- | --- |
 | 蓝牙发现、配对、直连 | Android 公开 API、经典蓝牙 SPP / RFCOMM | Valeo 22Wi、Aptus 22 已有用户连接成功回报；配对、安全模式和手机 / 固件细节待补 |
 | 同步、目录、拍后预览 | 串行命令、通知队列、文件名核对、精确附件长度 | 两型号已报告读取照片；目录、拍后自动刷新和完整通知时序未单独验收 |
-| legacy 拍摄配置与 ISO | 从 Sync 读取完整 ShootSetup、当前配置和允许值；选择已有配置或保留未编辑字段后全量提交 | 不硬编码 ISO 档位；写前重读、写后 Sync 核对；新增写入未实机验证 |
+| 拍摄配置与 ISO | AUTO / WIVIEW / DP67 三种兼容设置；从 Sync 读取当前值和允许项，写前 / 写后核对 | AUTO 仅在蓝牙名含 Valeo 且 Sync 有 shootsetup 时走 DP-67；改名设备可离线手选，硬件效果待测 |
+| DP-67 兼容写入 | 12 核心字段，加当前配置已有的 Prefix；原预设编辑进 .1 修改槽，回读新 active 与原预设 | 不附 WiView 压缩、Orientation / Color，标准界面隐藏这些字段；已有同名修改槽会明确提示更新 |
+| 设置事务与诊断 | operationLock 覆盖预同步、设置及回读，自动 GetImage 不插入；通知 Ack 不取此锁 | 超时摘要指出 tag / 属性名而无值；仍断流、手动重连，不自动重试写入；真实 Valeo 待复测 |
 | 5.041 相机设置 | 识别 Sync.CameraSettings 后独立写 ISO、方向、机身类型、SensorCrop、压缩、前缀和拍摄目录，并全量回读 | ISO 等允许项来自设备；裁切只接受纯名称列表，压缩仅 None / Lossless；不外推到所有固件 |
 | 5.041 图像处理配置 | 完整 ImageSettings 编辑、选择已有 ActiveImageSettings | Grain / MoireReduction / Saturation 等只在 Sync 提供选项时可编辑；保留未改值并回读 |
-| 回放与缓存 | 原样保存预览、SHA-256、目录浏览、名称 / 接收时间排序 | 缓存是预览，不是 MOS 原片 |
+| 回放与缓存 | 默认 1024 MiB，原字节 / SHA-256、目录浏览、名称 / 接收时间排序 | 首次升级将旧 256 迁至 1024，保留原 64，之后手选 256 等不再重置；预览不是 MOS 原片 |
 | 放大与曝光检查 | 双指缩放、双击放大 / 复位、RGB 直方图和明暗警示 | 来自实际 JPEG 预览像素，不是 RAW 测光 |
 | 标记与备注 | 本机星标 / 备注与后背 Good / Unmarked 分开；严格解码 Base64 / UTF-8 XMP，标记只改 Flags 第三个字符 | 保留其余 XMP；Sync 有 shootsetup / camerasettings 时可用已证 Marking-only；无已识别方言且缺 XMP 则标准路径拒写 |
 | 后背文件管理 | 新建目录、空目录删除、目录改名、照片删除、后背内部 copy / move | 不覆盖目标，操作前确认具体路径并回读目录；不是下载原片 |
@@ -46,7 +50,9 @@
 
 早期按“后背无线可用”的假设先行实现，现已取得上述两型号的连接和读图用户回报。该回报不等于已验证至少 20 张连拍、ISO 等参数操作、备注写入、MOS 原片、实时取景或长时间会话。代码、合成样本和模拟器结果也不能替代这些实机验收。详见 [硬件记录与功能支持表](docs/implementation-status.md)；[机器可读验证记录](research/reports/verification-status.json) 另记录工具实际执行的验证。
 
-legacy 完整配置涵盖 ISO、画质、取景框、色调、Light、锐化、输入 / 输出 ICC、机身类型、ICCFlag、文件名前缀、拍摄目录、普通 / Nearly Lossless 压缩及 NLCompression、方向和 Color。写前重读，写后核对整份预期配置、未改字段与必要全局值；不一致不报成功。5.041 独立前缀编辑不超过当前已知 UTF-8 长度且最多 23 个 UTF-16 代码单元，这是实现限制，不是硬件规格。底栏“后背 / Back”页集中提供相机、图像处理和会话控制。
+WiView legacy 完整配置仍支持 ISO、画质、取景框、色调、Light、锐化、ICC、机身类型、前缀、目录、压缩、方向及 Color；**DP-67 是单独的较小写入格式**，不发送压缩、方向、Color 扩展，也不修改 CEVersion。选原预设仅发 DefaultShootSetup，选已有修改配置发完整 DP-67 CSV；修改前会提示目标槽位，回读验证 active、应写值和原预设未变。原 DP-67 的 12 秒×3 重发没有照搬。字段与保留规则见 [静态分析](docs/dp67-analysis.md) 和 [使用说明](docs/quick-start.md)。
+
+所有标准设置写前重读、写后核对可见的预期值与必要全局值；不一致不报成功。5.041 独立前缀编辑不超过当前已知 UTF-8 长度且最多 23 个 UTF-16 代码单元，这是实现限制。底栏“后背 / Back”页集中提供控制；实验室仍可手动探测被标准兼容路径隐藏的字段。
 
 读取到 ShutterSpeed 不等于可以设置机械快门速度或光圈。Brightness、ResetCounter、PIN、FactorySettings、qformat / recovery、增益和 ManualLens 等可进入实验室主动验证；量程、含义、无线可达性或恢复流程未确认的部分保持实验标识，不作为已验证标准功能。完整 MOS、连续取景和完整原厂重传恢复仍未实现。逐项边界见 [完整缺口对照](docs/feature-gap-matrix.md)。
 
@@ -62,6 +68,7 @@ legacy 完整配置涵盖 ISO、画质、取景框、色调、Light、锐化、�
 - “跟随新片”决定新预览是否自动成为当前照片，查看旧照片时可关闭。
 - 标准照片操作要求预览来自当前后背且在本次连接中重新读取。重连、升级或进程重启后须重新读图再写入；其他后背缓存及演示图不能直接用于标准写入。实验室原始请求按用户填写目标执行，不继承标准操作的全部语义校验。手机星标保持独立。
 - 缓存、星标和本机备注保存在应用私有目录。卸载会移除这些数据；保存 JPEG 预览只导出实际收到的预览字节。
+- 预览缓存默认 1024 MiB；从旧版本升级仅执行一次 256 → 1024 MiB 迁移，原 64 MiB 保留。完成迁移后，用户再选择 256 / 64 / 1024 不会被后续启动改回。实验室附件缓存仍有独立预算。
 
 ## 项目结构
 
@@ -86,6 +93,8 @@ Leaf2Android/
 工作目录为 `D:\Leaf2Android`；迁移后旧目录 `D:\Leaf4Android` 应为空。原厂 CAB、内部成员和版本名称保留原名，保持研究可重复性。后背固件的收录状态、型号和来源以 [参考资料](reference/README.md) 为准；Windows CE 客户端 EXE / DLL 不能当作后背本体固件。
 
 本轮固件同步按内容去重收录 89 份唯一原始文件（约 83.7 MB）及核心重建 / 分析。个人 MOS、校准文件和约 113 MB 的安装器不进入发布参考包；具体库存与校验以 `reference/firmware` 的清单为准。归档不等于手机刷写支持，也不证明某份固件已安装在用户测试后背上。
+
+DP-67 参考资料收录原始 `Setup.exe` 及提取的 CAB，并保留提取与来源说明；含私人 PBF 的完整 ZIP 不收录，详见 [DP-67 分析](docs/dp67-analysis.md)。
 
 ## 构建与签名
 
@@ -143,4 +152,4 @@ Android 测试需要设备或模拟器。本轮协议与模拟器测试范围包
 
 兼容性反馈请包含应用版本、手机完整型号 / Android / One UI、后背准确型号与固件、SPP 是否发现、复现步骤和脱敏日志。硬件支持声明需有真实测试记录。协议改动应附依据与可重复样本，区分合成数据和真实采集，不用猜测的 UUID、握手值或成功状态替代证据。
 
-仓库：[RayforLoy/Leaf2Android](https://github.com/RayforLoy/Leaf2Android)。源码、参考资源和签名 APK 分开组织，实际附件以 [v0.3.0 预发布页](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.0) 为准。原厂文件的权利和原许可不因收录改变，本项目不为原厂程序重新授权；源码授权以仓库实际附带的许可文件为准。
+仓库：[RayforLoy/Leaf2Android](https://github.com/RayforLoy/Leaf2Android)。源码、参考资源和签名 APK 分开组织，实际附件以 [v0.3.1 预发布页](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.1) 为准。原厂文件的权利和原许可不因收录改变，本项目不为原厂程序重新授权；源码授权以仓库实际附带的许可文件为准。

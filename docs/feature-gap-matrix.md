@@ -1,15 +1,15 @@
-# 功能缺口对照：0.2.0 基线 → 0.3.0
+# 功能缺口对照：0.2.0 基线 → 0.3.1
 
-[English](feature-gap-matrix.en.md) · [项目首页](../README.md) · [功能与设备记录](implementation-status.md) · [使用说明](quick-start.md) · [0.3.0 说明](releases/v0.3.0.md)
+[English](feature-gap-matrix.en.md) · [项目首页](../README.md) · [功能与设备记录](implementation-status.md) · [使用说明](quick-start.md) · [0.3.1 说明](releases/v0.3.1.md)
 
-更新：2026-11-11。**0.3.0 待发布。** 本表把原 WiView 静态审计中的基线缺口逐项对照当前应用，不把命令字符串、已接入代码、Ack 和设备效果混为一种证据。
+更新：2026-11-14。**0.3.1（versionCode 4）实验性预发布。** 本表对照 0.2.0 基线与当前应用，区分标准路径、实验室和真实效果；0.3.1 的 Valeo 设置超时候选修正尚待实机复测。
 
-用户只报告了 **Valeo 22Wi、Aptus 22 的蓝牙连接与读取照片成功**；没有提供固件、手机 / 系统、应用版本或日志。下列标准功能、实验室候选与用户假设分层记录；新增功能的硬件效果均待验证。用户已纠正 Aptus II 本身无蓝牙，不作为当前无线目标；原始 Aptus II 5 计划仅作历史记录。5.041 的 PDAInterface 是共享代码，不是该系列蓝牙硬件证据，不能由本表推定全系列已验收。
+已收到 **Valeo 22Wi、Aptus 22 蓝牙连接与读取照片成功**的基础报告；2026-11-14 另有 Valeo 修改设置超时报告，见 [设备与问题记录](implementation-status.md)。完整固件、手机 / 系统、应用版本和日志仍待补充。下列标准功能、实验室候选与用户假设分层记录；新增功能的硬件效果均待验证。用户已纠正 Aptus II 本身无蓝牙，不作为当前无线目标；原始 Aptus II 5 计划仅作历史记录。5.041 的 PDAInterface 是共享代码，不是该系列蓝牙硬件证据，不能由本表推定全系列已验收。
 
 ## 如何阅读状态
 
 - **已有：** 0.2.0 已有代码；保留或扩展，不代表每项已经实机验证。
-- **新增标准功能：** 0.3.0 已按明确协议接入仓库与界面，使用当前值、允许项及适用的回读；硬件效果待验证。
+- **新增标准功能：** 0.3.1 已按明确协议接入仓库与界面，使用当前值、允许项及适用的回读；硬件效果待验证。
 - **请求级：** 已发送有证据的请求并匹配 Ack，尚无已验证的当前状态读取；界面不宣称已切换成功。
 - **实验室候选：** 提供模板或原始控制头主动验证，分别标客户端实证、固件入口或字段；未知值手填，回复只作观察，不报告语义成功。
 - **用户假设：** 尚无已证厂商无线语法，用户可明确建立 USER HYPOTHESIS 探测；不把通用候选头写成提取到的接口。
@@ -24,26 +24,32 @@
 
 ## 连接、同步与恢复
 
-| 功能 | 0.2.0 基线 | 0.3.0 与剩余边界 |
+| 功能 | 0.2.0 基线 | 0.3.1 与剩余边界 |
 | --- | --- | --- |
 | 蓝牙发现、配对、直连 | 已有 | 保留 Android 公开 API、经典 SPP / RFCOMM；两型号仅连接读图有用户回报，首次配对、错误 PIN 和 Android 失效恢复仍需记录 |
-| RequestSync 与 CurrentTime 读取 | 已有 | 新增完整配置、允许项、能力和方言解析；不同结构不互相改名套用，读取不完整不报就绪 |
+| RequestSync 与 CurrentTime 读取 | 已有 | 完整配置、允许项与方言解析；DP-67 刷新仅 Sync + CurrentTime，不自动追加其他 getter；不同结构不混用 |
 | 目录读取 | 已有 | 保留 subject / 路径核对；管理操作后重新读取相关目录 |
 | 拍摄通知与拍后预览队列 | 已有 | 保留串行请求、文件名和附件长度核对；至少 20 张真实拍摄的名称 / 内容 / 顺序仍待验收 |
-| 超时、断线与前台会话 | 已有基础处理 | 保留超时关闭和手动重连；锁屏、后台、后背重启及长时间会话仍待实机验证 |
+| 超时、断线与前台会话 | 已有基础处理 | 保留超时关闭 / 手动重连、不自动重试；新增摘要指出 tag 与属性名而无值，不能单凭超时断言物理失联 |
+| 设置整事务排队 | 已有单请求串行 | **0.3.1：** operationLock 覆盖预 Sync / set / 回读，自动 GetImage 不插入；通知 Ack 不取此锁，避免阻塞后背应答流程 |
+| 后台刷新保留结果 | 有自动刷新 | **0.3.1 App 修正：** CameraShootSetupChangeNotification 的后台 Sync 保留成功／不一致 error / notice，仅新手动操作清除；不是已证实的后背掉线根因 |
 | ReSyncRequest、NAK、原厂重传 | 未完整实现 | **部分 / 实验室：** 标准路径保留断线恢复；实验室有 ReSyncRequest / Ack 模板及原始观测，可记录 NAK 等帧；不承诺已实现完整重传时序 |
 | 图像 size / 分包模式 | 未证明可用 | **未实现自动恢复：** 标准路径拒绝未经证实的 size 分包；实验室可观察控制头与附件，但不把观察等同分包 / 重传协议已经解决 |
 
 ## 拍摄与图像处理配置
 
-| 功能 | 0.2.0 基线 | 0.3.0 与剩余边界 |
+| 功能 | 0.2.0 基线 | 0.3.1 与剩余边界 |
 | --- | --- | --- |
 | 当前 ISO 和允许档位 | 没有可用控制 | **新增：** 当前值来自匹配的 legacy ShootSetup 或 5.041 CameraSettings，允许值来自 Sync；不把允许值第一项当当前值，不硬编码档位 |
-| legacy ISO 写入 | 缺失 | **新增：** 通过完整 ShootSetup 提交；只改选定字段，其余保留；写前重读、写后核对整份配置、未改字段和必要 globals |
-| 现有拍摄配置选择 | 缺失 | **新增：** 使用后背下发的 DefaultShootSetup 名称并回读；不是 FactorySettings，也不创建猜测的配置名 |
-| legacy 完整配置编辑 | 缺失 | **新增：** ISO、ImageQuality、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、CameraType、ICCFlag、Prefix、ShootingFolder、FileCompression / NLCompression、Orientation、Color |
+| legacy ISO 写入 | 缺失 | **新增：** 按所选 WiView / DP-67 格式完整提交，只改指定字段；前后 Sync 核对，不把 ISO 单独变化当全部成功 |
+| AUTO / WIVIEW / DP67 | 无独立兼容选择 | **0.3.1：** 断开时选；AUTO 仅当蓝牙名含 Valeo 且 Sync 有 shootsetup 时启用 DP-67。显式模式用于改名等情况，不改配对或硬件能力 |
+| 现有拍摄配置选择 | 缺失 | **新增：** 依据设备配置并回读；DP-67 普通预设只发 DefaultShootSetup，名称包含 .1 的修改项发完整 CSV；不等于 FactorySettings |
+| WiView legacy 完整配置编辑 | 缺失 | **新增：** ISO、ImageQuality、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、CameraType、ICCFlag、Prefix、ShootingFolder、FileCompression / NLCompression、Orientation、Color，仅属 WiView 路径 |
+| DP-67 核心配置与 Prefix | 缺失 | **0.3.1：** SetupName、ShootingFolder、ISO、ImageQuality、Framing、Toning、Light、SharpTable、InputProfile、OutputProfile、CameraType、ICCFlag；当前已提供 Prefix 才保留，不编造空字段 |
+| DP-67 .1 修改槽 | 缺失 | **0.3.1：** 原名不含 .1 则克隆至原名+.1，已含则保留修改槽；确认显示已有槽将更新，回读 active / 目标值及原预设未变 |
+| DP-67 省略的扩展 | 无独立限制 | **0.3.1：** 不附 FileCompression / NLCompression、Orientation、Color 或全局属性，标准面板隐藏；实验室可手动，不视为已验证支持 |
 | Light / 白平衡预设 | 缺失 | **新增：** 选择设备下发的拍摄光源项；不等同任意 Kelvin / tint，也不等同照片灰平衡坐标取样 |
-| Framing、ICCFlag、Color | 缺失 | **新增：** Framing 取下发记录的名称，ICCFlag 为已证实 0 / 1，保留配置字段与顶层方向 / Color 的方言区别 |
+| Framing、ICCFlag、Color | 缺失 | **新增：** Framing 取下发名称，ICCFlag 为 0 / 1；WiView 保留配置／顶层方向 Color 区别，DP-67 不发送后两类扩展 |
 | 5.041 独立相机设置 | 没有该方言控制 | **新增：** 在识别 Sync.CameraSettings 后独立写 ISO、Orientation、CameraType、SensorCrop、FileCompression、Prefix、ShootingFolder，再全量 Sync 核对；独立服务端证据不由旧 CAB 推定 |
 | SensorCrop 与独立压缩 | 未接入 | **新增但有界：** 标准 SensorCrop 仅接受下发纯名称，不猜复合记录；5.041 标准压缩仅下发 None / Lossless。其他值可由实验室原始请求验证，不当作已证近无损分支 |
 | Prefix 与 ShootingFolder | 缺失 | **新增：** 写前检查实际目录、编码与分隔符；legacy 保留原厂输入限制。5.041 独立 Prefix 不增加当前 UTF-8 字节长度且最多 23 个 UTF-16 代码单元，这是实现限制，不是硬件上限 |
@@ -53,11 +59,16 @@
 
 完整配置不齐、值未下发、方言无法识别、状态在编辑期间改变、字符不能安全序列化或回读不一致时，不报告确认成功。单独看到 ISO 变化或收到 Ack 不能代替完整比较。底栏“后背 / Back”页提供配置与会话入口。
 
+DP-67 路径来自用户安装包的 [静态对照](dp67-analysis.md)：短字段集、clone、contains(".1") 与包装器已有二进制证据；不据此认定真实 Valeo 超时根因。应用不修改 CEVersion，也不照搬原 12 秒×最多 3 次尝试／失败重同步策略，继续超时断流且不自动重试写入。
+
+2026-11-14 用户只说明读图正常、改设置超时，未提供具体字段；截图只能证明 App 超时后关闭。网络没有找到 WiView 1.0.3 同机 A/B 或写 ISO 立即断线的直接证实，见 [独立研究](valeo-connection-research.md)。整事务锁与兼容模式的真实效果都待复测。
+
 ## 预览、曝光检查与灰平衡
 
-| 功能 | 0.2.0 基线 | 0.3.0 与剩余边界 |
+| 功能 | 0.2.0 基线 | 0.3.1 与剩余边界 |
 | --- | --- | --- |
 | 基础 GetImage 拍后预览 | 已有 | 保留；两型号有用户读图回报；`.mos` 路径不证明返回的是完整 MOS 文件 |
+| 预览缓存默认与升级 | 已有缓存 | **0.3.1：** 默认 1024 MiB；旧 256 首次迁为 1024，旧 64 保留；迁移后手选 256 等不再被启动重置。实验室附件预算独立 |
 | 手机放大、JPEG 直方图与警示 | 已有 | 保留本地处理和数据来源标识，与后背处理功能分开 |
 | 后背 zoom 与 XCoord / YCoord | 缺失，只有本机放大 | **新增：** 原厂 1 / 2 / 4 / 8 倍 JPEG 处理预览；手工填原图协议坐标，不把 Compose 触点或缩略图坐标猜成原图坐标 |
 | 后背 Alarm / edge | 缺失，只有本机 JPEG 警示 | **新增：** white / dark / both 亮暗警示请求；返回处理预览；具体阈值、画面效果需实测 |
@@ -72,7 +83,7 @@
 
 ## 照片信息、标记与备注
 
-| 功能 | 0.2.0 基线 | 0.3.0 与剩余边界 |
+| 功能 | 0.2.0 基线 | 0.3.1 与剩余边界 |
 | --- | --- | --- |
 | 照片属性与当前照片备注 | 已有读取和写备注 | 保留 GetPictureParams 与明确的后背备注操作，错误或无法解释的回复不报成功；真实固件效果仍需核对 |
 | 本机星标 / 本机备注 | 已有 | 保持独立、持久保存在手机；不伪装为后背标记或默认拍摄备注 |
@@ -88,7 +99,7 @@
 
 ## 后背存储管理
 
-| 功能 | 0.2.0 基线 | 0.3.0 与剩余边界 |
+| 功能 | 0.2.0 基线 | 0.3.1 与剩余边界 |
 | --- | --- | --- |
 | 新建目录 | 缺失 | **新增：** mkdir 精确路径，先检查目标不存在；不是创建任意文件 |
 | 删除目录 | 缺失 | **新增但仅空目录：** 先读内容、明确确认，再 rmdir 并回读父目录；不开放非空目录递归删除 |
@@ -103,7 +114,7 @@
 
 ## 系统设置与实验室高级命令
 
-| 功能 | 0.2.0 基线 | 0.3.0 与剩余边界 |
+| 功能 | 0.2.0 基线 | 0.3.1 与剩余边界 |
 | --- | --- | --- |
 | 时间同步 | 只读 CurrentTime | **新增：** 写手机本地时间，再单独读取核对；不假定协议传输时区 |
 | 默认 Annotation / Copyright | 只有当前照片备注 | **新增：** 读取、写入并回读后续拍摄默认值；不改已有照片 |
@@ -149,6 +160,7 @@
 ## 证据与后续验收
 
 - [客户端协议缺口审计](protocol-gap-audit.md)：WiView 1.0.2 / 1.0.3 的函数、指令与构造证据，缺口列以 0.2.0 为基线。
+- [DP-67 包与设置分析](dp67-analysis.md)：12 核心字段、可选 Prefix、.1 修改槽及包装／重试对照；Setup.exe 与 CAB 归档，含私人 PBF 的完整 ZIP 排除。
 - [经典 Aptus / Aptus 22 与共享固件调查](firmware-bluetooth-survey.md)：独立经典 4.701 字节、机型关联、9 类目录、A / B / C 分层与 CE 校验。
 - [5.041 服务端控制证据](../reference/firmware/analysis/CONTROLS.zh-CN.md)：独立 CameraSettings / ImageSettings、标记、PIN / Brightness 等证据；只对应固定校验值镜像，不推广到用户设备。
 - [实验候选清单](../reference/analysis/lab-candidates.json)：原调用、固件入口、返回字段、内部功能和缺少已证语法的研究项分别记录。

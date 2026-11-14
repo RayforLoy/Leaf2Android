@@ -2,6 +2,8 @@
 
 [简体中文](research.md) · [Project home](../README.en.md) · [Reference inventory](../reference/README.en.md)
 
+The user-supplied DP-67 1.2.1 media was added on 2026-11-14: [analysis and reproduction](dp67-analysis.en.md), [reference subtree](../reference/dp67/). Only the vendor installer, embedded CAB, extracted components and evidence are retained; the complete ZIP and four PDA backups are excluded. Run `python reference/dp67/analyze_dp67.py --verify` to regenerate temporary evidence from the retained installer and compare bytes without the private backups or original ZIP.
+
 Original media, extracted components and static analysis live under `reference/`. Android does not load or execute those programs, and they are not application runtime dependencies.
 
 ## Identity and location

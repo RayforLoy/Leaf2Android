@@ -1,0 +1,13 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+0002f7fc [file 0001ebfc] push      {r4, lr}
+0002f800 [file 0001ec00] mov       r4, r0
+0002f804 [file 0001ec04] mov       r2, r1
+0002f808 [file 0001ec08] ldr       r0, [r4, #4]
+0002f80c [file 0001ec0c] mov       r1, #6
+0002f810 [file 0001ec10] bl        #0x19cdc
+0002f814 [file 0001ec14] ldr       r0, [r4, #4]
+0002f818 [file 0001ec18] mov       r3, #0
+0002f81c [file 0001ec1c] mov       r2, #0
+0002f820 [file 0001ec20] mov       r1, #6
+0002f824 [file 0001ec24] pop       {r4, lr}
+0002f828 [file 0001ec28] b         #0x13000

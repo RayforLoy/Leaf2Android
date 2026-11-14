@@ -1,0 +1,182 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+00027f9c [file 0001739c] push      {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+00027fa0 [file 000173a0] sub       sp, sp, #0x24
+00027fa4 [file 000173a4] ldr       fp, [pc, #0xf0]
+00027fa8 [file 000173a8] mov       r4, r0
+00027fac [file 000173ac] ldr       r6, [pc, #0xe4] ; 'CProtocolLayer::ImageFunction'
+00027fb0 [file 000173b0] mov       r5, r1
+00027fb4 [file 000173b4] ldr       r0, [fp]
+00027fb8 [file 000173b8] mov       r7, r2
+00027fbc [file 000173bc] mov       r8, r3
+00027fc0 [file 000173c0] cmp       r0, #0
+00027fc4 [file 000173c4] beq       #0x27ff0
+00027fc8 [file 000173c8] ldr       r0, [pc, #0xc4] ; '- enter'
+00027fcc [file 000173cc] mov       r2, #0x880
+00027fd0 [file 000173d0] ldr       r1, [pc, #0xb8] ; 'ProtocolLayer.cpp'
+00027fd4 [file 000173d4] mov       r3, r6
+00027fd8 [file 000173d8] str       r0, [sp]
+00027fdc [file 000173dc] orr       r2, r2, #6
+00027fe0 [file 000173e0] ldr       sl, [fp]
+00027fe4 [file 000173e4] mov       r0, #3
+00027fe8 [file 000173e8] mov       lr, pc
+00027fec [file 000173ec] mov       pc, sl
+00027ff0 [file 000173f0] add       sb, r4, #0x18
+00027ff4 [file 000173f4] mov       r0, sb
+00027ff8 [file 000173f8] str       sb, [sp, #0x20]
+00027ffc [file 000173fc] bl        #0x7c99c
+00028000 [file 00017400] ldrb      r3, [r4, #0xa]
+00028004 [file 00017404] cmp       r3, #0
+00028008 [file 00017408] bne       #0x280a0
+0002800c [file 0001740c] ldr       r0, [fp]
+00028010 [file 00017410] cmp       r0, #0
+00028014 [file 00017414] beq       #0x28040
+00028018 [file 00017418] ldr       r0, [pc, #0x6c] ; "Can't perform requsted command. PDA is out of sync"
+0002801c [file 0001741c] mov       r2, #0x880
+00028020 [file 00017420] ldr       r3, [pc, #0x60] ; 'CProtocolLayer::ImageFunction'
+00028024 [file 00017424] orr       r2, r2, #0xe
+00028028 [file 00017428] str       r0, [sp]
+0002802c [file 0001742c] mov       r0, #1
+00028030 [file 00017430] ldr       r1, [pc, #0x4c] ; 'ProtocolLayer.cpp'
+00028034 [file 00017434] ldr       sl, [fp]
+00028038 [file 00017438] mov       lr, pc
+0002803c [file 0001743c] mov       pc, sl
+00028040 [file 00017440] mov       r0, sb
+00028044 [file 00017444] bl        #0x7c990
+00028048 [file 00017448] ldr       r0, [fp]
+0002804c [file 0001744c] cmp       r0, #0
+00028050 [file 00017450] beq       #0x28078
+00028054 [file 00017454] ldr       r0, [pc, #0x24] ; '- leave'
+00028058 [file 00017458] mov       r3, r6
+0002805c [file 0001745c] ldr       fp, [fp]
+00028060 [file 00017460] mov       r2, #0
+00028064 [file 00017464] str       r0, [sp]
+00028068 [file 00017468] mov       r1, #0
+0002806c [file 0001746c] mov       r0, #3
+00028070 [file 00017470] mov       lr, pc
+00028074 [file 00017474] mov       pc, fp
+00028078 [file 00017478] mov       r0, #0
+0002807c [file 0001747c] b         #0x28258
+00028080 [file 00017480] andeq     lr, r8, r0, lsl #22
+00028084 [file 00017484] strheq    r8, [sb], -r0
+00028088 [file 00017488] andeq     r8, sb, r4, ror ip
+0002808c [file 0001748c] andeq     r8, sb, ip, lsl #24
+00028090 [file 00017490] andeq     r8, sb, r8, ror #23
+00028094 [file 00017494] andeq     lr, r8, r0, lsl fp
+00028098 [file 00017498] andeq     r8, sb, ip, lsr #23
+0002809c [file 0001749c] andeq     lr, r8, r4, ror #23
+000280a0 [file 000174a0] mov       r3, #3
+000280a4 [file 000174a4] ldr       r6, [pc, #0xf8] ; 'ImageFunction'
+000280a8 [file 000174a8] ldr       sl, [sp, #0x48]
+000280ac [file 000174ac] str       r3, [sp, #0x18]
+000280b0 [file 000174b0] mov       r3, #1
+000280b4 [file 000174b4] str       sl, [sp, #0xc]
+000280b8 [file 000174b8] strb      r3, [sp, #0x10]
+000280bc [file 000174bc] mov       r3, #0xfa0
+000280c0 [file 000174c0] str       r3, [sp, #8]
+000280c4 [file 000174c4] mov       r3, #0xd
+000280c8 [file 000174c8] str       r3, [sp]
+000280cc [file 000174cc] mov       r2, r7
+000280d0 [file 000174d0] mov       r3, r8
+000280d4 [file 000174d4] str       r5, [sp, #4]
+000280d8 [file 000174d8] mov       r1, r6
+000280dc [file 000174dc] mov       r0, r4
+000280e0 [file 000174e0] bl        #0x2878c
+000280e4 [file 000174e4] mov       sb, r0
+000280e8 [file 000174e8] ands      r3, sb, #0xff
+000280ec [file 000174ec] bne       #0x28134
+000280f0 [file 000174f0] ldr       r3, [sp, #0x18]
+000280f4 [file 000174f4] subs      r3, r3, #1
+000280f8 [file 000174f8] str       r3, [sp, #0x18]
+000280fc [file 000174fc] beq       #0x28134
+00028100 [file 00017500] ldrb      r3, [r4, #0xa]
+00028104 [file 00017504] cmp       r3, #0
+00028108 [file 00017508] beq       #0x28134
+0002810c [file 0001750c] mov       r3, #1
+00028110 [file 00017510] strb      r3, [sp]
+00028114 [file 00017514] mov       r2, #0
+00028118 [file 00017518] mov       r3, #3
+0002811c [file 0001751c] mov       r1, #0
+00028120 [file 00017520] mov       r0, r4
+00028124 [file 00017524] bl        #0x2450c
+00028128 [file 00017528] mov       sb, r0
+0002812c [file 0001752c] ands      r3, sb, #0xff
+00028130 [file 00017530] bne       #0x280b0
+00028134 [file 00017534] ldr       r0, [sp, #0x20]
+00028138 [file 00017538] bl        #0x7c990
+0002813c [file 0001753c] add       r0, sp, #0x14
+00028140 [file 00017540] bl        #0x7bea4
+00028144 [file 00017544] cmp       r5, #0
+00028148 [file 00017548] beq       #0x281e0
+0002814c [file 0001754c] ldr       r1, [pc, #0x4c] ; 'error'
+00028150 [file 00017550] add       r0, sp, #0x1c
+00028154 [file 00017554] bl        #0x7be8c
+00028158 [file 00017558] ldr       r3, [r5, #8]
+0002815c [file 0001755c] mov       r4, #0
+00028160 [file 00017560] cmp       r3, #0
+00028164 [file 00017564] bls       #0x281d8
+00028168 [file 00017568] ldr       r3, [r5, #4]
+0002816c [file 0001756c] ldr       r0, [sp, #0x1c]
+00028170 [file 00017570] ldr       r1, [r3, r4, lsl #3]
+00028174 [file 00017574] bl        #0x7c8e8
+00028178 [file 00017578] movs      r3, r0
+0002817c [file 0001757c] mov       r0, #1
+00028180 [file 00017580] movne     r0, #0
+00028184 [file 00017584] ands      r3, r0, #0xff
+00028188 [file 00017588] bne       #0x281a8
+0002818c [file 0001758c] ldr       r3, [r5, #8]
+00028190 [file 00017590] add       r4, r4, #1
+00028194 [file 00017594] cmp       r4, r3
+00028198 [file 00017598] blo       #0x28168
+0002819c [file 0001759c] b         #0x281d8
+000281a0 [file 000175a0] andeq     r8, sb, r4, ror #25
+000281a4 [file 000175a4] ldrdeq    r8, sb, [sb], -r4
+000281a8 [file 000175a8] ldr       r3, [r5, #4]
+000281ac [file 000175ac] add       r1, sp, #0x14
+000281b0 [file 000175b0] add       r3, r3, r4, lsl #3
+000281b4 [file 000175b4] ldr       r0, [r3, #4]
+000281b8 [file 000175b8] bl        #0x1f164
+000281bc [file 000175bc] ldr       r0, [sl]
+000281c0 [file 000175c0] ldr       r4, [sp, #0x14]
+000281c4 [file 000175c4] bl        #0x7d71c
+000281c8 [file 000175c8] mov       r0, r4
+000281cc [file 000175cc] bl        #0x7d710
+000281d0 [file 000175d0] mov       sb, #0
+000281d4 [file 000175d4] str       r0, [sl]
+000281d8 [file 000175d8] add       r0, sp, #0x1c
+000281dc [file 000175dc] bl        #0x7be98
+000281e0 [file 000175e0] ldr       r0, [fp]
+000281e4 [file 000175e4] cmp       r0, #0
+000281e8 [file 000175e8] beq       #0x2821c
+000281ec [file 000175ec] ands      r3, sb, #0xff
+000281f0 [file 000175f0] ldr       r1, [pc, #0x74] ; 'ProtocolLayer.cpp'
+000281f4 [file 000175f4] ldrne     r0, [pc, #0x6c] ; 'true'
+000281f8 [file 000175f8] mov       r2, #0x8a0
+000281fc [file 000175fc] ldreq     r0, [pc, #0x60] ; 'false'
+00028200 [file 00017600] orr       r2, r2, #0xe
+00028204 [file 00017604] ldr       r3, [pc, #0x54] ; 'CProtocolLayer::ImageFunction() returned:'
+00028208 [file 00017608] str       r0, [sp]
+0002820c [file 0001760c] mov       r0, #3
+00028210 [file 00017610] ldr       sl, [fp]
+00028214 [file 00017614] mov       lr, pc
+00028218 [file 00017618] mov       pc, sl
+0002821c [file 0001761c] add       r0, sp, #0x14
+00028220 [file 00017620] bl        #0x7be98
+00028224 [file 00017624] ldr       r0, [fp]
+00028228 [file 00017628] cmp       r0, #0
+0002822c [file 0001762c] beq       #0x28254
+00028230 [file 00017630] ldr       r0, [pc, #-0x1b8] ; '- leave'
+00028234 [file 00017634] mov       r2, #0
+00028238 [file 00017638] ldr       r3, [pc, #-0x1a8] ; 'CProtocolLayer::ImageFunction'
+0002823c [file 0001763c] mov       r1, #0
+00028240 [file 00017640] str       r0, [sp]
+00028244 [file 00017644] mov       r0, #3
+00028248 [file 00017648] ldr       fp, [fp]
+0002824c [file 0001764c] mov       lr, pc
+00028250 [file 00017650] mov       pc, fp
+00028254 [file 00017654] mov       r0, sb
+00028258 [file 00017658] add       sp, sp, #0x24
+0002825c [file 0001765c] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+00028260 [file 00017660] andeq     r8, sb, r8, lsr #26
+00028264 [file 00017664] andeq     r8, sb, ip, lsl sp
+00028268 [file 00017668] andeq     r8, sb, r0, lsl sp
+0002826c [file 0001766c] andeq     r8, sb, ip, ror #25

@@ -1,0 +1,140 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+00019cdc [file 000090dc] push      {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+00019ce0 [file 000090e0] sub       sp, sp, #0xc
+00019ce4 [file 000090e4] mov       sb, r1
+00019ce8 [file 000090e8] mov       r5, r0
+00019cec [file 000090ec] mov       r8, r2
+00019cf0 [file 000090f0] mov       sl, #0
+00019cf4 [file 000090f4] cmp       sb, #6
+00019cf8 [file 000090f8] bne       #0x19d7c
+00019cfc [file 000090fc] mov       r4, #0
+00019d00 [file 00009100] ldr       r3, [r5, #0xc8]
+00019d04 [file 00009104] cmp       r4, r3
+00019d08 [file 00009108] bge       #0x19d34
+00019d0c [file 0000910c] mov       r1, r4
+00019d10 [file 00009110] ldr       fp, [r8]
+00019d14 [file 00009114] add       r0, r5, #0xc4
+00019d18 [file 00009118] bl        #0x1bd48
+00019d1c [file 0000911c] mov       r1, fp
+00019d20 [file 00009120] ldr       r0, [r0]
+00019d24 [file 00009124] bl        #0x7ca8c
+00019d28 [file 00009128] movs      r3, r0
+00019d2c [file 0000912c] addne     r4, r4, #1
+00019d30 [file 00009130] bne       #0x19d00
+00019d34 [file 00009134] ldr       r0, [r5, #0xc8]
+00019d38 [file 00009138] cmp       r4, r0
+00019d3c [file 0000913c] bne       #0x19d7c
+00019d40 [file 00009140] add       r4, r0, #1
+00019d44 [file 00009144] add       r6, r5, #0xc4
+00019d48 [file 00009148] mov       r1, r4
+00019d4c [file 0000914c] mov       r0, r6
+00019d50 [file 00009150] bl        #0x1bc48
+00019d54 [file 00009154] sub       r1, r4, #1
+00019d58 [file 00009158] ldr       r7, [r8]
+00019d5c [file 0000915c] mov       r0, r6
+00019d60 [file 00009160] bl        #0x1bd48
+00019d64 [file 00009164] mov       r4, r0
+00019d68 [file 00009168] ldr       r0, [r4]
+00019d6c [file 0000916c] bl        #0x7d71c
+00019d70 [file 00009170] mov       r0, r7
+00019d74 [file 00009174] bl        #0x7d710
+00019d78 [file 00009178] str       r0, [r4]
+00019d7c [file 0000917c] mov       r4, #0
+00019d80 [file 00009180] ldr       r3, [r5, #0x148]
+00019d84 [file 00009184] cmp       r4, r3
+00019d88 [file 00009188] bge       #0x19dc0
+00019d8c [file 0000918c] mov       r1, r4
+00019d90 [file 00009190] ldr       fp, [r5, #0x6c]
+00019d94 [file 00009194] add       r0, r5, #0x144
+00019d98 [file 00009198] bl        #0x1c258
+00019d9c [file 0000919c] mov       r1, #0
+00019da0 [file 000091a0] bl        #0x1bd48
+00019da4 [file 000091a4] mov       r1, fp
+00019da8 [file 000091a8] ldr       r0, [r0]
+00019dac [file 000091ac] bl        #0x7ca8c
+00019db0 [file 000091b0] movs      r3, r0
+00019db4 [file 000091b4] addne     r4, r4, #1
+00019db8 [file 000091b8] bne       #0x19d80
+00019dbc [file 000091bc] mov       sl, #1
+00019dc0 [file 000091c0] ands      r3, sl, #0xff
+00019dc4 [file 000091c4] beq       #0x19eb4
+00019dc8 [file 000091c8] add       r6, r5, #0x144
+00019dcc [file 000091cc] mov       r1, r4
+00019dd0 [file 000091d0] mov       r0, r6
+00019dd4 [file 000091d4] bl        #0x1c258
+00019dd8 [file 000091d8] mov       r1, #0
+00019ddc [file 000091dc] bl        #0x1bd48
+00019de0 [file 000091e0] ldr       r1, [r0]
+00019de4 [file 000091e4] add       r0, sp, #4
+00019de8 [file 000091e8] bl        #0x7beb0
+00019dec [file 000091ec] mov       r1, r4
+00019df0 [file 000091f0] ldr       fp, [r8]
+00019df4 [file 000091f4] mov       r0, r6
+00019df8 [file 000091f8] bl        #0x1c258
+00019dfc [file 000091fc] mov       r1, sb
+00019e00 [file 00009200] bl        #0x1bd48
+00019e04 [file 00009204] mov       r1, fp
+00019e08 [file 00009208] ldr       r0, [r0]
+00019e0c [file 0000920c] bl        #0x7ca8c
+00019e10 [file 00009210] movs      r3, r0
+00019e14 [file 00009214] beq       #0x19e88
+00019e18 [file 00009218] ldr       r1, [pc, #0x90] ; wide '.1'
+00019e1c [file 0000921c] add       r0, sp, #4
+00019e20 [file 00009220] bl        #0x7bfb8
+00019e24 [file 00009224] mvn       r3, #0
+00019e28 [file 00009228] cmp       r0, r3
+00019e2c [file 0000922c] bne       #0x19e58
+00019e30 [file 00009230] add       r0, sp, #8
+00019e34 [file 00009234] add       r1, sp, #4
+00019e38 [file 00009238] bl        #0x7bf88
+00019e3c [file 0000923c] ldr       r1, [sp, #8]
+00019e40 [file 00009240] mov       r0, r5
+00019e44 [file 00009244] bl        #0x19920
+00019e48 [file 00009248] ldr       r1, [pc, #0x5c] ; wide '.1'
+00019e4c [file 0000924c] mov       r4, r0
+00019e50 [file 00009250] add       r0, sp, #4
+00019e54 [file 00009254] bl        #0x7bf10
+00019e58 [file 00009258] mov       r1, r4
+00019e5c [file 0000925c] ldr       r7, [r8]
+00019e60 [file 00009260] mov       r0, r6
+00019e64 [file 00009264] bl        #0x1c258
+00019e68 [file 00009268] mov       r1, sb
+00019e6c [file 0000926c] bl        #0x1bd48
+00019e70 [file 00009270] mov       r4, r0
+00019e74 [file 00009274] ldr       r0, [r4]
+00019e78 [file 00009278] bl        #0x7d71c
+00019e7c [file 0000927c] mov       r0, r7
+00019e80 [file 00009280] bl        #0x7d710
+00019e84 [file 00009284] str       r0, [r4]
+00019e88 [file 00009288] ldr       r0, [r5, #0x6c]
+00019e8c [file 0000928c] ldr       r4, [sp, #4]
+00019e90 [file 00009290] bl        #0x7d71c
+00019e94 [file 00009294] mov       r0, r4
+00019e98 [file 00009298] bl        #0x7d710
+00019e9c [file 0000929c] str       r0, [r5, #0x6c]
+00019ea0 [file 000092a0] add       r0, sp, #4
+00019ea4 [file 000092a4] bl        #0x7be98
+00019ea8 [file 000092a8] b         #0x19eec
+00019eac [file 000092ac] andeq     lr, r8, r8, lsr #6
+00019eb0 [file 000092b0] andeq     lr, r8, r0, lsr #6
+00019eb4 [file 000092b4] ldr       lr, [pc, #0x48]
+00019eb8 [file 000092b8] ldr       r0, [lr]
+00019ebc [file 000092bc] cmp       r0, #0
+00019ec0 [file 000092c0] beq       #0x19eec
+00019ec4 [file 000092c4] ldr       r0, [pc, #0x34] ; 'Failed to find default shoot setup in the array of shoot setups'
+00019ec8 [file 000092c8] mov       r2, #0x1080
+00019ecc [file 000092cc] ldr       r3, [pc, #0x28] ; 'CControlApplication::SetImgProp'
+00019ed0 [file 000092d0] orr       r2, r2, #8
+00019ed4 [file 000092d4] str       r0, [sp]
+00019ed8 [file 000092d8] mov       r0, #3
+00019edc [file 000092dc] ldr       r1, [pc, #0x14] ; 'ControlApplication.cpp'
+00019ee0 [file 000092e0] ldr       fp, [lr]
+00019ee4 [file 000092e4] mov       lr, pc
+00019ee8 [file 000092e8] mov       pc, fp
+00019eec [file 000092ec] mov       r0, sl
+00019ef0 [file 000092f0] add       sp, sp, #0xc
+00019ef4 [file 000092f4] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+00019ef8 [file 000092f8] strdeq    lr, pc, [r8], -r0
+00019efc [file 000092fc] strheq    lr, [r8], -r0
+00019f00 [file 00009300] andeq     lr, r8, r0, lsr r3
+00019f04 [file 00009304] andeq     lr, r8, r4, ror #23

@@ -1,0 +1,185 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+000279e8 [file 00016de8] push      {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+000279ec [file 00016dec] sub       sp, sp, #0x38
+000279f0 [file 00016df0] ldr       r6, [pc, #0x100]
+000279f4 [file 00016df4] mov       r4, r0
+000279f8 [file 00016df8] ldr       r5, [pc, #0xf4] ; 'CProtocolLayer::SetCameraParam'
+000279fc [file 00016dfc] mov       r8, r1
+00027a00 [file 00016e00] ldr       r0, [r6]
+00027a04 [file 00016e04] mov       sb, r2
+00027a08 [file 00016e08] mov       sl, r3
+00027a0c [file 00016e0c] cmp       r0, #0
+00027a10 [file 00016e10] beq       #0x27a3c
+00027a14 [file 00016e14] ldr       r0, [pc, #0xd4] ; '- enter'
+00027a18 [file 00016e18] mov       r2, #0x820
+00027a1c [file 00016e1c] ldr       r1, [pc, #0xc8] ; 'ProtocolLayer.cpp'
+00027a20 [file 00016e20] mov       r3, r5
+00027a24 [file 00016e24] str       r0, [sp]
+00027a28 [file 00016e28] orr       r2, r2, #8
+00027a2c [file 00016e2c] ldr       fp, [r6]
+00027a30 [file 00016e30] mov       r0, #3
+00027a34 [file 00016e34] mov       lr, pc
+00027a38 [file 00016e38] mov       pc, fp
+00027a3c [file 00016e3c] add       r0, sp, #0x24
+00027a40 [file 00016e40] bl        #0x1dff8
+00027a44 [file 00016e44] add       r7, r4, #0x18
+00027a48 [file 00016e48] mov       r0, r7
+00027a4c [file 00016e4c] str       r7, [sp, #0x20]
+00027a50 [file 00016e50] bl        #0x7c99c
+00027a54 [file 00016e54] ldrb      r3, [r4, #0xa]
+00027a58 [file 00016e58] cmp       r3, #0
+00027a5c [file 00016e5c] bne       #0x27afc
+00027a60 [file 00016e60] ldr       r0, [r6]
+00027a64 [file 00016e64] cmp       r0, #0
+00027a68 [file 00016e68] beq       #0x27a94
+00027a6c [file 00016e6c] ldr       r0, [pc, #0x74] ; "Can't perform requsted command. PDA is out of sync"
+00027a70 [file 00016e70] mov       r2, #0x830
+00027a74 [file 00016e74] ldr       r3, [pc, #0x68] ; 'CProtocolLayer::SetCameraParam'
+00027a78 [file 00016e78] orr       r2, r2, #1
+00027a7c [file 00016e7c] str       r0, [sp]
+00027a80 [file 00016e80] mov       r0, #1
+00027a84 [file 00016e84] ldr       r1, [pc, #0x54] ; 'ProtocolLayer.cpp'
+00027a88 [file 00016e88] ldr       fp, [r6]
+00027a8c [file 00016e8c] mov       lr, pc
+00027a90 [file 00016e90] mov       pc, fp
+00027a94 [file 00016e94] mov       r0, r7
+00027a98 [file 00016e98] bl        #0x7c990
+00027a9c [file 00016e9c] add       r0, sp, #0x24
+00027aa0 [file 00016ea0] bl        #0x1e014
+00027aa4 [file 00016ea4] ldr       r0, [r6]
+00027aa8 [file 00016ea8] cmp       r0, #0
+00027aac [file 00016eac] beq       #0x27ad4
+00027ab0 [file 00016eb0] ldr       r0, [pc, #0x24] ; '- leave'
+00027ab4 [file 00016eb4] mov       r3, r5
+00027ab8 [file 00016eb8] ldr       fp, [r6]
+00027abc [file 00016ebc] mov       r2, #0
+00027ac0 [file 00016ec0] str       r0, [sp]
+00027ac4 [file 00016ec4] mov       r1, #0
+00027ac8 [file 00016ec8] mov       r0, #3
+00027acc [file 00016ecc] mov       lr, pc
+00027ad0 [file 00016ed0] mov       pc, fp
+00027ad4 [file 00016ed4] mov       r0, #0
+00027ad8 [file 00016ed8] b         #0x27cb0
+00027adc [file 00016edc] andeq     lr, r8, r0, lsl #22
+00027ae0 [file 00016ee0] andeq     r8, sb, r0, lsl #18
+00027ae4 [file 00016ee4] andeq     r8, sb, r0, asr #17
+00027ae8 [file 00016ee8] andeq     r8, sb, r8, asr r8
+00027aec [file 00016eec] andeq     r8, sb, r4, lsr r8
+00027af0 [file 00016ef0] andeq     lr, r8, r0, lsl fp
+00027af4 [file 00016ef4] strdeq    r8, sb, [sb], -r4
+00027af8 [file 00016ef8] andeq     lr, r8, r4, ror #23
+00027afc [file 00016efc] mov       r3, #3
+00027b00 [file 00016f00] ldr       r5, [pc, #0xf0] ; 'SetCameraParam'
+00027b04 [file 00016f04] str       r3, [sp, #0x18]
+00027b08 [file 00016f08] mov       fp, #1
+00027b0c [file 00016f0c] mov       r3, #0x2ec0
+00027b10 [file 00016f10] strb      fp, [sp, #0x10]
+00027b14 [file 00016f14] orr       r3, r3, #0x20
+00027b18 [file 00016f18] str       sl, [sp, #0xc]
+00027b1c [file 00016f1c] str       r3, [sp, #8]
+00027b20 [file 00016f20] add       r3, sp, #0x24
+00027b24 [file 00016f24] str       r3, [sp, #4]
+00027b28 [file 00016f28] mov       r3, #0xd
+00027b2c [file 00016f2c] str       r3, [sp]
+00027b30 [file 00016f30] mov       r2, r8
+00027b34 [file 00016f34] mov       r3, sb
+00027b38 [file 00016f38] mov       r1, r5
+00027b3c [file 00016f3c] mov       r0, r4
+00027b40 [file 00016f40] bl        #0x2878c
+00027b44 [file 00016f44] mov       r7, r0
+00027b48 [file 00016f48] ands      r3, r7, #0xff
+00027b4c [file 00016f4c] bne       #0x27b90
+00027b50 [file 00016f50] ldr       r3, [sp, #0x18]
+00027b54 [file 00016f54] subs      r3, r3, #1
+00027b58 [file 00016f58] str       r3, [sp, #0x18]
+00027b5c [file 00016f5c] beq       #0x27b90
+00027b60 [file 00016f60] ldrb      r3, [r4, #0xa]
+00027b64 [file 00016f64] cmp       r3, #0
+00027b68 [file 00016f68] beq       #0x27b90
+00027b6c [file 00016f6c] mov       r3, #3
+00027b70 [file 00016f70] strb      fp, [sp]
+00027b74 [file 00016f74] mov       r2, #0
+00027b78 [file 00016f78] mov       r1, #0
+00027b7c [file 00016f7c] mov       r0, r4
+00027b80 [file 00016f80] bl        #0x2450c
+00027b84 [file 00016f84] mov       r7, r0
+00027b88 [file 00016f88] ands      r3, r7, #0xff
+00027b8c [file 00016f8c] bne       #0x27b0c
+00027b90 [file 00016f90] ldr       r0, [sp, #0x20]
+00027b94 [file 00016f94] bl        #0x7c990
+00027b98 [file 00016f98] add       r0, sp, #0x14
+00027b9c [file 00016f9c] bl        #0x7bea4
+00027ba0 [file 00016fa0] ldr       r1, [pc, #0x4c] ; 'error'
+00027ba4 [file 00016fa4] add       r0, sp, #0x1c
+00027ba8 [file 00016fa8] bl        #0x7be8c
+00027bac [file 00016fac] ldr       r3, [sp, #0x2c]
+00027bb0 [file 00016fb0] mov       r4, #0
+00027bb4 [file 00016fb4] cmp       r3, #0
+00027bb8 [file 00016fb8] bls       #0x27c2c
+00027bbc [file 00016fbc] ldr       r3, [sp, #0x28]
+00027bc0 [file 00016fc0] ldr       r0, [sp, #0x1c]
+00027bc4 [file 00016fc4] ldr       r1, [r3, r4, lsl #3]
+00027bc8 [file 00016fc8] bl        #0x7c8e8
+00027bcc [file 00016fcc] movs      r3, r0
+00027bd0 [file 00016fd0] mov       r0, fp
+00027bd4 [file 00016fd4] movne     r0, #0
+00027bd8 [file 00016fd8] ands      r3, r0, #0xff
+00027bdc [file 00016fdc] bne       #0x27bfc
+00027be0 [file 00016fe0] ldr       r3, [sp, #0x2c]
+00027be4 [file 00016fe4] add       r4, r4, #1
+00027be8 [file 00016fe8] cmp       r4, r3
+00027bec [file 00016fec] blo       #0x27bbc
+00027bf0 [file 00016ff0] b         #0x27c2c
+00027bf4 [file 00016ff4] andeq     r8, sb, r4, lsr sb
+00027bf8 [file 00016ff8] andeq     r8, sb, r4, lsr #18
+00027bfc [file 00016ffc] ldr       r3, [sp, #0x28]
+00027c00 [file 00017000] add       r1, sp, #0x14
+00027c04 [file 00017004] add       r3, r3, r4, lsl #3
+00027c08 [file 00017008] ldr       r0, [r3, #4]
+00027c0c [file 0001700c] bl        #0x1f164
+00027c10 [file 00017010] ldr       r0, [sl]
+00027c14 [file 00017014] ldr       r4, [sp, #0x14]
+00027c18 [file 00017018] bl        #0x7d71c
+00027c1c [file 0001701c] mov       r0, r4
+00027c20 [file 00017020] bl        #0x7d710
+00027c24 [file 00017024] mov       r7, #0
+00027c28 [file 00017028] str       r0, [sl]
+00027c2c [file 0001702c] add       r0, sp, #0x1c
+00027c30 [file 00017030] bl        #0x7be98
+00027c34 [file 00017034] ldr       r0, [r6]
+00027c38 [file 00017038] cmp       r0, #0
+00027c3c [file 0001703c] beq       #0x27c6c
+00027c40 [file 00017040] ands      r3, r7, #0xff
+00027c44 [file 00017044] ldr       r1, [pc, #0x78] ; 'ProtocolLayer.cpp'
+00027c48 [file 00017048] ldrne     r0, [pc, #0x70] ; 'true'
+00027c4c [file 0001704c] mov       r2, #0x850
+00027c50 [file 00017050] ldreq     r0, [pc, #0x64] ; 'false'
+00027c54 [file 00017054] ldr       r3, [pc, #0x5c] ; 'CProtocolLayer::SetCameraParam() returned:'
+00027c58 [file 00017058] str       r0, [sp]
+00027c5c [file 0001705c] mov       r0, #3
+00027c60 [file 00017060] ldr       fp, [r6]
+00027c64 [file 00017064] mov       lr, pc
+00027c68 [file 00017068] mov       pc, fp
+00027c6c [file 0001706c] add       r0, sp, #0x14
+00027c70 [file 00017070] bl        #0x7be98
+00027c74 [file 00017074] add       r0, sp, #0x24
+00027c78 [file 00017078] bl        #0x1e014
+00027c7c [file 0001707c] ldr       r0, [r6]
+00027c80 [file 00017080] cmp       r0, #0
+00027c84 [file 00017084] beq       #0x27cac
+00027c88 [file 00017088] ldr       r0, [pc, #-0x1b4] ; '- leave'
+00027c8c [file 0001708c] mov       r2, #0
+00027c90 [file 00017090] ldr       r3, [pc, #-0x1a4] ; 'CProtocolLayer::SetCameraParam'
+00027c94 [file 00017094] mov       r1, #0
+00027c98 [file 00017098] str       r0, [sp]
+00027c9c [file 0001709c] mov       r0, #3
+00027ca0 [file 000170a0] ldr       fp, [r6]
+00027ca4 [file 000170a4] mov       lr, pc
+00027ca8 [file 000170a8] mov       pc, fp
+00027cac [file 000170ac] mov       r0, r7
+00027cb0 [file 000170b0] add       sp, sp, #0x38
+00027cb4 [file 000170b4] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+00027cb8 [file 000170b8] andeq     r8, sb, r8, ror sb
+00027cbc [file 000170bc] andeq     r8, sb, ip, ror #18
+00027cc0 [file 000170c0] andeq     r8, sb, r0, ror #18
+00027cc4 [file 000170c4] andeq     r8, sb, ip, lsr sb

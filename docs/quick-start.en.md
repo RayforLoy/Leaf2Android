@@ -1,16 +1,16 @@
-# Leaf2Android 0.3.0: installation, use and build
+# Leaf2Android 0.3.1: installation, use and build
 
 [简体中文](quick-start.md) · [Project home](../README.en.md) · [Capabilities](implementation-status.en.md) · [Full gap matrix](feature-gap-matrix.en.md)
 
 ## Choose an attachment
 
-**0.3.0 is a pre-release.** Use the [v0.3.0 pre-release](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.0) or local `dist/`. See the [release notes](releases/v0.3.0.en.md) for functionality and verification boundaries. New back operations in this guide are implemented in code; physical effects still need testing.
+**0.3.1 (versionCode 4) is an experimental pre-release; updated 2026-11-14.** Use the [v0.3.1 page](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.1) or local `dist/`; see the [release notes](releases/v0.3.1.en.md). DP-67 writes and transaction changes still need real Valeo testing; settings timeouts are not claimed solved.
 
 | File | Purpose |
 | --- | --- |
-| `Leaf2Android-0.3.0.apk` | Release test app signed with the publisher's release key |
-| `Leaf2Android-0.3.0-debug.apk` | Development APK; signature may differ from release |
-| `Leaf2Android-0.3.0-source.zip` | Buildable source and documentation |
+| `Leaf2Android-0.3.1.apk` | Release test app signed with the publisher's release key |
+| `Leaf2Android-0.3.1-debug.apk` | Development APK; signature may differ from release |
+| `Leaf2Android-0.3.1-source.zip` | Buildable source and documentation |
 | Reference-material archive | Original WiView media, analysis and provenance; not embedded runtime libraries |
 | `*.sha256` / checksum manifest | Corresponding attachment checksums |
 
@@ -21,7 +21,7 @@ The release page lists its actual attachments. App ID: `com.leaf2android`; minim
 Transfer the APK to the phone, open it in a file manager and follow Android's prompt to allow that installation source. With a connected development device:
 
 ```powershell
-adb install -r .\dist\Leaf2Android-0.3.0.apk
+adb install -r .\dist\Leaf2Android-0.3.1.apk
 ```
 
 An in-place update requires the same application ID and signing key. If moving from debug to release produces `INSTALL_FAILED_UPDATE_INCOMPATIBLE`, save needed previews and separately record local notes / marks before uninstalling the old package and installing the new one. Uninstalling removes private app data. Earlier incorrectly named packages have a different ID from `com.leaf2android`; their data is not migrated automatically.
@@ -33,6 +33,10 @@ Publishers must retain the release keystore. Do not commit keys, passwords or a 
 The first launch uses the modern style and follows the system language. Settings allow System, Simplified Chinese or English, independently of Modern / classic PDA. Both styles use the shared photo and session repository and preserve the zoom position.
 
 Only interface text changes language. Actual device names, original paths, user notes and back-provided metadata are not translated. Back-protocol encoding is a separate setting; selecting English does not alter wireless encoding.
+
+## Preview cache and upgrades
+
+Preview cache defaults to **1024 MiB**, with 64 / 256 / 1024 MiB settings. The first upgrade under this rule migrates an old stored 256 MiB value to 1024 while retaining 64. Migration runs once; choosing 256 or another value afterward survives subsequent launches. This stores received previews, without increasing back resolution or providing MOS-original capacity. The laboratory's separate 256 MiB attachment-cache budget is unchanged.
 
 ## Try the offline demo
 
@@ -55,20 +59,42 @@ Open the demo from the shooting page or settings. The app generates and labels i
 
 On 2026-11-11 the user reported working Bluetooth and photo reading on Valeo 22Wi and Aptus 22, without the actual phone / system, firmware, app version or logs. This does not establish a 20-photo sequence or the new writes below. The user also corrected that Aptus II itself has no Bluetooth and is not a current wireless target; the early Aptus II 5 plan is historical. 5.041 PDAInterface is shared code, not evidence of Aptus II Bluetooth hardware. Family branding is not universal compatibility.
 
+The 2026-11-14 Valeo report describes working photo reads followed by settings timeouts, without identifying the changed field. The screenshot shows app-initiated closure after waiting too long; it does not establish an earlier physical disconnect, rejected write or software stability ranking. This release supplies candidate changes awaiting same-device retesting; see the [public-evidence review](valeo-connection-research.en.md).
+
 Classic Aptus **4.701** has been independently checked as primary evidence, containing the Aptus 22 model and nine PDA command classes; see the [firmware Bluetooth survey](firmware-bluetooth-survey.en.md). It is not a dedicated Aptus 22 flash image or proof of installed user firmware. 5.041 settings are used only when the device's Sync supplies that structure.
 
 ## Configure shooting from the Back page
 
 After connecting, open **Back** in the bottom navigation and refresh Sync. Inspect current settings and device-provided choices. Controls depend on the actual dialect, complete configuration and advertised options; an absent control is not proof that every firmware in the family lacks support. The first ISO option is not necessarily the current value. Do not borrow another model's ISO steps.
 
-- **Legacy dialect:** current ISO belongs to the full `ShootSetup` matched by `DefaultShootSetup`. Select an existing back setup or edit the current one. Preserve untouched values and submit a complete setup; this is not a universal `SetCameraParam ISO="…"` writer.
+- **WiView legacy:** current ISO belongs to the complete `ShootSetup` matched by `DefaultShootSetup`. Select an existing preset or edit current fields while retaining the rest; this is not a universal independent ISO writer. The smaller DP-67 format is described below.
 - **5.041 dialect:** recognized `Sync.CameraSettings` enables independent ISO, Orientation, CameraType, SensorCrop, FileCompression, Prefix and ShootingFolder writes. SensorCrop accepts only device-advertised name-only choices. Compression accepts advertised `None` / `Lossless`, separate from legacy Nearly Lossless.
 - ISO choices come from the device, without hardcoded steps. Read again before writing to avoid overwriting newer back changes with a stale complete setup. Request Sync afterward and compare the complete expected configuration, untouched fields and required globals; an ISO-only change does not replace full verification.
 - An ambiguous / incomplete setup, unclear allowed value, unsafe encoding or mismatching read-back must stop the operation or report it unconfirmed, not fill missing fields with invented defaults.
 
-The legacy scope covers ISO, image quality, framing, toning, Light, sharpening, input / output ICC, camera type, ICCFlag, filename prefix, shooting folder, ordinary / Nearly Lossless compression with NLCompression, orientation and Color. Light is a device-provided illuminant / white-balance choice, not an arbitrary Kelvin / tint value. Selecting an existing setup is not restoring FactorySettings.
+WiView legacy covers ISO, quality, framing, toning, Light, sharpening, input / output ICC, camera type, ICCFlag, prefix, folder, ordinary / Nearly Lossless compression with NLCompression, orientation and Color. This is not the DP-67 field list. Light uses device choices rather than arbitrary Kelvin / tint; preset selection is not FactorySettings.
 
 Independent 5.041 Prefix edits are capped at 23 UTF-16 code units and cannot exceed the current known prefix's UTF-8 byte length. This is a conservative implementation limit, not a manufacturer hardware specification. The shooting folder must exist; changing that setting does not implicitly create it.
+
+## Select DP-67 / WiView compatibility
+
+While disconnected, choose **Shooting-setup compatibility** in settings:
+
+| Option | Behavior |
+| --- | --- |
+| Automatic (AUTO) | Use DP-67 when the Bluetooth name contains Valeo and Sync supplies shootsetup; otherwise retain the WiView path |
+| WiView / Aptus (WIVIEW) | Explicit WiView shooting-setup path; 5.041 independent settings still require the actual Sync structure |
+| DP-67 / Valeo (DP67) | Explicit smaller DP-67 field set, including renamed backs not matched by AUTO; incomplete settings still refuse writing |
+
+This changes shooting-setup serialization, not Bluetooth pairing, SPP services or hardware, and does not change CEVersion. AUTO is a reviewable software rule, not verified universal model detection. DP-67 control refresh requests Sync and CurrentTime only, without extra automatic getters; research reads can be sent explicitly in the laboratory.
+
+The **12 core DP-67 fields** are SetupName, ShootingFolder, ISO, ImageQuality, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, CameraType and ICCFlag. Prefix is retained only if already present in the current setup; missing fields are not invented as empty values. Use device choices and preserve untouched values. Incomplete structures, changed state or unsafe encoding stop the write.
+
+**DP-67 omits WiView FileCompression / NLCompression, Orientation and Color; the shooting-settings panel hides those write fields.** Users can still probe them explicitly in the laboratory, without assuming verified support.
+
+Editing an original preset submits to `original-name.1`. The original DP-67 name rule is retained: an existing name containing `.1` keeps its modified slot. Confirmation shows the destination and warns that an existing same-name slot will be updated. Read-back must confirm values, new active name and unchanged original preset. Updating a modified slot is not a backup or automatic undo.
+
+Selecting an original preset sends only DefaultShootSetup; selecting an existing `.1` modified setup sends complete DP-67 CSV. Pre-Sync, set and read-back are one queued operation, excluding automatic GetImage while notification Ack remains available. The original 12-second × 3 retry strategy is not copied: writes do not retry automatically and timeout still closes the stream. See [DP-67 analysis](dp67-analysis.en.md) for static evidence and package provenance.
 
 ## Image-processing settings
 
@@ -90,7 +116,7 @@ Strict Base64 / UTF-8 XMP decoding reads GetPictureParams's `xmp_tag` header. Go
 
 ## Back folders and photos
 
-The 0.3.0 scope is folder creation, empty-folder deletion, folder rename, photo deletion and internal copy / move. It does not create arbitrary files or transfer complete MOS originals to the phone.
+The 0.3.1 scope is folder creation, empty-folder deletion, folder rename, photo deletion and internal copy / move. It does not create arbitrary files or transfer complete MOS originals to the phone.
 
 1. Refresh folders and select the exact back path. Copy / move also needs a destination folder on the back.
 2. Review source, destination and action. Existing destinations must not be silently overwritten; non-empty folders are not treated as empty.
@@ -168,6 +194,10 @@ A `.mos` filename does not turn a GetImage preview into a complete original. Com
 For an expired bond or wrong PIN, forget the old bond in Android settings and pair again. Ensure another client is not occupying the back. Try insecure RFCOMM only if required by old firmware; it cannot promise to bypass Android link requirements.
 
 Host-side waits are approximately 35 seconds for Bluetooth, 20 for ordinary commands and 60 for images. These are implementation settings, not measured back specifications. Timeouts close the stream and require manual reconnect to avoid assigning late replies to another photo.
+
+New timeout summaries identify the unanswered request tag and attribute names without values. Stage logs distinguish pre-Sync, write Ack and read-back. This is more precise than a generic disconnect message but does not by itself prove absent replies, parser failure or an earlier physical loss.
+
+Automatic CameraShootSetupChangeNotification refresh now preserves the last manual operation's error / notice, so background Sync does not erase success or read-back mismatch. A new manual operation clears the previous result. This fixes overwritten app display / verification results, not an established real-back disconnection cause.
 
 Settings can display or export logs. The system pairing PIN is not recorded, but paths, camera properties and user metadata may be present. Inspect before sharing. Reports should include app version, phone system, exact back / firmware, steps and sanitized logs. Do not publish signing material or private photos.
 

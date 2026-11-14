@@ -1,0 +1,240 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+00019920 [file 00008d20] mov       ip, sp
+00019924 [file 00008d24] push      {r0, r1, r2, r3}
+00019928 [file 00008d28] push      {r4, r5, r6, r7, r8, fp, ip, lr}
+0001992c [file 00008d2c] sub       sp, sp, #4
+00019930 [file 00008d30] mvn       r8, #0
+00019934 [file 00008d34] str       r1, [sp, #0x28]
+00019938 [file 00008d38] mov       r7, r0
+0001993c [file 00008d3c] mov       r6, r8
+00019940 [file 00008d40] mov       r4, #0
+00019944 [file 00008d44] ldr       r3, [r7, #0x148]
+00019948 [file 00008d48] cmp       r4, r3
+0001994c [file 00008d4c] bge       #0x19984
+00019950 [file 00008d50] mov       r1, r4
+00019954 [file 00008d54] ldr       fp, [sp, #0x28]
+00019958 [file 00008d58] add       r0, r7, #0x144
+0001995c [file 00008d5c] bl        #0x1c258
+00019960 [file 00008d60] mov       r1, #0
+00019964 [file 00008d64] bl        #0x1bd48
+00019968 [file 00008d68] mov       r1, fp
+0001996c [file 00008d6c] ldr       r0, [r0]
+00019970 [file 00008d70] bl        #0x7ca8c
+00019974 [file 00008d74] movs      r3, r0
+00019978 [file 00008d78] addne     r4, r4, #1
+0001997c [file 00008d7c] bne       #0x19944
+00019980 [file 00008d80] mov       r6, r4
+00019984 [file 00008d84] mov       r5, r8
+00019988 [file 00008d88] cmp       r6, #0
+0001998c [file 00008d8c] bmi       #0x19cc4
+00019990 [file 00008d90] ldr       r2, [pc, #0x340] ; wide '.1'
+00019994 [file 00008d94] add       r1, sp, #0x28
+00019998 [file 00008d98] add       r0, sp, #0
+0001999c [file 00008d9c] bl        #0x7bfac
+000199a0 [file 00008da0] mov       r5, #0
+000199a4 [file 00008da4] ldr       r3, [r7, #0x148]
+000199a8 [file 00008da8] cmp       r5, r3
+000199ac [file 00008dac] bge       #0x199e8
+000199b0 [file 00008db0] mov       r1, r5
+000199b4 [file 00008db4] ldr       fp, [sp]
+000199b8 [file 00008db8] add       r0, r7, #0x144
+000199bc [file 00008dbc] bl        #0x1c258
+000199c0 [file 00008dc0] mov       r1, #0
+000199c4 [file 00008dc4] bl        #0x1bd48
+000199c8 [file 00008dc8] mov       r1, fp
+000199cc [file 00008dcc] ldr       r0, [r0]
+000199d0 [file 00008dd0] bl        #0x7ca8c
+000199d4 [file 00008dd4] movs      r3, r0
+000199d8 [file 00008dd8] addne     r5, r5, #1
+000199dc [file 00008ddc] bne       #0x199a4
+000199e0 [file 00008de0] cmp       r5, r8
+000199e4 [file 00008de4] bne       #0x19a00
+000199e8 [file 00008de8] ldr       r0, [r7, #0x148]
+000199ec [file 00008dec] add       r4, r0, #1
+000199f0 [file 00008df0] mov       r1, r4
+000199f4 [file 00008df4] add       r0, r7, #0x144
+000199f8 [file 00008df8] bl        #0x1c144
+000199fc [file 00008dfc] sub       r5, r4, #1
+00019a00 [file 00008e00] add       r4, r7, #0x144
+00019a04 [file 00008e04] mov       r1, r5
+00019a08 [file 00008e08] mov       r0, r4
+00019a0c [file 00008e0c] bl        #0x1c258
+00019a10 [file 00008e10] mov       r2, #1
+00019a14 [file 00008e14] mov       r1, #0xd
+00019a18 [file 00008e18] bl        #0x1bbb4
+00019a1c [file 00008e1c] mov       r1, r5
+00019a20 [file 00008e20] ldr       r8, [sp]
+00019a24 [file 00008e24] mov       r0, r4
+00019a28 [file 00008e28] bl        #0x1c258
+00019a2c [file 00008e2c] mov       r1, #0
+00019a30 [file 00008e30] bl        #0x1bd48
+00019a34 [file 00008e34] mov       r7, r0
+00019a38 [file 00008e38] ldr       r0, [r7]
+00019a3c [file 00008e3c] bl        #0x7d71c
+00019a40 [file 00008e40] mov       r0, r8
+00019a44 [file 00008e44] bl        #0x7d710
+00019a48 [file 00008e48] mov       r1, r6
+00019a4c [file 00008e4c] str       r0, [r7]
+00019a50 [file 00008e50] mov       r0, r4
+00019a54 [file 00008e54] bl        #0x1c258
+00019a58 [file 00008e58] mov       r1, #1
+00019a5c [file 00008e5c] bl        #0x1bd48
+00019a60 [file 00008e60] mov       r1, r5
+00019a64 [file 00008e64] mov       fp, r0
+00019a68 [file 00008e68] mov       r0, r4
+00019a6c [file 00008e6c] bl        #0x1c258
+00019a70 [file 00008e70] mov       r1, #1
+00019a74 [file 00008e74] bl        #0x1bd48
+00019a78 [file 00008e78] mov       r1, fp
+00019a7c [file 00008e7c] bl        #0x1c654
+00019a80 [file 00008e80] mov       r1, r6
+00019a84 [file 00008e84] mov       r0, r4
+00019a88 [file 00008e88] bl        #0x1c258
+00019a8c [file 00008e8c] mov       r1, #2
+00019a90 [file 00008e90] bl        #0x1bd48
+00019a94 [file 00008e94] mov       r1, r5
+00019a98 [file 00008e98] mov       fp, r0
+00019a9c [file 00008e9c] mov       r0, r4
+00019aa0 [file 00008ea0] bl        #0x1c258
+00019aa4 [file 00008ea4] mov       r1, #2
+00019aa8 [file 00008ea8] bl        #0x1bd48
+00019aac [file 00008eac] mov       r1, fp
+00019ab0 [file 00008eb0] bl        #0x1c654
+00019ab4 [file 00008eb4] mov       r1, r6
+00019ab8 [file 00008eb8] mov       r0, r4
+00019abc [file 00008ebc] bl        #0x1c258
+00019ac0 [file 00008ec0] mov       r1, #3
+00019ac4 [file 00008ec4] bl        #0x1bd48
+00019ac8 [file 00008ec8] mov       r1, r5
+00019acc [file 00008ecc] mov       fp, r0
+00019ad0 [file 00008ed0] mov       r0, r4
+00019ad4 [file 00008ed4] bl        #0x1c258
+00019ad8 [file 00008ed8] mov       r1, #3
+00019adc [file 00008edc] bl        #0x1bd48
+00019ae0 [file 00008ee0] mov       r1, fp
+00019ae4 [file 00008ee4] bl        #0x1c654
+00019ae8 [file 00008ee8] mov       r1, r6
+00019aec [file 00008eec] mov       r0, r4
+00019af0 [file 00008ef0] bl        #0x1c258
+00019af4 [file 00008ef4] mov       r1, #4
+00019af8 [file 00008ef8] bl        #0x1bd48
+00019afc [file 00008efc] mov       r1, r5
+00019b00 [file 00008f00] mov       fp, r0
+00019b04 [file 00008f04] mov       r0, r4
+00019b08 [file 00008f08] bl        #0x1c258
+00019b0c [file 00008f0c] mov       r1, #4
+00019b10 [file 00008f10] bl        #0x1bd48
+00019b14 [file 00008f14] mov       r1, fp
+00019b18 [file 00008f18] bl        #0x1c654
+00019b1c [file 00008f1c] mov       r1, r6
+00019b20 [file 00008f20] mov       r0, r4
+00019b24 [file 00008f24] bl        #0x1c258
+00019b28 [file 00008f28] mov       r1, #5
+00019b2c [file 00008f2c] bl        #0x1bd48
+00019b30 [file 00008f30] mov       r1, r5
+00019b34 [file 00008f34] mov       fp, r0
+00019b38 [file 00008f38] mov       r0, r4
+00019b3c [file 00008f3c] bl        #0x1c258
+00019b40 [file 00008f40] mov       r1, #5
+00019b44 [file 00008f44] bl        #0x1bd48
+00019b48 [file 00008f48] mov       r1, fp
+00019b4c [file 00008f4c] bl        #0x1c654
+00019b50 [file 00008f50] mov       r1, r6
+00019b54 [file 00008f54] mov       r0, r4
+00019b58 [file 00008f58] bl        #0x1c258
+00019b5c [file 00008f5c] mov       r1, #6
+00019b60 [file 00008f60] bl        #0x1bd48
+00019b64 [file 00008f64] mov       r1, r5
+00019b68 [file 00008f68] mov       fp, r0
+00019b6c [file 00008f6c] mov       r0, r4
+00019b70 [file 00008f70] bl        #0x1c258
+00019b74 [file 00008f74] mov       r1, #6
+00019b78 [file 00008f78] bl        #0x1bd48
+00019b7c [file 00008f7c] mov       r1, fp
+00019b80 [file 00008f80] bl        #0x1c654
+00019b84 [file 00008f84] mov       r1, r6
+00019b88 [file 00008f88] mov       r0, r4
+00019b8c [file 00008f8c] bl        #0x1c258
+00019b90 [file 00008f90] mov       r1, #7
+00019b94 [file 00008f94] bl        #0x1bd48
+00019b98 [file 00008f98] mov       r1, r5
+00019b9c [file 00008f9c] mov       fp, r0
+00019ba0 [file 00008fa0] mov       r0, r4
+00019ba4 [file 00008fa4] bl        #0x1c258
+00019ba8 [file 00008fa8] mov       r1, #7
+00019bac [file 00008fac] bl        #0x1bd48
+00019bb0 [file 00008fb0] mov       r1, fp
+00019bb4 [file 00008fb4] bl        #0x1c654
+00019bb8 [file 00008fb8] mov       r1, r6
+00019bbc [file 00008fbc] mov       r0, r4
+00019bc0 [file 00008fc0] bl        #0x1c258
+00019bc4 [file 00008fc4] mov       r1, #8
+00019bc8 [file 00008fc8] bl        #0x1bd48
+00019bcc [file 00008fcc] mov       r1, r5
+00019bd0 [file 00008fd0] mov       fp, r0
+00019bd4 [file 00008fd4] mov       r0, r4
+00019bd8 [file 00008fd8] bl        #0x1c258
+00019bdc [file 00008fdc] mov       r1, #8
+00019be0 [file 00008fe0] bl        #0x1bd48
+00019be4 [file 00008fe4] mov       r1, fp
+00019be8 [file 00008fe8] bl        #0x1c654
+00019bec [file 00008fec] mov       r1, r6
+00019bf0 [file 00008ff0] mov       r0, r4
+00019bf4 [file 00008ff4] bl        #0x1c258
+00019bf8 [file 00008ff8] mov       r1, #9
+00019bfc [file 00008ffc] bl        #0x1bd48
+00019c00 [file 00009000] mov       r1, r5
+00019c04 [file 00009004] mov       fp, r0
+00019c08 [file 00009008] mov       r0, r4
+00019c0c [file 0000900c] bl        #0x1c258
+00019c10 [file 00009010] mov       r1, #9
+00019c14 [file 00009014] bl        #0x1bd48
+00019c18 [file 00009018] mov       r1, fp
+00019c1c [file 0000901c] bl        #0x1c654
+00019c20 [file 00009020] mov       r1, r6
+00019c24 [file 00009024] mov       r0, r4
+00019c28 [file 00009028] bl        #0x1c258
+00019c2c [file 0000902c] mov       r1, #0xb
+00019c30 [file 00009030] bl        #0x1bd48
+00019c34 [file 00009034] mov       r1, r5
+00019c38 [file 00009038] mov       fp, r0
+00019c3c [file 0000903c] mov       r0, r4
+00019c40 [file 00009040] bl        #0x1c258
+00019c44 [file 00009044] mov       r1, #0xb
+00019c48 [file 00009048] bl        #0x1bd48
+00019c4c [file 0000904c] mov       r1, fp
+00019c50 [file 00009050] bl        #0x1c654
+00019c54 [file 00009054] mov       r1, r6
+00019c58 [file 00009058] mov       r0, r4
+00019c5c [file 0000905c] bl        #0x1c258
+00019c60 [file 00009060] mov       r1, #0xc
+00019c64 [file 00009064] bl        #0x1bd48
+00019c68 [file 00009068] mov       r1, r5
+00019c6c [file 0000906c] mov       fp, r0
+00019c70 [file 00009070] mov       r0, r4
+00019c74 [file 00009074] bl        #0x1c258
+00019c78 [file 00009078] mov       r1, #0xc
+00019c7c [file 0000907c] bl        #0x1bd48
+00019c80 [file 00009080] mov       r1, fp
+00019c84 [file 00009084] bl        #0x1c654
+00019c88 [file 00009088] mov       r1, r6
+00019c8c [file 0000908c] mov       r0, r4
+00019c90 [file 00009090] bl        #0x1c258
+00019c94 [file 00009094] mov       r1, #0xa
+00019c98 [file 00009098] bl        #0x1bd48
+00019c9c [file 0000909c] mov       r1, r5
+00019ca0 [file 000090a0] mov       fp, r0
+00019ca4 [file 000090a4] mov       r0, r4
+00019ca8 [file 000090a8] bl        #0x1c258
+00019cac [file 000090ac] mov       r1, #0xa
+00019cb0 [file 000090b0] bl        #0x1bd48
+00019cb4 [file 000090b4] mov       r1, fp
+00019cb8 [file 000090b8] bl        #0x1c654
+00019cbc [file 000090bc] add       r0, sp, #0
+00019cc0 [file 000090c0] bl        #0x7be98
+00019cc4 [file 000090c4] add       r0, sp, #0x28
+00019cc8 [file 000090c8] bl        #0x7be98
+00019ccc [file 000090cc] mov       r0, r5
+00019cd0 [file 000090d0] add       sp, sp, #4
+00019cd4 [file 000090d4] ldm       sp, {r4, r5, r6, r7, r8, fp, sp, pc}
+00019cd8 [file 000090d8] andeq     lr, r8, r8, lsl r3

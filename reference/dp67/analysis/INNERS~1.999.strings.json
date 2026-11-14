@@ -1,0 +1,158 @@
+[
+  {
+    "offset": "0xe88",
+    "va": "0x102088",
+    "encoding": "ascii",
+    "text": "COREDLL.dll"
+  },
+  {
+    "offset": "0x1080",
+    "va": "0x103080",
+    "encoding": "utf-16le",
+    "text": "Leaf DP-67"
+  },
+  {
+    "offset": "0x109c",
+    "va": "0x10309c",
+    "encoding": "utf-16le",
+    "text": "Leaf DP-67 "
+  },
+  {
+    "offset": "0x10b8",
+    "va": "0x1030b8",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Apps\\Creo Leaf DP-67"
+  },
+  {
+    "offset": "0x10f8",
+    "va": "0x1030f8",
+    "encoding": "utf-16le",
+    "text": "\\*.*"
+  },
+  {
+    "offset": "0x1114",
+    "va": "0x103114",
+    "encoding": "utf-16le",
+    "text": "BtStack.dll"
+  },
+  {
+    "offset": "0x112c",
+    "va": "0x10312c",
+    "encoding": "utf-16le",
+    "text": "LeafLauncher.dll"
+  },
+  {
+    "offset": "0x1150",
+    "va": "0x103150",
+    "encoding": "utf-16le",
+    "text": "Leaf DP-67.exe"
+  },
+  {
+    "offset": "0x1170",
+    "va": "0x103170",
+    "encoding": "utf-16le",
+    "text": "BtSdkCE30.dll"
+  },
+  {
+    "offset": "0x118c",
+    "va": "0x10318c",
+    "encoding": "utf-16le",
+    "text": "BtCoreIf.dll"
+  },
+  {
+    "offset": "0x11a8",
+    "va": "0x1031a8",
+    "encoding": "utf-16le",
+    "text": "Software\\Microsoft\\Today\\Items"
+  },
+  {
+    "offset": "0x11e8",
+    "va": "0x1031e8",
+    "encoding": "utf-16le",
+    "text": "Leaf DP-67"
+  },
+  {
+    "offset": "0x1200",
+    "va": "0x103200",
+    "encoding": "utf-16le",
+    "text": "InstallDir"
+  },
+  {
+    "offset": "0x1218",
+    "va": "0x103218",
+    "encoding": "utf-16le",
+    "text": "\\Leaf DP-67"
+  },
+  {
+    "offset": "0x1230",
+    "va": "0x103230",
+    "encoding": "utf-16le",
+    "text": "\\*.*"
+  },
+  {
+    "offset": "0x124c",
+    "va": "0x10324c",
+    "encoding": "utf-16le",
+    "text": "InstallDir"
+  },
+  {
+    "offset": "0x1264",
+    "va": "0x103264",
+    "encoding": "utf-16le",
+    "text": "\\Leaf DP-67"
+  },
+  {
+    "offset": "0x127c",
+    "va": "0x10327c",
+    "encoding": "utf-16le",
+    "text": "\\Leaf DP-67.exe"
+  },
+  {
+    "offset": "0x129c",
+    "va": "0x10329c",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Creo"
+  },
+  {
+    "offset": "0x12b8",
+    "va": "0x1032b8",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Creo"
+  },
+  {
+    "offset": "0x12d4",
+    "va": "0x1032d4",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Creo\\Leaf DP-67"
+  },
+  {
+    "offset": "0x1650",
+    "va": "0x105050",
+    "encoding": "ascii",
+    "text": "InnerSetup.dll"
+  },
+  {
+    "offset": "0x165f",
+    "va": "0x10505f",
+    "encoding": "ascii",
+    "text": "Install_Exit"
+  },
+  {
+    "offset": "0x166c",
+    "va": "0x10506c",
+    "encoding": "ascii",
+    "text": "Install_Init"
+  },
+  {
+    "offset": "0x1679",
+    "va": "0x105079",
+    "encoding": "ascii",
+    "text": "Uninstall_Exit"
+  },
+  {
+    "offset": "0x1688",
+    "va": "0x105088",
+    "encoding": "ascii",
+    "text": "Uninstall_Init"
+  }
+]

@@ -1,0 +1,5972 @@
+[
+  {
+    "offset": "0x1dc5e",
+    "va": "0x11f05e",
+    "encoding": "ascii",
+    "text": "BTM_SetLinkSuperTout"
+  },
+  {
+    "offset": "0x1dc76",
+    "va": "0x11f076",
+    "encoding": "ascii",
+    "text": "BTM_CreateSco"
+  },
+  {
+    "offset": "0x1dc86",
+    "va": "0x11f086",
+    "encoding": "ascii",
+    "text": "BTM_RemoveSco"
+  },
+  {
+    "offset": "0x1dc96",
+    "va": "0x11f096",
+    "encoding": "ascii",
+    "text": "BTM_ScoCommand"
+  },
+  {
+    "offset": "0x1dca8",
+    "va": "0x11f0a8",
+    "encoding": "ascii",
+    "text": "BTM_SetDiscoverability"
+  },
+  {
+    "offset": "0x1dcc2",
+    "va": "0x11f0c2",
+    "encoding": "ascii",
+    "text": "BTM_SetConnectability"
+  },
+  {
+    "offset": "0x1dcda",
+    "va": "0x11f0da",
+    "encoding": "ascii",
+    "text": "OBEX_CloseReq"
+  },
+  {
+    "offset": "0x1dcea",
+    "va": "0x11f0ea",
+    "encoding": "ascii",
+    "text": "OBEX_ClientUnregister"
+  },
+  {
+    "offset": "0x1dd02",
+    "va": "0x11f102",
+    "encoding": "ascii",
+    "text": "OBEX_OpenReq"
+  },
+  {
+    "offset": "0x1dd12",
+    "va": "0x11f112",
+    "encoding": "ascii",
+    "text": "OBEX_ClientRegister"
+  },
+  {
+    "offset": "0x1dd28",
+    "va": "0x11f128",
+    "encoding": "ascii",
+    "text": "OBEX_SetpathReq"
+  },
+  {
+    "offset": "0x1dd3a",
+    "va": "0x11f13a",
+    "encoding": "ascii",
+    "text": "OBEX_PutReq"
+  },
+  {
+    "offset": "0x1dd48",
+    "va": "0x11f148",
+    "encoding": "ascii",
+    "text": "OBEX_GetReq"
+  },
+  {
+    "offset": "0x1dd56",
+    "va": "0x11f156",
+    "encoding": "ascii",
+    "text": "OBEX_AbortReq"
+  },
+  {
+    "offset": "0x1dd66",
+    "va": "0x11f166",
+    "encoding": "ascii",
+    "text": "OBEX_GetAttachedBDAddr"
+  },
+  {
+    "offset": "0x1dd80",
+    "va": "0x11f180",
+    "encoding": "ascii",
+    "text": "OBEX_ServerRegister"
+  },
+  {
+    "offset": "0x1dd96",
+    "va": "0x11f196",
+    "encoding": "ascii",
+    "text": "OBEX_ServerUnregister"
+  },
+  {
+    "offset": "0x1ddae",
+    "va": "0x11f1ae",
+    "encoding": "ascii",
+    "text": "OBEX_CloseCnf"
+  },
+  {
+    "offset": "0x1ddbe",
+    "va": "0x11f1be",
+    "encoding": "ascii",
+    "text": "OBEX_OpenCnf"
+  },
+  {
+    "offset": "0x1ddce",
+    "va": "0x11f1ce",
+    "encoding": "ascii",
+    "text": "OBEX_SetpathCnf"
+  },
+  {
+    "offset": "0x1dde0",
+    "va": "0x11f1e0",
+    "encoding": "ascii",
+    "text": "OBEX_PutCnf"
+  },
+  {
+    "offset": "0x1ddee",
+    "va": "0x11f1ee",
+    "encoding": "ascii",
+    "text": "OBEX_CreateCnf"
+  },
+  {
+    "offset": "0x1de00",
+    "va": "0x11f200",
+    "encoding": "ascii",
+    "text": "OBEX_DeleteCnf"
+  },
+  {
+    "offset": "0x1de12",
+    "va": "0x11f212",
+    "encoding": "ascii",
+    "text": "OBEX_GetCnf"
+  },
+  {
+    "offset": "0x1de20",
+    "va": "0x11f220",
+    "encoding": "ascii",
+    "text": "OBEX_AbortCnf"
+  },
+  {
+    "offset": "0x1de30",
+    "va": "0x11f230",
+    "encoding": "ascii",
+    "text": "obex_convert_from_8601"
+  },
+  {
+    "offset": "0x1de4a",
+    "va": "0x11f24a",
+    "encoding": "ascii",
+    "text": "GKI_freebuf"
+  },
+  {
+    "offset": "0x1de58",
+    "va": "0x11f258",
+    "encoding": "ascii",
+    "text": "obex_convert_to_8601"
+  },
+  {
+    "offset": "0x1de70",
+    "va": "0x11f270",
+    "encoding": "ascii",
+    "text": "L2CA_ConfigReq"
+  },
+  {
+    "offset": "0x1de82",
+    "va": "0x11f282",
+    "encoding": "ascii",
+    "text": "L2CA_ConnectRsp"
+  },
+  {
+    "offset": "0x1de94",
+    "va": "0x11f294",
+    "encoding": "ascii",
+    "text": "L2CA_ConnectReq"
+  },
+  {
+    "offset": "0x1dea6",
+    "va": "0x11f2a6",
+    "encoding": "ascii",
+    "text": "L2CA_DisconnectReq"
+  },
+  {
+    "offset": "0x1debc",
+    "va": "0x11f2bc",
+    "encoding": "ascii",
+    "text": "L2CA_DataWrite"
+  },
+  {
+    "offset": "0x1dece",
+    "va": "0x11f2ce",
+    "encoding": "ascii",
+    "text": "GKI_getpoolbuf"
+  },
+  {
+    "offset": "0x1dee0",
+    "va": "0x11f2e0",
+    "encoding": "ascii",
+    "text": "L2CA_GetConnectionStats"
+  },
+  {
+    "offset": "0x1defa",
+    "va": "0x11f2fa",
+    "encoding": "ascii",
+    "text": "L2CA_ConfigRsp"
+  },
+  {
+    "offset": "0x1df0c",
+    "va": "0x11f30c",
+    "encoding": "ascii",
+    "text": "L2CA_DisconnectRsp"
+  },
+  {
+    "offset": "0x1df22",
+    "va": "0x11f322",
+    "encoding": "ascii",
+    "text": "BTM_ReleaseSecurityIndex"
+  },
+  {
+    "offset": "0x1df3e",
+    "va": "0x11f33e",
+    "encoding": "ascii",
+    "text": "L2CA_FreePSM"
+  },
+  {
+    "offset": "0x1df4e",
+    "va": "0x11f34e",
+    "encoding": "ascii",
+    "text": "L2CA_AllocatePSM"
+  },
+  {
+    "offset": "0x1df62",
+    "va": "0x11f362",
+    "encoding": "ascii",
+    "text": "L2CA_Register"
+  },
+  {
+    "offset": "0x1df72",
+    "va": "0x11f372",
+    "encoding": "ascii",
+    "text": "L2CA_Deregister"
+  },
+  {
+    "offset": "0x1df84",
+    "va": "0x11f384",
+    "encoding": "ascii",
+    "text": "BTM_SetSecurityLevel"
+  },
+  {
+    "offset": "0x1df9c",
+    "va": "0x11f39c",
+    "encoding": "ascii",
+    "text": "BTM_AllocateSecurityIndex"
+  },
+  {
+    "offset": "0x1dfb8",
+    "va": "0x11f3b8",
+    "encoding": "ascii",
+    "text": "RFCOMM_FreeSCN"
+  },
+  {
+    "offset": "0x1dfca",
+    "va": "0x11f3ca",
+    "encoding": "ascii",
+    "text": "RFCOMM_AllocateSCN"
+  },
+  {
+    "offset": "0x1dfe0",
+    "va": "0x11f3e0",
+    "encoding": "ascii",
+    "text": "RFCOMM_RemoveConnection"
+  },
+  {
+    "offset": "0x1dffa",
+    "va": "0x11f3fa",
+    "encoding": "ascii",
+    "text": "PORT_SetEventMask"
+  },
+  {
+    "offset": "0x1e00e",
+    "va": "0x11f40e",
+    "encoding": "ascii",
+    "text": "PORT_SetEventCallback"
+  },
+  {
+    "offset": "0x1e026",
+    "va": "0x11f426",
+    "encoding": "ascii",
+    "text": "RFCOMM_CreateConnection"
+  },
+  {
+    "offset": "0x1e040",
+    "va": "0x11f440",
+    "encoding": "ascii",
+    "text": "PORT_CheckConnection"
+  },
+  {
+    "offset": "0x1e058",
+    "va": "0x11f458",
+    "encoding": "ascii",
+    "text": "PORT_FlowControl"
+  },
+  {
+    "offset": "0x1e06c",
+    "va": "0x11f46c",
+    "encoding": "ascii",
+    "text": "PORT_Control"
+  },
+  {
+    "offset": "0x1e07c",
+    "va": "0x11f47c",
+    "encoding": "ascii",
+    "text": "PORT_GetModemStatus"
+  },
+  {
+    "offset": "0x1e092",
+    "va": "0x11f492",
+    "encoding": "ascii",
+    "text": "PORT_SendError"
+  },
+  {
+    "offset": "0x1e0a4",
+    "va": "0x11f4a4",
+    "encoding": "ascii",
+    "text": "PORT_Purge"
+  },
+  {
+    "offset": "0x1e0b2",
+    "va": "0x11f4b2",
+    "encoding": "ascii",
+    "text": "PORT_WriteData"
+  },
+  {
+    "offset": "0x1e0c4",
+    "va": "0x11f4c4",
+    "encoding": "ascii",
+    "text": "PORT_GetConnectionStats"
+  },
+  {
+    "offset": "0x1e0de",
+    "va": "0x11f4de",
+    "encoding": "ascii",
+    "text": "PORT_ReadData"
+  },
+  {
+    "offset": "0x1e0ee",
+    "va": "0x11f4ee",
+    "encoding": "ascii",
+    "text": "SDP_DeleteRecord"
+  },
+  {
+    "offset": "0x1e102",
+    "va": "0x11f502",
+    "encoding": "ascii",
+    "text": "SDP_AddSequence"
+  },
+  {
+    "offset": "0x1e114",
+    "va": "0x11f514",
+    "encoding": "ascii",
+    "text": "SDP_CreateRecordForService"
+  },
+  {
+    "offset": "0x1e132",
+    "va": "0x11f532",
+    "encoding": "ascii",
+    "text": "SDP_AddAttribute"
+  },
+  {
+    "offset": "0x1e146",
+    "va": "0x11f546",
+    "encoding": "ascii",
+    "text": "SDP_AddProfileDescriptorList"
+  },
+  {
+    "offset": "0x1e166",
+    "va": "0x11f566",
+    "encoding": "ascii",
+    "text": "SDP_AddProtocolList"
+  },
+  {
+    "offset": "0x1e17c",
+    "va": "0x11f57c",
+    "encoding": "ascii",
+    "text": "SDP_AddAdditionProtoLists"
+  },
+  {
+    "offset": "0x1e198",
+    "va": "0x11f598",
+    "encoding": "ascii",
+    "text": "SDP_AddLanguageBaseAttrIDList"
+  },
+  {
+    "offset": "0x1e1b8",
+    "va": "0x11f5b8",
+    "encoding": "ascii",
+    "text": "SDP_AddUuidSequence"
+  },
+  {
+    "offset": "0x1e1ce",
+    "va": "0x11f5ce",
+    "encoding": "ascii",
+    "text": "SDP_DeleteAttribute"
+  },
+  {
+    "offset": "0x1e1e4",
+    "va": "0x11f5e4",
+    "encoding": "ascii",
+    "text": "SDP_FindProtocolListElemInRec"
+  },
+  {
+    "offset": "0x1e204",
+    "va": "0x11f604",
+    "encoding": "ascii",
+    "text": "SDP_FindAddProtoListsElemInRec"
+  },
+  {
+    "offset": "0x1e226",
+    "va": "0x11f626",
+    "encoding": "ascii",
+    "text": "SDP_FindProfileVersionInRec"
+  },
+  {
+    "offset": "0x1e244",
+    "va": "0x11f644",
+    "encoding": "ascii",
+    "text": "SDP_FindAttributeInRec"
+  },
+  {
+    "offset": "0x1e25e",
+    "va": "0x11f65e",
+    "encoding": "ascii",
+    "text": "GKI_shutdown"
+  },
+  {
+    "offset": "0x1e26e",
+    "va": "0x11f66e",
+    "encoding": "ascii",
+    "text": "BtCoreIf_ShutDown"
+  },
+  {
+    "offset": "0x1e282",
+    "va": "0x11f682",
+    "encoding": "ascii",
+    "text": "BtCoreIf_Init"
+  },
+  {
+    "offset": "0x1e292",
+    "va": "0x11f692",
+    "encoding": "ascii",
+    "text": "GKI_create_pool"
+  },
+  {
+    "offset": "0x1e2a4",
+    "va": "0x11f6a4",
+    "encoding": "ascii",
+    "text": "GKI_init"
+  },
+  {
+    "offset": "0x1e2b0",
+    "va": "0x11f6b0",
+    "encoding": "ascii",
+    "text": "GKI_enable"
+  },
+  {
+    "offset": "0x1e2be",
+    "va": "0x11f6be",
+    "encoding": "ascii",
+    "text": "GKI_disable"
+  },
+  {
+    "offset": "0x1e2ca",
+    "va": "0x11f6ca",
+    "encoding": "ascii",
+    "text": "BtCoreIf.dll"
+  },
+  {
+    "offset": "0x1e2da",
+    "va": "0x11f6da",
+    "encoding": "ascii",
+    "text": "??1CWBtAPI@@QAA@XZ"
+  },
+  {
+    "offset": "0x1e2f0",
+    "va": "0x11f6f0",
+    "encoding": "ascii",
+    "text": "?ConnectToServer@CWBtAPI@@QAA?AW4WBtRc@@_NI@Z"
+  },
+  {
+    "offset": "0x1e320",
+    "va": "0x11f720",
+    "encoding": "ascii",
+    "text": "??0CWBtAPI@@QAA@XZ"
+  },
+  {
+    "offset": "0x1e336",
+    "va": "0x11f736",
+    "encoding": "ascii",
+    "text": "?ClearDeviceStatusCallback@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1e36e",
+    "va": "0x11f76e",
+    "encoding": "ascii",
+    "text": "?SetOnDeviceStatusCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e3b2",
+    "va": "0x11f7b2",
+    "encoding": "ascii",
+    "text": "?GapStartInquiry@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1e3e0",
+    "va": "0x11f7e0",
+    "encoding": "ascii",
+    "text": "?BtmDeviceIsReady@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1e40e",
+    "va": "0x11f80e",
+    "encoding": "ascii",
+    "text": "?SetOnInquiryCompleteCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJF@Z0@Z"
+  },
+  {
+    "offset": "0x1e454",
+    "va": "0x11f854",
+    "encoding": "ascii",
+    "text": "?SetOnDeviceFoundCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXQAE11H@Z0@Z"
+  },
+  {
+    "offset": "0x1e49a",
+    "va": "0x11f89a",
+    "encoding": "ascii",
+    "text": "?GapStopInquiry@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1e4c6",
+    "va": "0x11f8c6",
+    "encoding": "ascii",
+    "text": "?ClearInquiryCompleteCallback@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1e500",
+    "va": "0x11f900",
+    "encoding": "ascii",
+    "text": "?ClearDeviceFoundCallback@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1e536",
+    "va": "0x11f936",
+    "encoding": "ascii",
+    "text": "?GapStartDiscovery@CWBtAPI@@QAA?AW4WBtRc@@PAEH@Z"
+  },
+  {
+    "offset": "0x1e56a",
+    "va": "0x11f96a",
+    "encoding": "ascii",
+    "text": "?GapStartServiceDiscovery@CWBtAPI@@QAA?AW4WBtRc@@PAEU_GUID@@H@Z"
+  },
+  {
+    "offset": "0x1e5ac",
+    "va": "0x11f9ac",
+    "encoding": "ascii",
+    "text": "?SetOnDiscoveryEventCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXQAEGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e5f4",
+    "va": "0x11f9f4",
+    "encoding": "ascii",
+    "text": "?GapGetAvailableServices@CWBtAPI@@QAA?AW4WBtRc@@QAEPAHHPAUtBT_SERVICE_INFO@@@Z"
+  },
+  {
+    "offset": "0x1e646",
+    "va": "0x11fa46",
+    "encoding": "ascii",
+    "text": "?GapBond@CWBtAPI@@QAA?AW4WBtRc@@QAEJ0J@Z"
+  },
+  {
+    "offset": "0x1e672",
+    "va": "0x11fa72",
+    "encoding": "ascii",
+    "text": "?ClearDunStateChangeCallback@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1e6ac",
+    "va": "0x11faac",
+    "encoding": "ascii",
+    "text": "?DunCreateConnection@CWBtAPI@@QAA?AW4WBtRc@@QAEABU_GUID@@PBGH@Z"
+  },
+  {
+    "offset": "0x1e6ee",
+    "va": "0x11faee",
+    "encoding": "ascii",
+    "text": "?SetOnDunStateChangeCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXQAE11ABU_GUID@@FJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e742",
+    "va": "0x11fb42",
+    "encoding": "ascii",
+    "text": "?DunRemoveConnection@CWBtAPI@@QAA?AW4WBtRc@@HF@Z"
+  },
+  {
+    "offset": "0x1e776",
+    "va": "0x11fb76",
+    "encoding": "ascii",
+    "text": "?GapGetConnectionStats@CWBtAPI@@QAA?AW4WBtRc@@QAEPAU_GUID@@PBGHPAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x1e7ce",
+    "va": "0x11fbce",
+    "encoding": "ascii",
+    "text": "?FtpOpenConnection@CWBtAPI@@QAA?AW4WBtRc@@QAEU_GUID@@PBGPAJ@Z"
+  },
+  {
+    "offset": "0x1e80e",
+    "va": "0x11fc0e",
+    "encoding": "ascii",
+    "text": "?SetOnFtpAbortResponseCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e856",
+    "va": "0x11fc56",
+    "encoding": "ascii",
+    "text": "?SetOnFtpFolderListPacedCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJPBGJEJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e8a4",
+    "va": "0x11fca4",
+    "encoding": "ascii",
+    "text": "?SetOnFtpChangeFolderCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJW4FtpFolder@@PBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e8fa",
+    "va": "0x11fcfa",
+    "encoding": "ascii",
+    "text": "?SetOnFtpDeleteResponseCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJPBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e946",
+    "va": "0x11fd46",
+    "encoding": "ascii",
+    "text": "?SetOnFtpCreateCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJPBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e98a",
+    "va": "0x11fd8a",
+    "encoding": "ascii",
+    "text": "?SetOnFtpProgressCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJFPBGJJJ@Z0@Z"
+  },
+  {
+    "offset": "0x1e9d2",
+    "va": "0x11fdd2",
+    "encoding": "ascii",
+    "text": "?SetOnFtpPutResponseCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJPBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1ea1a",
+    "va": "0x11fe1a",
+    "encoding": "ascii",
+    "text": "?SetOnFtpGetResponseCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJPBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1ea62",
+    "va": "0x11fe62",
+    "encoding": "ascii",
+    "text": "?SetOnFtpCloseResponseCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJJ@Z0@Z"
+  },
+  {
+    "offset": "0x1eaaa",
+    "va": "0x11feaa",
+    "encoding": "ascii",
+    "text": "?SetOnFtpOpenResponseCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJJ@Z0@Z"
+  },
+  {
+    "offset": "0x1eaf0",
+    "va": "0x11fef0",
+    "encoding": "ascii",
+    "text": "?FtpCloseConnection@CWBtAPI@@QAA?AW4WBtRc@@J@Z"
+  },
+  {
+    "offset": "0x1eb22",
+    "va": "0x11ff22",
+    "encoding": "ascii",
+    "text": "?FtpPutFile@CWBtAPI@@QAA?AW4WBtRc@@JPBG@Z"
+  },
+  {
+    "offset": "0x1eb4e",
+    "va": "0x11ff4e",
+    "encoding": "ascii",
+    "text": "?FtpGetFile@CWBtAPI@@QAA?AW4WBtRc@@JPBG0@Z"
+  },
+  {
+    "offset": "0x1eb7c",
+    "va": "0x11ff7c",
+    "encoding": "ascii",
+    "text": "?FtpFolderListingPaced@CWBtAPI@@QAA?AW4WBtRc@@J@Z"
+  },
+  {
+    "offset": "0x1ebb0",
+    "va": "0x11ffb0",
+    "encoding": "ascii",
+    "text": "?FtpChangeFolder@CWBtAPI@@QAA?AW4WBtRc@@JPBG@Z"
+  },
+  {
+    "offset": "0x1ebe2",
+    "va": "0x11ffe2",
+    "encoding": "ascii",
+    "text": "?FtpDeleteFile@CWBtAPI@@QAA?AW4WBtRc@@JPBG@Z"
+  },
+  {
+    "offset": "0x1ec12",
+    "va": "0x120012",
+    "encoding": "ascii",
+    "text": "?FtpAbort@CWBtAPI@@QAA?AW4WBtRc@@J@Z"
+  },
+  {
+    "offset": "0x1ec3a",
+    "va": "0x12003a",
+    "encoding": "ascii",
+    "text": "?FtpParent@CWBtAPI@@QAA?AW4WBtRc@@J@Z"
+  },
+  {
+    "offset": "0x1ec62",
+    "va": "0x120062",
+    "encoding": "ascii",
+    "text": "?FtpRoot@CWBtAPI@@QAA?AW4WBtRc@@J@Z"
+  },
+  {
+    "offset": "0x1ec88",
+    "va": "0x120088",
+    "encoding": "ascii",
+    "text": "?FtpCreateEmpty@CWBtAPI@@QAA?AW4WBtRc@@JPBG@Z"
+  },
+  {
+    "offset": "0x1ecb8",
+    "va": "0x1200b8",
+    "encoding": "ascii",
+    "text": "?FtpCreateFolder@CWBtAPI@@QAA?AW4WBtRc@@JPBG@Z"
+  },
+  {
+    "offset": "0x1ecea",
+    "va": "0x1200ea",
+    "encoding": "ascii",
+    "text": "?ClearLapStateChangeCallback@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1ed24",
+    "va": "0x120124",
+    "encoding": "ascii",
+    "text": "?LapCreateConnection@CWBtAPI@@QAA?AW4WBtRc@@QAEABU_GUID@@PBGH@Z"
+  },
+  {
+    "offset": "0x1ed66",
+    "va": "0x120166",
+    "encoding": "ascii",
+    "text": "?SetOnLapStateChangeCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXQAE11ABU_GUID@@FJ@Z0@Z"
+  },
+  {
+    "offset": "0x1edba",
+    "va": "0x1201ba",
+    "encoding": "ascii",
+    "text": "?LapDisconnect@CWBtAPI@@QAA?AW4WBtRc@@QAE@Z"
+  },
+  {
+    "offset": "0x1ede8",
+    "va": "0x1201e8",
+    "encoding": "ascii",
+    "text": "?SetOnOppAbortCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJJ@Z0@Z"
+  },
+  {
+    "offset": "0x1ee28",
+    "va": "0x120228",
+    "encoding": "ascii",
+    "text": "?SetOnOppExchangeCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJQAEJPBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1ee72",
+    "va": "0x120272",
+    "encoding": "ascii",
+    "text": "?SetOnOppPushCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJQAEJPBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1eeb8",
+    "va": "0x1202b8",
+    "encoding": "ascii",
+    "text": "?SetOnOppPullCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJQAEJPBGJ@Z0@Z"
+  },
+  {
+    "offset": "0x1eefe",
+    "va": "0x1202fe",
+    "encoding": "ascii",
+    "text": "?SetOnOppProgressCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXJQAEJPBGJJJ@Z0@Z"
+  },
+  {
+    "offset": "0x1ef4a",
+    "va": "0x12034a",
+    "encoding": "ascii",
+    "text": "?OppPush@CWBtAPI@@QAA?AW4WBtRc@@QAEU_GUID@@PBG2PAJ@Z"
+  },
+  {
+    "offset": "0x1ef82",
+    "va": "0x120382",
+    "encoding": "ascii",
+    "text": "?OppPull@CWBtAPI@@QAA?AW4WBtRc@@QAEU_GUID@@PBG2PAJJ@Z"
+  },
+  {
+    "offset": "0x1efba",
+    "va": "0x1203ba",
+    "encoding": "ascii",
+    "text": "?OppExchange@CWBtAPI@@QAA?AW4WBtRc@@QAEU_GUID@@PBG22PAJ@Z"
+  },
+  {
+    "offset": "0x1eff6",
+    "va": "0x1203f6",
+    "encoding": "ascii",
+    "text": "?OppAbort@CWBtAPI@@QAA?AW4WBtRc@@J@Z"
+  },
+  {
+    "offset": "0x1f01e",
+    "va": "0x12041e",
+    "encoding": "ascii",
+    "text": "?MapGuidToUuid@@YAXPAU_GUID@@PAUtBT_UUID@@@Z"
+  },
+  {
+    "offset": "0x1f04e",
+    "va": "0x12044e",
+    "encoding": "ascii",
+    "text": "?ClearSppStateChangeCallback@CWBtAPI@@QAA?AW4WBtRc@@XZ"
+  },
+  {
+    "offset": "0x1f088",
+    "va": "0x120488",
+    "encoding": "ascii",
+    "text": "?SppCreateConnection@CWBtAPI@@QAA?AW4WBtRc@@QAEABU_GUID@@PBGH2@Z"
+  },
+  {
+    "offset": "0x1f0cc",
+    "va": "0x1204cc",
+    "encoding": "ascii",
+    "text": "?SetOnSppStateChangeCallback@CWBtAPI@@QAA?AW4WBtRc@@P6AXPAXQAE11ABU_GUID@@FJ@Z0@Z"
+  },
+  {
+    "offset": "0x1f120",
+    "va": "0x120520",
+    "encoding": "ascii",
+    "text": "?SppRemoveConnection@CWBtAPI@@QAA?AW4WBtRc@@HF@Z"
+  },
+  {
+    "offset": "0x1f152",
+    "va": "0x120552",
+    "encoding": "ascii",
+    "text": "wbtapiCE.dll"
+  },
+  {
+    "offset": "0x1f160",
+    "va": "0x120560",
+    "encoding": "ascii",
+    "text": "COREDLL.dll"
+  },
+  {
+    "offset": "0x1f16e",
+    "va": "0x12056e",
+    "encoding": "ascii",
+    "text": "CLSIDFromString"
+  },
+  {
+    "offset": "0x1f17e",
+    "va": "0x12057e",
+    "encoding": "ascii",
+    "text": "ole32.dll"
+  },
+  {
+    "offset": "0x1fda8",
+    "va": "0x1211a8",
+    "encoding": "utf-16le",
+    "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+  },
+  {
+    "offset": "0x20054",
+    "va": "0x121454",
+    "encoding": "ascii",
+    "text": "BtSdkCE30.dll"
+  },
+  {
+    "offset": "0x20062",
+    "va": "0x121462",
+    "encoding": "ascii",
+    "text": "??0CBtIf@@QAA@XZ"
+  },
+  {
+    "offset": "0x20073",
+    "va": "0x121473",
+    "encoding": "ascii",
+    "text": "??0CDunClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x20089",
+    "va": "0x121489",
+    "encoding": "ascii",
+    "text": "??0CFtpClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x2009f",
+    "va": "0x12149f",
+    "encoding": "ascii",
+    "text": "??0CL2CapConn@@QAA@XZ"
+  },
+  {
+    "offset": "0x200b5",
+    "va": "0x1214b5",
+    "encoding": "ascii",
+    "text": "??0CL2CapIf@@QAA@XZ"
+  },
+  {
+    "offset": "0x200c9",
+    "va": "0x1214c9",
+    "encoding": "ascii",
+    "text": "??0CLapClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x200df",
+    "va": "0x1214df",
+    "encoding": "ascii",
+    "text": "??0CObexClient@@QAA@ABV0@@Z"
+  },
+  {
+    "offset": "0x200fb",
+    "va": "0x1214fb",
+    "encoding": "ascii",
+    "text": "??0CObexClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x20112",
+    "va": "0x121512",
+    "encoding": "ascii",
+    "text": "??0CObexHeaders@@AAA@PAUtOBEX_HEADERS@@@Z"
+  },
+  {
+    "offset": "0x2013c",
+    "va": "0x12153c",
+    "encoding": "ascii",
+    "text": "??0CObexHeaders@@QAA@XZ"
+  },
+  {
+    "offset": "0x20154",
+    "va": "0x121554",
+    "encoding": "ascii",
+    "text": "??0CObexServer@@QAA@ABV0@@Z"
+  },
+  {
+    "offset": "0x20170",
+    "va": "0x121570",
+    "encoding": "ascii",
+    "text": "??0CObexServer@@QAA@XZ"
+  },
+  {
+    "offset": "0x20187",
+    "va": "0x121587",
+    "encoding": "ascii",
+    "text": "??0CObexUserDefined@@QAA@XZ"
+  },
+  {
+    "offset": "0x201a3",
+    "va": "0x1215a3",
+    "encoding": "ascii",
+    "text": "??0COppClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x201b9",
+    "va": "0x1215b9",
+    "encoding": "ascii",
+    "text": "??0CPrintClient@@QAA@ABV0@@Z"
+  },
+  {
+    "offset": "0x201d6",
+    "va": "0x1215d6",
+    "encoding": "ascii",
+    "text": "??0CPrintClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x201ee",
+    "va": "0x1215ee",
+    "encoding": "ascii",
+    "text": "??0CRfCommIf@@QAA@XZ"
+  },
+  {
+    "offset": "0x20203",
+    "va": "0x121603",
+    "encoding": "ascii",
+    "text": "??0CRfCommPort@@QAA@XZ"
+  },
+  {
+    "offset": "0x2021a",
+    "va": "0x12161a",
+    "encoding": "ascii",
+    "text": "??0CSdpDiscoveryRec@@QAA@XZ"
+  },
+  {
+    "offset": "0x20236",
+    "va": "0x121636",
+    "encoding": "ascii",
+    "text": "??0CSdpService@@QAA@XZ"
+  },
+  {
+    "offset": "0x2024d",
+    "va": "0x12164d",
+    "encoding": "ascii",
+    "text": "??0CSppClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x20263",
+    "va": "0x121663",
+    "encoding": "ascii",
+    "text": "??0CSppServer@@QAA@XZ"
+  },
+  {
+    "offset": "0x20279",
+    "va": "0x121679",
+    "encoding": "ascii",
+    "text": "??1CBtIf@@UAA@XZ"
+  },
+  {
+    "offset": "0x2028a",
+    "va": "0x12168a",
+    "encoding": "ascii",
+    "text": "??1CDunClient@@UAA@XZ"
+  },
+  {
+    "offset": "0x202a0",
+    "va": "0x1216a0",
+    "encoding": "ascii",
+    "text": "??1CFtpClient@@UAA@XZ"
+  },
+  {
+    "offset": "0x202b6",
+    "va": "0x1216b6",
+    "encoding": "ascii",
+    "text": "??1CL2CapConn@@UAA@XZ"
+  },
+  {
+    "offset": "0x202cc",
+    "va": "0x1216cc",
+    "encoding": "ascii",
+    "text": "??1CL2CapIf@@QAA@XZ"
+  },
+  {
+    "offset": "0x202e0",
+    "va": "0x1216e0",
+    "encoding": "ascii",
+    "text": "??1CLapClient@@UAA@XZ"
+  },
+  {
+    "offset": "0x202f6",
+    "va": "0x1216f6",
+    "encoding": "ascii",
+    "text": "??1CObexClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x2030d",
+    "va": "0x12170d",
+    "encoding": "ascii",
+    "text": "??1CObexHeaders@@QAA@XZ"
+  },
+  {
+    "offset": "0x20325",
+    "va": "0x121725",
+    "encoding": "ascii",
+    "text": "??1CObexServer@@QAA@XZ"
+  },
+  {
+    "offset": "0x2033c",
+    "va": "0x12173c",
+    "encoding": "ascii",
+    "text": "??1CObexUserDefined@@QAA@XZ"
+  },
+  {
+    "offset": "0x20358",
+    "va": "0x121758",
+    "encoding": "ascii",
+    "text": "??1COppClient@@UAA@XZ"
+  },
+  {
+    "offset": "0x2036e",
+    "va": "0x12176e",
+    "encoding": "ascii",
+    "text": "??1CPrintClient@@QAA@XZ"
+  },
+  {
+    "offset": "0x20386",
+    "va": "0x121786",
+    "encoding": "ascii",
+    "text": "??1CRfCommIf@@QAA@XZ"
+  },
+  {
+    "offset": "0x2039b",
+    "va": "0x12179b",
+    "encoding": "ascii",
+    "text": "??1CRfCommPort@@UAA@XZ"
+  },
+  {
+    "offset": "0x203b2",
+    "va": "0x1217b2",
+    "encoding": "ascii",
+    "text": "??1CSdpDiscoveryRec@@QAA@XZ"
+  },
+  {
+    "offset": "0x203ce",
+    "va": "0x1217ce",
+    "encoding": "ascii",
+    "text": "??1CSdpService@@UAA@XZ"
+  },
+  {
+    "offset": "0x203e5",
+    "va": "0x1217e5",
+    "encoding": "ascii",
+    "text": "??1CSppClient@@UAA@XZ"
+  },
+  {
+    "offset": "0x203fb",
+    "va": "0x1217fb",
+    "encoding": "ascii",
+    "text": "??1CSppServer@@UAA@XZ"
+  },
+  {
+    "offset": "0x20411",
+    "va": "0x121811",
+    "encoding": "ascii",
+    "text": "??4CObexClient@@QAAAAV0@ABV0@@Z"
+  },
+  {
+    "offset": "0x20431",
+    "va": "0x121831",
+    "encoding": "ascii",
+    "text": "??4CObexServer@@QAAAAV0@ABV0@@Z"
+  },
+  {
+    "offset": "0x20451",
+    "va": "0x121851",
+    "encoding": "ascii",
+    "text": "??4CPrintClient@@QAAAAV0@ABV0@@Z"
+  },
+  {
+    "offset": "0x20472",
+    "va": "0x121872",
+    "encoding": "ascii",
+    "text": "??_7CBtIf@@6B@"
+  },
+  {
+    "offset": "0x20481",
+    "va": "0x121881",
+    "encoding": "ascii",
+    "text": "??_7CDunClient@@6B@"
+  },
+  {
+    "offset": "0x20495",
+    "va": "0x121895",
+    "encoding": "ascii",
+    "text": "??_7CFtpClient@@6B@"
+  },
+  {
+    "offset": "0x204a9",
+    "va": "0x1218a9",
+    "encoding": "ascii",
+    "text": "??_7CL2CapConn@@6B@"
+  },
+  {
+    "offset": "0x204bd",
+    "va": "0x1218bd",
+    "encoding": "ascii",
+    "text": "??_7CLapClient@@6B@"
+  },
+  {
+    "offset": "0x204d1",
+    "va": "0x1218d1",
+    "encoding": "ascii",
+    "text": "??_7CObexClient@@6B@"
+  },
+  {
+    "offset": "0x204e6",
+    "va": "0x1218e6",
+    "encoding": "ascii",
+    "text": "??_7CObexServer@@6B@"
+  },
+  {
+    "offset": "0x204fb",
+    "va": "0x1218fb",
+    "encoding": "ascii",
+    "text": "??_7COppClient@@6B@"
+  },
+  {
+    "offset": "0x2050f",
+    "va": "0x12190f",
+    "encoding": "ascii",
+    "text": "??_7CPrintClient@@6B@"
+  },
+  {
+    "offset": "0x20525",
+    "va": "0x121925",
+    "encoding": "ascii",
+    "text": "??_7CRfCommPort@@6B@"
+  },
+  {
+    "offset": "0x2053a",
+    "va": "0x12193a",
+    "encoding": "ascii",
+    "text": "??_7CSdpService@@6B@"
+  },
+  {
+    "offset": "0x2054f",
+    "va": "0x12194f",
+    "encoding": "ascii",
+    "text": "??_7CSppClient@@6B@"
+  },
+  {
+    "offset": "0x20563",
+    "va": "0x121963",
+    "encoding": "ascii",
+    "text": "??_7CSppServer@@6B@"
+  },
+  {
+    "offset": "0x20577",
+    "va": "0x121977",
+    "encoding": "ascii",
+    "text": "?Abort@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x205a6",
+    "va": "0x1219a6",
+    "encoding": "ascii",
+    "text": "?Abort@CObexClient@@QAA?AW4tOBEX_ERRORS@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x205e3",
+    "va": "0x1219e3",
+    "encoding": "ascii",
+    "text": "?Abort@COppClient@@QAA?AW4OPP_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x20612",
+    "va": "0x121a12",
+    "encoding": "ascii",
+    "text": "?AbortCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x2066d",
+    "va": "0x121a6d",
+    "encoding": "ascii",
+    "text": "?Accept@CL2CapConn@@QAAHG@Z"
+  },
+  {
+    "offset": "0x20689",
+    "va": "0x121a89",
+    "encoding": "ascii",
+    "text": "?AddAdditionProtoLists@CSdpService@@QAA?AW4SDP_RETURN_CODE@@HPAUtSDP_PROTO_LIST_ELEM@@@Z"
+  },
+  {
+    "offset": "0x206e2",
+    "va": "0x121ae2",
+    "encoding": "ascii",
+    "text": "?AddAppParam@CObexHeaders@@QAAHEEPAE@Z"
+  },
+  {
+    "offset": "0x20709",
+    "va": "0x121b09",
+    "encoding": "ascii",
+    "text": "?AddAttribute@CSdpService@@QAA?AW4SDP_RETURN_CODE@@GEIPAE@Z"
+  },
+  {
+    "offset": "0x20745",
+    "va": "0x121b45",
+    "encoding": "ascii",
+    "text": "?AddAuthChallenge@CObexHeaders@@QAAHEEPAE@Z"
+  },
+  {
+    "offset": "0x20771",
+    "va": "0x121b71",
+    "encoding": "ascii",
+    "text": "?AddAuthResponse@CObexHeaders@@QAAHEEPAE@Z"
+  },
+  {
+    "offset": "0x2079c",
+    "va": "0x121b9c",
+    "encoding": "ascii",
+    "text": "?AddHttp@CObexHeaders@@QAAHPAEI@Z"
+  },
+  {
+    "offset": "0x207be",
+    "va": "0x121bbe",
+    "encoding": "ascii",
+    "text": "?AddL2CapProtocolDescriptor@CSdpService@@QAA?AW4SDP_RETURN_CODE@@G@Z"
+  },
+  {
+    "offset": "0x20803",
+    "va": "0x121c03",
+    "encoding": "ascii",
+    "text": "?AddLanguageBaseAttrIDList@CSdpService@@QAA?AW4SDP_RETURN_CODE@@GGG@Z"
+  },
+  {
+    "offset": "0x20849",
+    "va": "0x121c49",
+    "encoding": "ascii",
+    "text": "?AddProfileDescriptorList@CSdpService@@QAA?AW4SDP_RETURN_CODE@@PAU_GUID@@G@Z"
+  },
+  {
+    "offset": "0x20896",
+    "va": "0x121c96",
+    "encoding": "ascii",
+    "text": "?AddProtocolList@CSdpService@@QAA?AW4SDP_RETURN_CODE@@HPAUtSDP_PROTOCOL_ELEM@@@Z"
+  },
+  {
+    "offset": "0x208e7",
+    "va": "0x121ce7",
+    "encoding": "ascii",
+    "text": "?AddRFCommProtocolDescriptor@CSdpService@@QAA?AW4SDP_RETURN_CODE@@E@Z"
+  },
+  {
+    "offset": "0x2092d",
+    "va": "0x121d2d",
+    "encoding": "ascii",
+    "text": "?AddServiceClassIdList@CSdpService@@QAA?AW4SDP_RETURN_CODE@@HPAU_GUID@@@Z"
+  },
+  {
+    "offset": "0x20977",
+    "va": "0x121d77",
+    "encoding": "ascii",
+    "text": "?AddServiceName@CSdpService@@QAA?AW4SDP_RETURN_CODE@@PAG@Z"
+  },
+  {
+    "offset": "0x209b2",
+    "va": "0x121db2",
+    "encoding": "ascii",
+    "text": "?AddSupportedFormatsList@CSdpService@@QAA?AW4SDP_RETURN_CODE@@EQAE0QAPAE@Z"
+  },
+  {
+    "offset": "0x209fd",
+    "va": "0x121dfd",
+    "encoding": "ascii",
+    "text": "?AddTarget@CObexHeaders@@QAAHPAEI@Z"
+  },
+  {
+    "offset": "0x20a21",
+    "va": "0x121e21",
+    "encoding": "ascii",
+    "text": "?AddUserDefined@CObexHeaders@@QAAHPAVCObexUserDefined@@@Z"
+  },
+  {
+    "offset": "0x20a5b",
+    "va": "0x121e5b",
+    "encoding": "ascii",
+    "text": "?AllowToConnect@CBtIf@@QAAXW4CONNECT_ALLOW_TYPE@1@@Z"
+  },
+  {
+    "offset": "0x20a90",
+    "va": "0x121e90",
+    "encoding": "ascii",
+    "text": "?AssignPsmValue@CL2CapIf@@QAAHPAU_GUID@@G@Z"
+  },
+  {
+    "offset": "0x20abc",
+    "va": "0x121ebc",
+    "encoding": "ascii",
+    "text": "?AssignScnValue@CRfCommIf@@QAAHPAU_GUID@@E@Z"
+  },
+  {
+    "offset": "0x20ae9",
+    "va": "0x121ee9",
+    "encoding": "ascii",
+    "text": "?Bond@CBtIf@@QAA?AW4BOND_RETURN_CODE@1@QAEPAG@Z"
+  },
+  {
+    "offset": "0x20b19",
+    "va": "0x121f19",
+    "encoding": "ascii",
+    "text": "?BondQuery@CBtIf@@QAAHQAE@Z"
+  },
+  {
+    "offset": "0x20b35",
+    "va": "0x121f35",
+    "encoding": "ascii",
+    "text": "?Cancel@CPrintClient@@QAAXXZ"
+  },
+  {
+    "offset": "0x20b52",
+    "va": "0x121f52",
+    "encoding": "ascii",
+    "text": "?ChangeFolder@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@PAG@Z"
+  },
+  {
+    "offset": "0x20b8b",
+    "va": "0x121f8b",
+    "encoding": "ascii",
+    "text": "?ClearFlag@CObexHeaders@@AAAXI@Z"
+  },
+  {
+    "offset": "0x20bac",
+    "va": "0x121fac",
+    "encoding": "ascii",
+    "text": "?Close@CObexClient@@QAA?AW4tOBEX_ERRORS@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x20be9",
+    "va": "0x121fe9",
+    "encoding": "ascii",
+    "text": "?Close@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x20c1a",
+    "va": "0x12201a",
+    "encoding": "ascii",
+    "text": "?CloseCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x20c75",
+    "va": "0x122075",
+    "encoding": "ascii",
+    "text": "?CloseConnection@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x20cae",
+    "va": "0x1220ae",
+    "encoding": "ascii",
+    "text": "?Connect@CL2CapConn@@QAAHPAVCL2CapIf@@QAEG@Z"
+  },
+  {
+    "offset": "0x20cdb",
+    "va": "0x1220db",
+    "encoding": "ascii",
+    "text": "?Create@CSdpDiscoveryRec@@AAAXPAX@Z"
+  },
+  {
+    "offset": "0x20cff",
+    "va": "0x1220ff",
+    "encoding": "ascii",
+    "text": "?CreateAudioConnection@CBtIf@@QAA?AW4AUDIO_RETURN_CODE@@QAEHPAG@Z"
+  },
+  {
+    "offset": "0x20d41",
+    "va": "0x122141",
+    "encoding": "ascii",
+    "text": "?CreateAudioConnection@CBtIf@@SA?AW4AUDIO_RETURN_CODE@@QAEHPAGP6AXG@Z2@Z"
+  },
+  {
+    "offset": "0x20d8a",
+    "va": "0x12218a",
+    "encoding": "ascii",
+    "text": "?CreateAudioConnection@CL2CapConn@@QAA?AW4AUDIO_RETURN_CODE@@HPAG@Z"
+  },
+  {
+    "offset": "0x20dce",
+    "va": "0x1221ce",
+    "encoding": "ascii",
+    "text": "?CreateAudioConnection@CObexClient@@QAA?AW4AUDIO_RETURN_CODE@@HPAG@Z"
+  },
+  {
+    "offset": "0x20e13",
+    "va": "0x122213",
+    "encoding": "ascii",
+    "text": "?CreateAudioConnection@CObexServer@@QAA?AW4AUDIO_RETURN_CODE@@HPAG@Z"
+  },
+  {
+    "offset": "0x20e58",
+    "va": "0x122258",
+    "encoding": "ascii",
+    "text": "?CreateAudioConnection@CRfCommPort@@QAA?AW4AUDIO_RETURN_CODE@@HPAG@Z"
+  },
+  {
+    "offset": "0x20e9d",
+    "va": "0x12229d",
+    "encoding": "ascii",
+    "text": "?CreateConnection@CDunClient@@QAA?AW4DUN_RETURN_CODE@1@QAEAAVCSdpDiscoveryRec@@@Z"
+  },
+  {
+    "offset": "0x20eef",
+    "va": "0x1222ef",
+    "encoding": "ascii",
+    "text": "?CreateConnection@CLapClient@@QAA?AW4LAP_RETURN_CODE@1@QAEAAVCSdpDiscoveryRec@@@Z"
+  },
+  {
+    "offset": "0x20f41",
+    "va": "0x122341",
+    "encoding": "ascii",
+    "text": "?CreateConnection@CLapClient@@QAA?AW4LAP_RETURN_CODE@1@QAEU_GUID@@AAVCSdpDiscoveryRec@@@Z"
+  },
+  {
+    "offset": "0x20f9b",
+    "va": "0x12239b",
+    "encoding": "ascii",
+    "text": "?CreateConnection@CSppClient@@QAA?AW4SPP_CLIENT_RETURN_CODE@1@QAEPAG@Z"
+  },
+  {
+    "offset": "0x20fe2",
+    "va": "0x1223e2",
+    "encoding": "ascii",
+    "text": "?CreateConnection@CSppServer@@QAA?AW4SPP_SERVER_RETURN_CODE@1@PAG@Z"
+  },
+  {
+    "offset": "0x21026",
+    "va": "0x122426",
+    "encoding": "ascii",
+    "text": "?CreateEmpty@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@PAG@Z"
+  },
+  {
+    "offset": "0x2105e",
+    "va": "0x12245e",
+    "encoding": "ascii",
+    "text": "?CreateFolder@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@PAG@Z"
+  },
+  {
+    "offset": "0x21097",
+    "va": "0x122497",
+    "encoding": "ascii",
+    "text": "?DeleteAppParam@CObexHeaders@@QAAHG@Z"
+  },
+  {
+    "offset": "0x210bd",
+    "va": "0x1224bd",
+    "encoding": "ascii",
+    "text": "?DeleteAttribute@CSdpService@@QAA?AW4SDP_RETURN_CODE@@G@Z"
+  },
+  {
+    "offset": "0x210f7",
+    "va": "0x1224f7",
+    "encoding": "ascii",
+    "text": "?DeleteAuthChallenge@CObexHeaders@@QAAHG@Z"
+  },
+  {
+    "offset": "0x21122",
+    "va": "0x122522",
+    "encoding": "ascii",
+    "text": "?DeleteAuthResponse@CObexHeaders@@QAAHG@Z"
+  },
+  {
+    "offset": "0x2114c",
+    "va": "0x12254c",
+    "encoding": "ascii",
+    "text": "?DeleteBody@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x2116d",
+    "va": "0x12256d",
+    "encoding": "ascii",
+    "text": "?DeleteCount@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x2118f",
+    "va": "0x12258f",
+    "encoding": "ascii",
+    "text": "?DeleteDescription@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x211b7",
+    "va": "0x1225b7",
+    "encoding": "ascii",
+    "text": "?DeleteFileW@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@PAG@Z"
+  },
+  {
+    "offset": "0x211ef",
+    "va": "0x1225ef",
+    "encoding": "ascii",
+    "text": "?DeleteHttp@CObexHeaders@@QAAHG@Z"
+  },
+  {
+    "offset": "0x21211",
+    "va": "0x122611",
+    "encoding": "ascii",
+    "text": "?DeleteLength@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x21234",
+    "va": "0x122634",
+    "encoding": "ascii",
+    "text": "?DeleteName@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x21255",
+    "va": "0x122655",
+    "encoding": "ascii",
+    "text": "?DeleteObjectClass@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x2127d",
+    "va": "0x12267d",
+    "encoding": "ascii",
+    "text": "?DeleteTarget@CObexHeaders@@QAAHG@Z"
+  },
+  {
+    "offset": "0x212a1",
+    "va": "0x1226a1",
+    "encoding": "ascii",
+    "text": "?DeleteTime@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x212c2",
+    "va": "0x1226c2",
+    "encoding": "ascii",
+    "text": "?DeleteType@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x212e3",
+    "va": "0x1226e3",
+    "encoding": "ascii",
+    "text": "?DeleteUserDefined@CObexHeaders@@QAAHG@Z"
+  },
+  {
+    "offset": "0x2130c",
+    "va": "0x12270c",
+    "encoding": "ascii",
+    "text": "?DeleteWho@CObexHeaders@@QAAXXZ"
+  },
+  {
+    "offset": "0x2132c",
+    "va": "0x12272c",
+    "encoding": "ascii",
+    "text": "?Deregister@CL2CapIf@@QAAXXZ"
+  },
+  {
+    "offset": "0x21349",
+    "va": "0x122749",
+    "encoding": "ascii",
+    "text": "?Disconnect@CL2CapConn@@QAAXXZ"
+  },
+  {
+    "offset": "0x21368",
+    "va": "0x122768",
+    "encoding": "ascii",
+    "text": "?Exchange@COppClient@@QAA?AW4OPP_RETURN_CODE@1@QAEPAG1AAVCSdpDiscoveryRec@@@Z"
+  },
+  {
+    "offset": "0x213b6",
+    "va": "0x1227b6",
+    "encoding": "ascii",
+    "text": "?FindAdditionalProtocolListElem@CSdpDiscoveryRec@@QAAHGPAUtSDP_PROTOCOL_ELEM@@@Z"
+  },
+  {
+    "offset": "0x21407",
+    "va": "0x122807",
+    "encoding": "ascii",
+    "text": "?FindAttribute@CSdpDiscoveryRec@@QAAHGPAUSDP_DISC_ATTTR_VAL@@@Z"
+  },
+  {
+    "offset": "0x21447",
+    "va": "0x122847",
+    "encoding": "ascii",
+    "text": "?FindL2CapPsm@CSdpDiscoveryRec@@QAAHPAG@Z"
+  },
+  {
+    "offset": "0x21471",
+    "va": "0x122871",
+    "encoding": "ascii",
+    "text": "?FindProfileVersion@CSdpDiscoveryRec@@QAAHPAU_GUID@@PAG@Z"
+  },
+  {
+    "offset": "0x214ab",
+    "va": "0x1228ab",
+    "encoding": "ascii",
+    "text": "?FindProtocolListElem@CSdpDiscoveryRec@@QAAHGPAUtSDP_PROTOCOL_ELEM@@@Z"
+  },
+  {
+    "offset": "0x214f2",
+    "va": "0x1228f2",
+    "encoding": "ascii",
+    "text": "?FindRFCommScn@CSdpDiscoveryRec@@QAAHPAE@Z"
+  },
+  {
+    "offset": "0x2151d",
+    "va": "0x12291d",
+    "encoding": "ascii",
+    "text": "?FolderListing@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x21554",
+    "va": "0x122954",
+    "encoding": "ascii",
+    "text": "?FreeInternal@CObexHeaders@@AAAXPAUtOBEX_HEADERS@@@Z"
+  },
+  {
+    "offset": "0x21589",
+    "va": "0x122989",
+    "encoding": "ascii",
+    "text": "?Get@CObexClient@@QAA?AW4tOBEX_ERRORS@@PAVCObexHeaders@@H@Z"
+  },
+  {
+    "offset": "0x215c5",
+    "va": "0x1229c5",
+    "encoding": "ascii",
+    "text": "?GetAppParam@CObexHeaders@@QAAHPAE0G@Z"
+  },
+  {
+    "offset": "0x215ec",
+    "va": "0x1229ec",
+    "encoding": "ascii",
+    "text": "?GetAppParamCnt@CObexHeaders@@QAAIXZ"
+  },
+  {
+    "offset": "0x21611",
+    "va": "0x122a11",
+    "encoding": "ascii",
+    "text": "?GetAppParamLength@CObexHeaders@@QAAHPAEG@Z"
+  },
+  {
+    "offset": "0x2163d",
+    "va": "0x122a3d",
+    "encoding": "ascii",
+    "text": "?GetAuthChallenge@CObexHeaders@@QAAHPAE0G@Z"
+  },
+  {
+    "offset": "0x21669",
+    "va": "0x122a69",
+    "encoding": "ascii",
+    "text": "?GetAuthChallengeCnt@CObexHeaders@@QAAIXZ"
+  },
+  {
+    "offset": "0x21693",
+    "va": "0x122a93",
+    "encoding": "ascii",
+    "text": "?GetAuthChallengeLength@CObexHeaders@@QAAHPAEG@Z"
+  },
+  {
+    "offset": "0x216c4",
+    "va": "0x122ac4",
+    "encoding": "ascii",
+    "text": "?GetAuthResponse@CObexHeaders@@QAAHPAE0G@Z"
+  },
+  {
+    "offset": "0x216ef",
+    "va": "0x122aef",
+    "encoding": "ascii",
+    "text": "?GetAuthResponseCnt@CObexHeaders@@QAAIXZ"
+  },
+  {
+    "offset": "0x21718",
+    "va": "0x122b18",
+    "encoding": "ascii",
+    "text": "?GetAuthResponseLength@CObexHeaders@@QAAHPAEG@Z"
+  },
+  {
+    "offset": "0x21748",
+    "va": "0x122b48",
+    "encoding": "ascii",
+    "text": "?GetBinaryPtr@CObexClient@@AAAPAUtOBEX_HEADERS@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x2178c",
+    "va": "0x122b8c",
+    "encoding": "ascii",
+    "text": "?GetBinaryPtr@CObexHeaders@@AAAPAUtOBEX_HEADERS@@XZ"
+  },
+  {
+    "offset": "0x217c0",
+    "va": "0x122bc0",
+    "encoding": "ascii",
+    "text": "?GetBinaryPtr@CObexServer@@AAAPAUtOBEX_HEADERS@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x21804",
+    "va": "0x122c04",
+    "encoding": "ascii",
+    "text": "?GetBody@CObexHeaders@@QAAHPAEPAH@Z"
+  },
+  {
+    "offset": "0x21828",
+    "va": "0x122c28",
+    "encoding": "ascii",
+    "text": "?GetBodyLength@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x2184f",
+    "va": "0x122c4f",
+    "encoding": "ascii",
+    "text": "?GetByte@CObexUserDefined@@QAAHPAE@Z"
+  },
+  {
+    "offset": "0x21874",
+    "va": "0x122c74",
+    "encoding": "ascii",
+    "text": "?GetBytesSent@CPrintClient@@QAAIXZ"
+  },
+  {
+    "offset": "0x21897",
+    "va": "0x122c97",
+    "encoding": "ascii",
+    "text": "?GetBytesTotal@CPrintClient@@QAAIXZ"
+  },
+  {
+    "offset": "0x218bb",
+    "va": "0x122cbb",
+    "encoding": "ascii",
+    "text": "?GetCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@HPAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x21915",
+    "va": "0x122d15",
+    "encoding": "ascii",
+    "text": "?GetCongested@CL2CapConn@@QAAHXZ"
+  },
+  {
+    "offset": "0x21936",
+    "va": "0x122d36",
+    "encoding": "ascii",
+    "text": "?GetConnectionStats@CDunClient@@QAA?AW4DUN_RETURN_CODE@1@PAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x21985",
+    "va": "0x122d85",
+    "encoding": "ascii",
+    "text": "?GetConnectionStats@CL2CapConn@@QAAHPAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x219bf",
+    "va": "0x122dbf",
+    "encoding": "ascii",
+    "text": "?GetConnectionStats@CLapClient@@QAA?AW4LAP_RETURN_CODE@1@PAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x21a0e",
+    "va": "0x122e0e",
+    "encoding": "ascii",
+    "text": "?GetConnectionStats@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@PAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x21a5f",
+    "va": "0x122e5f",
+    "encoding": "ascii",
+    "text": "?GetConnectionStats@CSppClient@@QAA?AW4SPP_CLIENT_RETURN_CODE@1@PAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x21ab5",
+    "va": "0x122eb5",
+    "encoding": "ascii",
+    "text": "?GetConnectionStats@CSppServer@@QAA?AW4SPP_SERVER_RETURN_CODE@1@PAUtBT_CONN_STATS@@@Z"
+  },
+  {
+    "offset": "0x21b0b",
+    "va": "0x122f0b",
+    "encoding": "ascii",
+    "text": "?GetCount@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x21b2d",
+    "va": "0x122f2d",
+    "encoding": "ascii",
+    "text": "?GetDescription@CObexHeaders@@QAAHPAG@Z"
+  },
+  {
+    "offset": "0x21b55",
+    "va": "0x122f55",
+    "encoding": "ascii",
+    "text": "?GetDescriptionLength@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x21b83",
+    "va": "0x122f83",
+    "encoding": "ascii",
+    "text": "?GetFile@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@PAG0@Z"
+  },
+  {
+    "offset": "0x21bb8",
+    "va": "0x122fb8",
+    "encoding": "ascii",
+    "text": "?GetFourByte@CObexUserDefined@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x21be1",
+    "va": "0x122fe1",
+    "encoding": "ascii",
+    "text": "?GetHttp@CObexHeaders@@QAAHPAEG@Z"
+  },
+  {
+    "offset": "0x21c03",
+    "va": "0x123003",
+    "encoding": "ascii",
+    "text": "?GetHttpCnt@CObexHeaders@@QAAIXZ"
+  },
+  {
+    "offset": "0x21c24",
+    "va": "0x123024",
+    "encoding": "ascii",
+    "text": "?GetHttpLength@CObexHeaders@@QAAHPAIG@Z"
+  },
+  {
+    "offset": "0x21c4c",
+    "va": "0x12304c",
+    "encoding": "ascii",
+    "text": "?GetIsReg@CL2CapIf@@AAAHXZ"
+  },
+  {
+    "offset": "0x21c67",
+    "va": "0x123067",
+    "encoding": "ascii",
+    "text": "?GetLastDiscoveryResult@CBtIf@@QAA?AW4DISCOVERY_RESULT@1@QAEPAG@Z"
+  },
+  {
+    "offset": "0x21ca9",
+    "va": "0x1230a9",
+    "encoding": "ascii",
+    "text": "?GetLastError@CPrintClient@@QAA?AW4ePRINT_ERROR@1@PAPAG@Z"
+  },
+  {
+    "offset": "0x21ce3",
+    "va": "0x1230e3",
+    "encoding": "ascii",
+    "text": "?GetLength@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x21d06",
+    "va": "0x123106",
+    "encoding": "ascii",
+    "text": "?GetLength@CObexUserDefined@@QAAGXZ"
+  },
+  {
+    "offset": "0x21d2a",
+    "va": "0x12312a",
+    "encoding": "ascii",
+    "text": "?GetLocalDeviceInfo@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x21d4c",
+    "va": "0x12314c",
+    "encoding": "ascii",
+    "text": "?GetLocalServiceName@CBtIf@@QAAHPAGH@Z"
+  },
+  {
+    "offset": "0x21d73",
+    "va": "0x123173",
+    "encoding": "ascii",
+    "text": "?GetModemStatus@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@PAE@Z"
+  },
+  {
+    "offset": "0x21db0",
+    "va": "0x1231b0",
+    "encoding": "ascii",
+    "text": "?GetMutexHandle@CBtIf@@AAAPAXXZ"
+  },
+  {
+    "offset": "0x21dd0",
+    "va": "0x1231d0",
+    "encoding": "ascii",
+    "text": "?GetName@CObexHeaders@@QAAHPAG@Z"
+  },
+  {
+    "offset": "0x21df1",
+    "va": "0x1231f1",
+    "encoding": "ascii",
+    "text": "?GetNameLength@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x21e18",
+    "va": "0x123218",
+    "encoding": "ascii",
+    "text": "?GetNextLocalServiceName@CBtIf@@QAAHPAGH@Z"
+  },
+  {
+    "offset": "0x21e43",
+    "va": "0x123243",
+    "encoding": "ascii",
+    "text": "?GetObjectClass@CObexHeaders@@QAAHPAE@Z"
+  },
+  {
+    "offset": "0x21e6b",
+    "va": "0x12326b",
+    "encoding": "ascii",
+    "text": "?GetObjectClassLength@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x21e99",
+    "va": "0x123299",
+    "encoding": "ascii",
+    "text": "?GetOctets@CObexUserDefined@@QAAHPAE@Z"
+  },
+  {
+    "offset": "0x21ec0",
+    "va": "0x1232c0",
+    "encoding": "ascii",
+    "text": "?GetPsm@CL2CapIf@@QAAGXZ"
+  },
+  {
+    "offset": "0x21ed9",
+    "va": "0x1232d9",
+    "encoding": "ascii",
+    "text": "?GetRemoteBDAddr@CObexServer@@QAAXPAE@Z"
+  },
+  {
+    "offset": "0x21f01",
+    "va": "0x123301",
+    "encoding": "ascii",
+    "text": "?GetRemoteBdAddr@CL2CapConn@@QAAXQAE@Z"
+  },
+  {
+    "offset": "0x21f28",
+    "va": "0x123328",
+    "encoding": "ascii",
+    "text": "?GetRemoteMtu@CL2CapConn@@QAAGXZ"
+  },
+  {
+    "offset": "0x21f49",
+    "va": "0x123349",
+    "encoding": "ascii",
+    "text": "?GetScn@CRfCommIf@@QAAEXZ"
+  },
+  {
+    "offset": "0x21f63",
+    "va": "0x123363",
+    "encoding": "ascii",
+    "text": "?GetState@CPrintClient@@QAA?AW4ePRINT_STATE@1@XZ"
+  },
+  {
+    "offset": "0x21f94",
+    "va": "0x123394",
+    "encoding": "ascii",
+    "text": "?GetTarget@CObexHeaders@@QAAHPAEG@Z"
+  },
+  {
+    "offset": "0x21fb8",
+    "va": "0x1233b8",
+    "encoding": "ascii",
+    "text": "?GetTargetCnt@CObexHeaders@@QAAIXZ"
+  },
+  {
+    "offset": "0x21fdb",
+    "va": "0x1233db",
+    "encoding": "ascii",
+    "text": "?GetTargetLength@CObexHeaders@@QAAHPAIG@Z"
+  },
+  {
+    "offset": "0x22005",
+    "va": "0x123405",
+    "encoding": "ascii",
+    "text": "?GetText@CObexUserDefined@@QAAHPAG@Z"
+  },
+  {
+    "offset": "0x2202a",
+    "va": "0x12342a",
+    "encoding": "ascii",
+    "text": "?GetTime@CObexHeaders@@QAAHPAD@Z"
+  },
+  {
+    "offset": "0x2204b",
+    "va": "0x12344b",
+    "encoding": "ascii",
+    "text": "?GetType@CObexHeaders@@QAAHPAE@Z"
+  },
+  {
+    "offset": "0x2206c",
+    "va": "0x12346c",
+    "encoding": "ascii",
+    "text": "?GetTypeLength@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x22093",
+    "va": "0x123493",
+    "encoding": "ascii",
+    "text": "?GetUserDefined@CObexHeaders@@QAAHPAVCObexUserDefined@@G@Z"
+  },
+  {
+    "offset": "0x220ce",
+    "va": "0x1234ce",
+    "encoding": "ascii",
+    "text": "?GetUserDefinedCnt@CObexHeaders@@QAAIXZ"
+  },
+  {
+    "offset": "0x220f6",
+    "va": "0x1234f6",
+    "encoding": "ascii",
+    "text": "?GetUserDefinedLength@CObexHeaders@@QAAHPAGG@Z"
+  },
+  {
+    "offset": "0x22125",
+    "va": "0x123525",
+    "encoding": "ascii",
+    "text": "?GetUserType@CObexUserDefined@@QAAEPAE@Z"
+  },
+  {
+    "offset": "0x2214e",
+    "va": "0x12354e",
+    "encoding": "ascii",
+    "text": "?GetWho@CObexHeaders@@QAAHPAE@Z"
+  },
+  {
+    "offset": "0x2216e",
+    "va": "0x12356e",
+    "encoding": "ascii",
+    "text": "?GetWhoLength@CObexHeaders@@QAAHPAI@Z"
+  },
+  {
+    "offset": "0x22194",
+    "va": "0x123594",
+    "encoding": "ascii",
+    "text": "?IsConnected@CRfCommPort@@QAAHPAY05E@Z"
+  },
+  {
+    "offset": "0x221bb",
+    "va": "0x1235bb",
+    "encoding": "ascii",
+    "text": "?Listen@CL2CapConn@@QAAHPAVCL2CapIf@@@Z"
+  },
+  {
+    "offset": "0x221e3",
+    "va": "0x1235e3",
+    "encoding": "ascii",
+    "text": "?MakePublicBrowseable@CSdpService@@QAA?AW4SDP_RETURN_CODE@@XZ"
+  },
+  {
+    "offset": "0x22221",
+    "va": "0x123621",
+    "encoding": "ascii",
+    "text": "?OnAbort@CObexClient@@UAAXPAVCObexHeaders@@W4tOBEX_ERRORS@@W4tOBEX_RESPONSE_CODE@@@Z"
+  },
+  {
+    "offset": "0x22276",
+    "va": "0x123676",
+    "encoding": "ascii",
+    "text": "?OnAbortResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@@Z"
+  },
+  {
+    "offset": "0x222ae",
+    "va": "0x1236ae",
+    "encoding": "ascii",
+    "text": "?OnAbortResponse@COppClient@@UAAXW4OPP_RESULT_CODE@1@@Z"
+  },
+  {
+    "offset": "0x222e6",
+    "va": "0x1236e6",
+    "encoding": "ascii",
+    "text": "?OnAudioConnected@CBtIf@@UAAXG@Z"
+  },
+  {
+    "offset": "0x22307",
+    "va": "0x123707",
+    "encoding": "ascii",
+    "text": "?OnAudioConnected@CL2CapConn@@UAAXG@Z"
+  },
+  {
+    "offset": "0x2232d",
+    "va": "0x12372d",
+    "encoding": "ascii",
+    "text": "?OnAudioConnected@CObexClient@@UAAXG@Z"
+  },
+  {
+    "offset": "0x22354",
+    "va": "0x123754",
+    "encoding": "ascii",
+    "text": "?OnAudioConnected@CObexServer@@UAAXG@Z"
+  },
+  {
+    "offset": "0x2237b",
+    "va": "0x12377b",
+    "encoding": "ascii",
+    "text": "?OnAudioConnected@CRfCommPort@@UAAXG@Z"
+  },
+  {
+    "offset": "0x223a2",
+    "va": "0x1237a2",
+    "encoding": "ascii",
+    "text": "?OnAudioDisconnect@CBtIf@@UAAXG@Z"
+  },
+  {
+    "offset": "0x223c4",
+    "va": "0x1237c4",
+    "encoding": "ascii",
+    "text": "?OnAudioDisconnect@CL2CapConn@@UAAXG@Z"
+  },
+  {
+    "offset": "0x223eb",
+    "va": "0x1237eb",
+    "encoding": "ascii",
+    "text": "?OnAudioDisconnect@CObexClient@@UAAXG@Z"
+  },
+  {
+    "offset": "0x22413",
+    "va": "0x123813",
+    "encoding": "ascii",
+    "text": "?OnAudioDisconnect@CObexServer@@UAAXG@Z"
+  },
+  {
+    "offset": "0x2243b",
+    "va": "0x12383b",
+    "encoding": "ascii",
+    "text": "?OnAudioDisconnect@CRfCommPort@@UAAXG@Z"
+  },
+  {
+    "offset": "0x22463",
+    "va": "0x123863",
+    "encoding": "ascii",
+    "text": "?OnChangeFolderResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@W4FtpFolder@1@PBG@Z"
+  },
+  {
+    "offset": "0x224b3",
+    "va": "0x1238b3",
+    "encoding": "ascii",
+    "text": "?OnCloseResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@@Z"
+  },
+  {
+    "offset": "0x224eb",
+    "va": "0x1238eb",
+    "encoding": "ascii",
+    "text": "?OnCongestionStatus@CL2CapConn@@UAAXH@Z"
+  },
+  {
+    "offset": "0x22513",
+    "va": "0x123913",
+    "encoding": "ascii",
+    "text": "?OnConnectPendingReceived@CL2CapConn@@UAAXXZ"
+  },
+  {
+    "offset": "0x22540",
+    "va": "0x123940",
+    "encoding": "ascii",
+    "text": "?OnConnected@CL2CapConn@@UAAXXZ"
+  },
+  {
+    "offset": "0x22560",
+    "va": "0x123960",
+    "encoding": "ascii",
+    "text": "?OnCreateResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@PBG@Z"
+  },
+  {
+    "offset": "0x2259c",
+    "va": "0x12399c",
+    "encoding": "ascii",
+    "text": "?OnDataReceived@CL2CapConn@@UAAXPAXG@Z"
+  },
+  {
+    "offset": "0x225c3",
+    "va": "0x1239c3",
+    "encoding": "ascii",
+    "text": "?OnDataReceived@CRfCommPort@@UAAXPAXG@Z"
+  },
+  {
+    "offset": "0x225eb",
+    "va": "0x1239eb",
+    "encoding": "ascii",
+    "text": "?OnDeleteResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@PBG@Z"
+  },
+  {
+    "offset": "0x22627",
+    "va": "0x123a27",
+    "encoding": "ascii",
+    "text": "?OnDeviceResponded@CBtIf@@UAAXQAE00H@Z"
+  },
+  {
+    "offset": "0x2264e",
+    "va": "0x123a4e",
+    "encoding": "ascii",
+    "text": "?OnDiscoveryComplete@CBtIf@@UAAXXZ"
+  },
+  {
+    "offset": "0x22671",
+    "va": "0x123a71",
+    "encoding": "ascii",
+    "text": "?OnEventReceived@CRfCommPort@@UAAXI@Z"
+  },
+  {
+    "offset": "0x22697",
+    "va": "0x123a97",
+    "encoding": "ascii",
+    "text": "?OnExchangeResponse@COppClient@@UAAXW4OPP_RESULT_CODE@1@QAEPBG@Z"
+  },
+  {
+    "offset": "0x226d8",
+    "va": "0x123ad8",
+    "encoding": "ascii",
+    "text": "?OnExchangeResponse@COppClient@@UAAXW4OPP_RESULT_CODE@1@QAEPBGW4OPP_TRANSACTION_CODE@1@@Z"
+  },
+  {
+    "offset": "0x22732",
+    "va": "0x123b32",
+    "encoding": "ascii",
+    "text": "?OnFlowEnabled@CRfCommPort@@UAAXH@Z"
+  },
+  {
+    "offset": "0x22756",
+    "va": "0x123b56",
+    "encoding": "ascii",
+    "text": "?OnFolderListingResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@PAUtFTP_FILE_ENTRY@@H@Z"
+  },
+  {
+    "offset": "0x227ab",
+    "va": "0x123bab",
+    "encoding": "ascii",
+    "text": "?OnGet@CObexClient@@UAAXPAVCObexHeaders@@W4tOBEX_ERRORS@@HW4tOBEX_RESPONSE_CODE@@@Z"
+  },
+  {
+    "offset": "0x227ff",
+    "va": "0x123bff",
+    "encoding": "ascii",
+    "text": "?OnGetResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@PBG@Z"
+  },
+  {
+    "offset": "0x22838",
+    "va": "0x123c38",
+    "encoding": "ascii",
+    "text": "?OnIncomingConnection@CL2CapConn@@UAAXXZ"
+  },
+  {
+    "offset": "0x22861",
+    "va": "0x123c61",
+    "encoding": "ascii",
+    "text": "?OnInquiryComplete@CBtIf@@UAAXHF@Z"
+  },
+  {
+    "offset": "0x22884",
+    "va": "0x123c84",
+    "encoding": "ascii",
+    "text": "?OnModemSignalChanged@CRfCommPort@@UAAXE@Z"
+  },
+  {
+    "offset": "0x228af",
+    "va": "0x123caf",
+    "encoding": "ascii",
+    "text": "?OnOpenResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@@Z"
+  },
+  {
+    "offset": "0x228e6",
+    "va": "0x123ce6",
+    "encoding": "ascii",
+    "text": "?OnProgress@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@PBGJJ@Z"
+  },
+  {
+    "offset": "0x2291e",
+    "va": "0x123d1e",
+    "encoding": "ascii",
+    "text": "?OnProgress@COppClient@@UAAXW4OPP_RESULT_CODE@1@QAEPBGJJ@Z"
+  },
+  {
+    "offset": "0x22959",
+    "va": "0x123d59",
+    "encoding": "ascii",
+    "text": "?OnPullResponse@COppClient@@UAAXW4OPP_RESULT_CODE@1@QAEPBG@Z"
+  },
+  {
+    "offset": "0x22996",
+    "va": "0x123d96",
+    "encoding": "ascii",
+    "text": "?OnPushResponse@COppClient@@UAAXW4OPP_RESULT_CODE@1@QAEPBG@Z"
+  },
+  {
+    "offset": "0x229d3",
+    "va": "0x123dd3",
+    "encoding": "ascii",
+    "text": "?OnPut@CObexClient@@UAAXPAVCObexHeaders@@W4tOBEX_ERRORS@@W4tOBEX_RESPONSE_CODE@@@Z"
+  },
+  {
+    "offset": "0x22a26",
+    "va": "0x123e26",
+    "encoding": "ascii",
+    "text": "?OnPutResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@PBG@Z"
+  },
+  {
+    "offset": "0x22a5f",
+    "va": "0x123e5f",
+    "encoding": "ascii",
+    "text": "?OnRemoteDisconnected@CL2CapConn@@UAAXG@Z"
+  },
+  {
+    "offset": "0x22a89",
+    "va": "0x123e89",
+    "encoding": "ascii",
+    "text": "?OnSetPath@CObexClient@@UAAXPAVCObexHeaders@@W4tOBEX_ERRORS@@W4tOBEX_RESPONSE_CODE@@@Z"
+  },
+  {
+    "offset": "0x22ae0",
+    "va": "0x123ee0",
+    "encoding": "ascii",
+    "text": "?OnStackStatusChange@CBtIf@@UAAXW4STACK_STATUS@1@@Z"
+  },
+  {
+    "offset": "0x22b14",
+    "va": "0x123f14",
+    "encoding": "ascii",
+    "text": "?OnStateChange@CPrintClient@@UAAXW4ePRINT_STATE@1@@Z"
+  },
+  {
+    "offset": "0x22b49",
+    "va": "0x123f49",
+    "encoding": "ascii",
+    "text": "?OnXmlFolderListingResponse@CFtpClient@@UAAXW4FTP_RESULT_CODE@1@PAGJH@Z"
+  },
+  {
+    "offset": "0x22b91",
+    "va": "0x123f91",
+    "encoding": "ascii",
+    "text": "?Open@CObexClient@@QAA?AW4tOBEX_ERRORS@@EQAEPAVCObexHeaders@@G@Z"
+  },
+  {
+    "offset": "0x22bd2",
+    "va": "0x123fd2",
+    "encoding": "ascii",
+    "text": "?OpenClient@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@EQAEG@Z"
+  },
+  {
+    "offset": "0x22c0d",
+    "va": "0x12400d",
+    "encoding": "ascii",
+    "text": "?OpenCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@PAVCObexHeaders@@G@Z"
+  },
+  {
+    "offset": "0x22c68",
+    "va": "0x124068",
+    "encoding": "ascii",
+    "text": "?OpenConnection@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@QAEAAVCSdpDiscoveryRec@@@Z"
+  },
+  {
+    "offset": "0x22cb8",
+    "va": "0x1240b8",
+    "encoding": "ascii",
+    "text": "?OpenServer@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@EG@Z"
+  },
+  {
+    "offset": "0x22cf0",
+    "va": "0x1240f0",
+    "encoding": "ascii",
+    "text": "?Parent@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x22d20",
+    "va": "0x124120",
+    "encoding": "ascii",
+    "text": "?Pull@COppClient@@QAA?AW4OPP_RETURN_CODE@1@QAEPAGAAVCSdpDiscoveryRec@@@Z"
+  },
+  {
+    "offset": "0x22d69",
+    "va": "0x124169",
+    "encoding": "ascii",
+    "text": "?Purge@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@E@Z"
+  },
+  {
+    "offset": "0x22d9b",
+    "va": "0x12419b",
+    "encoding": "ascii",
+    "text": "?Push@COppClient@@QAA?AW4OPP_RETURN_CODE@1@QAEPAGAAVCSdpDiscoveryRec@@@Z"
+  },
+  {
+    "offset": "0x22de4",
+    "va": "0x1241e4",
+    "encoding": "ascii",
+    "text": "?Put@CObexClient@@QAA?AW4tOBEX_ERRORS@@PAVCObexHeaders@@H@Z"
+  },
+  {
+    "offset": "0x22e20",
+    "va": "0x124220",
+    "encoding": "ascii",
+    "text": "?PutCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x22e79",
+    "va": "0x124279",
+    "encoding": "ascii",
+    "text": "?PutCreateCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x22ed8",
+    "va": "0x1242d8",
+    "encoding": "ascii",
+    "text": "?PutDeleteCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x22f37",
+    "va": "0x124337",
+    "encoding": "ascii",
+    "text": "?PutFile@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@PAG@Z"
+  },
+  {
+    "offset": "0x22f6b",
+    "va": "0x12436b",
+    "encoding": "ascii",
+    "text": "?RadioOff@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x22f83",
+    "va": "0x124383",
+    "encoding": "ascii",
+    "text": "?RadioOn@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x22f9a",
+    "va": "0x12439a",
+    "encoding": "ascii",
+    "text": "?ReadAudioData@CBtIf@@SA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x22fd3",
+    "va": "0x1243d3",
+    "encoding": "ascii",
+    "text": "?ReadAudioData@CL2CapConn@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23012",
+    "va": "0x124412",
+    "encoding": "ascii",
+    "text": "?ReadAudioData@CObexClient@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23052",
+    "va": "0x124452",
+    "encoding": "ascii",
+    "text": "?ReadAudioData@CObexServer@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23092",
+    "va": "0x124492",
+    "encoding": "ascii",
+    "text": "?ReadAudioData@CRfCommPort@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x230d2",
+    "va": "0x1244d2",
+    "encoding": "ascii",
+    "text": "?ReadDiscoveryRecords@CBtIf@@QAAHQAEHPAVCSdpDiscoveryRec@@PAU_GUID@@@Z"
+  },
+  {
+    "offset": "0x23119",
+    "va": "0x124519",
+    "encoding": "ascii",
+    "text": "?Reconfigure@CL2CapConn@@QAAHPAUtL2CAP_CONFIG_INFO@@@Z"
+  },
+  {
+    "offset": "0x23150",
+    "va": "0x124550",
+    "encoding": "ascii",
+    "text": "?Register@CL2CapIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x2316b",
+    "va": "0x12456b",
+    "encoding": "ascii",
+    "text": "?Register@CObexServer@@QAA?AW4tOBEX_ERRORS@@EPAE@Z"
+  },
+  {
+    "offset": "0x2319e",
+    "va": "0x12459e",
+    "encoding": "ascii",
+    "text": "?Reject@CL2CapConn@@QAAHG@Z"
+  },
+  {
+    "offset": "0x231ba",
+    "va": "0x1245ba",
+    "encoding": "ascii",
+    "text": "?ReloadStack@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x231d5",
+    "va": "0x1245d5",
+    "encoding": "ascii",
+    "text": "?RemoveAudioConnection@CBtIf@@SA?AW4AUDIO_RETURN_CODE@@G@Z"
+  },
+  {
+    "offset": "0x23210",
+    "va": "0x124610",
+    "encoding": "ascii",
+    "text": "?RemoveAudioConnection@CL2CapConn@@QAA?AW4AUDIO_RETURN_CODE@@G@Z"
+  },
+  {
+    "offset": "0x23251",
+    "va": "0x124651",
+    "encoding": "ascii",
+    "text": "?RemoveAudioConnection@CObexClient@@QAA?AW4AUDIO_RETURN_CODE@@G@Z"
+  },
+  {
+    "offset": "0x23293",
+    "va": "0x124693",
+    "encoding": "ascii",
+    "text": "?RemoveAudioConnection@CObexServer@@QAA?AW4AUDIO_RETURN_CODE@@G@Z"
+  },
+  {
+    "offset": "0x232d5",
+    "va": "0x1246d5",
+    "encoding": "ascii",
+    "text": "?RemoveAudioConnection@CRfCommPort@@QAA?AW4AUDIO_RETURN_CODE@@G@Z"
+  },
+  {
+    "offset": "0x23317",
+    "va": "0x124717",
+    "encoding": "ascii",
+    "text": "?RemoveConnection@CDunClient@@QAA?AW4DUN_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x23351",
+    "va": "0x124751",
+    "encoding": "ascii",
+    "text": "?RemoveConnection@CLapClient@@QAA?AW4LAP_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x2338b",
+    "va": "0x12478b",
+    "encoding": "ascii",
+    "text": "?RemoveConnection@CSppClient@@QAA?AW4SPP_CLIENT_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x233cc",
+    "va": "0x1247cc",
+    "encoding": "ascii",
+    "text": "?RemoveConnection@CSppServer@@QAA?AW4SPP_SERVER_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x2340d",
+    "va": "0x12480d",
+    "encoding": "ascii",
+    "text": "?Root@CFtpClient@@QAA?AW4FTP_RETURN_CODE@1@XZ"
+  },
+  {
+    "offset": "0x2343b",
+    "va": "0x12483b",
+    "encoding": "ascii",
+    "text": "?SendError@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@E@Z"
+  },
+  {
+    "offset": "0x23471",
+    "va": "0x124871",
+    "encoding": "ascii",
+    "text": "?SetAvailability@CSdpService@@QAA?AW4SDP_RETURN_CODE@@E@Z"
+  },
+  {
+    "offset": "0x234ab",
+    "va": "0x1248ab",
+    "encoding": "ascii",
+    "text": "?SetBody@CObexHeaders@@QAAHPAEIH@Z"
+  },
+  {
+    "offset": "0x234ce",
+    "va": "0x1248ce",
+    "encoding": "ascii",
+    "text": "?SetCount@CObexHeaders@@QAAXI@Z"
+  },
+  {
+    "offset": "0x234ee",
+    "va": "0x1248ee",
+    "encoding": "ascii",
+    "text": "?SetDefaults@CObexHeaders@@AAAXPAUtOBEX_HEADERS@@@Z"
+  },
+  {
+    "offset": "0x23522",
+    "va": "0x124922",
+    "encoding": "ascii",
+    "text": "?SetDescription@CObexHeaders@@QAAHPAG@Z"
+  },
+  {
+    "offset": "0x2354a",
+    "va": "0x12494a",
+    "encoding": "ascii",
+    "text": "?SetDiscoverable@CBtIf@@QAAXH@Z"
+  },
+  {
+    "offset": "0x2356a",
+    "va": "0x12496a",
+    "encoding": "ascii",
+    "text": "?SetFlag@CObexHeaders@@AAAXI@Z"
+  },
+  {
+    "offset": "0x23589",
+    "va": "0x124989",
+    "encoding": "ascii",
+    "text": "?SetFlowEnabled@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@H@Z"
+  },
+  {
+    "offset": "0x235c4",
+    "va": "0x1249c4",
+    "encoding": "ascii",
+    "text": "?SetHeader@CObexUserDefined@@QAAHEE@Z"
+  },
+  {
+    "offset": "0x235ea",
+    "va": "0x1249ea",
+    "encoding": "ascii",
+    "text": "?SetHeader@CObexUserDefined@@QAAHEI@Z"
+  },
+  {
+    "offset": "0x23610",
+    "va": "0x124a10",
+    "encoding": "ascii",
+    "text": "?SetHeader@CObexUserDefined@@QAAHEPAEG@Z"
+  },
+  {
+    "offset": "0x23639",
+    "va": "0x124a39",
+    "encoding": "ascii",
+    "text": "?SetHeader@CObexUserDefined@@QAAHEPAG@Z"
+  },
+  {
+    "offset": "0x23661",
+    "va": "0x124a61",
+    "encoding": "ascii",
+    "text": "?SetIdle@CL2CapConn@@AAAXXZ"
+  },
+  {
+    "offset": "0x2367d",
+    "va": "0x124a7d",
+    "encoding": "ascii",
+    "text": "?SetLength@CObexHeaders@@QAAXI@Z"
+  },
+  {
+    "offset": "0x2369e",
+    "va": "0x124a9e",
+    "encoding": "ascii",
+    "text": "?SetLinkSupervisionTimeOut@CBtIf@@SAHQAEG@Z"
+  },
+  {
+    "offset": "0x236ca",
+    "va": "0x124aca",
+    "encoding": "ascii",
+    "text": "?SetLinkSupervisionTimeOut@CL2CapConn@@QAAHG@Z"
+  },
+  {
+    "offset": "0x236f9",
+    "va": "0x124af9",
+    "encoding": "ascii",
+    "text": "?SetLinkSupervisionTimeOut@CObexClient@@QAA?AW4tOBEX_ERRORS@@G@Z"
+  },
+  {
+    "offset": "0x2373a",
+    "va": "0x124b3a",
+    "encoding": "ascii",
+    "text": "?SetLinkSupervisionTimeOut@CObexServer@@QAA?AW4tOBEX_ERRORS@@G@Z"
+  },
+  {
+    "offset": "0x2377b",
+    "va": "0x124b7b",
+    "encoding": "ascii",
+    "text": "?SetLinkSupervisionTimeOut@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@G@Z"
+  },
+  {
+    "offset": "0x237c1",
+    "va": "0x124bc1",
+    "encoding": "ascii",
+    "text": "?SetModemSignal@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@E@Z"
+  },
+  {
+    "offset": "0x237fc",
+    "va": "0x124bfc",
+    "encoding": "ascii",
+    "text": "?SetMutexHandle@CBtIf@@AAAXPAX@Z"
+  },
+  {
+    "offset": "0x2381d",
+    "va": "0x124c1d",
+    "encoding": "ascii",
+    "text": "?SetName@CObexHeaders@@QAAHPAG@Z"
+  },
+  {
+    "offset": "0x2383e",
+    "va": "0x124c3e",
+    "encoding": "ascii",
+    "text": "?SetObjectClass@CObexHeaders@@QAAHPAEI@Z"
+  },
+  {
+    "offset": "0x23867",
+    "va": "0x124c67",
+    "encoding": "ascii",
+    "text": "?SetOnDeviceStatusCallback@CBtIf@@IAAXXZ"
+  },
+  {
+    "offset": "0x23890",
+    "va": "0x124c90",
+    "encoding": "ascii",
+    "text": "?SetPath@CObexClient@@QAA?AW4tOBEX_ERRORS@@PAVCObexHeaders@@HH@Z"
+  },
+  {
+    "offset": "0x238d1",
+    "va": "0x124cd1",
+    "encoding": "ascii",
+    "text": "?SetPathCnf@CObexServer@@QAA?AW4tOBEX_ERRORS@@W42@W4tOBEX_RESPONSE_CODE@@PAVCObexHeaders@@@Z"
+  },
+  {
+    "offset": "0x2392e",
+    "va": "0x124d2e",
+    "encoding": "ascii",
+    "text": "?SetSecurity@CDunClient@@QAAXHH@Z"
+  },
+  {
+    "offset": "0x23950",
+    "va": "0x124d50",
+    "encoding": "ascii",
+    "text": "?SetSecurity@CFtpClient@@QAAXHH@Z"
+  },
+  {
+    "offset": "0x23972",
+    "va": "0x124d72",
+    "encoding": "ascii",
+    "text": "?SetSecurity@CLapClient@@QAAXHH@Z"
+  },
+  {
+    "offset": "0x23994",
+    "va": "0x124d94",
+    "encoding": "ascii",
+    "text": "?SetSecurity@COppClient@@QAAXHH@Z"
+  },
+  {
+    "offset": "0x239b6",
+    "va": "0x124db6",
+    "encoding": "ascii",
+    "text": "?SetSecurityLevel@CL2CapIf@@QAAHPAGEH@Z"
+  },
+  {
+    "offset": "0x239de",
+    "va": "0x124dde",
+    "encoding": "ascii",
+    "text": "?SetSecurityLevel@CRfCommIf@@QAAHPAGEH@Z"
+  },
+  {
+    "offset": "0x23a07",
+    "va": "0x124e07",
+    "encoding": "ascii",
+    "text": "?SetTime@CObexHeaders@@QAAHPAD@Z"
+  },
+  {
+    "offset": "0x23a28",
+    "va": "0x124e28",
+    "encoding": "ascii",
+    "text": "?SetType@CObexHeaders@@QAAHPAEI@Z"
+  },
+  {
+    "offset": "0x23a4a",
+    "va": "0x124e4a",
+    "encoding": "ascii",
+    "text": "?SetWho@CObexHeaders@@QAAHPAEI@Z"
+  },
+  {
+    "offset": "0x23a6b",
+    "va": "0x124e6b",
+    "encoding": "ascii",
+    "text": "?Start@CPrintClient@@QAA?AW4ePRINT_ERROR@1@QAEW4ePRINT_PROFILE@1@PBGPAUBTPRINTSTRUCT@@@Z"
+  },
+  {
+    "offset": "0x23ac4",
+    "va": "0x124ec4",
+    "encoding": "ascii",
+    "text": "?StartDiscovery@CBtIf@@QAAHQAEPAU_GUID@@@Z"
+  },
+  {
+    "offset": "0x23aef",
+    "va": "0x124eef",
+    "encoding": "ascii",
+    "text": "?StartInquiry@CBtIf@@QAAHXZ"
+  },
+  {
+    "offset": "0x23b0b",
+    "va": "0x124f0b",
+    "encoding": "ascii",
+    "text": "?StopInquiry@CBtIf@@QAAXXZ"
+  },
+  {
+    "offset": "0x23b26",
+    "va": "0x124f26",
+    "encoding": "ascii",
+    "text": "?SwitchRole@CBtIf@@SAHQAEW4MASTER_SLAVE_ROLE@@@Z"
+  },
+  {
+    "offset": "0x23b57",
+    "va": "0x124f57",
+    "encoding": "ascii",
+    "text": "?SwitchRole@CL2CapConn@@QAAHW4MASTER_SLAVE_ROLE@@@Z"
+  },
+  {
+    "offset": "0x23b8b",
+    "va": "0x124f8b",
+    "encoding": "ascii",
+    "text": "?SwitchRole@CObexServer@@QAAHW4MASTER_SLAVE_ROLE@@@Z"
+  },
+  {
+    "offset": "0x23bc0",
+    "va": "0x124fc0",
+    "encoding": "ascii",
+    "text": "?SwitchRole@CRfCommPort@@QAAHW4MASTER_SLAVE_ROLE@@@Z"
+  },
+  {
+    "offset": "0x23bf5",
+    "va": "0x124ff5",
+    "encoding": "ascii",
+    "text": "?TestFlag@CObexHeaders@@AAAHI@Z"
+  },
+  {
+    "offset": "0x23c15",
+    "va": "0x125015",
+    "encoding": "ascii",
+    "text": "?UnBond@CBtIf@@QAAHQAE@Z"
+  },
+  {
+    "offset": "0x23c2e",
+    "va": "0x12502e",
+    "encoding": "ascii",
+    "text": "?Unregister@CObexServer@@QAA?AW4tOBEX_ERRORS@@XZ"
+  },
+  {
+    "offset": "0x23c5f",
+    "va": "0x12505f",
+    "encoding": "ascii",
+    "text": "?WIDCOMMSDK_ShutDown@@YAXXZ"
+  },
+  {
+    "offset": "0x23c7b",
+    "va": "0x12507b",
+    "encoding": "ascii",
+    "text": "?Write@CL2CapConn@@QAAHPAXGPAG@Z"
+  },
+  {
+    "offset": "0x23c9c",
+    "va": "0x12509c",
+    "encoding": "ascii",
+    "text": "?Write@CRfCommPort@@QAA?AW4PORT_RETURN_CODE@1@PAXGPAG@Z"
+  },
+  {
+    "offset": "0x23cd4",
+    "va": "0x1250d4",
+    "encoding": "ascii",
+    "text": "?WriteAudioData@CBtIf@@SA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23d0e",
+    "va": "0x12510e",
+    "encoding": "ascii",
+    "text": "?WriteAudioData@CL2CapConn@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23d4e",
+    "va": "0x12514e",
+    "encoding": "ascii",
+    "text": "?WriteAudioData@CObexClient@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23d8f",
+    "va": "0x12518f",
+    "encoding": "ascii",
+    "text": "?WriteAudioData@CObexServer@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23dd0",
+    "va": "0x1251d0",
+    "encoding": "ascii",
+    "text": "?WriteAudioData@CRfCommPort@@QAA?AW4AUDIO_RETURN_CODE@@PAXKPAK@Z"
+  },
+  {
+    "offset": "0x23e11",
+    "va": "0x125211",
+    "encoding": "ascii",
+    "text": "?g_bUseDST@@3HA"
+  },
+  {
+    "offset": "0x23e21",
+    "va": "0x125221",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_BPP_PRINTING@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23e50",
+    "va": "0x125250",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_BROWSE_GROUP_DESCRIPTOR@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23e8a",
+    "va": "0x12528a",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_CORDLESS_TELEPHONY@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23ebf",
+    "va": "0x1252bf",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_DIALUP_NETWORKING@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23ef3",
+    "va": "0x1252f3",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_FAX@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23f19",
+    "va": "0x125319",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_GENERIC_AUDIO@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23f49",
+    "va": "0x125349",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_GENERIC_FILETRANSFER@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23f80",
+    "va": "0x125380",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_GENERIC_NETWORKING@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23fb5",
+    "va": "0x1253b5",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_GENERIC_TELEPHONY@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x23fe9",
+    "va": "0x1253e9",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_GN@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x2400e",
+    "va": "0x12540e",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_HCRP_PRINTING@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x2403e",
+    "va": "0x12543e",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_HEADSET@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x24068",
+    "va": "0x125468",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_HEADSET_AUDIO_GATEWAY@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x240a0",
+    "va": "0x1254a0",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_INTERCOM@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x240cb",
+    "va": "0x1254cb",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_IRMC_SYNC@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x240f7",
+    "va": "0x1254f7",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_IRMC_SYNC_COMMAND@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x2412b",
+    "va": "0x12552b",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_LAN_ACCESS_USING_PPP@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x24162",
+    "va": "0x125562",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_NAP@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x24188",
+    "va": "0x125588",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_OBEX_FILE_TRANSFER@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x241bd",
+    "va": "0x1255bd",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_OBEX_OBJECT_PUSH@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x241f0",
+    "va": "0x1255f0",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_PANU@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x24217",
+    "va": "0x125617",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_PNP_INFORMATION@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x24249",
+    "va": "0x125649",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_PUBLIC_BROWSE_GROUP@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x2427f",
+    "va": "0x12567f",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_SERIAL_PORT@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x242ad",
+    "va": "0x1256ad",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_SERVICE_DISCOVERY_SERVER@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x242e8",
+    "va": "0x1256e8",
+    "encoding": "ascii",
+    "text": "?guid_SERVCLASS_SPP_PRINTING@CBtIf@@2U_GUID@@B"
+  },
+  {
+    "offset": "0x24317",
+    "va": "0x125717",
+    "encoding": "ascii",
+    "text": "?m_p_first_client@CObexClient@@0PAV1@A"
+  },
+  {
+    "offset": "0x2433e",
+    "va": "0x12573e",
+    "encoding": "ascii",
+    "text": "?m_p_first_conn@CL2CapConn@@0PAV1@A"
+  },
+  {
+    "offset": "0x24362",
+    "va": "0x125762",
+    "encoding": "ascii",
+    "text": "?m_p_first_server@CObexServer@@0PAV1@A"
+  },
+  {
+    "offset": "0x24389",
+    "va": "0x125789",
+    "encoding": "ascii",
+    "text": "?pIp@CPrintClient@@2PAVCPrintInternal@@A"
+  },
+  {
+    "offset": "0x243b2",
+    "va": "0x1257b2",
+    "encoding": "ascii",
+    "text": "sdk_close"
+  },
+  {
+    "offset": "0x243bc",
+    "va": "0x1257bc",
+    "encoding": "ascii",
+    "text": "sdk_init"
+  },
+  {
+    "offset": "0x247a8",
+    "va": "0x1263a8",
+    "encoding": "utf-16le",
+    "text": " Close Object"
+  },
+  {
+    "offset": "0x247c4",
+    "va": "0x1263c4",
+    "encoding": "utf-16le",
+    "text": " Close Description"
+  },
+  {
+    "offset": "0x247ec",
+    "va": "0x1263ec",
+    "encoding": "ascii",
+    "text": "text/plain"
+  },
+  {
+    "offset": "0x247f8",
+    "va": "0x1263f8",
+    "encoding": "utf-16le",
+    "text": "Service not found"
+  },
+  {
+    "offset": "0x2481c",
+    "va": "0x12641c",
+    "encoding": "utf-16le",
+    "text": "BPP SCN not found"
+  },
+  {
+    "offset": "0x24840",
+    "va": "0x126440",
+    "encoding": "utf-16le",
+    "text": "BPP SCN not assignable"
+  },
+  {
+    "offset": "0x24870",
+    "va": "0x126470",
+    "encoding": "utf-16le",
+    "text": "Security error"
+  },
+  {
+    "offset": "0x24894",
+    "va": "0x126494",
+    "encoding": "utf-16le",
+    "text": "Obex Open Failed, Code: %d"
+  },
+  {
+    "offset": "0x248d0",
+    "va": "0x1264d0",
+    "encoding": "utf-16le",
+    "text": "Obex Abort Code: %d  RspCode: %d"
+  },
+  {
+    "offset": "0x24918",
+    "va": "0x126518",
+    "encoding": "utf-16le",
+    "text": "Obex Abort Code: %d  RspCode: %d"
+  },
+  {
+    "offset": "0x2495c",
+    "va": "0x12655c",
+    "encoding": "utf-16le",
+    "text": "File Printed OK"
+  },
+  {
+    "offset": "0x24980",
+    "va": "0x126580",
+    "encoding": "utf-16le",
+    "text": "Server finshed but client has more"
+  },
+  {
+    "offset": "0x249c8",
+    "va": "0x1265c8",
+    "encoding": "utf-16le",
+    "text": "Client finshed but server wants more"
+  },
+  {
+    "offset": "0x24a14",
+    "va": "0x126614",
+    "encoding": "utf-16le",
+    "text": "File Read Error"
+  },
+  {
+    "offset": "0x24a34",
+    "va": "0x126634",
+    "encoding": "utf-16le",
+    "text": "Connect error"
+  },
+  {
+    "offset": "0x24b38",
+    "va": "0x126738",
+    "encoding": "utf-16le",
+    "text": "%s %s %02d %02d:%02d:%02d %04d"
+  },
+  {
+    "offset": "0x24b78",
+    "va": "0x126778",
+    "encoding": "utf-16le",
+    "text": "WIDCOMM_WM_BTRADIO_OFF"
+  },
+  {
+    "offset": "0x24ba8",
+    "va": "0x1267a8",
+    "encoding": "utf-16le",
+    "text": "WIDCOMM_WM_BTRADIO_ON"
+  },
+  {
+    "offset": "0x24bd4",
+    "va": "0x1267d4",
+    "encoding": "utf-16le",
+    "text": "WIDCOMM_WM_STACK_LOAD"
+  },
+  {
+    "offset": "0x24c00",
+    "va": "0x126800",
+    "encoding": "utf-16le",
+    "text": "WIDCOMM_WM_STACK_UNLOAD"
+  },
+  {
+    "offset": "0x24c30",
+    "va": "0x126830",
+    "encoding": "utf-16le",
+    "text": "DKMutex"
+  },
+  {
+    "offset": "0x24c40",
+    "va": "0x126840",
+    "encoding": "utf-16le",
+    "text": "BtNeighborhoodPairFailed"
+  },
+  {
+    "offset": "0x24c74",
+    "va": "0x126874",
+    "encoding": "utf-16le",
+    "text": "BtNeighborhoodPairSuccess"
+  },
+  {
+    "offset": "0x24ca8",
+    "va": "0x1268a8",
+    "encoding": "utf-16le",
+    "text": "WCE_BTTRAY"
+  },
+  {
+    "offset": "0x24cc0",
+    "va": "0x1268c0",
+    "encoding": "utf-16le",
+    "text": "WCE_BTTRAY"
+  },
+  {
+    "offset": "0x24cd8",
+    "va": "0x1268d8",
+    "encoding": "utf-16le",
+    "text": "BtDK"
+  },
+  {
+    "offset": "0x24ce4",
+    "va": "0x1268e4",
+    "encoding": "utf-16le",
+    "text": "Can not find TRAY"
+  },
+  {
+    "offset": "0x24d08",
+    "va": "0x126908",
+    "encoding": "utf-16le",
+    "text": "BtDK"
+  },
+  {
+    "offset": "0x24d14",
+    "va": "0x126914",
+    "encoding": "utf-16le",
+    "text": "Send Unload failed"
+  },
+  {
+    "offset": "0x24d3c",
+    "va": "0x12693c",
+    "encoding": "utf-16le",
+    "text": "Cnt:%d"
+  },
+  {
+    "offset": "0x24d50",
+    "va": "0x126950",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Services"
+  },
+  {
+    "offset": "0x24d98",
+    "va": "0x126998",
+    "encoding": "utf-16le",
+    "text": "Auto"
+  },
+  {
+    "offset": "0x24da8",
+    "va": "0x1269a8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Applications"
+  },
+  {
+    "offset": "0x24df8",
+    "va": "0x1269f8",
+    "encoding": "utf-16le",
+    "text": "BTS1:"
+  },
+  {
+    "offset": "0x24e04",
+    "va": "0x126a04",
+    "encoding": "utf-16le",
+    "text": "DKMutex"
+  },
+  {
+    "offset": "0x24e14",
+    "va": "0x126a14",
+    "encoding": "utf-16le",
+    "text": "Dial-up Networking"
+  },
+  {
+    "offset": "0x24e3c",
+    "va": "0x126a3c",
+    "encoding": "utf-16le",
+    "text": "DKMutex"
+  },
+  {
+    "offset": "0x24e4c",
+    "va": "0x126a4c",
+    "encoding": "utf-16le",
+    "text": "Service not found"
+  },
+  {
+    "offset": "0x24e70",
+    "va": "0x126a70",
+    "encoding": "utf-16le",
+    "text": "Control PSM not found"
+  },
+  {
+    "offset": "0x24e9c",
+    "va": "0x126a9c",
+    "encoding": "utf-16le",
+    "text": "Data PSM not found"
+  },
+  {
+    "offset": "0x24ec4",
+    "va": "0x126ac4",
+    "encoding": "utf-16le",
+    "text": "Connect Error"
+  },
+  {
+    "offset": "0x24ee0",
+    "va": "0x126ae0",
+    "encoding": "utf-16le",
+    "text": "Security Error"
+  },
+  {
+    "offset": "0x24f00",
+    "va": "0x126b00",
+    "encoding": "utf-16le",
+    "text": "Security Error"
+  },
+  {
+    "offset": "0x24f20",
+    "va": "0x126b20",
+    "encoding": "utf-16le",
+    "text": "Connect Error"
+  },
+  {
+    "offset": "0x24f3c",
+    "va": "0x126b3c",
+    "encoding": "utf-16le",
+    "text": "Connect Error"
+  },
+  {
+    "offset": "0x24f58",
+    "va": "0x126b58",
+    "encoding": "utf-16le",
+    "text": "Connect Error"
+  },
+  {
+    "offset": "0x24f74",
+    "va": "0x126b74",
+    "encoding": "utf-16le",
+    "text": "Write error"
+  },
+  {
+    "offset": "0x24f8c",
+    "va": "0x126b8c",
+    "encoding": "utf-16le",
+    "text": "File Printed OK"
+  },
+  {
+    "offset": "0x24fac",
+    "va": "0x126bac",
+    "encoding": "utf-16le",
+    "text": "File Read Error"
+  },
+  {
+    "offset": "0x24fcc",
+    "va": "0x126bcc",
+    "encoding": "utf-16le",
+    "text": "Remote Disconnected"
+  },
+  {
+    "offset": "0x2501c",
+    "va": "0x126c1c",
+    "encoding": "utf-16le",
+    "text": "DKMutex"
+  },
+  {
+    "offset": "0x2502c",
+    "va": "0x126c2c",
+    "encoding": "utf-16le",
+    "text": "Network Access"
+  },
+  {
+    "offset": "0x25054",
+    "va": "0x126c54",
+    "encoding": "utf-16le",
+    "text": "<folder"
+  },
+  {
+    "offset": "0x25064",
+    "va": "0x126c64",
+    "encoding": "utf-16le",
+    "text": "<parent-folder"
+  },
+  {
+    "offset": "0x25084",
+    "va": "0x126c84",
+    "encoding": "utf-16le",
+    "text": "<file"
+  },
+  {
+    "offset": "0x25090",
+    "va": "0x126c90",
+    "encoding": "utf-16le",
+    "text": "<folder-listing"
+  },
+  {
+    "offset": "0x250b0",
+    "va": "0x126cb0",
+    "encoding": "utf-16le",
+    "text": "accessed"
+  },
+  {
+    "offset": "0x250c4",
+    "va": "0x126cc4",
+    "encoding": "utf-16le",
+    "text": "created"
+  },
+  {
+    "offset": "0x250d4",
+    "va": "0x126cd4",
+    "encoding": "utf-16le",
+    "text": "modified"
+  },
+  {
+    "offset": "0x250f0",
+    "va": "0x126cf0",
+    "encoding": "utf-16le",
+    "text": "size"
+  },
+  {
+    "offset": "0x250fc",
+    "va": "0x126cfc",
+    "encoding": "utf-16le",
+    "text": "name"
+  },
+  {
+    "offset": "0x25108",
+    "va": "0x126d08",
+    "encoding": "utf-16le",
+    "text": "user-perm"
+  },
+  {
+    "offset": "0x2511c",
+    "va": "0x126d1c",
+    "encoding": "utf-16le",
+    "text": "group-perm"
+  },
+  {
+    "offset": "0x25134",
+    "va": "0x126d34",
+    "encoding": "utf-16le",
+    "text": "other-perm"
+  },
+  {
+    "offset": "0x2514c",
+    "va": "0x126d4c",
+    "encoding": "utf-16le",
+    "text": "DKMutex"
+  },
+  {
+    "offset": "0x2515c",
+    "va": "0x126d5c",
+    "encoding": "utf-16le",
+    "text": "Generic Serial"
+  },
+  {
+    "offset": "0x25180",
+    "va": "0x126d80",
+    "encoding": "utf-16le",
+    "text": "Service not found"
+  },
+  {
+    "offset": "0x251a4",
+    "va": "0x126da4",
+    "encoding": "utf-16le",
+    "text": "SPP SCN not found"
+  },
+  {
+    "offset": "0x251c8",
+    "va": "0x126dc8",
+    "encoding": "utf-16le",
+    "text": "Could not initiate connection. Result: %d"
+  },
+  {
+    "offset": "0x2521c",
+    "va": "0x126e1c",
+    "encoding": "utf-16le",
+    "text": "Security error"
+  },
+  {
+    "offset": "0x2523c",
+    "va": "0x126e3c",
+    "encoding": "utf-16le",
+    "text": "Connect Error"
+  },
+  {
+    "offset": "0x25258",
+    "va": "0x126e58",
+    "encoding": "utf-16le",
+    "text": "File Read Error"
+  },
+  {
+    "offset": "0x25278",
+    "va": "0x126e78",
+    "encoding": "utf-16le",
+    "text": "Write error"
+  },
+  {
+    "offset": "0x25290",
+    "va": "0x126e90",
+    "encoding": "utf-16le",
+    "text": "Remote Disconnected"
+  },
+  {
+    "offset": "0x252b8",
+    "va": "0x126eb8",
+    "encoding": "utf-16le",
+    "text": "File Printed OK"
+  },
+  {
+    "offset": "0x252d8",
+    "va": "0x126ed8",
+    "encoding": "utf-16le",
+    "text": "SOFTWARE\\Widcomm\\BTConfig\\Services\\"
+  },
+  {
+    "offset": "0x25320",
+    "va": "0x126f20",
+    "encoding": "utf-16le",
+    "text": "DKMutex"
+  },
+  {
+    "offset": "0x25330",
+    "va": "0x126f30",
+    "encoding": "utf-16le",
+    "text": "Encryption"
+  },
+  {
+    "offset": "0x25348",
+    "va": "0x126f48",
+    "encoding": "utf-16le",
+    "text": "Authorization"
+  },
+  {
+    "offset": "0x25364",
+    "va": "0x126f64",
+    "encoding": "utf-16le",
+    "text": "Authentication"
+  },
+  {
+    "offset": "0x25384",
+    "va": "0x126f84",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x25390",
+    "va": "0x126f90",
+    "encoding": "utf-16le",
+    "text": "ComPortNumber"
+  },
+  {
+    "offset": "0x253ac",
+    "va": "0x126fac",
+    "encoding": "utf-16le",
+    "text": "GUID"
+  },
+  {
+    "offset": "0x253b8",
+    "va": "0x126fb8",
+    "encoding": "utf-16le",
+    "text": "%s%04d"
+  },
+  {
+    "offset": "0x253c8",
+    "va": "0x126fc8",
+    "encoding": "utf-16le",
+    "text": "AUTO"
+  },
+  {
+    "offset": "0x253e4",
+    "va": "0x126fe4",
+    "encoding": "utf-16le",
+    "text": "BTS1:"
+  },
+  {
+    "offset": "0x253f0",
+    "va": "0x126ff0",
+    "encoding": "utf-16le",
+    "text": "{00000000-0000-0000-0000-000000000000}"
+  },
+  {
+    "offset": "0x25440",
+    "va": "0x127040",
+    "encoding": "utf-16le",
+    "text": "{%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}"
+  },
+  {
+    "offset": "0x254a8",
+    "va": "0x1270a8",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x254b4",
+    "va": "0x1270b4",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x254c0",
+    "va": "0x1270c0",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x254cc",
+    "va": "0x1270cc",
+    "encoding": "utf-16le",
+    "text": "%4.4d"
+  },
+  {
+    "offset": "0x254d8",
+    "va": "0x1270d8",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x254e4",
+    "va": "0x1270e4",
+    "encoding": "utf-16le",
+    "text": "Authorization"
+  },
+  {
+    "offset": "0x25500",
+    "va": "0x127100",
+    "encoding": "utf-16le",
+    "text": "Authentication"
+  },
+  {
+    "offset": "0x25520",
+    "va": "0x127120",
+    "encoding": "utf-16le",
+    "text": "Encryption"
+  },
+  {
+    "offset": "0x25538",
+    "va": "0x127138",
+    "encoding": "utf-16le",
+    "text": "SecurityId"
+  },
+  {
+    "offset": "0x25550",
+    "va": "0x127150",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x2555c",
+    "va": "0x12715c",
+    "encoding": "utf-16le",
+    "text": "GUID"
+  },
+  {
+    "offset": "0x25568",
+    "va": "0x127168",
+    "encoding": "utf-16le",
+    "text": "StatusDll"
+  },
+  {
+    "offset": "0x2557c",
+    "va": "0x12717c",
+    "encoding": "utf-16le",
+    "text": "PropertiesDll"
+  },
+  {
+    "offset": "0x25598",
+    "va": "0x127198",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x255a4",
+    "va": "0x1271a4",
+    "encoding": "utf-16le",
+    "text": "Authorization"
+  },
+  {
+    "offset": "0x255c0",
+    "va": "0x1271c0",
+    "encoding": "utf-16le",
+    "text": "Authentication"
+  },
+  {
+    "offset": "0x255e0",
+    "va": "0x1271e0",
+    "encoding": "utf-16le",
+    "text": "Encryption"
+  },
+  {
+    "offset": "0x255f8",
+    "va": "0x1271f8",
+    "encoding": "utf-16le",
+    "text": "SecurityId"
+  },
+  {
+    "offset": "0x25610",
+    "va": "0x127210",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x2561c",
+    "va": "0x12721c",
+    "encoding": "utf-16le",
+    "text": "GUID"
+  },
+  {
+    "offset": "0x25628",
+    "va": "0x127228",
+    "encoding": "utf-16le",
+    "text": "StatusDll"
+  },
+  {
+    "offset": "0x2563c",
+    "va": "0x12723c",
+    "encoding": "utf-16le",
+    "text": "PropertiesDll"
+  },
+  {
+    "offset": "0x25658",
+    "va": "0x127258",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x25664",
+    "va": "0x127264",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x25670",
+    "va": "0x127270",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x2567c",
+    "va": "0x12727c",
+    "encoding": "utf-16le",
+    "text": "GUID"
+  },
+  {
+    "offset": "0x25688",
+    "va": "0x127288",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x25694",
+    "va": "0x127294",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x256a0",
+    "va": "0x1272a0",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x256ac",
+    "va": "0x1272ac",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x256b8",
+    "va": "0x1272b8",
+    "encoding": "utf-16le",
+    "text": "ComPortNumber"
+  },
+  {
+    "offset": "0x256d4",
+    "va": "0x1272d4",
+    "encoding": "utf-16le",
+    "text": "UserInstalled"
+  },
+  {
+    "offset": "0x256f0",
+    "va": "0x1272f0",
+    "encoding": "utf-16le",
+    "text": "ComPortNumber"
+  },
+  {
+    "offset": "0x2570c",
+    "va": "0x12730c",
+    "encoding": "utf-16le",
+    "text": "UserInstalled"
+  },
+  {
+    "offset": "0x25728",
+    "va": "0x127328",
+    "encoding": "utf-16le",
+    "text": "ModemComPortNumber"
+  },
+  {
+    "offset": "0x25750",
+    "va": "0x127350",
+    "encoding": "utf-16le",
+    "text": "FlowControl"
+  },
+  {
+    "offset": "0x25768",
+    "va": "0x127368",
+    "encoding": "utf-16le",
+    "text": "Baudrate"
+  },
+  {
+    "offset": "0x2577c",
+    "va": "0x12737c",
+    "encoding": "utf-16le",
+    "text": "ModemComPortNumber"
+  },
+  {
+    "offset": "0x257a4",
+    "va": "0x1273a4",
+    "encoding": "utf-16le",
+    "text": "FlowControl"
+  },
+  {
+    "offset": "0x257bc",
+    "va": "0x1273bc",
+    "encoding": "utf-16le",
+    "text": "Baudrate"
+  },
+  {
+    "offset": "0x257d0",
+    "va": "0x1273d0",
+    "encoding": "utf-16le",
+    "text": "ModemComPortNumber"
+  },
+  {
+    "offset": "0x257f8",
+    "va": "0x1273f8",
+    "encoding": "utf-16le",
+    "text": "FlowControl"
+  },
+  {
+    "offset": "0x25810",
+    "va": "0x127410",
+    "encoding": "utf-16le",
+    "text": "BaudRate"
+  },
+  {
+    "offset": "0x25824",
+    "va": "0x127424",
+    "encoding": "utf-16le",
+    "text": "ModemComPortNumber"
+  },
+  {
+    "offset": "0x2584c",
+    "va": "0x12744c",
+    "encoding": "utf-16le",
+    "text": "FlowControl"
+  },
+  {
+    "offset": "0x25864",
+    "va": "0x127464",
+    "encoding": "utf-16le",
+    "text": "BaudRate"
+  },
+  {
+    "offset": "0x25878",
+    "va": "0x127478",
+    "encoding": "utf-16le",
+    "text": "NetworkMode"
+  },
+  {
+    "offset": "0x25890",
+    "va": "0x127490",
+    "encoding": "utf-16le",
+    "text": "Description"
+  },
+  {
+    "offset": "0x258a8",
+    "va": "0x1274a8",
+    "encoding": "utf-16le",
+    "text": "NetworkMode"
+  },
+  {
+    "offset": "0x258c0",
+    "va": "0x1274c0",
+    "encoding": "utf-16le",
+    "text": "Description"
+  },
+  {
+    "offset": "0x258d8",
+    "va": "0x1274d8",
+    "encoding": "utf-16le",
+    "text": "DefaultBusinessCard"
+  },
+  {
+    "offset": "0x25900",
+    "va": "0x127500",
+    "encoding": "utf-16le",
+    "text": "InboxDirectory"
+  },
+  {
+    "offset": "0x25920",
+    "va": "0x127520",
+    "encoding": "utf-16le",
+    "text": "AcceptBusinessCards"
+  },
+  {
+    "offset": "0x25948",
+    "va": "0x127548",
+    "encoding": "utf-16le",
+    "text": "AcceptCalendarItems"
+  },
+  {
+    "offset": "0x25970",
+    "va": "0x127570",
+    "encoding": "utf-16le",
+    "text": "AcceptEmailMessages"
+  },
+  {
+    "offset": "0x25998",
+    "va": "0x127598",
+    "encoding": "utf-16le",
+    "text": "AcceptNotes"
+  },
+  {
+    "offset": "0x259b0",
+    "va": "0x1275b0",
+    "encoding": "utf-16le",
+    "text": "SendBusinessCardOnRequest"
+  },
+  {
+    "offset": "0x259e4",
+    "va": "0x1275e4",
+    "encoding": "utf-16le",
+    "text": "SaveInPIM"
+  },
+  {
+    "offset": "0x259f8",
+    "va": "0x1275f8",
+    "encoding": "utf-16le",
+    "text": "DefaultBusinessCard"
+  },
+  {
+    "offset": "0x25a20",
+    "va": "0x127620",
+    "encoding": "utf-16le",
+    "text": "InboxDirectory"
+  },
+  {
+    "offset": "0x25a40",
+    "va": "0x127640",
+    "encoding": "utf-16le",
+    "text": "AcceptBusinessCards"
+  },
+  {
+    "offset": "0x25a68",
+    "va": "0x127668",
+    "encoding": "utf-16le",
+    "text": "AcceptCalendarItems"
+  },
+  {
+    "offset": "0x25a90",
+    "va": "0x127690",
+    "encoding": "utf-16le",
+    "text": "AcceptEmailMessages"
+  },
+  {
+    "offset": "0x25ab8",
+    "va": "0x1276b8",
+    "encoding": "utf-16le",
+    "text": "AcceptNotes"
+  },
+  {
+    "offset": "0x25ad0",
+    "va": "0x1276d0",
+    "encoding": "utf-16le",
+    "text": "SendBusinessCardOnRequest"
+  },
+  {
+    "offset": "0x25b04",
+    "va": "0x127704",
+    "encoding": "utf-16le",
+    "text": "SaveInPIM"
+  },
+  {
+    "offset": "0x25b18",
+    "va": "0x127718",
+    "encoding": "utf-16le",
+    "text": "Root"
+  },
+  {
+    "offset": "0x25b24",
+    "va": "0x127724",
+    "encoding": "utf-16le",
+    "text": "Root"
+  },
+  {
+    "offset": "0x25b30",
+    "va": "0x127730",
+    "encoding": "utf-16le",
+    "text": "FlistFormat"
+  },
+  {
+    "offset": "0x25b48",
+    "va": "0x127748",
+    "encoding": "utf-16le",
+    "text": "DenyHiddenAccess"
+  },
+  {
+    "offset": "0x25b6c",
+    "va": "0x12776c",
+    "encoding": "utf-16le",
+    "text": "DenyReadOnlyAccess"
+  },
+  {
+    "offset": "0x25b94",
+    "va": "0x127794",
+    "encoding": "utf-16le",
+    "text": "Root"
+  },
+  {
+    "offset": "0x25ba0",
+    "va": "0x1277a0",
+    "encoding": "utf-16le",
+    "text": "FlistFormat"
+  },
+  {
+    "offset": "0x25bb8",
+    "va": "0x1277b8",
+    "encoding": "utf-16le",
+    "text": "LocalStoreDirectory"
+  },
+  {
+    "offset": "0x25be0",
+    "va": "0x1277e0",
+    "encoding": "utf-16le",
+    "text": "AcceptBusinessCards"
+  },
+  {
+    "offset": "0x25c08",
+    "va": "0x127808",
+    "encoding": "utf-16le",
+    "text": "AcceptCalendarItems"
+  },
+  {
+    "offset": "0x25c30",
+    "va": "0x127830",
+    "encoding": "utf-16le",
+    "text": "AcceptEmailMessages"
+  },
+  {
+    "offset": "0x25c58",
+    "va": "0x127858",
+    "encoding": "utf-16le",
+    "text": "AcceptNotes"
+  },
+  {
+    "offset": "0x25c70",
+    "va": "0x127870",
+    "encoding": "utf-16le",
+    "text": "SaveInPIM"
+  },
+  {
+    "offset": "0x25c84",
+    "va": "0x127884",
+    "encoding": "utf-16le",
+    "text": "LocalStoreDirectory"
+  },
+  {
+    "offset": "0x25cac",
+    "va": "0x1278ac",
+    "encoding": "utf-16le",
+    "text": "AcceptBusinessCards"
+  },
+  {
+    "offset": "0x25cd4",
+    "va": "0x1278d4",
+    "encoding": "utf-16le",
+    "text": "AcceptCalendarItems"
+  },
+  {
+    "offset": "0x25cfc",
+    "va": "0x1278fc",
+    "encoding": "utf-16le",
+    "text": "AcceptEmailMessages"
+  },
+  {
+    "offset": "0x25d24",
+    "va": "0x127924",
+    "encoding": "utf-16le",
+    "text": "AcceptNotes"
+  },
+  {
+    "offset": "0x25d3c",
+    "va": "0x12793c",
+    "encoding": "utf-16le",
+    "text": "SaveInPIM"
+  },
+  {
+    "offset": "0x25d50",
+    "va": "0x127950",
+    "encoding": "utf-16le",
+    "text": "ComPortNumber"
+  },
+  {
+    "offset": "0x25d6c",
+    "va": "0x12796c",
+    "encoding": "utf-16le",
+    "text": "UserInstalled"
+  },
+  {
+    "offset": "0x25d88",
+    "va": "0x127988",
+    "encoding": "utf-16le",
+    "text": "ComPortNumber"
+  },
+  {
+    "offset": "0x25da4",
+    "va": "0x1279a4",
+    "encoding": "utf-16le",
+    "text": "UserInstalled"
+  },
+  {
+    "offset": "0x25dc0",
+    "va": "0x1279c0",
+    "encoding": "utf-16le",
+    "text": "RasConnection"
+  },
+  {
+    "offset": "0x25ddc",
+    "va": "0x1279dc",
+    "encoding": "utf-16le",
+    "text": "RasConnection"
+  },
+  {
+    "offset": "0x25df8",
+    "va": "0x1279f8",
+    "encoding": "utf-16le",
+    "text": "UserName"
+  },
+  {
+    "offset": "0x25e0c",
+    "va": "0x127a0c",
+    "encoding": "utf-16le",
+    "text": "Password"
+  },
+  {
+    "offset": "0x25e20",
+    "va": "0x127a20",
+    "encoding": "utf-16le",
+    "text": "Autoconnect"
+  },
+  {
+    "offset": "0x25e38",
+    "va": "0x127a38",
+    "encoding": "utf-16le",
+    "text": "RasConnection"
+  },
+  {
+    "offset": "0x25e54",
+    "va": "0x127a54",
+    "encoding": "utf-16le",
+    "text": "UserName"
+  },
+  {
+    "offset": "0x25e68",
+    "va": "0x127a68",
+    "encoding": "utf-16le",
+    "text": "Password"
+  },
+  {
+    "offset": "0x25e7c",
+    "va": "0x127a7c",
+    "encoding": "utf-16le",
+    "text": "Autoconnect"
+  },
+  {
+    "offset": "0x25e94",
+    "va": "0x127a94",
+    "encoding": "utf-16le",
+    "text": "RasConnection"
+  },
+  {
+    "offset": "0x25eb0",
+    "va": "0x127ab0",
+    "encoding": "utf-16le",
+    "text": "AcceptBusinessCards"
+  },
+  {
+    "offset": "0x25ed8",
+    "va": "0x127ad8",
+    "encoding": "utf-16le",
+    "text": "AcceptCalendarItems"
+  },
+  {
+    "offset": "0x25f00",
+    "va": "0x127b00",
+    "encoding": "utf-16le",
+    "text": "AcceptEmailMessages"
+  },
+  {
+    "offset": "0x25f28",
+    "va": "0x127b28",
+    "encoding": "utf-16le",
+    "text": "AcceptNotes"
+  },
+  {
+    "offset": "0x25f40",
+    "va": "0x127b40",
+    "encoding": "utf-16le",
+    "text": "SaveInPIM"
+  },
+  {
+    "offset": "0x25f54",
+    "va": "0x127b54",
+    "encoding": "utf-16le",
+    "text": "AcceptBusinessCards"
+  },
+  {
+    "offset": "0x25f7c",
+    "va": "0x127b7c",
+    "encoding": "utf-16le",
+    "text": "AcceptCalendarItems"
+  },
+  {
+    "offset": "0x25fa4",
+    "va": "0x127ba4",
+    "encoding": "utf-16le",
+    "text": "AcceptEmailMessages"
+  },
+  {
+    "offset": "0x25fcc",
+    "va": "0x127bcc",
+    "encoding": "utf-16le",
+    "text": "AcceptNotes"
+  },
+  {
+    "offset": "0x25fe4",
+    "va": "0x127be4",
+    "encoding": "utf-16le",
+    "text": "SaveInPIM"
+  },
+  {
+    "offset": "0x25ff8",
+    "va": "0x127bf8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\AutoConnect"
+  },
+  {
+    "offset": "0x26044",
+    "va": "0x127c44",
+    "encoding": "utf-16le",
+    "text": "%4.4d"
+  },
+  {
+    "offset": "0x26050",
+    "va": "0x127c50",
+    "encoding": "utf-16le",
+    "text": "ServiceName"
+  },
+  {
+    "offset": "0x26068",
+    "va": "0x127c68",
+    "encoding": "utf-16le",
+    "text": "BDAddress"
+  },
+  {
+    "offset": "0x2607c",
+    "va": "0x127c7c",
+    "encoding": "utf-16le",
+    "text": "BDDevClass"
+  },
+  {
+    "offset": "0x26094",
+    "va": "0x127c94",
+    "encoding": "utf-16le",
+    "text": "BDName"
+  },
+  {
+    "offset": "0x260a4",
+    "va": "0x127ca4",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x260b0",
+    "va": "0x127cb0",
+    "encoding": "utf-16le",
+    "text": "SecurityID"
+  },
+  {
+    "offset": "0x260c8",
+    "va": "0x127cc8",
+    "encoding": "utf-16le",
+    "text": "SecurityLevel"
+  },
+  {
+    "offset": "0x260e4",
+    "va": "0x127ce4",
+    "encoding": "utf-16le",
+    "text": "ClassID"
+  },
+  {
+    "offset": "0x260f4",
+    "va": "0x127cf4",
+    "encoding": "utf-16le",
+    "text": "ServiceName"
+  },
+  {
+    "offset": "0x2610c",
+    "va": "0x127d0c",
+    "encoding": "utf-16le",
+    "text": "BDAddress"
+  },
+  {
+    "offset": "0x26120",
+    "va": "0x127d20",
+    "encoding": "utf-16le",
+    "text": "BDDevClass"
+  },
+  {
+    "offset": "0x26138",
+    "va": "0x127d38",
+    "encoding": "utf-16le",
+    "text": "BDName"
+  },
+  {
+    "offset": "0x26148",
+    "va": "0x127d48",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x26154",
+    "va": "0x127d54",
+    "encoding": "utf-16le",
+    "text": "SecurityID"
+  },
+  {
+    "offset": "0x2616c",
+    "va": "0x127d6c",
+    "encoding": "utf-16le",
+    "text": "SecurityLevel"
+  },
+  {
+    "offset": "0x26188",
+    "va": "0x127d88",
+    "encoding": "utf-16le",
+    "text": "ClassID"
+  },
+  {
+    "offset": "0x26198",
+    "va": "0x127d98",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\AutoConnect"
+  },
+  {
+    "offset": "0x261ec",
+    "va": "0x127dec",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig"
+  },
+  {
+    "offset": "0x26220",
+    "va": "0x127e20",
+    "encoding": "utf-16le",
+    "text": "General"
+  },
+  {
+    "offset": "0x26230",
+    "va": "0x127e30",
+    "encoding": "ascii",
+    "text": "<No Name>"
+  },
+  {
+    "offset": "0x2623c",
+    "va": "0x127e3c",
+    "encoding": "utf-16le",
+    "text": "DeviceName"
+  },
+  {
+    "offset": "0x26254",
+    "va": "0x127e54",
+    "encoding": "utf-16le",
+    "text": "MinorClass"
+  },
+  {
+    "offset": "0x2626c",
+    "va": "0x127e6c",
+    "encoding": "utf-16le",
+    "text": "SecurityType"
+  },
+  {
+    "offset": "0x26288",
+    "va": "0x127e88",
+    "encoding": "utf-16le",
+    "text": "CountryCode"
+  },
+  {
+    "offset": "0x262a0",
+    "va": "0x127ea0",
+    "encoding": "utf-16le",
+    "text": "ForceDevClassMajor"
+  },
+  {
+    "offset": "0x262c8",
+    "va": "0x127ec8",
+    "encoding": "utf-16le",
+    "text": "ForceDevClassMinor"
+  },
+  {
+    "offset": "0x262f0",
+    "va": "0x127ef0",
+    "encoding": "utf-16le",
+    "text": "MaxSimultConnections"
+  },
+  {
+    "offset": "0x2631c",
+    "va": "0x127f1c",
+    "encoding": "utf-16le",
+    "text": "NoSleepingWhileConnected"
+  },
+  {
+    "offset": "0x26350",
+    "va": "0x127f50",
+    "encoding": "utf-16le",
+    "text": "DontShowAdvanced"
+  },
+  {
+    "offset": "0x26374",
+    "va": "0x127f74",
+    "encoding": "utf-16le",
+    "text": "DefaultStatusDll"
+  },
+  {
+    "offset": "0x26398",
+    "va": "0x127f98",
+    "encoding": "utf-16le",
+    "text": "DefaultPropertiesDll"
+  },
+  {
+    "offset": "0x263c4",
+    "va": "0x127fc4",
+    "encoding": "utf-16le",
+    "text": "UnnamedDeviceName"
+  },
+  {
+    "offset": "0x263e8",
+    "va": "0x127fe8",
+    "encoding": "utf-16le",
+    "text": "DefaultInputCharset"
+  },
+  {
+    "offset": "0x26410",
+    "va": "0x128010",
+    "encoding": "utf-16le",
+    "text": "DefaultOutputCharset"
+  },
+  {
+    "offset": "0x2643c",
+    "va": "0x12803c",
+    "encoding": "utf-16le",
+    "text": "DeviceName"
+  },
+  {
+    "offset": "0x26454",
+    "va": "0x128054",
+    "encoding": "utf-16le",
+    "text": "MinorClass"
+  },
+  {
+    "offset": "0x2646c",
+    "va": "0x12806c",
+    "encoding": "utf-16le",
+    "text": "SecurityType"
+  },
+  {
+    "offset": "0x26488",
+    "va": "0x128088",
+    "encoding": "utf-16le",
+    "text": "CountryCode"
+  },
+  {
+    "offset": "0x264a0",
+    "va": "0x1280a0",
+    "encoding": "utf-16le",
+    "text": "MaxSimultConnections"
+  },
+  {
+    "offset": "0x264cc",
+    "va": "0x1280cc",
+    "encoding": "utf-16le",
+    "text": "NoSleepingWhileConnected"
+  },
+  {
+    "offset": "0x26500",
+    "va": "0x128100",
+    "encoding": "utf-16le",
+    "text": "UnnamedDeviceName"
+  },
+  {
+    "offset": "0x26524",
+    "va": "0x128124",
+    "encoding": "utf-16le",
+    "text": "DefaultStatusDll"
+  },
+  {
+    "offset": "0x26548",
+    "va": "0x128148",
+    "encoding": "utf-16le",
+    "text": "DefaultPropertiesDll"
+  },
+  {
+    "offset": "0x26574",
+    "va": "0x128174",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig"
+  },
+  {
+    "offset": "0x265a8",
+    "va": "0x1281a8",
+    "encoding": "utf-16le",
+    "text": "General"
+  },
+  {
+    "offset": "0x265b8",
+    "va": "0x1281b8",
+    "encoding": "utf-16le",
+    "text": "UseInquiryFilters"
+  },
+  {
+    "offset": "0x265dc",
+    "va": "0x1281dc",
+    "encoding": "utf-16le",
+    "text": "PeriodicInquiry"
+  },
+  {
+    "offset": "0x265fc",
+    "va": "0x1281fc",
+    "encoding": "utf-16le",
+    "text": "InquiryMode"
+  },
+  {
+    "offset": "0x26614",
+    "va": "0x128214",
+    "encoding": "utf-16le",
+    "text": "InquiryDuration"
+  },
+  {
+    "offset": "0x26634",
+    "va": "0x128234",
+    "encoding": "utf-16le",
+    "text": "InquiryMaxResults"
+  },
+  {
+    "offset": "0x26658",
+    "va": "0x128258",
+    "encoding": "utf-16le",
+    "text": "AutoDiscovery"
+  },
+  {
+    "offset": "0x26674",
+    "va": "0x128274",
+    "encoding": "utf-16le",
+    "text": "PeriodicInquiryRetryTime"
+  },
+  {
+    "offset": "0x266a8",
+    "va": "0x1282a8",
+    "encoding": "utf-16le",
+    "text": "InquirySupportedWithConnsUp"
+  },
+  {
+    "offset": "0x266e0",
+    "va": "0x1282e0",
+    "encoding": "utf-16le",
+    "text": "ReportNotNamedDevices"
+  },
+  {
+    "offset": "0x2670c",
+    "va": "0x12830c",
+    "encoding": "utf-16le",
+    "text": "UseInquiryFilters"
+  },
+  {
+    "offset": "0x26730",
+    "va": "0x128330",
+    "encoding": "utf-16le",
+    "text": "PeriodicInquiry"
+  },
+  {
+    "offset": "0x26750",
+    "va": "0x128350",
+    "encoding": "utf-16le",
+    "text": "InquiryMode"
+  },
+  {
+    "offset": "0x26768",
+    "va": "0x128368",
+    "encoding": "utf-16le",
+    "text": "AutoDiscovery"
+  },
+  {
+    "offset": "0x26784",
+    "va": "0x128384",
+    "encoding": "utf-16le",
+    "text": "PeriodicInquiryRetryTime"
+  },
+  {
+    "offset": "0x267b8",
+    "va": "0x1283b8",
+    "encoding": "utf-16le",
+    "text": "ReportNotNamedDevices"
+  },
+  {
+    "offset": "0x267e8",
+    "va": "0x1283e8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Filters\\Inquiry"
+  },
+  {
+    "offset": "0x26840",
+    "va": "0x128440",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Filters\\Inquiry"
+  },
+  {
+    "offset": "0x26898",
+    "va": "0x128498",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Filters\\Inquiry"
+  },
+  {
+    "offset": "0x268ec",
+    "va": "0x1284ec",
+    "encoding": "utf-16le",
+    "text": "Type"
+  },
+  {
+    "offset": "0x268f8",
+    "va": "0x1284f8",
+    "encoding": "utf-16le",
+    "text": "MajorClass"
+  },
+  {
+    "offset": "0x26910",
+    "va": "0x128510",
+    "encoding": "utf-16le",
+    "text": "MinorClass"
+  },
+  {
+    "offset": "0x26928",
+    "va": "0x128528",
+    "encoding": "utf-16le",
+    "text": "BdAddr"
+  },
+  {
+    "offset": "0x26938",
+    "va": "0x128538",
+    "encoding": "utf-16le",
+    "text": "BdName"
+  },
+  {
+    "offset": "0x26948",
+    "va": "0x128548",
+    "encoding": "utf-16le",
+    "text": "Type"
+  },
+  {
+    "offset": "0x26954",
+    "va": "0x128554",
+    "encoding": "utf-16le",
+    "text": "MajorClass"
+  },
+  {
+    "offset": "0x2696c",
+    "va": "0x12856c",
+    "encoding": "utf-16le",
+    "text": "MinorClass"
+  },
+  {
+    "offset": "0x26984",
+    "va": "0x128584",
+    "encoding": "utf-16le",
+    "text": "BdAddr"
+  },
+  {
+    "offset": "0x26994",
+    "va": "0x128594",
+    "encoding": "utf-16le",
+    "text": "BdName"
+  },
+  {
+    "offset": "0x269a4",
+    "va": "0x1285a4",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig"
+  },
+  {
+    "offset": "0x269d8",
+    "va": "0x1285d8",
+    "encoding": "utf-16le",
+    "text": "Filters"
+  },
+  {
+    "offset": "0x269e8",
+    "va": "0x1285e8",
+    "encoding": "utf-16le",
+    "text": "AllowOthersToDiscover"
+  },
+  {
+    "offset": "0x26a14",
+    "va": "0x128614",
+    "encoding": "utf-16le",
+    "text": "WhoAllowedToConnect"
+  },
+  {
+    "offset": "0x26a3c",
+    "va": "0x12863c",
+    "encoding": "utf-16le",
+    "text": "InquiryScanMode"
+  },
+  {
+    "offset": "0x26a5c",
+    "va": "0x12865c",
+    "encoding": "utf-16le",
+    "text": "InquiryScanInterval"
+  },
+  {
+    "offset": "0x26a84",
+    "va": "0x128684",
+    "encoding": "utf-16le",
+    "text": "InquiryScanWindow"
+  },
+  {
+    "offset": "0x26aa8",
+    "va": "0x1286a8",
+    "encoding": "utf-16le",
+    "text": "PageScanInterval"
+  },
+  {
+    "offset": "0x26acc",
+    "va": "0x1286cc",
+    "encoding": "utf-16le",
+    "text": "PageScanWindow"
+  },
+  {
+    "offset": "0x26aec",
+    "va": "0x1286ec",
+    "encoding": "utf-16le",
+    "text": "AllowOthersToDiscover"
+  },
+  {
+    "offset": "0x26b18",
+    "va": "0x128718",
+    "encoding": "utf-16le",
+    "text": "WhoAllowedToConnect"
+  },
+  {
+    "offset": "0x26b40",
+    "va": "0x128740",
+    "encoding": "utf-16le",
+    "text": "InquiryScanMode"
+  },
+  {
+    "offset": "0x26b60",
+    "va": "0x128760",
+    "encoding": "utf-16le",
+    "text": "InquiryScanInterval"
+  },
+  {
+    "offset": "0x26b88",
+    "va": "0x128788",
+    "encoding": "utf-16le",
+    "text": "InquiryScanWindow"
+  },
+  {
+    "offset": "0x26bac",
+    "va": "0x1287ac",
+    "encoding": "utf-16le",
+    "text": "PageScanInterval"
+  },
+  {
+    "offset": "0x26bd0",
+    "va": "0x1287d0",
+    "encoding": "utf-16le",
+    "text": "PageScanWindow"
+  },
+  {
+    "offset": "0x26bf0",
+    "va": "0x1287f0",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Filters\\Connect"
+  },
+  {
+    "offset": "0x26c48",
+    "va": "0x128848",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Filters\\Connect"
+  },
+  {
+    "offset": "0x26c9c",
+    "va": "0x12889c",
+    "encoding": "utf-16le",
+    "text": "MajorClass"
+  },
+  {
+    "offset": "0x26cb4",
+    "va": "0x1288b4",
+    "encoding": "utf-16le",
+    "text": "MinorClass"
+  },
+  {
+    "offset": "0x26ccc",
+    "va": "0x1288cc",
+    "encoding": "utf-16le",
+    "text": "BdAddr"
+  },
+  {
+    "offset": "0x26cdc",
+    "va": "0x1288dc",
+    "encoding": "utf-16le",
+    "text": "BdName"
+  },
+  {
+    "offset": "0x26cec",
+    "va": "0x1288ec",
+    "encoding": "utf-16le",
+    "text": "MajorClass"
+  },
+  {
+    "offset": "0x26d04",
+    "va": "0x128904",
+    "encoding": "utf-16le",
+    "text": "MinorClass"
+  },
+  {
+    "offset": "0x26d1c",
+    "va": "0x12891c",
+    "encoding": "utf-16le",
+    "text": "BdAddr"
+  },
+  {
+    "offset": "0x26d2c",
+    "va": "0x12892c",
+    "encoding": "utf-16le",
+    "text": "BdName"
+  },
+  {
+    "offset": "0x26d3c",
+    "va": "0x12893c",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm"
+  },
+  {
+    "offset": "0x26d60",
+    "va": "0x128960",
+    "encoding": "utf-16le",
+    "text": "Install"
+  },
+  {
+    "offset": "0x26d70",
+    "va": "0x128970",
+    "encoding": "utf-16le",
+    "text": "INSTALLDIR"
+  },
+  {
+    "offset": "0x26d88",
+    "va": "0x128988",
+    "encoding": "utf-16le",
+    "text": "BTWVERS"
+  },
+  {
+    "offset": "0x26d98",
+    "va": "0x128998",
+    "encoding": "utf-16le",
+    "text": "StartPort"
+  },
+  {
+    "offset": "0x26dac",
+    "va": "0x1289ac",
+    "encoding": "utf-16le",
+    "text": "INSTALLDIR"
+  },
+  {
+    "offset": "0x26dc4",
+    "va": "0x1289c4",
+    "encoding": "utf-16le",
+    "text": "BTWVERS"
+  },
+  {
+    "offset": "0x26dd4",
+    "va": "0x1289d4",
+    "encoding": "utf-16le",
+    "text": "StartPort"
+  },
+  {
+    "offset": "0x26de8",
+    "va": "0x1289e8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Components"
+  },
+  {
+    "offset": "0x26e20",
+    "va": "0x128a20",
+    "encoding": "utf-16le",
+    "text": "Flags"
+  },
+  {
+    "offset": "0x26e34",
+    "va": "0x128a34",
+    "encoding": "utf-16le",
+    "text": "Flags"
+  },
+  {
+    "offset": "0x26e48",
+    "va": "0x128a48",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Hardware\\Ports"
+  },
+  {
+    "offset": "0x26e88",
+    "va": "0x128a88",
+    "encoding": "utf-16le",
+    "text": "%04d"
+  },
+  {
+    "offset": "0x26e9c",
+    "va": "0x128a9c",
+    "encoding": "utf-16le",
+    "text": "RefCount"
+  },
+  {
+    "offset": "0x26eb0",
+    "va": "0x128ab0",
+    "encoding": "utf-16le",
+    "text": "HwPort"
+  },
+  {
+    "offset": "0x26ec0",
+    "va": "0x128ac0",
+    "encoding": "utf-16le",
+    "text": "RefCount"
+  },
+  {
+    "offset": "0x26ed4",
+    "va": "0x128ad4",
+    "encoding": "utf-16le",
+    "text": "HwPort"
+  },
+  {
+    "offset": "0x26ee8",
+    "va": "0x128ae8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x26f2c",
+    "va": "0x128b2c",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x26f68",
+    "va": "0x128b68",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x26fac",
+    "va": "0x128bac",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x26fe8",
+    "va": "0x128be8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27030",
+    "va": "0x128c30",
+    "encoding": "utf-16le",
+    "text": "%s\\%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x27074",
+    "va": "0x128c74",
+    "encoding": "utf-16le",
+    "text": "TrustedMask"
+  },
+  {
+    "offset": "0x27090",
+    "va": "0x128c90",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x270d8",
+    "va": "0x128cd8",
+    "encoding": "utf-16le",
+    "text": "%s\\%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x2711c",
+    "va": "0x128d1c",
+    "encoding": "utf-16le",
+    "text": "TrustedMask"
+  },
+  {
+    "offset": "0x27134",
+    "va": "0x128d34",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x27170",
+    "va": "0x128d70",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x2717c",
+    "va": "0x128d7c",
+    "encoding": "utf-16le",
+    "text": "DevClass"
+  },
+  {
+    "offset": "0x27190",
+    "va": "0x128d90",
+    "encoding": "utf-16le",
+    "text": "Features"
+  },
+  {
+    "offset": "0x271a4",
+    "va": "0x128da4",
+    "encoding": "utf-16le",
+    "text": "TimeStamp"
+  },
+  {
+    "offset": "0x271b8",
+    "va": "0x128db8",
+    "encoding": "utf-16le",
+    "text": "LinkKey"
+  },
+  {
+    "offset": "0x271c8",
+    "va": "0x128dc8",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x271d4",
+    "va": "0x128dd4",
+    "encoding": "utf-16le",
+    "text": "DevClass"
+  },
+  {
+    "offset": "0x271e8",
+    "va": "0x128de8",
+    "encoding": "utf-16le",
+    "text": "Features"
+  },
+  {
+    "offset": "0x271fc",
+    "va": "0x128dfc",
+    "encoding": "utf-16le",
+    "text": "TimeStamp"
+  },
+  {
+    "offset": "0x27210",
+    "va": "0x128e10",
+    "encoding": "utf-16le",
+    "text": "LinkKey"
+  },
+  {
+    "offset": "0x27220",
+    "va": "0x128e20",
+    "encoding": "utf-16le",
+    "text": "LinkKey"
+  },
+  {
+    "offset": "0x27230",
+    "va": "0x128e30",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x2726c",
+    "va": "0x128e6c",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x272a8",
+    "va": "0x128ea8",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x272e8",
+    "va": "0x128ee8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x2732c",
+    "va": "0x128f2c",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig"
+  },
+  {
+    "offset": "0x27360",
+    "va": "0x128f60",
+    "encoding": "utf-16le",
+    "text": "Devices"
+  },
+  {
+    "offset": "0x27370",
+    "va": "0x128f70",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig"
+  },
+  {
+    "offset": "0x273a4",
+    "va": "0x128fa4",
+    "encoding": "utf-16le",
+    "text": "ConnectPrefs"
+  },
+  {
+    "offset": "0x273c0",
+    "va": "0x128fc0",
+    "encoding": "utf-16le",
+    "text": "SPPPromptForClose"
+  },
+  {
+    "offset": "0x273e4",
+    "va": "0x128fe4",
+    "encoding": "utf-16le",
+    "text": "DUNPromptForClose"
+  },
+  {
+    "offset": "0x27408",
+    "va": "0x129008",
+    "encoding": "utf-16le",
+    "text": "LAPPromptForClose"
+  },
+  {
+    "offset": "0x2742c",
+    "va": "0x12902c",
+    "encoding": "utf-16le",
+    "text": "FAXPromptForClose"
+  },
+  {
+    "offset": "0x27450",
+    "va": "0x129050",
+    "encoding": "utf-16le",
+    "text": "SPPPromptForConnected"
+  },
+  {
+    "offset": "0x2747c",
+    "va": "0x12907c",
+    "encoding": "utf-16le",
+    "text": "DUNPromptForConnected"
+  },
+  {
+    "offset": "0x274a8",
+    "va": "0x1290a8",
+    "encoding": "utf-16le",
+    "text": "LAPPromptForConnected"
+  },
+  {
+    "offset": "0x274d4",
+    "va": "0x1290d4",
+    "encoding": "utf-16le",
+    "text": "FAXPromptForConnected"
+  },
+  {
+    "offset": "0x27500",
+    "va": "0x129100",
+    "encoding": "utf-16le",
+    "text": "SPPPromptForClose"
+  },
+  {
+    "offset": "0x27524",
+    "va": "0x129124",
+    "encoding": "utf-16le",
+    "text": "DUNPromptForClose"
+  },
+  {
+    "offset": "0x27548",
+    "va": "0x129148",
+    "encoding": "utf-16le",
+    "text": "LAPPromptForClose"
+  },
+  {
+    "offset": "0x2756c",
+    "va": "0x12916c",
+    "encoding": "utf-16le",
+    "text": "FAXPromptForClose"
+  },
+  {
+    "offset": "0x27590",
+    "va": "0x129190",
+    "encoding": "utf-16le",
+    "text": "SPPPromptForConnected"
+  },
+  {
+    "offset": "0x275bc",
+    "va": "0x1291bc",
+    "encoding": "utf-16le",
+    "text": "DUNPromptForConnected"
+  },
+  {
+    "offset": "0x275e8",
+    "va": "0x1291e8",
+    "encoding": "utf-16le",
+    "text": "LAPPromptForConnected"
+  },
+  {
+    "offset": "0x27614",
+    "va": "0x129214",
+    "encoding": "utf-16le",
+    "text": "FAXPromptForConnected"
+  },
+  {
+    "offset": "0x27640",
+    "va": "0x129240",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27684",
+    "va": "0x129284",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x276c0",
+    "va": "0x1292c0",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27704",
+    "va": "0x129304",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x27710",
+    "va": "0x129310",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27758",
+    "va": "0x129358",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x2779c",
+    "va": "0x12939c",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x277a8",
+    "va": "0x1293a8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x277ec",
+    "va": "0x1293ec",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x27828",
+    "va": "0x129428",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x2786c",
+    "va": "0x12946c",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x27878",
+    "va": "0x129478",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x278bc",
+    "va": "0x1294bc",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x278f8",
+    "va": "0x1294f8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x2793c",
+    "va": "0x12953c",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x27950",
+    "va": "0x129550",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27994",
+    "va": "0x129594",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x279d0",
+    "va": "0x1295d0",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27a14",
+    "va": "0x129614",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x27a28",
+    "va": "0x129628",
+    "encoding": "utf-16le",
+    "text": "ServiceName"
+  },
+  {
+    "offset": "0x27a40",
+    "va": "0x129640",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x27a4c",
+    "va": "0x12964c",
+    "encoding": "utf-16le",
+    "text": "Security"
+  },
+  {
+    "offset": "0x27a60",
+    "va": "0x129660",
+    "encoding": "utf-16le",
+    "text": "DefaultConnection"
+  },
+  {
+    "offset": "0x27a84",
+    "va": "0x129684",
+    "encoding": "utf-16le",
+    "text": "ServiceName"
+  },
+  {
+    "offset": "0x27a9c",
+    "va": "0x12969c",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x27aa8",
+    "va": "0x1296a8",
+    "encoding": "utf-16le",
+    "text": "Security"
+  },
+  {
+    "offset": "0x27abc",
+    "va": "0x1296bc",
+    "encoding": "utf-16le",
+    "text": "DefaultConnection"
+  },
+  {
+    "offset": "0x27ae0",
+    "va": "0x1296e0",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x27b20",
+    "va": "0x129720",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27b64",
+    "va": "0x129764",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x27b78",
+    "va": "0x129778",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x27b88",
+    "va": "0x129788",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  },
+  {
+    "offset": "0x27bcc",
+    "va": "0x1297cc",
+    "encoding": "utf-16le",
+    "text": "%02x:%02x:%02x:%02x:%02x:%02x"
+  },
+  {
+    "offset": "0x27c08",
+    "va": "0x129808",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Connections"
+  },
+  {
+    "offset": "0x27c44",
+    "va": "0x129844",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Connections"
+  },
+  {
+    "offset": "0x27c80",
+    "va": "0x129880",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Connections"
+  },
+  {
+    "offset": "0x27cbc",
+    "va": "0x1298bc",
+    "encoding": "utf-16le",
+    "text": "Shortcut"
+  },
+  {
+    "offset": "0x27cd0",
+    "va": "0x1298d0",
+    "encoding": "utf-16le",
+    "text": "UUID"
+  },
+  {
+    "offset": "0x27cdc",
+    "va": "0x1298dc",
+    "encoding": "utf-16le",
+    "text": "LocalDirectory"
+  },
+  {
+    "offset": "0x27cfc",
+    "va": "0x1298fc",
+    "encoding": "utf-16le",
+    "text": "BDAddress"
+  },
+  {
+    "offset": "0x27d10",
+    "va": "0x129910",
+    "encoding": "utf-16le",
+    "text": "BDDevClass"
+  },
+  {
+    "offset": "0x27d28",
+    "va": "0x129928",
+    "encoding": "utf-16le",
+    "text": "Shortcut"
+  },
+  {
+    "offset": "0x27d3c",
+    "va": "0x12993c",
+    "encoding": "utf-16le",
+    "text": "BDName"
+  },
+  {
+    "offset": "0x27d4c",
+    "va": "0x12994c",
+    "encoding": "utf-16le",
+    "text": "DefaultConnection"
+  },
+  {
+    "offset": "0x27d70",
+    "va": "0x129970",
+    "encoding": "utf-16le",
+    "text": "LocationBitMask"
+  },
+  {
+    "offset": "0x27d90",
+    "va": "0x129990",
+    "encoding": "utf-16le",
+    "text": "BDAddress"
+  },
+  {
+    "offset": "0x27da4",
+    "va": "0x1299a4",
+    "encoding": "utf-16le",
+    "text": "BDDevClass"
+  },
+  {
+    "offset": "0x27dbc",
+    "va": "0x1299bc",
+    "encoding": "utf-16le",
+    "text": "BDName"
+  },
+  {
+    "offset": "0x27dcc",
+    "va": "0x1299cc",
+    "encoding": "utf-16le",
+    "text": "LocalDirectory"
+  },
+  {
+    "offset": "0x27dec",
+    "va": "0x1299ec",
+    "encoding": "utf-16le",
+    "text": "DefaultConnection"
+  },
+  {
+    "offset": "0x27e10",
+    "va": "0x129a10",
+    "encoding": "utf-16le",
+    "text": "LocationBitMask"
+  },
+  {
+    "offset": "0x27e30",
+    "va": "0x129a30",
+    "encoding": "utf-16le",
+    "text": "Shortcut"
+  },
+  {
+    "offset": "0x27e44",
+    "va": "0x129a44",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Connections"
+  },
+  {
+    "offset": "0x27e80",
+    "va": "0x129a80",
+    "encoding": "utf-16le",
+    "text": "%s: %s"
+  },
+  {
+    "offset": "0x27e90",
+    "va": "0x129a90",
+    "encoding": "utf-16le",
+    "text": "%s: %s(%d)"
+  },
+  {
+    "offset": "0x27ea8",
+    "va": "0x129aa8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Notifications"
+  },
+  {
+    "offset": "0x27ef8",
+    "va": "0x129af8",
+    "encoding": "utf-16le",
+    "text": "String"
+  },
+  {
+    "offset": "0x27f08",
+    "va": "0x129b08",
+    "encoding": "utf-16le",
+    "text": "ItemData"
+  },
+  {
+    "offset": "0x27f1c",
+    "va": "0x129b1c",
+    "encoding": "utf-16le",
+    "text": "Notify"
+  },
+  {
+    "offset": "0x27f2c",
+    "va": "0x129b2c",
+    "encoding": "utf-16le",
+    "text": "String"
+  },
+  {
+    "offset": "0x27f3c",
+    "va": "0x129b3c",
+    "encoding": "utf-16le",
+    "text": "ItemData"
+  },
+  {
+    "offset": "0x27f50",
+    "va": "0x129b50",
+    "encoding": "utf-16le",
+    "text": "Notify"
+  },
+  {
+    "offset": "0x27f60",
+    "va": "0x129b60",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x27f98",
+    "va": "0x129b98",
+    "encoding": "utf-16le",
+    "text": "CurrentLocation"
+  },
+  {
+    "offset": "0x27fb8",
+    "va": "0x129bb8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x27ff0",
+    "va": "0x129bf0",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d"
+  },
+  {
+    "offset": "0x28000",
+    "va": "0x129c00",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x2800c",
+    "va": "0x129c0c",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x28044",
+    "va": "0x129c44",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d"
+  },
+  {
+    "offset": "0x28054",
+    "va": "0x129c54",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x2808c",
+    "va": "0x129c8c",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d"
+  },
+  {
+    "offset": "0x2809c",
+    "va": "0x129c9c",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x280d4",
+    "va": "0x129cd4",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d"
+  },
+  {
+    "offset": "0x280e4",
+    "va": "0x129ce4",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x280f0",
+    "va": "0x129cf0",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x28128",
+    "va": "0x129d28",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d"
+  },
+  {
+    "offset": "0x28138",
+    "va": "0x129d38",
+    "encoding": "utf-16le",
+    "text": "Name"
+  },
+  {
+    "offset": "0x28144",
+    "va": "0x129d44",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x2817c",
+    "va": "0x129d7c",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d"
+  },
+  {
+    "offset": "0x2818c",
+    "va": "0x129d8c",
+    "encoding": "utf-16le",
+    "text": "General"
+  },
+  {
+    "offset": "0x2819c",
+    "va": "0x129d9c",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig"
+  },
+  {
+    "offset": "0x281d0",
+    "va": "0x129dd0",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x281dc",
+    "va": "0x129ddc",
+    "encoding": "utf-16le",
+    "text": "General"
+  },
+  {
+    "offset": "0x281ec",
+    "va": "0x129dec",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x28224",
+    "va": "0x129e24",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d\\%s"
+  },
+  {
+    "offset": "0x2823c",
+    "va": "0x129e3c",
+    "encoding": "utf-16le",
+    "text": "AutoConnect"
+  },
+  {
+    "offset": "0x28254",
+    "va": "0x129e54",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x2828c",
+    "va": "0x129e8c",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d\\%s"
+  },
+  {
+    "offset": "0x282a8",
+    "va": "0x129ea8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\AutoConnect"
+  },
+  {
+    "offset": "0x282f4",
+    "va": "0x129ef4",
+    "encoding": "utf-16le",
+    "text": "Services"
+  },
+  {
+    "offset": "0x28308",
+    "va": "0x129f08",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x28340",
+    "va": "0x129f40",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d\\%s"
+  },
+  {
+    "offset": "0x28358",
+    "va": "0x129f58",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Services"
+  },
+  {
+    "offset": "0x283a0",
+    "va": "0x129fa0",
+    "encoding": "utf-16le",
+    "text": "General"
+  },
+  {
+    "offset": "0x283b0",
+    "va": "0x129fb0",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x283e8",
+    "va": "0x129fe8",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d\\%s"
+  },
+  {
+    "offset": "0x28400",
+    "va": "0x12a000",
+    "encoding": "utf-16le",
+    "text": "General"
+  },
+  {
+    "offset": "0x28410",
+    "va": "0x12a010",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig"
+  },
+  {
+    "offset": "0x28444",
+    "va": "0x12a044",
+    "encoding": "utf-16le",
+    "text": "%s\\%s"
+  },
+  {
+    "offset": "0x28450",
+    "va": "0x12a050",
+    "encoding": "utf-16le",
+    "text": "AutoConnect"
+  },
+  {
+    "offset": "0x28468",
+    "va": "0x12a068",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x284a0",
+    "va": "0x12a0a0",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d\\%s"
+  },
+  {
+    "offset": "0x284b8",
+    "va": "0x12a0b8",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\AutoConnect"
+  },
+  {
+    "offset": "0x28504",
+    "va": "0x12a104",
+    "encoding": "utf-16le",
+    "text": "Services"
+  },
+  {
+    "offset": "0x28518",
+    "va": "0x12a118",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x28550",
+    "va": "0x12a150",
+    "encoding": "utf-16le",
+    "text": "%s\\%04d\\%s"
+  },
+  {
+    "offset": "0x28568",
+    "va": "0x12a168",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Services"
+  },
+  {
+    "offset": "0x285b0",
+    "va": "0x12a1b0",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Locations"
+  },
+  {
+    "offset": "0x285e8",
+    "va": "0x12a1e8",
+    "encoding": "utf-16le",
+    "text": "CurrentLocation"
+  },
+  {
+    "offset": "0x28608",
+    "va": "0x12a208",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\Connections"
+  },
+  {
+    "offset": "0x28648",
+    "va": "0x12a248",
+    "encoding": "utf-16le",
+    "text": "Software\\Widcomm\\BTConfig\\Devices"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "offset": "0xed0",
+    "va": "0x1020d0",
+    "encoding": "ascii",
+    "text": "COREDLL.dll"
+  },
+  {
+    "offset": "0x10d0",
+    "va": "0x1030d0",
+    "encoding": "utf-16le",
+    "text": "PocketPC"
+  },
+  {
+    "offset": "0x10e4",
+    "va": "0x1030e4",
+    "encoding": "utf-16le",
+    "text": "LeafLauncherClass"
+  },
+  {
+    "offset": "0x1108",
+    "va": "0x103108",
+    "encoding": "utf-16le",
+    "text": "LeafLauncherClass"
+  },
+  {
+    "offset": "0x112c",
+    "va": "0x10312c",
+    "encoding": "utf-16le",
+    "text": "Leaf DP-67 Launcher"
+  },
+  {
+    "offset": "0x1154",
+    "va": "0x103154",
+    "encoding": "utf-16le",
+    "text": "LeafLauncherClass"
+  },
+  {
+    "offset": "0x1178",
+    "va": "0x103178",
+    "encoding": "utf-16le",
+    "text": "\\Program Files"
+  },
+  {
+    "offset": "0x1198",
+    "va": "0x103198",
+    "encoding": "utf-16le",
+    "text": "Software\\Creo\\Leaf DP-67"
+  },
+  {
+    "offset": "0x11cc",
+    "va": "0x1031cc",
+    "encoding": "utf-16le",
+    "text": "InstallPath"
+  },
+  {
+    "offset": "0x11e4",
+    "va": "0x1031e4",
+    "encoding": "utf-16le",
+    "text": "\\Leaf DP-67\\Leaf DP-67.exe"
+  },
+  {
+    "offset": "0x121c",
+    "va": "0x10321c",
+    "encoding": "utf-16le",
+    "text": "Leaf DP-67"
+  },
+  {
+    "offset": "0x1234",
+    "va": "0x103234",
+    "encoding": "utf-16le",
+    "text": "Can't start main application."
+  },
+  {
+    "offset": "0x1270",
+    "va": "0x103270",
+    "encoding": "utf-16le",
+    "text": "Leaf DP-67"
+  },
+  {
+    "offset": "0x1630",
+    "va": "0x105030",
+    "encoding": "ascii",
+    "text": "LeafLauncher.dll"
+  }
+]

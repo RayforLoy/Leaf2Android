@@ -353,4 +353,11 @@
     <string name="lab_error">Transport / wait error</string>
     <string name="lab_cancelled">Cancelled</string>
     <string name="lab_other_frames">Other complete frames (uncorrelated)</string>
+    <string name="shooting_compatibility">Shooting-setup compatibility</string>
+    <string name="shooting_compatibility_auto">Automatic (Valeo: DP-67)</string>
+    <string name="shooting_compatibility_wiview">WiView / Aptus</string>
+    <string name="shooting_compatibility_dp67">DP-67 / Valeo</string>
+    <string name="shooting_compatibility_hint">Change while disconnected. Automatic uses DP-67 when the Bluetooth name contains Valeo and Sync supplies ShootSetup. Use the explicit mode for a renamed back. This changes shooting-setup writes, not Bluetooth pairing; hardware results still need testing.</string>
+    <string name="dp67_active_hint">DP-67 compatibility: 12 core fields and the prefix supplied by the back. Compression, orientation and color are not written by this shooting-setup path. Factory presets are edited through their .1 modified slot; no automatic write retries.</string>
+    <string name="dp67_modified_slot">Target modified setup: %1$s. An existing slot with this name will be updated. The original preset must remain unchanged when the result is read back.</string>
 </resources>

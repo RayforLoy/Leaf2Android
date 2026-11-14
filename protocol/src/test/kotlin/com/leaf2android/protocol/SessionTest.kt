@@ -77,6 +77,15 @@ class SessionTest {
         assertTrue(t.closed); assertNotNull(failure.get())
         assertFailsWith<java.io.IOException> { p.execute(Commands.exposures) }
     }
+    @Test fun timeoutIdentifiesTheUnansweredSettingWithoutRevealingItsValue() = session { p, _, _ ->
+        val failure = assertFailsWith<ProtocolException> {
+            p.execute(LeafCommand("^<SetCameraParam NewPinCode='private-pin-7391' PinEncryption='None' />", timeoutMs = 80))
+        }
+        assertContains(failure.message.orEmpty(), "SetCameraParam [NewPinCode, PinEncryption]")
+        assertContains(failure.message.orEmpty(), "Ack")
+        assertFalse(failure.message.orEmpty().contains("private-pin-7391"))
+        assertFalse(failure.messageForLanguage(true).contains("private-pin-7391"))
+    }
     @Test fun truncatedImageFailsPendingRequest() = session { p, t, _ ->
         val request = async { runCatching { p.execute(Commands.image("a.mos")) } }
         t.output.receive(); t.send("^<Ack file_name='a.mos' attachment='6' />123"); t.input.close()

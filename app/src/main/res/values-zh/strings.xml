@@ -353,4 +353,11 @@
     <string name="lab_error">传输／等待出错</string>
     <string name="lab_cancelled">已取消</string>
     <string name="lab_other_frames">其他完整帧（未建立对应关系）</string>
+    <string name="shooting_compatibility">拍摄配置兼容模式</string>
+    <string name="shooting_compatibility_auto">自动（Valeo 使用 DP-67）</string>
+    <string name="shooting_compatibility_wiview">WiView / Aptus</string>
+    <string name="shooting_compatibility_dp67">DP-67 / Valeo</string>
+    <string name="shooting_compatibility_hint">断开后可修改。自动模式在蓝牙名称含 Valeo 且 Sync 下发 ShootSetup 时使用 DP-67；已改名的后背可手动选择。此项调整拍摄配置写入格式，不改变蓝牙配对；硬件效果仍待验证。</string>
+    <string name="dp67_active_hint">DP-67 兼容：仅写 12 个核心字段和后背提供的前缀。此拍摄配置路径不写压缩、方向和色彩。编辑原厂预设使用其 .1 修改配置，不自动重试写入。</string>
+    <string name="dp67_modified_slot">目标修改配置：%1$s。同名槽位若已存在将被更新；回读时必须确认原预设保持不变。</string>
 </resources>

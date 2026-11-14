@@ -362,6 +362,22 @@ fun LeafApp(
         item { HorizontalDivider(); Text(tr(R.string.bluetooth_and_encoding_a1bfc), style = MaterialTheme.typography.titleMedium) }
         item { SettingSwitch(tr(R.string.old_firmware_insecure_rfcomm_24cc1), tr(R.string.off_by_default_reconnect_after_changing_this_an_dc2fe), settings.insecure, !state.active) { value -> repo.updateSettings { it.copy(insecure = value) } } }
         item {
+            Text(tr(R.string.shooting_compatibility), style = MaterialTheme.typography.titleSmall)
+            ShootingCompatibility.entries.forEach { mode ->
+                Row(Modifier.fillMaxWidth().clickable(enabled = !state.active) { repo.updateSettings { it.copy(shootingCompatibility = mode) } }, verticalAlignment = Alignment.CenterVertically) {
+                    RadioButton(settings.shootingCompatibility == mode,
+                        onClick = { repo.updateSettings { it.copy(shootingCompatibility = mode) } }, enabled = !state.active,
+                        modifier = Modifier.testTag("shooting-compatibility-${mode.name}"))
+                    Text(tr(when (mode) {
+                        ShootingCompatibility.AUTO -> R.string.shooting_compatibility_auto
+                        ShootingCompatibility.WIVIEW -> R.string.shooting_compatibility_wiview
+                        ShootingCompatibility.DP67 -> R.string.shooting_compatibility_dp67
+                    }), style = MaterialTheme.typography.bodySmall)
+                }
+            }
+            Text(tr(R.string.shooting_compatibility_hint), style = MaterialTheme.typography.bodySmall)
+        }
+        item {
             Text(tr(R.string.protocol_encoding_a6b63), style = MaterialTheme.typography.titleSmall)
             WireEncoding.entries.forEach { encoding ->
                 Row(Modifier.fillMaxWidth().clickable(enabled = !state.active) { repo.updateSettings { it.copy(encoding = encoding) } }, verticalAlignment = Alignment.CenterVertically) {

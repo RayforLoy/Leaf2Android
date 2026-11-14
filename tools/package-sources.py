@@ -4,7 +4,7 @@ import hashlib
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.3.0"
+VERSION = "0.3.1"
 OUTPUT = ROOT / f"dist/Leaf2Android-{VERSION}-source.zip"
 ROOT_FILES = ["README.md", "README.en.md", "NOTICE.md", ".gitignore", ".gitattributes", "settings.gradle.kts", "build.gradle.kts", "gradle.properties",
               "gradlew", "gradlew.bat", "requirements-research.txt"]

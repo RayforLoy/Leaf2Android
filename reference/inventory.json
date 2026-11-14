@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "date": "2026-11-11",
+  "date": "2026-11-14",
   "project": "Leaf2Android",
   "scope": "All files under reference except reference/inventory.json and Python bytecode caches; nested inventories are included.",
-  "file_count": 251,
-  "total_bytes": 128563798,
+  "file_count": 288,
+  "total_bytes": 133592180,
   "largest_file_bytes": 14135296,
   "files_exceeding_90_mib": [],
   "camera_back_firmware": {
@@ -479,11 +479,381 @@
     },
     {
       "path": "reference/build_inventory.py",
-      "bytes": 16569,
-      "sha256": "4510d52881cbe58c88b7fd1a17b1488cd73c7fe67cbe89a76320a74201917c06",
+      "bytes": 17765,
+      "sha256": "3247ea5e818a2cef10b83875b080993a92b8b08af63d8963af5bac78e623afe4",
       "classification": "inventory_maintenance_tool",
       "version": null,
       "provenance": "Leaf2Android project-maintained reference metadata/documentation."
+    },
+    {
+      "path": "reference/dp67/analysis/0BtStack.004.strings.json",
+      "bytes": 9679,
+      "sha256": "8e3d8d53f922b980f51339c092022a3d41ba22daf029647822029ee33623cc3c",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/binary-analysis.json",
+      "bytes": 217887,
+      "sha256": "429ab4a34857b58ff3fda01c663f7db92ebdbac943f00c1d18cf7904ad0f186c",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/BtCoreIf.003.strings.json",
+      "bytes": 58202,
+      "sha256": "ccdbcb219eac8fdf7f4ab43ae757eb0d316a97bbd73bca44e4d4b294ca3abdd3",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/BTSDKC~1.002.strings.json",
+      "bytes": 132172,
+      "sha256": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/connection-and-setting-evidence.json",
+      "bytes": 52540,
+      "sha256": "6ee09c701076c882e69ea59d88430c1cac5143fe9ab29c704e107e76c209cda5",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/clone-modified-slot.arm.txt",
+      "bytes": 10796,
+      "sha256": "ded3f844bc4ea9e5d1f53539e05e948c20b85a623096712b1484088d77c84d68",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/directory-set-camera-wrapper.arm.txt",
+      "bytes": 4256,
+      "sha256": "1fb76c2e75f15487af9032513138c32d7f8402ccdc6939b6a177088a31cf7fe2",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/execute-transaction.arm.txt",
+      "bytes": 26963,
+      "sha256": "8ffa5e5253dc8820047ff5c761cf10e27a5a9c024e8421dc0e2706daf73db75b",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/framing-list-parser.arm.txt",
+      "bytes": 9138,
+      "sha256": "c54296b87935e6dc451ed4078e4e408e784a6891c419202c7d67d38a4f414430",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/image-function.arm.txt",
+      "bytes": 9011,
+      "sha256": "d6f64f94f7abebdd97a6ebe782f9427c13a7e967abdaaf3a325140bd5eff507a",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/light-property-caller.arm.txt",
+      "bytes": 639,
+      "sha256": "69d5b2e8f1b0c916e60ef2d261126b2e38e634db339786cce1a6e5f9a4cb3676",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/receive-command.arm.txt",
+      "bytes": 22258,
+      "sha256": "5daae4f4300d6cc695d690d0d8c8b1915d1f0514a6d24504e244ddc90bc0fe60",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/resync.arm.txt",
+      "bytes": 13202,
+      "sha256": "a43e3c8cad8373b2239d55844736eb8c7faf18708a2877b3b381d4c42273ccc9",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/save-shoot-setup.arm.txt",
+      "bytes": 17076,
+      "sha256": "6f6690addcd20cb3546e9a4edf7562071d50132d01e3b25938831a3ccd407431",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/set-camera-param.arm.txt",
+      "bytes": 9185,
+      "sha256": "6371e3486d4f44404a108a085400762528ace639549bba703b217614a34adcb9",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/set-image-property.arm.txt",
+      "bytes": 6685,
+      "sha256": "8d47d937652e434a587fe6af5775bccc6131adae3dec3a3ee7e8022e3310a6b9",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/set-picture-params.arm.txt",
+      "bytes": 9186,
+      "sha256": "6a6b7aa2bba31faac297a4bfeb740c2db3ff1a4e3ad2abab99e81001424ad33a",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/sync-property-parser.arm.txt",
+      "bytes": 80766,
+      "sha256": "0bd9569c08d5dc1b1fca6d517240109b61239b0fe4e7edac9e9672e2ad504e65",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/synchronize.arm.txt",
+      "bytes": 5607,
+      "sha256": "724a9a2cbdcb78e36ce91499c70885291bd6a21d90593170eaa08481b7be1e34",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/disassembly/widcomm-link-timeout-setting.arm.txt",
+      "bytes": 3270,
+      "sha256": "d21ffdbbf22423994773bd8310b48a025ea3cfa7c07e304e0f15a1003ff30f19",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/INNERS~1.999.strings.json",
+      "bytes": 3052,
+      "sha256": "6f7004ea65fe92a112388c0eab221c14e7e225d33e5f4873110b4b8daa9f3af3",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/LEAFDP~2.001.strings.json",
+      "bytes": 397795,
+      "sha256": "a34dd2c7c8f61a54ea007ea432d79706c698158a9412d33b096a159e703f2902",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analysis/LEAFLA~1.005.strings.json",
+      "bytes": 1688,
+      "sha256": "884971a31fe4da9b2c9dd26ebf871c6298bbf3d270395609118b968b4029091b",
+      "classification": "generated_static_dp67_client_evidence",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/analyze_dp67.py",
+      "bytes": 21807,
+      "sha256": "53e9b6d56eb2d10eb1dcfa8f2286ef9df009e06079e0f4baaede74ac5b6cd320",
+      "classification": "dp67_static_evidence_tool",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/extracted/0BtStack.004",
+      "bytes": 13824,
+      "sha256": "53d11a2557d064daecf98ab580dee40409dc48795ac8e18fdb8375826b252c7f",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/extracted/BtCoreIf.003",
+      "bytes": 123392,
+      "sha256": "f61cfd82e761ebf544766d93a8f79d5a835d4056b5917b87d6936b3e430e0dbf",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/extracted/BTSDKC~1.002",
+      "bytes": 188928,
+      "sha256": "64a72ba3b525ad834c4621b1b8c9f08f0b38f11e33615d6341e5eff027238449",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/extracted/INNERS~1.999",
+      "bytes": 6656,
+      "sha256": "7b361d412c29ad8dda911672c1909c36071c2f0793bc2f66e51efa05b0e71a27",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/extracted/LEAFDP~2.001",
+      "bytes": 945152,
+      "sha256": "d0e67119db4a8e49a2cf8ec264143ccdf5da2d67623f835df9ace5fdf9c620b7",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/extracted/LEAFLA~1.005",
+      "bytes": 8704,
+      "sha256": "20245d392a5374cd2fd5bc3b2b72a8857d25654fcc7c4c06474f93be4ab5cb81",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/extracted/MOBILE~1.000",
+      "bytes": 1129,
+      "sha256": "79d611c4cde9aad232f0d636a56d48ee99b6a571bf3eebcb820c6cf6dc18969a",
+      "classification": "extracted_windows_ce_client_component",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/inventory.json",
+      "bytes": 6449,
+      "sha256": "0cc6fcafe53a8dba30433227182c81b27583d4a330f2f5261db7bcde54d31e5c",
+      "classification": "nested_dp67_client_inventory",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/original/LeafDP67-1.2.1-Setup.exe",
+      "bytes": 1314304,
+      "sha256": "c0b8de1e4700b27764aa4d755bde730736c649f8de5e72196daa160eaa980126",
+      "classification": "windows_ce_bootstrap_client_installer",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/original/LeafDP67-1.2.1.CAB",
+      "bytes": 1288384,
+      "sha256": "41d6966acb4b2cb676a6bfef3b534ce802feb37cbeaf6ac9beaac196d29d13f4",
+      "classification": "windows_ce_client_installer",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/provenance.json",
+      "bytes": 1236,
+      "sha256": "b501663918f043830b8cbb870c34b1dce4d8ee86b5391b8c1672ec370c1df76a",
+      "classification": "user_supplied_dp67_client_provenance",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/README.en.md",
+      "bytes": 2704,
+      "sha256": "8e8d5eb482aa6d417a25a8757e207f1fdf3aad80502f90d40538e87aee97f682",
+      "classification": "dp67_reference_documentation",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+    },
+    {
+      "path": "reference/dp67/README.md",
+      "bytes": 2414,
+      "sha256": "0f302558efbf7c38b55eb52b353fa62ede2de73424b780732a2c0caf475a0415",
+      "classification": "dp67_reference_documentation",
+      "version": "1.2.1.2",
+      "source_lock": "reference/dp67/inventory.json",
+      "provenance_manifest": "reference/dp67/provenance.json",
+      "provenance": "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
     },
     {
       "path": "reference/firmware/analysis/controls-5.041/brightness-driver.ppc.txt",
@@ -4395,16 +4765,16 @@
     },
     {
       "path": "reference/README.en.md",
-      "bytes": 10611,
-      "sha256": "d94e553ecd09211c254eb371d0fefcf5d7af3c0a3777506566063c23dc9324d9",
+      "bytes": 11174,
+      "sha256": "fb465faed66e0c032fc07cfe7cb4fbd1b65726f4c0b0999d9a20fc3b399cb5df",
       "classification": "project_documentation",
       "version": null,
       "provenance": "Leaf2Android project-maintained reference metadata/documentation."
     },
     {
       "path": "reference/README.md",
-      "bytes": 9724,
-      "sha256": "127c0312e6390353099ade96aa6459bd622bcc2fea43d8513eadd1677d55cb0f",
+      "bytes": 10211,
+      "sha256": "acdc62eb8bf52ecc1418b6f7182a26c8980233f96f688b96b49fa3672bd5c07c",
       "classification": "project_documentation",
       "version": null,
       "provenance": "Leaf2Android project-maintained reference metadata/documentation."

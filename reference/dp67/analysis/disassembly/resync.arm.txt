@@ -1,0 +1,264 @@
+# Pinned DP-67 ARM function; literal pools inside .pdata ranges may decode as data-like instructions.
+0002450c [file 0001390c] mov       ip, sp
+00024510 [file 00013910] push      {r1, r2}
+00024514 [file 00013914] push      {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
+00024518 [file 00013918] ldr       ip, [pc, #0x100]
+0002451c [file 0001391c] sub       sp, sp, ip
+00024520 [file 00013920] ldr       r4, [pc, #0xf4]
+00024524 [file 00013924] mov       sl, r0
+00024528 [file 00013928] ldr       r6, [pc, #0xe8] ; 'CProtocolLayer::ReSync'
+0002452c [file 0001392c] mov       r5, r3
+00024530 [file 00013930] ldr       r0, [r4]
+00024534 [file 00013934] strb      r1, [sp, #0x834]
+00024538 [file 00013938] str       r2, [sp, #0x838]
+0002453c [file 0001393c] cmp       r0, #0
+00024540 [file 00013940] beq       #0x2456c
+00024544 [file 00013944] ldr       r0, [pc, #0xc8] ; '- enter'
+00024548 [file 00013948] mov       r2, #0x2f0
+0002454c [file 0001394c] ldr       r1, [pc, #0xbc] ; 'ProtocolLayer.cpp'
+00024550 [file 00013950] mov       r3, r6
+00024554 [file 00013954] str       r0, [sp]
+00024558 [file 00013958] orr       r2, r2, #2
+0002455c [file 0001395c] ldr       fp, [r4]
+00024560 [file 00013960] mov       r0, #3
+00024564 [file 00013964] mov       lr, pc
+00024568 [file 00013968] mov       pc, fp
+0002456c [file 0001396c] add       r8, sl, #0x18
+00024570 [file 00013970] mov       r0, r8
+00024574 [file 00013974] str       r8, [sp, #4]
+00024578 [file 00013978] bl        #0x7c99c
+0002457c [file 0001397c] ldr       r0, [sl, #0x90]
+00024580 [file 00013980] mov       r1, #0
+00024584 [file 00013984] bl        #0x7c9fc
+00024588 [file 00013988] movs      r3, r0
+0002458c [file 0001398c] bne       #0x24624
+00024590 [file 00013990] ldr       r0, [r4]
+00024594 [file 00013994] cmp       r0, #0
+00024598 [file 00013998] beq       #0x245c4
+0002459c [file 0001399c] ldr       r0, [pc, #0x68] ; 'ReSync failed because in busy mode'
+000245a0 [file 000139a0] mov       r2, #0x2f8
+000245a4 [file 000139a4] ldr       r3, [pc, #0x5c] ; 'CProtocolLayer::ReSync()'
+000245a8 [file 000139a8] orr       r2, r2, #3
+000245ac [file 000139ac] str       r0, [sp]
+000245b0 [file 000139b0] mov       r0, #3
+000245b4 [file 000139b4] ldr       r1, [pc, #0x48] ; 'ProtocolLayer.cpp'
+000245b8 [file 000139b8] ldr       fp, [r4]
+000245bc [file 000139bc] mov       lr, pc
+000245c0 [file 000139c0] mov       pc, fp
+000245c4 [file 000139c4] mov       r0, r8
+000245c8 [file 000139c8] bl        #0x7c990
+000245cc [file 000139cc] ldr       r0, [r4]
+000245d0 [file 000139d0] cmp       r0, #0
+000245d4 [file 000139d4] beq       #0x247e4
+000245d8 [file 000139d8] ldr       r0, [pc, #0x20] ; '- leave'
+000245dc [file 000139dc] mov       r3, r6
+000245e0 [file 000139e0] ldr       fp, [r4]
+000245e4 [file 000139e4] mov       r2, #0
+000245e8 [file 000139e8] str       r0, [sp]
+000245ec [file 000139ec] mov       r1, #0
+000245f0 [file 000139f0] mov       r0, #3
+000245f4 [file 000139f4] mov       lr, pc
+000245f8 [file 000139f8] mov       pc, fp
+000245fc [file 000139fc] b         #0x247e4
+00024600 [file 00013a00] andeq     lr, r8, r0, lsl #22
+00024604 [file 00013a04] andeq     r6, sb, r8, asr #3
+00024608 [file 00013a08] muleq     sb, r4, r1
+0002460c [file 00013a0c] andeq     r6, sb, ip, asr #2
+00024610 [file 00013a10] andeq     r6, sb, r8, lsr #2
+00024614 [file 00013a14] andeq     lr, r8, r0, lsl fp
+00024618 [file 00013a18] strdeq    r6, r7, [sb], -r8
+0002461c [file 00013a1c] andeq     lr, r8, r4, ror #23
+00024620 [file 00013a20] andeq     r0, r0, ip, lsl #16
+00024624 [file 00013a24] mov       fp, #0
+00024628 [file 00013a28] cmp       r5, #0
+0002462c [file 00013a2c] sub       r7, r5, #1
+00024630 [file 00013a30] beq       #0x24714
+00024634 [file 00013a34] ldr       r8, [pc, #0x98] ; 'ProtocolLayer.cpp'
+00024638 [file 00013a38] sub       r5, r5, r7
+0002463c [file 00013a3c] ldr       sb, [pc, #0x8c]
+00024640 [file 00013a40] ldr       r6, [pc, #0x84] ; 'CProtocolLayer::ReSync Synchronize failed Attempt: %d'
+00024644 [file 00013a44] ldrb      r1, [sp, #0x83c]
+00024648 [file 00013a48] mov       r0, sl
+0002464c [file 00013a4c] bl        #0x26764
+00024650 [file 00013a50] mov       fp, r0
+00024654 [file 00013a54] strb      fp, [sp, #8]
+00024658 [file 00013a58] ands      r3, fp, #0xff
+0002465c [file 00013a5c] bne       #0x246d8
+00024660 [file 00013a60] mov       r3, r5
+00024664 [file 00013a64] mov       r2, r6
+00024668 [file 00013a68] mov       r1, #0x400
+0002466c [file 00013a6c] add       r0, sp, #0xc
+00024670 [file 00013a70] bl        #0x7ca08
+00024674 [file 00013a74] mov       r3, #0
+00024678 [file 00013a78] mov       ip, #0x800
+0002467c [file 00013a7c] orr       ip, ip, #0xa
+00024680 [file 00013a80] strh      r3, [sp, ip]
+00024684 [file 00013a84] ldr       r3, [r4]
+00024688 [file 00013a88] cmp       r3, #0
+0002468c [file 00013a8c] beq       #0x246b8
+00024690 [file 00013a90] mov       r2, #0x304
+00024694 [file 00013a94] ldr       fp, [r4]
+00024698 [file 00013a98] str       sb, [sp]
+0002469c [file 00013a9c] add       r3, sp, #0xc
+000246a0 [file 00013aa0] orr       r2, r2, #3
+000246a4 [file 00013aa4] mov       r1, r8
+000246a8 [file 00013aa8] mov       r0, #3
+000246ac [file 00013aac] mov       lr, pc
+000246b0 [file 00013ab0] mov       pc, fp
+000246b4 [file 00013ab4] ldrb      fp, [sp, #8]
+000246b8 [file 00013ab8] cmp       r7, #0
+000246bc [file 00013abc] sub       r7, r7, #1
+000246c0 [file 00013ac0] add       r5, r5, #1
+000246c4 [file 00013ac4] bne       #0x24644
+000246c8 [file 00013ac8] b         #0x24710
+000246cc [file 00013acc] andeq     r6, sb, r0, lsl r2
+000246d0 [file 00013ad0] andeq     r1, fp, ip, ror r0
+000246d4 [file 00013ad4] andeq     r6, sb, ip, ror #3
+000246d8 [file 00013ad8] mov       r3, #1
+000246dc [file 00013adc] strb      r3, [sl, #0xa]
+000246e0 [file 00013ae0] ldr       r3, [r4]
+000246e4 [file 00013ae4] cmp       r3, #0
+000246e8 [file 00013ae8] beq       #0x24710
+000246ec [file 00013aec] ldr       r0, [pc, #0x118] ; 'In sync'
+000246f0 [file 00013af0] mov       r2, #0x304
+000246f4 [file 00013af4] ldr       r3, [pc, #0x10c] ; 'CProtocolLayer::ReSync'
+000246f8 [file 00013af8] str       r0, [sp]
+000246fc [file 00013afc] mov       r0, #3
+00024700 [file 00013b00] ldr       r1, [pc, #0xfc] ; 'ProtocolLayer.cpp'
+00024704 [file 00013b04] ldr       sb, [r4]
+00024708 [file 00013b08] mov       lr, pc
+0002470c [file 00013b0c] mov       pc, sb
+00024710 [file 00013b10] ldr       r8, [sp, #4]
+00024714 [file 00013b14] ands      r3, fp, #0xff
+00024718 [file 00013b18] bne       #0x24810
+0002471c [file 00013b1c] ldr       r3, [r4]
+00024720 [file 00013b20] cmp       r3, #0
+00024724 [file 00013b24] beq       #0x2474c
+00024728 [file 00013b28] ldr       r0, [pc, #0xd0] ; 'Synchronize failed'
+0002472c [file 00013b2c] mov       r2, #0x30c
+00024730 [file 00013b30] ldr       r3, [pc, #0xc4] ; 'CProtocolLayer::ReSync'
+00024734 [file 00013b34] str       r0, [sp]
+00024738 [file 00013b38] mov       r0, #1
+0002473c [file 00013b3c] ldr       r1, [pc, #0xb4] ; 'ProtocolLayer.cpp'
+00024740 [file 00013b40] ldr       fp, [r4]
+00024744 [file 00013b44] mov       lr, pc
+00024748 [file 00013b48] mov       pc, fp
+0002474c [file 00013b4c] ldr       r0, [sl, #4]
+00024750 [file 00013b50] mov       r3, #0
+00024754 [file 00013b54] strb      r3, [sl, #0xa]
+00024758 [file 00013b58] mov       r1, #0x4d0
+0002475c [file 00013b5c] ldr       r0, [r0, #0x178]
+00024760 [file 00013b60] mov       r3, #0
+00024764 [file 00013b64] mov       r2, #0
+00024768 [file 00013b68] orr       r1, r1, #3
+0002476c [file 00013b6c] bl        #0x7cbe8
+00024770 [file 00013b70] movs      r3, r0
+00024774 [file 00013b74] bne       #0x247ac
+00024778 [file 00013b78] ldr       r0, [r4]
+0002477c [file 00013b7c] cmp       r0, #0
+00024780 [file 00013b80] beq       #0x247ac
+00024784 [file 00013b84] ldr       r0, [pc, #0x68] ; 'PostMessage failed'
+00024788 [file 00013b88] mov       r2, #0x310
+0002478c [file 00013b8c] ldr       r3, [pc, #0x5c] ; 'CProtocolLayer::ReSync'
+00024790 [file 00013b90] orr       r2, r2, #3
+00024794 [file 00013b94] str       r0, [sp]
+00024798 [file 00013b98] mov       r0, #1
+0002479c [file 00013b9c] ldr       r1, [pc, #0x48] ; 'ProtocolLayer.cpp'
+000247a0 [file 00013ba0] ldr       fp, [r4]
+000247a4 [file 00013ba4] mov       lr, pc
+000247a8 [file 00013ba8] mov       pc, fp
+000247ac [file 00013bac] mov       r0, r8
+000247b0 [file 00013bb0] bl        #0x7c990
+000247b4 [file 00013bb4] ldr       r0, [r4]
+000247b8 [file 00013bb8] cmp       r0, #0
+000247bc [file 00013bbc] beq       #0x247e4
+000247c0 [file 00013bc0] ldr       r0, [pc, #-0x1c8] ; '- leave'
+000247c4 [file 00013bc4] mov       r2, #0
+000247c8 [file 00013bc8] ldr       r3, [pc, #-0x1b8] ; 'CProtocolLayer::ReSync'
+000247cc [file 00013bcc] mov       r1, #0
+000247d0 [file 00013bd0] str       r0, [sp]
+000247d4 [file 00013bd4] mov       r0, #3
+000247d8 [file 00013bd8] ldr       fp, [r4]
+000247dc [file 00013bdc] mov       lr, pc
+000247e0 [file 00013be0] mov       pc, fp
+000247e4 [file 00013be4] mov       r0, #0
+000247e8 [file 00013be8] b         #0x24900
+000247ec [file 00013bec] strheq    r6, [sb], -r4
+000247f0 [file 00013bf0] andeq     r6, sb, r4, lsl #7
+000247f4 [file 00013bf4] andeq     r6, sb, ip, asr r3
+000247f8 [file 00013bf8] andeq     r6, sb, r8, lsr r3
+000247fc [file 00013bfc] andeq     r6, sb, r8, lsl #6
+00024800 [file 00013c00] andeq     r6, sb, r0, ror #5
+00024804 [file 00013c04] strheq    r6, [sb], -ip
+00024808 [file 00013c08] andeq     r6, sb, ip, lsl #5
+0002480c [file 00013c0c] andeq     r6, sb, ip, ror r2
+00024810 [file 00013c10] ldrb      r3, [sp, #0x834]
+00024814 [file 00013c14] ands      r3, r3, #0xff
+00024818 [file 00013c18] beq       #0x24888
+0002481c [file 00013c1c] ldr       r1, [sp, #0x838]
+00024820 [file 00013c20] cmp       r1, #0
+00024824 [file 00013c24] beq       #0x24888
+00024828 [file 00013c28] mov       r3, #0
+0002482c [file 00013c2c] add       r2, sp, #4
+00024830 [file 00013c30] str       r3, [sp, #4]
+00024834 [file 00013c34] mov       r0, sl
+00024838 [file 00013c38] bl        #0x2691c
+0002483c [file 00013c3c] ands      r3, r0, #0xff
+00024840 [file 00013c40] bne       #0x24880
+00024844 [file 00013c44] ldr       r0, [r4]
+00024848 [file 00013c48] cmp       r0, #0
+0002484c [file 00013c4c] beq       #0x24874
+00024850 [file 00013c50] ldr       r3, [sp, #4]
+00024854 [file 00013c54] mov       r2, #0x31c
+00024858 [file 00013c58] ldr       r1, [pc, #0xc4] ; 'ProtocolLayer.cpp'
+0002485c [file 00013c5c] mov       r0, #1
+00024860 [file 00013c60] str       r3, [sp]
+00024864 [file 00013c64] ldr       r3, [pc, #0xb4] ; 'CProtocolLayer::ReSync(). RequestSync failed Error: '
+00024868 [file 00013c68] ldr       fp, [r4]
+0002486c [file 00013c6c] mov       lr, pc
+00024870 [file 00013c70] mov       pc, fp
+00024874 [file 00013c74] mov       r3, #0
+00024878 [file 00013c78] strb      r3, [sl, #0xa]
+0002487c [file 00013c7c] mov       fp, #0
+00024880 [file 00013c80] ldr       r0, [sp, #4]
+00024884 [file 00013c84] bl        #0x7d71c
+00024888 [file 00013c88] ldr       r3, [r4]
+0002488c [file 00013c8c] cmp       r3, #0
+00024890 [file 00013c90] beq       #0x248c4
+00024894 [file 00013c94] ands      r3, fp, #0xff
+00024898 [file 00013c98] ldr       r1, [pc, #0x7c] ; 'ProtocolLayer.cpp'
+0002489c [file 00013c9c] ldrne     r0, [pc, #0x74] ; 'true'
+000248a0 [file 00013ca0] mov       r2, #0x320
+000248a4 [file 00013ca4] ldreq     r0, [pc, #0x68] ; 'false'
+000248a8 [file 00013ca8] orr       r2, r2, #3
+000248ac [file 00013cac] ldr       r3, [pc, #0x5c] ; 'CProtocolLayer::ReSync returned:'
+000248b0 [file 00013cb0] str       r0, [sp]
+000248b4 [file 00013cb4] mov       r0, #3
+000248b8 [file 00013cb8] ldr       sl, [r4]
+000248bc [file 00013cbc] mov       lr, pc
+000248c0 [file 00013cc0] mov       pc, sl
+000248c4 [file 00013cc4] mov       r0, r8
+000248c8 [file 00013cc8] bl        #0x7c990
+000248cc [file 00013ccc] ldr       r0, [r4]
+000248d0 [file 00013cd0] cmp       r0, #0
+000248d4 [file 00013cd4] beq       #0x248fc
+000248d8 [file 00013cd8] ldr       r0, [pc, #-0x2e0] ; '- leave'
+000248dc [file 00013cdc] mov       r2, #0
+000248e0 [file 00013ce0] ldr       r3, [pc, #-0x2d0] ; 'CProtocolLayer::ReSync'
+000248e4 [file 00013ce4] mov       r1, #0
+000248e8 [file 00013ce8] str       r0, [sp]
+000248ec [file 00013cec] mov       r0, #3
+000248f0 [file 00013cf0] ldr       sl, [r4]
+000248f4 [file 00013cf4] mov       lr, pc
+000248f8 [file 00013cf8] mov       pc, sl
+000248fc [file 00013cfc] mov       r0, fp
+00024900 [file 00013d00] mov       ip, #0x800
+00024904 [file 00013d04] orr       ip, ip, #0xc
+00024908 [file 00013d08] add       sp, sp, ip
+0002490c [file 00013d0c] ldm       sp, {r4, r5, r6, r7, r8, sb, sl, fp, sp, pc}
+00024910 [file 00013d10] andeq     r6, sb, r4, lsr #9
+00024914 [file 00013d14] muleq     sb, r8, r4
+00024918 [file 00013d18] andeq     r6, sb, ip, lsl #9
+0002491c [file 00013d1c] andeq     r6, sb, r8, ror #8
+00024920 [file 00013d20] strdeq    r6, r7, [sb], -ip
+00024924 [file 00013d24] ldrdeq    r6, r7, [sb], -r8

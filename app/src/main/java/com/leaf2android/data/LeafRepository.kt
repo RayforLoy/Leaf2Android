@@ -29,7 +29,9 @@ class LeafRepository(private val context: Context) {
     private val preferences = context.getSharedPreferences("leaf", Context.MODE_PRIVATE)
     private val store = PhotoStore(context)
     private val storageLock = Mutex()
-    private val controlsLock = Mutex()
+    // Keep a whole read / write / readback operation together, including against automatic previews.
+    // Notification acknowledgements bypass this lock so a back can continue its current operation.
+    private val operationLock = Mutex()
     private val mutableSettings = MutableStateFlow(readSettings())
     val settings = mutableSettings.asStateFlow()
     private val mutable = MutableStateFlow(SessionState())
@@ -59,15 +61,25 @@ class LeafRepository(private val context: Context) {
             }
         }
     }
-    private fun readSettings() = LeafSettings(
+    private fun readSettings(): LeafSettings {
+        // Earlier builds persisted the old 256 MiB default whenever any setting changed.
+        // Migrate that value once; keep a smaller 64 MiB choice and all later choices.
+        if (!preferences.getBoolean("maxCacheDefaultMigrated", false)) {
+            val edit = preferences.edit().putBoolean("maxCacheDefaultMigrated", true)
+            if (preferences.getInt("cacheMiB", 256) == 256) edit.putInt("cacheMiB", 1024)
+            edit.apply()
+        }
+        return LeafSettings(
         style = runCatching { UiStyle.valueOf(preferences.getString("style", "MODERN")!!) }.getOrDefault(UiStyle.MODERN),
         encoding = runCatching { WireEncoding.valueOf(preferences.getString("encoding", "WESTERN")!!) }.getOrDefault(WireEncoding.WESTERN),
         insecure = preferences.getBoolean("insecure", false), autoFollow = preferences.getBoolean("autoFollow", true),
-        keepAwake = preferences.getBoolean("keepAwake", true), cacheMiB = preferences.getInt("cacheMiB", 256).coerceIn(64, 1024),
+        keepAwake = preferences.getBoolean("keepAwake", true), cacheMiB = preferences.getInt("cacheMiB", 1024).coerceIn(64, 1024),
         showHistogram = preferences.getBoolean("showHistogram", false), showHighlights = preferences.getBoolean("showHighlights", false),
         showShadows = preferences.getBoolean("showShadows", false),
         attachmentLimitMiB = preferences.getInt("attachmentLimitMiB", 16).let { if (it == 64) 64 else 16 },
-    )
+        shootingCompatibility = runCatching { ShootingCompatibility.valueOf(preferences.getString("shootingCompatibility", "AUTO")!!) }.getOrDefault(ShootingCompatibility.AUTO),
+        )
+    }
     fun updateSettings(update: (LeafSettings) -> LeafSettings) {
         val next = update(settings.value)
         mutableSettings.value = next
@@ -77,8 +89,11 @@ class LeafRepository(private val context: Context) {
         preferences.edit().putBoolean("showHistogram", next.showHistogram).putBoolean("showHighlights", next.showHighlights)
             .putBoolean("showShadows", next.showShadows).apply()
         preferences.edit().putInt("attachmentLimitMiB", next.attachmentLimitMiB).apply()
+        preferences.edit().putString("shootingCompatibility", next.shootingCompatibility.name).apply()
     }
     fun viewport(path: String): Viewport = viewports[path] ?: Viewport()
+    val shootingDialect: ShootSetupDialect get() = settings.value.shootingCompatibility.dialect(state.value.deviceName, state.value.camera)
+    fun shootingConfiguration(camera: Map<String, String> = state.value.camera): ShootingConfiguration = ShootingConfiguration.from(camera, shootingDialect)
     fun setViewport(path: String, viewport: Viewport) { viewports[path] = viewport }
     fun clearMessage() { mutable.update { it.copy(error = null, notice = null) } }
     fun showError(message: UiText) { mutable.update { it.copy(error = message) } }
@@ -118,7 +133,9 @@ class LeafRepository(private val context: Context) {
                     launch {
                         for (path in queue) {
                             if (state.value.labMode) { queued.remove(path); continue }
-                            try { receiveImage(p, path, current) }
+                            try { operationLock.withLock {
+                                if (generation == current && !state.value.labMode) receiveImage(p, path, current)
+                            } }
                             catch (e: Exception) {
                                 if (e is CancellationException) throw e
                                 showError(errorText(e, msg(R.string.could_not_read_preview_9fbde)))
@@ -155,7 +172,10 @@ class LeafRepository(private val context: Context) {
     }
     private fun mergeCamera(frame: WireFrame, encoding: WireEncoding) {
         val values = frame.values(encoding.charset).mapKeys { it.key.lowercase(Locale.ROOT) }
-        mutable.update { it.copy(camera = (if (frame.tag.equals("Sync", true)) emptyMap() else it.camera) + values) }
+        mutable.update {
+            val camera = (if (frame.tag.equals("Sync", true)) emptyMap() else it.camera) + values
+            it.copy(camera = camera, shootingDialect = settings.value.shootingCompatibility.dialect(it.deviceName, camera))
+        }
     }
     private suspend fun readFolder(p: LeafProtocol, path: String) {
         val normalized = if (path.endsWith('/')) path else "$path/"
@@ -172,29 +192,29 @@ class LeafRepository(private val context: Context) {
     fun refreshStatus() = action(msg(R.string.updating_back_status_7a7d4)) { p ->
         listOf(Commands.battery, Commands.exposures, Commands.totalFrames).forEach { mergeCamera(p.execute(it), p.encoding) }
     }
-    private fun controls(title: UiText, block: suspend (LeafProtocol) -> Unit) = action(title) { p ->
+    private fun controls(title: UiText, clearMessages: Boolean = true, block: suspend (LeafProtocol) -> Unit) = action(title, clearMessages) { p ->
         val current = generation
-        controlsLock.withLock {
-            mutable.update { it.copy(controlsBusy = true) }
-            try { block(p) } finally { if (generation == current) mutable.update { it.copy(controlsBusy = false) } }
-        }
+        mutable.update { it.copy(controlsBusy = true) }
+        try { block(p) } finally { if (generation == current) mutable.update { it.copy(controlsBusy = false) } }
     }
     private suspend fun syncControls(p: LeafProtocol): ShootingConfiguration {
         val frame = p.execute(Commands.sync)
         mergeCamera(frame, p.encoding)
-        return ShootingConfiguration.from(frame.values(p.encoding.charset))
+        return shootingConfiguration(frame.values(p.encoding.charset))
     }
     private fun refreshAfterConfigurationNotification() {
         if (syncQueued || !state.value.connected || state.value.labMode) return
         val current = generation
         syncQueued = true
-        controls(msg(R.string.reading_back_controls)) { p ->
+        controls(msg(R.string.reading_back_controls), clearMessages = false) { p ->
             try { syncControls(p) } finally { if (generation == current) syncQueued = false }
         }
     }
     fun refreshControls() = controls(msg(R.string.reading_back_controls)) { p ->
         syncControls(p)
-        listOf(Commands.battery, Commands.exposures, Commands.totalFrames, Commands.histogramScale, Commands.currentTime, CameraSystemControls.defaultNotes).forEach {
+        val queries = if (shootingDialect == ShootSetupDialect.DP67) listOf(Commands.currentTime) else
+            listOf(Commands.battery, Commands.exposures, Commands.totalFrames, Commands.histogramScale, Commands.currentTime, CameraSystemControls.defaultNotes)
+        queries.forEach {
             mergeCamera(p.execute(it), p.encoding)
         }
     }
@@ -246,23 +266,28 @@ class LeafRepository(private val context: Context) {
     }
     fun applyShootSetup(base: ShootSetup, changes: Map<ShootField, String>, sampledLight: String? = null) = controls(msg(R.string.writing_shooting_settings)) { p ->
         if (sampledLight != null) requireLiveLightSample(sampledLight)
+        log("CONTROL ShootSetup PRE_SYNC dialect=$shootingDialect")
         val fresh = syncControls(p)
         if (fresh.active != base) throw LocalizedIOException(msg(R.string.shooting_settings_changed))
         val requested = fresh.validateChanges(base, changes, sampledLight)
         changes[ShootField.FOLDER]?.let { listed(p, it) }
-        p.execute(ControlCommands.shootSetup(requested, fresh.globals))
+        log("CONTROL ShootSetup WRITE_ACK dialect=${fresh.dialect}")
+        p.execute(ControlCommands.shootSetup(requested, fresh.globals, fresh.dialect))
+        log("CONTROL ShootSetup READBACK_SYNC")
         val result = syncControls(p)
         val actual = result.setups.singleOrNull { it.name == requested.name }
-        val checked = ShootField.legacy.filter { it != ShootField.NL_COMPRESSION || requested[ShootField.COMPRESSION] == "Nearly Lossless" }
+        val checked = ShootField.legacy.filter { requested[it] != null && (it != ShootField.NL_COMPRESSION || requested[ShootField.COMPRESSION] == "Nearly Lossless") }
+        val original = result.setups.singleOrNull { it.name == base.name }
         if (result.activeName != requested.name || actual == null || checked.any { actual[it] != requested[it] } ||
+            (fresh.dialect == ShootSetupDialect.DP67 && requested.name != base.name && (original == null || original.values != base.values)) ||
             result.globals.orientation != fresh.globals.orientation || !result.globals.color.equals(fresh.globals.color, true))
             throw LocalizedIOException(msg(R.string.shooting_write_not_confirmed))
         mutable.update { it.copy(notice = msg(R.string.shooting_settings_confirmed)) }
     }
     fun selectShootSetup(name: String) = controls(msg(R.string.selecting_shooting_setup)) { p ->
         val fresh = syncControls(p)
-        if (fresh.setups.none { it.name == name }) throw LocalizedIOException(msg(R.string.setup_not_available))
-        p.execute(ControlCommands.selectSetup(name, fresh.globals))
+        val selected = fresh.setups.singleOrNull { it.name == name } ?: throw LocalizedIOException(msg(R.string.setup_not_available))
+        p.execute(ControlCommands.selectSetup(selected, fresh.globals, fresh.dialect))
         if (syncControls(p).activeName != name) throw LocalizedIOException(msg(R.string.shooting_write_not_confirmed))
         mutable.update { it.copy(notice = msg(R.string.shooting_settings_confirmed)) }
     }
@@ -320,7 +345,7 @@ class LeafRepository(private val context: Context) {
     fun applySampledLightToFuture(light: String) {
         try {
             requireLiveLightSample(light)
-            val legacy = ShootingConfiguration.from(state.value.camera).active
+            val legacy = shootingConfiguration().active
             val modern = ImageSettingsConfiguration.from(state.value.camera)?.active
             when {
                 legacy != null -> applyShootSetup(legacy, mapOf(ShootField.LIGHT to light), light)
@@ -383,24 +408,29 @@ class LeafRepository(private val context: Context) {
         mutable.update { it.copy(notice = msg(R.string.back_file_action_acknowledged)) }
     }
     fun refreshSelected() { state.value.selectedPath?.let { enqueueImage(it) } }
-    private fun action(title: UiText, block: suspend (LeafProtocol) -> Unit) {
+    private fun action(title: UiText, clearMessages: Boolean = true, block: suspend (LeafProtocol) -> Unit) {
         actionScope.launch {
             val current = generation
             val p = protocol
             if (p == null || !state.value.connected) { showError(msg(R.string.connect_to_the_back_and_complete_synchronizatio_fa018)); return@launch }
-            try {
-                mutable.update { it.copy(operation = title, error = null, notice = null) }
-                block(p)
-            } catch (e: Exception) {
-                if (e !is CancellationException && generation == current) showError(errorText(e, msg(R.string.operation_failed , title)))
-            } finally { if (generation == current) mutable.update { it.copy(operation = UiText.Empty) } }
+            operationLock.withLock {
+                if (generation != current || state.value.labMode) return@withLock
+                try {
+                    mutable.update { it.copy(operation = title, error = if (clearMessages) null else it.error, notice = if (clearMessages) null else it.notice) }
+                    log("OP BEGIN ${title.resolve()}")
+                    block(p)
+                    log("OP END ${title.resolve()}")
+                } catch (e: Exception) {
+                    if (e !is CancellationException && generation == current) showError(errorText(e, msg(R.string.operation_failed , title)))
+                } finally { if (generation == current) mutable.update { it.copy(operation = UiText.Empty) } }
+            }
         }
     }
 
     private suspend fun onEvent(p: LeafProtocol, frame: WireFrame, current: Int) {
         if (current != generation) return
         if (state.value.labMode) {
-            if (frame.tag.lowercase(Locale.ROOT) in setOf("picturetaken", "imagechange", "cameraparamchange", "storagenotification", "powermanagement", "pictureparamschange", "filesystemchange", "readytoshoot", "asynccommand", "beepnotification", "ifguiisactive")) p.acknowledge()
+            if (frame.tag.lowercase(Locale.ROOT) in setOf("picturetaken", "imagechange", "cameraparamchange", "camerashootsetupchangenotification", "storagenotification", "powermanagement", "pictureparamschange", "filesystemchange", "readytoshoot", "asynccommand", "beepnotification", "ifguiisactive")) p.acknowledge()
             val text = "${Instant.now()} ${LabRedaction.redact(frame.header.toString(p.encoding.charset))} [${frame.attachment.size} bytes]"
             mutable.update { it.copy(labEvents = (it.labEvents + text).takeLast(40)) }
             return
@@ -554,6 +584,7 @@ class LeafRepository(private val context: Context) {
                 appendLine("Android ${android.os.Build.VERSION.RELEASE}; API ${android.os.Build.VERSION.SDK_INT}; ${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL}")
                 appendLine("Phase: ${snapshot.phase}; device: ${snapshot.deviceName}; address: ${snapshot.deviceAddress?.takeLast(5)?.let { "**:**:**:**:$it" }}")
                 appendLine("SPP: ${BluetoothTransport.SPP}; encoding: ${settings.value.encoding}; insecure: ${settings.value.insecure}")
+                appendLine("Shooting compatibility: ${settings.value.shootingCompatibility}; effective dialect: $shootingDialect; cache: ${settings.value.cacheMiB} MiB")
                 appendLine("Aptus / Valeo hardware/firmware: not verified by this build; manual mechanical shutter")
                 appendLine("Counts: ${snapshot.previewCount} received previews; folder ${snapshot.folder}")
                 appendLine("Camera: ${snapshot.camera.mapValues { (key, value) -> if (key.lowercase(Locale.ROOT) in setOf("pin", "pincode", "newpincode", "annotation", "copyright", "xmp_tag")) "[redacted]" else value }}")

@@ -29,6 +29,8 @@ The app connects through the standard SPP UUID, then requests synchronization, t
 
 Validated capture notifications enter a bounded preview queue. GetImage needs a matching filename and attachment length before decoding a preview and storing original bytes and SHA-256. Unknown binary data is not reported as a complete MOS download. Busy, unsaved or error notifications are not successful captures.
 
+Version 0.3.1 protects whole read/write/readback operations and automatic preview transfers with the same repository operation lock; notification Ack bypasses it. Background configuration refresh preserves the last result/error. WiView and DP-67 ShootSetup dialects serialize separately; compatibility choice and preview-cache limits persist independently of pairing mode and text encoding.
+
 ## State, language and layout
 
 The session and repository are not owned by a transient page. Selection, zoom position, cache and operations are shared across style changes, page recreation and window changes. Display language is separate from both style and protocol encoding. Manual and system-default language choices must cover UI, notifications and messages.

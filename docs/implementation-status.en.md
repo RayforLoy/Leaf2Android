@@ -2,7 +2,7 @@
 
 [简体中文](implementation-status.md) · [Project home](../README.en.md) · [Full gap matrix](feature-gap-matrix.en.md)
 
-Updated 2026-11-11. **0.3.0 pre-release**; app ID `com.leaf2android`. The new functions below are implemented in code; hardware effects still need verification. Final build and test results must follow the completed release record.
+Updated 2026-11-14. **0.3.1 (versionCode 4) is an experimental pre-release**; app ID `com.leaf2android`. Changes are implemented, while candidate fixes for real Valeo settings timeouts still require device retests. Final builds and checks follow this release's reports.
 
 ## Scope and evidence
 
@@ -22,6 +22,12 @@ Early implementation proceeded under the user's assumption that wireless works. 
 
 This is model-specific user feedback, not an independent maintainer retest or complete acceptance. The report does not establish a 20-photo sequence, file association, folder details, ISO or other parameter reads / writes, back marking, note read-back, screen lock / background, original files or live view. The test phone is not assumed to be the originally planned Z Fold7. Aptus II 5 and family-wide compatibility are not inferred.
 
+### 2026-11-14: settings timeout incident
+
+The user reports working Valeo photo reads with disconnection on settings changes, without identifying the field. The screenshot shows the app closing after a reply timeout, not whether Ack was absent, parsing / matching failed, image requests interleaved or the physical link failed earlier. Version 0.3.1 adds whole-operation locking, request summaries and a separate DP-67 writer; **a real-device resolution is not claimed**.
+
+Offline testing also exposed background Sync from CameraShootSetupChangeNotification clearing a just-completed success or read-back mismatch. Automatic refresh now retains error / notice; only a new manual operation clears them. This concerns overwritten app display / verification results, not a proven back-disconnection cause. See the [independent public-evidence review](valeo-connection-research.en.md).
+
 ## Support table
 
 Existing behavior, newly evidenced standard functions and laboratory entries are listed below. The user has not verified new parameters, processing, marking, storage or session controls on Valeo 22Wi or Aptus 22. Laboratory probes record evidence without treating unexplained replies as proven effects.
@@ -30,12 +36,15 @@ Existing behavior, newly evidenced standard functions and laboratory entries are
 | --- | --- | --- |
 | Discovery, pairing, SPP | Public API; secure and optional insecure RFCOMM | User-reported success on Valeo 22Wi and Aptus 22; PIN, security mode, phone / system and firmware details pending |
 | Synchronization and folders | RequestSync → CurrentTime → dir; errors are not ready | Photo reading reported on both models; full handshake, folder fields and date syntax not separately accepted |
-| Legacy shooting setup / ISO | Sync supplies full ShootSetup and choices; match the current setup and submit a complete edit preserving untouched values | No hardcoded ISO; fresh read before writing and Sync read-back afterward; new writes untested on hardware |
-| Existing shooting setup selection | Select a device-provided DefaultShootSetup name | Not FactorySettings; no invented setups; read back the active selection |
+| Shooting compatibility | Select AUTO / WIVIEW / DP67 while disconnected; AUTO requires Valeo in the Bluetooth name and shootsetup in Sync | Serialization only, not pairing / CEVersion changes; renamed backs can select explicitly; not hardware-capability detection |
+| WiView legacy / ISO | Complete ShootSetup and device options, retaining untouched values | Its compression / orientation / Color additions are not applied to DP-67; pre / post Sync, effects untested |
+| DP-67 / ISO | Twelve core fields, retaining Prefix only if present; edit original presets into .1 slots | No compression, Orientation or Color writes; confirm slot update and verify new active, expected values and unchanged preset; effects untested |
+| Existing preset selection | DP-67 originals send DefaultShootSetup only; modified setups send complete CSV | Not FactorySettings; retain original contains(".1") name rule and read back the selection |
+| Whole-operation locking and results | operationLock spans pre-Sync, set and read-back, excluding automatic GetImage; notification Ack bypasses it; automatic refresh retains results | No automatic write retries, timeout still closes; summaries name tag / attributes only; real Valeo retest pending |
 | 5.041 camera settings | Recognized Sync.CameraSettings supports independent ISO, Orientation, CameraType, SensorCrop, FileCompression, Prefix and ShootingFolder writes | Device-provided choices; name-only SensorCrop, None / Lossless compression, prefix limits below; full read-back; physical effects untested |
 | 5.041 image-processing settings | Complete ImageSettings editing and existing ActiveImageSettings selection; preserve untouched fields | Includes Grain / MoireReduction / Saturation only when Sync advertises options; fresh read and full read-back; physical effects untested |
 | Automatic post-capture display | Notifications, filename matching, attachment length, serialized queue | At least 20 real photos must be matched |
-| JPEG cache and playback | Original bytes, SHA-256, 64 / 256 / 1024 MiB quota | Photo reading reported on both models; byte comparison, actual resolution, speed and stability pending |
+| JPEG cache and playback | Original bytes, SHA-256, 1024 MiB default with 64 / 256 / 1024 choices | One-time old 256 → 1024 migration retains 64 and later choices; byte comparison, resolution and speed still untested |
 | Zoom and exposure inspection | Pinch / double-tap, JPEG histogram and indicators | Real detail range pending; no RAW pixels used |
 | Photo information and XMP | GetPictureParams attributes, strict Base64 / UTF-8 XMP decoding and preservation; marking changes only the third Flags character | No empty replacement when xmp_tag header is absent; damaged or unsafe XMP refuses editing; actual attributes and units untested |
 | Stars and local notes | Persistent phone-side data, explicitly local | No back dependency |
@@ -64,9 +73,13 @@ This pre-release is not completion of full original-PDA replacement acceptance.
 
 ## Setup and dialect boundaries
 
-The legacy ShootSetup editing scope is ISO, ImageQuality, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, CameraType, ICCFlag, Prefix, ShootingFolder, FileCompression / NLCompression, Orientation and Color. Prefer device-provided choices; evidenced structural values such as ICCFlag are not arbitrary invented device steps. An ambiguous / incomplete current setup, unsafe encoding or mismatching read-back must not be reported as a confirmed write.
+WiView legacy complete ShootSetup covers ISO, ImageQuality, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, CameraType, ICCFlag, Prefix, ShootingFolder, FileCompression / NLCompression, Orientation and Color. DP-67 has a separate set: SetupName, ShootingFolder, ISO, ImageQuality, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, CameraType and ICCFlag; retain Prefix only when present. Missing core fields or device options are not guessed; ICCFlag remains evidenced 0 / 1.
 
-Legacy ISO is inside a complete ShootSetup. Direct 5.041 Sync.CameraSettings writes have independent server evidence. Do not mix dialects merely because ISO appears in strings, or treat the first option as the current value. Sync again before submitting and compare the complete expected configuration, untouched fields and required global orientation / Color afterward; an ISO-only change is insufficient proof of success.
+Legacy ISO is in the complete setup. Independent 5.041 CameraSettings requires that structure and a non-DP-67 path. DP-67 omits WiView compression and global Orientation / Color without changing CEVersion; standard controls hide those fields, with manual laboratory probes still available. DP-67 control refresh sends Sync + CurrentTime only, avoiding extra automatic getters.
+
+Editing an original DP-67 preset clones to `original-name.1` unless its name already contains `.1`, retaining that modified slot. Confirmation shows the destination and possible existing-slot update. Fresh state is checked before submitting; read-back verifies new active, expected values, visible untouched fields / globals and unchanged original preset. The original 12-second × 3 retry is not copied; timeout still closes, with manual reconnect and no automatic write retry. See [DP-67 static analysis](dp67-analysis.en.md).
+
+Pre-Sync, write and read-back share operationLock; automatic image requests cannot interleave while notification Ack bypasses the lock. This queues phone operations rather than locking the back or other clients. Timeout summaries name the unanswered tag and attributes without values, distinguishing write Ack from read-back wait, not establishing physical-loss causality.
 
 5.041 camera settings and ImageSettings are separate structures; ISO is not an ImageSettings field. Processing settings cover ImageQuality, Color, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, ICCFlag, Grain, MoireReduction and Saturation. Missing complete structures or device choices are not filled with guesses. Independent SensorCrop accepts name-only lists, not guessed compound crop records. Independent compression accepts advertised None / Lossless, separate from legacy Nearly Lossless. Independent Prefix is capped at 23 UTF-16 code units and cannot increase the known current prefix's UTF-8 byte length; this is an implementation limit, not a manufacturer hardware specification. A shooting folder is checked before writing.
 
@@ -88,11 +101,13 @@ Gain / UserGain / ManualLens / GetImage FP entries show firmware evidence levels
 
 This work collects 89 content-unique originals (about 83.7 MB) plus core reconstruction / analysis from `D:\leaf`. The `reference/firmware` inventory is authoritative for sources, models, sizes and hashes. Personal MOS files, calibration files and the roughly 113 MB installer are excluded from published resources. Archiving and static analysis do not add phone-based flashing or identify firmware installed on the user's two tested backs.
 
+The DP-67 user package contributes only original Setup.exe, extracted CAB and research records, excluding the complete ZIP with private PBF data. Installer analysis is not a device retest; see the [package analysis](dp67-analysis.en.md).
+
 ## Offline and emulator verification
 
 Current counts, APK integrity, Lint, signing and alignment are recorded in [verification-status.json](../research/reports/verification-status.json) and [apk-verification.json](../research/reports/apk-verification.json). User hardware reports and tool-executed checks are different evidence types. Do not rewrite feedback as an independent maintainer retest, or treat an older report, APK or count as the current release result.
 
-Protocol and API 36 emulator coverage includes actual UI ISO selection, confirmation and complete setup read-back, language switching, Android XMP DOM smoke testing, refused writes, read-back mismatches, unexpected resets of untouched fields, ISO notifications not polluting choices, and partial-move detection. The new future-capture gray-balance path, final passing counts, Python research-tool checks and release APK follow this version's machine reports; unfinished new counts are not filled in ahead of execution.
+Protocol and API 36 emulator coverage includes actual UI ISO selection, confirmation and complete setup read-back, language switching, Android XMP DOM smoke testing, refused writes, read-back mismatches, unexpected resets of untouched fields, ISO notifications not polluting choices, and partial-move detection. Python, protocol and Android checks passed; detailed results follow the matching-version machine reports above. Signed in-place upgrade, cache migration and explicit DP67 persistence across restarts / languages are recorded in [cache-upgrade-verification.json](../research/reports/cache-upgrade-verification.json). These offline results do not establish that real Valeo settings timeouts are solved.
 
 Protocol tests cover byte splits, coalescing, binary delimiters, duplicate attributes, invalid lengths, truncation, reset, serialized requests, interleaved notifications, timeout closure and errors. Repository tests receive decodable synthetic JPEGs through a fake transport and check filename, dimensions, SHA-256 and cached bytes. UI tests cover style, language and state retention.
 
@@ -107,7 +122,9 @@ Synthetic images, peers and window sizes do not replace real Bluetooth, physical
 | Pairing | First pairing, wrong PIN, forgotten / invalid-bond recovery |
 | Session | Back reboot, timeout, disconnect, reconnect, screen lock and background |
 | Capture | At least 20 photos, matched individually by content, name, order and automatic display |
-| Setup / ISO | Original value, device options, dialect and post-write Sync; only the intended field changes; a disconnect or read-back mismatch is not success |
+| Setup / ISO | AUTO / WIVIEW / DP67, original values, choices, request summary and read-back; DP-67 .1 target, new active, unchanged preset and existing-slot confirmation; timeout is not success |
+| Operations and background events | Capture / setup notifications must not insert GetImage into pre-Sync / set / read-back; notification Ack remains timely; refresh retains success / mismatch results |
+| Cache migration | Old 256 → 1024, retain 64; after migration choose 256 and restart without reset; separate laboratory attachment budget |
 | Back marking / notes | Keep Good / Unmarked separate from phone stars; read back and compare unrelated XMP namespaces and remaining Flags characters; verify caches cannot be written directly after reconnect, upgrade or process restart |
 | Storage operations | Use disposable test photos and empty folders; record source / destination, confirmation, no overwrite and refreshed directory contents; read actual state after a disconnect |
 | Server image inspection | Verify 1 / 2 / 4 / 8, Alarm, manually entered coordinates and actual orientation, gray-balance sample / photo confirmation / separate future-capture confirmation / restore, pixel picking and histogram provenance |

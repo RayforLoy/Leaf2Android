@@ -1,10 +1,10 @@
-# Feature gap matrix: 0.2.0 baseline → 0.3.0
+# Feature gap matrix: 0.2.0 baseline → 0.3.1
 
-[简体中文](feature-gap-matrix.md) · [Project home](../README.en.md) · [Capabilities and devices](implementation-status.en.md) · [User guide](quick-start.en.md) · [0.3.0 notes](releases/v0.3.0.en.md)
+[简体中文](feature-gap-matrix.md) · [Project home](../README.en.md) · [Capabilities and devices](implementation-status.en.md) · [User guide](quick-start.en.md) · [0.3.1 notes](releases/v0.3.1.en.md)
 
-Updated 2026-11-11. **0.3.0 is awaiting publication.** This matrix compares every original WiView audit baseline gap with the current app. A command string, implemented code, an Ack and a physical effect are different evidence.
+Updated 2026-11-14. **0.3.1 (versionCode 4) is an experimental pre-release.** This matrix compares the 0.2.0 baseline with current standard paths, laboratory entries and physical effects. Candidate changes for Valeo settings timeouts still require real-device retests.
 
-The user has reported only **successful Bluetooth connection and photo reading on Valeo 22Wi and Aptus 22**, without firmware, phone / system, app version or logs. Standard functions, laboratory candidates and user hypotheses are recorded separately; new hardware effects remain unverified. The user corrected that Aptus II has no Bluetooth and is not a current wireless target; the early Aptus II 5 plan is historical. 5.041 PDAInterface is shared code, not Bluetooth-hardware evidence or family-wide acceptance.
+Basic reports confirm **successful Bluetooth connection and photo reading on Valeo 22Wi and Aptus 22**. A further 2026-11-14 report describes Valeo settings timeouts; see the [device and issue record](implementation-status.en.md). Complete firmware, phone / system, app-version and log details are still missing. Standard functions, laboratory candidates and user hypotheses are recorded separately; new hardware effects remain unverified. The user corrected that Aptus II has no Bluetooth and is not a current wireless target; the early Aptus II 5 plan is historical. 5.041 PDAInterface is shared code, not Bluetooth-hardware evidence or family-wide acceptance.
 
 ## Reading the states
 
@@ -24,26 +24,32 @@ Classic and shared 5.041 PDAInterface both register nine business-command classe
 
 ## Connection, synchronization and recovery
 
-| Function | 0.2.0 baseline | 0.3.0 and remaining boundary |
+| Function | 0.2.0 baseline | 0.3.1 and remaining boundary |
 | --- | --- | --- |
 | Bluetooth discovery, pairing and direct connection | Existing | Retain public Android APIs and classic SPP / RFCOMM; two models have connection / photo-reading reports only; first pairing, wrong PIN and Android bond recovery need records |
-| RequestSync and CurrentTime reads | Existing | Complete configurations, options, capabilities and dialect parsing added; do not rename unlike structures into one another; incomplete reads are not ready |
+| RequestSync and CurrentTime reads | Existing | Complete settings, choices and dialect parsing; DP-67 refresh uses Sync + CurrentTime only, without extra automatic getters or mixing unlike structures |
 | Directory reads | Existing | Retain subject / path matching; reread affected directories after management operations |
 | Capture notifications and preview queue | Existing | Retain serialized requests, filenames and attachment-length checks; at least 20 real photos still need content / name / order verification |
-| Timeout, disconnect and foreground session | Basic handling | Retain stream closure and manual reconnect; lock-screen, background, back reboot and long sessions need physical testing |
+| Timeout, disconnect and foreground session | Basic handling | Retain timeout closure, manual reconnect and no automatic retry; summaries identify tag / attribute names without values and do not establish physical-link causality |
+| Complete setting transactions | Per-request serialization existed | **0.3.1:** operationLock covers pre-Sync / set / read-back, excluding automatic GetImage; notification Ack bypasses it to avoid blocking back progress |
+| Background refresh retains results | Automatic refresh existed | **0.3.1 app correction:** CameraShootSetupChangeNotification Sync retains success / mismatch error / notice until a new manual operation; not a proven back-disconnection cause |
 | ReSyncRequest, NAK and original-client retransmission | Incomplete | **Partial / laboratory:** standard disconnect recovery remains; ReSyncRequest / Ack templates and raw observations can record NAK and other frames, without claiming complete retransmission timing |
 | Image size / packetized mode | Not established | **No automatic recovery:** standard flow rejects unverified size packets; laboratory header / attachment observations do not establish a solved packetization or retransmission protocol |
 
 ## Shooting and image-processing settings
 
-| Function | 0.2.0 baseline | 0.3.0 and remaining boundary |
+| Function | 0.2.0 baseline | 0.3.1 and remaining boundary |
 | --- | --- | --- |
 | Current ISO and allowed steps | No usable control | **Added:** current value comes from matched legacy ShootSetup or 5.041 CameraSettings; choices come from Sync, not hardcoded steps or the first option |
-| Legacy ISO write | Missing | **Added:** submit a complete ShootSetup, changing selected fields and retaining the rest; reread first and compare the whole setup, untouched fields and required globals afterward |
-| Existing shooting setup selection | Missing | **Added:** choose a device-advertised DefaultShootSetup and read back; not FactorySettings and not an invented preset name |
-| Complete legacy setup editing | Missing | **Added:** ISO, ImageQuality, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, CameraType, ICCFlag, Prefix, ShootingFolder, FileCompression / NLCompression, Orientation and Color |
+| Legacy ISO write | Missing | **Added:** complete selected WiView / DP-67 serialization, preserving untouched values; pre / post Sync verification, not an ISO-only success verdict |
+| AUTO / WIVIEW / DP67 | No separate selection | **0.3.1:** select while disconnected; AUTO needs Valeo in the Bluetooth name and shootsetup in Sync. Explicit modes cover renamed backs without changing pairing or hardware capability |
+| Existing shooting setup selection | Missing | **Added:** use device-provided setups and read back; DP-67 originals send DefaultShootSetup only, while names containing .1 send complete CSV; not FactorySettings |
+| Complete WiView legacy setup editing | Missing | **Added:** ISO, ImageQuality, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, CameraType, ICCFlag, Prefix, ShootingFolder, FileCompression / NLCompression, Orientation and Color; WiView path only |
+| DP-67 core settings and Prefix | Missing | **0.3.1:** SetupName, ShootingFolder, ISO, ImageQuality, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, CameraType and ICCFlag; retain Prefix only if already provided, without invented empty fields |
+| DP-67 .1 modified slot | Missing | **0.3.1:** clone original-name+.1 unless .1 is already contained; show existing-slot updates before sending and verify active / expected values plus unchanged original preset |
+| Extensions omitted by DP-67 | No separate limit | **0.3.1:** no FileCompression / NLCompression, Orientation, Color or global attributes; hidden in standard controls, with manual laboratory probes still possible rather than verified support |
 | Light / white-balance preset | Missing | **Added:** select a device-provided capture illuminant; this is not arbitrary Kelvin / tint or photo-coordinate gray sampling |
-| Framing, ICCFlag and Color | Missing | **Added:** use the name from a Framing record, evidenced ICCFlag 0 / 1, and the dialect's distinction between setup fields and top-level orientation / Color |
+| Framing, ICCFlag and Color | Missing | **Added:** advertised Framing names and ICCFlag 0 / 1; WiView distinguishes setup / top-level orientation and Color, while DP-67 omits those extensions |
 | Independent 5.041 camera settings | No dialect controls | **Added:** recognized Sync.CameraSettings enables independent ISO, Orientation, CameraType, SensorCrop, FileCompression, Prefix and ShootingFolder writes, followed by complete Sync comparison; independent server evidence is not inferred from old CABs |
 | SensorCrop and independent compression | Not connected | **Added within limits:** standard SensorCrop accepts advertised name-only choices rather than compound records; standard 5.041 compression accepts advertised None / Lossless. Other values can be tested through raw laboratory requests, without claiming a proven near-lossless branch |
 | Prefix and ShootingFolder | Missing | **Added:** check actual folder, encoding and delimiters before writing; retain the legacy input limit. Independent 5.041 Prefix cannot increase current UTF-8 byte length and is capped at 23 UTF-16 code units; an implementation limit, not a hardware maximum |
@@ -53,11 +59,16 @@ Classic and shared 5.041 PDAInterface both register nine business-command classe
 
 Incomplete configuration, absent choices, an unknown dialect, state changed during editing, unsafe serialization or a read-back mismatch is not confirmed success. An ISO-only change or Ack does not replace full comparison. The bottom-navigation **Back** page groups configuration and session controls.
 
+The DP-67 path follows [user-package static analysis](dp67-analysis.en.md): shorter fields, cloning, contains(".1") and wrapper behavior are evidenced in bytes, not a proven real Valeo timeout cause. The app does not change CEVersion or copy the original 12-second, up-to-three-attempt / failure-resync strategy. Timeout closure and no automatic write retry remain.
+
+The 2026-11-14 report identifies working reads and settings timeouts without naming the field; the screenshot establishes app-initiated timeout closure only. No public same-device WiView 1.0.3 A/B or direct immediate-ISO-write failure was found; see the [independent review](valeo-connection-research.en.md). Physical effects of operation locking and compatibility changes remain unverified.
+
 ## Preview, exposure inspection and gray balance
 
-| Function | 0.2.0 baseline | 0.3.0 and remaining boundary |
+| Function | 0.2.0 baseline | 0.3.1 and remaining boundary |
 | --- | --- | --- |
 | Basic GetImage post-capture preview | Existing | Retained; two models have photo-reading reports; a `.mos` path does not establish a complete MOS payload |
+| Preview-cache default and upgrade | Cache existed | **0.3.1:** 1024 MiB default; one-time old 256 → 1024 migration retains 64; later choices such as 256 survive restarts. Laboratory attachment budget remains separate |
 | Phone zoom, JPEG histogram and indicators | Existing | Retain local processing and provenance labels, separate from back processing |
 | Back zoom and XCoord / YCoord | Missing; phone zoom only | **Added:** original 1 / 2 / 4 / 8 processed JPEG previews; original-image protocol coordinates entered manually, with no guessed Compose-tap or thumbnail mapping |
 | Back Alarm / edge | Missing; local JPEG indicators only | **Added:** white / dark / both requests return processed previews; actual thresholds and image effects need testing |
@@ -72,7 +83,7 @@ Back histograms and pixel picking are not claimed as RAW metering. Phone-local J
 
 ## Photo information, marking and notes
 
-| Function | 0.2.0 baseline | 0.3.0 and remaining boundary |
+| Function | 0.2.0 baseline | 0.3.1 and remaining boundary |
 | --- | --- | --- |
 | Photo attributes and current-photo notes | Reads and note writes existed | Retain GetPictureParams and explicit back-note writes; errors or unexplained replies are not success; effects need real-firmware checking |
 | Local stars / local notes | Existing | Remain independent, persistent phone data; not back marks or capture-default notes |
@@ -88,7 +99,7 @@ Standard photo writes use a non-persisted connection generation, not only an add
 
 ## Back storage management
 
-| Function | 0.2.0 baseline | 0.3.0 and remaining boundary |
+| Function | 0.2.0 baseline | 0.3.1 and remaining boundary |
 | --- | --- | --- |
 | Create folder | Missing | **Added:** exact mkdir path after checking the destination is unused; not arbitrary file creation |
 | Delete folder | Missing | **Added for empty folders only:** inspect contents, explicitly confirm, rmdir and reread the parent; no recursive non-empty deletion |
@@ -103,7 +114,7 @@ Standard storage operations show exact targets, require confirmation and reject 
 
 ## System settings and advanced laboratory commands
 
-| Function | 0.2.0 baseline | 0.3.0 and remaining boundary |
+| Function | 0.2.0 baseline | 0.3.1 and remaining boundary |
 | --- | --- | --- |
 | Clock synchronization | CurrentTime read-only | **Added:** write phone-local time, then read separately; no assumed protocol time-zone transfer |
 | Default Annotation / Copyright | Current-photo notes only | **Added:** read, write and read back future-capture defaults; leave existing photos unchanged |
@@ -149,6 +160,7 @@ Per-attachment phone limits are 16 / 64 MiB, changed while disconnected and appl
 ## Evidence and remaining acceptance
 
 - [Client protocol gap audit](protocol-gap-audit.md): WiView 1.0.2 / 1.0.3 functions, instructions and constructors; gap columns use the 0.2.0 baseline.
+- [DP-67 package and setting analysis](dp67-analysis.en.md): twelve core fields, conditional Prefix, .1 slot, wrapper and retry comparison; Setup.exe / CAB retained, complete ZIP with private PBF excluded.
 - [Classic Aptus / Aptus 22 and shared-firmware survey](firmware-bluetooth-survey.en.md): independent 4.701 bytes, model association, nine-command catalog, A / B / C layers and CE checksums.
 - [5.041 server control evidence](../reference/firmware/analysis/CONTROLS.en.md): independent CameraSettings / ImageSettings, marking, PIN / Brightness and other evidence, tied to one hashed image rather than assumed installed user firmware.
 - [Laboratory candidate inventory](../reference/analysis/lab-candidates.json): separate original calls, firmware handlers, reply fields, internal functionality and research without proven syntax.
