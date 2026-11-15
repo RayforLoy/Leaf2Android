@@ -44,6 +44,10 @@ class PhotoStore(context: Context) {
         catch (e: Exception) { index.failWrite(stream); throw e }
     }
     fun put(path: String, bytes: ByteArray): LeafPhoto = putAt(path, bytes, File(directory, hash(path.toByteArray()) + ".preview"))
+    /** Only a hash-derived file in this app's preview directory; never a camera or supplied filesystem path. */
+    fun removePreview(path: String) {
+        File(directory, hash(path.toByteArray()) + ".preview").delete()
+    }
     fun putProcessed(path: String, bytes: ByteArray): LeafPhoto {
         val file = File(processedDirectory, hash(path.toByteArray() + bytes) + ".preview")
         val photo = putAt(path, bytes, file)

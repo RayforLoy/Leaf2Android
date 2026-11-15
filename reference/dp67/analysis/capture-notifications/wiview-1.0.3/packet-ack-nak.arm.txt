@@ -1,0 +1,46 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x31dc8..0x31e04, exclusive
+00031dc8 [file 000211c8] mov       ip, sp
+00031dcc [file 000211cc] push      {r0, r1, r2, r3}
+00031dd0 [file 000211d0] push      {r4, fp, ip, lr}
+00031dd4 [file 000211d4] add       fp, sp, #0x10
+00031dd8 [file 000211d8] mov       r4, r0
+00031ddc [file 000211dc] bl        #0x2ca7c
+00031de0 [file 000211e0] ldr       r0, [pc, #0x38]
+00031de4 [file 000211e4] mov       r1, #0
+00031de8 [file 000211e8] str       r1, [r4, #0x18]
+00031dec [file 000211ec] str       r0, [r4]
+00031df0 [file 000211f0] add       r0, r4, #0x1c
+00031df4 [file 000211f4] ldr       r1, [pc, #0x20] ; '^<Ack />'
+00031df8 [file 000211f8] bl        #0x15e4c
+00031dfc [file 000211fc] mov       r0, r4
+00031e00 [file 00021200] ldmdb     fp, {r4, fp, sp, pc}
+# VA 0x31e8c..0x31efc, exclusive
+00031e8c [file 0002128c] mov       ip, sp
+00031e90 [file 00021290] push      {r0, r1, r2, r3}
+00031e94 [file 00021294] push      {r4, r5, fp, ip, lr}
+00031e98 [file 00021298] add       fp, sp, #0x14
+00031e9c [file 0002129c] mov       r5, r0
+00031ea0 [file 000212a0] bl        #0x2ca7c
+00031ea4 [file 000212a4] ldr       r0, [pc, #0x74]
+00031ea8 [file 000212a8] mov       r1, #1
+00031eac [file 000212ac] ldr       r4, [pc, #0x68]
+00031eb0 [file 000212b0] str       r0, [r5]
+00031eb4 [file 000212b4] str       r1, [r5, #0x18]
+00031eb8 [file 000212b8] ldr       r0, [r4]
+00031ebc [file 000212bc] add       r0, r0, #0x150
+00031ec0 [file 000212c0] bl        #0x87170
+00031ec4 [file 000212c4] cmp       r0, #0
+00031ec8 [file 000212c8] add       r0, r5, #0x1c
+00031ecc [file 000212cc] beq       #0x31eec
+00031ed0 [file 000212d0] ldr       r1, [pc, #0x40] ; '^<Ack />'
+00031ed4 [file 000212d4] bl        #0x15e4c
+00031ed8 [file 000212d8] ldr       r0, [r4]
+00031edc [file 000212dc] mov       r1, #0
+00031ee0 [file 000212e0] add       r0, r0, #0x150
+00031ee4 [file 000212e4] bl        #0x87178
+00031ee8 [file 000212e8] b         #0x31ef4
+00031eec [file 000212ec] ldr       r1, [pc, #0x20] ; '^<Nak />'
+00031ef0 [file 000212f0] bl        #0x15e4c
+00031ef4 [file 000212f4] mov       r0, r5
+00031ef8 [file 000212f8] ldmdb     fp, {r4, r5, fp, sp, pc}

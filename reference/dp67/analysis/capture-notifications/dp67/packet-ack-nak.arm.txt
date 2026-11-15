@@ -1,0 +1,841 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x257c0..0x264dc, exclusive
+000257c0 [file 00014bc0] push      {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+000257c4 [file 00014bc4] ldr       ip, [pc, #0xdc]
+000257c8 [file 00014bc8] sub       sp, sp, ip
+000257cc [file 00014bcc] ldr       r8, [pc, #0xd0]
+000257d0 [file 00014bd0] mov       r5, r0
+000257d4 [file 00014bd4] ldr       sb, [pc, #0xc4] ; 'CProtocolLayer::ReadAndDecompressImage'
+000257d8 [file 00014bd8] mov       r6, r1
+000257dc [file 00014bdc] ldr       r0, [r8]
+000257e0 [file 00014be0] mov       r7, r2
+000257e4 [file 00014be4] mov       r4, r3
+000257e8 [file 00014be8] cmp       r0, #0
+000257ec [file 00014bec] beq       #0x2581c
+000257f0 [file 00014bf0] ldr       r0, [pc, #0xa4] ; '- enter'
+000257f4 [file 00014bf4] mov       r2, #0x4d0
+000257f8 [file 00014bf8] ldr       r1, [pc, #0x98] ; 'ProtocolLayer.cpp'
+000257fc [file 00014bfc] mov       r3, sb
+00025800 [file 00014c00] str       r0, [sp]
+00025804 [file 00014c04] orr       r2, r2, #0xd
+00025808 [file 00014c08] ldr       fp, [r8]
+0002580c [file 00014c0c] mov       r0, #3
+00025810 [file 00014c10] mov       lr, pc
+00025814 [file 00014c14] mov       pc, fp
+00025818 [file 00014c18] ldr       r0, [r8]
+0002581c [file 00014c1c] cmp       r4, #0
+00025820 [file 00014c20] bne       #0x258ac
+00025824 [file 00014c24] cmp       r0, #0
+00025828 [file 00014c28] beq       #0x25880
+0002582c [file 00014c2c] ldr       r0, [pc, #0x60] ; 'Packet size is zero'
+00025830 [file 00014c30] mov       r2, #0x4e0
+00025834 [file 00014c34] ldr       r3, [pc, #0x54] ; 'CProtocolLayer::ReadImage'
+00025838 [file 00014c38] str       r0, [sp]
+0002583c [file 00014c3c] mov       r0, #1
+00025840 [file 00014c40] ldr       r1, [pc, #0x44] ; 'ProtocolLayer.cpp'
+00025844 [file 00014c44] ldr       fp, [r8]
+00025848 [file 00014c48] mov       lr, pc
+0002584c [file 00014c4c] mov       pc, fp
+00025850 [file 00014c50] ldr       r0, [r8]
+00025854 [file 00014c54] cmp       r0, #0
+00025858 [file 00014c58] beq       #0x25880
+0002585c [file 00014c5c] ldr       r0, [pc, #0x24] ; '- leave'
+00025860 [file 00014c60] mov       r3, sb
+00025864 [file 00014c64] ldr       fp, [r8]
+00025868 [file 00014c68] mov       r2, #0
+0002586c [file 00014c6c] str       r0, [sp]
+00025870 [file 00014c70] mov       r1, #0
+00025874 [file 00014c74] mov       r0, #3
+00025878 [file 00014c78] mov       lr, pc
+0002587c [file 00014c7c] mov       pc, fp
+00025880 [file 00014c80] mov       r0, #0
+00025884 [file 00014c84] b         #0x25b78
+00025888 [file 00014c88] andeq     lr, r8, r0, lsl #22
+0002588c [file 00014c8c] andeq     r7, sb, r0, ror #5
+00025890 [file 00014c90] andeq     r7, sb, ip, lsr #5
+00025894 [file 00014c94] andeq     r7, sb, r4, lsl #5
+00025898 [file 00014c98] andeq     r7, sb, r0, ror #4
+0002589c [file 00014c9c] andeq     lr, r8, r0, lsl fp
+000258a0 [file 00014ca0] andeq     r7, sb, r0, lsl r2
+000258a4 [file 00014ca4] andeq     lr, r8, r4, ror #23
+000258a8 [file 00014ca8] andeq     r0, r0, ip, ror r8
+000258ac [file 00014cac] mov       r2, #0x38
+000258b0 [file 00014cb0] ldr       fp, [pc, #0x17c]
+000258b4 [file 00014cb4] mov       r1, #0
+000258b8 [file 00014cb8] add       r0, sp, #4
+000258bc [file 00014cbc] bl        #0x7c960
+000258c0 [file 00014cc0] mov       sb, #0
+000258c4 [file 00014cc4] str       r4, [sp, #0x10]
+000258c8 [file 00014cc8] add       r3, r5, #0xc
+000258cc [file 00014ccc] str       r7, [sp, #0xc]
+000258d0 [file 00014cd0] str       r6, [sp, #8]
+000258d4 [file 00014cd4] cmp       r4, #0
+000258d8 [file 00014cd8] str       r5, [sp, #4]
+000258dc [file 00014cdc] str       sb, [sp, #0x14]
+000258e0 [file 00014ce0] str       r3, [sp, #0x18]
+000258e4 [file 00014ce4] ble       #0x25a38
+000258e8 [file 00014ce8] ldr       r0, [r5]
+000258ec [file 00014cec] mov       sl, r4
+000258f0 [file 00014cf0] ldr       fp, [pc, #0x138]
+000258f4 [file 00014cf4] ldr       r3, [r0]
+000258f8 [file 00014cf8] ldr       r3, [r3, #0x38]
+000258fc [file 00014cfc] mov       lr, pc
+00025900 [file 00014d00] mov       pc, r3
+00025904 [file 00014d04] ldr       r3, [pc, #0x120] ; IAT COREDLL.dll!#2032
+00025908 [file 00014d08] movs      r5, r0
+0002590c [file 00014d0c] moveq     r5, #0x38400
+00025910 [file 00014d10] ldr       r3, [r3]
+00025914 [file 00014d14] lsl       r0, r4, #3
+00025918 [file 00014d18] mov       lr, pc
+0002591c [file 00014d1c] mov       pc, r3
+00025920 [file 00014d20] ldr       r3, [pc, #0x100] ; IAT COREDLL.dll!#2026
+00025924 [file 00014d24] ldr       r1, [pc, #0xf8]
+00025928 [file 00014d28] ldr       r3, [r3]
+0002592c [file 00014d2c] mov       lr, pc
+00025930 [file 00014d30] mov       pc, r3
+00025934 [file 00014d34] ldr       r3, [pc, #0xe4] ; IAT COREDLL.dll!#2052
+00025938 [file 00014d38] mov       r6, r0
+0002593c [file 00014d3c] mov       r0, r5
+00025940 [file 00014d40] ldr       r3, [r3]
+00025944 [file 00014d44] mov       lr, pc
+00025948 [file 00014d48] mov       pc, r3
+0002594c [file 00014d4c] ldr       r3, [pc, #0xc8] ; IAT COREDLL.dll!#2047
+00025950 [file 00014d50] mov       r1, r0
+00025954 [file 00014d54] mov       r0, r6
+00025958 [file 00014d58] ldr       r3, [r3]
+0002595c [file 00014d5c] mov       lr, pc
+00025960 [file 00014d60] mov       pc, r3
+00025964 [file 00014d64] ldr       r3, [pc, #0xac] ; IAT COREDLL.dll!#2018
+00025968 [file 00014d68] ldr       r3, [r3]
+0002596c [file 00014d6c] mov       lr, pc
+00025970 [file 00014d70] mov       pc, r3
+00025974 [file 00014d74] mov       r1, #0x1f4
+00025978 [file 00014d78] ldr       r5, [pc, #0x94] ; '^<Nak />'
+0002597c [file 00014d7c] cmp       r0, r1
+00025980 [file 00014d80] movlo     r0, r1
+00025984 [file 00014d84] str       r5, [sp, #0x24]
+00025988 [file 00014d88] str       r0, [sp, #0x1c]
+0002598c [file 00014d8c] ldr       r0, [pc, #0x7c] ; '^<Ack />'
+00025990 [file 00014d90] str       r0, [sp, #0x20]
+00025994 [file 00014d94] bl        #0x7cb70
+00025998 [file 00014d98] str       r0, [sp, #0x28]
+0002599c [file 00014d9c] mov       r0, r5
+000259a0 [file 00014da0] bl        #0x7cb70
+000259a4 [file 00014da4] ldr       r3, [pc, #0x60] ; IAT COREDLL.dll!#2008
+000259a8 [file 00014da8] mov       r1, r7
+000259ac [file 00014dac] str       r0, [sp, #0x2c]
+000259b0 [file 00014db0] mov       r0, r4
+000259b4 [file 00014db4] ldr       r3, [r3]
+000259b8 [file 00014db8] mov       lr, pc
+000259bc [file 00014dbc] mov       pc, r3
+000259c0 [file 00014dc0] ldr       r3, [pc, #0x44] ; IAT COREDLL.dll!#2008
+000259c4 [file 00014dc4] mov       r5, r0
+000259c8 [file 00014dc8] mov       r1, r7
+000259cc [file 00014dcc] ldr       r3, [r3]
+000259d0 [file 00014dd0] mov       r0, r4
+000259d4 [file 00014dd4] mov       lr, pc
+000259d8 [file 00014dd8] mov       pc, r3
+000259dc [file 00014ddc] str       sb, [sp, #0x38]
+000259e0 [file 00014de0] movs      r3, r1
+000259e4 [file 00014de4] mov       r3, r5
+000259e8 [file 00014de8] mul       r2, r3, r4
+000259ec [file 00014dec] mov       r1, sb
+000259f0 [file 00014df0] movne     r1, #1
+000259f4 [file 00014df4] subs      r0, r7, r2
+000259f8 [file 00014df8] add       r3, r1, r5
+000259fc [file 00014dfc] moveq     r0, r4
+00025a00 [file 00014e00] str       r3, [sp, #0x30]
+00025a04 [file 00014e04] str       r0, [sp, #0x34]
+00025a08 [file 00014e08] b         #0x25a3c
+00025a0c [file 00014e0c] strdeq    sb, sl, [r8], -ip
+00025a10 [file 00014e10] andeq     r7, sb, r0, lsl r3
+00025a14 [file 00014e14] andeq     r7, sb, r4, lsl #6
+00025a18 [file 00014e18] andeq     sb, r8, r4, asr #5
+00025a1c [file 00014e1c] andeq     sb, r8, r8, asr #5
+00025a20 [file 00014e20] andeq     sb, r8, ip, asr #5
+00025a24 [file 00014e24] ldrtmi    r8, [fp], #0
+00025a28 [file 00014e28] ldrdeq    sb, sl, [r8], -r0
+00025a2c [file 00014e2c] ldrdeq    sb, sl, [r8], -r4
+00025a30 [file 00014e30] andeq     r5, r2, ip, lsr #2
+00025a34 [file 00014e34] andeq     r5, r2, r0, ror r5
+00025a38 [file 00014e38] mov       sl, #0x1000
+00025a3c [file 00014e3c] mov       r0, sl
+00025a40 [file 00014e40] bl        #0x7bebc
+00025a44 [file 00014e44] mov       r4, r0
+00025a48 [file 00014e48] mov       r0, #0
+00025a4c [file 00014e4c] bl        #0x7cc48
+00025a50 [file 00014e50] ldr       r6, [pc, #0x140]
+00025a54 [file 00014e54] mov       r5, r0
+00025a58 [file 00014e58] ldr       r0, [r6]
+00025a5c [file 00014e5c] cmp       r0, #0
+00025a60 [file 00014e60] blne      #0x7c984
+00025a64 [file 00014e64] mov       r3, #0x3c
+00025a68 [file 00014e68] str       r4, [sp, #0x40]
+00025a6c [file 00014e6c] str       r3, [sp, #0x3c]
+00025a70 [file 00014e70] mov       r3, #0x18
+00025a74 [file 00014e74] str       r3, [sp, #0x54]
+00025a78 [file 00014e78] add       r3, sp, #4
+00025a7c [file 00014e7c] str       r3, [sp, #0x58]
+00025a80 [file 00014e80] mov       r3, #0x64
+00025a84 [file 00014e84] str       r3, [sp, #0x60]
+00025a88 [file 00014e88] mov       r0, #0x2700
+00025a8c [file 00014e8c] ldr       r3, [pc, #0x100]
+00025a90 [file 00014e90] orr       r0, r0, #0x10
+00025a94 [file 00014e94] str       r0, [sp, #0x64]
+00025a98 [file 00014e98] str       r3, [sp, #0x70]
+00025a9c [file 00014e9c] mvn       r3, #0
+00025aa0 [file 00014ea0] str       r0, [sp, #0x68]
+00025aa4 [file 00014ea4] add       r0, sp, #0x3c
+00025aa8 [file 00014ea8] str       sl, [sp, #0x44]
+00025aac [file 00014eac] str       sb, [sp, #0x48]
+00025ab0 [file 00014eb0] str       r6, [sp, #0x4c]
+00025ab4 [file 00014eb4] str       sb, [sp, #0x50]
+00025ab8 [file 00014eb8] str       r5, [sp, #0x5c]
+00025abc [file 00014ebc] str       fp, [sp, #0x6c]
+00025ac0 [file 00014ec0] str       r3, [sp, #0x74]
+00025ac4 [file 00014ec4] bl        #0x7d764
+00025ac8 [file 00014ec8] mov       r1, r5
+00025acc [file 00014ecc] mov       r6, r0
+00025ad0 [file 00014ed0] mov       r0, #0
+00025ad4 [file 00014ed4] bl        #0x7cc30
+00025ad8 [file 00014ed8] mov       r0, r4
+00025adc [file 00014edc] bl        #0x7be5c
+00025ae0 [file 00014ee0] ldr       r2, [pc, #0xa8] ; 'CProtocolLayer::ReadAndDecompressImage hr = 0x%x'
+00025ae4 [file 00014ee4] mov       r3, r6
+00025ae8 [file 00014ee8] mov       r1, #0x400
+00025aec [file 00014eec] add       r0, sp, #0x7c
+00025af0 [file 00014ef0] bl        #0x7ca08
+00025af4 [file 00014ef4] ldr       r0, [r8]
+00025af8 [file 00014ef8] mov       ip, #0x870
+00025afc [file 00014efc] orr       ip, ip, #0xa
+00025b00 [file 00014f00] strh      sb, [sp, ip]
+00025b04 [file 00014f04] cmp       r0, #0
+00025b08 [file 00014f08] beq       #0x25b38
+00025b0c [file 00014f0c] ldr       r0, [pc, #0x78]
+00025b10 [file 00014f10] mov       r2, #0x540
+00025b14 [file 00014f14] ldr       r1, [pc, #0x6c] ; 'ProtocolLayer.cpp'
+00025b18 [file 00014f18] add       r3, sp, #0x7c
+00025b1c [file 00014f1c] str       r0, [sp]
+00025b20 [file 00014f20] orr       r2, r2, #3
+00025b24 [file 00014f24] ldr       fp, [r8]
+00025b28 [file 00014f28] mov       r0, #3
+00025b2c [file 00014f2c] mov       lr, pc
+00025b30 [file 00014f30] mov       pc, fp
+00025b34 [file 00014f34] ldr       r0, [r8]
+00025b38 [file 00014f38] cmp       r6, #0
+00025b3c [file 00014f3c] mov       r1, #1
+00025b40 [file 00014f40] movmi     r1, sb
+00025b44 [file 00014f44] and       r4, r1, #0xff
+00025b48 [file 00014f48] cmp       r0, #0
+00025b4c [file 00014f4c] beq       #0x25b74
+00025b50 [file 00014f50] ldr       r0, [pc, #-0x2d0] ; '- leave'
+00025b54 [file 00014f54] mov       r2, #0
+00025b58 [file 00014f58] ldr       r3, [pc, #-0x2c0] ; 'CProtocolLayer::ReadAndDecompressImage'
+00025b5c [file 00014f5c] mov       r1, #0
+00025b60 [file 00014f60] str       r0, [sp]
+00025b64 [file 00014f64] mov       r0, #3
+00025b68 [file 00014f68] ldr       fp, [r8]
+00025b6c [file 00014f6c] mov       lr, pc
+00025b70 [file 00014f70] mov       pc, fp
+00025b74 [file 00014f74] mov       r0, r4
+00025b78 [file 00014f78] mov       ip, #0x870
+00025b7c [file 00014f7c] orr       ip, ip, #0xc
+00025b80 [file 00014f80] add       sp, sp, ip
+00025b84 [file 00014f84] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+00025b88 [file 00014f88] andeq     r7, sb, r0, lsl #7
+00025b8c [file 00014f8c] andeq     r1, fp, ip, lsl #1
+00025b90 [file 00014f90] andeq     r7, sb, ip, lsl r3
+00025b94 [file 00014f94] andeq     r5, r2, r8, lsr #2
+00025b98 [file 00014f98] andeq     r0, fp, r0, ror pc
+00025b9c [file 00014f9c] mov       ip, sp
+00025ba0 [file 00014fa0] push      {r0, r1, r2, r3}
+00025ba4 [file 00014fa4] push      {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
+00025ba8 [file 00014fa8] ldr       ip, [pc, #0xb4]
+00025bac [file 00014fac] sub       sp, sp, ip
+00025bb0 [file 00014fb0] mov       r5, r3
+00025bb4 [file 00014fb4] mov       ip, #0x1240
+00025bb8 [file 00014fb8] orr       ip, ip, #0x14
+00025bbc [file 00014fbc] str       r0, [sp, ip]
+00025bc0 [file 00014fc0] mov       r3, #1
+00025bc4 [file 00014fc4] ldr       r0, [r0]
+00025bc8 [file 00014fc8] strb      r3, [sp, #4]
+00025bcc [file 00014fcc] mov       r3, #0
+00025bd0 [file 00014fd0] mov       ip, #0x1240
+00025bd4 [file 00014fd4] orr       ip, ip, #0x18
+00025bd8 [file 00014fd8] str       r1, [sp, ip]
+00025bdc [file 00014fdc] mov       r4, r2
+00025be0 [file 00014fe0] str       r3, [sp, #8]
+00025be4 [file 00014fe4] ldr       r3, [r0]
+00025be8 [file 00014fe8] mov       ip, #0x1240
+00025bec [file 00014fec] orr       ip, ip, #0x1c
+00025bf0 [file 00014ff0] str       r4, [sp, ip]
+00025bf4 [file 00014ff4] ldr       r3, [r3, #0xc]
+00025bf8 [file 00014ff8] mov       ip, #0x1240
+00025bfc [file 00014ffc] orr       ip, ip, #0x20
+00025c00 [file 00015000] str       r5, [sp, ip]
+00025c04 [file 00015004] mov       lr, pc
+00025c08 [file 00015008] mov       pc, r3
+00025c0c [file 0001500c] ldr       lr, [pc, #0x4c]
+00025c10 [file 00015010] ands      r3, r0, #0xff
+00025c14 [file 00015014] bne       #0x25c68
+00025c18 [file 00015018] ldr       r0, [lr]
+00025c1c [file 0001501c] cmp       r0, #0
+00025c20 [file 00015020] beq       #0x25c4c
+00025c24 [file 00015024] ldr       r0, [pc, #0x30] ; 'transport offline'
+00025c28 [file 00015028] mov       r2, #0x550
+00025c2c [file 0001502c] ldr       r3, [pc, #0x24] ; 'CProtocolLayer::ReadImage'
+00025c30 [file 00015030] orr       r2, r2, #4
+00025c34 [file 00015034] str       r0, [sp]
+00025c38 [file 00015038] mov       r0, #1
+00025c3c [file 0001503c] ldr       r1, [pc, #0x10] ; 'ProtocolLayer.cpp'
+00025c40 [file 00015040] ldr       fp, [lr]
+00025c44 [file 00015044] mov       lr, pc
+00025c48 [file 00015048] mov       pc, fp
+00025c4c [file 0001504c] mov       r0, #0
+00025c50 [file 00015050] b         #0x264b0
+00025c54 [file 00015054] strdeq    r7, r8, [sb], -ip
+00025c58 [file 00015058] andeq     r7, sb, r8, asr #7
+00025c5c [file 0001505c] andeq     r7, sb, r4, lsr #7
+00025c60 [file 00015060] andeq     lr, r8, r4, ror #23
+00025c64 [file 00015064] andeq     r1, r0, ip, lsr #4
+00025c68 [file 00015068] mvn       r3, #0
+00025c6c [file 0001506c] cmp       r5, r3
+00025c70 [file 00015070] bne       #0x25f90
+00025c74 [file 00015074] cmp       r4, #0
+00025c78 [file 00015078] bls       #0x26458
+00025c7c [file 0001507c] mov       r6, #0x18400
+00025c80 [file 00015080] ldr       r7, [pc, #0xd8] ; 'CProtocolLayer::ReadImage Bytes read: %d'
+00025c84 [file 00015084] ldr       r8, [pc, #0xd0] ; 'CProtocolLayer::ReadImage() dwBytesToRead != dwBytesRead, %d != %d'
+00025c88 [file 00015088] orr       r6, r6, #0x2a0
+00025c8c [file 0001508c] ldr       sb, [pc, #0xc4] ; 'ProtocolLayer.cpp'
+00025c90 [file 00015090] ldr       sl, [pc, #0xbc] ; 'CProtocolLayer::ReadImage'
+00025c94 [file 00015094] ldr       fp, [pc, #0xb4] ; 'dwBytesAvailable == 0'
+00025c98 [file 00015098] mov       ip, #0x1240
+00025c9c [file 0001509c] orr       ip, ip, #0x14
+00025ca0 [file 000150a0] ldr       r4, [sp, ip]
+00025ca4 [file 000150a4] ldr       r0, [r4]
+00025ca8 [file 000150a8] ldr       r3, [r0]
+00025cac [file 000150ac] ldr       r3, [r3, #0xc]
+00025cb0 [file 000150b0] mov       lr, pc
+00025cb4 [file 000150b4] mov       pc, r3
+00025cb8 [file 000150b8] ands      r3, r0, #0xff
+00025cbc [file 000150bc] beq       #0x25ef4
+00025cc0 [file 000150c0] ldrb      r3, [r4, #0xc]
+00025cc4 [file 000150c4] cmp       r3, #0
+00025cc8 [file 000150c8] beq       #0x25f78
+00025ccc [file 000150cc] ldr       r0, [r4]
+00025cd0 [file 000150d0] ldr       r3, [r0]
+00025cd4 [file 000150d4] ldr       r3, [r3, #0x2c]
+00025cd8 [file 000150d8] mov       lr, pc
+00025cdc [file 000150dc] mov       pc, r3
+00025ce0 [file 000150e0] mov       ip, #0x1240
+00025ce4 [file 000150e4] orr       ip, ip, #0x1c
+00025ce8 [file 000150e8] ldr       r3, [sp, ip]
+00025cec [file 000150ec] ldr       r2, [sp, #8]
+00025cf0 [file 000150f0] sub       r5, r3, r2
+00025cf4 [file 000150f4] cmp       r5, r6
+00025cf8 [file 000150f8] movhi     r5, r6
+00025cfc [file 000150fc] cmp       r0, r5
+00025d00 [file 00015100] movlo     r5, r0
+00025d04 [file 00015104] cmp       r0, #0
+00025d08 [file 00015108] bne       #0x25d64
+00025d0c [file 0001510c] ldr       lr, [pc, #-0xb4]
+00025d10 [file 00015110] ldr       r0, [lr]
+00025d14 [file 00015114] cmp       r0, #0
+00025d18 [file 00015118] beq       #0x25d40
+00025d1c [file 0001511c] mov       r2, #0x5a0
+00025d20 [file 00015120] ldr       r5, [lr]
+00025d24 [file 00015124] str       fp, [sp]
+00025d28 [file 00015128] mov       r3, sl
+00025d2c [file 0001512c] orr       r2, r2, #3
+00025d30 [file 00015130] mov       r1, sb
+00025d34 [file 00015134] mov       r0, #3
+00025d38 [file 00015138] mov       lr, pc
+00025d3c [file 0001513c] mov       pc, r5
+00025d40 [file 00015140] mov       r0, #0xa
+00025d44 [file 00015144] bl        #0x7c9cc
+00025d48 [file 00015148] ldr       r4, [sp, #8]
+00025d4c [file 0001514c] b         #0x25ecc
+00025d50 [file 00015150] andeq     r7, sb, r4, asr r5
+00025d54 [file 00015154] andeq     r7, sb, r0, lsr #10
+00025d58 [file 00015158] strdeq    r7, r8, [sb], -ip
+00025d5c [file 0001515c] andeq     r7, sb, r4, ror r4
+00025d60 [file 00015160] andeq     r7, sb, r0, lsr #8
+00025d64 [file 00015164] mov       ip, #0x1240
+00025d68 [file 00015168] orr       ip, ip, #0x14
+00025d6c [file 0001516c] ldr       r3, [sp, ip]
+00025d70 [file 00015170] mov       r2, r5
+00025d74 [file 00015174] ldr       r1, [sp, #8]
+00025d78 [file 00015178] ldr       r0, [r3]
+00025d7c [file 0001517c] mov       ip, #0x1240
+00025d80 [file 00015180] orr       ip, ip, #0x18
+00025d84 [file 00015184] ldr       lr, [sp, ip]
+00025d88 [file 00015188] ldr       r3, [r0]
+00025d8c [file 0001518c] add       r1, r1, lr
+00025d90 [file 00015190] ldr       r3, [r3, #8]
+00025d94 [file 00015194] mov       lr, pc
+00025d98 [file 00015198] mov       pc, r3
+00025d9c [file 0001519c] mov       r4, r0
+00025da0 [file 000151a0] mvn       r3, #0
+00025da4 [file 000151a4] cmp       r4, r3
+00025da8 [file 000151a8] beq       #0x25f40
+00025dac [file 000151ac] cmp       r5, r4
+00025db0 [file 000151b0] beq       #0x25e54
+00025db4 [file 000151b4] cmp       r4, #0
+00025db8 [file 000151b8] bne       #0x25de8
+00025dbc [file 000151bc] mov       ip, #0x1240
+00025dc0 [file 000151c0] orr       ip, ip, #0x14
+00025dc4 [file 000151c4] ldr       r3, [sp, ip]
+00025dc8 [file 000151c8] ldr       r0, [r3]
+00025dcc [file 000151cc] ldr       r3, [r0]
+00025dd0 [file 000151d0] ldr       r3, [r3, #0x20]
+00025dd4 [file 000151d4] mov       lr, pc
+00025dd8 [file 000151d8] mov       pc, r3
+00025ddc [file 000151dc] mov       r0, #0xa
+00025de0 [file 000151e0] bl        #0x7c9cc
+00025de4 [file 000151e4] b         #0x25e54
+00025de8 [file 000151e8] mov       r3, r5
+00025dec [file 000151ec] str       r4, [sp]
+00025df0 [file 000151f0] mov       r2, r8
+00025df4 [file 000151f4] mov       r1, #0x400
+00025df8 [file 000151f8] mov       r0, #0x22c
+00025dfc [file 000151fc] add       r0, sp, r0
+00025e00 [file 00015200] bl        #0x7ca08
+00025e04 [file 00015204] ldr       r0, [pc, #-0x1ac]
+00025e08 [file 00015208] mov       r3, #0
+00025e0c [file 0001520c] mov       ip, #0xa20
+00025e10 [file 00015210] orr       ip, ip, #0xa
+00025e14 [file 00015214] strh      r3, [sp, ip]
+00025e18 [file 00015218] ldr       r0, [r0]
+00025e1c [file 0001521c] cmp       r0, #0
+00025e20 [file 00015220] beq       #0x25e54
+00025e24 [file 00015224] ldr       r0, [pc, #0xc4]
+00025e28 [file 00015228] mov       r2, #0x5b0
+00025e2c [file 0001522c] ldr       lr, [pc, #-0x1d4]
+00025e30 [file 00015230] mov       r3, #0x22c
+00025e34 [file 00015234] add       r3, sp, r3
+00025e38 [file 00015238] str       r0, [sp]
+00025e3c [file 0001523c] orr       r2, r2, #0xd
+00025e40 [file 00015240] ldr       r1, [pc, #0xa4] ; 'ProtocolLayer.cpp'
+00025e44 [file 00015244] mov       r0, #1
+00025e48 [file 00015248] ldr       r5, [lr]
+00025e4c [file 0001524c] mov       lr, pc
+00025e50 [file 00015250] mov       pc, r5
+00025e54 [file 00015254] ldr       r3, [sp, #8]
+00025e58 [file 00015258] mov       r2, r7
+00025e5c [file 0001525c] mov       r1, #0x400
+00025e60 [file 00015260] add       r4, r3, r4
+00025e64 [file 00015264] mov       r3, r4
+00025e68 [file 00015268] str       r4, [sp, #8]
+00025e6c [file 0001526c] mov       r0, #0xa20
+00025e70 [file 00015270] orr       r0, r0, #0xc
+00025e74 [file 00015274] add       r0, sp, r0
+00025e78 [file 00015278] bl        #0x7ca08
+00025e7c [file 0001527c] mov       r3, #0
+00025e80 [file 00015280] ldr       lr, [pc, #-0x228]
+00025e84 [file 00015284] mov       ip, #0x1200
+00025e88 [file 00015288] orr       ip, ip, #0x2a
+00025e8c [file 0001528c] strh      r3, [sp, ip]
+00025e90 [file 00015290] ldr       r0, [lr]
+00025e94 [file 00015294] cmp       r0, #0
+00025e98 [file 00015298] beq       #0x25ecc
+00025e9c [file 0001529c] ldr       r0, [pc, #0x44]
+00025ea0 [file 000152a0] mov       r2, #0x5c0
+00025ea4 [file 000152a4] ldr       r1, [pc, #0x38] ; 'ProtocolLayer.cpp'
+00025ea8 [file 000152a8] mov       r3, #0xa20
+00025eac [file 000152ac] orr       r3, r3, #0xc
+00025eb0 [file 000152b0] add       r3, sp, r3
+00025eb4 [file 000152b4] str       r0, [sp]
+00025eb8 [file 000152b8] orr       r2, r2, #2
+00025ebc [file 000152bc] ldr       r5, [lr]
+00025ec0 [file 000152c0] mov       r0, #3
+00025ec4 [file 000152c4] mov       lr, pc
+00025ec8 [file 000152c8] mov       pc, r5
+00025ecc [file 000152cc] mov       ip, #0x1240
+00025ed0 [file 000152d0] orr       ip, ip, #0x1c
+00025ed4 [file 000152d4] ldr       r3, [sp, ip]
+00025ed8 [file 000152d8] cmp       r4, r3
+00025edc [file 000152dc] blo       #0x25c98
+00025ee0 [file 000152e0] b         #0x26458
+00025ee4 [file 000152e4] andeq     r7, sb, r4, lsr #11
+00025ee8 [file 000152e8] muleq     fp, r4, r0
+00025eec [file 000152ec] andeq     r7, sb, r0, lsl #11
+00025ef0 [file 000152f0] muleq     fp, r0, r0
+00025ef4 [file 000152f4] ldr       r0, [pc, #-0x29c]
+00025ef8 [file 000152f8] ldr       r0, [r0]
+00025efc [file 000152fc] cmp       r0, #0
+00025f00 [file 00015300] beq       #0x26458
+00025f04 [file 00015304] ldr       r0, [pc, #0x30] ; 'connection go offline during image reading'
+00025f08 [file 00015308] mov       r2, #0x590
+00025f0c [file 0001530c] ldr       lr, [pc, #-0x2b4]
+00025f10 [file 00015310] orr       r2, r2, #2
+00025f14 [file 00015314] str       r0, [sp]
+00025f18 [file 00015318] mov       r0, #1
+00025f1c [file 0001531c] ldr       r3, [pc, #0x14] ; 'CProtocolLayer::ReadImage'
+00025f20 [file 00015320] ldr       r1, [pc, #0xc] ; 'ProtocolLayer.cpp'
+00025f24 [file 00015324] ldr       fp, [lr]
+00025f28 [file 00015328] mov       lr, pc
+00025f2c [file 0001532c] mov       pc, fp
+00025f30 [file 00015330] b         #0x26458
+00025f34 [file 00015334] andeq     r7, sb, r4, asr r6
+00025f38 [file 00015338] andeq     r7, sb, r0, lsr #12
+00025f3c [file 0001533c] andeq     r7, sb, r8, asr #11
+00025f40 [file 00015340] ldr       lr, [pc, #-0x2e8]
+00025f44 [file 00015344] ldr       r0, [lr]
+00025f48 [file 00015348] cmp       r0, #0
+00025f4c [file 0001534c] beq       #0x25f78
+00025f50 [file 00015350] ldr       r0, [pc, #0x34] ; 'ReadFile failed'
+00025f54 [file 00015354] mov       r2, #0x5a0
+00025f58 [file 00015358] ldr       r3, [pc, #0x28] ; 'CProtocolLayer::ReadImage'
+00025f5c [file 0001535c] orr       r2, r2, #0xd
+00025f60 [file 00015360] str       r0, [sp]
+00025f64 [file 00015364] mov       r0, #1
+00025f68 [file 00015368] ldr       r1, [pc, #0x14] ; 'ProtocolLayer.cpp'
+00025f6c [file 0001536c] ldr       fp, [lr]
+00025f70 [file 00015370] mov       lr, pc
+00025f74 [file 00015374] mov       pc, fp
+00025f78 [file 00015378] mov       r3, #0
+00025f7c [file 0001537c] strb      r3, [sp, #4]
+00025f80 [file 00015380] b         #0x26458
+00025f84 [file 00015384] andeq     r7, sb, ip, asr #13
+00025f88 [file 00015388] muleq     sb, r8, r6
+00025f8c [file 0001538c] andeq     r7, sb, r8, ror r6
+00025f90 [file 00015390] cmp       r5, #0
+00025f94 [file 00015394] bne       #0x25fcc
+00025f98 [file 00015398] ldr       r0, [lr]
+00025f9c [file 0001539c] cmp       r0, #0
+00025fa0 [file 000153a0] beq       #0x25fcc
+00025fa4 [file 000153a4] ldr       r0, [pc, #0x180] ; 'Packet size is zero'
+00025fa8 [file 000153a8] mov       r2, #0x5c0
+00025fac [file 000153ac] ldr       r3, [pc, #0x174] ; 'CProtocolLayer::ReadImage'
+00025fb0 [file 000153b0] orr       r2, r2, #8
+00025fb4 [file 000153b4] str       r0, [sp]
+00025fb8 [file 000153b8] mov       r0, #1
+00025fbc [file 000153bc] ldr       r1, [pc, #0x160] ; 'ProtocolLayer.cpp'
+00025fc0 [file 000153c0] ldr       fp, [lr]
+00025fc4 [file 000153c4] mov       lr, pc
+00025fc8 [file 000153c8] mov       pc, fp
+00025fcc [file 000153cc] mov       ip, #0x1240
+00025fd0 [file 000153d0] orr       ip, ip, #0x14
+00025fd4 [file 000153d4] ldr       r3, [sp, ip]
+00025fd8 [file 000153d8] ldr       r0, [r3]
+00025fdc [file 000153dc] ldr       r3, [r0]
+00025fe0 [file 000153e0] ldr       r3, [r3, #0x38]
+00025fe4 [file 000153e4] mov       lr, pc
+00025fe8 [file 000153e8] mov       pc, r3
+00025fec [file 000153ec] ldr       r3, [pc, #0x124] ; IAT COREDLL.dll!#2052
+00025ff0 [file 000153f0] movs      r4, r0
+00025ff4 [file 000153f4] moveq     r4, #0x38400
+00025ff8 [file 000153f8] ldr       r3, [r3]
+00025ffc [file 000153fc] lsl       r0, r5, #3
+00026000 [file 00015400] mov       lr, pc
+00026004 [file 00015404] mov       pc, r3
+00026008 [file 00015408] ldr       r3, [pc, #0x110] ; IAT COREDLL.dll!#2026
+0002600c [file 0001540c] ldr       r1, [pc, #0x108]
+00026010 [file 00015410] ldr       r3, [r3]
+00026014 [file 00015414] mov       lr, pc
+00026018 [file 00015418] mov       pc, r3
+0002601c [file 0001541c] ldr       r3, [pc, #0xf4] ; IAT COREDLL.dll!#2052
+00026020 [file 00015420] mov       fp, r0
+00026024 [file 00015424] mov       r0, r4
+00026028 [file 00015428] ldr       r3, [r3]
+0002602c [file 0001542c] mov       lr, pc
+00026030 [file 00015430] mov       pc, r3
+00026034 [file 00015434] ldr       r3, [pc, #0xd8] ; IAT COREDLL.dll!#2047
+00026038 [file 00015438] mov       r1, r0
+0002603c [file 0001543c] mov       r0, fp
+00026040 [file 00015440] ldr       r3, [r3]
+00026044 [file 00015444] mov       lr, pc
+00026048 [file 00015448] mov       pc, r3
+0002604c [file 0001544c] ldr       r3, [pc, #0xbc] ; IAT COREDLL.dll!#2018
+00026050 [file 00015450] ldr       r3, [r3]
+00026054 [file 00015454] mov       lr, pc
+00026058 [file 00015458] mov       pc, r3
+0002605c [file 0001545c] mov       r1, r0
+00026060 [file 00015460] mov       r0, #0x1f4
+00026064 [file 00015464] str       r1, [sp, #0x10]
+00026068 [file 00015468] cmp       r1, r0
+0002606c [file 0001546c] strlo     r0, [sp, #0x10]
+00026070 [file 00015470] ldr       r0, [pc, #0x94] ; '^<Ack />'
+00026074 [file 00015474] bl        #0x7cb70
+00026078 [file 00015478] str       r0, [sp, #0x18]
+0002607c [file 0001547c] ldr       r0, [pc, #0x84] ; '^<Nak />'
+00026080 [file 00015480] bl        #0x7cb70
+00026084 [file 00015484] mov       ip, #0x1240
+00026088 [file 00015488] orr       ip, ip, #0x1c
+0002608c [file 0001548c] ldr       r6, [sp, ip]
+00026090 [file 00015490] ldr       r3, [pc, #0x6c] ; IAT COREDLL.dll!#2008
+00026094 [file 00015494] str       r0, [sp, #0x1c]
+00026098 [file 00015498] mov       r1, r6
+0002609c [file 0001549c] ldr       r3, [r3]
+000260a0 [file 000154a0] mov       r0, r5
+000260a4 [file 000154a4] mov       lr, pc
+000260a8 [file 000154a8] mov       pc, r3
+000260ac [file 000154ac] ldr       r3, [pc, #0x50] ; IAT COREDLL.dll!#2008
+000260b0 [file 000154b0] mov       r4, r0
+000260b4 [file 000154b4] ldr       r3, [r3]
+000260b8 [file 000154b8] mov       r1, r6
+000260bc [file 000154bc] mov       r0, r5
+000260c0 [file 000154c0] mov       lr, pc
+000260c4 [file 000154c4] mov       pc, r3
+000260c8 [file 000154c8] movs      r3, r1
+000260cc [file 000154cc] mul       r3, r4, r5
+000260d0 [file 000154d0] mov       r0, #0
+000260d4 [file 000154d4] movne     r0, #1
+000260d8 [file 000154d8] subs      r3, r6, r3
+000260dc [file 000154dc] add       r0, r0, r4
+000260e0 [file 000154e0] str       r3, [sp, #0xc]
+000260e4 [file 000154e4] streq     r5, [sp, #0xc]
+000260e8 [file 000154e8] mov       fp, #0
+000260ec [file 000154ec] str       r0, [sp, #0x14]
+000260f0 [file 000154f0] mov       sl, #0
+000260f4 [file 000154f4] cmp       r0, #0
+000260f8 [file 000154f8] bls       #0x26458
+000260fc [file 000154fc] ldr       r8, [sp, #8]
+00026100 [file 00015500] b         #0x26140
+00026104 [file 00015504] strdeq    sb, sl, [r8], -ip
+00026108 [file 00015508] andeq     r7, sb, ip, ror r7
+0002610c [file 0001550c] andeq     r7, sb, r0, ror r7
+00026110 [file 00015510] andeq     sb, r8, r4, asr #5
+00026114 [file 00015514] andeq     sb, r8, r8, asr #5
+00026118 [file 00015518] andeq     sb, r8, ip, asr #5
+0002611c [file 0001551c] ldrtmi    r8, [fp], #0
+00026120 [file 00015520] ldrdeq    sb, sl, [r8], -r0
+00026124 [file 00015524] andeq     r7, sb, ip, asr #14
+00026128 [file 00015528] andeq     r7, sb, r8, lsl r7
+0002612c [file 0001552c] strdeq    r7, r8, [sb], -r0
+00026130 [file 00015530] ldr       r0, [sp, #0x14]
+00026134 [file 00015534] mov       ip, #0x1240
+00026138 [file 00015538] orr       ip, ip, #0x20
+0002613c [file 0001553c] ldr       r5, [sp, ip]
+00026140 [file 00015540] sub       r0, r0, #1
+00026144 [file 00015544] cmp       sl, r0
+00026148 [file 00015548] mov       r0, #1
+0002614c [file 0001554c] movne     r0, #0
+00026150 [file 00015550] ands      r3, r0, #0xff
+00026154 [file 00015554] ldrne     r5, [sp, #0xc]
+00026158 [file 00015558] mov       sb, #0
+0002615c [file 0001555c] mov       r6, #0
+00026160 [file 00015560] bl        #0x7c9a8
+00026164 [file 00015564] mov       r7, r0
+00026168 [file 00015568] mov       ip, #0x1240
+0002616c [file 0001556c] orr       ip, ip, #0x14
+00026170 [file 00015570] ldr       r3, [sp, ip]
+00026174 [file 00015574] ldr       r0, [r3]
+00026178 [file 00015578] ldr       r3, [r0]
+0002617c [file 0001557c] ldr       r3, [r3, #0x2c]
+00026180 [file 00015580] mov       lr, pc
+00026184 [file 00015584] mov       pc, r3
+00026188 [file 00015588] movs      r4, r0
+0002618c [file 0001558c] beq       #0x26224
+00026190 [file 00015590] cmp       r6, #0
+00026194 [file 00015594] bne       #0x261a0
+00026198 [file 00015598] bl        #0x7c9a8
+0002619c [file 0001559c] mov       r7, r0
+000261a0 [file 000155a0] mov       ip, #0x1240
+000261a4 [file 000155a4] orr       ip, ip, #0x1c
+000261a8 [file 000155a8] ldr       r3, [sp, ip]
+000261ac [file 000155ac] sub       r0, r3, r8
+000261b0 [file 000155b0] mov       ip, #0x1240
+000261b4 [file 000155b4] orr       ip, ip, #0x14
+000261b8 [file 000155b8] ldr       r3, [sp, ip]
+000261bc [file 000155bc] cmp       r4, r0
+000261c0 [file 000155c0] movhi     r4, r0
+000261c4 [file 000155c4] ldr       r0, [r3]
+000261c8 [file 000155c8] ldr       r3, [r0]
+000261cc [file 000155cc] ldr       r3, [r3, #0x3c]
+000261d0 [file 000155d0] mov       lr, pc
+000261d4 [file 000155d4] mov       pc, r3
+000261d8 [file 000155d8] mov       ip, #0x1240
+000261dc [file 000155dc] orr       ip, ip, #0x18
+000261e0 [file 000155e0] ldr       r1, [sp, ip]
+000261e4 [file 000155e4] mov       r3, #0
+000261e8 [file 000155e8] str       r3, [sp]
+000261ec [file 000155ec] mov       r2, r4
+000261f0 [file 000155f0] add       r3, sp, #8
+000261f4 [file 000155f4] add       r1, r8, r1
+000261f8 [file 000155f8] bl        #0x7cd08
+000261fc [file 000155fc] movs      r3, r0
+00026200 [file 00015600] beq       #0x26254
+00026204 [file 00015604] ldr       r0, [sp, #8]
+00026208 [file 00015608] add       r6, r0, r6
+0002620c [file 0001560c] add       r8, r0, r8
+00026210 [file 00015610] cmp       r6, r5
+00026214 [file 00015614] mov       r0, #1
+00026218 [file 00015618] movne     r0, #0
+0002621c [file 0001561c] and       sb, r0, #0xff
+00026220 [file 00015620] b         #0x26248
+00026224 [file 00015624] bl        #0x7c9a8
+00026228 [file 00015628] cmp       r6, #0
+0002622c [file 0001562c] mov       r1, #0x3e8
+00026230 [file 00015630] ldrne     r1, [sp, #0x10]
+00026234 [file 00015634] sub       r3, r0, r7
+00026238 [file 00015638] cmp       r3, r1
+0002623c [file 0001563c] bhi       #0x2629c
+00026240 [file 00015640] mov       r0, #0xa
+00026244 [file 00015644] bl        #0x7c9cc
+00026248 [file 00015648] ands      r3, sb, #0xff
+0002624c [file 0001564c] beq       #0x26168
+00026250 [file 00015650] b         #0x262ec
+00026254 [file 00015654] ldr       lr, [pc, #-0x5fc]
+00026258 [file 00015658] ldr       r3, [lr]
+0002625c [file 0001565c] cmp       r3, #0
+00026260 [file 00015660] beq       #0x262ec
+00026264 [file 00015664] ldr       r0, [pc, #0x2c] ; 'ReadFile failed'
+00026268 [file 00015668] mov       r2, #0x600
+0002626c [file 0001566c] ldr       r3, [pc, #0x20] ; 'CProtocolLayer::ReadImage'
+00026270 [file 00015670] orr       r2, r2, #0xc
+00026274 [file 00015674] str       r0, [sp]
+00026278 [file 00015678] mov       r0, #1
+0002627c [file 0001567c] ldr       r1, [pc, #0xc] ; 'ProtocolLayer.cpp'
+00026280 [file 00015680] ldr       r7, [lr]
+00026284 [file 00015684] mov       lr, pc
+00026288 [file 00015688] mov       pc, r7
+0002628c [file 0001568c] b         #0x262ec
+00026290 [file 00015690] ldrdeq    r7, r8, [sb], -ip
+00026294 [file 00015694] andeq     r7, sb, r8, lsr #15
+00026298 [file 00015698] andeq     r7, sb, r8, lsl #15
+0002629c [file 0001569c] ldr       r1, [pc, #0xb4] ; 'Packet %d, Bytes read in packet %d, Bytes read total %d'
+000262a0 [file 000156a0] mov       r3, r6
+000262a4 [file 000156a4] mov       r2, sl
+000262a8 [file 000156a8] str       r8, [sp]
+000262ac [file 000156ac] add       r0, sp, #0x24
+000262b0 [file 000156b0] bl        #0x7cb94
+000262b4 [file 000156b4] ldr       lr, [pc, #-0x65c]
+000262b8 [file 000156b8] ldr       r3, [lr]
+000262bc [file 000156bc] cmp       r3, #0
+000262c0 [file 000156c0] beq       #0x262ec
+000262c4 [file 000156c4] add       r3, sp, #0x24
+000262c8 [file 000156c8] ldr       r1, [pc, #0x84] ; 'ProtocolLayer.cpp'
+000262cc [file 000156cc] mov       r2, #0x640
+000262d0 [file 000156d0] str       r3, [sp]
+000262d4 [file 000156d4] ldr       r3, [pc, #0x74] ; 'CProtocolLayer::ReadImage. Timeout while waiting for packet.'
+000262d8 [file 000156d8] orr       r2, r2, #1
+000262dc [file 000156dc] ldr       r7, [lr]
+000262e0 [file 000156e0] mov       r0, #1
+000262e4 [file 000156e4] mov       lr, pc
+000262e8 [file 000156e8] mov       pc, r7
+000262ec [file 000156ec] cmp       r6, #0
+000262f0 [file 000156f0] beq       #0x263f4
+000262f4 [file 000156f4] ldr       lr, [pc, #-0x69c]
+000262f8 [file 000156f8] ands      r3, sb, #0xff
+000262fc [file 000156fc] ldr       r3, [lr]
+00026300 [file 00015700] beq       #0x2635c
+00026304 [file 00015704] ldr       r4, [pc, #-0x200] ; '^<Ack />'
+00026308 [file 00015708] mov       fp, #0
+0002630c [file 0001570c] ldr       r5, [sp, #0x18]
+00026310 [file 00015710] cmp       r3, #0
+00026314 [file 00015714] beq       #0x263a0
+00026318 [file 00015718] ldr       r0, [pc, #0x2c] ; 'Sending Ack response'
+0002631c [file 0001571c] mov       r2, #0x650
+00026320 [file 00015720] ldr       r3, [pc, #0x20] ; 'CProtocolLayer::ReadImage'
+00026324 [file 00015724] orr       r2, r2, #4
+00026328 [file 00015728] str       r0, [sp]
+0002632c [file 0001572c] mov       r0, #3
+00026330 [file 00015730] ldr       r1, [pc, #0xc] ; 'ProtocolLayer.cpp'
+00026334 [file 00015734] ldr       sb, [lr]
+00026338 [file 00015738] mov       lr, pc
+0002633c [file 0001573c] mov       pc, sb
+00026340 [file 00015740] b         #0x263a0
+00026344 [file 00015744] andeq     r7, sb, r0, ror sb
+00026348 [file 00015748] andeq     r7, sb, ip, lsr sb
+0002634c [file 0001574c] andeq     r7, sb, r0, lsl sb
+00026350 [file 00015750] muleq     sb, r4, r8
+00026354 [file 00015754] andeq     r7, sb, r0, ror r8
+00026358 [file 00015758] andeq     r7, sb, r0, lsl #16
+0002635c [file 0001575c] ldr       r4, [pc, #-0x25c] ; '^<Nak />'
+00026360 [file 00015760] add       fp, fp, #1
+00026364 [file 00015764] ldr       r5, [sp, #0x1c]
+00026368 [file 00015768] sub       sl, sl, #1
+0002636c [file 0001576c] sub       r8, r8, r6
+00026370 [file 00015770] cmp       r3, #0
+00026374 [file 00015774] beq       #0x263a0
+00026378 [file 00015778] ldr       r0, [pc, #0x70] ; 'Sending Nak response'
+0002637c [file 0001577c] mov       r2, #0x660
+00026380 [file 00015780] ldr       r3, [pc, #0x64] ; 'CProtocolLayer::ReadImage'
+00026384 [file 00015784] orr       r2, r2, #1
+00026388 [file 00015788] str       r0, [sp]
+0002638c [file 0001578c] mov       r0, #1
+00026390 [file 00015790] ldr       r1, [pc, #0x50] ; 'ProtocolLayer.cpp'
+00026394 [file 00015794] ldr       sb, [lr]
+00026398 [file 00015798] mov       lr, pc
+0002639c [file 0001579c] mov       pc, sb
+000263a0 [file 000157a0] mov       ip, #0x1240
+000263a4 [file 000157a4] orr       ip, ip, #0x14
+000263a8 [file 000157a8] ldr       r3, [sp, ip]
+000263ac [file 000157ac] mov       r6, #0
+000263b0 [file 000157b0] str       r6, [sp, #0x20]
+000263b4 [file 000157b4] ldr       r0, [r3]
+000263b8 [file 000157b8] ldr       r3, [r0]
+000263bc [file 000157bc] ldr       r3, [r3, #0x3c]
+000263c0 [file 000157c0] mov       lr, pc
+000263c4 [file 000157c4] mov       pc, r3
+000263c8 [file 000157c8] add       r3, sp, #0x20
+000263cc [file 000157cc] str       r6, [sp]
+000263d0 [file 000157d0] mov       r2, r5
+000263d4 [file 000157d4] mov       r1, r4
+000263d8 [file 000157d8] bl        #0x7ccfc
+000263dc [file 000157dc] movs      r3, r0
+000263e0 [file 000157e0] beq       #0x26454
+000263e4 [file 000157e4] b         #0x26400
+000263e8 [file 000157e8] strdeq    r7, r8, [sb], -r4
+000263ec [file 000157ec] andeq     r7, sb, r0, asr #19
+000263f0 [file 000157f0] muleq     sb, r4, sb
+000263f4 [file 000157f4] add       fp, fp, #1
+000263f8 [file 000157f8] sub       sl, sl, #1
+000263fc [file 000157fc] mov       r6, #0
+00026400 [file 00015800] cmp       fp, #3
+00026404 [file 00015804] bge       #0x2641c
+00026408 [file 00015808] ldr       r3, [sp, #0x14]
+0002640c [file 0001580c] add       sl, sl, #1
+00026410 [file 00015810] cmp       sl, r3
+00026414 [file 00015814] blo       #0x26130
+00026418 [file 00015818] b         #0x26458
+0002641c [file 0001581c] ldr       lr, [pc, #-0x7c4]
+00026420 [file 00015820] ldr       r3, [lr]
+00026424 [file 00015824] cmp       r3, #0
+00026428 [file 00015828] beq       #0x26454
+0002642c [file 0001582c] ldr       r0, [pc, #0xa4] ; 'Failed to read image. No more attempts'
+00026430 [file 00015830] mov       r2, #0x670
+00026434 [file 00015834] ldr       r3, [pc, #0x98] ; 'CProtocolLayer::ReadImage'
+00026438 [file 00015838] orr       r2, r2, #5
+0002643c [file 0001583c] str       r0, [sp]
+00026440 [file 00015840] mov       r0, #1
+00026444 [file 00015844] ldr       r1, [pc, #0x84] ; 'ProtocolLayer.cpp'
+00026448 [file 00015848] ldr       fp, [lr]
+0002644c [file 0001584c] mov       lr, pc
+00026450 [file 00015850] mov       pc, fp
+00026454 [file 00015854] strb      r6, [sp, #4]
+00026458 [file 00015858] mov       ip, #0x1240
+0002645c [file 0001585c] orr       ip, ip, #0x14
+00026460 [file 00015860] ldr       r2, [sp, ip]
+00026464 [file 00015864] mov       r3, #0
+00026468 [file 00015868] ldr       lr, [pc, #-0x810]
+0002646c [file 0001586c] strb      r3, [r2, #0xc]
+00026470 [file 00015870] ldr       r0, [lr]
+00026474 [file 00015874] cmp       r0, #0
+00026478 [file 00015878] beq       #0x264ac
+0002647c [file 0001587c] ldrb      r3, [sp, #4]
+00026480 [file 00015880] mov       r2, #0x680
+00026484 [file 00015884] ldr       r1, [pc, #0x40] ; 'ProtocolLayer.cpp'
+00026488 [file 00015888] ands      r3, r3, #0xff
+0002648c [file 0001588c] ldr       fp, [lr]
+00026490 [file 00015890] ldrne     r0, [pc, #0x30] ; 'true'
+00026494 [file 00015894] ldreq     r0, [pc, #0x28] ; 'false'
+00026498 [file 00015898] ldr       r3, [pc, #0x20] ; 'CProtocolLayer::ReadImage returned'
+0002649c [file 0001589c] str       r0, [sp]
+000264a0 [file 000158a0] mov       r0, #3
+000264a4 [file 000158a4] mov       lr, pc
+000264a8 [file 000158a8] mov       pc, fp
+000264ac [file 000158ac] ldrb      r0, [sp, #4]
+000264b0 [file 000158b0] mov       ip, #0x1200
+000264b4 [file 000158b4] orr       ip, ip, #0x2c
+000264b8 [file 000158b8] add       sp, sp, ip
+000264bc [file 000158bc] ldm       sp, {r4, r5, r6, r7, r8, sb, sl, fp, sp, pc}
+000264c0 [file 000158c0] strdeq    r7, r8, [sb], -ip
+000264c4 [file 000158c4] strdeq    r7, r8, [sb], -r0
+000264c8 [file 000158c8] andeq     r7, sb, r4, ror #21
+000264cc [file 000158cc] andeq     r7, sb, r0, asr #21
+000264d0 [file 000158d0] muleq     sb, ip, sl
+000264d4 [file 000158d4] andeq     r7, sb, r8, ror #20
+000264d8 [file 000158d8] andeq     r7, sb, r8, lsl sl

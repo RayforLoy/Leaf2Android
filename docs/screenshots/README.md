@@ -20,15 +20,37 @@ The regular and offline-laboratory screenshots show the signed v0.3.0 release bu
 | [英文：离线实验室](laboratory-empty-en.png) | 1080 × 2520 |
 | [中文：离线实验室](laboratory-empty-zh.png) | 1080 × 2520 |
 
-以下五图来自 v0.3.1 debug instrumentation，用合成协议对端验证真实 Compose 控件：ISO 选择、完整配置发送及回读、DP-67 修改槽与中英文状态，以及手动实验请求。它们不是真实蓝牙后背截图，也不证明硬件控制已成功。
+以下五图来自 v0.3.2 debug instrumentation，用合成协议对端验证真实 Compose 控件：ISO 选择、完整配置发送及回读、DP-67 修改槽与中英文状态，以及手动实验请求。它们不是真实蓝牙后背截图，也不证明硬件控制已成功。
 
-The following v0.3.1 debug instrumentation captures use a synthetic wire peer to exercise the actual Compose controls. They do not show a physical Bluetooth back or establish hardware-control support.
+The following v0.3.2 debug instrumentation captures use a synthetic wire peer to exercise the actual Compose controls. They do not show a physical Bluetooth back or establish hardware-control support.
 
 - [Back controls, English](back-controls-en.png)
 - [后背控制，中文](back-controls-zh.png)
 - [Laboratory with a synthetic reply](laboratory-en.png)
 - [DP-67 compatibility, English](valeo-dp67-en.png)
 - [DP-67 兼容与修改槽，中文](valeo-dp67-zh.png)
+
+v0.3.2 新增照片操作与灰平衡点选检查图同样来自合成对端；灰图是测试 JPEG，返回 Light 是夹具值，不是真实取色或白平衡效果。横竖向取样请求的坐标另由测试断言核对。
+
+New v0.3.2 photo actions and gray-point captures also use synthetic peers. The gray JPEG and returned Light are fixtures, not measured color results; tests separately assert landscape/portrait request coordinates.
+
+- [Photo actions, English](photo-actions-en.png)
+- [照片操作，中文](photo-actions-zh.png)
+- [Delete confirmation with actual fixture path](photo-delete-confirm-en.png)
+- [Landscape sample preview](gray-point-landscape-en.png)
+- [Portrait CW sample preview](gray-point-portrait-cw-en.png)
+- [Portrait CCW sample preview](gray-point-portrait-ccw-en.png)
+- [当前照片灰平衡写入确认](gray-current-confirm-zh.png)
+
+以下三图来自本版实际发布的签名、压缩 v0.3.2 APK，使用离线演示；另验证 0.3.1 → 0.3.2 覆盖安装保留 64 MiB 缓存、DP-67 选择和 PDA 风格，新安装仍默认 1024 MiB。它们不连接真实后背。
+
+These signed, minified v0.3.2 release captures use the offline demo. The separate 0.3.1→0.3.2 upgrade check preserves a selected 64 MiB cache, DP-67 choice and PDA style, then checks the fresh 1024 MiB default. No physical back is connected.
+
+- [签名本版：现代中文窄屏](v032-release-modern-zh.png)
+- [签名本版：PDA 中文窄屏](v032-release-pda-zh.png)
+- [Signed current release: English landscape](v032-release-landscape-en.png)
+
+重现：`python tools/check-current-release-ui.py`。脚本只允许项目 AVD，会重置其中的测试应用；报告：[release-ui-verification.json](../../research/reports/release-ui-verification.json)。
 
 本轮另用同一签名从 0.3.0 覆盖升级到 0.3.1，检查旧 256 MiB → 1024 MiB、已有 64 MiB 保留、后来改回 256 MiB 后重启保留、新安装默认 1024 MiB，以及兼容模式跨重启／语言切换保留。以下是签名 v0.3.1 release 的设置截图；检查只作用于本项目 AVD，不连接真实后背。
 
@@ -40,4 +62,4 @@ The signed v0.3.1 release captures below accompany same-signature 0.3.0→0.3.1 
 
 升级检查可通过 `tools/check-cache-upgrade-ui.py` 重现；它要求 `dist/` 中有两个版本的签名 APK，并且只会在 `Leaf2Android_API36` 清除测试应用的数据。结果见 [cache-upgrade-verification.json](../../research/reports/cache-upgrade-verification.json)。
 
-`tools/capture-emulator-ui.py` 可重现，脚本仅允许本项目 AVD `Leaf2Android_API36`，会清除该模拟器中的测试应用数据。各图旁的 XML 是同一页面的 UI 结构记录。自动化状态保持、离线状态和合成 JPEG 接收测试见 `app/src/androidTest/`。
+`tools/capture-emulator-ui.py` 可重现常规截图，脚本仅允许本项目 AVD `Leaf2Android_API36`，会清除该模拟器中的测试应用数据。带 XML 的截图配有同一页面的 UI 结构记录；本版 debug 截图由相应 instrumentation 测试生成 PNG。自动化状态保持、离线状态和合成 JPEG 接收测试见 `app/src/androidTest/`。

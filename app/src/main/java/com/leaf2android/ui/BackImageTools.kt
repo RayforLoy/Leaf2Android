@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.leaf2android.R
 import com.leaf2android.data.*
@@ -24,18 +25,37 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 @Composable
-internal fun BackImageToolsDialog(photo: LeafPhoto, state: SessionState, repo: LeafRepository, close: () -> Unit) {
+internal fun BackImageToolsDialog(
+    photo: LeafPhoto,
+    state: SessionState,
+    repo: LeafRepository,
+    pickGrayPoint: (() -> Unit)? = null,
+    initialGrayPoint: ImagePoint? = null,
+    initialGrayFraction: ImageFraction? = null,
+    close: () -> Unit,
+) {
+    val seedPoint = remember(photo.path, initialGrayPoint) {
+        initialGrayPoint ?: state.backPreview?.takeIf {
+            it.photo.path == photo.path && it.photo.deviceAddress == state.deviceAddress &&
+                it.photo.connectionGeneration == state.connectionGeneration
+        }?.sampledPoint
+    }
     var zoomName by rememberSaveable(photo.path) { mutableStateOf(ImageZoom.FIT.name) }
     var alarmName by rememberSaveable(photo.path) { mutableStateOf("off") }
-    var x by rememberSaveable(photo.path) { mutableStateOf("") }
-    var y by rememberSaveable(photo.path) { mutableStateOf("") }
-    var graySample by rememberSaveable(photo.path) { mutableStateOf(false) }
+    var x by rememberSaveable(photo.path, initialGrayPoint) { mutableStateOf(seedPoint?.x?.toString().orEmpty()) }
+    var y by rememberSaveable(photo.path, initialGrayPoint) { mutableStateOf(seedPoint?.y?.toString().orEmpty()) }
+    var graySample by rememberSaveable(photo.path, initialGrayPoint) { mutableStateOf(seedPoint != null) }
     var confirmGray by rememberSaveable(photo.path) { mutableStateOf(false) }
     var confirmFutureLight by rememberSaveable(photo.path) { mutableStateOf(false) }
     val point = runCatching { ImagePoint(x.toInt(), y.toInt()) }.getOrNull()
     val zoom = ImageZoom.valueOf(zoomName)
-    val preview = state.backPreview?.takeIf { it.photo.path == photo.path }
-    val enabled = state.connected && !state.controlsBusy
+    val preview = state.backPreview?.takeIf {
+        it.photo.path == photo.path && it.photo.deviceAddress == state.deviceAddress &&
+            it.photo.connectionGeneration == state.connectionGeneration &&
+            (initialGrayPoint == null || it.sampledPoint == initialGrayPoint)
+    }
+    val sample = preview?.takeIf { it.sampledPoint != null && it.sampledPoint == point && it.sampledLight != null }
+    val enabled = isCurrentBackPhoto(photo, state) && !state.controlsBusy && !state.labMode
     val zoomLabels = ImageZoom.entries.associateWith { if (it == ImageZoom.FIT) tr(R.string.back_overview) else it.factor.toString() }
     val alarmLabels = mapOf("off" to tr(R.string.preview_alarm_off), ExposureEdge.WHITE.name to tr(R.string.preview_alarm_white), ExposureEdge.DARK.name to tr(R.string.preview_alarm_dark), ExposureEdge.BOTH.name to tr(R.string.preview_alarm_both))
     var bitmap by remember(preview?.photo?.sha256) { mutableStateOf<Bitmap?>(null) }
@@ -52,6 +72,11 @@ internal fun BackImageToolsDialog(photo: LeafPhoto, state: SessionState, repo: L
         Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Text(photo.path, style = MaterialTheme.typography.bodySmall)
             Text(tr(R.string.back_preview_separate), style = MaterialTheme.typography.bodySmall)
+            if (pickGrayPoint != null) {
+                OutlinedButton(onClick = pickGrayPoint, enabled = enabled, modifier = Modifier.fillMaxWidth().testTag("start-gray-pick")) { Text(tr(R.string.pick_gray_point)) }
+                Text(tr(R.string.gray_pick_mode_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            OutlinedButton(onClick = { repo.requestMetadata(photo.path) }, enabled = enabled, modifier = Modifier.testTag("read-gray-pick-metadata")) { Text(tr(R.string.gray_pick_read_metadata)) }
             ControlChoice(tr(R.string.back_zoom_level), zoomLabels.getValue(zoom), zoomLabels.values.toList(), enabled, "back-preview-zoom") { label -> zoomName = zoomLabels.entries.first { it.value == label }.key.name }
             ControlChoice(tr(R.string.back_preview_alarm), alarmLabels.getValue(alarmName), alarmLabels.values.toList(), enabled, "back-preview-alarm") { label -> alarmName = alarmLabels.entries.first { it.value == label }.key }
             Text(tr(R.string.back_image_coordinates_hint), style = MaterialTheme.typography.bodySmall)
@@ -67,14 +92,22 @@ internal fun BackImageToolsDialog(photo: LeafPhoto, state: SessionState, repo: L
                 if (alarmName == "off") null else ExposureEdge.valueOf(alarmName), if (graySample) point else null) },
                 enabled = enabled && (zoom == ImageZoom.FIT || point != null) && (!graySample || point != null)) { Text(tr(R.string.read_processed_preview)) }
             if (state.controlsBusy) LinearProgressIndicator(Modifier.fillMaxWidth())
-            bitmap?.let { Image(it.asImageBitmap(), tr(R.string.back_processed_preview), Modifier.fillMaxWidth().height(220.dp), contentScale = ContentScale.Fit) }
+            bitmap?.let { image ->
+                Box(Modifier.fillMaxWidth().height(220.dp).testTag("back-processed-image")) {
+                    Image(image.asImageBitmap(), tr(R.string.back_processed_preview), Modifier.fillMaxSize(), contentScale = ContentScale.Fit)
+                    if (initialGrayFraction != null && initialGrayPoint == point && sample != null && zoom == ImageZoom.FIT) {
+                        GrayPointMarker(initialGrayFraction, image.width, image.height, Modifier.fillMaxSize())
+                    }
+                }
+            }
             preview?.let {
                 Text(tr(R.string.back_processed_dimensions, it.photo.width, it.photo.height), style = MaterialTheme.typography.bodySmall)
-                if (it.sampledLight != null) {
-                    Text(tr(R.string.sampled_light_value, it.sampledLight), style = MaterialTheme.typography.bodySmall)
-                    OutlinedButton(onClick = { confirmGray = true }, enabled = enabled) { Text(tr(R.string.apply_photo_gray_balance)) }
-                    OutlinedButton(onClick = { confirmFutureLight = true }, enabled = enabled) { Text(tr(R.string.apply_gray_balance_to_future)) }
-                }
+            }
+            sample?.let {
+                Text(tr(R.string.gray_pick_point, it.sampledPoint!!.x, it.sampledPoint.y), style = MaterialTheme.typography.bodySmall)
+                Text(tr(R.string.sampled_light_value, it.sampledLight!!), style = MaterialTheme.typography.bodySmall)
+                OutlinedButton(onClick = { confirmGray = true }, enabled = enabled, modifier = Modifier.testTag("apply-gray-current")) { Text(tr(R.string.apply_photo_gray_balance)) }
+                OutlinedButton(onClick = { confirmFutureLight = true }, enabled = enabled, modifier = Modifier.testTag("apply-gray-future")) { Text(tr(R.string.apply_gray_balance_to_future)) }
             }
             OutlinedButton(onClick = { repo.restoreGrayBalance(photo.path) }, enabled = enabled) { Text(tr(R.string.restore_gray_balance_preview)) }
             HorizontalDivider()
@@ -89,11 +122,11 @@ internal fun BackImageToolsDialog(photo: LeafPhoto, state: SessionState, repo: L
             Text(tr(R.string.back_analysis_source), style = MaterialTheme.typography.bodySmall)
         }
     }, confirmButton = { TextButton(onClick = close) { Text(tr(R.string.close_6c14b)) } })
-    if (confirmGray && preview?.sampledLight != null) AlertDialog(onDismissRequest = { confirmGray = false }, title = { Text(tr(R.string.apply_photo_gray_balance)) }, text = { Text(tr(R.string.gray_balance_apply_effect)) },
-        confirmButton = { TextButton(onClick = { repo.commitGrayBalance(photo.path, preview.sampledLight); confirmGray = false }, enabled = enabled) { Text(tr(R.string.confirm_back_action)) } },
+    if (confirmGray && sample?.sampledLight != null) AlertDialog(onDismissRequest = { confirmGray = false }, title = { Text(tr(R.string.apply_photo_gray_balance)) }, text = { Text(tr(R.string.gray_balance_apply_effect)) },
+        confirmButton = { TextButton(onClick = { repo.commitGrayBalance(photo.path, sample.sampledLight); confirmGray = false }, enabled = enabled, modifier = Modifier.testTag("confirm-gray-current")) { Text(tr(R.string.confirm_back_action)) } },
         dismissButton = { TextButton(onClick = { confirmGray = false }) { Text(tr(R.string.cancel_4d0b4)) } })
-    if (confirmFutureLight && preview?.sampledLight != null) AlertDialog(onDismissRequest = { confirmFutureLight = false }, title = { Text(tr(R.string.apply_gray_balance_to_future)) }, text = { Text(tr(R.string.gray_balance_future_effect)) },
-        confirmButton = { TextButton(onClick = { repo.applySampledLightToFuture(preview.sampledLight); confirmFutureLight = false }, enabled = enabled) { Text(tr(R.string.apply_and_read_back)) } },
+    if (confirmFutureLight && sample?.sampledLight != null) AlertDialog(onDismissRequest = { confirmFutureLight = false }, title = { Text(tr(R.string.apply_gray_balance_to_future)) }, text = { Text(tr(R.string.gray_balance_future_effect)) },
+        confirmButton = { TextButton(onClick = { repo.applySampledLightToFuture(sample.sampledLight); confirmFutureLight = false }, enabled = enabled, modifier = Modifier.testTag("confirm-gray-future")) { Text(tr(R.string.apply_and_read_back)) } },
         dismissButton = { TextButton(onClick = { confirmFutureLight = false }) { Text(tr(R.string.cancel_4d0b4)) } })
 }
 

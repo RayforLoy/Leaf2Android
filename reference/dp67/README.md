@@ -14,11 +14,13 @@
 | `analysis/binary-analysis.json` | 成员大小、哈希、PE 属性、导入导出及 SDK 节比较所需数据 |
 | `analysis/connection-and-setting-evidence.json` | 设置写入、修改槽、Prefix、Framing、Ack 和连接证据及边界 |
 | `analysis/disassembly/` | 15 个限定函数的 ARM 反汇编，含 VA 和文件偏移 |
+| `analysis/capture-notifications/` | 两版 WiView／DP-67 拍后通知与灰平衡选点，以及 4.701／5.041 通用 Error 分发路径的新增静态证据 |
 | `provenance.json` | ZIP、安装器、CAB 的来源、哈希与排除项 |
 | `inventory.json` | 本目录除自身与 Python 缓存外的逐文件大小和 SHA-256 |
 | `analyze_dp67.py` | 静态提取、分析和只读复核脚本 |
+| `analyze_capture.py` | 从 5 个已归档原件生成拍后通知与选点证据，由主脚本一并复核 |
 
-完整结论见 [DP-67 分析记录](../../docs/dp67-analysis.md)。发现的 12 核心字段、可选 Prefix 和 `.1` 修改槽差异支持开展 Valeo 兼容实验；尚未通过真实后背写设置或蓝牙抓包证明这些差异就是断连原因。
+设置写入结论见 [DP-67 分析记录](../../docs/dp67-analysis.md)。发现的 12 核心字段、可选 Prefix 和 `.1` 修改槽差异支持开展 Valeo 兼容实验；该静态分析自身未实测断连原因。2026-11-15 增补 [拍后通知与灰平衡选点](../../docs/capture-notifications-analysis.md)：原厂 Stop／图像分块的 Ack 路径与普通新片通知不同；通用空 handler 分支能构造 `error_code=0x01`，不能将其直接解释为忙。原始安装器／CAB／客户端字节未变。
 
 在项目根目录安装 `requirements-research.txt` 所列依赖后，Windows 上运行：
 

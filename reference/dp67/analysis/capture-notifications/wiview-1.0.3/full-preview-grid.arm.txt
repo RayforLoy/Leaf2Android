@@ -1,0 +1,33 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x38f10..0x38f40, exclusive
+00038f10 [file 00028310] ldr       r0, [pc, #0xc]
+00038f14 [file 00028314] ldr       r1, [r0]
+00038f18 [file 00028318] ldr       r2, [r1, #0x10c]
+00038f1c [file 0002831c] sub       r0, r2, #1
+00038f20 [file 00028320] mov       pc, lr
+00038f24 [file 00028324] andseq    lr, r4, r0, lsl #16
+00038f28 [file 00028328] ldr       r0, [pc, #0xc]
+00038f2c [file 0002832c] ldr       r1, [r0]
+00038f30 [file 00028330] ldr       r2, [r1, #0x110]
+00038f34 [file 00028334] sub       r0, r2, #1
+00038f38 [file 00028338] mov       pc, lr
+00038f3c [file 0002833c] andseq    lr, r4, r0, lsl #16
+# VA 0x78a70..0x78ab8, exclusive
+00078a70 [file 00067e70] ldr       r4, [fp, #-0x34]
+00078a74 [file 00067e74] mov       lr, #4
+00078a78 [file 00067e78] mov       r0, r4
+00078a7c [file 00067e7c] str       lr, [r4, #0xbbc]
+00078a80 [file 00067e80] bl        #0x7b258
+00078a84 [file 00067e84] mov       r0, #0
+00078a88 [file 00067e88] str       r0, [r4, #0xbac]
+00078a8c [file 00067e8c] str       r0, [r4, #0xbb0]
+00078a90 [file 00067e90] bl        #0x38f10
+00078a94 [file 00067e94] add       r1, r0, #1
+00078a98 [file 00067e98] str       r1, [r4, #0xbb4]
+00078a9c [file 00067e9c] bl        #0x38f28
+00078aa0 [file 00067ea0] add       r1, r0, #1
+00078aa4 [file 00067ea4] add       r0, r4, #0xb00
+00078aa8 [file 00067ea8] str       r1, [r4, #0xbb8]
+00078aac [file 00067eac] add       r1, r0, #0xac
+00078ab0 [file 00067eb0] add       r0, r4, #0x2f8
+00078ab4 [file 00067eb4] bl        #0x55c24

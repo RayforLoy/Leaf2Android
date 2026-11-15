@@ -1,0 +1,199 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x755b4..0x758c8, exclusive
+000755b4 [file 000649b4] mov       ip, sp
+000755b8 [file 000649b8] push      {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
+000755bc [file 000649bc] add       fp, sp, #0x28
+000755c0 [file 000649c0] sub       sp, sp, #0x10
+000755c4 [file 000649c4] mov       r5, r0
+000755c8 [file 000649c8] str       r5, [fp, #-0x34]
+000755cc [file 000649cc] mov       r4, r3
+000755d0 [file 000649d0] ldr       r1, [pc, #0x330] ; 'CShootViewEU::OnImageClick'
+000755d4 [file 000649d4] mvn       r0, #0x2b
+000755d8 [file 000649d8] add       r0, fp, r0
+000755dc [file 000649dc] bl        #0x62844
+000755e0 [file 000649e0] ldr       r0, [pc, #0x31c]
+000755e4 [file 000649e4] ldr       r1, [r0]
+000755e8 [file 000649e8] ldr       r2, [r1, #0x11c]
+000755ec [file 000649ec] cmp       r2, #0
+000755f0 [file 000649f0] beq       #0x75608
+000755f4 [file 000649f4] ldr       r0, [r5, #0x58]
+000755f8 [file 000649f8] mov       r2, #1
+000755fc [file 000649fc] mov       r1, #8
+00075600 [file 00064a00] bl        #0x8ed58
+00075604 [file 00064a04] b         #0x7586c
+00075608 [file 00064a08] lsl       r0, r4, #0x10
+0007560c [file 00064a0c] ldr       r5, [fp, #-0x34]
+00075610 [file 00064a10] lsr       r1, r0, #0x10
+00075614 [file 00064a14] lsl       r2, r1, #0x10
+00075618 [file 00064a18] lsr       sb, r2, #0x10
+0007561c [file 00064a1c] add       r0, r5, #0x1700
+00075620 [file 00064a20] str       sb, [fp, #-0x30]
+00075624 [file 00064a24] mov       r2, #0x1700
+00075628 [file 00064a28] ldr       r1, [r0, #0x20]
+0007562c [file 00064a2c] orr       r2, r2, #0x24
+00075630 [file 00064a30] lsr       sl, r4, #0x10
+00075634 [file 00064a34] str       r1, [r5, r2]
+00075638 [file 00064a38] cmp       r1, #3
+0007563c [file 00064a3c] beq       #0x75880
+00075640 [file 00064a40] cmp       r1, #4
+00075644 [file 00064a44] beq       #0x75880
+00075648 [file 00064a48] add       r2, r5, #0xb50
+0007564c [file 00064a4c] ldr       r1, [r2, #8]
+00075650 [file 00064a50] ldr       r0, [r2]
+00075654 [file 00064a54] sub       r6, r1, r0
+00075658 [file 00064a58] ldr       r0, [r2, #4]
+0007565c [file 00064a5c] ldr       r1, [r2, #0xc]
+00075660 [file 00064a60] sub       r8, r1, r0
+00075664 [file 00064a64] add       r0, r5, #0x2a0
+00075668 [file 00064a68] bl        #0x537bc
+0007566c [file 00064a6c] mov       r3, r0
+00075670 [file 00064a70] ldr       r1, [r3, #0xc]
+00075674 [file 00064a74] ldr       r4, [r3, #4]
+00075678 [file 00064a78] ldr       r2, [r3]
+0007567c [file 00064a7c] ldr       r0, [r3, #8]
+00075680 [file 00064a80] sub       r7, r1, r4
+00075684 [file 00064a84] ldr       r1, [pc, #0x274] ; IAT COREDLL.dll!#2033
+00075688 [file 00064a88] sub       r5, r0, r2
+0007568c [file 00064a8c] mul       r0, r6, sb
+00075690 [file 00064a90] ldr       r2, [r1]
+00075694 [file 00064a94] mov       lr, pc
+00075698 [file 00064a98] mov       pc, r2
+0007569c [file 00064a9c] mov       r6, r1
+000756a0 [file 00064aa0] ldr       r1, [pc, #0x258] ; IAT COREDLL.dll!#2033
+000756a4 [file 00064aa4] mov       r4, r0
+000756a8 [file 00064aa8] ldr       r2, [r1]
+000756ac [file 00064aac] mov       r0, r5
+000756b0 [file 00064ab0] mov       lr, pc
+000756b4 [file 00064ab4] mov       pc, r2
+000756b8 [file 00064ab8] mov       r2, r0
+000756bc [file 00064abc] mov       r0, r4
+000756c0 [file 00064ac0] ldr       r4, [pc, #0x234] ; IAT COREDLL.dll!#2048
+000756c4 [file 00064ac4] mov       r3, r1
+000756c8 [file 00064ac8] ldr       r4, [r4]
+000756cc [file 00064acc] mov       r1, r6
+000756d0 [file 00064ad0] mov       lr, pc
+000756d4 [file 00064ad4] mov       pc, r4
+000756d8 [file 00064ad8] ldr       r3, [pc, #0x218] ; IAT COREDLL.dll!#2046
+000756dc [file 00064adc] ldr       r2, [r3]
+000756e0 [file 00064ae0] mov       lr, pc
+000756e4 [file 00064ae4] mov       pc, r2
+000756e8 [file 00064ae8] ldr       r4, [fp, #-0x34]
+000756ec [file 00064aec] ldr       r1, [pc, #0x20c] ; IAT COREDLL.dll!#2033
+000756f0 [file 00064af0] ldr       r3, [r4, #0xb50]
+000756f4 [file 00064af4] ldr       r2, [r1]
+000756f8 [file 00064af8] add       sb, r0, r3
+000756fc [file 00064afc] ldr       r6, [r4, #0xb54]
+00075700 [file 00064b00] mul       r0, r8, sl
+00075704 [file 00064b04] mov       lr, pc
+00075708 [file 00064b08] mov       pc, r2
+0007570c [file 00064b0c] mov       r5, r1
+00075710 [file 00064b10] ldr       r1, [pc, #0x1e8] ; IAT COREDLL.dll!#2033
+00075714 [file 00064b14] mov       r4, r0
+00075718 [file 00064b18] ldr       r2, [r1]
+0007571c [file 00064b1c] mov       r0, r7
+00075720 [file 00064b20] mov       lr, pc
+00075724 [file 00064b24] mov       pc, r2
+00075728 [file 00064b28] mov       r2, r0
+0007572c [file 00064b2c] mov       r0, r4
+00075730 [file 00064b30] ldr       r4, [pc, #0x1c4] ; IAT COREDLL.dll!#2048
+00075734 [file 00064b34] mov       r3, r1
+00075738 [file 00064b38] ldr       r4, [r4]
+0007573c [file 00064b3c] mov       r1, r5
+00075740 [file 00064b40] mov       lr, pc
+00075744 [file 00064b44] mov       pc, r4
+00075748 [file 00064b48] ldr       r3, [pc, #0x1a8] ; IAT COREDLL.dll!#2046
+0007574c [file 00064b4c] ldr       r2, [r3]
+00075750 [file 00064b50] mov       lr, pc
+00075754 [file 00064b54] mov       pc, r2
+00075758 [file 00064b58] ldr       r5, [pc, #0x194]
+0007575c [file 00064b5c] add       r6, r0, r6
+00075760 [file 00064b60] ldr       r0, [r5]
+00075764 [file 00064b64] add       r0, r0, #0xc
+00075768 [file 00064b68] bl        #0x9a2d0
+0007576c [file 00064b6c] ldr       r4, [r5]
+00075770 [file 00064b70] mov       r3, #0x9e0
+00075774 [file 00064b74] ldr       r2, [pc, #0x174] ; 'ShootViewEU.cpp'
+00075778 [file 00064b78] mov       r0, r4
+0007577c [file 00064b7c] ldr       r4, [r4]
+00075780 [file 00064b80] orr       r3, r3, #6
+00075784 [file 00064b84] ldr       r4, [r4, #0x10]
+00075788 [file 00064b88] mov       r1, #0
+0007578c [file 00064b8c] mov       lr, pc
+00075790 [file 00064b90] mov       pc, r4
+00075794 [file 00064b94] ldr       r7, [fp, #-0x34]
+00075798 [file 00064b98] ldr       r0, [pc, #0x14c]
+0007579c [file 00064b9c] add       r3, r7, #0x1700
+000757a0 [file 00064ba0] ldr       r2, [pc, #0x140] ; 'Current mode is %s'
+000757a4 [file 00064ba4] ldr       r1, [r3, #0x20]
+000757a8 [file 00064ba8] ldr       r3, [r0, r1, lsl #2]
+000757ac [file 00064bac] ldr       r1, [pc, #0x130] ; 'OnImageClick'
+000757b0 [file 00064bb0] ldr       r4, [r5]
+000757b4 [file 00064bb4] mov       r0, r4
+000757b8 [file 00064bb8] ldr       r4, [r4]
+000757bc [file 00064bbc] ldr       r4, [r4, #4]
+000757c0 [file 00064bc0] mov       lr, pc
+000757c4 [file 00064bc4] mov       pc, r4
+000757c8 [file 00064bc8] ldr       r3, [r5]
+000757cc [file 00064bcc] add       r0, r3, #0xc
+000757d0 [file 00064bd0] bl        #0x9a2c4
+000757d4 [file 00064bd4] add       r3, r7, #0x1700
+000757d8 [file 00064bd8] ldr       r0, [r3, #0x20]
+000757dc [file 00064bdc] sub       r1, r0, #1
+000757e0 [file 00064be0] cmp       r1, #5
+000757e4 [file 00064be4] bhi       #0x7586c
+000757e8 [file 00064be8] add       r0, pc, #4
+000757ec [file 00064bec] ldrb      r0, [r0, r1]
+000757f0 [file 00064bf0] add       pc, pc, r0
+000757f4 [file 00064bf4] ldrbteq   r1, [r4], #-0x804
+000757f8 [file 00064bf8] rsbvs     r6, r0, ip, lsr r0
+000757fc [file 00064bfc] mov       r2, r6
+00075800 [file 00064c00] mov       r1, sb
+00075804 [file 00064c04] mov       r0, r7
+00075808 [file 00064c08] bl        #0x7539c
+0007580c [file 00064c0c] b         #0x7586c
+00075810 [file 00064c10] ldr       r1, [fp, #-0x30]
+00075814 [file 00064c14] mov       r2, r6
+00075818 [file 00064c18] ldr       r5, [fp, #-0x34]
+0007581c [file 00064c1c] mov       r3, r1
+00075820 [file 00064c20] str       sl, [sp]
+00075824 [file 00064c24] mov       r1, sb
+00075828 [file 00064c28] mov       r0, r5
+0007582c [file 00064c2c] bl        #0x767b8
+00075830 [file 00064c30] b         #0x7586c
+00075834 [file 00064c34] ldr       r1, [fp, #-0x30]
+00075838 [file 00064c38] mov       r2, r6
+0007583c [file 00064c3c] ldr       r5, [fp, #-0x34]
+00075840 [file 00064c40] mov       r3, r1
+00075844 [file 00064c44] str       sl, [sp]
+00075848 [file 00064c48] mov       r1, sb
+0007584c [file 00064c4c] mov       r0, r5
+00075850 [file 00064c50] bl        #0x793d4
+00075854 [file 00064c54] b         #0x7586c
+00075858 [file 00064c58] ldr       r5, [fp, #-0x34]
+0007585c [file 00064c5c] mov       r2, sl
+00075860 [file 00064c60] ldr       r1, [fp, #-0x30]
+00075864 [file 00064c64] mov       r0, r5
+00075868 [file 00064c68] bl        #0x7935c
+0007586c [file 00064c6c] mvn       r0, #0x2b
+00075870 [file 00064c70] add       r0, fp, r0
+00075874 [file 00064c74] bl        #0x628d8
+00075878 [file 00064c78] mov       r0, #1
+0007587c [file 00064c7c] b         #0x758c4
+00075880 [file 00064c80] add       r0, r5, #0x1800
+00075884 [file 00064c84] ldr       r1, [r0, #0x84]
+00075888 [file 00064c88] add       r2, r5, #0x1880
+0007588c [file 00064c8c] add       r0, r1, r5
+00075890 [file 00064c90] ldr       r1, [r2]
+00075894 [file 00064c94] mov       lr, pc
+00075898 [file 00064c98] mov       pc, r1
+0007589c [file 00064c9c] mov       r0, r5
+000758a0 [file 00064ca0] bl        #0x789f0
+000758a4 [file 00064ca4] ldr       r0, [r5, #4]
+000758a8 [file 00064ca8] mov       r2, #1
+000758ac [file 00064cac] mov       r1, #0
+000758b0 [file 00064cb0] bl        #0x9a258
+000758b4 [file 00064cb4] mvn       r0, #0x2b
+000758b8 [file 00064cb8] add       r0, fp, r0
+000758bc [file 00064cbc] bl        #0x628d8
+000758c0 [file 00064cc0] mov       r0, #1
+000758c4 [file 00064cc4] ldmdb     fp, {r4, r5, r6, r7, r8, sb, sl, fp, sp, pc}

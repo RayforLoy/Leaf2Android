@@ -11,6 +11,7 @@ import com.leaf2android.protocol.DirectCameraSettings
 import com.leaf2android.protocol.BackPixelProbe
 import com.leaf2android.protocol.BackHistograms
 import com.leaf2android.protocol.ShootSetupDialect
+import com.leaf2android.protocol.ImagePoint
 
 enum class UiStyle { MODERN, PDA }
 enum class ShootingCompatibility {
@@ -82,6 +83,8 @@ data class LeafPhoto(
     val source: PhotoSource = PhotoSource.CAMERA,
     val deviceAddress: String? = null,
     val connectionGeneration: Int? = null,
+    /** Set only by a metadata read associated with this exact live preview; never persisted. */
+    val metadataPreviewSha256: String? = null,
 ) {
     val name: String get() = path.substringAfterLast('/')
     val isDemo: Boolean get() = source == PhotoSource.OFFLINE_DEMO
@@ -89,7 +92,7 @@ data class LeafPhoto(
 }
 
 data class Viewport(val zoom: Float = 1f, val x: Float = 0f, val y: Float = 0f)
-data class ProcessedBackPreview(val photo: LeafPhoto, val sampledLight: String? = null)
+data class ProcessedBackPreview(val photo: LeafPhoto, val sampledLight: String? = null, val sampledPoint: ImagePoint? = null)
 data class SessionState(
     val phase: SessionPhase = SessionPhase.DISCONNECTED,
     val deviceName: String = BACK_FAMILY,

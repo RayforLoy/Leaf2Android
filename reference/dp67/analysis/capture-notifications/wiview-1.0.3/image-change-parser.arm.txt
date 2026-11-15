@@ -1,0 +1,46 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x29a94..0x29b44, exclusive
+00029a94 [file 00018e94] mov       ip, sp
+00029a98 [file 00018e98] push      {r4, r5, r6, r7, fp, ip, lr}
+00029a9c [file 00018e9c] add       fp, sp, #0x1c
+00029aa0 [file 00018ea0] sub       sp, sp, #4
+00029aa4 [file 00018ea4] mov       r6, r1
+00029aa8 [file 00018ea8] ldr       r4, [pc, #0x90] ; 'file_name'
+00029aac [file 00018eac] mov       r7, #0
+00029ab0 [file 00018eb0] mov       r5, r7
+00029ab4 [file 00018eb4] ldr       r0, [r6, #4]
+00029ab8 [file 00018eb8] cmp       r5, r0
+00029abc [file 00018ebc] bge       #0x29b28
+00029ac0 [file 00018ec0] ldr       r0, [r6]
+00029ac4 [file 00018ec4] ldr       r0, [r0, r5, lsl #2]
+00029ac8 [file 00018ec8] bl        #0x97ea0
+00029acc [file 00018ecc] mov       r1, r4
+00029ad0 [file 00018ed0] bl        #0x9c97c
+00029ad4 [file 00018ed4] cmp       r0, #0
+00029ad8 [file 00018ed8] addne     r5, r5, #1
+00029adc [file 00018edc] bne       #0x29ab4
+00029ae0 [file 00018ee0] ldr       r0, [r6]
+00029ae4 [file 00018ee4] ldr       r0, [r0, r5, lsl #2]
+00029ae8 [file 00018ee8] bl        #0x97ea8
+00029aec [file 00018eec] movs      r4, r0
+00029af0 [file 00018ef0] beq       #0x29b28
+00029af4 [file 00018ef4] mov       r0, #8
+00029af8 [file 00018ef8] bl        #0x9c8b0
+00029afc [file 00018efc] cmp       r0, #0
+00029b00 [file 00018f00] str       r0, [fp, #-0x20]
+00029b04 [file 00018f04] beq       #0x29b14
+00029b08 [file 00018f08] mov       r1, r4
+00029b0c [file 00018f0c] bl        #0x18654
+00029b10 [file 00018f10] mov       r7, r0
+00029b14 [file 00018f14] ldr       r0, [pc, #0x20]
+00029b18 [file 00018f18] mov       r1, r7
+00029b1c [file 00018f1c] ldr       r2, [r0]
+00029b20 [file 00018f20] add       r0, r2, #0x320
+00029b24 [file 00018f24] bl        #0x24924
+00029b28 [file 00018f28] ldmdb     fp, {r4, r5, r6, r7, fp, sp, pc}
+00029b2c [file 00018f2c] str       lr, [sp, #-4]!
+00029b30 [file 00018f30] ldr       r0, [fp, #-0x20]
+00029b34 [file 00018f34] bl        #0x9c7e4
+00029b38 [file 00018f38] ldm       sp!, {pc}
+00029b3c [file 00018f3c] andseq    lr, r4, r0, lsl #16
+00029b40 [file 00018f40] ldrsheq   fp, [r0], -r4

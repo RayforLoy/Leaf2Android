@@ -45,10 +45,11 @@ def main() -> None:
         assert header[:8] == b"\x89PNG\r\n\x1a\n"
         screenshots[name] = list(struct.unpack(">II", header[16:24]))
     report = {
-        "date": "2026-11-14", "app_version": apk["version"],
-        "development_basis": "WiView 1.0.2/1.0.3, supplied DP-67 1.2.1.2 and classic Aptus 4.701/shared 5.041 static evidence. User reports Valeo settings time out while photo reading works. DP-67 compatibility changes await physical verification; Aptus II has no Bluetooth hardware.",
+        "date": "2026-11-15", "app_version": apk["version"],
+        "development_basis": "WiView 1.0.2/1.0.3, supplied DP-67 1.2.1.2 and classic Aptus 4.701/shared 5.041 static evidence. Latest user report describes stable Valeo v0.3.1 connection and ISO/gray-balance shooting settings, with automatic-preview Error 0x01 while manual reading and READY remain available. Version 0.3.2 removes unsubstantiated ordinary notification Ack and adds photo-page tools; new physical effects remain unverified. Aptus II has no Bluetooth hardware.",
         "offline_unit_tests": int(match[1]), "offline_unit_tests_passed": int(match[1]),
         "kotlin_protocol_tests": suites("protocol/build/test-results/test/TEST-*.xml"),
+        "android_app_unit_tests": suites("app/build/test-results/testDebugUnitTest/TEST-*.xml"),
         "android_instrumented_tests": suites("app/build/outputs/androidTest-results/connected/debug/TEST-*.xml"),
         "android_test_device": {"kind": "AOSP x86_64 emulator", "avd": "Leaf2Android_API36", "api": 36, "density_dpi": 420},
         "application_languages": ["en", "zh"], "default_language_selection": "system",
@@ -74,16 +75,34 @@ def main() -> None:
         "user_reported_setting_issue": {"date": "2026-11-14", "model_name_on_screenshot": "Leaf Valeo Wi",
             "photo_reading": "works", "changing_settings": "disconnects", "screenshot_error": "app response timeout closes session",
             "specific_setting": None, "raw_session_log_available": False, "root_cause_confirmed": False, "fix_hardware_verified": False},
+        "user_reported_v031_followup": {"date": "2026-11-15", "model_family": "Valeo", "app_version": "0.3.1",
+            "connection": "very stable", "shooting_settings_reported_working": ["ISO", "gray balance"],
+            "automatic_preview": "Error error_code=0x01; not updated automatically", "manual_latest_preview": "works",
+            "session_remains_ready": True, "firmware": None, "selected_compatibility_mode": None,
+            "phone_environment": None, "raw_session_log_available": False, "new_v032_physically_tested": False},
         "dp67_compatibility": {"implemented": True, "automatic_name_contains": "Valeo", "requires_legacy_shootsetup_in_auto": True,
             "manual_override": ["AUTO", "WIVIEW", "DP67"], "core_fields": 12, "prefix_only_when_provided_in_setup": True,
             "modified_slot": ".1", "factory_preset_preservation_checked": True, "whole_operation_serialization": True,
-            "notifications_ack_bypasses_operation_lock": True, "background_refresh_preserves_result": True,
+            "ordinary_notifications_send_ack": False, "only_stop_ack_bypasses_operation_lock": True,
+            "background_refresh_preserves_result": True,
             "automatic_write_retries": False, "physical_validation": False},
+        "capture_follow_correction": {"ordinary_and_lab_notification_ack_removed": True, "stop_ack": "^<Ack/>",
+            "decimal_and_hex_dword_error_codes": True, "unknown_or_overflow_codes_not_success": True,
+            "new_parameters_ready_gate_or_delay": False, "synthetic_sequence_photos": 20,
+            "synthetic_peer_rejects_unsolicited_ack_with": "Error error_code=0x01",
+            "file_and_decodable_content_association_checked": True, "physical_root_cause_proven": False,
+            "evidence": "docs/capture-notifications-analysis.md"},
+        "photo_tools": {"explicit_gray_pick_mode": True, "tap_preview_light_from_back": True,
+            "mapping_requires_current_orientation_dimensions_preview_sha": True, "mapping_grid_is_not_claimed_raw_sensor_pixels": True,
+            "unknown_or_auto_orientation_blocks_automatic_point_request": True, "every_preview_refresh_invalidates_metadata_and_sample": True,
+            "current_photo_and_future_shooting_commits_separately_confirmed": True,
+            "delete_and_move_require_directory_readback_before_cache_removal": True, "queued_removed_sources_not_reinserted": True,
+            "physical_validation": False},
         "complete_startup_handshake_verified": False,
         "target_back_firmware": None, "target_phone": "Galaxy Z Fold7 / Android 16 / One UI 8.5 (not attached)",
         "mos_full_file_transfer_implemented": False, "continuous_live_view_implemented": False,
         "mechanical_shutter_remote_release": "Hardware unsupported in current setup",
-        "gate": "user_reported_basic_sessions; new_control_effects_and_laboratory_hypotheses_require_device_validation",
+        "gate": "user_reported_basic_sessions_and_selected_v031_valeo_settings; v032_capture_follow_gray_sampling_photo_actions_and_laboratory_effects_require_device_validation",
     }
     english = E.parse(ROOT / "app/src/main/res/values/strings.xml").getroot()
     chinese = E.parse(ROOT / "app/src/main/res/values-zh/strings.xml").getroot()
@@ -91,22 +110,41 @@ def main() -> None:
     zh_values = {node.attrib["name"]: node.text or "" for node in chinese.findall("string")}
     assert en_values.keys() == zh_values.keys()
     report["matching_bilingual_resource_keys"] = len(en_values)
-    report["control_ui_captures"] = {name: {"file": "docs/screenshots/" + name + ".png", "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"}
+    report["control_ui_captures"] = {name: {"file": "docs/screenshots/" + name + ".png", "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"}
                                       for name in ["back-controls-en", "back-controls-zh", "laboratory-en", "valeo-dp67-en", "valeo-dp67-zh"]}
+    report["photo_tool_ui_captures"] = {}
+    for name in ["photo-actions-en", "photo-actions-zh", "photo-delete-confirm-en", "gray-point-landscape-en",
+                 "gray-point-portrait-cw-en", "gray-point-portrait-ccw-en", "gray-current-confirm-zh"]:
+        path = ROOT / "docs/screenshots" / (name + ".png")
+        data = path.read_bytes()
+        assert data[:8] == b"\x89PNG\r\n\x1a\n"
+        report["photo_tool_ui_captures"][name] = {"file": path.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(data).hexdigest(),
+            "pixels": list(struct.unpack(">II", data[16:24])), "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"}
     cache = json.loads((ROOT / "research/reports/cache-upgrade-verification.json").read_text(encoding="utf-8"))
-    assert cache["new_apk_sha256"] == apk["sha256"] and all(cache["checks"].values())
-    report["cache_and_settings_upgrade"] = cache
-    report["current_release_settings_captures"] = {name: {"file": "docs/screenshots/" + name + ".png", "apk_sha256": apk["sha256"]}
+    assert cache["new_apk_sha256"] == "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7" and all(cache["checks"].values())
+    report["historical_cache_and_settings_upgrade_v030_to_v031"] = cache
+    report["historical_v031_release_settings_captures"] = {name: {"file": "docs/screenshots/" + name + ".png", "apk_sha256": cache["new_apk_sha256"]}
         for name in ["settings-cache-en", "settings-compatibility-en", "settings-compatibility-zh"]}
-    for item in list(report["control_ui_captures"].values()) + list(report["current_release_settings_captures"].values()):
+    release_ui = json.loads((ROOT / "research/reports/release-ui-verification.json").read_text(encoding="utf-8"))
+    assert release_ui["new_apk_sha256"] == apk["sha256"] and all(release_ui["checks"].values())
+    for path in release_ui["screenshots"]:
+        assert (ROOT / path).is_file()
+    report["signed_current_release_upgrade_and_ui"] = release_ui
+    for item in list(report["control_ui_captures"].values()) + list(report["historical_v031_release_settings_captures"].values()):
         assert (ROOT / item["file"]).is_file()
     assert (ROOT / "app/src/main/assets/lab-firmware-candidates.json").read_bytes() == (ROOT / "reference/analysis/lab-candidates.json").read_bytes()
-    report["old_workspace_empty"] = not any(Path(r"D:\Leaf4Android").iterdir()) if Path(r"D:\Leaf4Android").exists() else True
-    assert report["old_workspace_empty"]
+    old_workspace = Path(r"D:\Leaf4Android")
+    old_entries = list(old_workspace.iterdir()) if old_workspace.exists() else []
+    report["old_workspace_contains_no_project_files"] = not any(path.name != ".codex-attachments" for path in old_entries)
+    report["automatic_codex_attachments_preserved_and_excluded_from_publication"] = True
+    assert report["old_workspace_contains_no_project_files"]
+    report["total_executed_tests"] = report["offline_unit_tests_passed"] + sum(report[key]["tests"] for key in
+        ["kotlin_protocol_tests", "android_app_unit_tests", "android_instrumented_tests"])
     target = ROOT / "research/reports/verification-status.json"
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"python_passed": report["offline_unit_tests_passed"], "kotlin_passed": report["kotlin_protocol_tests"]["tests"],
-                      "android_passed": report["android_instrumented_tests"]["tests"], "apk_sha256": apk["sha256"]}))
+                      "android_app_unit_passed": report["android_app_unit_tests"]["tests"],
+                      "android_passed": report["android_instrumented_tests"]["tests"], "total_passed": report["total_executed_tests"], "apk_sha256": apk["sha256"]}))
 
 
 if __name__ == "__main__":

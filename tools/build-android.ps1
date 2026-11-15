@@ -36,15 +36,15 @@ Push-Location $projectRoot
 try {
     if ($Release) {
         if ($SkipChecks) { & .\gradlew.bat :app:assembleRelease --console plain }
-        else { & .\gradlew.bat :protocol:test :app:lintRelease :app:assembleRelease --console plain }
+        else { & .\gradlew.bat :protocol:test :app:testDebugUnitTest :app:lintRelease :app:assembleRelease --console plain }
     } else {
         if ($SkipChecks) { & .\gradlew.bat :app:assembleDebug --console plain }
-        else { & .\gradlew.bat :protocol:test :app:lintDebug :app:assembleDebug --console plain }
+        else { & .\gradlew.bat :protocol:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug --console plain }
     }
     if ($LASTEXITCODE -ne 0) { throw 'Android build/checks failed.' }
     $output = Join-Path $projectRoot 'dist'
     New-Item -ItemType Directory -Path $output -Force | Out-Null
-    $artifactName = if ($Release) { 'Leaf2Android-0.3.1.apk' } else { 'Leaf2Android-0.3.1-debug.apk' }
+    $artifactName = if ($Release) { 'Leaf2Android-0.3.2.apk' } else { 'Leaf2Android-0.3.2-debug.apk' }
     $builtApk = if ($Release) { '.\app\build\outputs\apk\release\app-release.apk' } else { '.\app\build\outputs\apk\debug\app-debug.apk' }
     $apk = Join-Path $output $artifactName
     Copy-Item -LiteralPath $builtApk -Destination $apk

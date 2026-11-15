@@ -2,10 +2,12 @@
 
 [English](README.en.md)
 
-最后整理：2026-11-14。这里集中保存原版 Leaf WiView 与 DP-67 安装介质、原厂说明、来源记录、安装包提取结果、用户提供的真实后背固件，以及客户端与固件的静态协议研究。Android 应用源码位于项目根目录的 `app/`、`protocol/`；人工通信夹具位于 `research/fixtures/`。
+最后整理：2026-11-15。这里集中保存原版 Leaf WiView 与 DP-67 安装介质、原厂说明、来源记录、安装包提取结果、用户提供的真实后背固件，以及客户端与固件的静态协议研究。Android 应用源码位于项目根目录的 `app/`、`protocol/`；人工通信夹具位于 `research/fixtures/`。
 
 本轮新增 [DP-67 1.2.1 包分析](../docs/dp67-analysis.md)。[dp67/](dp67/) 只保留用户 ZIP 中的厂商 Setup.exe、内嵌 CAB、静态提取和可重现证据；不保留含 PDA 备份的完整 ZIP，也不发布四份 PBF 备份内容。来源及哈希见 [provenance.json](dp67/provenance.json)，与六个 WiView 原始输入和后背固件各自独立。
 
+
+新增 [拍后通知分析](../docs/capture-notifications-analysis.md)，交叉核对 DP-67、WiView 1.0.2／1.0.3 及经典 4.701／共享 5.041 固件。五个锁定输入和可重现的有界反汇编位于 [capture-notifications](dp67/analysis/capture-notifications/)；固件副本与来源锁仍保持独立。
 ## 目录与资料性质
 
 ```text

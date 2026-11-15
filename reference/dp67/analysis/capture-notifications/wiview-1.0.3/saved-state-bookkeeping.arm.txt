@@ -1,0 +1,24 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x25570..0x255c8, exclusive
+00025570 [file 00014970] push      {r4, r5, r6, lr}
+00025574 [file 00014974] sub       sp, sp, #0x18
+00025578 [file 00014978] mov       r5, r0
+0002557c [file 0001497c] mov       r6, r1
+00025580 [file 00014980] add       r0, sp, #8
+00025584 [file 00014984] bl        #0x9cc64
+00025588 [file 00014988] add       r1, sp, #0
+0002558c [file 0001498c] add       r0, sp, #8
+00025590 [file 00014990] bl        #0x9cc58
+00025594 [file 00014994] ldr       r3, [sp]
+00025598 [file 00014998] ldr       r0, [r5, #0x140]
+0002559c [file 0001499c] ldr       r4, [sp, #4]
+000255a0 [file 000149a0] ldr       r1, [r5, #0x144]
+000255a4 [file 000149a4] subs      r2, r3, r0
+000255a8 [file 000149a8] add       r0, sp, #0
+000255ac [file 000149ac] str       r2, [sp]
+000255b0 [file 000149b0] sbc       r3, r4, r1
+000255b4 [file 000149b4] mov       r1, r6
+000255b8 [file 000149b8] str       r3, [sp, #4]
+000255bc [file 000149bc] bl        #0x9cc70
+000255c0 [file 000149c0] add       sp, sp, #0x18
+000255c4 [file 000149c4] pop       {r4, r5, r6, pc}

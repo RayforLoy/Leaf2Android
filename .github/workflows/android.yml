@@ -47,7 +47,7 @@ jobs:
       - name: Compile, lint and test Android protocol
         shell: pwsh
         run: |
-          .\gradlew.bat :protocol:test :app:lintDebug :app:assembleDebug --console plain
+          .\gradlew.bat :protocol:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug --console plain
           if ($LASTEXITCODE -ne 0) { throw 'Android checks failed' }
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
@@ -59,3 +59,4 @@ jobs:
             app/build/reports/lint-results-debug.*
             protocol/build/reports/tests/test/**
             protocol/build/test-results/test/*.xml
+            app/build/test-results/testDebugUnitTest/*.xml

@@ -3,7 +3,7 @@ package com.leaf2android.protocol
 import java.io.ByteArrayOutputStream
 import java.nio.charset.Charset
 
-class ProtocolException(private val chineseMessage: String, private val englishMessage: String = chineseMessage) : java.io.IOException(englishMessage) {
+open class ProtocolException(private val chineseMessage: String, private val englishMessage: String = chineseMessage) : java.io.IOException(englishMessage) {
     fun messageForLanguage(chinese: Boolean): String = if (chinese) chineseMessage else englishMessage
 }
 

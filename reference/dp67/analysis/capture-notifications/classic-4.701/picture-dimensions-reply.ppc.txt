@@ -1,0 +1,28 @@
+# Static PPC VA ranges. UPD offset = VA - 0x74000 + 0x128.
+# VA 0x86f80..0x86fe8, exclusive
+00086f80 [UPD 000130a8] blr       
+00086f84 [UPD 000130ac] stwu      r1, -0x18(r1)
+00086f88 [UPD 000130b0] mflr      r0
+00086f8c [UPD 000130b4] stw       r31, 0x14(r1)
+00086f90 [UPD 000130b8] stw       r0, 0x1c(r1)
+00086f94 [UPD 000130bc] addi      r31, r3, 0
+00086f98 [UPD 000130c0] li        r3, 0
+00086f9c [UPD 000130c4] stw       r3, 8(r1)
+00086fa0 [UPD 000130c8] stw       r3, 0xc(r1)
+00086fa4 [UPD 000130cc] bl        0x1bbb44
+00086fa8 [UPD 000130d0] cmpwi     r3, 0
+00086fac [UPD 000130d4] beq       0x86fbc
+00086fb0 [UPD 000130d8] addi      r4, r1, 8
+00086fb4 [UPD 000130dc] addi      r5, r1, 0xc
+00086fb8 [UPD 000130e0] bl        0x1c0db4
+00086fbc [UPD 000130e4] lwz       r5, 8(r1)
+00086fc0 [UPD 000130e8] lwz       r6, 0xc(r1)
+00086fc4 [UPD 000130ec] addi      r3, r31, 0x48e
+00086fc8 [UPD 000130f0] lis       r4, 0x3d
+00086fcc [UPD 000130f4] addi      r4, r4, -0x2f20 ; '%d,%d'
+00086fd0 [UPD 000130f8] bl        0x3b9818
+00086fd4 [UPD 000130fc] lwz       r31, 0x14(r1)
+00086fd8 [UPD 00013100] lwz       r0, 0x1c(r1)
+00086fdc [UPD 00013104] mtlr      r0
+00086fe0 [UPD 00013108] addi      r1, r1, 0x18
+00086fe4 [UPD 0001310c] blr       

@@ -1,0 +1,7 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x4809c..0x480a4, exclusive
+0004809c [file 0003749c] ldr       r0, [r0, #0x88]
+000480a0 [file 000374a0] mov       pc, lr
+# VA 0x48b88..0x48b90, exclusive
+00048b88 [file 00037f88] str       r1, [r0, #0x88]
+00048b8c [file 00037f8c] mov       pc, lr

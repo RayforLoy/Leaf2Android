@@ -1,0 +1,3234 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-15",
+  "hardware_tested_by_this_analysis": false,
+  "capstone_version": "5.0.6",
+  "sources": [
+    {
+      "id": "dp67",
+      "path": "reference/dp67/extracted/LEAFDP~2.001",
+      "size": 945152,
+      "sha256": "d0e67119db4a8e49a2cf8ec264143ccdf5da2d67623f835df9ace5fdf9c620b7"
+    },
+    {
+      "id": "wiview-1.0.3",
+      "path": "reference/analysis/wiview-1.0.3/extracted/00LeafCE.001",
+      "size": 2357760,
+      "sha256": "ac6d0699870d7f9a1e00fe8bf507a35cfc38f3d2b6619e5dbae30eb248b87fe9"
+    },
+    {
+      "id": "wiview-1.0.2",
+      "path": "reference/analysis/wiview-1.0.2/extracted/00LeafCE.001",
+      "size": 2319872,
+      "sha256": "2f769acbb0c4aa410e50e1638dfb50f7a9b40d11debd5b04f66170ac4623b50d"
+    },
+    {
+      "id": "classic-4.701",
+      "path": "reference/firmware/originals/CaptureOne.Mac.7.1.6/FirmwareAptus.UPD",
+      "size": 4235648,
+      "sha256": "a2287716927a18c9bbd7834be327f592289f8a48aa2859b4d252b813cc82741a"
+    },
+    {
+      "id": "shared-5.041",
+      "path": "reference/firmware/originals/CaptureOne.Mac.7.1.6/FirmWareAptusII.UPD",
+      "size": 6021144,
+      "sha256": "80304f7b69c370f2cea9804d2098d20a775bc09de30899d608376d559d130bc6"
+    }
+  ],
+  "disassembly": [
+    {
+      "sample": "dp67",
+      "path": "dp67/receive-picture-notification.arm.txt",
+      "ranges": [
+        {
+          "start_va": 150084,
+          "end_va_exclusive": 151848
+        }
+      ],
+      "sha256": "99a78fd3ca8927a1967568f4c9da3b0e916db8de1f5156c5344964855f365fe3",
+      "literal_references": [
+        {
+          "instruction_va": 150128,
+          "literal_va": 615656,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150136,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 150144,
+          "literal_va": 615724,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150264,
+          "literal_va": 615760,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150268,
+          "literal_va": 615796,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150272,
+          "literal_va": 615864,
+          "text": "Error reading packet size or packet size is zero"
+        },
+        {
+          "instruction_va": 150276,
+          "literal_va": 615964,
+          "text": "ATTACHMENT"
+        },
+        {
+          "instruction_va": 150336,
+          "literal_va": 615988,
+          "text": "Size"
+        },
+        {
+          "instruction_va": 150572,
+          "literal_va": 616000,
+          "text": "ReadAndDecompressImage failed"
+        },
+        {
+          "instruction_va": 150580,
+          "literal_va": 616060,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150596,
+          "literal_va": 616128,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150696,
+          "literal_va": 616164,
+          "text": "ReadImage failed"
+        },
+        {
+          "instruction_va": 150704,
+          "literal_va": 616200,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150716,
+          "literal_va": 616268,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150808,
+          "literal_va": 616304,
+          "text": "Asynchronous incoming command came"
+        },
+        {
+          "instruction_va": 150816,
+          "literal_va": 616376,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 150832,
+          "literal_va": 616444,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 150868,
+          "literal_va": 616480,
+          "text": "CProtocolLayer::OnReceiveCommand Unexpected command came: %s, Expected command %s"
+        },
+        {
+          "instruction_va": 150932,
+          "literal_va": 616644,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151056,
+          "literal_va": 616680,
+          "text": "PostMessage failed"
+        },
+        {
+          "instruction_va": 151064,
+          "literal_va": 616720,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151076,
+          "literal_va": 616788,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151168,
+          "literal_va": 616824,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 151256,
+          "literal_va": 616844,
+          "text": "Handling PICTURE_TAKEN command"
+        },
+        {
+          "instruction_va": 151264,
+          "literal_va": 616908,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151280,
+          "literal_va": 616976,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151320,
+          "literal_va": 617012,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 151324,
+          "literal_va": 617020,
+          "text": "busy"
+        },
+        {
+          "instruction_va": 151504,
+          "literal_va": 617032,
+          "text": "PostMessage failed"
+        },
+        {
+          "instruction_va": 151512,
+          "literal_va": 617072,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151528,
+          "literal_va": 617140,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151604,
+          "literal_va": 617176,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151624,
+          "literal_va": 617212,
+          "text": "CProtocolLayer::OnReceiveCommand(). Expected command received: "
+        },
+        {
+          "instruction_va": 151712,
+          "literal_va": 617340,
+          "text": "Expected command came"
+        },
+        {
+          "instruction_va": 151720,
+          "literal_va": 617384,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        },
+        {
+          "instruction_va": 151736,
+          "literal_va": 617452,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 151768,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 151776,
+          "literal_va": 615656,
+          "text": "CProtocolLayer::OnReceiveCommand"
+        }
+      ]
+    },
+    {
+      "sample": "dp67",
+      "path": "dp67/on-picture-taken.arm.txt",
+      "ranges": [
+        {
+          "start_va": 95072,
+          "end_va_exclusive": 97388
+        }
+      ],
+      "sha256": "9fa3bd68b7d41c7d3634cbcff01c7d2863782a05e74ec672ce1a4a1f870883a6",
+      "literal_references": [
+        {
+          "instruction_va": 95104,
+          "literal_va": 577648,
+          "text": "CControlApplication::OnPictureTaken"
+        },
+        {
+          "instruction_va": 95136,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 95144,
+          "literal_va": 577720,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 95232,
+          "literal_va": 577768,
+          "text": "error_code"
+        },
+        {
+          "instruction_va": 95256,
+          "literal_va": 577792,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 95284,
+          "literal_va": 577812,
+          "text": "/"
+        },
+        {
+          "instruction_va": 95316,
+          "literal_va": 577816,
+          "text": "."
+        },
+        {
+          "instruction_va": 95548,
+          "literal_va": 577820,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 95564,
+          "literal_va": 577868,
+          "text": "CControlApplication::OnPictureTaken()"
+        },
+        {
+          "instruction_va": 95984,
+          "literal_va": 577944,
+          "text": "Error in AddToCurrentDirectory()"
+        },
+        {
+          "instruction_va": 95992,
+          "literal_va": 578012,
+          "text": "CControlApplication::OnPictureTaken()"
+        },
+        {
+          "instruction_va": 96004,
+          "literal_va": 578088,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 96320,
+          "literal_va": 522920,
+          "text": "Failed to cache the image "
+        },
+        {
+          "instruction_va": 96328,
+          "literal_va": 578136,
+          "text": "CControlApplication::OnPictureTaken()"
+        },
+        {
+          "instruction_va": 96344,
+          "literal_va": 578212,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 96668,
+          "literal_va": 578260,
+          "text": "CControlApplication::OnPictureTaken() Image downloading was skiped due to burst mode: %s"
+        },
+        {
+          "instruction_va": 96732,
+          "literal_va": 578440,
+          "text": "ControlApplication.cpp"
+        },
+        {
+          "instruction_va": 96820,
+          "literal_va": 578488,
+          "text": "battery_percent"
+        },
+        {
+          "instruction_va": 96880,
+          "literal_va": 578520,
+          "text": "exp_left"
+        },
+        {
+          "instruction_va": 96936,
+          "literal_va": 578540,
+          "text": "Date"
+        },
+        {
+          "instruction_va": 97112,
+          "literal_va": 522448,
+          "text": "Failed to fill current directory "
+        },
+        {
+          "instruction_va": 97120,
+          "literal_va": 578552,
+          "text": "CControlApplication::OnPictureTaken()"
+        },
+        {
+          "instruction_va": 97136,
+          "literal_va": 578628,
+          "text": "ControlApplication.cpp"
+        }
+      ]
+    },
+    {
+      "sample": "dp67",
+      "path": "dp67/file-cache.arm.txt",
+      "ranges": [
+        {
+          "start_va": 200304,
+          "end_va_exclusive": 201036
+        }
+      ],
+      "sha256": "22e8451278a9c72f50f9869d9876e3e32577fce0e9f3aa0eacef91009ad96a21",
+      "literal_references": [
+        {
+          "instruction_va": 200608,
+          "literal_va": 640692,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 200796,
+          "literal_va": 640712,
+          "text": "SaveLastFile failed"
+        },
+        {
+          "instruction_va": 200804,
+          "literal_va": 640752,
+          "text": "CDOSFile::Cache"
+        },
+        {
+          "instruction_va": 200816,
+          "literal_va": 640784,
+          "text": "DOSFile.cpp"
+        },
+        {
+          "instruction_va": 200860,
+          "literal_va": 640808,
+          "text": "CDOSFile::Cache GetImage failed Error: %s"
+        },
+        {
+          "instruction_va": 200908,
+          "literal_va": 640892,
+          "text": "DOSFile.cpp"
+        }
+      ]
+    },
+    {
+      "sample": "dp67",
+      "path": "dp67/get-image.arm.txt",
+      "ranges": [
+        {
+          "start_va": 159488,
+          "end_va_exclusive": 160576
+        }
+      ],
+      "sha256": "9d31d02d9e1f66b6e22ae87ae112d9d211a540af3a462bd2f1acae624b29a2c3",
+      "literal_references": [
+        {
+          "instruction_va": 159516,
+          "literal_va": 622948,
+          "text": "CProtocolLayer::GetImage"
+        },
+        {
+          "instruction_va": 159540,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 159548,
+          "literal_va": 623000,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 159784,
+          "literal_va": 623036,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 159804,
+          "literal_va": 623044,
+          "text": "PacketSize"
+        },
+        {
+          "instruction_va": 159904,
+          "literal_va": 623068,
+          "text": "Can't perform requsted command. PDA is out of sync"
+        },
+        {
+          "instruction_va": 159912,
+          "literal_va": 623172,
+          "text": "CProtocolLayer::GetImage"
+        },
+        {
+          "instruction_va": 159924,
+          "literal_va": 623224,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 159960,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 159968,
+          "literal_va": 622948,
+          "text": "CProtocolLayer::GetImage"
+        },
+        {
+          "instruction_va": 160032,
+          "literal_va": 623260,
+          "text": "GetImage"
+        },
+        {
+          "instruction_va": 160276,
+          "literal_va": 623272,
+          "text": "error"
+        },
+        {
+          "instruction_va": 160448,
+          "literal_va": 623280,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 160452,
+          "literal_va": 623316,
+          "text": "true"
+        },
+        {
+          "instruction_va": 160460,
+          "literal_va": 623328,
+          "text": "false"
+        },
+        {
+          "instruction_va": 160468,
+          "literal_va": 623340,
+          "text": "CProtocolLayer::GetImage() returned:"
+        },
+        {
+          "instruction_va": 160512,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 160520,
+          "literal_va": 622948,
+          "text": "CProtocolLayer::GetImage"
+        }
+      ]
+    },
+    {
+      "sample": "dp67",
+      "path": "dp67/busy-calibration-ui.arm.txt",
+      "ranges": [
+        {
+          "start_va": 216216,
+          "end_va_exclusive": 216540
+        },
+        {
+          "start_va": 217680,
+          "end_va_exclusive": 217876
+        }
+      ],
+      "sha256": "c749fa5f523307255f49d803f0cc0ec01a940f0c758d5a2f7e1567de26c11018",
+      "literal_references": [
+        {
+          "instruction_va": 216240,
+          "literal_va": 647032,
+          "text": "CWindowProcessorImp::OnProcessPictureTaken"
+        },
+        {
+          "instruction_va": 216252,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 216260,
+          "literal_va": 647120,
+          "text": "WindowProcessorImp.cpp"
+        },
+        {
+          "instruction_va": 216320,
+          "literal_va": 647168,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 216324,
+          "literal_va": 647176,
+          "text": "busy"
+        },
+        {
+          "instruction_va": 216464,
+          "literal_va": 647188,
+          "text": "Busy=yes detected"
+        },
+        {
+          "instruction_va": 216472,
+          "literal_va": 647224,
+          "text": "CWindowProcessorImp::OnProcessPictureTaken"
+        },
+        {
+          "instruction_va": 216488,
+          "literal_va": 647312,
+          "text": "WindowProcessorImp.cpp"
+        }
+      ]
+    },
+    {
+      "sample": "dp67",
+      "path": "dp67/packet-ack-nak.arm.txt",
+      "ranges": [
+        {
+          "start_va": 153536,
+          "end_va_exclusive": 156892
+        }
+      ],
+      "sha256": "6a3daf301a658f4c6239840b4f07fe6bc0bead79537f40abdf21d907ea6f35b0",
+      "literal_references": [
+        {
+          "instruction_va": 153556,
+          "literal_va": 619024,
+          "text": "CProtocolLayer::ReadAndDecompressImage"
+        },
+        {
+          "instruction_va": 153584,
+          "literal_va": 584464,
+          "text": "- enter"
+        },
+        {
+          "instruction_va": 153592,
+          "literal_va": 619104,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 153644,
+          "literal_va": 619140,
+          "text": "Packet size is zero"
+        },
+        {
+          "instruction_va": 153652,
+          "literal_va": 619180,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 153664,
+          "literal_va": 619232,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 153692,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 153976,
+          "literal_va": 619268,
+          "text": "^<Nak />"
+        },
+        {
+          "instruction_va": 153996,
+          "literal_va": 619280,
+          "text": "^<Ack />"
+        },
+        {
+          "instruction_va": 154336,
+          "literal_va": 619292,
+          "text": "CProtocolLayer::ReadAndDecompressImage hr = 0x%x"
+        },
+        {
+          "instruction_va": 154388,
+          "literal_va": 619392,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 154448,
+          "literal_va": 584448,
+          "text": "- leave"
+        },
+        {
+          "instruction_va": 154456,
+          "literal_va": 619024,
+          "text": "CProtocolLayer::ReadAndDecompressImage"
+        },
+        {
+          "instruction_va": 154660,
+          "literal_va": 619428,
+          "text": "transport offline"
+        },
+        {
+          "instruction_va": 154668,
+          "literal_va": 619464,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 154684,
+          "literal_va": 619516,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 154752,
+          "literal_va": 619552,
+          "text": "CProtocolLayer::ReadImage Bytes read: %d"
+        },
+        {
+          "instruction_va": 154756,
+          "literal_va": 619636,
+          "text": "CProtocolLayer::ReadImage() dwBytesToRead != dwBytesRead, %d != %d"
+        },
+        {
+          "instruction_va": 154764,
+          "literal_va": 619772,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 154768,
+          "literal_va": 619808,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 154772,
+          "literal_va": 619860,
+          "text": "dwBytesAvailable == 0"
+        },
+        {
+          "instruction_va": 155200,
+          "literal_va": 619904,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 155300,
+          "literal_va": 619940,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 155396,
+          "literal_va": 619976,
+          "text": "connection go offline during image reading"
+        },
+        {
+          "instruction_va": 155420,
+          "literal_va": 620064,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 155424,
+          "literal_va": 620116,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 155472,
+          "literal_va": 620152,
+          "text": "ReadFile failed"
+        },
+        {
+          "instruction_va": 155480,
+          "literal_va": 620184,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 155496,
+          "literal_va": 620236,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 155556,
+          "literal_va": 620272,
+          "text": "Packet size is zero"
+        },
+        {
+          "instruction_va": 155564,
+          "literal_va": 620312,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 155580,
+          "literal_va": 620364,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 155760,
+          "literal_va": 620400,
+          "text": "^<Ack />"
+        },
+        {
+          "instruction_va": 155772,
+          "literal_va": 620412,
+          "text": "^<Nak />"
+        },
+        {
+          "instruction_va": 156260,
+          "literal_va": 620424,
+          "text": "ReadFile failed"
+        },
+        {
+          "instruction_va": 156268,
+          "literal_va": 620456,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 156284,
+          "literal_va": 620508,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 156316,
+          "literal_va": 620544,
+          "text": "Packet %d, Bytes read in packet %d, Bytes read total %d"
+        },
+        {
+          "instruction_va": 156360,
+          "literal_va": 620656,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 156372,
+          "literal_va": 620692,
+          "text": "CProtocolLayer::ReadImage. Timeout while waiting for packet."
+        },
+        {
+          "instruction_va": 156420,
+          "literal_va": 620400,
+          "text": "^<Ack />"
+        },
+        {
+          "instruction_va": 156440,
+          "literal_va": 620816,
+          "text": "Sending Ack response"
+        },
+        {
+          "instruction_va": 156448,
+          "literal_va": 620860,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 156464,
+          "literal_va": 620912,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 156508,
+          "literal_va": 620412,
+          "text": "^<Nak />"
+        },
+        {
+          "instruction_va": 156536,
+          "literal_va": 620948,
+          "text": "Sending Nak response"
+        },
+        {
+          "instruction_va": 156544,
+          "literal_va": 620992,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 156560,
+          "literal_va": 621044,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 156716,
+          "literal_va": 621080,
+          "text": "Failed to read image. No more attempts"
+        },
+        {
+          "instruction_va": 156724,
+          "literal_va": 621160,
+          "text": "CProtocolLayer::ReadImage"
+        },
+        {
+          "instruction_va": 156740,
+          "literal_va": 621212,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 156804,
+          "literal_va": 621248,
+          "text": "ProtocolLayer.cpp"
+        },
+        {
+          "instruction_va": 156816,
+          "literal_va": 621284,
+          "text": "true"
+        },
+        {
+          "instruction_va": 156820,
+          "literal_va": 621296,
+          "text": "false"
+        },
+        {
+          "instruction_va": 156824,
+          "literal_va": 621308,
+          "text": "CProtocolLayer::ReadImage returned"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/notification-router.arm.txt",
+      "ranges": [
+        {
+          "start_va": 171984,
+          "end_va_exclusive": 174248
+        }
+      ],
+      "sha256": "e52d29e9254bbbcd2730b5034de6ced4847bd8028dd0043b17a8cc20d327032b",
+      "literal_references": [
+        {
+          "instruction_va": 172008,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 172036,
+          "literal_va": 1098004,
+          "text": "SwitchMode"
+        },
+        {
+          "instruction_va": 172040,
+          "literal_va": 1097984,
+          "text": "ShutDown"
+        },
+        {
+          "instruction_va": 172044,
+          "literal_va": 1097956,
+          "text": "PictureTaken"
+        },
+        {
+          "instruction_va": 172528,
+          "literal_va": 1097928,
+          "text": "AsyncCommand"
+        },
+        {
+          "instruction_va": 172572,
+          "literal_va": 1097900,
+          "text": "IfGUIIsActive"
+        },
+        {
+          "instruction_va": 172616,
+          "literal_va": 1097868,
+          "text": "PowerManagement"
+        },
+        {
+          "instruction_va": 172660,
+          "literal_va": 1097832,
+          "text": "BeepNotification"
+        },
+        {
+          "instruction_va": 172704,
+          "literal_va": 1097792,
+          "text": "StorageNotification"
+        },
+        {
+          "instruction_va": 172748,
+          "literal_va": 1097752,
+          "text": "PictureParamsChange"
+        },
+        {
+          "instruction_va": 172792,
+          "literal_va": 1097716,
+          "text": "FileSystemChange"
+        },
+        {
+          "instruction_va": 172836,
+          "literal_va": 1097692,
+          "text": "ImageChange"
+        },
+        {
+          "instruction_va": 172880,
+          "literal_va": 1097656,
+          "text": "CameraParamChange"
+        },
+        {
+          "instruction_va": 172924,
+          "literal_va": 1097644,
+          "text": "Send"
+        },
+        {
+          "instruction_va": 172968,
+          "literal_va": 1097616,
+          "text": "ReadyToShoot"
+        },
+        {
+          "instruction_va": 173012,
+          "literal_va": 1097604,
+          "text": "Stop"
+        },
+        {
+          "instruction_va": 173100,
+          "literal_va": 1095532,
+          "text": "Error"
+        },
+        {
+          "instruction_va": 173164,
+          "literal_va": 1094416,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 173200,
+          "literal_va": 1097556,
+          "text": "Before Process Responce"
+        },
+        {
+          "instruction_va": 173212,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 173372,
+          "literal_va": 1094416,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 173416,
+          "literal_va": 1097480,
+          "text": "Set ResponseProcessedEvent. Result %d"
+        },
+        {
+          "instruction_va": 173424,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 173472,
+          "literal_va": 1097448,
+          "text": "ResyncResponse"
+        },
+        {
+          "instruction_va": 173528,
+          "literal_va": 1094416,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 173564,
+          "literal_va": 1097376,
+          "text": "Ignoring unexpected ResyncResponse"
+        },
+        {
+          "instruction_va": 173572,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 173628,
+          "literal_va": 1094416,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 173668,
+          "literal_va": 1097324,
+          "text": "After Process Responce"
+        },
+        {
+          "instruction_va": 173676,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 173784,
+          "literal_va": 1094416,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 173824,
+          "literal_va": 1097256,
+          "text": "Set ErrorResponseEvent. Result %d"
+        },
+        {
+          "instruction_va": 173836,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 173928,
+          "literal_va": 1094416,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 173964,
+          "literal_va": 1097240,
+          "text": "Timeout"
+        },
+        {
+          "instruction_va": 173976,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 174132,
+          "literal_va": 1094416,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 174168,
+          "literal_va": 1097136,
+          "text": "Serial port disconnected. Breaking thread execution"
+        },
+        {
+          "instruction_va": 174180,
+          "literal_va": 1095344,
+          "text": "ReadThreadProc"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/picture-notification-parser.arm.txt",
+      "ranges": [
+        {
+          "start_va": 165656,
+          "end_va_exclusive": 166700
+        }
+      ],
+      "sha256": "4edfc16428f311b2404fb2fdfb530578ec29168d51b62f9718d31d386a37dcff",
+      "literal_references": [
+        {
+          "instruction_va": 165716,
+          "literal_va": 1095288,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 165724,
+          "literal_va": 1095276,
+          "text": "busy"
+        },
+        {
+          "instruction_va": 165908,
+          "literal_va": 1095252,
+          "text": "zoomenable"
+        },
+        {
+          "instruction_va": 165932,
+          "literal_va": 1095232,
+          "text": "exp_left"
+        },
+        {
+          "instruction_va": 165972,
+          "literal_va": 1095200,
+          "text": "battery_percent"
+        },
+        {
+          "instruction_va": 165976,
+          "literal_va": 1095176,
+          "text": "error_code"
+        },
+        {
+          "instruction_va": 165980,
+          "literal_va": 1095156,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 166312,
+          "literal_va": 1095148,
+          "text": "no"
+        },
+        {
+          "instruction_va": 166368,
+          "literal_va": 1095116,
+          "text": "parametersReady"
+        },
+        {
+          "instruction_va": 166400,
+          "literal_va": 1095288,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 166444,
+          "literal_va": 1095092,
+          "text": "imageSaved"
+        },
+        {
+          "instruction_va": 166476,
+          "literal_va": 1095288,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 166520,
+          "literal_va": 1095056,
+          "text": "CameraOrientation"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/picture-notification-model.arm.txt",
+      "ranges": [
+        {
+          "start_va": 92948,
+          "end_va_exclusive": 93124
+        },
+        {
+          "start_va": 93284,
+          "end_va_exclusive": 94840
+        }
+      ],
+      "sha256": "5464e38526e80623132fa4708480976bf24cb489d7fa71a7271ab6e96190f7d2",
+      "literal_references": [
+        {
+          "instruction_va": 93524,
+          "literal_va": 1073936,
+          "text": "CPictureTakenNotification::Process"
+        },
+        {
+          "instruction_va": 93528,
+          "literal_va": 1073744,
+          "text": "AsyncCommandNotification"
+        },
+        {
+          "instruction_va": 93668,
+          "literal_va": 1073880,
+          "text": "ExpLeft(%d) > MaxExp(%d)"
+        },
+        {
+          "instruction_va": 93716,
+          "literal_va": 1073876,
+          "text": "/"
+        },
+        {
+          "instruction_va": 94168,
+          "literal_va": 1073840,
+          "text": "Invalid partition"
+        },
+        {
+          "instruction_va": 94360,
+          "literal_va": 1073876,
+          "text": "/"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/image-change-parser.arm.txt",
+      "ranges": [
+        {
+          "start_va": 170644,
+          "end_va_exclusive": 170820
+        }
+      ],
+      "sha256": "b7e94ff01b5021ef24c9735d218111a3ff530cf263cc6f1b0580920dd4554135",
+      "literal_references": [
+        {
+          "instruction_va": 170664,
+          "literal_va": 1095156,
+          "text": "file_name"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/attachment-drain.arm.txt",
+      "ranges": [
+        {
+          "start_va": 165476,
+          "end_va_exclusive": 165656
+        }
+      ],
+      "sha256": "3127dfafc0dcc7928a9ea3010ec6690a180ccbdbaf0b0b57583d4d0cdcea1ca1",
+      "literal_references": [
+        {
+          "instruction_va": 165488,
+          "literal_va": 1095032,
+          "text": "attachment"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/stop-notification-ack.arm.txt",
+      "ranges": [
+        {
+          "start_va": 171048,
+          "end_va_exclusive": 171212
+        }
+      ],
+      "sha256": "a0508007bd202a024b7d6c90d9ea878ad4bb60fd4d816100987872e0d06bb7bd",
+      "literal_references": [
+        {
+          "instruction_va": 171072,
+          "literal_va": 1096928,
+          "text": "^<Ack/>"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/packet-ack-nak.arm.txt",
+      "ranges": [
+        {
+          "start_va": 204232,
+          "end_va_exclusive": 204292
+        },
+        {
+          "start_va": 204428,
+          "end_va_exclusive": 204540
+        }
+      ],
+      "sha256": "c5bbf9d081ba6d96fc4b9758c371cff54e0012c68fe3e7247b4c1e30f062feb2",
+      "literal_references": [
+        {
+          "instruction_va": 204276,
+          "literal_va": 1110060,
+          "text": "^<Ack />"
+        },
+        {
+          "instruction_va": 204496,
+          "literal_va": 1110060,
+          "text": "^<Ack />"
+        },
+        {
+          "instruction_va": 204524,
+          "literal_va": 1110100,
+          "text": "^<Nak />"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/gray-click.arm.txt",
+      "ranges": [
+        {
+          "start_va": 489456,
+          "end_va_exclusive": 490432
+        }
+      ],
+      "sha256": "8399089f9b812ed09ad4e78ad0a7a7781067c6b2344037003debd853f6ea3811",
+      "literal_references": [
+        {
+          "instruction_va": 489492,
+          "literal_va": 1250144,
+          "text": "CShootViewEU::HandleImageClickGrayBalance"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/image-click-scale.arm.txt",
+      "ranges": [
+        {
+          "start_va": 484828,
+          "end_va_exclusive": 485628
+        }
+      ],
+      "sha256": "278ef8a24b3b9258be952feb996d342b7d662ecda5b24d979e0eb774f852ef9c",
+      "literal_references": [
+        {
+          "instruction_va": 484856,
+          "literal_va": 1249600,
+          "text": "CShootViewEU::OnImageClick"
+        },
+        {
+          "instruction_va": 485288,
+          "literal_va": 1248524,
+          "text": "ShootViewEU.cpp"
+        },
+        {
+          "instruction_va": 485332,
+          "literal_va": 1249080,
+          "text": "Current mode is %s"
+        },
+        {
+          "instruction_va": 485348,
+          "literal_va": 1249572,
+          "text": "OnImageClick"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/get-image-constructor.arm.txt",
+      "ranges": [
+        {
+          "start_va": 221296,
+          "end_va_exclusive": 221832
+        }
+      ],
+      "sha256": "857c8bc947f6a1d89dd0e70acbe1f517d9a92e029512306d81f3e7b819bfe577",
+      "literal_references": [
+        {
+          "instruction_va": 221428,
+          "literal_va": 1110140,
+          "text": "^<GetImage file_name=\""
+        },
+        {
+          "instruction_va": 221464,
+          "literal_va": 1114720,
+          "text": "\" zoom=\""
+        },
+        {
+          "instruction_va": 221500,
+          "literal_va": 1106072,
+          "text": "1"
+        },
+        {
+          "instruction_va": 221508,
+          "literal_va": 1114716,
+          "text": "2"
+        },
+        {
+          "instruction_va": 221516,
+          "literal_va": 1114712,
+          "text": "4"
+        },
+        {
+          "instruction_va": 221524,
+          "literal_va": 1114708,
+          "text": "8"
+        },
+        {
+          "instruction_va": 221536,
+          "literal_va": 1114704,
+          "text": "\""
+        },
+        {
+          "instruction_va": 221572,
+          "literal_va": 1114652,
+          "text": " XCoord=\"%d\" YCoord=\"%d\""
+        },
+        {
+          "instruction_va": 221636,
+          "literal_va": 1114612,
+          "text": " Alarm=\"yes\" edge=\""
+        },
+        {
+          "instruction_va": 221684,
+          "literal_va": 1114600,
+          "text": "both"
+        },
+        {
+          "instruction_va": 221692,
+          "literal_va": 1114588,
+          "text": "dark"
+        },
+        {
+          "instruction_va": 221700,
+          "literal_va": 1114576,
+          "text": "white"
+        },
+        {
+          "instruction_va": 221760,
+          "literal_va": 1114544,
+          "text": " light=\"%d,%d\""
+        },
+        {
+          "instruction_va": 221800,
+          "literal_va": 1114536,
+          "text": " />"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/sync-dimensions.arm.txt",
+      "ranges": [
+        {
+          "start_va": 196148,
+          "end_va_exclusive": 196488
+        }
+      ],
+      "sha256": "58924ae51305fc11ee4f623b71d0123e8aa44320bf54455f89871a0bf725ceca",
+      "literal_references": [
+        {
+          "instruction_va": 196152,
+          "literal_va": 1108924,
+          "text": "picturedimensions"
+        },
+        {
+          "instruction_va": 196420,
+          "literal_va": 1098556,
+          "text": "color"
+        },
+        {
+          "instruction_va": 196468,
+          "literal_va": 1098556,
+          "text": "color"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/sync-target-embedding.arm.txt",
+      "ranges": [
+        {
+          "start_va": 98640,
+          "end_va_exclusive": 98664
+        },
+        {
+          "start_va": 154884,
+          "end_va_exclusive": 154932
+        },
+        {
+          "start_va": 191808,
+          "end_va_exclusive": 191868
+        }
+      ],
+      "sha256": "cada548ff5ed8c4abe392db2ad5869d4f47a5da58b11ea60247d19483bbd8f91",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/full-preview-grid.arm.txt",
+      "ranges": [
+        {
+          "start_va": 233232,
+          "end_va_exclusive": 233280
+        },
+        {
+          "start_va": 494192,
+          "end_va_exclusive": 494264
+        }
+      ],
+      "sha256": "5be1e653c95a20792d523a04e00166a886979fe0e79938c2e3fb0e5e0336c2ab",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/orientation-parser.arm.txt",
+      "ranges": [
+        {
+          "start_va": 179356,
+          "end_va_exclusive": 179640
+        }
+      ],
+      "sha256": "a72133944916a8abb264ed59166f85aa9f6a009095e2470c4d8dc3e87784d620",
+      "literal_references": [
+        {
+          "instruction_va": 179368,
+          "literal_va": 1089692,
+          "text": "Portrait CW"
+        },
+        {
+          "instruction_va": 179408,
+          "literal_va": 1089664,
+          "text": "Portrait CCW"
+        },
+        {
+          "instruction_va": 179436,
+          "literal_va": 1089632,
+          "text": "Landscape"
+        },
+        {
+          "instruction_va": 179468,
+          "literal_va": 1089652,
+          "text": "Auto"
+        },
+        {
+          "instruction_va": 179520,
+          "literal_va": 1098436,
+          "text": "Commands.cpp"
+        },
+        {
+          "instruction_va": 179560,
+          "literal_va": 1098380,
+          "text": "Unrecognized orientation %s"
+        },
+        {
+          "instruction_va": 179572,
+          "literal_va": 1098340,
+          "text": "StringToOrientation"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/orientation-to-bitmap.arm.txt",
+      "ranges": [
+        {
+          "start_va": 348488,
+          "end_va_exclusive": 348780
+        }
+      ],
+      "sha256": "450e4d4acff3e0fb635cd5b5dca781060cb8926e046d0ca72ff33181275c49fd",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/oriented-bitmap-wrapper.arm.txt",
+      "ranges": [
+        {
+          "start_va": 347544,
+          "end_va_exclusive": 347964
+        }
+      ],
+      "sha256": "90337d54139c18daaf0a3ee3a64d08ee0da75f625a66d5b0bc6f3f337d3288f5",
+      "literal_references": [
+        {
+          "instruction_va": 347668,
+          "literal_va": 1135776,
+          "text": "ImageEU.cpp"
+        },
+        {
+          "instruction_va": 347704,
+          "literal_va": 1135672,
+          "text": "landscape orientation, height is bigger than width"
+        },
+        {
+          "instruction_va": 347716,
+          "literal_va": 1135628,
+          "text": "DrawImageWithRatio"
+        },
+        {
+          "instruction_va": 347788,
+          "literal_va": 1135776,
+          "text": "ImageEU.cpp"
+        },
+        {
+          "instruction_va": 347824,
+          "literal_va": 1135528,
+          "text": "portrait orientation, width is bigger than height"
+        },
+        {
+          "instruction_va": 347836,
+          "literal_va": 1135628,
+          "text": "DrawImageWithRatio"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/rotate-bitmap-helper.arm.txt",
+      "ranges": [
+        {
+          "start_va": 611748,
+          "end_va_exclusive": 612372
+        }
+      ],
+      "sha256": "c418ed5298c17c3f04e4a47c1493cd8d37b029d9a9329008f354bed04bc27bc1",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/rotate-pixel-kernel.arm.txt",
+      "ranges": [
+        {
+          "start_va": 609764,
+          "end_va_exclusive": 610748
+        }
+      ],
+      "sha256": "2326e849a662b77297e3da24b4e4c4334a63da34e827cb7edff7f7401fe72eca",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/dib-constructor.arm.txt",
+      "ranges": [
+        {
+          "start_va": 601340,
+          "end_va_exclusive": 601504
+        }
+      ],
+      "sha256": "0bdb52926af7aab54b0b9a25bbb993f999cfdbed6776338ae12b8ccf0b89ece3",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/image-state-accessors.arm.txt",
+      "ranges": [
+        {
+          "start_va": 295068,
+          "end_va_exclusive": 295076
+        },
+        {
+          "start_va": 297864,
+          "end_va_exclusive": 297872
+        }
+      ],
+      "sha256": "5c8ca25afbd54e0a314eb291ab244c988854d866d0438cebdc8e2dde637e1414",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/get-bitmap-cache-download.arm.txt",
+      "ranges": [
+        {
+          "start_va": 332340,
+          "end_va_exclusive": 333564
+        }
+      ],
+      "sha256": "c1b09b13665d61864910cf9dba73c1851f18acd6eae17cc5cc9c653a737943d8",
+      "literal_references": [
+        {
+          "instruction_va": 332544,
+          "literal_va": 1134924,
+          "text": "ImageCache.cpp"
+        },
+        {
+          "instruction_va": 332588,
+          "literal_va": 1134808,
+          "text": "Postprocessing skipped due to format mismatch (%d != 24)"
+        },
+        {
+          "instruction_va": 332596,
+          "literal_va": 1134776,
+          "text": "GetBitmapBase"
+        },
+        {
+          "instruction_va": 333232,
+          "literal_va": 1134924,
+          "text": "ImageCache.cpp"
+        },
+        {
+          "instruction_va": 333300,
+          "literal_va": 1134776,
+          "text": "GetBitmapBase"
+        },
+        {
+          "instruction_va": 333304,
+          "literal_va": 1134680,
+          "text": "Decompressed jpeg file %s, dimensions: %d x %d"
+        },
+        {
+          "instruction_va": 333456,
+          "literal_va": 1134808,
+          "text": "Postprocessing skipped due to format mismatch (%d != 24)"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/saved-state-bookkeeping.arm.txt",
+      "ranges": [
+        {
+          "start_va": 152944,
+          "end_va_exclusive": 153032
+        }
+      ],
+      "sha256": "c9064df8ff80791e30a614d81c810b4362103cc6467633727c2443bcf7247350",
+      "literal_references": []
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "path": "wiview-1.0.3/shoot-view-notification.arm.txt",
+      "ranges": [
+        {
+          "start_va": 493984,
+          "end_va_exclusive": 495692
+        }
+      ],
+      "sha256": "69726b05a43e8be5d3bb82af8a1823a777492a3341ccc90b758780589a159ed1",
+      "literal_references": [
+        {
+          "instruction_va": 494016,
+          "literal_va": 1251136,
+          "text": "CShootViewEU::OnPictureTaken"
+        },
+        {
+          "instruction_va": 494036,
+          "literal_va": 1251104,
+          "text": "OnPictureTaken"
+        },
+        {
+          "instruction_va": 494048,
+          "literal_va": 1248524,
+          "text": "ShootViewEU.cpp"
+        },
+        {
+          "instruction_va": 494156,
+          "literal_va": 1251052,
+          "text": "restoring to full preview"
+        },
+        {
+          "instruction_va": 495608,
+          "literal_va": 1248852,
+          "text": "Image updated on the screen"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "path": "wiview-1.0.2/notification-router.arm.txt",
+      "ranges": [
+        {
+          "start_va": 170156,
+          "end_va_exclusive": 172244
+        }
+      ],
+      "sha256": "9917a7e33c4042b44515c1b68dc867e61bd3c6d568ceb40f8f9f60919f1c8b75",
+      "literal_references": [
+        {
+          "instruction_va": 170180,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 170208,
+          "literal_va": 1089120,
+          "text": "PowerManagement"
+        },
+        {
+          "instruction_va": 170212,
+          "literal_va": 1089100,
+          "text": "ShutDown"
+        },
+        {
+          "instruction_va": 170216,
+          "literal_va": 1089072,
+          "text": "PictureTaken"
+        },
+        {
+          "instruction_va": 170700,
+          "literal_va": 1089036,
+          "text": "BeepNotification"
+        },
+        {
+          "instruction_va": 170744,
+          "literal_va": 1088996,
+          "text": "StorageNotification"
+        },
+        {
+          "instruction_va": 170788,
+          "literal_va": 1088956,
+          "text": "PictureParamsChange"
+        },
+        {
+          "instruction_va": 170832,
+          "literal_va": 1088920,
+          "text": "FileSystemChange"
+        },
+        {
+          "instruction_va": 170876,
+          "literal_va": 1088896,
+          "text": "ImageChange"
+        },
+        {
+          "instruction_va": 170920,
+          "literal_va": 1088860,
+          "text": "CameraParamChange"
+        },
+        {
+          "instruction_va": 170964,
+          "literal_va": 1088848,
+          "text": "Send"
+        },
+        {
+          "instruction_va": 171008,
+          "literal_va": 1088836,
+          "text": "Stop"
+        },
+        {
+          "instruction_va": 171096,
+          "literal_va": 1086772,
+          "text": "Error"
+        },
+        {
+          "instruction_va": 171160,
+          "literal_va": 1085704,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 171196,
+          "literal_va": 1088788,
+          "text": "Before Process Responce"
+        },
+        {
+          "instruction_va": 171208,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 171368,
+          "literal_va": 1085704,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 171412,
+          "literal_va": 1088712,
+          "text": "Set ResponseProcessedEvent. Result %d"
+        },
+        {
+          "instruction_va": 171420,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 171468,
+          "literal_va": 1088680,
+          "text": "ResyncResponse"
+        },
+        {
+          "instruction_va": 171524,
+          "literal_va": 1085704,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 171560,
+          "literal_va": 1088608,
+          "text": "Ignoring unexpected ResyncResponse"
+        },
+        {
+          "instruction_va": 171568,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 171624,
+          "literal_va": 1085704,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 171664,
+          "literal_va": 1088556,
+          "text": "After Process Responce"
+        },
+        {
+          "instruction_va": 171672,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 171780,
+          "literal_va": 1085704,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 171820,
+          "literal_va": 1088488,
+          "text": "Set ErrorResponseEvent. Result %d"
+        },
+        {
+          "instruction_va": 171832,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 171924,
+          "literal_va": 1085704,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 171960,
+          "literal_va": 1088472,
+          "text": "Timeout"
+        },
+        {
+          "instruction_va": 171972,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        },
+        {
+          "instruction_va": 172128,
+          "literal_va": 1085704,
+          "text": "CommandProcessor.cpp"
+        },
+        {
+          "instruction_va": 172164,
+          "literal_va": 1088368,
+          "text": "Serial port disconnected. Breaking thread execution"
+        },
+        {
+          "instruction_va": 172176,
+          "literal_va": 1086584,
+          "text": "ReadThreadProc"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "path": "wiview-1.0.2/picture-notification-parser.arm.txt",
+      "ranges": [
+        {
+          "start_va": 164564,
+          "end_va_exclusive": 165608
+        }
+      ],
+      "sha256": "187b5bc0a53d4810411082297391547cb6b717c370ddfb56e9e1902e727f290b",
+      "literal_references": [
+        {
+          "instruction_va": 164624,
+          "literal_va": 1086576,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 164632,
+          "literal_va": 1086564,
+          "text": "busy"
+        },
+        {
+          "instruction_va": 164816,
+          "literal_va": 1086540,
+          "text": "zoomenable"
+        },
+        {
+          "instruction_va": 164840,
+          "literal_va": 1086520,
+          "text": "exp_left"
+        },
+        {
+          "instruction_va": 164880,
+          "literal_va": 1086488,
+          "text": "battery_percent"
+        },
+        {
+          "instruction_va": 164884,
+          "literal_va": 1086464,
+          "text": "error_code"
+        },
+        {
+          "instruction_va": 164888,
+          "literal_va": 1086444,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 165220,
+          "literal_va": 1086436,
+          "text": "no"
+        },
+        {
+          "instruction_va": 165276,
+          "literal_va": 1086404,
+          "text": "parametersReady"
+        },
+        {
+          "instruction_va": 165308,
+          "literal_va": 1086576,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 165352,
+          "literal_va": 1086380,
+          "text": "imageSaved"
+        },
+        {
+          "instruction_va": 165384,
+          "literal_va": 1086576,
+          "text": "yes"
+        },
+        {
+          "instruction_va": 165428,
+          "literal_va": 1086344,
+          "text": "CameraOrientation"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "path": "wiview-1.0.2/picture-notification-model.arm.txt",
+      "ranges": [
+        {
+          "start_va": 93172,
+          "end_va_exclusive": 94668
+        }
+      ],
+      "sha256": "019a54bd7009528ef98eb5754903ddf9929bb2ec9169a91608e981f9d604a286",
+      "literal_references": [
+        {
+          "instruction_va": 93356,
+          "literal_va": 1065608,
+          "text": "CPictureTakenNotification::Process"
+        },
+        {
+          "instruction_va": 93360,
+          "literal_va": 1065416,
+          "text": "AsyncCommandNotification"
+        },
+        {
+          "instruction_va": 93496,
+          "literal_va": 1065552,
+          "text": "ExpLeft(%d) > MaxExp(%d)"
+        },
+        {
+          "instruction_va": 93544,
+          "literal_va": 1065548,
+          "text": "/"
+        },
+        {
+          "instruction_va": 93996,
+          "literal_va": 1065512,
+          "text": "Invalid partition"
+        },
+        {
+          "instruction_va": 94188,
+          "literal_va": 1065548,
+          "text": "/"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "path": "wiview-1.0.2/stop-notification-ack.arm.txt",
+      "ranges": [
+        {
+          "start_va": 169220,
+          "end_va_exclusive": 169384
+        }
+      ],
+      "sha256": "a6960f81927c9a803fa0934afb20c67bc6724c95e830755186ded2e0fdf288ca",
+      "literal_references": [
+        {
+          "instruction_va": 169244,
+          "literal_va": 1088156,
+          "text": "^<Ack/>"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "path": "wiview-1.0.2/gray-click.arm.txt",
+      "ranges": [
+        {
+          "start_va": 485304,
+          "end_va_exclusive": 486284
+        }
+      ],
+      "sha256": "8d717603a4bc88afb1932f9a97310b2e7264dd128ff7bdb334dc0293a96a492e",
+      "literal_references": [
+        {
+          "instruction_va": 485340,
+          "literal_va": 1240384,
+          "text": "CShootViewEU::HandleImageClickGrayBalance"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "path": "wiview-1.0.2/image-click-scale.arm.txt",
+      "ranges": [
+        {
+          "start_va": 480692,
+          "end_va_exclusive": 481480
+        }
+      ],
+      "sha256": "cde84f94f6e5657df7cdb2eca5393586b1a2080ca62165a68d8f5c1d23db3930",
+      "literal_references": [
+        {
+          "instruction_va": 480720,
+          "literal_va": 1239840,
+          "text": "CShootViewEU::OnImageClick"
+        },
+        {
+          "instruction_va": 481140,
+          "literal_va": 1238764,
+          "text": "ShootViewEU.cpp"
+        },
+        {
+          "instruction_va": 481184,
+          "literal_va": 1239320,
+          "text": "Current mode is %s"
+        },
+        {
+          "instruction_va": 481196,
+          "literal_va": 1239812,
+          "text": "OnImageClick"
+        }
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "path": "wiview-1.0.2/get-image-constructor.arm.txt",
+      "ranges": [
+        {
+          "start_va": 217224,
+          "end_va_exclusive": 217760
+        }
+      ],
+      "sha256": "1839db201a7422a8a28813771f0aae8a779bb5adbdd9dabb9e3d5e8c34c7629e",
+      "literal_references": [
+        {
+          "instruction_va": 217356,
+          "literal_va": 1100964,
+          "text": "^<GetImage file_name=\""
+        },
+        {
+          "instruction_va": 217392,
+          "literal_va": 1105432,
+          "text": "\" zoom=\""
+        },
+        {
+          "instruction_va": 217428,
+          "literal_va": 1097048,
+          "text": "1"
+        },
+        {
+          "instruction_va": 217436,
+          "literal_va": 1105428,
+          "text": "2"
+        },
+        {
+          "instruction_va": 217444,
+          "literal_va": 1105424,
+          "text": "4"
+        },
+        {
+          "instruction_va": 217452,
+          "literal_va": 1105420,
+          "text": "8"
+        },
+        {
+          "instruction_va": 217464,
+          "literal_va": 1105416,
+          "text": "\""
+        },
+        {
+          "instruction_va": 217500,
+          "literal_va": 1105364,
+          "text": " XCoord=\"%d\" YCoord=\"%d\""
+        },
+        {
+          "instruction_va": 217564,
+          "literal_va": 1105324,
+          "text": " Alarm=\"yes\" edge=\""
+        },
+        {
+          "instruction_va": 217612,
+          "literal_va": 1105312,
+          "text": "both"
+        },
+        {
+          "instruction_va": 217620,
+          "literal_va": 1105300,
+          "text": "dark"
+        },
+        {
+          "instruction_va": 217628,
+          "literal_va": 1105288,
+          "text": "white"
+        },
+        {
+          "instruction_va": 217688,
+          "literal_va": 1105256,
+          "text": " light=\"%d,%d\""
+        },
+        {
+          "instruction_va": 217728,
+          "literal_va": 1105248,
+          "text": " />"
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/pda-catalog.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 943116,
+          "end_va_exclusive": 943748
+        }
+      ],
+      "sha256": "346956cd57f4c04b7d66ce237791cc1bf3a5eb87bdb682fd88027ea82d2ab91f",
+      "literal_references": [
+        {
+          "instruction_va": 943700,
+          "literal_va": 4066624,
+          "text": "Problem with m_MessageCatalog max size: %d"
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/registered-name-lookup.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 946812,
+          "end_va_exclusive": 946976
+        }
+      ],
+      "sha256": "068370845ff3cff3ce8fa0160be4f4081b0d6373e6c35aec1a1247407b3f5641",
+      "literal_references": []
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/incoming-dispatch.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 945244,
+          "end_va_exclusive": 945712
+        }
+      ],
+      "sha256": "7859178442e9be56ec65e4c68c670fe5a33caad00bb50f479af5bdeb1a8184f8",
+      "literal_references": [
+        {
+          "instruction_va": 945664,
+          "literal_va": 4066772,
+          "text": "\n*** %s message was dropped!!!"
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/create-outgoing-message.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 949088,
+          "end_va_exclusive": 949308
+        }
+      ],
+      "sha256": "b2bfc6f3213c883a18fd4edd39ab457b9552167f74d7f79ce537a2a951a82bda",
+      "literal_references": [
+        {
+          "instruction_va": 949276,
+          "literal_va": 4067196,
+          "text": "\n Error during sending Outgoing message"
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/outgoing-command-selector.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 932888,
+          "end_va_exclusive": 933632
+        }
+      ],
+      "sha256": "598235b2abc54e5ae1045133e125a605730061bf9903d048e3d36fa5a3e6c51c",
+      "literal_references": [
+        {
+          "instruction_va": 932960,
+          "literal_va": 4064204,
+          "text": "ShutDown"
+        },
+        {
+          "instruction_va": 932988,
+          "literal_va": 4064216,
+          "text": "BeepNotification"
+        },
+        {
+          "instruction_va": 933016,
+          "literal_va": 4064236,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 933028,
+          "literal_va": 4064240,
+          "text": "beepType"
+        },
+        {
+          "instruction_va": 933056,
+          "literal_va": 4064252,
+          "text": "StorageNotification"
+        },
+        {
+          "instruction_va": 933108,
+          "literal_va": 4064272,
+          "text": "present"
+        },
+        {
+          "instruction_va": 933132,
+          "literal_va": 4064280,
+          "text": "absent"
+        },
+        {
+          "instruction_va": 933156,
+          "literal_va": 4064288,
+          "text": "unknown"
+        },
+        {
+          "instruction_va": 933184,
+          "literal_va": 4064296,
+          "text": "StorageStatus"
+        },
+        {
+          "instruction_va": 933204,
+          "literal_va": 4064312,
+          "text": "StorageName"
+        },
+        {
+          "instruction_va": 933232,
+          "literal_va": 4064324,
+          "text": "PowerManagement"
+        },
+        {
+          "instruction_va": 933252,
+          "literal_va": 4064340,
+          "text": "PowerState"
+        },
+        {
+          "instruction_va": 933264,
+          "literal_va": 4064352,
+          "text": "PowerDown"
+        },
+        {
+          "instruction_va": 933284,
+          "literal_va": 4064364,
+          "text": "SwitchMode"
+        },
+        {
+          "instruction_va": 933312,
+          "literal_va": 4064376,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 933324,
+          "literal_va": 4064380,
+          "text": "Timeout"
+        },
+        {
+          "instruction_va": 933352,
+          "literal_va": 4064388,
+          "text": "ReadyToShoot"
+        },
+        {
+          "instruction_va": 933372,
+          "literal_va": 4064404,
+          "text": "Ready"
+        },
+        {
+          "instruction_va": 933396,
+          "literal_va": 4064412,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 933412,
+          "literal_va": 4064416,
+          "text": "No"
+        },
+        {
+          "instruction_va": 933432,
+          "literal_va": 4064420,
+          "text": "IfGUIIsActive"
+        },
+        {
+          "instruction_va": 933460,
+          "literal_va": 4064436,
+          "text": "Error"
+        },
+        {
+          "instruction_va": 933480,
+          "literal_va": 4064444,
+          "text": "error_code"
+        },
+        {
+          "instruction_va": 933492,
+          "literal_va": 4064456,
+          "text": "0x01"
+        },
+        {
+          "instruction_va": 933512,
+          "literal_va": 4064464,
+          "text": "\nOutgoingMessage:SetCommandNameToSend() param ERROR\n"
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/standard-error-constructors.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 723828,
+          "end_va_exclusive": 724276
+        }
+      ],
+      "sha256": "e0922b1cf8a3c2f1529e4a08b7b1aa65c46e03d774598c821646f59686fdef85",
+      "literal_references": [
+        {
+          "instruction_va": 723852,
+          "literal_va": 4010684,
+          "text": "error_code"
+        },
+        {
+          "instruction_va": 723924,
+          "literal_va": 4010696,
+          "text": "0x00"
+        },
+        {
+          "instruction_va": 723940,
+          "literal_va": 4010704,
+          "text": "0x01"
+        },
+        {
+          "instruction_va": 723956,
+          "literal_va": 4010712,
+          "text": "0x02"
+        },
+        {
+          "instruction_va": 723972,
+          "literal_va": 4010720,
+          "text": "0x03"
+        },
+        {
+          "instruction_va": 723988,
+          "literal_va": 4010728,
+          "text": "0x04"
+        },
+        {
+          "instruction_va": 724004,
+          "literal_va": 4010736,
+          "text": "0x05"
+        },
+        {
+          "instruction_va": 724016,
+          "literal_va": 4010744,
+          "text": "Error"
+        },
+        {
+          "instruction_va": 724088,
+          "literal_va": 4010752,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 724164,
+          "literal_va": 4010756,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 724212,
+          "literal_va": 4010760,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 724228,
+          "literal_va": 4010764,
+          "text": "error"
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/get-image-processing.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 592928,
+          "end_va_exclusive": 594708
+        }
+      ],
+      "sha256": "75489c8bf74217ec1d084d65a1e0b76f94922a4be1dddd776cd625ca62f1fc9a",
+      "literal_references": [
+        {
+          "instruction_va": 593004,
+          "literal_va": 3989924,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 593088,
+          "literal_va": 3989936,
+          "text": "PacketSize"
+        },
+        {
+          "instruction_va": 593140,
+          "literal_va": 3989948,
+          "text": "zoom"
+        },
+        {
+          "instruction_va": 593184,
+          "literal_va": 3989956,
+          "text": "light"
+        },
+        {
+          "instruction_va": 593228,
+          "literal_va": 3989964,
+          "text": "Alarm"
+        },
+        {
+          "instruction_va": 593276,
+          "literal_va": 3989972,
+          "text": "GetImage attributes: file_name = %s, PacketSize = %d"
+        },
+        {
+          "instruction_va": 593468,
+          "literal_va": 3990028,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 594028,
+          "literal_va": 3990032,
+          "text": "\n*** GetImage failed"
+        },
+        {
+          "instruction_va": 594060,
+          "literal_va": 3990056,
+          "text": "\n*** m_BufferSize = 0"
+        },
+        {
+          "instruction_va": 594140,
+          "literal_va": 3990080,
+          "text": "ATTACHMENT"
+        },
+        {
+          "instruction_va": 594160,
+          "literal_va": 3990092,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 594180,
+          "literal_va": 3990096,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 594240,
+          "literal_va": 3990108,
+          "text": "./%s"
+        },
+        {
+          "instruction_va": 594340,
+          "literal_va": 3990116,
+          "text": "Size"
+        },
+        {
+          "instruction_va": 594356,
+          "literal_va": 3990124,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 594408,
+          "literal_va": 3990128,
+          "text": "Light"
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/gray-light-parse.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 595408,
+          "end_va_exclusive": 595548
+        }
+      ],
+      "sha256": "194636fb5436d6d5f273cf6587df880fad8799d74ef194159d2e69a90a8df7a4",
+      "literal_references": [
+        {
+          "instruction_va": 595444,
+          "literal_va": 3990328,
+          "text": "light"
+        },
+        {
+          "instruction_va": 595476,
+          "literal_va": 3990336,
+          "text": ","
+        },
+        {
+          "instruction_va": 595496,
+          "literal_va": 3990340,
+          "text": ","
+        }
+      ]
+    },
+    {
+      "sample": "classic-4.701",
+      "path": "classic-4.701/picture-dimensions-reply.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 552832,
+          "end_va_exclusive": 552936
+        }
+      ],
+      "sha256": "fb355d91eb1d62c2f7cb5c90e2fbf25c05f1c5ad128e21e60bed510bd73f2dd9",
+      "literal_references": [
+        {
+          "instruction_va": 552908,
+          "literal_va": 3985632,
+          "text": "%d,%d"
+        }
+      ]
+    },
+    {
+      "sample": "shared-5.041",
+      "path": "shared-5.041/pda-catalog.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 1058468,
+          "end_va_exclusive": 1059104
+        }
+      ],
+      "sha256": "4ffbb1253e40db6b31c9b7f4b1a6d38ee85d1ca5498f9aa0cfab99e2103e708c",
+      "literal_references": [
+        {
+          "instruction_va": 1059056,
+          "literal_va": 4648496,
+          "text": "Problem with m_MessageCatalog max size: %d"
+        }
+      ]
+    },
+    {
+      "sample": "shared-5.041",
+      "path": "shared-5.041/registered-name-lookup.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 1061884,
+          "end_va_exclusive": 1062048
+        }
+      ],
+      "sha256": "713964533dac70646d6d72b87411fb5f1f0c5bf3a961a6e98ab35b9203870dda",
+      "literal_references": []
+    },
+    {
+      "sample": "shared-5.041",
+      "path": "shared-5.041/incoming-dispatch.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 1060316,
+          "end_va_exclusive": 1060784
+        }
+      ],
+      "sha256": "1dc5ef7e6b2982cf314a42cd220158fe3809882ecc672489a5453ca0f08b9281",
+      "literal_references": [
+        {
+          "instruction_va": 1060736,
+          "literal_va": 4648644,
+          "text": "\n*** %s message was dropped!!!"
+        }
+      ]
+    },
+    {
+      "sample": "shared-5.041",
+      "path": "shared-5.041/create-outgoing-message.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 1064160,
+          "end_va_exclusive": 1064380
+        }
+      ],
+      "sha256": "aa3a780c6bf608c7f40683db3b9765c8770192f9b78964d4cf9794d20963e8aa",
+      "literal_references": [
+        {
+          "instruction_va": 1064348,
+          "literal_va": 4649068,
+          "text": "\n Error during sending Outgoing message"
+        }
+      ]
+    },
+    {
+      "sample": "shared-5.041",
+      "path": "shared-5.041/outgoing-command-selector.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 1048420,
+          "end_va_exclusive": 1049520
+        }
+      ],
+      "sha256": "1c19bd510ddb2b0f340e3dfd047f86a1bf500c75ac26d1f0d1873d14f2a8a9a2",
+      "literal_references": [
+        {
+          "instruction_va": 1048492,
+          "literal_va": 4645808,
+          "text": "ShutDown"
+        },
+        {
+          "instruction_va": 1048520,
+          "literal_va": 4645820,
+          "text": "BeepNotification"
+        },
+        {
+          "instruction_va": 1048548,
+          "literal_va": 4645840,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 1048560,
+          "literal_va": 4645844,
+          "text": "beepType"
+        },
+        {
+          "instruction_va": 1048588,
+          "literal_va": 4645856,
+          "text": "StorageNotification"
+        },
+        {
+          "instruction_va": 1048640,
+          "literal_va": 4645876,
+          "text": "present"
+        },
+        {
+          "instruction_va": 1048664,
+          "literal_va": 4645884,
+          "text": "absent"
+        },
+        {
+          "instruction_va": 1048688,
+          "literal_va": 4645892,
+          "text": "unknown"
+        },
+        {
+          "instruction_va": 1048716,
+          "literal_va": 4645900,
+          "text": "StorageStatus"
+        },
+        {
+          "instruction_va": 1048736,
+          "literal_va": 4645916,
+          "text": "StorageName"
+        },
+        {
+          "instruction_va": 1048764,
+          "literal_va": 4645928,
+          "text": "PowerManagement"
+        },
+        {
+          "instruction_va": 1048784,
+          "literal_va": 4645944,
+          "text": "PowerState"
+        },
+        {
+          "instruction_va": 1048796,
+          "literal_va": 4645956,
+          "text": "PowerDown"
+        },
+        {
+          "instruction_va": 1048816,
+          "literal_va": 4645968,
+          "text": "SwitchMode"
+        },
+        {
+          "instruction_va": 1048844,
+          "literal_va": 4645980,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 1048856,
+          "literal_va": 4645984,
+          "text": "Timeout"
+        },
+        {
+          "instruction_va": 1048884,
+          "literal_va": 4645992,
+          "text": "ReadyToShoot"
+        },
+        {
+          "instruction_va": 1048904,
+          "literal_va": 4646008,
+          "text": "Ready"
+        },
+        {
+          "instruction_va": 1048928,
+          "literal_va": 4646016,
+          "text": "Yes"
+        },
+        {
+          "instruction_va": 1048944,
+          "literal_va": 4646020,
+          "text": "No"
+        },
+        {
+          "instruction_va": 1048964,
+          "literal_va": 4646024,
+          "text": "IfGUIIsActive"
+        },
+        {
+          "instruction_va": 1048992,
+          "literal_va": 4646040,
+          "text": "Error"
+        },
+        {
+          "instruction_va": 1049012,
+          "literal_va": 4646048,
+          "text": "error_code"
+        },
+        {
+          "instruction_va": 1049024,
+          "literal_va": 4646060,
+          "text": "0x01"
+        },
+        {
+          "instruction_va": 1049044,
+          "literal_va": 4646068,
+          "text": "AsyncCommand"
+        },
+        {
+          "instruction_va": 1049064,
+          "literal_va": 4646084,
+          "text": "battery_type"
+        },
+        {
+          "instruction_va": 1049088,
+          "literal_va": 4646100,
+          "text": "CameraBattery"
+        },
+        {
+          "instruction_va": 1049104,
+          "literal_va": 4646116,
+          "text": "BackBattery"
+        },
+        {
+          "instruction_va": 1049124,
+          "literal_va": 4646128,
+          "text": "SensorOrientNotify"
+        },
+        {
+          "instruction_va": 1049144,
+          "literal_va": 4646148,
+          "text": "SensorOrientation"
+        },
+        {
+          "instruction_va": 1049188,
+          "literal_va": 4646168,
+          "text": "None"
+        },
+        {
+          "instruction_va": 1049204,
+          "literal_va": 4646176,
+          "text": "Landscape"
+        },
+        {
+          "instruction_va": 1049220,
+          "literal_va": 4646188,
+          "text": "Portrait"
+        },
+        {
+          "instruction_va": 1049236,
+          "literal_va": 4646200,
+          "text": "1x1"
+        },
+        {
+          "instruction_va": 1049252,
+          "literal_va": 4646204,
+          "text": "14x9_Landscape"
+        },
+        {
+          "instruction_va": 1049268,
+          "literal_va": 4646220,
+          "text": "14x9_Portrait"
+        },
+        {
+          "instruction_va": 1049284,
+          "literal_va": 4646236,
+          "text": "4x3_Landscape"
+        },
+        {
+          "instruction_va": 1049300,
+          "literal_va": 4646252,
+          "text": "4x3_Portrait"
+        },
+        {
+          "instruction_va": 1049320,
+          "literal_va": 4646268,
+          "text": "DeletePrivateInfoCmd"
+        },
+        {
+          "instruction_va": 1049348,
+          "literal_va": 4646292,
+          "text": "PictureDimensionsCmd"
+        },
+        {
+          "instruction_va": 1049376,
+          "literal_va": 4646316,
+          "text": "PictureDimensions"
+        },
+        {
+          "instruction_va": 1049404,
+          "literal_va": 4646336,
+          "text": "\nOutgoingMessage:SetCommandNameToSend() param ERROR\n"
+        }
+      ]
+    },
+    {
+      "sample": "shared-5.041",
+      "path": "shared-5.041/standard-error-constructors.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 761136,
+          "end_va_exclusive": 761584
+        }
+      ],
+      "sha256": "0337941498a5d4227fed140e8c78ce5185b7e2d957551b337d9c9f5da3b46b3c",
+      "literal_references": [
+        {
+          "instruction_va": 761160,
+          "literal_va": 4580792,
+          "text": "error_code"
+        },
+        {
+          "instruction_va": 761232,
+          "literal_va": 4580804,
+          "text": "0x00"
+        },
+        {
+          "instruction_va": 761248,
+          "literal_va": 4580812,
+          "text": "0x01"
+        },
+        {
+          "instruction_va": 761264,
+          "literal_va": 4580820,
+          "text": "0x02"
+        },
+        {
+          "instruction_va": 761280,
+          "literal_va": 4580828,
+          "text": "0x03"
+        },
+        {
+          "instruction_va": 761296,
+          "literal_va": 4580836,
+          "text": "0x04"
+        },
+        {
+          "instruction_va": 761312,
+          "literal_va": 4580844,
+          "text": "0x05"
+        },
+        {
+          "instruction_va": 761324,
+          "literal_va": 4580852,
+          "text": "Error"
+        },
+        {
+          "instruction_va": 761396,
+          "literal_va": 4580860,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 761472,
+          "literal_va": 4580864,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 761520,
+          "literal_va": 4580868,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 761536,
+          "literal_va": 4580872,
+          "text": "error"
+        }
+      ]
+    },
+    {
+      "sample": "shared-5.041",
+      "path": "shared-5.041/get-image-processing.ppc.txt",
+      "ranges": [
+        {
+          "start_va": 622564,
+          "end_va_exclusive": 623984
+        }
+      ],
+      "sha256": "a55988454d87eacc29b716d0931d53c675792b1644bb108ab7367b3a786ea4b3",
+      "literal_references": [
+        {
+          "instruction_va": 622700,
+          "literal_va": 4557792,
+          "text": "Ack"
+        },
+        {
+          "instruction_va": 623260,
+          "literal_va": 4557796,
+          "text": "\n*** GetImage failed"
+        },
+        {
+          "instruction_va": 623292,
+          "literal_va": 4557820,
+          "text": "\n*** m_BufferSize = 0"
+        },
+        {
+          "instruction_va": 623372,
+          "literal_va": 4557844,
+          "text": "ATTACHMENT"
+        },
+        {
+          "instruction_va": 623392,
+          "literal_va": 4557856,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 623412,
+          "literal_va": 4557860,
+          "text": "file_name"
+        },
+        {
+          "instruction_va": 623472,
+          "literal_va": 4557872,
+          "text": "./%s"
+        },
+        {
+          "instruction_va": 623572,
+          "literal_va": 4557880,
+          "text": "Size"
+        },
+        {
+          "instruction_va": 623588,
+          "literal_va": 4557888,
+          "text": "%d"
+        },
+        {
+          "instruction_va": 623640,
+          "literal_va": 4557892,
+          "text": "Light"
+        }
+      ]
+    }
+  ],
+  "ack_literal_references": [
+    {
+      "sample": "dp67",
+      "literal": "^<Nak />",
+      "encoding": "ascii",
+      "instruction_va": 153976,
+      "containing_function": [
+        153536,
+        154524
+      ]
+    },
+    {
+      "sample": "dp67",
+      "literal": "^<Ack />",
+      "encoding": "ascii",
+      "instruction_va": 153996,
+      "containing_function": [
+        153536,
+        154524
+      ]
+    },
+    {
+      "sample": "dp67",
+      "literal": "^<Ack />",
+      "encoding": "ascii",
+      "instruction_va": 155760,
+      "containing_function": [
+        154524,
+        156892
+      ]
+    },
+    {
+      "sample": "dp67",
+      "literal": "^<Ack />",
+      "encoding": "ascii",
+      "instruction_va": 156420,
+      "containing_function": [
+        154524,
+        156892
+      ]
+    },
+    {
+      "sample": "dp67",
+      "literal": "^<Nak />",
+      "encoding": "ascii",
+      "instruction_va": 155772,
+      "containing_function": [
+        154524,
+        156892
+      ]
+    },
+    {
+      "sample": "dp67",
+      "literal": "^<Nak />",
+      "encoding": "ascii",
+      "instruction_va": 156508,
+      "containing_function": [
+        154524,
+        156892
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "literal": "^<Ack/>",
+      "encoding": "ascii",
+      "instruction_va": 171072,
+      "containing_function": [
+        171048,
+        171212
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "literal": "^<Ack />",
+      "encoding": "utf-16le",
+      "instruction_va": 204276,
+      "containing_function": [
+        204232,
+        204292
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "literal": "^<Ack />",
+      "encoding": "utf-16le",
+      "instruction_va": 204496,
+      "containing_function": [
+        204428,
+        204540
+      ]
+    },
+    {
+      "sample": "wiview-1.0.3",
+      "literal": "^<Nak />",
+      "encoding": "utf-16le",
+      "instruction_va": 204524,
+      "containing_function": [
+        204428,
+        204540
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "literal": "^<Ack/>",
+      "encoding": "ascii",
+      "instruction_va": 169244,
+      "containing_function": [
+        169220,
+        169384
+      ]
+    },
+    {
+      "sample": "wiview-1.0.2",
+      "literal": "^<Ack />",
+      "encoding": "utf-16le",
+      "instruction_va": 200804,
+      "containing_function": [
+        200760,
+        200820
+      ]
+    }
+  ],
+  "findings": {
+    "notification_ack": {
+      "picture_taken_and_image_change": "No unsolicited notification Ack is established in the traced DP-67/WiView handlers. WiView's common 0x28664 follow-up drains attachment bytes, not an Ack writer.",
+      "stop_exception": {
+        "wiview_1_0_3_handler": "0x29c28..0x29ccc",
+        "ack_literal_load": "0x29c40",
+        "link_write": "0x29c7c",
+        "wiview_1_0_2_handler": "0x29504..0x295a8"
+      },
+      "image_packets": "Preserve the separately evidenced image-transfer Ack/Nak paths. A packet reply and an unsolicited notification are different protocol contexts.",
+      "limit": "All direct Ack/Nak literal references are listed; this is bounded static analysis, not a proof about every possible dynamic string construction."
+    },
+    "error_0x01": {
+      "classic": {
+        "dispatcher": "0xe6c5c..0xe6e30",
+        "registered_name_lookup": "0xe727c..0xe7320",
+        "null_handler_branch": "0xe6cfc..0xe6d28",
+        "outgoing_enum": 12,
+        "create": "0xe7b60",
+        "selector": "0xe3c18",
+        "selector_case": "0xe3e50..0xe3e80"
+      },
+      "shared_5_041": {
+        "dispatcher": "0x102ddc..0x102fb0",
+        "registered_name_lookup": "0x1033fc..0x1034a0",
+        "null_handler_branch": "0x102e7c..0x102ea8",
+        "outgoing_enum": 12,
+        "create": "0x103ce0",
+        "selector": "0xfff64",
+        "selector_case": "0x10019c..0x1001cc"
+      },
+      "semantics": "A generic no-current-handler dispatch branch constructs Error error_code=0x01; Ack is absent from the nine registered PDA command names. This is not a GetImage-specific busy diagnosis.",
+      "get_image_distinction": "The traced GetImage lookup failure passes standard-error enum 3, mapped to error_code=0x02; image-processing failures use a separate error attribute (e.g. 1ffc/8002). Standard enum 2 is also mapped to 0x01 by the generic constructor, so the numeric code alone is not a unique cause.",
+      "causality_limit": "A superfluous notification Ack could yield an uncorrelated Error that a pending GetImage accepts. This fits the reported symptom but no Valeo firmware dump, live capture or device reproduction was performed here."
+    },
+    "capture_path": {
+      "dp67": "OnPictureTaken consumes the complete file_name, splits on '/', requires first component '.', and resolves the corresponding cached file object. CDOSFile::Cache uses its complete name in the same CProtocolLayer::GetImage used for normal downloads; no auto-only basename substitution was established.",
+      "busy": "Explicit busy=yes is handled as busy/calibration state. This attribute must not be inferred from error_code=0x01.",
+      "wiview": "The PictureTaken parser recognizes parametersReady=yes and imageSaved=yes; notification processing records image model states 0/1/2 respectively, with imageSaved taking precedence. It retains the complete notified path. The extra 0x25570 call in the saved branch performs two-word bookkeeping arithmetic; it is not established as a download-queue operation.",
+      "download_state_gate": "GetBitmapBase 0x51234..0x516fc resolves cache/request variants then constructs GetImage at 0x5143c; no image-state==2 requirement is present in this traced construction path. Notification/UI state handling is not evidence that every automatic preview must await imageSaved. No new universal parametersReady gate is established.",
+      "image_change": "Has a separate route and invalidation notification; does not justify acknowledging or starting an overlapping binary download unconditionally."
+    },
+    "gray_pick": {
+      "wire": "GetImage light=\"{x},{y}\"",
+      "constructor_1_0_3": "0x36070..0x36288",
+      "literal_load": "0x36240",
+      "sync_dimensions": "picturedimensions is parsed as two comma-separated integers; max becomes the landscape grid width W, min its height H (0x2feb4..0x2ff64). Sync target is global+8, so target+0x104/+0x108 become global+0x10c/+0x110.",
+      "full_grid": "Getters 0x38f10/0x38f28 return W-1/H-1; initial full-preview ROI adds 1 at 0x78a90..0x78ab4, making [0,W)x[0,H).",
+      "screen_to_roi": "0x76678..0x76790 scales tap x/y by current ROI width/height divided by displayed image rectangle width/height, then adds ROI origin. The resulting image-grid point is passed to the gray handler at 0x76860.",
+      "orientation": {
+        "parser": "0x2bc9c..0x2bdb8",
+        "enums": {
+          "Portrait CCW": 0,
+          "Portrait CW": 1,
+          "Landscape": 2,
+          "Auto": 3
+        },
+        "gray_handler": "0x777f0..0x77bc0",
+        "CW": "(H-y, x)",
+        "CCW": "(y, W-x)",
+        "Landscape": "(x,y)",
+        "edge_note": "The traced rotation subtracts from W/H, without an explicit -1. Do not silently present an alternative convention as vendor behavior."
+      },
+      "portrait_bitmap_bridge": {
+        "orientation_to_wrapper": "0x5522c reads the photo model orientation; 0x5523c calls wrapper 0x54d98 with that value and the decoded bitmap.",
+        "wrapper": "0x54d98..0x54f3c reads decoded bitmap dimensions. Landscape=2 expects width>=height. Portrait CCW/CW expects height>=width, logging a mismatch if width>height. For a normal portrait bitmap, 0x54ee8..0x54f18 calls 0x955a4 with angle 270 for CW=1 or 90 for CCW=0, then swaps wrapper width/height.",
+        "rotation_helper": "0x955a4..0x95814 allocates the swapped bitmap and calls pixel kernel 0x94de4. DIB constructor 0x92cfc writes a positive height at 0x92d1c. For this 24-bit bottom-up DIB, the kernel's 90 branch (0x94ee8..0x94f94) is visually clockwise; its 270 branch (0x950f4..0x951b0) is counterclockwise.",
+        "logical_pixel_transforms": {
+          "90": "(sourceHeight-1-sourceY, sourceX)",
+          "270": "(sourceY, sourceWidth-1-sourceX)"
+        },
+        "inference": "The PDA rotates a portrait JPEG into a temporary landscape display bitmap; the gray handler restores that display rotation. An Android view of the unchanged original JPEG must not apply the PDA rotation again. With full FIT and consistent photo metadata, normalized JPEG position maps directly to Landscape W by H or Portrait H by W camera grid.",
+        "pixel_edge_convention": "Kernel pixel indices use -1, whereas the separate gray-point edge transform subtracts from W/H. An Android normalized-grid floor/clamp rule is an explicit boundary choice, not asserted bit-identical legacy rounding."
+      },
+      "supported_android_subset": "Full FIT request only; explicit per-photo Landscape, Portrait CW or Portrait CCW bound to the current preview bytes; positive PictureDimensions; unchanged JPEG decode with no additional EXIF/display rotation or unknown crop; JPEG direction/aspect consistent with the grid. Map normalized JPEG position directly to W by H for Landscape or H by W for either Portrait. Reject Auto, missing or contradictory metadata; do not call this MOS sensor pixels.",
+      "remaining_limits": "Arbitrary zoom ROI, unknown crops and automatic EXIF rotations remain outside this bridge. Aspect agreement is a consistency check, not evidence of an otherwise unknown crop. No hardware gray-sample accuracy test was performed; tapping white material does not guarantee a valid exposure/gray result."
+    }
+  }
+}

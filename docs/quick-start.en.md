@@ -1,16 +1,16 @@
-# Leaf2Android 0.3.1: installation, use and build
+# Leaf2Android 0.3.2: installation, use and build
 
 [简体中文](quick-start.md) · [Project home](../README.en.md) · [Capabilities](implementation-status.en.md) · [Full gap matrix](feature-gap-matrix.en.md)
 
 ## Choose an attachment
 
-**0.3.1 (versionCode 4) is an experimental pre-release; updated 2026-11-14.** Use the [v0.3.1 page](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.1) or local `dist/`; see the [release notes](releases/v0.3.1.en.md). DP-67 writes and transaction changes still need real Valeo testing; settings timeouts are not claimed solved.
+**0.3.2 (versionCode 5) is available as a pre-release; updated 2026-11-15.** Use the [v0.3.2 page](https://github.com/RayforLoy/Leaf2Android/releases/tag/v0.3.2) or local `dist/`; see the [release notes](releases/v0.3.2.en.md). Notification corrections and tap sampling still need user retesting on the new build.
 
 | File | Purpose |
 | --- | --- |
-| `Leaf2Android-0.3.1.apk` | Release test app signed with the publisher's release key |
-| `Leaf2Android-0.3.1-debug.apk` | Development APK; signature may differ from release |
-| `Leaf2Android-0.3.1-source.zip` | Buildable source and documentation |
+| `Leaf2Android-0.3.2.apk` | Release test app signed with the publisher's release key |
+| `Leaf2Android-0.3.2-debug.apk` | Development APK; signature may differ from release |
+| `Leaf2Android-0.3.2-source.zip` | Buildable source and documentation |
 | Reference-material archive | Original WiView media, analysis and provenance; not embedded runtime libraries |
 | `*.sha256` / checksum manifest | Corresponding attachment checksums |
 
@@ -21,7 +21,7 @@ The release page lists its actual attachments. App ID: `com.leaf2android`; minim
 Transfer the APK to the phone, open it in a file manager and follow Android's prompt to allow that installation source. With a connected development device:
 
 ```powershell
-adb install -r .\dist\Leaf2Android-0.3.1.apk
+adb install -r .\dist\Leaf2Android-0.3.2.apk
 ```
 
 An in-place update requires the same application ID and signing key. If moving from debug to release produces `INSTALL_FAILED_UPDATE_INCOMPATIBLE`, save needed previews and separately record local notes / marks before uninstalling the old package and installing the new one. Uninstalling removes private app data. Earlier incorrectly named packages have a different ID from `com.leaf2android`; their data is not migrated automatically.
@@ -59,9 +59,15 @@ Open the demo from the shooting page or settings. The app generates and labels i
 
 On 2026-11-11 the user reported working Bluetooth and photo reading on Valeo 22Wi and Aptus 22, without the actual phone / system, firmware, app version or logs. This does not establish a 20-photo sequence or the new writes below. The user also corrected that Aptus II itself has no Bluetooth and is not a current wireless target; the early Aptus II 5 plan is historical. 5.041 PDAInterface is shared code, not evidence of Aptus II Bluetooth hardware. Family branding is not universal compatibility.
 
-The 2026-11-14 Valeo report describes working photo reads followed by settings timeouts, without identifying the changed field. The screenshot shows app-initiated closure after waiting too long; it does not establish an earlier physical disconnect, rejected write or software stability ranking. This release supplies candidate changes awaiting same-device retesting; see the [public-evidence review](valeo-connection-research.en.md).
+On 2026-11-15 the user reports very stable Valeo v0.3.1 connectivity and working shooting settings including ISO and gray balance. Automatic preview still receives `Error error_code="0x01"`, while READY and manual reading of new photos remain available. The 11-14 settings timeout is historical. This release's notification correction is not yet proven on the user's device; complete environment and capture-sequence records remain missing. See the [device record](implementation-status.en.md).
 
 Classic Aptus **4.701** has been independently checked as primary evidence, containing the Aptus 22 model and nine PDA command classes; see the [firmware Bluetooth survey](firmware-bluetooth-survey.en.md). It is not a dedicated Aptus 22 flash image or proof of installed user firmware. 5.041 settings are used only when the device's Sync supplies that structure.
+
+## When automatic preview is rejected
+
+Ordinary PictureTaken / ImageChange and similar asynchronous notifications do not receive automatic Ack; Stop has dedicated confirmation. [Static review](capture-notifications-analysis.en.md) of original clients and 4.701 / 5.041 firmware shows that an extra Ack can be treated as an unknown command returning 0x01, potentially consumed by a waiting GetImage. This is a candidate explanation, not a wireless capture from the user; 0x01 must not be called busy.
+
+This build removes automatic ordinary-notification Ack in normal and laboratory handling, without adding a parametersReady hard gate, blind retries or changes to the reported-stable shooting-settings path. A complete Error refusal differs from a transport timeout: READY permits a manual refresh of the exact photo path; timeout still closes and needs manual reconnect. Errors identify request tag / attribute names without request values and redact known sensitive reply fields. Codes accept decimal or 0x / 0X hexadecimal DWORDs; 0x00 is zero and unknown syntax is conservatively rejected.
 
 ## Configure shooting from the Back page
 
@@ -94,7 +100,7 @@ The **12 core DP-67 fields** are SetupName, ShootingFolder, ISO, ImageQuality, F
 
 Editing an original preset submits to `original-name.1`. The original DP-67 name rule is retained: an existing name containing `.1` keeps its modified slot. Confirmation shows the destination and warns that an existing same-name slot will be updated. Read-back must confirm values, new active name and unchanged original preset. Updating a modified slot is not a backup or automatic undo.
 
-Selecting an original preset sends only DefaultShootSetup; selecting an existing `.1` modified setup sends complete DP-67 CSV. Pre-Sync, set and read-back are one queued operation, excluding automatic GetImage while notification Ack remains available. The original 12-second × 3 retry strategy is not copied: writes do not retry automatically and timeout still closes the stream. See [DP-67 analysis](dp67-analysis.en.md) for static evidence and package provenance.
+Selecting an original preset sends only DefaultShootSetup; selecting an existing `.1` modified setup sends complete DP-67 CSV. Pre-Sync, set and read-back are one queued operation, excluding automatic GetImage. Version 0.3.2 sends no automatic Ack for ordinary notifications, retaining only dedicated Stop confirmation. The original 12-second × 3 retry strategy is not copied: writes do not retry automatically and timeout still closes the stream. See [DP-67 analysis](dp67-analysis.en.md) for static evidence and package provenance.
 
 ## Image-processing settings
 
@@ -116,26 +122,29 @@ Strict Base64 / UTF-8 XMP decoding reads GetPictureParams's `xmp_tag` header. Go
 
 ## Back folders and photos
 
-The 0.3.1 scope is folder creation, empty-folder deletion, folder rename, photo deletion and internal copy / move. It does not create arbitrary files or transfer complete MOS originals to the phone.
+Use **Photo actions** on the photo page for back marks, back notes, copy / move and deletion; phone stars and local notes remain separate. Folder creation, empty-folder removal and folder rename remain on **Back**. Arbitrary individual MOS-file rename is not provided.
 
-1. Refresh folders and select the exact back path. Copy / move also needs a destination folder on the back.
-2. Review source, destination and action. Existing destinations must not be silently overwritten; non-empty folders are not treated as empty.
-3. Send only after explicit user confirmation. Connecting, previewing or refreshing a directory does not automatically delete anything.
-4. Read the affected directories afterward. An error or mismatching read-back is not success; changing a phone-side path alone is not proof of completion on the back.
+1. Refresh folders and select the exact photo; copy / move also needs a destination folder on the back.
+2. Review the actual device, full source and destination paths. Existing destinations are not overwritten. Ordinary refresh never deletes a file.
+3. Deletion requires a second confirmation showing the back and complete photo path. Check the selected photo before confirming.
+4. Only directory read-back proving absence removes the source from the phone list and its cache; deleting the selected photo chooses a neighbor when available. Refusal or failed verification retains local records. Refresh the directory to inspect actual back state.
+5. Move verifies source absence and target presence before removing source records / cache and reading the target preview. Ack alone is insufficient. Copy retains the source.
 
-Deletion changes back storage. A laboratory recovery request is not a verified undo guarantee. These storage operations remain untested by the user on hardware.
+Storage effects still need user hardware testing. Deletion changes back storage; laboratory recovery is not a verified undo. Failure does not prove the back performed nothing, so inspect actual directories before the next action.
 
 ## Back-processed previews, gray balance and exposure inspection
 
-These controls are implemented; effects on actual firmware remain unverified. They request processing for the current photo on the back and are displayed separately from phone-side JPEG processing.
+**Back image tools** on the photo page opens processed preview, gray balance, pixel picking and back histograms; the **Back** page entry remains. The user's working v0.3.1 gray-balance shooting settings do not establish acceptance of new tap sampling or current-photo commits.
 
-1. **Processed preview:** select the original zoom `1 / 2 / 4 / 8` and optionally request highlight, shadow or both Alarm indicators. The back returns a processed JPEG. This is separate from local pinch zoom.
-2. **Original-image coordinates:** enter protocol coordinates manually as needed. The full mapping from Compose points, fit-to-screen, cropped viewports and photo orientation to the original image has not been verified. Screen taps and JPEG thumbnail coordinates are not automatically guessed into back coordinates. Do not guess when actual orientation or original dimensions are unknown.
-3. **Gray balance:** inspect the sampled preview and returned Light string. Confirm separately to write the current photo or apply it to future captures; preview restore is another action. Sampling does not submit automatically. Future captures use complete legacy ShootSetup.Light / 5.041 ImageSettings.Light. Only a sample returned by this back in this connection and still tied to the current photo may bypass the static illuminant list; CSV delimiters remain rejected, other fields are preserved and Sync verifies the result. Arbitrary typed values cannot bypass validation.
-4. **Pixel / exposure picking:** send `ImageFunction fstops="x;y"` for the chosen coordinates and display returned histogramlocation / histogramvalue. Here fstops carries coordinates, not aperture.
-5. **Back histograms:** show the actual histogram / r / g / b bin counts rather than assuming 256. Label them “from back; RAW / JPEG source unconfirmed.” The phone's local JPEG histogram remains separate.
+1. **Processed preview:** select original `1 / 2 / 4 / 8` zoom and optionally highlight, shadow or both Alarm indicators. The returned JPEG is processed by the back, separate from phone pinch zoom / JPEG warnings.
+2. **Tap a white / gray area:** explicitly enter gray-balance picking mode, then tap a desired neutral area. Pinch and double-tap still zoom. Letterbox areas and points outside the image boundary do not send requests.
+3. **Automatic coordinates are conditional:** the current main preview, explicit orientation in that photo's metadata, `Sync.PictureDimensions`, preview SHA binding and consistent aspect evidence must agree. Landscape uses max×min reference dimensions; Portrait CW / CCW uses min×max. Auto, unknown orientation or conflicting dimensions prevents automatic sampling; manual coordinates remain available. These are back-reference-grid coordinates, not claimed MOS / RAW sensor pixels.
+4. **Inspect the back's sample:** the app requests a processed preview and displays returned Light; it does not invent Kelvin / tint from phone JPEG pixels. Sampling does not commit. Confirm separately for the current photo or future captures; restoring preview is another action.
+5. **Retain sample provenance:** every preview refresh clears old photo metadata / samples; reread needed information before picking again. The sampled point, Light, photo SHA and connection are strictly bound. Reconnection, same-name replacement or another photo cannot reuse an old point.
+6. **Future captures:** submit complete legacy ShootSetup.Light / 5.041 ImageSettings.Light. Only the current back's current-connection sample still tied to this photo may bypass static illuminant choices. CSV delimiters stay rejected, other fields are preserved and Sync verifies the result. Arbitrary typed Light has no such exemption.
+7. **Exposure picking and histograms:** ImageFunction fstops carries coordinates, not aperture. Back histograms use returned bin counts with RAW / JPEG source unconfirmed, separate from the known phone-local JPEG source.
 
-Gray-balance confirmation / restore Ack means the back received the request. Reread metadata and previews and check the physical effect; Ack is not a measured color change. None of these functions is continuous live view or complete MOS transfer.
+A current-photo gray-balance Ack acknowledges the request; reread the preview to inspect actual color effects. Tap mapping, processed effects and new entry points still require hardware retests. They are not continuous live view or complete MOS transfer.
 
 ## Clock, future-capture notes and session requests
 
@@ -152,6 +161,8 @@ EnableTakenPicture is now in the laboratory. no has not been proved to stop noti
 ## Laboratory manual testing
 
 At the top of **Back**, choose **Open laboratory** for a full-screen workbench. It exposes original-client calls, firmware candidates and user hypotheses for active testing. Unresolved scope or semantics remain experimental rather than verified standard functions. Opening the page, choosing a template or generating a request does not send automatically.
+
+The Ack template remains an explicit manual experiment, not an ordinary-notification requirement; it may be rejected as unknown by the examined PDA interface. Automatic laboratory notification handling also sends no ordinary Ack.
 
 1. **Record the device context.** Note exact back model, firmware, phone system and app version. Wait for ordinary operations to finish. Experiments pause normal post-capture image reads and configuration refresh.
 2. **Choose a template or raw header.** The 16 WiView templates cover Brightness, CurrentTime, ResetCounter, PIN, two CEVersion values, FactorySettings, qformat / recovery, XMP-only / annotation+XMP, EnableTakenPicture, Ack / ReSyncRequest and GetCameraParam / single-attribute SetCameraParam probes. Read evidence, effects and unknowns; supply actual inputs and generate the request. There is no default PIN, brightness range or storage root.

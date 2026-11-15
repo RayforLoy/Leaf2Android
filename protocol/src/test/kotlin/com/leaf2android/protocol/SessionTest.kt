@@ -101,4 +101,18 @@ class SessionTest {
         t.output.receive(); t.send("^<Ack error_code='5' />")
         assertIs<ProtocolException>(request.await().exceptionOrNull())
     }
+    @Test fun hexadecimalZeroAckSucceedsWithoutDisconnecting() = session { p, t, _ ->
+        val request = async { p.execute(Commands.battery) }
+        t.output.receive(); t.send("^<Ack error_code='0x00' battery_percent='80' />")
+        assertEquals("80", request.await().value("battery_percent"))
+        assertFalse(t.closed)
+    }
+    @Test fun hexadecimalRefusalRetainsRequestContextAndTheConnectedStream() = session { p, t, _ ->
+        val request = async { runCatching { p.execute(Commands.image("./new.mos")) } }
+        t.output.receive(); t.send("^<Error error_code='0x01' />")
+        val rejected = assertIs<CommandRejectedException>(request.await().exceptionOrNull())
+        assertEquals(1L, rejected.errorCode)
+        assertContains(rejected.message.orEmpty(), "GetImage [file_name]")
+        assertFalse(t.closed)
+    }
 }

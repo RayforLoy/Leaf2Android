@@ -1,0 +1,524 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x298ac..0x2a0d4, exclusive
+000298ac [file 00018cac] mov       ip, sp
+000298b0 [file 00018cb0] push      {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
+000298b4 [file 00018cb4] add       fp, sp, #0x28
+000298b8 [file 00018cb8] sub       sp, sp, #0x2c
+000298bc [file 00018cbc] mov       r5, r0
+000298c0 [file 00018cc0] str       r5, [fp, #-0x4c]
+000298c4 [file 00018cc4] ldr       r0, [pc, #0x878] ; 'ReadThreadProc'
+000298c8 [file 00018cc8] mov       r1, r0
+000298cc [file 00018ccc] mvn       r0, #0x3b
+000298d0 [file 00018cd0] add       r0, fp, r0
+000298d4 [file 00018cd4] bl        #0x62844
+000298d8 [file 00018cd8] ldr       r7, [pc, #0x8c0]
+000298dc [file 00018cdc] ldr       r4, [pc, #0x85c]
+000298e0 [file 00018ce0] ldr       sl, [pc, #0x8b4] ; 'PowerManagement'
+000298e4 [file 00018ce4] ldr       r8, [pc, #0x8ac] ; 'ShutDown'
+000298e8 [file 00018ce8] ldr       r6, [pc, #0x8a4] ; 'PictureTaken'
+000298ec [file 00018cec] ldr       sb, [pc, #0x85c]
+000298f0 [file 00018cf0] ldr       r0, [r5, #4]
+000298f4 [file 00018cf4] bl        #0x6ba00
+000298f8 [file 00018cf8] cmp       r0, #0
+000298fc [file 00018cfc] bls       #0x2a03c
+00029900 [file 00018d00] mov       r0, #0
+00029904 [file 00018d04] str       r0, [fp, #-0x44]
+00029908 [file 00018d08] mvn       r1, #0x43
+0002990c [file 00018d0c] add       r1, fp, r1
+00029910 [file 00018d10] mov       r0, r5
+00029914 [file 00018d14] bl        #0x2a1a4
+00029918 [file 00018d18] mov       r4, r0
+0002991c [file 00018d1c] cmp       r4, #0
+00029920 [file 00018d20] ble       #0x2a0c4
+00029924 [file 00018d24] ldr       r0, [r5, #0x10]
+00029928 [file 00018d28] ldr       r1, [fp, #-0x44]
+0002992c [file 00018d2c] add       r2, r0, r4
+00029930 [file 00018d30] mov       r0, #0
+00029934 [file 00018d34] strb      r0, [r2, r1]
+00029938 [file 00018d38] mov       r1, #0
+0002993c [file 00018d3c] ldr       r3, [r5, #0x10]
+00029940 [file 00018d40] ldr       r0, [fp, #-0x44]
+00029944 [file 00018d44] add       r2, r3, r0
+00029948 [file 00018d48] ldr       r3, [sb]
+0002994c [file 00018d4c] mov       r0, r3
+00029950 [file 00018d50] ldr       r3, [r3]
+00029954 [file 00018d54] ldr       r3, [r3, #0xc]
+00029958 [file 00018d58] mov       lr, pc
+0002995c [file 00018d5c] mov       pc, r3
+00029960 [file 00018d60] lsl       r0, r4, #1
+00029964 [file 00018d64] bl        #0x9a21c
+00029968 [file 00018d68] mov       r5, r0
+0002996c [file 00018d6c] add       r0, r4, #1
+00029970 [file 00018d70] str       r5, [sp]
+00029974 [file 00018d74] str       r0, [sp, #4]
+00029978 [file 00018d78] sub       r3, r4, #1
+0002997c [file 00018d7c] ldr       r0, [fp, #-0x4c]
+00029980 [file 00018d80] ldr       r1, [r0, #0x10]
+00029984 [file 00018d84] ldr       r0, [fp, #-0x44]
+00029988 [file 00018d88] add       r1, r1, r0
+0002998c [file 00018d8c] add       r2, r1, #1
+00029990 [file 00018d90] mov       r1, #0
+00029994 [file 00018d94] mov       r0, #0
+00029998 [file 00018d98] bl        #0x9a5b8
+0002999c [file 00018d9c] add       r1, r5, r0, lsl #1
+000299a0 [file 00018da0] mov       r4, #0
+000299a4 [file 00018da4] strh      r4, [r1]
+000299a8 [file 00018da8] ldr       r0, [r7]
+000299ac [file 00018dac] str       r0, [fp, #-0x48]
+000299b0 [file 00018db0] str       r4, [fp, #-0x34]
+000299b4 [file 00018db4] str       r4, [fp, #-0x30]
+000299b8 [file 00018db8] str       r4, [fp, #-0x2c]
+000299bc [file 00018dbc] mvn       r2, #0x47
+000299c0 [file 00018dc0] add       r2, fp, r2
+000299c4 [file 00018dc4] mvn       r1, #0x33
+000299c8 [file 00018dc8] add       r1, fp, r1
+000299cc [file 00018dcc] mov       r0, r5
+000299d0 [file 00018dd0] bl        #0x9584c
+000299d4 [file 00018dd4] mov       r0, r5
+000299d8 [file 00018dd8] bl        #0x9a150
+000299dc [file 00018ddc] ldr       r0, [fp, #-0x48]
+000299e0 [file 00018de0] mov       r1, r6
+000299e4 [file 00018de4] str       r4, [fp, #-0x40]
+000299e8 [file 00018de8] bl        #0x9a2dc
+000299ec [file 00018dec] cmp       r0, #0
+000299f0 [file 00018df0] bne       #0x29a74
+000299f4 [file 00018df4] ldr       r5, [fp, #-0x4c]
+000299f8 [file 00018df8] mvn       r2, #0x3f
+000299fc [file 00018dfc] add       r2, fp, r2
+00029a00 [file 00018e00] mvn       r1, #0x33
+00029a04 [file 00018e04] add       r1, fp, r1
+00029a08 [file 00018e08] mov       r0, r5
+00029a0c [file 00018e0c] bl        #0x282d4
+00029a10 [file 00018e10] mvn       r1, #0x33
+00029a14 [file 00018e14] add       r1, fp, r1
+00029a18 [file 00018e18] mov       r0, r5
+00029a1c [file 00018e1c] bl        #0x28220
+00029a20 [file 00018e20] ldr       r3, [fp, #-0x40]
+00029a24 [file 00018e24] cmp       r3, #0
+00029a28 [file 00018e28] bne       #0x2a008
+00029a2c [file 00018e2c] ldr       r4, [pc, #0x70c]
+00029a30 [file 00018e30] ldr       r0, [r4]
+00029a34 [file 00018e34] add       r0, r0, #8
+00029a38 [file 00018e38] bl        #0x25338
+00029a3c [file 00018e3c] cmp       r0, #0
+00029a40 [file 00018e40] beq       #0x2a00c
+00029a44 [file 00018e44] ldr       r0, [r4]
+00029a48 [file 00018e48] mov       r1, #0
+00029a4c [file 00018e4c] add       r0, r0, #8
+00029a50 [file 00018e50] bl        #0x25360
+00029a54 [file 00018e54] mov       r0, #8
+00029a58 [file 00018e58] bl        #0x9a21c
+00029a5c [file 00018e5c] cmp       r0, #0
+00029a60 [file 00018e60] str       r0, [fp, #-0x38]
+00029a64 [file 00018e64] beq       #0x29fe4
+00029a68 [file 00018e68] mov       r1, #0
+00029a6c [file 00018e6c] bl        #0x17df0
+00029a70 [file 00018e70] b         #0x29fec
+00029a74 [file 00018e74] ldr       r0, [fp, #-0x48]
+00029a78 [file 00018e78] mov       r1, r8
+00029a7c [file 00018e7c] bl        #0x9a2dc
+00029a80 [file 00018e80] cmp       r0, #0
+00029a84 [file 00018e84] bne       #0x29aa0
+00029a88 [file 00018e88] ldr       r5, [fp, #-0x4c]
+00029a8c [file 00018e8c] mvn       r1, #0x33
+00029a90 [file 00018e90] add       r1, fp, r1
+00029a94 [file 00018e94] mov       r0, r5
+00029a98 [file 00018e98] bl        #0x28750
+00029a9c [file 00018e9c] b         #0x29a10
+00029aa0 [file 00018ea0] ldr       r0, [fp, #-0x48]
+00029aa4 [file 00018ea4] mov       r1, sl
+00029aa8 [file 00018ea8] bl        #0x9a2dc
+00029aac [file 00018eac] cmp       r0, #0
+00029ab0 [file 00018eb0] bne       #0x29acc
+00029ab4 [file 00018eb4] ldr       r5, [fp, #-0x4c]
+00029ab8 [file 00018eb8] mvn       r1, #0x33
+00029abc [file 00018ebc] add       r1, fp, r1
+00029ac0 [file 00018ec0] mov       r0, r5
+00029ac4 [file 00018ec4] bl        #0x287b4
+00029ac8 [file 00018ec8] b         #0x29a10
+00029acc [file 00018ecc] ldr       r1, [pc, #0x6bc] ; 'BeepNotification'
+00029ad0 [file 00018ed0] ldr       r0, [fp, #-0x48]
+00029ad4 [file 00018ed4] bl        #0x9a2dc
+00029ad8 [file 00018ed8] cmp       r0, #0
+00029adc [file 00018edc] bne       #0x29af8
+00029ae0 [file 00018ee0] ldr       r5, [fp, #-0x4c]
+00029ae4 [file 00018ee4] mvn       r1, #0x33
+00029ae8 [file 00018ee8] add       r1, fp, r1
+00029aec [file 00018eec] mov       r0, r5
+00029af0 [file 00018ef0] bl        #0x28810
+00029af4 [file 00018ef4] b         #0x29a10
+00029af8 [file 00018ef8] ldr       r1, [pc, #0x68c] ; 'StorageNotification'
+00029afc [file 00018efc] ldr       r0, [fp, #-0x48]
+00029b00 [file 00018f00] bl        #0x9a2dc
+00029b04 [file 00018f04] cmp       r0, #0
+00029b08 [file 00018f08] bne       #0x29b24
+00029b0c [file 00018f0c] ldr       r5, [fp, #-0x4c]
+00029b10 [file 00018f10] mvn       r1, #0x33
+00029b14 [file 00018f14] add       r1, fp, r1
+00029b18 [file 00018f18] mov       r0, r5
+00029b1c [file 00018f1c] bl        #0x28ac4
+00029b20 [file 00018f20] b         #0x29a10
+00029b24 [file 00018f24] ldr       r1, [pc, #0x65c] ; 'PictureParamsChange'
+00029b28 [file 00018f28] ldr       r0, [fp, #-0x48]
+00029b2c [file 00018f2c] bl        #0x9a2dc
+00029b30 [file 00018f30] cmp       r0, #0
+00029b34 [file 00018f34] bne       #0x29b50
+00029b38 [file 00018f38] ldr       r5, [fp, #-0x4c]
+00029b3c [file 00018f3c] mvn       r1, #0x33
+00029b40 [file 00018f40] add       r1, fp, r1
+00029b44 [file 00018f44] mov       r0, r5
+00029b48 [file 00018f48] bl        #0x28de8
+00029b4c [file 00018f4c] b         #0x29a10
+00029b50 [file 00018f50] ldr       r1, [pc, #0x62c] ; 'FileSystemChange'
+00029b54 [file 00018f54] ldr       r0, [fp, #-0x48]
+00029b58 [file 00018f58] bl        #0x9a2dc
+00029b5c [file 00018f5c] cmp       r0, #0
+00029b60 [file 00018f60] bne       #0x29b7c
+00029b64 [file 00018f64] ldr       r5, [fp, #-0x4c]
+00029b68 [file 00018f68] mvn       r1, #0x33
+00029b6c [file 00018f6c] add       r1, fp, r1
+00029b70 [file 00018f70] mov       r0, r5
+00029b74 [file 00018f74] bl        #0x28ea0
+00029b78 [file 00018f78] b         #0x29a10
+00029b7c [file 00018f7c] ldr       r1, [pc, #0x5fc] ; 'ImageChange'
+00029b80 [file 00018f80] ldr       r0, [fp, #-0x48]
+00029b84 [file 00018f84] bl        #0x9a2dc
+00029b88 [file 00018f88] cmp       r0, #0
+00029b8c [file 00018f8c] bne       #0x29ba8
+00029b90 [file 00018f90] ldr       r5, [fp, #-0x4c]
+00029b94 [file 00018f94] mvn       r1, #0x33
+00029b98 [file 00018f98] add       r1, fp, r1
+00029b9c [file 00018f9c] mov       r0, r5
+00029ba0 [file 00018fa0] bl        #0x29448
+00029ba4 [file 00018fa4] b         #0x29a10
+00029ba8 [file 00018fa8] ldr       r1, [pc, #0x5cc] ; 'CameraParamChange'
+00029bac [file 00018fac] ldr       r0, [fp, #-0x48]
+00029bb0 [file 00018fb0] bl        #0x9a2dc
+00029bb4 [file 00018fb4] cmp       r0, #0
+00029bb8 [file 00018fb8] bne       #0x29bd4
+00029bbc [file 00018fbc] ldr       r5, [fp, #-0x4c]
+00029bc0 [file 00018fc0] mvn       r1, #0x33
+00029bc4 [file 00018fc4] add       r1, fp, r1
+00029bc8 [file 00018fc8] mov       r0, r5
+00029bcc [file 00018fcc] bl        #0x295b0
+00029bd0 [file 00018fd0] b         #0x29a10
+00029bd4 [file 00018fd4] ldr       r1, [pc, #0x59c] ; 'Send'
+00029bd8 [file 00018fd8] ldr       r0, [fp, #-0x48]
+00029bdc [file 00018fdc] bl        #0x9a2dc
+00029be0 [file 00018fe0] cmp       r0, #0
+00029be4 [file 00018fe4] bne       #0x29c00
+00029be8 [file 00018fe8] ldr       r5, [fp, #-0x4c]
+00029bec [file 00018fec] mvn       r1, #0x33
+00029bf0 [file 00018ff0] add       r1, fp, r1
+00029bf4 [file 00018ff4] mov       r0, r5
+00029bf8 [file 00018ff8] bl        #0x294f8
+00029bfc [file 00018ffc] b         #0x29a10
+00029c00 [file 00019000] ldr       r1, [pc, #0x56c] ; 'Stop'
+00029c04 [file 00019004] ldr       r0, [fp, #-0x48]
+00029c08 [file 00019008] bl        #0x9a2dc
+00029c0c [file 0001900c] cmp       r0, #0
+00029c10 [file 00019010] bne       #0x29c2c
+00029c14 [file 00019014] ldr       r5, [fp, #-0x4c]
+00029c18 [file 00019018] mvn       r1, #0x33
+00029c1c [file 0001901c] add       r1, fp, r1
+00029c20 [file 00019020] mov       r0, r5
+00029c24 [file 00019024] bl        #0x29504
+00029c28 [file 00019028] b         #0x29a10
+00029c2c [file 0001902c] ldr       r0, [fp, #-0x48]
+00029c30 [file 00019030] bl        #0x2bf34
+00029c34 [file 00019034] cmp       r0, #0
+00029c38 [file 00019038] beq       #0x2a000
+00029c3c [file 0001903c] ldr       r4, [fp, #-0x4c]
+00029c40 [file 00019040] add       r1, r4, #0x24
+00029c44 [file 00019044] mov       r0, r1
+00029c48 [file 00019048] bl        #0x37398
+00029c4c [file 0001904c] cmp       r0, #0
+00029c50 [file 00019050] beq       #0x29f78
+00029c54 [file 00019054] mov       r0, #0
+00029c58 [file 00019058] ldr       r1, [pc, #0x510] ; 'Error'
+00029c5c [file 0001905c] mov       sb, r0
+00029c60 [file 00019060] ldr       r0, [fp, #-0x48]
+00029c64 [file 00019064] bl        #0x9a2dc
+00029c68 [file 00019068] cmp       r0, #0
+00029c6c [file 0001906c] moveq     r0, #1
+00029c70 [file 00019070] moveq     sb, r0
+00029c74 [file 00019074] ldr       r0, [r4, #0xc]
+00029c78 [file 00019078] movs      r5, r0
+00029c7c [file 0001907c] beq       #0x29ec4
+00029c80 [file 00019080] ldr       sb, [pc, #0x4c8]
+00029c84 [file 00019084] ldr       r0, [sb]
+00029c88 [file 00019088] add       r0, r0, #0xc
+00029c8c [file 0001908c] bl        #0x9a2d0
+00029c90 [file 00019090] ldr       r4, [sb]
+00029c94 [file 00019094] mov       r3, #0x590
+00029c98 [file 00019098] ldr       r2, [pc, #0x4ac] ; 'CommandProcessor.cpp'
+00029c9c [file 0001909c] mov       r0, r4
+00029ca0 [file 000190a0] ldr       r4, [r4]
+00029ca4 [file 000190a4] orr       r3, r3, #0xb
+00029ca8 [file 000190a8] ldr       r4, [r4, #0x10]
+00029cac [file 000190ac] mov       r1, #0
+00029cb0 [file 000190b0] mov       lr, pc
+00029cb4 [file 000190b4] mov       pc, r4
+00029cb8 [file 000190b8] ldr       r3, [sb]
+00029cbc [file 000190bc] ldr       r2, [pc, #0x4a8] ; 'Before Process Responce'
+00029cc0 [file 000190c0] mov       r0, r3
+00029cc4 [file 000190c4] ldr       r3, [r3]
+00029cc8 [file 000190c8] ldr       r1, [pc, #0x474] ; 'ReadThreadProc'
+00029ccc [file 000190cc] ldr       r3, [r3, #4]
+00029cd0 [file 000190d0] mov       lr, pc
+00029cd4 [file 000190d4] mov       pc, r3
+00029cd8 [file 000190d8] ldr       r3, [sb]
+00029cdc [file 000190dc] add       r0, r3, #0xc
+00029ce0 [file 000190e0] bl        #0x9a2c4
+00029ce4 [file 000190e4] ldr       r0, [fp, #-0x4c]
+00029ce8 [file 000190e8] ldr       r4, [r5]
+00029cec [file 000190ec] mvn       r3, #0x33
+00029cf0 [file 000190f0] add       r3, fp, r3
+00029cf4 [file 000190f4] ldr       r1, [r0, #4]
+00029cf8 [file 000190f8] mov       r0, r5
+00029cfc [file 000190fc] ldr       r2, [fp, #-0x48]
+00029d00 [file 00019100] ldr       r4, [r4, #4]
+00029d04 [file 00019104] mov       lr, pc
+00029d08 [file 00019108] mov       pc, r4
+00029d0c [file 0001910c] ldr       r4, [fp, #-0x4c]
+00029d10 [file 00019110] cmp       r0, #0
+00029d14 [file 00019114] mov       r0, #1
+00029d18 [file 00019118] movne     r0, #0
+00029d1c [file 0001911c] mov       sb, r0
+00029d20 [file 00019120] ldr       r0, [r5, #4]
+00029d24 [file 00019124] cmp       r0, #0
+00029d28 [file 00019128] mvneq     r1, #0x33
+00029d2c [file 0001912c] addeq     r1, fp, r1
+00029d30 [file 00019130] moveq     r0, r4
+00029d34 [file 00019134] bleq      #0x28220
+00029d38 [file 00019138] cmp       sb, #0
+00029d3c [file 0001913c] bne       #0x29dcc
+00029d40 [file 00019140] ldr       r0, [r4, #0x1c]
+00029d44 [file 00019144] mov       r1, #3
+00029d48 [file 00019148] bl        #0x9a33c
+00029d4c [file 0001914c] mov       r5, r0
+00029d50 [file 00019150] ldr       r0, [pc, #0x3f8]
+00029d54 [file 00019154] ldr       r0, [r0]
+00029d58 [file 00019158] add       r0, r0, #0xc
+00029d5c [file 0001915c] bl        #0x9a2d0
+00029d60 [file 00019160] ldr       r0, [pc, #0x3e8]
+00029d64 [file 00019164] mov       r3, #0x5a0
+00029d68 [file 00019168] ldr       r2, [pc, #0x3dc] ; 'CommandProcessor.cpp'
+00029d6c [file 0001916c] ldr       r4, [r0]
+00029d70 [file 00019170] orr       r3, r3, #6
+00029d74 [file 00019174] mov       r1, #0
+00029d78 [file 00019178] mov       r0, r4
+00029d7c [file 0001917c] ldr       r4, [r4]
+00029d80 [file 00019180] ldr       r4, [r4, #0x10]
+00029d84 [file 00019184] mov       lr, pc
+00029d88 [file 00019188] mov       pc, r4
+00029d8c [file 0001918c] ldr       r0, [pc, #0x3bc]
+00029d90 [file 00019190] mov       r3, r5
+00029d94 [file 00019194] ldr       r2, [pc, #0x3cc] ; 'Set ResponseProcessedEvent. Result %d'
+00029d98 [file 00019198] ldr       r4, [r0]
+00029d9c [file 0001919c] ldr       r1, [pc, #0x3a0] ; 'ReadThreadProc'
+00029da0 [file 000191a0] mov       r0, r4
+00029da4 [file 000191a4] ldr       r4, [r4]
+00029da8 [file 000191a8] ldr       r4, [r4, #4]
+00029dac [file 000191ac] mov       lr, pc
+00029db0 [file 000191b0] mov       pc, r4
+00029db4 [file 000191b4] ldr       r4, [pc, #0x394]
+00029db8 [file 000191b8] ldr       r3, [r4]
+00029dbc [file 000191bc] add       r0, r3, #0xc
+00029dc0 [file 000191c0] bl        #0x9a2c4
+00029dc4 [file 000191c4] ldr       r5, [fp, #-0x4c]
+00029dc8 [file 000191c8] b         #0x29e54
+00029dcc [file 000191cc] ldr       r1, [pc, #0x390] ; 'ResyncResponse'
+00029dd0 [file 000191d0] ldr       r0, [fp, #-0x48]
+00029dd4 [file 000191d4] ldr       r5, [fp, #-0x4c]
+00029dd8 [file 000191d8] bl        #0x9a2dc
+00029ddc [file 000191dc] ldr       r4, [pc, #0x36c]
+00029de0 [file 000191e0] cmp       r0, #0
+00029de4 [file 000191e4] bne       #0x29e54
+00029de8 [file 000191e8] ldr       r0, [r4]
+00029dec [file 000191ec] mov       r1, #0
+00029df0 [file 000191f0] mov       sb, r1
+00029df4 [file 000191f4] add       r0, r0, #0xc
+00029df8 [file 000191f8] bl        #0x9a2d0
+00029dfc [file 000191fc] ldr       r4, [r4]
+00029e00 [file 00019200] mov       r3, #0x5a0
+00029e04 [file 00019204] ldr       r2, [pc, #0x340] ; 'CommandProcessor.cpp'
+00029e08 [file 00019208] mov       r0, r4
+00029e0c [file 0001920c] ldr       r4, [r4]
+00029e10 [file 00019210] orr       r3, r3, #0xe
+00029e14 [file 00019214] ldr       r4, [r4, #0x10]
+00029e18 [file 00019218] mov       r1, #0
+00029e1c [file 0001921c] mov       lr, pc
+00029e20 [file 00019220] mov       pc, r4
+00029e24 [file 00019224] ldr       r4, [pc, #0x324]
+00029e28 [file 00019228] ldr       r2, [pc, #0x330] ; 'Ignoring unexpected ResyncResponse'
+00029e2c [file 0001922c] ldr       r3, [r4]
+00029e30 [file 00019230] ldr       r1, [pc, #0x30c] ; 'ReadThreadProc'
+00029e34 [file 00019234] mov       r0, r3
+00029e38 [file 00019238] ldr       r3, [r3]
+00029e3c [file 0001923c] ldr       r3, [r3, #4]
+00029e40 [file 00019240] mov       lr, pc
+00029e44 [file 00019244] mov       pc, r3
+00029e48 [file 00019248] ldr       r3, [r4]
+00029e4c [file 0001924c] add       r0, r3, #0xc
+00029e50 [file 00019250] bl        #0x9a2c4
+00029e54 [file 00019254] ldr       r0, [r4]
+00029e58 [file 00019258] add       r0, r0, #0xc
+00029e5c [file 0001925c] bl        #0x9a2d0
+00029e60 [file 00019260] ldr       r0, [pc, #0x2e8]
+00029e64 [file 00019264] mov       r3, #0x5b0
+00029e68 [file 00019268] ldr       r2, [pc, #0x2dc] ; 'CommandProcessor.cpp'
+00029e6c [file 0001926c] ldr       r4, [r0]
+00029e70 [file 00019270] orr       r3, r3, #1
+00029e74 [file 00019274] mov       r1, #0
+00029e78 [file 00019278] mov       r0, r4
+00029e7c [file 0001927c] ldr       r4, [r4]
+00029e80 [file 00019280] ldr       r4, [r4, #0x10]
+00029e84 [file 00019284] mov       lr, pc
+00029e88 [file 00019288] mov       pc, r4
+00029e8c [file 0001928c] ldr       r4, [pc, #0x2bc]
+00029e90 [file 00019290] ldr       r2, [pc, #0x2c4] ; 'After Process Responce'
+00029e94 [file 00019294] ldr       r3, [r4]
+00029e98 [file 00019298] ldr       r1, [pc, #0x2a4] ; 'ReadThreadProc'
+00029e9c [file 0001929c] mov       r0, r3
+00029ea0 [file 000192a0] ldr       r3, [r3]
+00029ea4 [file 000192a4] ldr       r3, [r3, #4]
+00029ea8 [file 000192a8] mov       lr, pc
+00029eac [file 000192ac] mov       pc, r3
+00029eb0 [file 000192b0] ldr       r3, [r4]
+00029eb4 [file 000192b4] add       r0, r3, #0xc
+00029eb8 [file 000192b8] bl        #0x9a2c4
+00029ebc [file 000192bc] ldr       r4, [fp, #-0x4c]
+00029ec0 [file 000192c0] b         #0x29ed4
+00029ec4 [file 000192c4] mvn       r1, #0x33
+00029ec8 [file 000192c8] add       r1, fp, r1
+00029ecc [file 000192cc] mov       r0, r4
+00029ed0 [file 000192d0] bl        #0x28220
+00029ed4 [file 000192d4] cmp       sb, #0
+00029ed8 [file 000192d8] beq       #0x29f64
+00029edc [file 000192dc] ldr       r0, [r4, #0x20]
+00029ee0 [file 000192e0] mov       r1, #3
+00029ee4 [file 000192e4] bl        #0x9a33c
+00029ee8 [file 000192e8] ldr       sb, [pc, #0x260]
+00029eec [file 000192ec] mov       r5, r0
+00029ef0 [file 000192f0] ldr       r0, [sb]
+00029ef4 [file 000192f4] add       r0, r0, #0xc
+00029ef8 [file 000192f8] bl        #0x9a2d0
+00029efc [file 000192fc] ldr       r4, [sb]
+00029f00 [file 00019300] mov       r3, #0x5b0
+00029f04 [file 00019304] ldr       r2, [pc, #0x240] ; 'CommandProcessor.cpp'
+00029f08 [file 00019308] mov       r0, r4
+00029f0c [file 0001930c] ldr       r4, [r4]
+00029f10 [file 00019310] orr       r3, r3, #0xa
+00029f14 [file 00019314] ldr       r4, [r4, #0x10]
+00029f18 [file 00019318] mov       r1, #0
+00029f1c [file 0001931c] mov       lr, pc
+00029f20 [file 00019320] mov       pc, r4
+00029f24 [file 00019324] ldr       r4, [sb]
+00029f28 [file 00019328] mov       r3, r5
+00029f2c [file 0001932c] ldr       r2, [pc, #0x224] ; 'Set ErrorResponseEvent. Result %d'
+00029f30 [file 00019330] mov       r0, r4
+00029f34 [file 00019334] ldr       r4, [r4]
+00029f38 [file 00019338] ldr       r1, [pc, #0x204] ; 'ReadThreadProc'
+00029f3c [file 0001933c] ldr       r4, [r4, #4]
+00029f40 [file 00019340] mov       lr, pc
+00029f44 [file 00019344] mov       pc, r4
+00029f48 [file 00019348] ldr       r3, [sb]
+00029f4c [file 0001934c] add       r0, r3, #0xc
+00029f50 [file 00019350] bl        #0x9a2c4
+00029f54 [file 00019354] ldr       r5, [fp, #-0x4c]
+00029f58 [file 00019358] add       r0, r5, #0x24
+00029f5c [file 0001935c] bl        #0x37390
+00029f60 [file 00019360] b         #0x2a008
+00029f64 [file 00019364] ldr       r5, [fp, #-0x4c]
+00029f68 [file 00019368] ldr       sb, [pc, #0x1e0]
+00029f6c [file 0001936c] add       r0, r5, #0x24
+00029f70 [file 00019370] bl        #0x37390
+00029f74 [file 00019374] b         #0x2a008
+00029f78 [file 00019378] ldr       sb, [pc, #0x1d0]
+00029f7c [file 0001937c] ldr       r5, [fp, #-0x4c]
+00029f80 [file 00019380] ldr       r0, [sb]
+00029f84 [file 00019384] add       r0, r0, #0xc
+00029f88 [file 00019388] bl        #0x9a2d0
+00029f8c [file 0001938c] ldr       r4, [sb]
+00029f90 [file 00019390] mov       r3, #0x5b0
+00029f94 [file 00019394] ldr       r2, [pc, #0x1b0] ; 'CommandProcessor.cpp'
+00029f98 [file 00019398] mov       r0, r4
+00029f9c [file 0001939c] ldr       r4, [r4]
+00029fa0 [file 000193a0] orr       r3, r3, #0xe
+00029fa4 [file 000193a4] ldr       r4, [r4, #0x10]
+00029fa8 [file 000193a8] mov       r1, #1
+00029fac [file 000193ac] mov       lr, pc
+00029fb0 [file 000193b0] mov       pc, r4
+00029fb4 [file 000193b4] ldr       r3, [sb]
+00029fb8 [file 000193b8] ldr       r2, [pc, #0x194] ; 'Timeout'
+00029fbc [file 000193bc] mov       r0, r3
+00029fc0 [file 000193c0] ldr       r3, [r3]
+00029fc4 [file 000193c4] ldr       r1, [pc, #0x178] ; 'ReadThreadProc'
+00029fc8 [file 000193c8] ldr       r3, [r3, #4]
+00029fcc [file 000193cc] mov       lr, pc
+00029fd0 [file 000193d0] mov       pc, r3
+00029fd4 [file 000193d4] ldr       r3, [sb]
+00029fd8 [file 000193d8] add       r0, r3, #0xc
+00029fdc [file 000193dc] bl        #0x9a2c4
+00029fe0 [file 000193e0] b         #0x2a008
+00029fe4 [file 000193e4] mov       r1, #0
+00029fe8 [file 000193e8] mov       r0, r1
+00029fec [file 000193ec] mov       r1, r0
+00029ff0 [file 000193f0] ldr       r0, [r4]
+00029ff4 [file 000193f4] add       r0, r0, #0x310
+00029ff8 [file 000193f8] bl        #0x245b0
+00029ffc [file 000193fc] b         #0x2a00c
+0002a000 [file 00019400] ldr       r5, [fp, #-0x4c]
+0002a004 [file 00019404] ldr       sb, [pc, #0x144]
+0002a008 [file 00019408] ldr       r4, [pc, #0x130]
+0002a00c [file 0001940c] mvn       r0, #0x33
+0002a010 [file 00019410] add       r0, fp, r0
+0002a014 [file 00019414] bl        #0x2af3c
+0002a018 [file 00019418] mvn       r0, #0x33
+0002a01c [file 0001941c] add       r0, fp, r0
+0002a020 [file 00019420] bl        #0x2aee4
+0002a024 [file 00019424] mvn       r0, #0x47
+0002a028 [file 00019428] add       r0, fp, r0
+0002a02c [file 0001942c] bl        #0x11dc0
+0002a030 [file 00019430] mov       r0, #0xa
+0002a034 [file 00019434] bl        #0x9a2f4
+0002a038 [file 00019438] b         #0x298f0
+0002a03c [file 0001943c] ldr       r0, [r5, #4]
+0002a040 [file 00019440] bl        #0x6b9c8
+0002a044 [file 00019444] cmp       r0, #0
+0002a048 [file 00019448] bne       #0x2a0c8
+0002a04c [file 0001944c] ldr       r0, [sb]
+0002a050 [file 00019450] add       r0, r0, #0xc
+0002a054 [file 00019454] bl        #0x9a2d0
+0002a058 [file 00019458] ldr       r4, [sb]
+0002a05c [file 0001945c] mov       r3, #0x5d0
+0002a060 [file 00019460] ldr       r2, [pc, #0xe4] ; 'CommandProcessor.cpp'
+0002a064 [file 00019464] mov       r0, r4
+0002a068 [file 00019468] ldr       r4, [r4]
+0002a06c [file 0001946c] orr       r3, r3, #7
+0002a070 [file 00019470] ldr       r4, [r4, #0x10]
+0002a074 [file 00019474] mov       r1, #0
+0002a078 [file 00019478] mov       lr, pc
+0002a07c [file 0001947c] mov       pc, r4
+0002a080 [file 00019480] ldr       r3, [sb]
+0002a084 [file 00019484] ldr       r2, [pc, #0xbc] ; 'Serial port disconnected. Breaking thread execution'
+0002a088 [file 00019488] mov       r0, r3
+0002a08c [file 0001948c] ldr       r3, [r3]
+0002a090 [file 00019490] ldr       r1, [pc, #0xac] ; 'ReadThreadProc'
+0002a094 [file 00019494] ldr       r3, [r3, #4]
+0002a098 [file 00019498] mov       lr, pc
+0002a09c [file 0001949c] mov       pc, r3
+0002a0a0 [file 000194a0] ldr       r3, [sb]
+0002a0a4 [file 000194a4] add       r0, r3, #0xc
+0002a0a8 [file 000194a8] bl        #0x9a2c4
+0002a0ac [file 000194ac] mvn       r0, #0x3b
+0002a0b0 [file 000194b0] add       r0, fp, r0
+0002a0b4 [file 000194b4] bl        #0x628d8
+0002a0b8 [file 000194b8] mov       r1, #0
+0002a0bc [file 000194bc] mov       r0, r1
+0002a0c0 [file 000194c0] ldmdb     fp, {r4, r5, r6, r7, r8, sb, sl, fp, sp, pc}
+0002a0c4 [file 000194c4] ldr       r4, [pc, #0x74]
+0002a0c8 [file 000194c8] mov       r0, #0xa
+0002a0cc [file 000194cc] bl        #0x9a2f4
+0002a0d0 [file 000194d0] b         #0x298f0

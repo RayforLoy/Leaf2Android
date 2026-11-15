@@ -1,0 +1,133 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x34c98..0x34ddc, exclusive
+00034c98 [file 00024098] push      {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+00034c9c [file 0002409c] ldr       ip, [pc, #0xc8]
+00034ca0 [file 000240a0] sub       sp, sp, ip
+00034ca4 [file 000240a4] ldr       lr, [pc, #0xbc]
+00034ca8 [file 000240a8] mov       r4, r0
+00034cac [file 000240ac] mov       r7, r1
+00034cb0 [file 000240b0] ldr       r3, [pc, #0xac] ; 'CWindowProcessorImp::OnProcessPictureTaken'
+00034cb4 [file 000240b4] ldr       r0, [lr]
+00034cb8 [file 000240b8] cmp       r0, #0
+00034cbc [file 000240bc] ldrne     r0, [pc, #0x9c] ; '- enter'
+00034cc0 [file 000240c0] movne     r2, #0x34c
+00034cc4 [file 000240c4] ldrne     r1, [pc, #0x90] ; 'WindowProcessorImp.cpp'
+00034cc8 [file 000240c8] strne     r0, [sp]
+00034ccc [file 000240cc] movne     r0, #3
+00034cd0 [file 000240d0] ldrne     fp, [lr]
+00034cd4 [file 000240d4] movne     lr, pc
+00034cd8 [file 000240d8] movne     pc, fp
+00034cdc [file 000240dc] mov       sl, #0x720
+00034ce0 [file 000240e0] mov       r3, #0
+00034ce4 [file 000240e4] orr       sl, sl, #0xc
+00034ce8 [file 000240e8] str       r3, [r4, sl]
+00034cec [file 000240ec] mov       r5, #0
+00034cf0 [file 000240f0] ldr       r3, [r7, #8]
+00034cf4 [file 000240f4] mov       fp, #1
+00034cf8 [file 000240f8] cmp       r3, #0
+00034cfc [file 000240fc] bls       #0x34d74
+00034d00 [file 00024100] ldr       sb, [pc, #0x50] ; 'yes'
+00034d04 [file 00024104] ldr       r8, [pc, #0x48] ; 'busy'
+00034d08 [file 00024108] ldr       r3, [r7, #4]
+00034d0c [file 0002410c] lsl       r6, r5, #3
+00034d10 [file 00024110] mov       r1, r8
+00034d14 [file 00024114] ldr       r0, [r3, r6]
+00034d18 [file 00024118] bl        #0x7ca8c
+00034d1c [file 0002411c] movs      r3, r0
+00034d20 [file 00024120] bne       #0x34d40
+00034d24 [file 00024124] ldr       r3, [r7, #4]
+00034d28 [file 00024128] mov       r1, sb
+00034d2c [file 0002412c] add       r3, r3, r6
+00034d30 [file 00024130] ldr       r0, [r3, #4]
+00034d34 [file 00024134] bl        #0x7ca8c
+00034d38 [file 00024138] movs      r3, r0
+00034d3c [file 0002413c] beq       #0x34d70
+00034d40 [file 00024140] ldr       r3, [r7, #8]
+00034d44 [file 00024144] add       r5, r5, #1
+00034d48 [file 00024148] cmp       r5, r3
+00034d4c [file 0002414c] blo       #0x34d08
+00034d50 [file 00024150] b         #0x34d74
+00034d54 [file 00024154] andeq     lr, sb, r8
+00034d58 [file 00024158] andeq     lr, sb, r0
+00034d5c [file 0002415c] ldrdeq    sp, lr, [sb], -r0
+00034d60 [file 00024160] andeq     lr, r8, r0, lsl fp
+00034d64 [file 00024164] andeq     sp, sb, r8, ror pc
+00034d68 [file 00024168] andeq     lr, r8, r4, ror #23
+00034d6c [file 0002416c] andeq     r0, r0, ip, lsr r8
+00034d70 [file 00024170] str       fp, [r4, sl]
+00034d74 [file 00024174] ldr       r3, [r4, sl]
+00034d78 [file 00024178] cmp       r3, #0
+00034d7c [file 0002417c] beq       #0x35250
+00034d80 [file 00024180] ldr       r6, [pc, #-0x20]
+00034d84 [file 00024184] ldr       r0, [r6]
+00034d88 [file 00024188] cmp       r0, #0
+00034d8c [file 0002418c] beq       #0x34db8
+00034d90 [file 00024190] ldr       r0, [pc, #0x208] ; 'Busy=yes detected'
+00034d94 [file 00024194] mov       r2, #0x35c
+00034d98 [file 00024198] ldr       r3, [pc, #0x1fc] ; 'CWindowProcessorImp::OnProcessPictureTaken'
+00034d9c [file 0002419c] orr       r2, r2, #2
+00034da0 [file 000241a0] str       r0, [sp]
+00034da4 [file 000241a4] mov       r0, #3
+00034da8 [file 000241a8] ldr       r1, [pc, #0x1e8] ; 'WindowProcessorImp.cpp'
+00034dac [file 000241ac] ldr       sb, [r6]
+00034db0 [file 000241b0] mov       lr, pc
+00034db4 [file 000241b4] mov       pc, sb
+00034db8 [file 000241b8] mov       r1, #0
+00034dbc [file 000241bc] mov       r0, r4
+00034dc0 [file 000241c0] bl        #0x7bed4
+00034dc4 [file 000241c4] ldr       r3, [r4]
+00034dc8 [file 000241c8] mov       r0, r4
+00034dcc [file 000241cc] ldr       r3, [r3, #0xdc]
+00034dd0 [file 000241d0] mov       lr, pc
+00034dd4 [file 000241d4] mov       pc, r3
+00034dd8 [file 000241d8] ldr       r0, [r0, #4]
+# VA 0x35250..0x35314, exclusive
+00035250 [file 00024650] bl        #0x7c09c
+00035254 [file 00024654] ldr       r0, [r0, #4]
+00035258 [file 00024658] bl        #0x7c360
+0003525c [file 0002465c] ldr       r1, [pc, #0xf8]
+00035260 [file 00024660] ldrb      r0, [r1]
+00035264 [file 00024664] ands      r3, r0, #0xff
+00035268 [file 00024668] beq       #0x352e0
+0003526c [file 0002466c] mov       r0, #0
+00035270 [file 00024670] strb      r0, [r1]
+00035274 [file 00024674] mov       r1, #9
+00035278 [file 00024678] mov       r0, r4
+0003527c [file 0002467c] bl        #0x35be4
+00035280 [file 00024680] ldr       r3, [r4]
+00035284 [file 00024684] mov       r0, r4
+00035288 [file 00024688] ldr       r3, [r3, #0xdc]
+0003528c [file 0002468c] mov       lr, pc
+00035290 [file 00024690] mov       pc, r3
+00035294 [file 00024694] ldr       r3, [r0, #4]
+00035298 [file 00024698] mov       r2, #9
+0003529c [file 0002469c] mov       r0, r4
+000352a0 [file 000246a0] str       r2, [r3, #0x19c]
+000352a4 [file 000246a4] ldr       r3, [r4]
+000352a8 [file 000246a8] ldr       r3, [r3, #0xdc]
+000352ac [file 000246ac] mov       lr, pc
+000352b0 [file 000246b0] mov       pc, r3
+000352b4 [file 000246b4] ldr       r3, [r0, #4]
+000352b8 [file 000246b8] ldr       r0, [r3, #0x1cc]
+000352bc [file 000246bc] bl        #0x29028
+000352c0 [file 000246c0] ldr       r3, [r4]
+000352c4 [file 000246c4] mov       r0, r4
+000352c8 [file 000246c8] ldr       r3, [r3, #0xdc]
+000352cc [file 000246cc] mov       lr, pc
+000352d0 [file 000246d0] mov       pc, r3
+000352d4 [file 000246d4] ldr       r0, [r0, #4]
+000352d8 [file 000246d8] mov       r1, #1
+000352dc [file 000246dc] bl        #0x1b1ac
+000352e0 [file 000246e0] ldr       r3, [r4]
+000352e4 [file 000246e4] mov       r0, r4
+000352e8 [file 000246e8] ldr       r3, [r3, #0xdc]
+000352ec [file 000246ec] mov       lr, pc
+000352f0 [file 000246f0] mov       pc, r3
+000352f4 [file 000246f4] ldr       r0, [r0, #4]
+000352f8 [file 000246f8] mov       r3, #0
+000352fc [file 000246fc] mov       r2, r7
+00035300 [file 00024700] mov       r1, #0x30
+00035304 [file 00024704] bl        #0x13000
+00035308 [file 00024708] bl        #0x7c09c
+0003530c [file 0002470c] ldr       r0, [r0, #4]
+00035310 [file 00024710] bl        #0x7c354

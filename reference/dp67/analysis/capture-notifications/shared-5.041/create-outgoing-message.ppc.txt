@@ -1,0 +1,57 @@
+# Static PPC VA ranges. UPD offset = VA - 0x74000 + 0x128.
+# VA 0x103ce0..0x103dbc, exclusive
+00103ce0 [UPD 0008fe08] stwu      r1, -0x20(r1)
+00103ce4 [UPD 0008fe0c] mflr      r0
+00103ce8 [UPD 0008fe10] stmw      r27, 0xc(r1)
+00103cec [UPD 0008fe14] stw       r0, 0x24(r1)
+00103cf0 [UPD 0008fe18] addi      r28, r3, 0
+00103cf4 [UPD 0008fe1c] addi      r30, r4, 0
+00103cf8 [UPD 0008fe20] addi      r29, r5, 0
+00103cfc [UPD 0008fe24] addi      r31, r6, 0
+00103d00 [UPD 0008fe28] addi      r27, r7, 0
+00103d04 [UPD 0008fe2c] bl        0x101904
+00103d08 [UPD 0008fe30] addi      r6, r3, 0
+00103d0c [UPD 0008fe34] addi      r3, r6, 0
+00103d10 [UPD 0008fe38] li        r4, 0x60c
+00103d14 [UPD 0008fe3c] li        r5, 0
+00103d18 [UPD 0008fe40] bl        0x10185c
+00103d1c [UPD 0008fe44] addi      r6, r3, 0
+00103d20 [UPD 0008fe48] li        r3, 0x60c
+00103d24 [UPD 0008fe4c] addi      r4, r6, 0
+00103d28 [UPD 0008fe50] bl        0x450bfc
+00103d2c [UPD 0008fe54] addi      r6, r3, 0
+00103d30 [UPD 0008fe58] addi      r3, r6, 0
+00103d34 [UPD 0008fe5c] addi      r4, r30, 0
+00103d38 [UPD 0008fe60] addi      r5, r31, 0
+00103d3c [UPD 0008fe64] addi      r6, r27, 0
+00103d40 [UPD 0008fe68] bl        0xff420
+00103d44 [UPD 0008fe6c] addi      r31, r3, 0
+00103d48 [UPD 0008fe70] cmpwi     r31, 0
+00103d4c [UPD 0008fe74] beq       0x103da4
+00103d50 [UPD 0008fe78] addi      r3, r31, 0
+00103d54 [UPD 0008fe7c] addi      r4, r29, 0
+00103d58 [UPD 0008fe80] bl        0xfff64
+00103d5c [UPD 0008fe84] addi      r29, r3, 0
+00103d60 [UPD 0008fe88] cmpwi     r29, 1
+00103d64 [UPD 0008fe8c] bne       0x103d98
+00103d68 [UPD 0008fe90] cmpwi     r30, 2
+00103d6c [UPD 0008fe94] bne       0x103d80
+00103d70 [UPD 0008fe98] addi      r3, r28, 0
+00103d74 [UPD 0008fe9c] addi      r4, r31, 0
+00103d78 [UPD 0008fea0] bl        0x103c4c
+00103d7c [UPD 0008fea4] b         0x103da4
+00103d80 [UPD 0008fea8] addi      r3, r28, 0
+00103d84 [UPD 0008feac] addi      r6, r30, 0
+00103d88 [UPD 0008feb0] addi      r4, r31, 0
+00103d8c [UPD 0008feb4] li        r5, 0xd
+00103d90 [UPD 0008feb8] bl        0x103bc4
+00103d94 [UPD 0008febc] b         0x103da4
+00103d98 [UPD 0008fec0] lis       r3, 0x47
+00103d9c [UPD 0008fec4] addi      r3, r3, -0xf94 ; '\n Error during sending Outgoing message'
+00103da0 [UPD 0008fec8] bl        0x92094
+00103da4 [UPD 0008fecc] addi      r3, r31, 0
+00103da8 [UPD 0008fed0] lmw       r27, 0xc(r1)
+00103dac [UPD 0008fed4] lwz       r0, 0x24(r1)
+00103db0 [UPD 0008fed8] mtlr      r0
+00103db4 [UPD 0008fedc] addi      r1, r1, 0x20
+00103db8 [UPD 0008fee0] blr       

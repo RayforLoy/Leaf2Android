@@ -1,0 +1,525 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x17360..0x17c6c, exclusive
+00017360 [file 00006760] mov       ip, sp
+00017364 [file 00006764] push      {r2, r3}
+00017368 [file 00006768] push      {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
+0001736c [file 0000676c] ldr       ip, [pc, #0x1ac]
+00017370 [file 00006770] sub       sp, sp, ip
+00017374 [file 00006774] ldr       lr, [pc, #0x1a0]
+00017378 [file 00006778] mov       sb, r0
+0001737c [file 0000677c] mov       r4, r3
+00017380 [file 00006780] ldr       r3, [pc, #0x190] ; 'CControlApplication::OnPictureTaken'
+00017384 [file 00006784] ldr       r0, [lr]
+00017388 [file 00006788] mov       r8, r2
+0001738c [file 0000678c] mov       fp, r1
+00017390 [file 00006790] str       r8, [sp, #0x860]
+00017394 [file 00006794] str       r4, [sp, #0x864]
+00017398 [file 00006798] cmp       r0, #0
+0001739c [file 0000679c] beq       #0x173c4
+000173a0 [file 000067a0] ldr       r0, [pc, #0x16c] ; '- enter'
+000173a4 [file 000067a4] mov       r2, #0xce0
+000173a8 [file 000067a8] ldr       r1, [pc, #0x160] ; 'ControlApplication.cpp'
+000173ac [file 000067ac] orr       r2, r2, #0xe
+000173b0 [file 000067b0] str       r0, [sp]
+000173b4 [file 000067b4] mov       r0, #3
+000173b8 [file 000067b8] ldr       sl, [lr]
+000173bc [file 000067bc] mov       lr, pc
+000173c0 [file 000067c0] mov       pc, sl
+000173c4 [file 000067c4] mov       r0, #0
+000173c8 [file 000067c8] mov       r7, #1
+000173cc [file 000067cc] strb      r0, [r8]
+000173d0 [file 000067d0] strb      r7, [r4]
+000173d4 [file 000067d4] mov       r5, r0
+000173d8 [file 000067d8] ldr       r3, [fp, #8]
+000173dc [file 000067dc] mov       r6, r0
+000173e0 [file 000067e0] strb      r0, [sp, #8]
+000173e4 [file 000067e4] str       r0, [sp, #0x14]
+000173e8 [file 000067e8] cmp       r3, #0
+000173ec [file 000067ec] str       r0, [sp, #0x18]
+000173f0 [file 000067f0] str       r5, [sp, #0x24]
+000173f4 [file 000067f4] bls       #0x17bd0
+000173f8 [file 000067f8] ldr       r3, [fp, #4]
+000173fc [file 000067fc] lsl       sl, r5, #3
+00017400 [file 00006800] ldr       r0, [pc, #0x104] ; 'error_code'
+00017404 [file 00006804] ldr       r1, [r3, sl]
+00017408 [file 00006808] bl        #0x7ca8c
+0001740c [file 0000680c] movs      r3, r0
+00017410 [file 00006810] beq       #0x17b0c
+00017414 [file 00006814] ldr       r3, [fp, #4]
+00017418 [file 00006818] ldr       r0, [pc, #0xe8] ; 'file_name'
+0001741c [file 0000681c] ldr       r1, [r3, sl]
+00017420 [file 00006820] bl        #0x7ca8c
+00017424 [file 00006824] movs      r3, r0
+00017428 [file 00006828] bne       #0x17a24
+0001742c [file 0000682c] ldr       r3, [fp, #4]
+00017430 [file 00006830] add       r2, sp, #0x14
+00017434 [file 00006834] ldr       r1, [pc, #0xc8] ; '/'
+00017438 [file 00006838] add       r3, r3, sl
+0001743c [file 0000683c] ldr       r0, [r3, #4]
+00017440 [file 00006840] bl        #0x1e460
+00017444 [file 00006844] str       r0, [sp, #0x18]
+00017448 [file 00006848] cmp       r0, #2
+0001744c [file 0000684c] blt       #0x17bd0
+00017450 [file 00006850] ldr       r3, [sp, #0x14]
+00017454 [file 00006854] ldr       r1, [pc, #0xa4] ; '.'
+00017458 [file 00006858] ldr       r0, [r3]
+0001745c [file 0000685c] bl        #0x7ca8c
+00017460 [file 00006860] movs      r3, r0
+00017464 [file 00006864] bne       #0x17bd0
+00017468 [file 00006868] ldr       r1, [pc, #0x8c]
+0001746c [file 0000686c] add       r0, sp, #0xc
+00017470 [file 00006870] bl        #0x7beb0
+00017474 [file 00006874] ldr       r3, [sp, #0x18]
+00017478 [file 00006878] mov       r6, #0
+0001747c [file 0000687c] mov       r4, r6
+00017480 [file 00006880] sub       r5, r3, #1
+00017484 [file 00006884] cmp       r5, #0
+00017488 [file 00006888] ble       #0x17564
+0001748c [file 0000688c] ldr       r3, [sp, #0x14]
+00017490 [file 00006890] add       r0, sp, #0xc
+00017494 [file 00006894] ldr       r1, [r3, r4, lsl #2]
+00017498 [file 00006898] bl        #0x7bf10
+0001749c [file 0000689c] mov       r1, #0x2f
+000174a0 [file 000068a0] add       r0, sp, #0xc
+000174a4 [file 000068a4] bl        #0x7bf64
+000174a8 [file 000068a8] ldr       r1, [sp, #0xc]
+000174ac [file 000068ac] mov       r3, #0
+000174b0 [file 000068b0] ldr       r0, [sb, #0x1bc]
+000174b4 [file 000068b4] mov       r2, #1
+000174b8 [file 000068b8] bl        #0x29b5c
+000174bc [file 000068bc] movs      r3, r0
+000174c0 [file 000068c0] bne       #0x174ec
+000174c4 [file 000068c4] add       r0, sp, #0x1c
+000174c8 [file 000068c8] bl        #0x7bea4
+000174cc [file 000068cc] ldr       r1, [sp, #0xc]
+000174d0 [file 000068d0] add       r2, sp, #0x1c
+000174d4 [file 000068d4] ldr       r0, [sb, #0x1bc]
+000174d8 [file 000068d8] bl        #0x2d098
+000174dc [file 000068dc] ands      r3, r0, #0xff
+000174e0 [file 000068e0] beq       #0x17524
+000174e4 [file 000068e4] add       r0, sp, #0x1c
+000174e8 [file 000068e8] bl        #0x7be98
+000174ec [file 000068ec] add       r4, r4, #1
+000174f0 [file 000068f0] cmp       r4, r5
+000174f4 [file 000068f4] blt       #0x1748c
+000174f8 [file 000068f8] b         #0x17564
+000174fc [file 000068fc] muleq     fp, r4, pc
+00017500 [file 00006900] andeq     sp, r8, r8, lsl r1
+00017504 [file 00006904] andeq     sp, r8, r4, lsl r1
+00017508 [file 00006908] andeq     sp, r8, r0, lsl #2
+0001750c [file 0000690c] andeq     sp, r8, r8, ror #1
+00017510 [file 00006910] strheq    sp, [r8], -r8
+00017514 [file 00006914] andeq     lr, r8, r0, lsl fp
+00017518 [file 00006918] andeq     sp, r8, r0, ror r0
+0001751c [file 0000691c] andeq     lr, r8, r4, ror #23
+00017520 [file 00006920] andeq     r0, r0, r8, lsr r8
+00017524 [file 00006924] ldr       lr, [pc, #-0x10]
+00017528 [file 00006928] ldr       r0, [lr]
+0001752c [file 0000692c] cmp       r0, #0
+00017530 [file 00006930] beq       #0x1755c
+00017534 [file 00006934] ldr       r3, [sp, #0x1c]
+00017538 [file 00006938] mov       r2, #0xd10
+0001753c [file 0000693c] ldr       r1, [pc, #0xd0] ; 'ControlApplication.cpp'
+00017540 [file 00006940] orr       r2, r2, #5
+00017544 [file 00006944] str       r3, [sp]
+00017548 [file 00006948] mov       r0, #2
+0001754c [file 0000694c] ldr       r3, [pc, #0xbc] ; 'CControlApplication::OnPictureTaken()'
+00017550 [file 00006950] ldr       r8, [lr]
+00017554 [file 00006954] mov       lr, pc
+00017558 [file 00006958] mov       pc, r8
+0001755c [file 0000695c] add       r0, sp, #0x1c
+00017560 [file 00006960] bl        #0x7be98
+00017564 [file 00006964] ldr       r1, [fp, #4]
+00017568 [file 00006968] add       r3, sp, #0x2c
+0001756c [file 0000696c] str       r6, [sp, #0x2c]
+00017570 [file 00006970] mov       r2, #1
+00017574 [file 00006974] add       r1, r1, sl
+00017578 [file 00006978] ldr       r0, [sb, #0x1bc]
+0001757c [file 0000697c] ldr       r1, [r1, #4]
+00017580 [file 00006980] bl        #0x29e0c
+00017584 [file 00006984] strb      r0, [sp, #8]
+00017588 [file 00006988] ands      r3, r0, #0xff
+0001758c [file 0000698c] beq       #0x17bc8
+00017590 [file 00006990] ldr       r0, [sp, #0x2c]
+00017594 [file 00006994] cmp       r0, #0
+00017598 [file 00006998] beq       #0x17b90
+0001759c [file 0000699c] ldr       r3, [r0, #4]
+000175a0 [file 000069a0] cmp       r3, #1
+000175a4 [file 000069a4] bne       #0x17b90
+000175a8 [file 000069a8] mov       r4, r0
+000175ac [file 000069ac] str       r6, [r0, #0x2c]
+000175b0 [file 000069b0] str       r4, [sp, #0x10]
+000175b4 [file 000069b4] bl        #0x31d00
+000175b8 [file 000069b8] str       r6, [r0, #0x38]
+000175bc [file 000069bc] ldr       r0, [r4, #0x10]
+000175c0 [file 000069c0] bl        #0x3c234
+000175c4 [file 000069c4] ldr       r8, [sb, #0x148]
+000175c8 [file 000069c8] mov       r5, #0
+000175cc [file 000069cc] mov       r7, r0
+000175d0 [file 000069d0] cmp       r8, #0
+000175d4 [file 000069d4] ble       #0x17698
+000175d8 [file 000069d8] add       r6, sb, #0x144
+000175dc [file 000069dc] mov       r1, r5
+000175e0 [file 000069e0] ldr       r4, [sb, #0x6c]
+000175e4 [file 000069e4] mov       r0, r6
+000175e8 [file 000069e8] bl        #0x1c258
+000175ec [file 000069ec] mov       r1, #0
+000175f0 [file 000069f0] bl        #0x1bd48
+000175f4 [file 000069f4] cmp       r4, #0
+000175f8 [file 000069f8] bne       #0x17618
+000175fc [file 000069fc] ldr       r3, [r0]
+00017600 [file 00006a00] cmp       r3, #0
+00017604 [file 00006a04] bne       #0x17640
+00017608 [file 00006a08] mov       r0, #1
+0001760c [file 00006a0c] b         #0x17644
+00017610 [file 00006a10] andeq     sp, r8, ip, asr #2
+00017614 [file 00006a14] andeq     sp, r8, ip, lsl r1
+00017618 [file 00006a18] ldr       r0, [r0]
+0001761c [file 00006a1c] cmp       r0, #0
+00017620 [file 00006a20] beq       #0x17640
+00017624 [file 00006a24] mov       r1, r4
+00017628 [file 00006a28] bl        #0x7c8e8
+0001762c [file 00006a2c] movs      r3, r0
+00017630 [file 00006a30] mov       r0, #1
+00017634 [file 00006a34] movne     r0, #0
+00017638 [file 00006a38] and       r0, r0, #0xff
+0001763c [file 00006a3c] b         #0x17644
+00017640 [file 00006a40] mov       r0, #0
+00017644 [file 00006a44] ands      r3, r0, #0xff
+00017648 [file 00006a48] beq       #0x1768c
+0001764c [file 00006a4c] mov       r1, r5
+00017650 [file 00006a50] mov       r0, r6
+00017654 [file 00006a54] bl        #0x1c258
+00017658 [file 00006a58] mov       r1, #1
+0001765c [file 00006a5c] bl        #0x1bd48
+00017660 [file 00006a60] mov       r4, r0
+00017664 [file 00006a64] ldr       r0, [r4]
+00017668 [file 00006a68] bl        #0x7d71c
+0001766c [file 00006a6c] mov       r0, r7
+00017670 [file 00006a70] bl        #0x7d710
+00017674 [file 00006a74] str       r0, [r4]
+00017678 [file 00006a78] ldr       r0, [sb, #0x70]
+0001767c [file 00006a7c] bl        #0x7d71c
+00017680 [file 00006a80] mov       r0, r7
+00017684 [file 00006a84] bl        #0x7d710
+00017688 [file 00006a88] str       r0, [sb, #0x70]
+0001768c [file 00006a8c] add       r5, r5, #1
+00017690 [file 00006a90] cmp       r5, r8
+00017694 [file 00006a94] blt       #0x175dc
+00017698 [file 00006a98] ldr       r0, [sb, #0x40]
+0001769c [file 00006a9c] mov       r1, r7
+000176a0 [file 00006aa0] bl        #0x7c8e8
+000176a4 [file 00006aa4] mov       r5, #0
+000176a8 [file 00006aa8] movs      r3, r0
+000176ac [file 00006aac] mov       r0, #1
+000176b0 [file 00006ab0] moveq     r0, r5
+000176b4 [file 00006ab4] ands      r3, r0, #0xff
+000176b8 [file 00006ab8] bne       #0x17728
+000176bc [file 00006abc] ldr       r3, [sb, #0xc]
+000176c0 [file 00006ac0] cmp       r3, #0
+000176c4 [file 00006ac4] beq       #0x17728
+000176c8 [file 00006ac8] ldr       r4, [sp, #0x10]
+000176cc [file 00006acc] mov       r0, sb
+000176d0 [file 00006ad0] mov       r1, r4
+000176d4 [file 00006ad4] bl        #0x18a58
+000176d8 [file 00006ad8] ands      r3, r0, #0xff
+000176dc [file 00006adc] bne       #0x17788
+000176e0 [file 00006ae0] ldr       lr, [pc, #-0x1cc]
+000176e4 [file 00006ae4] ldr       r0, [lr]
+000176e8 [file 00006ae8] cmp       r0, #0
+000176ec [file 00006aec] beq       #0x17714
+000176f0 [file 00006af0] ldr       r0, [pc, #0x2c] ; 'Error in AddToCurrentDirectory()'
+000176f4 [file 00006af4] mov       r2, #0xd60
+000176f8 [file 00006af8] ldr       r3, [pc, #0x20] ; 'CControlApplication::OnPictureTaken()'
+000176fc [file 00006afc] str       r0, [sp]
+00017700 [file 00006b00] mov       r0, #1
+00017704 [file 00006b04] ldr       r1, [pc, #0x10] ; 'ControlApplication.cpp'
+00017708 [file 00006b08] ldr       fp, [lr]
+0001770c [file 00006b0c] mov       lr, pc
+00017710 [file 00006b10] mov       pc, fp
+00017714 [file 00006b14] strb      r5, [sp, #8]
+00017718 [file 00006b18] b         #0x17bc8
+0001771c [file 00006b1c] andeq     sp, r8, r8, lsr #4
+00017720 [file 00006b20] ldrdeq    sp, lr, [r8], -ip
+00017724 [file 00006b24] muleq     r8, r8, r1
+00017728 [file 00006b28] ldr       r0, [sb, #0x1bc]
+0001772c [file 00006b2c] mov       r1, r7
+00017730 [file 00006b30] bl        #0x2c2d4
+00017734 [file 00006b34] mvn       r3, #0
+00017738 [file 00006b38] strb      r5, [sp, #4]
+0001773c [file 00006b3c] mov       r2, #0
+00017740 [file 00006b40] strb      r5, [sp]
+00017744 [file 00006b44] mov       r1, #0
+00017748 [file 00006b48] mov       r0, sb
+0001774c [file 00006b4c] bl        #0x18bf0
+00017750 [file 00006b50] ands      r3, r0, #0xff
+00017754 [file 00006b54] beq       #0x17b48
+00017758 [file 00006b58] ldr       r3, [sb]
+0001775c [file 00006b5c] cmp       r3, #0
+00017760 [file 00006b60] bne       #0x17784
+00017764 [file 00006b64] ldr       r0, [sb, #0xc]
+00017768 [file 00006b68] cmp       r0, #0
+0001776c [file 00006b6c] ble       #0x17714
+00017770 [file 00006b70] sub       r1, r0, #1
+00017774 [file 00006b74] add       r0, sb, #8
+00017778 [file 00006b78] str       r1, [sb, #4]
+0001777c [file 00006b7c] bl        #0x1bac8
+00017780 [file 00006b80] str       r0, [sb]
+00017784 [file 00006b84] ldr       r4, [sp, #0x10]
+00017788 [file 00006b88] ldr       r3, [fp, #4]
+0001778c [file 00006b8c] ldr       r0, [sb, #0x198]
+00017790 [file 00006b90] add       r3, r3, sl
+00017794 [file 00006b94] ldr       r1, [r3, #4]
+00017798 [file 00006b98] bl        #0x7c8e8
+0001779c [file 00006b9c] movs      r3, r0
+000177a0 [file 00006ba0] mov       r0, #1
+000177a4 [file 00006ba4] movne     r0, r5
+000177a8 [file 00006ba8] ands      r3, r0, #0xff
+000177ac [file 00006bac] beq       #0x17994
+000177b0 [file 00006bb0] mov       r0, r4
+000177b4 [file 00006bb4] bl        #0x3c234
+000177b8 [file 00006bb8] mov       r1, r0
+000177bc [file 00006bbc] add       r0, sp, #0x20
+000177c0 [file 00006bc0] bl        #0x7beb0
+000177c4 [file 00006bc4] ldr       r1, [sb, #0x1cc]
+000177c8 [file 00006bc8] add       r2, sp, #0x30
+000177cc [file 00006bcc] mov       r0, r4
+000177d0 [file 00006bd0] bl        #0x31c1c
+000177d4 [file 00006bd4] cmp       r0, #2
+000177d8 [file 00006bd8] beq       #0x17878
+000177dc [file 00006bdc] mov       r0, r4
+000177e0 [file 00006be0] bl        #0x31d00
+000177e4 [file 00006be4] mov       r3, #1
+000177e8 [file 00006be8] ldr       r0, [r0, #0x38]
+000177ec [file 00006bec] mov       r2, #1
+000177f0 [file 00006bf0] ldr       lr, [r4]
+000177f4 [file 00006bf4] cmp       r0, #2
+000177f8 [file 00006bf8] str       r0, [r4, #0x2c]
+000177fc [file 00006bfc] ldr       r1, [sb, #0x1cc]
+00017800 [file 00006c00] moveq     r3, r5
+00017804 [file 00006c04] ldr       sl, [lr, #0x14]
+00017808 [file 00006c08] mov       r0, r4
+0001780c [file 00006c0c] mov       lr, pc
+00017810 [file 00006c10] mov       pc, sl
+00017814 [file 00006c14] ands      r3, r0, #0xff
+00017818 [file 00006c18] beq       #0x1782c
+0001781c [file 00006c1c] mov       r1, r4
+00017820 [file 00006c20] mov       r0, sb
+00017824 [file 00006c24] bl        #0x17cfc
+00017828 [file 00006c28] b         #0x17988
+0001782c [file 00006c2c] ldr       lr, [pc, #-0x318]
+00017830 [file 00006c30] strb      r5, [sp, #8]
+00017834 [file 00006c34] ldr       r0, [lr]
+00017838 [file 00006c38] cmp       r0, #0
+0001783c [file 00006c3c] beq       #0x17988
+00017840 [file 00006c40] ldr       r0, [pc, #0x2c] ; 'Failed to cache the image '
+00017844 [file 00006c44] mov       r2, #0xd70
+00017848 [file 00006c48] ldr       r3, [pc, #0x20] ; 'CControlApplication::OnPictureTaken()'
+0001784c [file 00006c4c] orr       r2, r2, #7
+00017850 [file 00006c50] str       r0, [sp]
+00017854 [file 00006c54] mov       r0, #1
+00017858 [file 00006c58] ldr       r1, [pc, #0xc] ; 'ControlApplication.cpp'
+0001785c [file 00006c5c] ldr       sl, [lr]
+00017860 [file 00006c60] mov       lr, pc
+00017864 [file 00006c64] mov       pc, sl
+00017868 [file 00006c68] b         #0x17988
+0001786c [file 00006c6c] andeq     sp, r8, r4, lsr #5
+00017870 [file 00006c70] andeq     sp, r8, r8, asr r2
+00017874 [file 00006c74] andeq     pc, r7, r8, lsr #21
+00017878 [file 00006c78] ldr       r3, [sb, #0xc]
+0001787c [file 00006c7c] subs      r4, r3, #1
+00017880 [file 00006c80] bmi       #0x17980
+00017884 [file 00006c84] add       r6, sb, #8
+00017888 [file 00006c88] mov       r8, #0
+0001788c [file 00006c8c] mov       r1, r4
+00017890 [file 00006c90] mov       r0, r6
+00017894 [file 00006c94] bl        #0x1bac8
+00017898 [file 00006c98] add       r2, r0, #0x18
+0001789c [file 00006c9c] add       r1, r0, #0x1c
+000178a0 [file 00006ca0] add       r0, sp, #0x28
+000178a4 [file 00006ca4] bl        #0x7bf28
+000178a8 [file 00006ca8] ldr       r1, [sp, #0x28]
+000178ac [file 00006cac] ldr       r0, [sp, #0x20]
+000178b0 [file 00006cb0] bl        #0x7ca8c
+000178b4 [file 00006cb4] mov       r5, #1
+000178b8 [file 00006cb8] movs      r3, r0
+000178bc [file 00006cbc] add       r0, sp, #0x28
+000178c0 [file 00006cc0] movne     r5, r8
+000178c4 [file 00006cc4] bl        #0x7be98
+000178c8 [file 00006cc8] ands      r3, r5, #0xff
+000178cc [file 00006ccc] bne       #0x178dc
+000178d0 [file 00006cd0] subs      r4, r4, #1
+000178d4 [file 00006cd4] bpl       #0x1788c
+000178d8 [file 00006cd8] b         #0x17980
+000178dc [file 00006cdc] mov       r1, r4
+000178e0 [file 00006ce0] mov       r0, r6
+000178e4 [file 00006ce4] bl        #0x1bac8
+000178e8 [file 00006ce8] mov       r7, r8
+000178ec [file 00006cec] strb      r8, [r0, #0x28]
+000178f0 [file 00006cf0] ldr       r1, [sb, #4]
+000178f4 [file 00006cf4] mov       r3, #1
+000178f8 [file 00006cf8] strb      r3, [sp]
+000178fc [file 00006cfc] mov       r0, sb
+00017900 [file 00006d00] mov       r3, r1
+00017904 [file 00006d04] strb      r8, [sp, #4]
+00017908 [file 00006d08] mov       r2, r1
+0001790c [file 00006d0c] bl        #0x18bf0
+00017910 [file 00006d10] ldr       r3, [sb]
+00017914 [file 00006d14] ldrb      r3, [r3, #0x28]
+00017918 [file 00006d18] cmp       r3, #0
+0001791c [file 00006d1c] bne       #0x17974
+00017920 [file 00006d20] ldr       r4, [sb, #4]
+00017924 [file 00006d24] ldr       r3, [sb, #0xc]
+00017928 [file 00006d28] mov       r0, r6
+0001792c [file 00006d2c] sub       r3, r3, #1
+00017930 [file 00006d30] cmp       r4, r3
+00017934 [file 00006d34] bge       #0x17964
+00017938 [file 00006d38] add       r5, r4, #1
+0001793c [file 00006d3c] mov       r1, r5
+00017940 [file 00006d40] bl        #0x1bac8
+00017944 [file 00006d44] mov       r1, r4
+00017948 [file 00006d48] mov       sl, r0
+0001794c [file 00006d4c] mov       r0, r6
+00017950 [file 00006d50] bl        #0x1bac8
+00017954 [file 00006d54] mov       r1, sl
+00017958 [file 00006d58] bl        #0x1b648
+0001795c [file 00006d5c] mov       r4, r5
+00017960 [file 00006d60] b         #0x17924
+00017964 [file 00006d64] ldr       r3, [sb, #0xc]
+00017968 [file 00006d68] sub       r1, r3, #1
+0001796c [file 00006d6c] bl        #0x1b9a4
+00017970 [file 00006d70] b         #0x17978
+00017974 [file 00006d74] mov       r7, #1
+00017978 [file 00006d78] ands      r3, r7, #0xff
+0001797c [file 00006d7c] beq       #0x178f0
+00017980 [file 00006d80] mov       r3, #1
+00017984 [file 00006d84] strb      r3, [sp, #8]
+00017988 [file 00006d88] add       r0, sp, #0x20
+0001798c [file 00006d8c] bl        #0x7be98
+00017990 [file 00006d90] b         #0x179fc
+00017994 [file 00006d94] ldr       r3, [sp, #0x864]
+00017998 [file 00006d98] mov       r1, #0x400
+0001799c [file 00006d9c] ldr       r2, [pc, #0x7c] ; 'CControlApplication::OnPictureTaken() Image downloading was skiped due to burst mode: %s'
+000179a0 [file 00006da0] add       r0, sp, #0x38
+000179a4 [file 00006da4] strb      r5, [r3]
+000179a8 [file 00006da8] ldr       r3, [fp, #4]
+000179ac [file 00006dac] add       r3, r3, sl
+000179b0 [file 00006db0] ldr       r3, [r3, #4]
+000179b4 [file 00006db4] bl        #0x7ca08
+000179b8 [file 00006db8] mov       ip, #0x830
+000179bc [file 00006dbc] orr       ip, ip, #6
+000179c0 [file 00006dc0] strh      r5, [sp, ip]
+000179c4 [file 00006dc4] ldr       lr, [pc, #-0x4b0]
+000179c8 [file 00006dc8] ldr       r0, [lr]
+000179cc [file 00006dcc] cmp       r0, #0
+000179d0 [file 00006dd0] beq       #0x179fc
+000179d4 [file 00006dd4] ldr       r0, [pc, #0x40]
+000179d8 [file 00006dd8] mov       r2, #0xd90
+000179dc [file 00006ddc] ldr       r1, [pc, #0x34] ; 'ControlApplication.cpp'
+000179e0 [file 00006de0] add       r3, sp, #0x38
+000179e4 [file 00006de4] str       r0, [sp]
+000179e8 [file 00006de8] orr       r2, r2, #4
+000179ec [file 00006dec] ldr       sl, [lr]
+000179f0 [file 00006df0] mov       r0, #3
+000179f4 [file 00006df4] mov       lr, pc
+000179f8 [file 00006df8] mov       pc, sl
+000179fc [file 00006dfc] add       r0, sp, #0xc
+00017a00 [file 00006e00] bl        #0x7be98
+00017a04 [file 00006e04] ldr       r8, [sp, #0x860]
+00017a08 [file 00006e08] mov       r7, #1
+00017a0c [file 00006e0c] ldr       r6, [sp, #0x10]
+00017a10 [file 00006e10] ldr       r5, [sp, #0x24]
+00017a14 [file 00006e14] b         #0x17af0
+00017a18 [file 00006e18] andeq     sp, r8, r8, lsl #7
+00017a1c [file 00006e1c] muleq     fp, r8, pc
+00017a20 [file 00006e20] ldrdeq    sp, lr, [r8], -r4
+00017a24 [file 00006e24] ldrb      r3, [sp, #8]
+00017a28 [file 00006e28] ands      r4, r3, #0xff
+00017a2c [file 00006e2c] beq       #0x17a64
+00017a30 [file 00006e30] ldr       r3, [fp, #4]
+00017a34 [file 00006e34] ldr       r0, [pc, #0x24] ; 'battery_percent'
+00017a38 [file 00006e38] ldr       r1, [r3, sl]
+00017a3c [file 00006e3c] bl        #0x7ca8c
+00017a40 [file 00006e40] movs      r3, r0
+00017a44 [file 00006e44] bne       #0x17a64
+00017a48 [file 00006e48] ldr       r3, [fp, #4]
+00017a4c [file 00006e4c] add       r3, r3, sl
+00017a50 [file 00006e50] ldr       r0, [r3, #4]
+00017a54 [file 00006e54] bl        #0x7ca74
+00017a58 [file 00006e58] str       r0, [sb, #0x58]
+00017a5c [file 00006e5c] b         #0x17af0
+00017a60 [file 00006e60] strheq    sp, [r8], -r8
+00017a64 [file 00006e64] cmp       r4, #0
+00017a68 [file 00006e68] beq       #0x17aa4
+00017a6c [file 00006e6c] ldr       r3, [fp, #4]
+00017a70 [file 00006e70] ldr       r0, [pc, #0x28] ; 'exp_left'
+00017a74 [file 00006e74] ldr       r1, [r3, sl]
+00017a78 [file 00006e78] bl        #0x7ca8c
+00017a7c [file 00006e7c] movs      r3, r0
+00017a80 [file 00006e80] bne       #0x17aa4
+00017a84 [file 00006e84] ldr       r3, [fp, #4]
+00017a88 [file 00006e88] add       r3, r3, sl
+00017a8c [file 00006e8c] ldr       r0, [r3, #4]
+00017a90 [file 00006e90] bl        #0x7ca74
+00017a94 [file 00006e94] str       r0, [sb, #0x64]
+00017a98 [file 00006e98] strb      r7, [r8]
+00017a9c [file 00006e9c] b         #0x17af0
+00017aa0 [file 00006ea0] ldrdeq    sp, lr, [r8], -r8
+00017aa4 [file 00006ea4] ldr       r3, [fp, #4]
+00017aa8 [file 00006ea8] ldr       r1, [pc, #0x58] ; 'Date'
+00017aac [file 00006eac] ldr       r0, [r3, sl]
+00017ab0 [file 00006eb0] bl        #0x7ca8c
+00017ab4 [file 00006eb4] movs      r3, r0
+00017ab8 [file 00006eb8] bne       #0x17af0
+00017abc [file 00006ebc] cmp       r6, #0
+00017ac0 [file 00006ec0] beq       #0x17af0
+00017ac4 [file 00006ec4] ldr       r2, [fp, #4]
+00017ac8 [file 00006ec8] mov       r0, r6
+00017acc [file 00006ecc] ldr       r3, [r6]
+00017ad0 [file 00006ed0] add       r2, r2, sl
+00017ad4 [file 00006ed4] ldr       r1, [r2, #4]
+00017ad8 [file 00006ed8] ldr       r3, [r3, #0x10]
+00017adc [file 00006edc] mov       lr, pc
+00017ae0 [file 00006ee0] mov       pc, r3
+00017ae4 [file 00006ee4] mov       r1, r6
+00017ae8 [file 00006ee8] mov       r0, sb
+00017aec [file 00006eec] bl        #0x17cfc
+00017af0 [file 00006ef0] ldr       r3, [fp, #8]
+00017af4 [file 00006ef4] add       r5, r5, #1
+00017af8 [file 00006ef8] str       r5, [sp, #0x24]
+00017afc [file 00006efc] cmp       r5, r3
+00017b00 [file 00006f00] blo       #0x173f8
+00017b04 [file 00006f04] b         #0x17bd0
+00017b08 [file 00006f08] andeq     sp, r8, ip, ror #7
+00017b0c [file 00006f0c] add       r0, sp, #0x10
+00017b10 [file 00006f10] bl        #0x7bea4
+00017b14 [file 00006f14] ldr       r3, [fp, #4]
+00017b18 [file 00006f18] add       r1, sp, #0x10
+00017b1c [file 00006f1c] add       r3, r3, r5, lsl #3
+00017b20 [file 00006f20] ldr       r0, [r3, #4]
+00017b24 [file 00006f24] bl        #0x1f164
+00017b28 [file 00006f28] ldr       r3, [sb, #0x20c]
+00017b2c [file 00006f2c] mov       r1, #0x30
+00017b30 [file 00006f30] ldr       r0, [sp, #0x10]
+00017b34 [file 00006f34] ldr       r2, [r3, #8]
+00017b38 [file 00006f38] bl        #0x1e6d0
+00017b3c [file 00006f3c] strb      r7, [sp, #8]
+00017b40 [file 00006f40] add       r0, sp, #0x10
+00017b44 [file 00006f44] b         #0x17bcc
+00017b48 [file 00006f48] ldr       lr, [pc, #-0x634]
+00017b4c [file 00006f4c] ldr       r0, [lr]
+00017b50 [file 00006f50] cmp       r0, #0
+00017b54 [file 00006f54] beq       #0x17714
+00017b58 [file 00006f58] ldr       r0, [pc, #0x2c] ; 'Failed to fill current directory '
+00017b5c [file 00006f5c] mov       r2, #0xd40
+00017b60 [file 00006f60] ldr       r3, [pc, #0x20] ; 'CControlApplication::OnPictureTaken()'
+00017b64 [file 00006f64] orr       r2, r2, #0xa
+00017b68 [file 00006f68] str       r0, [sp]
+00017b6c [file 00006f6c] mov       r0, #1
+00017b70 [file 00006f70] ldr       r1, [pc, #0xc] ; 'ControlApplication.cpp'
+00017b74 [file 00006f74] ldr       fp, [lr]
+00017b78 [file 00006f78] mov       lr, pc
+00017b7c [file 00006f7c] mov       pc, fp
+00017b80 [file 00006f80] b         #0x17714
+00017b84 [file 00006f84] andeq     sp, r8, r4, asr #8
+00017b88 [file 00006f88] strdeq    sp, lr, [r8], -r8

@@ -1,0 +1,107 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x54d98..0x54f3c, exclusive
+00054d98 [file 00044198] push      {r4, r5, r6, r7, lr}
+00054d9c [file 0004419c] sub       sp, sp, #0x18
+00054da0 [file 000441a0] mov       r7, r0
+00054da4 [file 000441a4] mov       r0, r1
+00054da8 [file 000441a8] mov       r6, r2
+00054dac [file 000441ac] str       r0, [r7, #4]
+00054db0 [file 000441b0] mov       r1, #0
+00054db4 [file 000441b4] str       r1, [r7]
+00054db8 [file 000441b8] add       r2, sp, #0
+00054dbc [file 000441bc] str       r1, [sp]
+00054dc0 [file 000441c0] str       r1, [sp, #4]
+00054dc4 [file 000441c4] str       r1, [sp, #8]
+00054dc8 [file 000441c8] str       r1, [sp, #0xc]
+00054dcc [file 000441cc] str       r1, [sp, #0x10]
+00054dd0 [file 000441d0] str       r1, [sp, #0x14]
+00054dd4 [file 000441d4] mov       r1, #0x18
+00054dd8 [file 000441d8] bl        #0x9c808
+00054ddc [file 000441dc] ldr       r3, [sp, #4]
+00054de0 [file 000441e0] ldr       r0, [sp, #8]
+00054de4 [file 000441e4] cmp       r6, #2
+00054de8 [file 000441e8] str       r3, [r7, #8]
+00054dec [file 000441ec] str       r0, [r7, #0xc]
+00054df0 [file 000441f0] bne       #0x54e6c
+00054df4 [file 000441f4] cmp       r3, r0
+00054df8 [file 000441f8] bge       #0x54f1c
+00054dfc [file 000441fc] ldr       r5, [pc, #0x130]
+00054e00 [file 00044200] ldr       r0, [r5]
+00054e04 [file 00044204] add       r0, r0, #0xc
+00054e08 [file 00044208] bl        #0x9c964
+00054e0c [file 0004420c] ldr       r4, [r5]
+00054e10 [file 00044210] mov       r3, #0x234
+00054e14 [file 00044214] ldr       r2, [pc, #0x114] ; 'ImageEU.cpp'
+00054e18 [file 00044218] mov       r0, r4
+00054e1c [file 0004421c] ldr       r4, [r4]
+00054e20 [file 00044220] orr       r3, r3, #1
+00054e24 [file 00044224] ldr       r4, [r4, #0x10]
+00054e28 [file 00044228] mov       r1, #1
+00054e2c [file 0004422c] mov       lr, pc
+00054e30 [file 00044230] mov       pc, r4
+00054e34 [file 00044234] ldr       r3, [r5]
+00054e38 [file 00044238] ldr       r2, [pc, #0xf8] ; 'landscape orientation, height is bigger than width'
+00054e3c [file 0004423c] mov       r0, r3
+00054e40 [file 00044240] ldr       r3, [r3]
+00054e44 [file 00044244] ldr       r1, [pc, #0xdc] ; 'DrawImageWithRatio'
+00054e48 [file 00044248] ldr       r3, [r3, #4]
+00054e4c [file 0004424c] mov       lr, pc
+00054e50 [file 00044250] mov       pc, r3
+00054e54 [file 00044254] ldr       r3, [r5]
+00054e58 [file 00044258] add       r0, r3, #0xc
+00054e5c [file 0004425c] bl        #0x9c958
+00054e60 [file 00044260] mov       r0, r7
+00054e64 [file 00044264] add       sp, sp, #0x18
+00054e68 [file 00044268] pop       {r4, r5, r6, r7, pc}
+00054e6c [file 0004426c] cmp       r3, r0
+00054e70 [file 00044270] ble       #0x54ee4
+00054e74 [file 00044274] ldr       r5, [pc, #0xb8]
+00054e78 [file 00044278] ldr       r0, [r5]
+00054e7c [file 0004427c] add       r0, r0, #0xc
+00054e80 [file 00044280] bl        #0x9c964
+00054e84 [file 00044284] ldr       r4, [r5]
+00054e88 [file 00044288] mov       r3, #0x238
+00054e8c [file 0004428c] ldr       r2, [pc, #0x9c] ; 'ImageEU.cpp'
+00054e90 [file 00044290] mov       r0, r4
+00054e94 [file 00044294] ldr       r4, [r4]
+00054e98 [file 00044298] orr       r3, r3, #1
+00054e9c [file 0004429c] ldr       r4, [r4, #0x10]
+00054ea0 [file 000442a0] mov       r1, #1
+00054ea4 [file 000442a4] mov       lr, pc
+00054ea8 [file 000442a8] mov       pc, r4
+00054eac [file 000442ac] ldr       r3, [r5]
+00054eb0 [file 000442b0] ldr       r2, [pc, #0x74] ; 'portrait orientation, width is bigger than height'
+00054eb4 [file 000442b4] mov       r0, r3
+00054eb8 [file 000442b8] ldr       r3, [r3]
+00054ebc [file 000442bc] ldr       r1, [pc, #0x64] ; 'DrawImageWithRatio'
+00054ec0 [file 000442c0] ldr       r3, [r3, #4]
+00054ec4 [file 000442c4] mov       lr, pc
+00054ec8 [file 000442c8] mov       pc, r3
+00054ecc [file 000442cc] ldr       r3, [r5]
+00054ed0 [file 000442d0] add       r0, r3, #0xc
+00054ed4 [file 000442d4] bl        #0x9c958
+00054ed8 [file 000442d8] ldr       r3, [sp, #4]
+00054edc [file 000442dc] ldr       r0, [sp, #8]
+00054ee0 [file 000442e0] cmp       r3, r0
+00054ee4 [file 000442e4] bge       #0x54f1c
+00054ee8 [file 000442e8] cmp       r6, #1
+00054eec [file 000442ec] ldr       r0, [r7, #4]
+00054ef0 [file 000442f0] moveq     r1, #0x10c
+00054ef4 [file 000442f4] orreq     r1, r1, #2
+00054ef8 [file 000442f8] movne     r1, #0x5a
+00054efc [file 000442fc] bl        #0x955a4
+00054f00 [file 00044300] ldr       r2, [sp, #4]
+00054f04 [file 00044304] ldr       r1, [sp, #8]
+00054f08 [file 00044308] mov       r3, #1
+00054f0c [file 0004430c] str       r3, [r7]
+00054f10 [file 00044310] str       r0, [r7, #4]
+00054f14 [file 00044314] str       r1, [r7, #8]
+00054f18 [file 00044318] str       r2, [r7, #0xc]
+00054f1c [file 0004431c] mov       r0, r7
+00054f20 [file 00044320] add       sp, sp, #0x18
+00054f24 [file 00044324] pop       {r4, r5, r6, r7, pc}
+00054f28 [file 00044328] andseq    r5, r1, ip, lsl #8
+00054f2c [file 0004432c] andseq    r5, r1, r8, lsr #7
+00054f30 [file 00044330] andseq    r5, r1, r0, lsr #9
+00054f34 [file 00044334] andseq    sl, r5, r0, lsl fp
+00054f38 [file 00044338] andseq    r5, r1, r8, lsr r4

@@ -1,0 +1,37 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x18150..0x18168, exclusive
+00018150 [file 00007550] bl        #0x65d50
+00018154 [file 00007554] ldr       r3, [r7]
+00018158 [file 00007558] add       r0, r3, #8
+0001815c [file 0000755c] bl        #0x25cc4
+00018160 [file 00007560] cmp       r0, #0
+00018164 [file 00007564] beq       #0x18278
+# VA 0x25d04..0x25d34, exclusive
+00025d04 [file 00015104] mov       r0, #2
+00025d08 [file 00015108] str       sb, [r7, #0xfc]
+00025d0c [file 0001510c] str       r0, [r7, #0xe8]
+00025d10 [file 00015110] mov       r2, #0
+00025d14 [file 00015114] mov       r1, r7
+00025d18 [file 00015118] str       r8, [r7, #0x138]
+00025d1c [file 0001511c] mvn       r0, #0x6b
+00025d20 [file 00015120] add       r0, fp, r0
+00025d24 [file 00015124] str       sb, [r7, #0xe4]
+00025d28 [file 00015128] str       sb, [r7, #0xec]
+00025d2c [file 0001512c] str       sb, [r7, #0xf0]
+00025d30 [file 00015130] bl        #0x2ed40
+# VA 0x2ed40..0x2ed7c, exclusive
+0002ed40 [file 0001e140] mov       ip, sp
+0002ed44 [file 0001e144] push      {r0, r1, r2, r3}
+0002ed48 [file 0001e148] push      {r4, r5, r6, fp, ip, lr}
+0002ed4c [file 0001e14c] add       fp, sp, #0x18
+0002ed50 [file 0001e150] sub       sp, sp, #0xc
+0002ed54 [file 0001e154] mov       r6, r0
+0002ed58 [file 0001e158] mov       r4, r1
+0002ed5c [file 0001e15c] mov       r5, r2
+0002ed60 [file 0001e160] bl        #0x2ca7c
+0002ed64 [file 0001e164] ldr       r0, [pc, #0x144]
+0002ed68 [file 0001e168] str       r4, [r6, #0x40]
+0002ed6c [file 0001e16c] cmp       r5, #0
+0002ed70 [file 0001e170] str       r0, [r6]
+0002ed74 [file 0001e174] mov       r0, #0
+0002ed78 [file 0001e178] str       r5, [r6, #0x44]

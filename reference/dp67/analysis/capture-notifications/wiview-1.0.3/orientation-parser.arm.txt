@@ -1,0 +1,73 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x2bc9c..0x2bdb8, exclusive
+0002bc9c [file 0001b09c] push      {r4, r5, r6, r7, lr}
+0002bca0 [file 0001b0a0] mov       r6, r0
+0002bca4 [file 0001b0a4] mov       r4, r1
+0002bca8 [file 0001b0a8] ldr       r0, [pc, #0x104] ; 'Portrait CW'
+0002bcac [file 0001b0ac] mov       r5, #2
+0002bcb0 [file 0001b0b0] mov       r1, r6
+0002bcb4 [file 0001b0b4] mov       r7, r5
+0002bcb8 [file 0001b0b8] bl        #0x9c97c
+0002bcbc [file 0001b0bc] cmp       r0, #0
+0002bcc0 [file 0001b0c0] moveq     r7, #1
+0002bcc4 [file 0001b0c4] moveq     r0, r7
+0002bcc8 [file 0001b0c8] popeq     {r4, r5, r6, r7, pc}
+0002bccc [file 0001b0cc] mov       r1, r6
+0002bcd0 [file 0001b0d0] ldr       r0, [pc, #0xd8] ; 'Portrait CCW'
+0002bcd4 [file 0001b0d4] bl        #0x9c97c
+0002bcd8 [file 0001b0d8] cmp       r0, #0
+0002bcdc [file 0001b0dc] moveq     r7, #0
+0002bce0 [file 0001b0e0] moveq     r0, r7
+0002bce4 [file 0001b0e4] popeq     {r4, r5, r6, r7, pc}
+0002bce8 [file 0001b0e8] mov       r1, r6
+0002bcec [file 0001b0ec] ldr       r0, [pc, #0xb8] ; 'Landscape'
+0002bcf0 [file 0001b0f0] bl        #0x9c97c
+0002bcf4 [file 0001b0f4] cmp       r0, #0
+0002bcf8 [file 0001b0f8] moveq     r7, r5
+0002bcfc [file 0001b0fc] moveq     r0, r7
+0002bd00 [file 0001b100] popeq     {r4, r5, r6, r7, pc}
+0002bd04 [file 0001b104] cmp       r4, #0
+0002bd08 [file 0001b108] beq       #0x2bd28
+0002bd0c [file 0001b10c] ldr       r0, [pc, #0x94] ; 'Auto'
+0002bd10 [file 0001b110] mov       r1, r6
+0002bd14 [file 0001b114] bl        #0x9c97c
+0002bd18 [file 0001b118] cmp       r0, #0
+0002bd1c [file 0001b11c] moveq     r7, #3
+0002bd20 [file 0001b120] moveq     r0, r7
+0002bd24 [file 0001b124] popeq     {r4, r5, r6, r7, pc}
+0002bd28 [file 0001b128] ldr       r5, [pc, #0x74]
+0002bd2c [file 0001b12c] ldr       r0, [r5]
+0002bd30 [file 0001b130] add       r0, r0, #0xc
+0002bd34 [file 0001b134] bl        #0x9c964
+0002bd38 [file 0001b138] ldr       r4, [r5]
+0002bd3c [file 0001b13c] mov       r3, #0x2f0
+0002bd40 [file 0001b140] ldr       r2, [pc, #0x58] ; 'Commands.cpp'
+0002bd44 [file 0001b144] mov       r0, r4
+0002bd48 [file 0001b148] ldr       r4, [r4]
+0002bd4c [file 0001b14c] orr       r3, r3, #2
+0002bd50 [file 0001b150] ldr       r4, [r4, #0x10]
+0002bd54 [file 0001b154] mov       r1, #1
+0002bd58 [file 0001b158] mov       lr, pc
+0002bd5c [file 0001b15c] mov       pc, r4
+0002bd60 [file 0001b160] ldr       r4, [r5]
+0002bd64 [file 0001b164] mov       r3, r6
+0002bd68 [file 0001b168] ldr       r2, [pc, #0x2c] ; 'Unrecognized orientation %s'
+0002bd6c [file 0001b16c] mov       r0, r4
+0002bd70 [file 0001b170] ldr       r4, [r4]
+0002bd74 [file 0001b174] ldr       r1, [pc, #0x1c] ; 'StringToOrientation'
+0002bd78 [file 0001b178] ldr       r4, [r4, #4]
+0002bd7c [file 0001b17c] mov       lr, pc
+0002bd80 [file 0001b180] mov       pc, r4
+0002bd84 [file 0001b184] ldr       r3, [r5]
+0002bd88 [file 0001b188] add       r0, r3, #0xc
+0002bd8c [file 0001b18c] bl        #0x9c958
+0002bd90 [file 0001b190] mov       r0, r7
+0002bd94 [file 0001b194] pop       {r4, r5, r6, r7, pc}
+0002bd98 [file 0001b198] andseq    ip, r0, r4, ror #4
+0002bd9c [file 0001b19c] andseq    ip, r0, ip, lsl #5
+0002bda0 [file 0001b1a0] andseq    ip, r0, r4, asr #5
+0002bda4 [file 0001b1a4] andseq    sl, r5, r0, lsl fp
+0002bda8 [file 0001b1a8] andseq    sl, r0, r4, ror r0
+0002bdac [file 0001b1ac] andseq    sl, r0, r0, rrx
+0002bdb0 [file 0001b1b0] andseq    sl, r0, r0, lsl #1
+0002bdb4 [file 0001b1b4] mulseq    r0, ip, r0

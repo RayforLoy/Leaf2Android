@@ -38,6 +38,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.leaf2android.data.*
+import com.leaf2android.protocol.ImagePoint
+import com.leaf2android.protocol.ImageZoom
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -86,6 +88,20 @@ fun PhotoViewer(photo: LeafPhoto, repo: LeafRepository, connected: Boolean, modi
     val shadow = options.showShadows
     var info by rememberSaveable { mutableStateOf(false) }
     var notes by rememberSaveable { mutableStateOf(false) }
+    var imageTools by rememberSaveable(photo.path, photo.connectionGeneration) { mutableStateOf(false) }
+    var photoActions by rememberSaveable(photo.path, photo.connectionGeneration) { mutableStateOf(false) }
+    var grayPicking by rememberSaveable(photo.path, photo.connectionGeneration) { mutableStateOf(false) }
+    var grayFractionX by rememberSaveable(photo.path, photo.sha256, photo.connectionGeneration) { mutableStateOf<Double?>(null) }
+    var grayFractionY by rememberSaveable(photo.path, photo.sha256, photo.connectionGeneration) { mutableStateOf<Double?>(null) }
+    var grayPointX by rememberSaveable(photo.path, photo.sha256, photo.connectionGeneration) { mutableStateOf<Int?>(null) }
+    var grayPointY by rememberSaveable(photo.path, photo.sha256, photo.connectionGeneration) { mutableStateOf<Int?>(null) }
+    var grayOutsideImage by rememberSaveable(photo.path, photo.connectionGeneration) { mutableStateOf(false) }
+    val session by repo.state.collectAsStateWithLifecycle()
+    val currentBackPhoto = connected && isCurrentBackPhoto(photo, session)
+    val backEnabled = currentBackPhoto && !session.controlsBusy && !session.labMode
+    val grayMapping = remember(photo.metadata, photo.sha256, photo.metadataPreviewSha256, session.camera, photo.width, photo.height) { photoGrayMapping(photo, session.camera) }
+    val grayFraction = if (grayFractionX != null && grayFractionY != null) ImageFraction(grayFractionX!!, grayFractionY!!) else null
+    val grayPoint = if (grayPointX != null && grayPointY != null) ImagePoint(grayPointX!!, grayPointY!!) else null
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
     val export = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/jpeg")) { uri ->
@@ -101,6 +117,7 @@ fun PhotoViewer(photo: LeafPhoto, repo: LeafRepository, connected: Boolean, modi
     fun move(next: Viewport) { viewport = next; repo.setViewport(photo.path, next) }
     LaunchedEffect(photo.path, photo.cacheFile, photo.sha256) {
         loaded = null
+        loadError = null
         photo.cacheFile?.let { path ->
             try { loaded = withContext(Dispatchers.Default) { loadPreview(path) } }
             catch (e: Exception) { loadError = e.message ?: tr(R.string.could_not_load_preview_270c5) }
@@ -115,6 +132,29 @@ fun PhotoViewer(photo: LeafPhoto, repo: LeafRepository, connected: Boolean, modi
             if (connected) IconButton(onClick = repo::refreshSelected) { Icon(Icons.Default.Refresh, tr(R.string.read_preview_again_e63d3)) }
             IconButton(onClick = { repo.star(photo.path) }) { Icon(if (photo.starred) Icons.Default.Star else Icons.Default.StarBorder, tr(R.string.local_flag_fdc55)) }
             IconButton(onClick = { info = true }) { Icon(Icons.Default.Info, tr(R.string.photo_information_8aa32)) }
+        }
+        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedButton(onClick = { imageTools = true }, enabled = backEnabled, modifier = Modifier.weight(1f).testTag("photo-open-image-tools")) {
+                Icon(Icons.Default.Tune, null, Modifier.size(18.dp))
+                Spacer(Modifier.width(6.dp))
+                Text(tr(R.string.back_image_tools), maxLines = 2)
+            }
+            OutlinedButton(onClick = { photoActions = true }, modifier = Modifier.weight(1f).testTag("photo-open-actions")) {
+                Icon(Icons.Default.MoreHoriz, null, Modifier.size(18.dp))
+                Spacer(Modifier.width(6.dp))
+                Text(tr(R.string.photo_actions), maxLines = 2)
+            }
+        }
+        if (connected && !photo.isDemo && !currentBackPhoto) Text(tr(R.string.refresh_photo_before_back_write),
+            Modifier.padding(horizontal = 20.dp, vertical = 2.dp), style = MaterialTheme.typography.labelSmall)
+        if (grayPicking) Column(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 4.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(tr(R.string.gray_pick_mode_hint), style = MaterialTheme.typography.bodySmall, modifier = Modifier.testTag("gray-pick-mode"))
+            if (grayMapping == null) Text(tr(R.string.gray_pick_unavailable), style = MaterialTheme.typography.bodySmall)
+            if (grayOutsideImage) Text(tr(R.string.gray_pick_outside_image), style = MaterialTheme.typography.bodySmall)
+            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                TextButton(onClick = { grayPicking = false; grayFractionX = null; grayFractionY = null; grayPointX = null; grayPointY = null }, modifier = Modifier.testTag("cancel-gray-pick")) { Text(tr(R.string.gray_pick_cancel)) }
+                TextButton(onClick = { repo.requestMetadata(photo.path) }, enabled = backEnabled, modifier = Modifier.testTag("gray-pick-read-metadata")) { Text(tr(R.string.gray_pick_read_metadata)) }
+            }
         }
         BoxWithConstraints(Modifier.weight(1f).fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp)
             .clip(MaterialTheme.shapes.medium).background(Color(0xFF080B08)).testTag("photo-canvas")) {
@@ -146,10 +186,30 @@ fun PhotoViewer(photo: LeafPhoto, repo: LeafRepository, connected: Boolean, modi
                             move(bounded(z, ((old.x * fitW - cx) * ratio + cx + pan.x) / fitW,
                                 ((old.y * fitH - cy) * ratio + cy + pan.y) / fitH))
                         }
-                    }.pointerInput(photo.path, areaW, areaH) {
+                    }.pointerInput(photo.path, areaW, areaH, grayPicking, grayMapping, backEnabled) {
                         detectTapGestures(onDoubleTap = { point ->
                             if (viewport.zoom > 1.1f) move(Viewport())
                             else move(bounded(2f, -(point.x - areaW / 2) / fitW, -(point.y - areaH / 2) / fitH))
+                        }, onTap = { tapped ->
+                            if (grayPicking && backEnabled) {
+                                val current = bounded(viewport.zoom, viewport.x, viewport.y)
+                                val fraction = PhotoViewportGeometry(areaW.toDouble(), areaH.toDouble(), preview.bitmap.width, preview.bitmap.height,
+                                    current.zoom.toDouble(), (current.x * fitW).toDouble(), (current.y * fitH).toDouble())
+                                    .imageFractionAt(CanvasPoint(tapped.x.toDouble(), tapped.y.toDouble()))
+                                grayOutsideImage = fraction == null
+                                if (fraction != null) {
+                                    grayFractionX = fraction.x
+                                    grayFractionY = fraction.y
+                                    val point = grayMapping?.protocolPoint(fraction)
+                                    if (point != null) {
+                                        grayPointX = point.x
+                                        grayPointY = point.y
+                                        repo.requestBackPreview(photo.path, ImageZoom.FIT, null, null, point)
+                                        grayPicking = false
+                                        imageTools = true
+                                    }
+                                }
+                            }
                         })
                     }
                 Box(gestures, contentAlignment = Alignment.Center) {
@@ -159,6 +219,8 @@ fun PhotoViewer(photo: LeafPhoto, repo: LeafRepository, connected: Boolean, modi
                     if (highlight) Image(preview.analysis.high.asImageBitmap(), tr(R.string.jpeg_highlight_warning_9186a), imageModifier, contentScale = ContentScale.FillBounds)
                     if (shadow) Image(preview.analysis.low.asImageBitmap(), tr(R.string.jpeg_shadow_warning_20ffe), imageModifier, contentScale = ContentScale.FillBounds)
                 }
+                if (grayFraction != null) GrayPointMarker(grayFraction, preview.bitmap.width, preview.bitmap.height, Modifier.fillMaxSize(),
+                    display.zoom, display.x * fitW, display.y * fitH)
                 Surface(color = Color(0xB8222A20), shape = MaterialTheme.shapes.extraSmall, modifier = Modifier.align(Alignment.BottomEnd).padding(10.dp)) {
                     Text("%.1f×".format(display.zoom), Modifier.padding(horizontal = 8.dp, vertical = 4.dp), color = Color(0xFFE3ECDC), style = MaterialTheme.typography.labelSmall)
                 }
@@ -189,7 +251,18 @@ fun PhotoViewer(photo: LeafPhoto, repo: LeafRepository, connected: Boolean, modi
     }, confirmButton = { TextButton(onClick = { info = false }) { Text(tr(R.string.close_6c14b)) } }, dismissButton = {
         TextButton(onClick = { repo.requestMetadata(photo.path) }, enabled = connected && !photo.isDemo) { Text(tr(R.string.read_back_information_80058)) }
     })
-    if (notes) NotesDialog(photo, connected, repo) { notes = false }
+    if (notes) NotesDialog(photo, session, repo) { notes = false }
+    if (photoActions) PhotoActionsDialog(photo, session, repo, editNotes = { photoActions = false; notes = true }) { photoActions = false }
+    if (imageTools) BackImageToolsDialog(photo, session, repo,
+        pickGrayPoint = {
+            imageTools = false
+            grayPicking = true
+            grayOutsideImage = false
+            // Run once for this explicit entry, never from composition or locale recreation.
+            if (grayMapping == null && backEnabled && session.operation.isEmpty()) repo.requestMetadata(photo.path)
+        },
+        initialGrayPoint = grayPoint, initialGrayFraction = grayFraction,
+    ) { imageTools = false }
 }
 
 @Composable private fun Histogram(channels: List<IntArray>) {
@@ -211,16 +284,17 @@ fun PhotoViewer(photo: LeafPhoto, repo: LeafRepository, connected: Boolean, modi
     }
 }
 
-@Composable private fun NotesDialog(photo: LeafPhoto, connected: Boolean, repo: LeafRepository, close: () -> Unit) {
+@Composable private fun NotesDialog(photo: LeafPhoto, state: SessionState, repo: LeafRepository, close: () -> Unit) {
     var note by rememberSaveable(photo.path) { mutableStateOf(photo.localNote) }
-    var copyright by rememberSaveable(photo.path) { mutableStateOf(photo.metadata["copyright"] ?: "") }
+    var copyright by rememberSaveable(photo.path) { mutableStateOf(photo.metadata.entries.firstOrNull { it.key.equals("copyright", true) }?.value.orEmpty()) }
     AlertDialog(onDismissRequest = close, title = { Text(tr(R.string.notes_and_flags_53c7a)) }, text = {
         Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Text(photo.path, style = MaterialTheme.typography.bodySmall)
             Text(tr(R.string.stars_and_local_notes_are_saved_on_the_phone_th_97eb9), style = MaterialTheme.typography.bodySmall)
             OutlinedTextField(note, { note = it.take(4000) }, label = { Text(tr(R.string.note_e0361)) }, minLines = 3)
             OutlinedTextField(copyright, { copyright = it.take(1000) }, label = { Text(tr(R.string.back_copyright_field_optional_02e2d)) })
             Text(tr(R.string.writing_to_the_back_uses_the_original_wiview_se_49c33), style = MaterialTheme.typography.bodySmall)
-            OutlinedButton(onClick = { repo.writeCameraNotes(photo.path, copyright, note); close() }, enabled = connected && !photo.isDemo) { Text(tr(R.string.writing_notes_to_back_18e71)) }
+            OutlinedButton(onClick = { repo.writeCameraNotes(photo.path, copyright, note); close() }, enabled = isCurrentBackPhoto(photo, state) && !state.controlsBusy && !state.labMode) { Text(tr(R.string.writing_notes_to_back_18e71)) }
         }
     }, confirmButton = { TextButton(onClick = { repo.localNote(photo.path, note); close() }) { Text(tr(R.string.save_local_note_3fc9a)) } }, dismissButton = { TextButton(onClick = close) { Text(tr(R.string.cancel_4d0b4)) } })
 }

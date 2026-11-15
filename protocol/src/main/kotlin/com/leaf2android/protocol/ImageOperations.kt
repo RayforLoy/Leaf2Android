@@ -1,8 +1,8 @@
 package com.leaf2android.protocol
 
-/** Coordinates in the original back image, after any required orientation transform.
+/** Coordinates in the back's image-processing reference grid, after the required orientation transform.
  * Screen, Compose-canvas and decoded-thumbnail coordinates must not be passed without a verified mapping.
- * The bound is a host sanity limit, not an advertised sensor dimension.
+ * The bound is a host sanity limit, not an advertised MOS sensor dimension.
  */
 data class ImagePoint(val x: Int, val y: Int) {
     init {

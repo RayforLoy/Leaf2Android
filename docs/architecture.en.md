@@ -29,7 +29,9 @@ The app connects through the standard SPP UUID, then requests synchronization, t
 
 Validated capture notifications enter a bounded preview queue. GetImage needs a matching filename and attachment length before decoding a preview and storing original bytes and SHA-256. Unknown binary data is not reported as a complete MOS download. Busy, unsaved or error notifications are not successful captures.
 
-Version 0.3.1 protects whole read/write/readback operations and automatic preview transfers with the same repository operation lock; notification Ack bypasses it. Background configuration refresh preserves the last result/error. WiView and DP-67 ShootSetup dialects serialize separately; compatibility choice and preview-cache limits persist independently of pairing mode and text encoding.
+Whole read/write/readback operations and automatic preview transfers share the same repository operation lock. Version 0.3.2 removes automatic Ack for ordinary asynchronous notifications; only the original client's dedicated Stop `^<Ack/>` bypasses that lock. Packet acknowledgements remain unimplemented; see the [capture-notification analysis](capture-notifications-analysis.en.md). Background configuration refresh preserves the last result/error. WiView and DP-67 ShootSetup dialects serialize separately; compatibility choice and preview-cache limits persist independently of pairing mode and text encoding.
+
+Gray-point picking inverts the actual preview fit, zoom and pan. Light sampling requires orientation metadata bound to this connection and preview SHA, consistent with the back's reference dimensions. Every preview refresh invalidates old metadata and sampling even when bytes match. Verified deletion/move removes the source list entry, viewport and cache only after directory readback; queued old reads cannot reinsert the removed source.
 
 ## State, language and layout
 

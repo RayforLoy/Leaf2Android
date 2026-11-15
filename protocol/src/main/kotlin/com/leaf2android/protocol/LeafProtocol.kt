@@ -33,6 +33,7 @@ class LeafProtocol(
     @Volatile private var running = false
     private var reader: Job? = null
     private var requestNumber = 0L
+    val isOpen: Boolean get() = running
 
     suspend fun open() {
         transport.connect()
@@ -87,10 +88,10 @@ class LeafProtocol(
                 wait.reply.await()
             }
             if (validateReply && (response.tag.equals("Error", true) || response.tag.equals("Nak", true)))
-                throw ProtocolException("后背拒绝指令：${response.header.toString(encoding.charset)}", "The back rejected the command: ${response.header.toString(encoding.charset)}")
+                throw CommandRejectedException(command, response, encoding)
             val errorCode = response.value("error_code")
-            if (validateReply && errorCode != null && errorCode.toLongOrNull() != 0L)
-                throw ProtocolException("后背返回错误码 $errorCode：${command.text.substringBefore(' ')}", "The back returned error $errorCode: ${command.text.substringBefore(' ')}")
+            if (validateReply && errorCode != null && WireNumbers.errorCode(errorCode) != 0L)
+                throw CommandRejectedException(command, response, encoding)
             log("REQUEST #$number REPLY ${response.tag}; elapsed=${(System.nanoTime() - started) / 1_000_000}ms")
             response
         } catch (e: TimeoutCancellationException) {
@@ -104,7 +105,8 @@ class LeafProtocol(
         } finally { pending = null }
     }
 
-    suspend fun acknowledge() { if (running) { write(Commands.ack); log("TX ^<Ack /> [notification]") } }
+    /** The original client explicitly acknowledges Stop; ordinary asynchronous notifications do not. */
+    suspend fun acknowledgeStop() { if (running) { write(Commands.stopAck); log("TX ^<Ack/> [Stop]") } }
     suspend fun sendOnly(command: LeafCommand) = requests.withLock {
         if (!running) throw ProtocolException("蓝牙会话未连接", "The Bluetooth session is not connected.")
         write(command.bytes(encoding))

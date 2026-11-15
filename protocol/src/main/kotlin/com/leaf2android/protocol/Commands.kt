@@ -47,6 +47,7 @@ object Commands {
     val totalFrames = camera("TotalFrames")
     val histogramScale = camera("Histogram_scale")
     val ack = "^<Ack />".toByteArray(Charsets.US_ASCII)
+    val stopAck = "^<Ack/>".toByteArray(Charsets.US_ASCII)
     private fun camera(param: String) = LeafCommand("^<GetCameraParam GetParamList=\"$param\" />")
 
     fun directory(path: String = "./"): LeafCommand {

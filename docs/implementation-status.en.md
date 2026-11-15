@@ -2,7 +2,7 @@
 
 [简体中文](implementation-status.md) · [Project home](../README.en.md) · [Full gap matrix](feature-gap-matrix.en.md)
 
-Updated 2026-11-14. **0.3.1 (versionCode 4) is an experimental pre-release**; app ID `com.leaf2android`. Changes are implemented, while candidate fixes for real Valeo settings timeouts still require device retests. Final builds and checks follow this release's reports.
+Updated 2026-11-15. **0.3.2 (versionCode 5) is available as a pre-release**; app ID `com.leaf2android`. Notification handling, photo-page actions and conditional tap sampling are implemented; new automatic preview still requires a user Valeo retest. Final build and test results follow matching-version reports.
 
 ## Scope and evidence
 
@@ -17,10 +17,11 @@ Early implementation proceeded under the user's assumption that wireless works. 
 | Model | Report date | Bluetooth connection | Photo reading | Evidence scope |
 | --- | --- | --- | --- | --- |
 | Valeo 22Wi | 2026-11-11 | Reported working by the user | Reported working by the user | User's use report; firmware, phone / system, app version and logs not supplied |
+| Valeo, follow-up | 2026-11-15 | Very stable on v0.3.1, user-reported | Manual reads work; automatic preview Error while READY | ISO / gray-balance shooting settings reported working; exact mode, firmware and capture record absent |
 | Aptus 22 | 2026-11-11 | Reported working by the user | Reported working by the user | User's use report; firmware, phone / system, app version and logs not supplied |
 | Aptus II, including the earlier II 5 target | 2026-11-11 | Not a Bluetooth target | Wireless reading not applicable | User corrected that this family has no Bluetooth; shared firmware code is not hardware-support evidence |
 
-This is model-specific user feedback, not an independent maintainer retest or complete acceptance. The report does not establish a 20-photo sequence, file association, folder details, ISO or other parameter reads / writes, back marking, note read-back, screen lock / background, original files or live view. The test phone is not assumed to be the originally planned Z Fold7. Aptus II 5 and family-wide compatibility are not inferred.
+The 11-11 records are model-specific user feedback, not independent maintainer retests or complete acceptance. Later Valeo v0.3.1 feedback adds stable connection and selected shooting settings below. A 20-photo sequence, every parameter, back marking, note read-back, storage actions, lock-screen / background, originals and live view remain unaccepted. The actual phone is not assumed to be the planned Z Fold7, and family-wide compatibility is not inferred.
 
 ### 2026-11-14: settings timeout incident
 
@@ -28,9 +29,17 @@ The user reports working Valeo photo reads with disconnection on settings change
 
 Offline testing also exposed background Sync from CameraShootSetupChangeNotification clearing a just-completed success or read-back mismatch. Automatic refresh now retains error / notice; only a new manual operation clears them. This concerns overwritten app display / verification results, not a proven back-disconnection cause. See the [independent public-evidence review](valeo-connection-research.en.md).
 
+### 2026-11-15: stable v0.3.1 settings, automatic-preview Error
+
+The user now describes very stable Valeo Bluetooth on v0.3.1 and working shooting settings including ISO and gray balance. Automatic preview still shows `^<Error error_code="0x01" />`; the session remains READY and manual reading of the new photo works. Exact firmware, compatibility mode, full environment and a matched capture sequence are still missing. This does not extend the report to Aptus 22 settings, new tap sampling or all fields.
+
+Original DP-67 / WiView notification paths do not automatically Ack ordinary PictureTaken / ImageChange and related notifications; WiView explicitly confirms Stop. The examined 4.701 / 5.041 PDA directories do not register ordinary Ack: unknown handling reaches enum 12 and Error 0x01. See [complete static evidence](capture-notifications-analysis.en.md). An extra Ack Error consumed by a pending GetImage is a plausible explanation, not a wireless trace from the user's back. Code 0x01 must not be labelled busy.
+
+Version 0.3.2 removes ordinary-notification auto-Ack from normal and laboratory handling, retaining only Stop confirmation. Packet Ack / Nak is separate and remains disabled. No blind retry or new parametersReady hard gate is added, and the shooting-settings path reported stable is retained. WireNumbers accepts decimal / hexadecimal DWORD codes: 0x00 is zero, while unknown syntax stays conservatively rejected. New automatic preview still needs a physical retest. User chat screenshots and personal content are not included in the public evidence.
+
 ## Support table
 
-Existing behavior, newly evidenced standard functions and laboratory entries are listed below. The user has not verified new parameters, processing, marking, storage or session controls on Valeo 22Wi or Aptus 22. Laboratory probes record evidence without treating unexplained replies as proven effects.
+Existing behavior, evidenced standard functions and laboratory entries are listed below. The Valeo v0.3.1 report covers stable connection and shooting settings including ISO / gray balance; it does not establish every field, tap sampling, current-photo processing, marking, storage or session controls. Laboratory probes remain observations rather than proof of unexplained effects.
 
 | Feature | Code in this version | Device acceptance |
 | --- | --- | --- |
@@ -38,9 +47,9 @@ Existing behavior, newly evidenced standard functions and laboratory entries are
 | Synchronization and folders | RequestSync → CurrentTime → dir; errors are not ready | Photo reading reported on both models; full handshake, folder fields and date syntax not separately accepted |
 | Shooting compatibility | Select AUTO / WIVIEW / DP67 while disconnected; AUTO requires Valeo in the Bluetooth name and shootsetup in Sync | Serialization only, not pairing / CEVersion changes; renamed backs can select explicitly; not hardware-capability detection |
 | WiView legacy / ISO | Complete ShootSetup and device options, retaining untouched values | Its compression / orientation / Color additions are not applied to DP-67; pre / post Sync, effects untested |
-| DP-67 / ISO | Twelve core fields, retaining Prefix only if present; edit original presets into .1 slots | No compression, Orientation or Color writes; confirm slot update and verify new active, expected values and unchanged preset; effects untested |
+| DP-67 / ISO | Twelve core fields, retaining Prefix only if present; edit original presets into .1 slots | No compression, Orientation or Color additions; verify active, values and unchanged preset. Valeo v0.3.1 shooting settings have success reports, without a recorded mode or full-field comparison |
 | Existing preset selection | DP-67 originals send DefaultShootSetup only; modified setups send complete CSV | Not FactorySettings; retain original contains(".1") name rule and read back the selection |
-| Whole-operation locking and results | operationLock spans pre-Sync, set and read-back, excluding automatic GetImage; notification Ack bypasses it; automatic refresh retains results | No automatic write retries, timeout still closes; summaries name tag / attributes only; real Valeo retest pending |
+| Whole-operation locking and results | operationLock spans pre-Sync, set and read-back; automatic GetImage cannot interleave; only dedicated Stop confirmation bypasses it; automatic refresh retains results | No automatic write retries; timeout still closes. Refusals name request tag / attributes and redact reply headers |
 | 5.041 camera settings | Recognized Sync.CameraSettings supports independent ISO, Orientation, CameraType, SensorCrop, FileCompression, Prefix and ShootingFolder writes | Device-provided choices; name-only SensorCrop, None / Lossless compression, prefix limits below; full read-back; physical effects untested |
 | 5.041 image-processing settings | Complete ImageSettings editing and existing ActiveImageSettings selection; preserve untouched fields | Includes Grain / MoireReduction / Saturation only when Sync advertises options; fresh read and full read-back; physical effects untested |
 | Automatic post-capture display | Notifications, filename matching, attachment length, serialized queue | At least 20 real photos must be matched |
@@ -50,16 +59,16 @@ Existing behavior, newly evidenced standard functions and laboratory entries are
 | Stars and local notes | Persistent phone-side data, explicitly local | No back dependency |
 | Back notes | SetPictureParams; matching success and no error code required | Write / read-back effects pending |
 | Back Good / Unmarked | Independent of phone stars; retain XMP and change only the third Flags character when present; Sync shootsetup / camerasettings enables Marking-only evidenced in classic 4.701 / 5.041 | Standard path refuses without XMP or a recognized dialect; current-connection preview and marking read-back required; effects untested |
-| Back storage management | Create folders, delete empty folders, rename folders, delete photos, internal copy / move; explicit confirmation, no overwrite and directory read-back | New operations untested; not complete MOS transfer to the phone |
-| Back zoom / Alarm | Implemented original 1 / 2 / 4 / 8 processed previews and highlight / shadow / both Alarm, returning JPEG | Distinct from local zoom / JPEG warnings; original-image protocol coordinates are entered manually, with no guessed Compose mapping; effects untested |
-| Gray-balance sample / confirm / restore | Implemented sampled preview and returned Light display; separate confirmation for the current photo or future captures, plus preview restore | Future captures use complete legacy ShootSetup.Light / 5.041 ImageSettings.Light and Sync comparison; no arbitrary Kelvin / tint; effects untested |
+| Back storage management | Photo actions opens marks, notes, copy / move and deletion; folder controls remain on Back | Deletion confirms device / path twice; only verified absence clears source list / cache and chooses a neighbor. Move verifies both paths before clearing source and reading target; failures retain records; effects untested |
+| Back zoom / Alarm | Original 1 / 2 / 4 / 8 JPEG previews and Alarm; Back image tools accessible on the photo page | Separate from local JPEG analysis; automatic taps require current orientation, PictureDimensions, SHA and matching aspect evidence; manual coordinates remain; physical mapping / effects untested |
+| Gray-balance sample / confirm / restore | Explicit tap mode, returned Light, separate current-photo / future-capture confirmations and restore | V0.3.1 shooting-setting success is user-reported; new sampling / current-photo effects await testing. Unknown / Auto / conflicting mapping is blocked; every refresh invalidates old metadata and samples |
 | Back pixel / exposure picking | Implemented ImageFunction coordinate request and histogramlocation / histogramvalue display | fstops carries coordinates, not aperture; labelled back-provided with RAW / JPEG provenance unconfirmed; effects untested |
 | Back histograms | Implemented variable-bin histogram / r / g / b parsing and display | Back-provided, with actual reply bin counts; no fixed 256-bin or RAW assumption; effects untested |
 | Back clock synchronization | Write phone-local time to CurrentTime, then read it separately | Does not invent protocol time-zone support; actual clock and capture dates need testing |
 | Default future-capture notes | Read, write and read back default Annotation / Copyright | Separate from notes on the current photo; does not rewrite existing images; effects untested |
 | EnableTakenPicture experiment | yes / no template moved to the laboratory, retaining request and original reply | no has not been proved to stop notifications; no unproven pause button in the main UI; not shutter release |
 | Power-source request | FireWire / CameraBattery, enabled only with powersourceselection=support | Request Ack only; no claim of a confirmed power state; effects untested |
-| Back control page | Bottom navigation's Back page groups settings and session actions | Controls require the recognized dialect, current values, complete structures and device choices |
+| Back control page | Back navigation retains settings; photo page adds Back image tools and Photo actions | Recognized dialect, complete structures and current-connection photo provenance gate controls; arbitrary individual MOS rename remains unavailable |
 | Laboratory templates and candidates | Open at the top of Back; 16 client templates, firmware research entries and one raw control header | Enter unknown inputs and confirm target / request before sending; ranges, semantics and wireless effects remain unverified |
 | Experiment records and export | Received / error / cancelled / send-only recorded separately; original .bin, length / SHA-256 / first 256-byte hex, ZIP export | Nonzero Ack is not converted to normal success; known header fields are masked, binary attachments unchanged |
 | Modern / classic PDA | Shared session, photo, zoom and display state | Real displays, rotation and One UI split-screen pending |
@@ -79,13 +88,13 @@ Legacy ISO is in the complete setup. Independent 5.041 CameraSettings requires t
 
 Editing an original DP-67 preset clones to `original-name.1` unless its name already contains `.1`, retaining that modified slot. Confirmation shows the destination and possible existing-slot update. Fresh state is checked before submitting; read-back verifies new active, expected values, visible untouched fields / globals and unchanged original preset. The original 12-second × 3 retry is not copied; timeout still closes, with manual reconnect and no automatic write retry. See [DP-67 static analysis](dp67-analysis.en.md).
 
-Pre-Sync, write and read-back share operationLock; automatic image requests cannot interleave while notification Ack bypasses the lock. This queues phone operations rather than locking the back or other clients. Timeout summaries name the unanswered tag and attributes without values, distinguishing write Ack from read-back wait, not establishing physical-loss causality.
+Pre-Sync, write and read-back share operationLock; automatic image requests cannot interleave. Ordinary notifications no longer send Ack; only dedicated Stop confirmation bypasses this lock. This queues phone operations rather than locking the back or other clients. Timeout and refusal summaries identify request tag / attribute names without request values, and known sensitive reply fields are redacted. A complete Error refusal does not itself mean the transport disconnected.
 
 5.041 camera settings and ImageSettings are separate structures; ISO is not an ImageSettings field. Processing settings cover ImageQuality, Color, Framing, Toning, Light, SharpTable, InputProfile, OutputProfile, ICCFlag, Grain, MoireReduction and Saturation. Missing complete structures or device choices are not filled with guesses. Independent SensorCrop accepts name-only lists, not guessed compound crop records. Independent compression accepts advertised None / Lossless, separate from legacy Nearly Lossless. Independent Prefix is capped at 23 UTF-16 code units and cannot increase the known current prefix's UTF-8 byte length; this is an implementation limit, not a manufacturer hardware specification. A shooting folder is checked before writing.
 
 Standard photo marking, notes, gray balance and storage operations require a preview from the connected back read in this connection. Connection generation is not persisted, so reconnect, upgrade or process restart requires a fresh preview before standard writes. XMP comes from xmp_tag, retaining other fields and Flags characters while changing only the third character. Separate full-XMP / annotation+XMP templates and the raw console use user-entered targets and do not inherit every standard semantic or photo-provenance check.
 
-Applying gray balance to future captures requires separate confirmation. Only a Light sample returned by the current back in this connection and still tied to the current photo may bypass the static illuminant list through this path. CSV delimiters remain rejected, the full configuration's other fields are preserved, and Sync verifies the result. Arbitrary typed Light values cannot bypass option validation.
+Applying gray balance to future captures requires separate confirmation. Only a Light sample returned by this back in this connection and still bound to the current photo, preview SHA and sampled point may bypass static illuminant choices. Every preview refresh clears old metadata / samples; reconnect or same-name replacement cannot reuse an old point. CSV delimiters remain rejected, the complete configuration preserves other fields and Sync verifies the result. Arbitrary typed Light cannot bypass option validation.
 
 Formatting, recovery, FactorySettings, Brightness, ResetCounter and PIN now have laboratory templates. Unknown ranges, scope, counter semantics and Android bond recovery remain experimental, not verified standard settings. A readable ShutterSpeed is not a mechanical shutter-speed or aperture writer. See the [feature gap matrix](feature-gap-matrix.en.md) for layers and unresolved reasons; the original [client gap audit](protocol-gap-audit.md) uses a 0.2.0 baseline.
 
@@ -107,7 +116,7 @@ The DP-67 user package contributes only original Setup.exe, extracted CAB and re
 
 Current counts, APK integrity, Lint, signing and alignment are recorded in [verification-status.json](../research/reports/verification-status.json) and [apk-verification.json](../research/reports/apk-verification.json). User hardware reports and tool-executed checks are different evidence types. Do not rewrite feedback as an independent maintainer retest, or treat an older report, APK or count as the current release result.
 
-Protocol and API 36 emulator coverage includes actual UI ISO selection, confirmation and complete setup read-back, language switching, Android XMP DOM smoke testing, refused writes, read-back mismatches, unexpected resets of untouched fields, ISO notifications not polluting choices, and partial-move detection. Python, protocol and Android checks passed; detailed results follow the matching-version machine reports above. Signed in-place upgrade, cache migration and explicit DP67 persistence across restarts / languages are recorded in [cache-upgrade-verification.json](../research/reports/cache-upgrade-verification.json). These offline results do not establish that real Valeo settings timeouts are solved.
+Current verification covers decimal / hexadecimal DWORD errors and redacted rejections; ordinary notifications without extra Ack, Stop confirmation and continued manual reads after rejection; point mapping, freshness and photo actions; plus previous ISO / full read-back, language, XMP and refusal / mismatch checks. Final executed checks and counts follow this version's machine reports. The [cache-upgrade report](../research/reports/cache-upgrade-verification.json) separately records its tested version. Offline results do not replace new real-back acceptance.
 
 Protocol tests cover byte splits, coalescing, binary delimiters, duplicate attributes, invalid lengths, truncation, reset, serialized requests, interleaved notifications, timeout closure and errors. Repository tests receive decodable synthetic JPEGs through a fake transport and check filename, dimensions, SHA-256 and cached bytes. UI tests cover style, language and state retention.
 
@@ -123,11 +132,11 @@ Synthetic images, peers and window sizes do not replace real Bluetooth, physical
 | Session | Back reboot, timeout, disconnect, reconnect, screen lock and background |
 | Capture | At least 20 photos, matched individually by content, name, order and automatic display |
 | Setup / ISO | AUTO / WIVIEW / DP67, original values, choices, request summary and read-back; DP-67 .1 target, new active, unchanged preset and existing-slot confirmation; timeout is not success |
-| Operations and background events | Capture / setup notifications must not insert GetImage into pre-Sync / set / read-back; notification Ack remains timely; refresh retains success / mismatch results |
+| Operations and background events | No extra Ack for ordinary capture / configuration notifications; Stop alone is confirmed. GetImage cannot interleave with settings, refresh preserves results, Error does not imply a lost link; record exact requests and replies |
 | Cache migration | Old 256 → 1024, retain 64; after migration choose 256 and restart without reset; separate laboratory attachment budget |
 | Back marking / notes | Keep Good / Unmarked separate from phone stars; read back and compare unrelated XMP namespaces and remaining Flags characters; verify caches cannot be written directly after reconnect, upgrade or process restart |
-| Storage operations | Use disposable test photos and empty folders; record source / destination, confirmation, no overwrite and refreshed directory contents; read actual state after a disconnect |
-| Server image inspection | Verify 1 / 2 / 4 / 8, Alarm, manually entered coordinates and actual orientation, gray-balance sample / photo confirmation / separate future-capture confirmation / restore, pixel picking and histogram provenance |
+| Storage operations | Disposable photos / empty folders; exact-device and path confirmations, no overwrite, successful deletion / move source-cache cleanup and neighbor choice; failed verification retains local records; reread actual state after failure |
+| Server image inspection | Back zoom / Alarm, manual coordinates, Landscape / Portrait CW / CCW mapping, blocked Auto / unknown / conflicting dimensions, zoom / letterbox boundaries, sample refresh / reconnect / same-name invalidation, separate current-photo / future confirmations, pixel picking and histogram provenance |
 | Clock and default notes | Compare phone-local time with CurrentTime; read back defaults and capture a new photo; confirm existing photos are unchanged |
 | Session requests | Record PowerSource Ack and separately observe power; test EnableTakenPicture yes / no in the laboratory without assuming no stops notifications |
 | Laboratory | Record model / firmware, template or USER HYPOTHESIS, target / request, matching mode, original reply / error, attachment hashes and actual effects separately; inspect masked headers and original attachments before export |

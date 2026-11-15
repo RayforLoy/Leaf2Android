@@ -131,7 +131,7 @@ def verify(zip_path: Path | None) -> None:
         completed = subprocess.run(command, check=True, capture_output=True, text=True)
         regenerated = {path.relative_to(output).as_posix(): path for path in output.rglob("*")
                        if path.is_file() and path != output / "inventory.json"}
-        expected = {name for name in current if name not in {"README.md", "README.en.md", "analyze_dp67.py"}}
+        expected = {name for name in current if name not in {"README.md", "README.en.md", "analyze_dp67.py", "analyze_capture.py"}}
         if set(regenerated) != expected:
             raise ValueError("Regenerated DP-67 evidence path set differs")
         for name, path in regenerated.items():
@@ -336,6 +336,10 @@ def main() -> None:
                     "note": "Only the first 12 bytes of the backup magic were read for classification (POCKETPCIMAG). No PBF contents, device credentials, backup bytes, Mac metadata or temporary folders were retained."},
         "method": "Static PE resource extraction, Windows expand.exe CAB decompression and Python pefile/Capstone parsing. Supplied executables/DLLs were never loaded or run."
     })
+    capture_script = HERE / "analyze_capture.py"
+    if capture_script.exists():
+        subprocess.run([sys.executable, str(capture_script), "--output", str(analysis / "capture-notifications")],
+                       check=True, capture_output=True)
     inventory = []
     for path in sorted(output_root.rglob("*")):
         if path.is_file() and path != output_root / "inventory.json" and "__pycache__" not in path.parts:

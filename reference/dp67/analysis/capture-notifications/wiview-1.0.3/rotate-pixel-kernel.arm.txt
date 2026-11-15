@@ -1,0 +1,248 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x94de4..0x951bc, exclusive
+00094de4 [file 000841e4] push      {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+00094de8 [file 000841e8] sub       sp, sp, #0x38
+00094dec [file 000841ec] str       r0, [sp, #0xc]
+00094df0 [file 000841f0] mov       r7, r1
+00094df4 [file 000841f4] mov       r8, r2
+00094df8 [file 000841f8] mov       sl, r3
+00094dfc [file 000841fc] ldr       r5, [sp, #0x70]
+00094e00 [file 00084200] ldr       r4, [sp, #0x68]
+00094e04 [file 00084204] ldr       r0, [r5]
+00094e08 [file 00084208] ldr       r1, [r5, #4]
+00094e0c [file 0008420c] ldr       r2, [r5, #8]
+00094e10 [file 00084210] str       r0, [sp, #0x18]
+00094e14 [file 00084214] mov       r0, #0
+00094e18 [file 00084218] ldr       r3, [r5, #0xc]
+00094e1c [file 0008421c] ldr       r6, [sp, #0x6c]
+00094e20 [file 00084220] str       r1, [sp, #0x1c]
+00094e24 [file 00084224] add       r1, sp, #0x28
+00094e28 [file 00084228] str       r2, [sp, #0x20]
+00094e2c [file 0008422c] add       r2, sp, #0x18
+00094e30 [file 00084230] str       r0, [sp, #0x28]
+00094e34 [file 00084234] str       r0, [sp, #0x2c]
+00094e38 [file 00084238] mov       r0, r5
+00094e3c [file 0008423c] str       r3, [sp, #0x24]
+00094e40 [file 00084240] str       r4, [sp, #0x30]
+00094e44 [file 00084244] str       r6, [sp, #0x34]
+00094e48 [file 00084248] bl        #0x9c9f4
+00094e4c [file 0008424c] ldr       fp, [r5]
+00094e50 [file 00084250] ldr       r0, [r5, #8]
+00094e54 [file 00084254] ldr       r3, [r5, #4]
+00094e58 [file 00084258] ldr       r1, [r5, #0xc]
+00094e5c [file 0008425c] sub       r5, r0, fp
+00094e60 [file 00084260] add       r0, r4, #1
+00094e64 [file 00084264] str       fp, [sp, #4]
+00094e68 [file 00084268] add       r2, r0, r0, lsl #1
+00094e6c [file 0008426c] sub       sb, r1, r3
+00094e70 [file 00084270] asr       r1, r2, #1
+00094e74 [file 00084274] add       r0, r2, r1, lsr #30
+00094e78 [file 00084278] asr       r2, r0, #2
+00094e7c [file 0008427c] lsl       r0, r2, #2
+00094e80 [file 00084280] str       r0, [sp, #8]
+00094e84 [file 00084284] add       r0, r7, #1
+00094e88 [file 00084288] add       r2, r0, r0, lsl #1
+00094e8c [file 0008428c] asr       r1, r2, #1
+00094e90 [file 00084290] add       r0, r2, r1, lsr #30
+00094e94 [file 00084294] asr       r2, r0, #2
+00094e98 [file 00084298] lsl       r0, r2, #2
+00094e9c [file 0008429c] str       r0, [sp]
+00094ea0 [file 000842a0] sub       r0, r6, r3
+00094ea4 [file 000842a4] ldr       r2, [sp, #0x5c]
+00094ea8 [file 000842a8] sub       r6, r0, sb
+00094eac [file 000842ac] sub       r1, r8, r5
+00094eb0 [file 000842b0] sub       r0, r8, sb
+00094eb4 [file 000842b4] sub       r3, r1, r2
+00094eb8 [file 000842b8] sub       r1, r0, r2
+00094ebc [file 000842bc] ldr       r0, [sp, #0x60]
+00094ec0 [file 000842c0] add       lr, fp, r5
+00094ec4 [file 000842c4] add       r4, r6, sb
+00094ec8 [file 000842c8] str       lr, [sp, #0x10]
+00094ecc [file 000842cc] cmp       r0, #0xb4
+00094ed0 [file 000842d0] bgt       #0x950f4
+00094ed4 [file 000842d4] beq       #0x95040
+00094ed8 [file 000842d8] cmp       r0, #0
+00094edc [file 000842dc] beq       #0x94fa0
+00094ee0 [file 000842e0] cmp       r0, #0x5a
+00094ee4 [file 000842e4] bne       #0x951b4
+00094ee8 [file 000842e8] add       r0, r3, fp
+00094eec [file 000842ec] add       r1, r0, r5
+00094ef0 [file 000842f0] ldr       r5, [sp]
+00094ef4 [file 000842f4] sub       r0, sl, r6
+00094ef8 [file 000842f8] sub       r3, r1, #1
+00094efc [file 000842fc] add       r1, r0, r0, lsl #1
+00094f00 [file 00084300] ldr       r0, [sp, #0xc]
+00094f04 [file 00084304] mla       r2, r3, r5, r1
+00094f08 [file 00084308] cmp       r6, r4
+00094f0c [file 0008430c] add       sb, r2, r0
+00094f10 [file 00084310] bge       #0x951b4
+00094f14 [file 00084314] ldr       r0, [sp, #0x64]
+00094f18 [file 00084318] add       sl, r6, r6, lsl #1
+00094f1c [file 0008431c] ldr       r1, [sp, #8]
+00094f20 [file 00084320] sub       fp, r4, r6
+00094f24 [file 00084324] mla       r8, r6, r1, r0
+00094f28 [file 00084328] b         #0x94f34
+00094f2c [file 0008432c] ldr       lr, [sp, #0x10]
+00094f30 [file 00084330] ldr       r5, [sp]
+00094f34 [file 00084334] ldr       r2, [sp, #4]
+00094f38 [file 00084338] cmp       r2, lr
+00094f3c [file 0008433c] bge       #0x94f80
+00094f40 [file 00084340] add       r0, r2, r2, lsl #1
+00094f44 [file 00084344] add       r6, r0, r8
+00094f48 [file 00084348] mul       r0, r5, r2
+00094f4c [file 0008434c] rsb       r7, r5, #0
+00094f50 [file 00084350] sub       r5, lr, r2
+00094f54 [file 00084354] sub       r0, sl, r0
+00094f58 [file 00084358] add       r4, r0, sb
+00094f5c [file 0008435c] mov       r2, #3
+00094f60 [file 00084360] mov       r1, r6
+00094f64 [file 00084364] mov       r0, r4
+00094f68 [file 00084368] bl        #0x9c8a4
+00094f6c [file 0008436c] sub       r5, r5, #1
+00094f70 [file 00084370] add       r6, r6, #3
+00094f74 [file 00084374] add       r4, r4, r7
+00094f78 [file 00084378] cmp       r5, #0
+00094f7c [file 0008437c] bhi       #0x94f5c
+00094f80 [file 00084380] ldr       r0, [sp, #8]
+00094f84 [file 00084384] sub       fp, fp, #1
+00094f88 [file 00084388] add       sl, sl, #3
+00094f8c [file 0008438c] add       r8, r8, r0
+00094f90 [file 00084390] cmp       fp, #0
+00094f94 [file 00084394] bhi       #0x94f2c
+00094f98 [file 00084398] add       sp, sp, #0x38
+00094f9c [file 0008439c] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+00094fa0 [file 000843a0] ldr       r2, [sp, #4]
+00094fa4 [file 000843a4] cmp       r6, r4
+00094fa8 [file 000843a8] sub       r0, sl, r2
+00094fac [file 000843ac] add       r1, r0, r0, lsl #1
+00094fb0 [file 000843b0] ldr       r0, [sp, #0xc]
+00094fb4 [file 000843b4] add       r7, r1, r0
+00094fb8 [file 000843b8] bge       #0x951b4
+00094fbc [file 000843bc] ldr       r5, [sp]
+00094fc0 [file 000843c0] sub       sl, r4, r6
+00094fc4 [file 000843c4] ldr       r0, [sp, #0x64]
+00094fc8 [file 000843c8] ldr       fp, [sp, #8]
+00094fcc [file 000843cc] mul       sb, r6, r5
+00094fd0 [file 000843d0] mla       r8, r6, fp, r0
+00094fd4 [file 000843d4] b         #0x94fe0
+00094fd8 [file 000843d8] ldr       lr, [sp, #0x10]
+00094fdc [file 000843dc] ldr       r2, [sp, #4]
+00094fe0 [file 000843e0] cmp       r2, lr
+00094fe4 [file 000843e4] bge       #0x95024
+00094fe8 [file 000843e8] add       r0, r2, r2, lsl #1
+00094fec [file 000843ec] add       r5, r8, r0
+00094ff0 [file 000843f0] add       r0, sb, r0
+00094ff4 [file 000843f4] add       r4, r0, r7
+00094ff8 [file 000843f8] sub       r6, lr, r2
+00094ffc [file 000843fc] mov       r2, #3
+00095000 [file 00084400] mov       r1, r5
+00095004 [file 00084404] mov       r0, r4
+00095008 [file 00084408] bl        #0x9c8a4
+0009500c [file 0008440c] sub       r6, r6, #1
+00095010 [file 00084410] add       r5, r5, #3
+00095014 [file 00084414] add       r4, r4, #3
+00095018 [file 00084418] cmp       r6, #0
+0009501c [file 0008441c] bhi       #0x94ffc
+00095020 [file 00084420] ldr       r5, [sp]
+00095024 [file 00084424] sub       sl, sl, #1
+00095028 [file 00084428] add       r8, r8, fp
+0009502c [file 0008442c] add       sb, sb, r5
+00095030 [file 00084430] cmp       sl, #0
+00095034 [file 00084434] bhi       #0x94fd8
+00095038 [file 00084438] add       sp, sp, #0x38
+0009503c [file 0008443c] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+00095040 [file 00084440] add       r0, r1, r6
+00095044 [file 00084444] ldr       r5, [sp]
+00095048 [file 00084448] add       r1, r0, sb
+0009504c [file 0008444c] add       r0, lr, sl
+00095050 [file 00084450] sub       r3, r1, #1
+00095054 [file 00084454] add       r1, r0, r0, lsl #1
+00095058 [file 00084458] ldr       r0, [sp, #0xc]
+0009505c [file 0008445c] mla       r2, r3, r5, r1
+00095060 [file 00084460] cmp       r6, r4
+00095064 [file 00084464] add       r0, r2, r0
+00095068 [file 00084468] sub       r7, r0, #3
+0009506c [file 0008446c] bge       #0x951b4
+00095070 [file 00084470] ldr       r0, [sp, #0x64]
+00095074 [file 00084474] mul       sb, r6, r5
+00095078 [file 00084478] ldr       fp, [sp, #8]
+0009507c [file 0008447c] sub       sl, r4, r6
+00095080 [file 00084480] mla       r8, r6, fp, r0
+00095084 [file 00084484] b         #0x9508c
+00095088 [file 00084488] ldr       lr, [sp, #0x10]
+0009508c [file 0008448c] ldr       r2, [sp, #4]
+00095090 [file 00084490] cmp       r2, lr
+00095094 [file 00084494] bge       #0x950d8
+00095098 [file 00084498] add       r0, r2, r2, lsl #1
+0009509c [file 0008449c] add       r6, r0, r8
+000950a0 [file 000844a0] add       r0, r2, r2, lsl #1
+000950a4 [file 000844a4] sub       r1, r7, r0
+000950a8 [file 000844a8] sub       r4, r1, sb
+000950ac [file 000844ac] sub       r5, lr, r2
+000950b0 [file 000844b0] mov       r2, #3
+000950b4 [file 000844b4] mov       r1, r6
+000950b8 [file 000844b8] mov       r0, r4
+000950bc [file 000844bc] bl        #0x9c8a4
+000950c0 [file 000844c0] sub       r5, r5, #1
+000950c4 [file 000844c4] add       r6, r6, #3
+000950c8 [file 000844c8] sub       r4, r4, #3
+000950cc [file 000844cc] cmp       r5, #0
+000950d0 [file 000844d0] bhi       #0x950b0
+000950d4 [file 000844d4] ldr       r5, [sp]
+000950d8 [file 000844d8] sub       sl, sl, #1
+000950dc [file 000844dc] add       r8, r8, fp
+000950e0 [file 000844e0] add       sb, sb, r5
+000950e4 [file 000844e4] cmp       sl, #0
+000950e8 [file 000844e8] bhi       #0x95088
+000950ec [file 000844ec] add       sp, sp, #0x38
+000950f0 [file 000844f0] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+000950f4 [file 000844f4] mov       r1, #0x10c
+000950f8 [file 000844f8] ldr       r2, [sp, #4]
+000950fc [file 000844fc] orr       r1, r1, #2
+00095100 [file 00084500] cmp       r0, r1
+00095104 [file 00084504] bne       #0x951b4
+00095108 [file 00084508] add       r0, r4, sl
+0009510c [file 0008450c] ldr       r5, [sp]
+00095110 [file 00084510] add       r1, r0, r0, lsl #1
+00095114 [file 00084514] ldr       r0, [sp, #0xc]
+00095118 [file 00084518] sub       r3, r3, r2
+0009511c [file 0008451c] mla       r2, r3, r5, r1
+00095120 [file 00084520] cmp       r6, r4
+00095124 [file 00084524] add       r0, r2, r0
+00095128 [file 00084528] sub       r8, r0, #3
+0009512c [file 0008452c] bge       #0x951b4
+00095130 [file 00084530] ldr       r0, [sp, #0x64]
+00095134 [file 00084534] add       sb, r6, r6, lsl #1
+00095138 [file 00084538] ldr       r1, [sp, #8]
+0009513c [file 0008453c] sub       sl, r4, r6
+00095140 [file 00084540] ldr       fp, [sp, #4]
+00095144 [file 00084544] mla       r7, r6, r1, r0
+00095148 [file 00084548] b         #0x95154
+0009514c [file 0008454c] ldr       lr, [sp, #0x10]
+00095150 [file 00084550] ldr       r5, [sp]
+00095154 [file 00084554] cmp       fp, lr
+00095158 [file 00084558] bge       #0x9519c
+0009515c [file 0008455c] mul       r1, r5, fp
+00095160 [file 00084560] add       r0, fp, fp, lsl #1
+00095164 [file 00084564] add       r6, r0, r7
+00095168 [file 00084568] sub       r5, lr, fp
+0009516c [file 0008456c] sub       r0, r1, sb
+00095170 [file 00084570] add       r4, r0, r8
+00095174 [file 00084574] mov       r2, #3
+00095178 [file 00084578] mov       r1, r6
+0009517c [file 0008457c] mov       r0, r4
+00095180 [file 00084580] bl        #0x9c8a4
+00095184 [file 00084584] ldr       r0, [sp]
+00095188 [file 00084588] sub       r5, r5, #1
+0009518c [file 0008458c] add       r6, r6, #3
+00095190 [file 00084590] add       r4, r4, r0
+00095194 [file 00084594] cmp       r5, #0
+00095198 [file 00084598] bhi       #0x95174
+0009519c [file 0008459c] ldr       r0, [sp, #8]
+000951a0 [file 000845a0] sub       sl, sl, #1
+000951a4 [file 000845a4] add       sb, sb, #3
+000951a8 [file 000845a8] add       r7, r7, r0
+000951ac [file 000845ac] cmp       sl, #0
+000951b0 [file 000845b0] bhi       #0x9514c
+000951b4 [file 000845b4] add       sp, sp, #0x38
+000951b8 [file 000845b8] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}

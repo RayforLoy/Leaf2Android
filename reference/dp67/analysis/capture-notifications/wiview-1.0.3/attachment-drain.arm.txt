@@ -1,0 +1,47 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x28664..0x28718, exclusive
+00028664 [file 00017a64] push      {r4, r5, r6, r7, r8, lr}
+00028668 [file 00017a68] mov       r8, r0
+0002866c [file 00017a6c] mov       r7, r1
+00028670 [file 00017a70] ldr       r5, [pc, #0x94] ; 'attachment'
+00028674 [file 00017a74] mov       r6, #0
+00028678 [file 00017a78] ldr       r0, [r7, #4]
+0002867c [file 00017a7c] cmp       r6, r0
+00028680 [file 00017a80] bge       #0x28700
+00028684 [file 00017a84] ldr       r0, [r7]
+00028688 [file 00017a88] ldr       r0, [r0, r6, lsl #2]
+0002868c [file 00017a8c] bl        #0x97ea0
+00028690 [file 00017a90] mov       r3, r0
+00028694 [file 00017a94] mov       r4, r5
+00028698 [file 00017a98] ldrh      r0, [r3], #2
+0002869c [file 00017a9c] lsl       r1, r0, #0x10
+000286a0 [file 00017aa0] ldrh      r0, [r4], #2
+000286a4 [file 00017aa4] lsr       r2, r1, #0x10
+000286a8 [file 00017aa8] lsl       r1, r0, #0x10
+000286ac [file 00017aac] cmp       r2, r1, lsr #16
+000286b0 [file 00017ab0] bne       #0x28704
+000286b4 [file 00017ab4] cmp       r2, #0
+000286b8 [file 00017ab8] bne       #0x28698
+000286bc [file 00017abc] ldr       r0, [r7]
+000286c0 [file 00017ac0] ldr       r0, [r0, r6, lsl #2]
+000286c4 [file 00017ac4] bl        #0x97ea8
+000286c8 [file 00017ac8] bl        #0x9c880
+000286cc [file 00017acc] mov       r5, r0
+000286d0 [file 00017ad0] cmp       r5, #0
+000286d4 [file 00017ad4] bls       #0x28700
+000286d8 [file 00017ad8] bl        #0x9c8b0
+000286dc [file 00017adc] mov       r4, r0
+000286e0 [file 00017ae0] ldr       r0, [r8, #4]
+000286e4 [file 00017ae4] mov       r3, #0x1380
+000286e8 [file 00017ae8] orr       r3, r3, #8
+000286ec [file 00017aec] mov       r2, r5
+000286f0 [file 00017af0] mov       r1, r4
+000286f4 [file 00017af4] bl        #0x320cc
+000286f8 [file 00017af8] mov       r0, r4
+000286fc [file 00017afc] bl        #0x9c7e4
+00028700 [file 00017b00] pop       {r4, r5, r6, r7, r8, pc}
+00028704 [file 00017b04] add       r6, r6, #1
+00028708 [file 00017b08] b         #0x28678
+0002870c [file 00017b0c] andseq    fp, r0, r8, ror r5
+00028710 [file 00017b10] ldrdeq    ip, sp, [sb], -r8
+00028714 [file 00017b14] andseq    sl, r0, r4, asr fp

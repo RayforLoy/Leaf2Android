@@ -1,0 +1,43 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x92cfc..0x92da0, exclusive
+00092cfc [file 000820fc] push      {r4, r5, r6, r7, r8, sb, lr}
+00092d00 [file 00082100] sub       sp, sp, #0x34
+00092d04 [file 00082104] mov       r7, r0
+00092d08 [file 00082108] mov       r4, r1
+00092d0c [file 0008210c] mov       r5, r2
+00092d10 [file 00082110] mov       r6, r3
+00092d14 [file 00082114] str       r4, [sp, #0xc]
+00092d18 [file 00082118] add       r0, r4, #1
+00092d1c [file 0008211c] str       r5, [sp, #0x10]
+00092d20 [file 00082120] add       r2, r0, r0, lsl #1
+00092d24 [file 00082124] asr       r1, r2, #1
+00092d28 [file 00082128] add       r0, r2, r1, lsr #30
+00092d2c [file 0008212c] asr       r3, r0, #2
+00092d30 [file 00082130] mul       r1, r3, r5
+00092d34 [file 00082134] mov       r2, #0x180000
+00092d38 [file 00082138] orr       r2, r2, #1
+00092d3c [file 0008213c] mov       r3, #0
+00092d40 [file 00082140] str       r2, [sp, #0x14]
+00092d44 [file 00082144] lsl       r0, r1, #2
+00092d48 [file 00082148] str       r3, [sp, #0x30]
+00092d4c [file 0008214c] mov       r1, #0xec0
+00092d50 [file 00082150] str       r0, [sp, #0x1c]
+00092d54 [file 00082154] orr       r1, r1, #4
+00092d58 [file 00082158] mov       sb, #0
+00092d5c [file 0008215c] str       r1, [sp, #0x20]
+00092d60 [file 00082160] str       r1, [sp, #0x24]
+00092d64 [file 00082164] mov       r8, #0x28
+00092d68 [file 00082168] mov       r3, r6
+00092d6c [file 0008216c] str       r8, [sp, #8]
+00092d70 [file 00082170] mov       r2, #0
+00092d74 [file 00082174] str       sb, [sp, #0x18]
+00092d78 [file 00082178] add       r1, sp, #8
+00092d7c [file 0008217c] str       sb, [sp, #0x28]
+00092d80 [file 00082180] mov       r0, r7
+00092d84 [file 00082184] str       sb, [sp, #0x2c]
+00092d88 [file 00082188] str       sb, [r6]
+00092d8c [file 0008218c] str       sb, [sp, #4]
+00092d90 [file 00082190] str       sb, [sp]
+00092d94 [file 00082194] bl        #0x9cf64
+00092d98 [file 00082198] add       sp, sp, #0x34
+00092d9c [file 0008219c] pop       {r4, r5, r6, r7, r8, sb, pc}

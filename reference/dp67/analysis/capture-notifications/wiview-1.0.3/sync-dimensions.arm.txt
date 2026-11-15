@@ -1,0 +1,87 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x2fe34..0x2ff88, exclusive
+0002fe34 [file 0001f234] ldr       r0, [fp, #-0x78]
+0002fe38 [file 0001f238] ldr       r6, [pc, #0x998] ; 'picturedimensions'
+0002fe3c [file 0001f23c] mov       r4, r0
+0002fe40 [file 0001f240] sub       r3, r6, r0
+0002fe44 [file 0001f244] ldrh      r0, [r4, r3]
+0002fe48 [file 0001f248] lsl       r1, r0, #0x10
+0002fe4c [file 0001f24c] ldrh      r0, [r4], #2
+0002fe50 [file 0001f250] lsr       r2, r1, #0x10
+0002fe54 [file 0001f254] lsl       r1, r0, #0x10
+0002fe58 [file 0001f258] cmp       r2, r1, lsr #16
+0002fe5c [file 0001f25c] bne       #0x2ff88
+0002fe60 [file 0001f260] cmp       r2, #0
+0002fe64 [file 0001f264] bne       #0x2fe44
+0002fe68 [file 0001f268] sub       r3, r7, #2
+0002fe6c [file 0001f26c] ldrh      r0, [r3, #2]!
+0002fe70 [file 0001f270] lsl       r1, r0, #0x10
+0002fe74 [file 0001f274] lsrs      r2, r1, #0x10
+0002fe78 [file 0001f278] bne       #0x2fe6c
+0002fe7c [file 0001f27c] sub       r0, r3, r7
+0002fe80 [file 0001f280] lsr       r1, r0, #1
+0002fe84 [file 0001f284] add       r2, r1, #1
+0002fe88 [file 0001f288] lsl       r0, r2, #1
+0002fe8c [file 0001f28c] bl        #0x9c8b0
+0002fe90 [file 0001f290] ldr       lr, [fp, #-0x70]
+0002fe94 [file 0001f294] mov       r7, r0
+0002fe98 [file 0001f298] mov       r4, r7
+0002fe9c [file 0001f29c] sub       r3, lr, r7
+0002fea0 [file 0001f2a0] ldrh      r2, [r4, r3]
+0002fea4 [file 0001f2a4] lsl       r0, r2, #0x10
+0002fea8 [file 0001f2a8] strh      r2, [r4], #2
+0002feac [file 0001f2ac] lsrs      r1, r0, #0x10
+0002feb0 [file 0001f2b0] bne       #0x2fea0
+0002feb4 [file 0001f2b4] mov       r0, #0x2c
+0002feb8 [file 0001f2b8] str       r0, [fp, #-0x64]
+0002febc [file 0001f2bc] mvn       r1, #0x63
+0002fec0 [file 0001f2c0] add       r1, fp, r1
+0002fec4 [file 0001f2c4] mov       r0, r7
+0002fec8 [file 0001f2c8] bl        #0x9ccdc
+0002fecc [file 0001f2cc] mov       r1, #0
+0002fed0 [file 0001f2d0] cmp       r0, #0
+0002fed4 [file 0001f2d4] mov       r6, r1
+0002fed8 [file 0001f2d8] mov       r4, r1
+0002fedc [file 0001f2dc] beq       #0x2fef0
+0002fee0 [file 0001f2e0] bl        #0x9c880
+0002fee4 [file 0001f2e4] movs      r6, r0
+0002fee8 [file 0001f2e8] movmi     r0, #0
+0002feec [file 0001f2ec] movmi     r6, r0
+0002fef0 [file 0001f2f0] mvn       r1, #0x63
+0002fef4 [file 0001f2f4] add       r1, fp, r1
+0002fef8 [file 0001f2f8] mov       r0, #0
+0002fefc [file 0001f2fc] bl        #0x9ccdc
+0002ff00 [file 0001f300] cmp       r0, #0
+0002ff04 [file 0001f304] beq       #0x2ff18
+0002ff08 [file 0001f308] bl        #0x9c880
+0002ff0c [file 0001f30c] movs      r4, r0
+0002ff10 [file 0001f310] movmi     r0, #0
+0002ff14 [file 0001f314] movmi     r4, r0
+0002ff18 [file 0001f318] ldr       r2, [fp, #-0x74]
+0002ff1c [file 0001f31c] cmp       r6, r4
+0002ff20 [file 0001f320] ldr       r0, [r2, #0x40]
+0002ff24 [file 0001f324] ble       #0x2ff58
+0002ff28 [file 0001f328] str       r6, [r0, #0x104]
+0002ff2c [file 0001f32c] mov       r0, r7
+0002ff30 [file 0001f330] ldr       r1, [r2, #0x40]
+0002ff34 [file 0001f334] str       r4, [r1, #0x108]
+0002ff38 [file 0001f338] bl        #0x9c7e4
+0002ff3c [file 0001f33c] ldr       r4, [fp, #-0x5c]
+0002ff40 [file 0001f340] mov       r2, #1
+0002ff44 [file 0001f344] ldr       r6, [pc, #0x884] ; 'color'
+0002ff48 [file 0001f348] add       r4, r4, #1
+0002ff4c [file 0001f34c] ldr       r7, [pc, #0x840]
+0002ff50 [file 0001f350] str       r4, [fp, #-0x5c]
+0002ff54 [file 0001f354] b         #0x2f130
+0002ff58 [file 0001f358] str       r4, [r0, #0x104]
+0002ff5c [file 0001f35c] mov       r0, r7
+0002ff60 [file 0001f360] ldr       r1, [r2, #0x40]
+0002ff64 [file 0001f364] str       r6, [r1, #0x108]
+0002ff68 [file 0001f368] bl        #0x9c7e4
+0002ff6c [file 0001f36c] ldr       r4, [fp, #-0x5c]
+0002ff70 [file 0001f370] mov       r2, #1
+0002ff74 [file 0001f374] ldr       r6, [pc, #0x854] ; 'color'
+0002ff78 [file 0001f378] add       r4, r4, #1
+0002ff7c [file 0001f37c] ldr       r7, [pc, #0x810]
+0002ff80 [file 0001f380] str       r4, [fp, #-0x5c]
+0002ff84 [file 0001f384] b         #0x2f130

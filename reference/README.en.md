@@ -2,10 +2,12 @@
 
 [简体中文](README.md)
 
-Organized on 2026-11-14. This directory holds original Leaf WiView and DP-67 media, manufacturer guides, provenance, extracted client components, genuine user-supplied camera-back firmware, and static client/firmware protocol analysis. The Android source is in the project-level `app/` and `protocol/` directories. Synthetic wire fixtures remain in `research/fixtures/`.
+Organized on 2026-11-15. This directory holds original Leaf WiView and DP-67 media, manufacturer guides, provenance, extracted client components, genuine user-supplied camera-back firmware, and static client/firmware protocol analysis. The Android source is in the project-level `app/` and `protocol/` directories. Synthetic wire fixtures remain in `research/fixtures/`.
 
 The new [DP-67 1.2.1 analysis](../docs/dp67-analysis.en.md) retains only the manufacturer's Setup.exe from the user ZIP, its embedded CAB, static extractions and reproducible evidence in [dp67/](dp67/). The complete ZIP containing PDA backups and all four PBF backup contents are excluded from publication. See [provenance.json](dp67/provenance.json); this material remains independent of the six WiView inputs and the back-firmware source lock.
 
+
+The [capture-notification analysis](../docs/capture-notifications-analysis.en.md) now cross-checks DP-67, WiView 1.0.2/1.0.3 and classic 4.701/shared 5.041 firmware. Five pinned inputs and reproducible bounded disassembly are retained in [capture-notifications](dp67/analysis/capture-notifications/); firmware copies and provenance locks remain independent.
 ## Layout and classification
 
 ```text

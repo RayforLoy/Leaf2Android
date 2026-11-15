@@ -65,7 +65,7 @@
     <string name="grant_nearby_devices_permission_to_access_bluet_81a22">Grant Nearby devices permission to access Bluetooth</string>
     <string name="histogram_source_label">RGB histogram · sampled JPEG preview</string>
     <string name="if_connection_fails_eebcf">If connection fails</string>
-    <string name="implemented_assuming_back_wireless_works_z_fold_448c1">Connection and photo reading were reported working on Valeo 22Wi and Aptus 22. New control writes still need hardware checks; firmware and phone details were not supplied.</string>
+    <string name="implemented_assuming_back_wireless_works_z_fold_448c1">Users report connection and photo reading on Valeo 22Wi and Aptus 22. Valeo ISO and gray-balance shooting settings were reported working in 0.3.1. This build corrects automatic-preview handling; its hardware retest and new point-picking operations remain pending.</string>
     <string name="interface_style_56870">Interface style</string>
     <string name="invalid_preview_dimensions_decoding_was_refused_ec29f">Invalid preview dimensions; decoding was refused</string>
     <string name="jpeg_highlight_warning_9186a">JPEG highlight warning</string>
@@ -246,7 +246,7 @@
     <string name="delete_back_photo_warning">This deletes the original file from the back storage and cannot be undone by this app. A phone preview is not an original-file backup.</string>
     <string name="confirm_back_action">Confirm back operation</string>
     <string name="hardware_reported_connections">User reported successful connection and photo reading on Valeo 22Wi and Aptus 22 (2026-11-11). Other models and firmware still need verification.</string>
-    <string name="remote_shooting_support_detail">Protocol-based ISO, shooting setups and other advertised settings; writes require readback. Hardware write validation is still pending.</string>
+    <string name="remote_shooting_support_detail">Valeo users reported working ISO and gray-balance shooting settings in 0.3.1. Other parameters, models and point-picked photo edits still need hardware validation; writes require readback.</string>
     <string name="writing_shooting_settings">Writing shooting settings</string>
     <string name="shooting_settings_changed">The active setup changed since you edited it. Review the refreshed settings and try again.</string>
     <string name="shooting_write_not_confirmed">The back acknowledged the request, but the settings readback did not match. Success was not confirmed.</string>
@@ -287,7 +287,7 @@
     <string name="back_preview_separate">This requests a processed image from the back. The normal cached preview stays separate. Zoom values are the original client levels, not a claim of extra sensor resolution.</string>
     <string name="back_zoom_level">Back preview level</string>
     <string name="back_preview_alarm">Back exposure warning</string>
-    <string name="back_image_coordinates_hint">X/Y are original-image coordinates in the back protocol after orientation correction. Screen/cropped-preview coordinates are not converted automatically; mapping still needs hardware verification.</string>
+    <string name="back_image_coordinates_hint">Manual X/Y use the back\'s oriented image grid. Picking on the photo requires matching dimensions and orientation; cropped or unknown mappings need manual coordinates.</string>
     <string name="sample_gray_balance_at_point">Sample gray balance at X/Y for this preview</string>
     <string name="read_processed_preview">Read processed preview</string>
     <string name="back_processed_preview">Back-processed JPEG preview</string>
@@ -360,4 +360,14 @@
     <string name="shooting_compatibility_hint">Change while disconnected. Automatic uses DP-67 when the Bluetooth name contains Valeo and Sync supplies ShootSetup. Use the explicit mode for a renamed back. This changes shooting-setup writes, not Bluetooth pairing; hardware results still need testing.</string>
     <string name="dp67_active_hint">DP-67 compatibility: 12 core fields and the prefix supplied by the back. Compression, orientation and color are not written by this shooting-setup path. Factory presets are edited through their .1 modified slot; no automatic write retries.</string>
     <string name="dp67_modified_slot">Target modified setup: %1$s. An existing slot with this name will be updated. The original preset must remain unchanged when the result is read back.</string>
+    <string name="photo_actions">Photo actions</string>
+    <string name="pick_gray_point">Pick gray balance on photo</string>
+    <string name="gray_pick_mode_hint">Tap a neutral white or gray area to request a gray-balance preview from the back. Pinch and double-tap still control zoom; settings are applied only after confirmation.</string>
+    <string name="gray_pick_cancel">Cancel picking</string>
+    <string name="gray_pick_unavailable">Point sampling needs this photo\'s actual orientation and the back\'s image dimensions, matching the complete preview. Read image information first; manual coordinates remain available when the mapping cannot be verified.</string>
+    <string name="gray_pick_read_metadata">Read sampling information</string>
+    <string name="gray_pick_point">Sample coordinates: %1$d, %2$d</string>
+    <string name="gray_pick_outside_image">Tap inside the photo.</string>
+    <string name="photo_delete_confirm">Delete this original file from the connected back? This cannot be undone.</string>
+    <string name="photo_copy_move_hint">Enter an existing folder on the back, for example ./Shots/. MOS file renaming is not available.</string>
 </resources>

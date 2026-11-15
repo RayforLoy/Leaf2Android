@@ -55,6 +55,7 @@ class BackControlsSessionTest {
                             else "^<Sync iso='50;100;200' defaultshootsetup='Default' shootsetup='${setup()}' light='Daylight;Tungsten' defaultorientation='Landscape' defaultcolor='color' />")
                     }
                     "GetCameraParam" -> reply("^<Ack CurrentTime='2008:01:01:00:00:00' />")
+                    "GetPictureParams" -> reply("^<Ack file_name='${frame.value("file_name")}' />")
                     "SetCameraParam" -> {
                         if (reject) reply("^<Ack error_code='5' />") else {
                             if (!ignoreWrite) {
@@ -130,7 +131,7 @@ class BackControlsSessionTest {
         assertTrue(peer.writes.contains("^<SetCameraParam ISO=\"200\" />"))
         assertFalse(peer.writes.any { it.contains("ShootSetup=") })
     }
-    @Test fun captureNotificationAcknowledgesImmediatelyWithoutInterruptingIsoTransaction() = session { repo, peer ->
+    @Test fun captureNotificationSendsNoUnsupportedAckAndDoesNotInterruptIsoTransaction() = session { repo, peer ->
         val observedWrites = Channel<WireFrame>(Channel.UNLIMITED)
         val preSyncHeld = CompletableDeferred<Unit>()
         val releasePreSync = CompletableDeferred<Unit>()
@@ -151,15 +152,13 @@ class BackControlsSessionTest {
             edit(repo, "200")
             withTimeout(3_000) { preSyncHeld.await() }
             assertEquals("RequestSync", nextWrite().tag)
-            // Ack must bypass the operation lock, before the back releases its pending Sync.
-            assertEquals("Ack", nextWrite().tag)
             assertFalse(releasePreSync.isCompleted)
             waitFor { repo.state.value.photos.any { it.path == photoPath } }
             withContext(Dispatchers.Main) {
                 repo.refreshStatus() // A second user action must wait for the whole transaction too.
                 yield() // Let the notification's queued image worker reach its operation lock.
             }
-            assertNull("No other command may run while preflight Sync is outstanding", observedWrites.tryReceive().getOrNull())
+            assertNull("Notifications must not send an unsupported Ack or interrupt the pending operation", observedWrites.tryReceive().getOrNull())
             releasePreSync.complete(Unit)
             assertEquals("SetCameraParam", nextWrite().tag)
             assertEquals("RequestSync", nextWrite().tag)
@@ -257,5 +256,24 @@ class BackControlsSessionTest {
         waitFor { repo.state.value.notice?.resourceId == R.string.shooting_settings_confirmed }
         assertEquals("SampledBalance", peer.light)
         assertEquals("100", peer.iso)
+    }
+    @Test fun refreshingTheSamePreviewInvalidatesOldGeometryAndGraySamplesEvenWhenBytesMatch() = session { repo, peer ->
+        withContext(Dispatchers.Main) { repo.select("./a.mos") }
+        waitFor { repo.state.value.selected?.connectionGeneration == repo.state.value.connectionGeneration && repo.state.value.selected?.cacheFile != null }
+        withContext(Dispatchers.Main) { repo.requestMetadata("./a.mos") }
+        waitFor { repo.state.value.selected?.metadataPreviewSha256 == repo.state.value.selected?.sha256 }
+        val originalHash = repo.state.value.selected!!.sha256
+        withContext(Dispatchers.Main) { repo.requestBackPreview("./a.mos", ImageZoom.FIT, null, null, ImagePoint(2,3)) }
+        waitFor { repo.state.value.backPreview?.sampledPoint == ImagePoint(2,3) && !repo.state.value.controlsBusy }
+        val before = repo.state.value.previewCount
+        withContext(Dispatchers.Main) { repo.refreshSelected() }
+        waitFor { repo.state.value.previewCount > before }
+        assertEquals(originalHash, repo.state.value.selected!!.sha256)
+        assertNull(repo.state.value.selected!!.metadataPreviewSha256)
+        assertTrue(repo.state.value.selected!!.metadata.isEmpty())
+        assertNull(repo.state.value.backPreview)
+        withContext(Dispatchers.Main) { repo.applySampledLightToFuture("SampledBalance") }
+        waitFor { repo.state.value.error?.resourceId == R.string.gray_balance_sample_missing }
+        assertFalse(peer.writes.any { it.startsWith("^<SetCameraParam") })
     }
 }

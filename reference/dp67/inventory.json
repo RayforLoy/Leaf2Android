@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "scope": "reference/dp67 excluding its own inventory and Python caches",
-  "file_count": 36,
-  "total_bytes": 5019687,
+  "file_count": 90,
+  "total_bytes": 5620536,
   "files": [
     {
       "path": "analysis/0BtStack.004.strings.json",
@@ -23,6 +23,271 @@
       "path": "analysis/BTSDKC~1.002.strings.json",
       "size": 132172,
       "sha256": "57a8e0da8362387296446dbb0f9df885a2e89a4d9db85aed37b43ad85e639174"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/create-outgoing-message.ppc.txt",
+      "size": 2591,
+      "sha256": "b2bfc6f3213c883a18fd4edd39ab457b9552167f74d7f79ce537a2a951a82bda"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/get-image-processing.ppc.txt",
+      "size": 20695,
+      "sha256": "75489c8bf74217ec1d084d65a1e0b76f94922a4be1dddd776cd625ca62f1fc9a"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/gray-light-parse.ppc.txt",
+      "size": 1707,
+      "sha256": "194636fb5436d6d5f273cf6587df880fad8799d74ef194159d2e69a90a8df7a4"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/incoming-dispatch.ppc.txt",
+      "size": 5414,
+      "sha256": "7859178442e9be56ec65e4c68c670fe5a33caad00bb50f479af5bdeb1a8184f8"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/outgoing-command-selector.ppc.txt",
+      "size": 9028,
+      "sha256": "598235b2abc54e5ae1045133e125a605730061bf9903d048e3d36fa5a3e6c51c"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/pda-catalog.ppc.txt",
+      "size": 7201,
+      "sha256": "346956cd57f4c04b7d66ce237791cc1bf3a5eb87bdb682fd88027ea82d2ab91f"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/picture-dimensions-reply.ppc.txt",
+      "size": 1267,
+      "sha256": "fb355d91eb1d62c2f7cb5c90e2fbf25c05f1c5ad128e21e60bed510bd73f2dd9"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/registered-name-lookup.ppc.txt",
+      "size": 1937,
+      "sha256": "068370845ff3cff3ce8fa0160be4f4081b0d6373e6c35aec1a1247407b3f5641"
+    },
+    {
+      "path": "analysis/capture-notifications/classic-4.701/standard-error-constructors.ppc.txt",
+      "size": 5339,
+      "sha256": "e0922b1cf8a3c2f1529e4a08b7b1aa65c46e03d774598c821646f59686fdef85"
+    },
+    {
+      "path": "analysis/capture-notifications/dp67/busy-calibration-ui.arm.txt",
+      "size": 6417,
+      "sha256": "c749fa5f523307255f49d803f0cc0ec01a940f0c758d5a2f7e1567de26c11018"
+    },
+    {
+      "path": "analysis/capture-notifications/dp67/file-cache.arm.txt",
+      "size": 8749,
+      "sha256": "22e8451278a9c72f50f9869d9876e3e32577fce0e9f3aa0eacef91009ad96a21"
+    },
+    {
+      "path": "analysis/capture-notifications/dp67/get-image.arm.txt",
+      "size": 13322,
+      "sha256": "9d31d02d9e1f66b6e22ae87ae112d9d211a540af3a462bd2f1acae624b29a2c3"
+    },
+    {
+      "path": "analysis/capture-notifications/dp67/on-picture-taken.arm.txt",
+      "size": 25351,
+      "sha256": "9fa3bd68b7d41c7d3634cbcff01c7d2863782a05e74ec672ce1a4a1f870883a6"
+    },
+    {
+      "path": "analysis/capture-notifications/dp67/packet-ack-nak.arm.txt",
+      "size": 41672,
+      "sha256": "6a3daf301a658f4c6239840b4f07fe6bc0bead79537f40abdf21d907ea6f35b0"
+    },
+    {
+      "path": "analysis/capture-notifications/dp67/receive-picture-notification.arm.txt",
+      "size": 22274,
+      "sha256": "99a78fd3ca8927a1967568f4c9da3b0e916db8de1f5156c5344964855f365fe3"
+    },
+    {
+      "path": "analysis/capture-notifications/evidence.json",
+      "size": 90571,
+      "sha256": "e158aff61acac7721c46ccfaab4d51886c3f23c0662227ff2d01c331df654304"
+    },
+    {
+      "path": "analysis/capture-notifications/shared-5.041/create-outgoing-message.ppc.txt",
+      "size": 2603,
+      "sha256": "aa3a780c6bf608c7f40683db3b9765c8770192f9b78964d4cf9794d20963e8aa"
+    },
+    {
+      "path": "analysis/capture-notifications/shared-5.041/get-image-processing.ppc.txt",
+      "size": 16522,
+      "sha256": "a55988454d87eacc29b716d0931d53c675792b1644bb108ab7367b3a786ea4b3"
+    },
+    {
+      "path": "analysis/capture-notifications/shared-5.041/incoming-dispatch.ppc.txt",
+      "size": 5437,
+      "sha256": "1dc5ef7e6b2982cf314a42cd220158fe3809882ecc672489a5453ca0f08b9281"
+    },
+    {
+      "path": "analysis/capture-notifications/shared-5.041/outgoing-command-selector.ppc.txt",
+      "size": 13610,
+      "sha256": "1c19bd510ddb2b0f340e3dfd047f86a1bf500c75ac26d1f0d1873d14f2a8a9a2"
+    },
+    {
+      "path": "analysis/capture-notifications/shared-5.041/pda-catalog.ppc.txt",
+      "size": 7270,
+      "sha256": "4ffbb1253e40db6b31c9b7f4b1a6d38ee85d1ca5498f9aa0cfab99e2103e708c"
+    },
+    {
+      "path": "analysis/capture-notifications/shared-5.041/registered-name-lookup.ppc.txt",
+      "size": 1943,
+      "sha256": "713964533dac70646d6d72b87411fb5f1f0c5bf3a961a6e98ab35b9203870dda"
+    },
+    {
+      "path": "analysis/capture-notifications/shared-5.041/standard-error-constructors.ppc.txt",
+      "size": 5351,
+      "sha256": "0337941498a5d4227fed140e8c78ce5185b7e2d957551b337d9c9f5da3b46b3c"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.2/get-image-constructor.arm.txt",
+      "size": 6629,
+      "sha256": "1839db201a7422a8a28813771f0aae8a779bb5adbdd9dabb9e3d5e8c34c7629e"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.2/gray-click.arm.txt",
+      "size": 11753,
+      "sha256": "8d717603a4bc88afb1932f9a97310b2e7264dd128ff7bdb334dc0293a96a492e"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.2/image-click-scale.arm.txt",
+      "size": 9677,
+      "sha256": "cde84f94f6e5657df7cdb2eca5393586b1a2080ca62165a68d8f5c1d23db3930"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.2/notification-router.arm.txt",
+      "size": 25386,
+      "sha256": "9917a7e33c4042b44515c1b68dc867e61bd3c6d568ceb40f8f9f60919f1c8b75"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.2/picture-notification-model.arm.txt",
+      "size": 17695,
+      "sha256": "019a54bd7009528ef98eb5754903ddf9929bb2ec9169a91608e981f9d604a286"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.2/picture-notification-parser.arm.txt",
+      "size": 12647,
+      "sha256": "187b5bc0a53d4810411082297391547cb6b717c370ddfb56e9e1902e727f290b"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.2/stop-notification-ack.arm.txt",
+      "size": 2054,
+      "sha256": "a6960f81927c9a803fa0934afb20c67bc6724c95e830755186ded2e0fdf288ca"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/attachment-drain.arm.txt",
+      "size": 2262,
+      "sha256": "3127dfafc0dcc7928a9ea3010ec6690a180ccbdbaf0b0b57583d4d0cdcea1ca1"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/dib-constructor.arm.txt",
+      "size": 2110,
+      "sha256": "0bdb52926af7aab54b0b9a25bbb993f999cfdbed6776338ae12b8ccf0b89ece3"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/full-preview-grid.arm.txt",
+      "size": 1608,
+      "sha256": "5be1e653c95a20792d523a04e00166a886979fe0e79938c2e3fb0e5e0336c2ab"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/get-bitmap-cache-download.arm.txt",
+      "size": 14507,
+      "sha256": "c1b09b13665d61864910cf9dba73c1851f18acd6eae17cc5cc9c653a737943d8"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/get-image-constructor.arm.txt",
+      "size": 6629,
+      "sha256": "857c8bc947f6a1d89dd0e70acbe1f517d9a92e029512306d81f3e7b819bfe577"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/gray-click.arm.txt",
+      "size": 11704,
+      "sha256": "8399089f9b812ed09ad4e78ad0a7a7781067c6b2344037003debd853f6ea3811"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/image-change-parser.arm.txt",
+      "size": 2219,
+      "sha256": "b7e94ff01b5021ef24c9735d218111a3ff530cf263cc6f1b0580920dd4554135"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/image-click-scale.arm.txt",
+      "size": 9825,
+      "sha256": "278ef8a24b3b9258be952feb996d342b7d662ecda5b24d979e0eb774f852ef9c"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/image-state-accessors.arm.txt",
+      "size": 335,
+      "sha256": "5c8ca25afbd54e0a314eb291ab244c988854d866d0438cebdc8e2dde637e1414"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/notification-router.arm.txt",
+      "size": 27523,
+      "sha256": "e52d29e9254bbbcd2730b5034de6ced4847bd8028dd0043b17a8cc20d327032b"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/orientation-parser.arm.txt",
+      "size": 3596,
+      "sha256": "a72133944916a8abb264ed59166f85aa9f6a009095e2470c4d8dc3e87784d620"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/orientation-to-bitmap.arm.txt",
+      "size": 3509,
+      "sha256": "450e4d4acff3e0fb635cd5b5dca781060cb8926e046d0ca72ff33181275c49fd"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/oriented-bitmap-wrapper.arm.txt",
+      "size": 5268,
+      "sha256": "90337d54139c18daaf0a3ee3a64d08ee0da75f625a66d5b0bc6f3f337d3288f5"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/packet-ack-nak.arm.txt",
+      "size": 2251,
+      "sha256": "c5bbf9d081ba6d96fc4b9758c371cff54e0012c68fe3e7247b4c1e30f062feb2"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/picture-notification-model.arm.txt",
+      "size": 20553,
+      "sha256": "5464e38526e80623132fa4708480976bf24cb489d7fa71a7271ab6e96190f7d2"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/picture-notification-parser.arm.txt",
+      "size": 12647,
+      "sha256": "4edfc16428f311b2404fb2fdfb530578ec29168d51b62f9718d31d386a37dcff"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/rotate-bitmap-helper.arm.txt",
+      "size": 7481,
+      "sha256": "c418ed5298c17c3f04e4a47c1493cd8d37b029d9a9329008f354bed04bc27bc1"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/rotate-pixel-kernel.arm.txt",
+      "size": 11922,
+      "sha256": "2326e849a662b77297e3da24b4e4c4334a63da34e827cb7edff7f7401fe72eca"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/saved-state-bookkeeping.arm.txt",
+      "size": 1157,
+      "sha256": "c9064df8ff80791e30a614d81c810b4362103cc6467633727c2443bcf7247350"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/shoot-view-notification.arm.txt",
+      "size": 20116,
+      "sha256": "69726b05a43e8be5d3bb82af8a1823a777492a3341ccc90b758780589a159ed1"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/stop-notification-ack.arm.txt",
+      "size": 2056,
+      "sha256": "a0508007bd202a024b7d6c90d9ea878ad4bb60fd4d816100987872e0d06bb7bd"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/sync-dimensions.arm.txt",
+      "size": 4179,
+      "sha256": "58924ae51305fc11ee4f623b71d0123e8aa44320bf54455f89871a0bf725ceca"
+    },
+    {
+      "path": "analysis/capture-notifications/wiview-1.0.3/sync-target-embedding.arm.txt",
+      "size": 1747,
+      "sha256": "cada548ff5ed8c4abe392db2ad5869d4f47a5da58b11ea60247d19483bbd8f91"
     },
     {
       "path": "analysis/connection-and-setting-evidence.json",
@@ -120,9 +385,14 @@
       "sha256": "884971a31fe4da9b2c9dd26ebf871c6298bbf3d270395609118b968b4029091b"
     },
     {
+      "path": "analyze_capture.py",
+      "size": 22134,
+      "sha256": "fa0d760316d36d1ada7df70192bf2cfc5ad81109c0b57712d554b6f65f854541"
+    },
+    {
       "path": "analyze_dp67.py",
-      "size": 21807,
-      "sha256": "53e9b6d56eb2d10eb1dcfa8f2286ef9df009e06079e0f4baaede74ac5b6cd320"
+      "size": 22081,
+      "sha256": "dd4e04fed05d9c34fff10758aab153322a3d3b84d73940a3528d66a384621100"
     },
     {
       "path": "extracted/0BtStack.004",
@@ -176,13 +446,13 @@
     },
     {
       "path": "README.en.md",
-      "size": 2704,
-      "sha256": "8e8d5eb482aa6d417a25a8757e207f1fdf3aad80502f90d40538e87aee97f682"
+      "size": 3286,
+      "sha256": "c5259ebc7f07e936b80905dc73e40a15e069a2141b42998192700faa9f8d48f7"
     },
     {
       "path": "README.md",
-      "size": 2414,
-      "sha256": "0f302558efbf7c38b55eb52b353fa62ede2de73424b780732a2c0caf475a0415"
+      "size": 2957,
+      "sha256": "aee6492d4476c5ea3100e07e8982402fbbc36d1600e37363ae52989921e5b93e"
     }
   ]
 }

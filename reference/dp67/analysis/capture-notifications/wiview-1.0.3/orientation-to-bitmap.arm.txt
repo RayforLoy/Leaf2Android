@@ -1,0 +1,75 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x55148..0x5526c, exclusive
+00055148 [file 00044548] mov       ip, sp
+0005514c [file 0004454c] push      {r4, r5, r6, r7, r8, sb, fp, ip, lr}
+00055150 [file 00044550] add       fp, sp, #0x24
+00055154 [file 00044554] sub       sp, sp, #4
+00055158 [file 00044558] mov       r6, r0
+0005515c [file 0004455c] mov       r5, r1
+00055160 [file 00044560] mov       sb, r2
+00055164 [file 00044564] mov       r7, r3
+00055168 [file 00044568] ldr       r2, [r6, #8]
+0005516c [file 0004456c] mov       r8, #0
+00055170 [file 00044570] mov       r4, r8
+00055174 [file 00044574] cmp       r2, #0
+00055178 [file 00044578] ble       #0x5519c
+0005517c [file 0004457c] ldr       r1, [r6]
+00055180 [file 00044580] ldr       r0, [r1]
+00055184 [file 00044584] cmp       r0, r5
+00055188 [file 00044588] beq       #0x551cc
+0005518c [file 0004458c] add       r4, r4, #1
+00055190 [file 00044590] add       r1, r1, #4
+00055194 [file 00044594] cmp       r4, r2
+00055198 [file 00044598] blt       #0x55180
+0005519c [file 0004459c] cmp       r5, #0
+000551a0 [file 000445a0] beq       #0x551f8
+000551a4 [file 000445a4] cmp       r5, #1
+000551a8 [file 000445a8] beq       #0x551e0
+000551ac [file 000445ac] cmp       r5, #2
+000551b0 [file 000445b0] bne       #0x551f8
+000551b4 [file 000445b4] ldr       r0, [pc, #0xc0]
+000551b8 [file 000445b8] ldr       r1, [r6, #0xc]
+000551bc [file 000445bc] ldr       r2, [r0]
+000551c0 [file 000445c0] add       r0, r2, #0x2e8
+000551c4 [file 000445c4] bl        #0x51220
+000551c8 [file 000445c8] b         #0x55210
+000551cc [file 000445cc] cmn       r4, #1
+000551d0 [file 000445d0] beq       #0x5519c
+000551d4 [file 000445d4] ldr       r0, [r6, #4]
+000551d8 [file 000445d8] ldr       r0, [r0, r4, lsl #2]
+000551dc [file 000445dc] b         #0x55258
+000551e0 [file 000445e0] ldr       r0, [pc, #0x94]
+000551e4 [file 000445e4] ldr       r1, [r6, #0xc]
+000551e8 [file 000445e8] ldr       r2, [r0]
+000551ec [file 000445ec] add       r0, r2, #0x2e8
+000551f0 [file 000445f0] bl        #0x51214
+000551f4 [file 000445f4] b         #0x55210
+000551f8 [file 000445f8] ldr       r0, [pc, #0x7c]
+000551fc [file 000445fc] mov       r2, #1
+00055200 [file 00044600] ldr       r1, [r6, #0xc]
+00055204 [file 00044604] ldr       r3, [r0]
+00055208 [file 00044608] add       r0, r3, #0x2e8
+0005520c [file 0004460c] bl        #0x51208
+00055210 [file 00044610] str       r0, [sb]
+00055214 [file 00044614] mov       r0, #0x10
+00055218 [file 00044618] bl        #0x9c8b0
+0005521c [file 0004461c] movs      r4, r0
+00055220 [file 00044620] str       r4, [fp, #-0x28]
+00055224 [file 00044624] beq       #0x55244
+00055228 [file 00044628] ldr       r0, [r6, #0xc]
+0005522c [file 0004462c] bl        #0x47360
+00055230 [file 00044630] ldr       r1, [sb]
+00055234 [file 00044634] mov       r2, r0
+00055238 [file 00044638] mov       r0, r4
+0005523c [file 0004463c] bl        #0x54d98
+00055240 [file 00044640] mov       r8, r0
+00055244 [file 00044644] mov       r2, r8
+00055248 [file 00044648] mov       r1, r5
+0005524c [file 0004464c] mov       r0, r6
+00055250 [file 00044650] bl        #0x576a8
+00055254 [file 00044654] mov       r0, r8
+00055258 [file 00044658] ldr       r3, [fp]
+0005525c [file 0004465c] mov       r1, sb
+00055260 [file 00044660] mov       r2, r7
+00055264 [file 00044664] bl        #0x54f3c
+00055268 [file 00044668] ldmdb     fp, {r4, r5, r6, r7, r8, sb, fp, sp, pc}

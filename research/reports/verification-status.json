@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-14",
-  "app_version": "0.3.1",
-  "development_basis": "WiView 1.0.2/1.0.3, supplied DP-67 1.2.1.2 and classic Aptus 4.701/shared 5.041 static evidence. User reports Valeo settings time out while photo reading works. DP-67 compatibility changes await physical verification; Aptus II has no Bluetooth hardware.",
+  "date": "2026-11-15",
+  "app_version": "0.3.2",
+  "development_basis": "WiView 1.0.2/1.0.3, supplied DP-67 1.2.1.2 and classic Aptus 4.701/shared 5.041 static evidence. Latest user report describes stable Valeo v0.3.1 connection and ISO/gray-balance shooting settings, with automatic-preview Error 0x01 while manual reading and READY remain available. Version 0.3.2 removes unsubstantiated ordinary notification Ack and adds photo-page tools; new physical effects remain unverified. Aptus II has no Bluetooth hardware.",
   "offline_unit_tests": 25,
   "offline_unit_tests_passed": 25,
   "kotlin_protocol_tests": {
-    "tests": 78,
+    "tests": 87,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
@@ -71,6 +71,8 @@
       "com.leaf2android.protocol.LabExperimentsTest.rawHeaderLimitIsOnEncodedBytesAndPreservesTheChosenEncoding",
       "com.leaf2android.protocol.LabExperimentsTest.xmpTemplatesKeepTheSuppliedPacketAndDoNotSilentlyRewriteFlags",
       "com.leaf2android.protocol.SessionTest.timeoutClosesSessionAndPreventsLateReplyReuse",
+      "com.leaf2android.protocol.SessionTest.hexadecimalRefusalRetainsRequestContextAndTheConnectedStream",
+      "com.leaf2android.protocol.SessionTest.hexadecimalZeroAckSucceedsWithoutDisconnecting",
       "com.leaf2android.protocol.SessionTest.truncatedImageFailsPendingRequest",
       "com.leaf2android.protocol.SessionTest.timeoutIdentifiesTheUnansweredSettingWithoutRevealingItsValue",
       "com.leaf2android.protocol.SessionTest.commandsAreSerializedEvenWhenCalledConcurrently",
@@ -79,6 +81,13 @@
       "com.leaf2android.protocol.SessionTest.explicitCameraErrorIsNotSuccess",
       "com.leaf2android.protocol.SessionTest.ackWithNonzeroErrorCodeIsNotSuccess",
       "com.leaf2android.protocol.SessionTest.startupUsesSyncThenClockThenDirectory",
+      "com.leaf2android.protocol.WireNumbersTest.rejectionRemainsAnIoAndProtocolExceptionEvenWithoutAKnownErrorCode",
+      "com.leaf2android.protocol.WireNumbersTest.unknownSyntaxAndOverflowNeverBecomeZero",
+      "com.leaf2android.protocol.WireNumbersTest.hexadecimalCodesAcceptBothPrefixesAndLetterCases",
+      "com.leaf2android.protocol.WireNumbersTest.decimalCodesCoverUnsignedDwordWithoutWrapping",
+      "com.leaf2android.protocol.WireNumbersTest.conservativeComparisonAcceptsOnlyParsedZero",
+      "com.leaf2android.protocol.WireNumbersTest.rejectionDescribesRequestNamesAndRedactsResponseSecretsInBothLanguages",
+      "com.leaf2android.protocol.WireNumbersTest.rejectedAckAndNakRetainRawCodesAndChosenResponseEncoding",
       "com.leaf2android.protocol.XmpMetadataTest.ambiguousOrStructuredFlagsAreRejectedInsteadOfOverwritingMetadata",
       "com.leaf2android.protocol.XmpMetadataTest.addingFlagsAvoidsAnExistingDifferentLeafNamespacePrefix",
       "com.leaf2android.protocol.XmpMetadataTest.sizeAndDepthLimitsProtectParserAndOutput",
@@ -90,13 +99,35 @@
       "com.leaf2android.protocol.XmpMetadataTest.attributeRepresentationAndOtherFlagBitsArePreserved"
     ]
   },
-  "android_instrumented_tests": {
-    "tests": 28,
+  "android_app_unit_tests": {
+    "tests": 15,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "cases": [
-      "com.leaf2android.BackControlsSessionTest.captureNotificationAcknowledgesImmediatelyWithoutInterruptingIsoTransaction",
+      "com.leaf2android.ui.PhotoGeometryTest.allFourExplicitOrientationsKeepContinuousEdges",
+      "com.leaf2android.ui.PhotoGeometryTest.zoomAndTranslationAreInvertedWithoutScalingTheTranslationTwice",
+      "com.leaf2android.ui.PhotoGeometryTest.portraitCanvasRejectsTheLetterboxAndKeepsTheImageCentre",
+      "com.leaf2android.ui.PhotoGeometryTest.offCanvasAndInvalidGeometryNeverProduceCoordinates",
+      "com.leaf2android.ui.PhotoGeometryTest.landscapeCanvasRejectsTheSideBars",
+      "com.leaf2android.ui.PhotoGeometryTest.clockwiseAndCounterclockwiseAreInverses",
+      "com.leaf2android.ui.PhotoGeometryTest.markerAndTapUseTheSameTransformAcrossViewportSizes",
+      "com.leaf2android.ui.PhotoGrayMappingTest.fullImageEdgesNeverGenerateAnOutOfBoundsSamplingRequest",
+      "com.leaf2android.ui.PhotoGrayMappingTest.missingMalformedOrUnboundedDimensionsAreRejected",
+      "com.leaf2android.ui.PhotoGrayMappingTest.bothPortraitJpegRastersMapDirectlyWithoutRepeatingThePdaDisplayRotation",
+      "com.leaf2android.ui.PhotoGrayMappingTest.landscapeUsesTheReportedCameraGridRatherThanJpegPixelsOrDefaultOrientation",
+      "com.leaf2android.ui.PhotoGrayMappingTest.cameraAttributeCasingAndOnePixelOfPreviewRoundingAreAccepted",
+      "com.leaf2android.ui.PhotoGrayMappingTest.unknownAndAutomaticOrientationNeverSendPointCoordinates",
+      "com.leaf2android.ui.PhotoGrayMappingTest.unverifiedOrStaleMetadataCannotBeUsedAfterAnotherPreviewArrives",
+      "com.leaf2android.ui.PhotoGrayMappingTest.aDifferentAspectRatioAndTheOfflineDemoAreNotMapped"
+    ]
+  },
+  "android_instrumented_tests": {
+    "tests": 41,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
       "com.leaf2android.BackControlsSessionTest.xmpRoundTripsOnAndroidAndKeepsOtherMetadata",
       "com.leaf2android.BackControlsSessionTest.unintendedChangeToAnUntouchedSettingFailsFullReadback",
       "com.leaf2android.BackControlsSessionTest.backProvidedGrayBalanceCanUpdateTheFutureSetupWithoutChangingIso",
@@ -104,12 +135,19 @@
       "com.leaf2android.BackControlsSessionTest.changedOrUnsupportedIsoNeverSendsASetter",
       "com.leaf2android.BackControlsSessionTest.incompleteMoveDoesNotClaimSuccessWhenSourceRemains",
       "com.leaf2android.BackControlsSessionTest.fileCreationAndDeletionCheckTheDirectoryAndRejectExistingNames",
+      "com.leaf2android.BackControlsSessionTest.refreshingTheSamePreviewInvalidatesOldGeometryAndGraySamplesEvenWhenBytesMatch",
+      "com.leaf2android.BackControlsSessionTest.captureNotificationSendsNoUnsupportedAckAndDoesNotInterruptIsoTransaction",
       "com.leaf2android.BackControlsSessionTest.cameraParamNotificationsDoNotOverwriteAdvertisedChoiceLists",
       "com.leaf2android.BackControlsSessionTest.readbackMismatchAndRejectedWriteAreNotReportedAsSuccess",
       "com.leaf2android.BackControlsSessionTest.directIsoDialectUsesCameraSettingsAndReadsBack",
       "com.leaf2android.BackControlsUiTest.laboratoryRequiresAnExplicitSendAndLabelsTheReplyAsUnverified",
       "com.leaf2android.BackControlsUiTest.valeoAutomaticDialectEditsModifiedSlotAndPreservesItAcrossBothLanguages",
       "com.leaf2android.BackControlsUiTest.isoSelectionAppliesTheCompleteSetupAndSurvivesLanguageChanges",
+      "com.leaf2android.CaptureFollowSessionTest.aReadRefusalKeepsTheSessionAndSuccessfulReadsClearOnlyThePreviewError",
+      "com.leaf2android.CaptureFollowSessionTest.busyAndUnsavedEventsDoNotReadUntilAnExplicitSavedNoticeArrives",
+      "com.leaf2android.CaptureFollowSessionTest.ordinaryAsyncHeadersAndLaboratoryEventsDoNotGenerateAck",
+      "com.leaf2android.CaptureFollowSessionTest.twentyHexZeroSavedNotificationsFollowCorrectImagesWithoutUnsupportedAcks",
+      "com.leaf2android.CaptureFollowSessionTest.stopUsesTheOriginalDedicatedAckAndEndsTheSession",
       "com.leaf2android.Dp67ControlsSessionTest.aLostSettingIsNotConfirmedAndTheSessionCanStillReadStatus",
       "com.leaf2android.Dp67ControlsSessionTest.valeoAutoUsesTheModifiedDp67SlotAndPreservesTheFactoryPreset",
       "com.leaf2android.Dp67ControlsSessionTest.anExistingModifiedSlotIsUpdatedAndAnExistingPresetCanBeSelected",
@@ -121,6 +159,13 @@
       "com.leaf2android.LanguageStateTest.languageChangesKeepAnActiveSyntheticSessionPhotoNotesAndZoom",
       "com.leaf2android.LanguageStateTest.followSystemPersistsAcrossActivityRecreation",
       "com.leaf2android.LanguageStateTest.englishAndChineseResourcesCoverTheSettingsAndRetainedErrors",
+      "com.leaf2android.PhotoEditingUiTest.deleteShowsTheRealBackPathAndCancelDoesNotWriteThenVerifiedDeleteRemovesThePhoto",
+      "com.leaf2android.PhotoEditingUiTest.copyUsesAnExplicitBackFolderAndKeepsTheOriginalPhoto",
+      "com.leaf2android.PhotoEditingUiTest.grayPickingIsExplicitAndMissingOriginalGeometryNeverSendsAPoint",
+      "com.leaf2android.PhotoGrayPickUiTest.bitmapFactoryKeepsTheEncodedJpegRasterInsteadOfApplyingExifRotation",
+      "com.leaf2android.PhotoGrayPickUiTest.landscapePointIsPreviewedThenRequiresSeparateConfirmationsForFutureAndCurrentPhoto",
+      "com.leaf2android.PhotoGrayPickUiTest.clockwisePortraitPointDoesNotRepeatTheOriginalPdaDisplayRotation",
+      "com.leaf2android.PhotoGrayPickUiTest.counterclockwisePortraitPointDoesNotRepeatTheOriginalPdaDisplayRotation",
       "com.leaf2android.RepositorySessionTest.twentySyntheticCapturesReachCorrectJpegCache",
       "com.leaf2android.UiStateTest.demoStyleChangeAndActivityRecreationKeepSelectionAndViewport",
       "com.leaf2android.UiStateTest.offlineDemoNeverClaimsBluetoothConnection"
@@ -142,7 +187,7 @@
   "release_debuggable": false,
   "lint": {
     "errors": 0,
-    "warnings": 18,
+    "warnings": 19,
     "categories": [
       "AppBundleLocaleChanges",
       "NewerVersionAvailable",
@@ -155,7 +200,7 @@
   },
   "release_lint": {
     "errors": 0,
-    "warnings": 18,
+    "warnings": 19,
     "categories": [
       "AppBundleLocaleChanges",
       "NewerVersionAvailable",
@@ -167,9 +212,9 @@
     ]
   },
   "apk_generated": true,
-  "apk": "dist\\Leaf2Android-0.3.1.apk",
-  "apk_bytes": 3519856,
-  "apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7",
+  "apk": "dist\\Leaf2Android-0.3.2.apk",
+  "apk_bytes": 3558300,
+  "apk_sha256": "58c1b5fd158b388d0a054b1ec1b14e7dfee73251c5ba11a68172944ea764cad8",
   "apk_signature_verified": true,
   "apk_zip_16k_alignment": true,
   "elf_16k_alignment_verified": true,
@@ -286,6 +331,24 @@
     "root_cause_confirmed": false,
     "fix_hardware_verified": false
   },
+  "user_reported_v031_followup": {
+    "date": "2026-11-15",
+    "model_family": "Valeo",
+    "app_version": "0.3.1",
+    "connection": "very stable",
+    "shooting_settings_reported_working": [
+      "ISO",
+      "gray balance"
+    ],
+    "automatic_preview": "Error error_code=0x01; not updated automatically",
+    "manual_latest_preview": "works",
+    "session_remains_ready": true,
+    "firmware": null,
+    "selected_compatibility_mode": null,
+    "phone_environment": null,
+    "raw_session_log_available": false,
+    "new_v032_physically_tested": false
+  },
   "dp67_compatibility": {
     "implemented": true,
     "automatic_name_contains": "Valeo",
@@ -300,9 +363,34 @@
     "modified_slot": ".1",
     "factory_preset_preservation_checked": true,
     "whole_operation_serialization": true,
-    "notifications_ack_bypasses_operation_lock": true,
+    "ordinary_notifications_send_ack": false,
+    "only_stop_ack_bypasses_operation_lock": true,
     "background_refresh_preserves_result": true,
     "automatic_write_retries": false,
+    "physical_validation": false
+  },
+  "capture_follow_correction": {
+    "ordinary_and_lab_notification_ack_removed": true,
+    "stop_ack": "^<Ack/>",
+    "decimal_and_hex_dword_error_codes": true,
+    "unknown_or_overflow_codes_not_success": true,
+    "new_parameters_ready_gate_or_delay": false,
+    "synthetic_sequence_photos": 20,
+    "synthetic_peer_rejects_unsolicited_ack_with": "Error error_code=0x01",
+    "file_and_decodable_content_association_checked": true,
+    "physical_root_cause_proven": false,
+    "evidence": "docs/capture-notifications-analysis.md"
+  },
+  "photo_tools": {
+    "explicit_gray_pick_mode": true,
+    "tap_preview_light_from_back": true,
+    "mapping_requires_current_orientation_dimensions_preview_sha": true,
+    "mapping_grid_is_not_claimed_raw_sensor_pixels": true,
+    "unknown_or_auto_orientation_blocks_automatic_point_request": true,
+    "every_preview_refresh_invalidates_metadata_and_sample": true,
+    "current_photo_and_future_shooting_commits_separately_confirmed": true,
+    "delete_and_move_require_directory_readback_before_cache_removal": true,
+    "queued_removed_sources_not_reinserted": true,
     "physical_validation": false
   },
   "complete_startup_handshake_verified": false,
@@ -311,31 +399,96 @@
   "mos_full_file_transfer_implemented": false,
   "continuous_live_view_implemented": false,
   "mechanical_shutter_remote_release": "Hardware unsupported in current setup",
-  "gate": "user_reported_basic_sessions; new_control_effects_and_laboratory_hypotheses_require_device_validation",
-  "matching_bilingual_resource_keys": 360,
+  "gate": "user_reported_basic_sessions_and_selected_v031_valeo_settings; v032_capture_follow_gray_sampling_photo_actions_and_laboratory_effects_require_device_validation",
+  "matching_bilingual_resource_keys": 370,
   "control_ui_captures": {
     "back-controls-en": {
       "file": "docs/screenshots/back-controls-en.png",
-      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
     },
     "back-controls-zh": {
       "file": "docs/screenshots/back-controls-zh.png",
-      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
     },
     "laboratory-en": {
       "file": "docs/screenshots/laboratory-en.png",
-      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
     },
     "valeo-dp67-en": {
       "file": "docs/screenshots/valeo-dp67-en.png",
-      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
     },
     "valeo-dp67-zh": {
       "file": "docs/screenshots/valeo-dp67-zh.png",
-      "build": "v0.3.1 debug instrumented UI with synthetic peer; no Bluetooth camera"
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
     }
   },
-  "cache_and_settings_upgrade": {
+  "photo_tool_ui_captures": {
+    "photo-actions-en": {
+      "file": "docs/screenshots/photo-actions-en.png",
+      "sha256": "cf056ed725a4bfbd40890d5cdf4112d886912dba22829b6b621e894b35804bd9",
+      "pixels": [
+        1080,
+        2520
+      ],
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "photo-actions-zh": {
+      "file": "docs/screenshots/photo-actions-zh.png",
+      "sha256": "7948821e4d021cd843cc3cd3424ba99118fe041f3bb6681227bdea03340eab66",
+      "pixels": [
+        1080,
+        2520
+      ],
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "photo-delete-confirm-en": {
+      "file": "docs/screenshots/photo-delete-confirm-en.png",
+      "sha256": "93e2fc1cbf55c6fd76beebbb7af2a1bc3c4b6870d0480194d50c325e18288539",
+      "pixels": [
+        1080,
+        2520
+      ],
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "gray-point-landscape-en": {
+      "file": "docs/screenshots/gray-point-landscape-en.png",
+      "sha256": "36f0920004cfd54f6c8bc07de5df357237f76a61d9444f3945aa01484dbfc3ee",
+      "pixels": [
+        1080,
+        2520
+      ],
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "gray-point-portrait-cw-en": {
+      "file": "docs/screenshots/gray-point-portrait-cw-en.png",
+      "sha256": "aee8d94e948a9a45445fab9e5e19550dead6b61b82a9177e1dfb68dbdec58125",
+      "pixels": [
+        1080,
+        2520
+      ],
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "gray-point-portrait-ccw-en": {
+      "file": "docs/screenshots/gray-point-portrait-ccw-en.png",
+      "sha256": "aee8d94e948a9a45445fab9e5e19550dead6b61b82a9177e1dfb68dbdec58125",
+      "pixels": [
+        1080,
+        2520
+      ],
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    },
+    "gray-current-confirm-zh": {
+      "file": "docs/screenshots/gray-current-confirm-zh.png",
+      "sha256": "19b2fe73d64c5b94d5cbf81cb96fb5046051824e7f2fb70b2adabe114c7ffdce",
+      "pixels": [
+        1080,
+        2520
+      ],
+      "build": "v0.3.2 debug instrumented UI with synthetic peer; no Bluetooth camera"
+    }
+  },
+  "historical_cache_and_settings_upgrade_v030_to_v031": {
     "date": "2026-11-14",
     "avd": "Leaf2Android_API36",
     "api": 36,
@@ -352,7 +505,7 @@
       "explicit_dp67_survives_language_change": true
     }
   },
-  "current_release_settings_captures": {
+  "historical_v031_release_settings_captures": {
     "settings-cache-en": {
       "file": "docs/screenshots/settings-cache-en.png",
       "apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7"
@@ -366,5 +519,33 @@
       "apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7"
     }
   },
-  "old_workspace_empty": true
+  "signed_current_release_upgrade_and_ui": {
+    "date": "2026-11-15",
+    "avd": "Leaf2Android_API36",
+    "api": 36,
+    "physical_devices_used": false,
+    "app_data_reset_only_on_owned_avd": true,
+    "old_version": "0.3.1",
+    "new_version": "0.3.2",
+    "old_apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7",
+    "new_apk_sha256": "58c1b5fd158b388d0a054b1ec1b14e7dfee73251c5ba11a68172944ea764cad8",
+    "checks": {
+      "signed_in_place_update": true,
+      "selected_cache_64_preserved": true,
+      "dp67_compatibility_preserved": true,
+      "pda_style_preserved": true,
+      "fresh_default_cache_1024": true,
+      "offline_demo_cannot_write_back": true,
+      "signed_minified_demo_styles_languages_and_landscape": true,
+      "no_fatal_runtime_exception": true
+    },
+    "screenshots": [
+      "docs/screenshots/v032-release-modern-zh.png",
+      "docs/screenshots/v032-release-pda-zh.png",
+      "docs/screenshots/v032-release-landscape-en.png"
+    ]
+  },
+  "old_workspace_contains_no_project_files": true,
+  "automatic_codex_attachments_preserved_and_excluded_from_publication": true,
+  "total_executed_tests": 168
 }

@@ -43,8 +43,10 @@ class LeafRepository(private val context: Context) {
     private var connectionJob: Job? = null
     private var imageQueue: Channel<String>? = null
     private val queued = mutableSetOf<String>()
+    private val removedPaths = mutableSetOf<String>()
     private var generation = 0
     private var syncQueued = false
+    private var imageReadError: UiText? = null
     private var labTouchedConnection = false
     private val labDirectory = File(context.cacheDir, "laboratory").apply { mkdirs() }
     var lastAddress: String? = preferences.getString("lastAddress", null); private set
@@ -55,7 +57,7 @@ class LeafRepository(private val context: Context) {
             val photos = withContext(Dispatchers.IO) { store.load() }
             mutable.update { s ->
                 val live = s.photos.map { it.path }.toSet()
-                val combined = photos.filterNot { it.path in live } + s.photos
+                val combined = photos.filterNot { it.path in live || it.path in removedPaths } + s.photos
                 s.copy(photos = combined, selectedPath = s.selectedPath ?: preferences.getString("selected", null)
                     ?.takeIf { path -> combined.any { p -> p.path == path } })
             }
@@ -95,12 +97,14 @@ class LeafRepository(private val context: Context) {
     val shootingDialect: ShootSetupDialect get() = settings.value.shootingCompatibility.dialect(state.value.deviceName, state.value.camera)
     fun shootingConfiguration(camera: Map<String, String> = state.value.camera): ShootingConfiguration = ShootingConfiguration.from(camera, shootingDialect)
     fun setViewport(path: String, viewport: Viewport) { viewports[path] = viewport }
-    fun clearMessage() { mutable.update { it.copy(error = null, notice = null) } }
-    fun showError(message: UiText) { mutable.update { it.copy(error = message) } }
+    fun clearMessage() { imageReadError = null; mutable.update { it.copy(error = null, notice = null) } }
+    fun showError(message: UiText) { imageReadError = null; mutable.update { it.copy(error = message) } }
     fun showError(message: String) = showError(UiText.raw(message))
 
     fun connect(address: String, name: String, transport: LeafTransport) {
         disconnect()
+        removedPaths.clear()
+        imageReadError = null
         val current = ++generation
         val configuration = settings.value
         lastAddress = address; lastName = name
@@ -132,13 +136,18 @@ class LeafRepository(private val context: Context) {
                     mutable.update { it.copy(phase = SessionPhase.READY, operation = UiText.Empty, notice = msg(R.string.synchronization_complete_release_the_technical_de2c8)) }
                     launch {
                         for (path in queue) {
-                            if (state.value.labMode) { queued.remove(path); continue }
+                            if (state.value.labMode || path in removedPaths) { queued.remove(path); continue }
                             try { operationLock.withLock {
-                                if (generation == current && !state.value.labMode) receiveImage(p, path, current)
+                                if (generation == current && !state.value.labMode && path !in removedPaths) receiveImage(p, path, current)
                             } }
                             catch (e: Exception) {
                                 if (e is CancellationException) throw e
-                                showError(errorText(e, msg(R.string.could_not_read_preview_9fbde)))
+                                if (generation == current) {
+                                    if (!p.isOpen) { fail(e); continue }
+                                    val message = errorText(e, msg(R.string.could_not_read_preview_9fbde))
+                                    imageReadError = message
+                                    mutable.update { it.copy(error = message, operation = UiText.Empty, received = 0, expected = 0) }
+                                }
                             } finally { queued.remove(path) }
                         }
                     }
@@ -159,6 +168,7 @@ class LeafRepository(private val context: Context) {
         mutable.update { it.copy(phase = SessionPhase.DISCONNECTED, operation = UiText.Empty, received = 0, expected = 0, controlsBusy = false, connectionGeneration = null, labBusy = false, labCurrentId = null) }
     }
     private fun fail(e: Throwable) {
+        if (state.value.phase in setOf(SessionPhase.FAILED, SessionPhase.DISCONNECTED)) return
         val message = when (e) {
             is SecurityException -> msg(R.string.nearby_devices_permission_was_revoked_grant_per_a7f2d)
             is TimeoutCancellationException -> msg(R.string.bluetooth_connection_timed_out_enable_back_wire_06205)
@@ -327,10 +337,12 @@ class LeafRepository(private val context: Context) {
         mutable.update { it.copy(notice = msg(R.string.back_mark_confirmed)) }
     }
     fun requestBackPreview(path: String, zoom: ImageZoom, point: ImagePoint?, alarm: ExposureEdge?, grayPoint: ImagePoint?) = controls(msg(R.string.reading_processed_preview)) { p ->
+        requireCurrentPhoto(path)
+        if (grayPoint != null) mutable.update { it.copy(backPreview = null) }
         val frame = p.execute(ImageOperations.preview(path, zoom, point, alarm, grayPoint))
         if (frame.value("size") != null) throw LocalizedIOException(msg(R.string.the_back_enabled_an_unverified_packetized_size_9dd88))
         val photo = withContext(Dispatchers.IO) { store.putProcessed(path, frame.attachment) }
-        mutable.update { it.copy(backPreview = ProcessedBackPreview(photo.copy(deviceAddress = it.deviceAddress, connectionGeneration = it.connectionGeneration), frame.value("light", p.encoding.charset))) }
+        mutable.update { it.copy(backPreview = ProcessedBackPreview(photo.copy(deviceAddress = it.deviceAddress, connectionGeneration = it.connectionGeneration), frame.value("light", p.encoding.charset), grayPoint)) }
     }
     fun requestPixelProbe(path: String, point: ImagePoint) = controls(msg(R.string.reading_back_pixel_probe)) { p ->
         val result = ImageOperations.parsePixelProbe(p.execute(ImageOperations.pixelProbe(path, point)), p.encoding)
@@ -339,7 +351,7 @@ class LeafRepository(private val context: Context) {
     private fun requireLiveLightSample(light: String) {
         val sample = state.value.backPreview ?: throw LocalizedIOException(msg(R.string.gray_balance_sample_missing))
         requireCurrentPhoto(sample.photo.path)
-        if (sample.sampledLight != light || sample.photo.connectionGeneration != state.value.connectionGeneration)
+        if (sample.sampledPoint == null || sample.sampledLight != light || sample.photo.connectionGeneration != state.value.connectionGeneration)
             throw LocalizedIOException(msg(R.string.gray_balance_sample_missing))
     }
     fun applySampledLightToFuture(light: String) {
@@ -356,7 +368,7 @@ class LeafRepository(private val context: Context) {
     }
     fun commitGrayBalance(path: String, light: String) = controls(msg(R.string.apply_photo_gray_balance)) { p ->
         requireCurrentPhoto(path)
-        if (state.value.backPreview?.let { it.photo.path != path || it.sampledLight != light } != false) throw LocalizedIOException(msg(R.string.gray_balance_sample_missing))
+        if (state.value.backPreview?.let { it.photo.path != path || it.sampledLight != light || it.sampledPoint == null } != false) throw LocalizedIOException(msg(R.string.gray_balance_sample_missing))
         p.execute(ImageOperations.commitGrayBalance(path, light))
         readAndStoreMetadata(p, path)
         enqueueImage(path)
@@ -387,12 +399,37 @@ class LeafRepository(private val context: Context) {
     }
     fun copyOrMovePhoto(path: String, targetFolder: String, move: Boolean) = fileAction(targetFolder, { entries -> entries.any { !it.isDirectory && it.name == path.substringAfterLast('/') } }, afterVerified = { p ->
         if (move && listed(p, parentOf(path)).any { it.path == path }) throw LocalizedIOException(msg(R.string.move_source_still_present))
+        if (move) {
+            val target = CameraPaths.child(targetFolder, path.substringAfterLast('/'), false)
+            removeVerifiedPhoto(path, target)
+            enqueueImage(target)
+        }
     }) { p ->
         requireCurrentPhoto(path)
         val command = ControlCommands.transferImage(path, targetFolder, move)
         requireUnused(p, targetFolder, path.substringAfterLast('/')); command
     }
-    fun deletePhoto(path: String) = fileAction(parentOf(path), { entries -> entries.none { it.path == path } }) { requireCurrentPhoto(path); ControlCommands.deleteImage(path) }
+    fun deletePhoto(path: String) = fileAction(parentOf(path), { entries -> entries.none { it.path == path } }, afterVerified = {
+        removeVerifiedPhoto(path)
+    }) { requireCurrentPhoto(path); ControlCommands.deleteImage(path) }
+    private suspend fun removeVerifiedPhoto(path: String, selectedTarget: String? = null) {
+        val device = state.value.deviceAddress
+        removedPaths += path
+        viewports.remove(path)
+        mutable.update { s ->
+            val photos = s.photos.filterNot { it.path == path && it.deviceAddress == device }
+            val selected = if (s.selectedPath == path) selectedTarget?.takeIf { target -> photos.any { it.path == target } }
+                ?: photos.filter { it.deviceAddress == device && it.cacheFile != null }.maxByOrNull { it.receivedAt }?.path
+                ?: photos.lastOrNull()?.path else s.selectedPath
+            s.copy(photos = photos, selectedPath = selected,
+                backPreview = s.backPreview?.takeUnless { it.photo.path == path },
+                pixelProbe = s.pixelProbe.takeUnless { s.pixelProbePath == path }, pixelProbePath = s.pixelProbePath?.takeUnless { it == path },
+                backHistograms = s.backHistograms.takeUnless { s.histogramPath == path }, histogramPath = s.histogramPath?.takeUnless { it == path })
+        }
+        preferences.edit().putString("selected", state.value.selectedPath).apply()
+        withContext(Dispatchers.IO) { store.removePreview(path) }
+        persist()
+    }
     private fun requireCurrentPhoto(path: String) {
         val snapshot = state.value
         val photo = snapshot.photos.firstOrNull { it.path == path }
@@ -421,7 +458,9 @@ class LeafRepository(private val context: Context) {
                     block(p)
                     log("OP END ${title.resolve()}")
                 } catch (e: Exception) {
-                    if (e !is CancellationException && generation == current) showError(errorText(e, msg(R.string.operation_failed , title)))
+                    if (e !is CancellationException && generation == current) {
+                        if (!p.isOpen) fail(e) else showError(errorText(e, msg(R.string.operation_failed , title)))
+                    }
                 } finally { if (generation == current) mutable.update { it.copy(operation = UiText.Empty) } }
             }
         }
@@ -430,17 +469,18 @@ class LeafRepository(private val context: Context) {
     private suspend fun onEvent(p: LeafProtocol, frame: WireFrame, current: Int) {
         if (current != generation) return
         if (state.value.labMode) {
-            if (frame.tag.lowercase(Locale.ROOT) in setOf("picturetaken", "imagechange", "cameraparamchange", "camerashootsetupchangenotification", "storagenotification", "powermanagement", "pictureparamschange", "filesystemchange", "readytoshoot", "asynccommand", "beepnotification", "ifguiisactive")) p.acknowledge()
+            // PictureTaken/ImageChange and other unsolicited controls are not requests for Ack.
+            // The PDA server rejects an unregistered Ack with Error 0x01. Stop is a proved exception.
+            if (frame.tag.equals("Stop", true)) p.acknowledgeStop()
             val text = "${Instant.now()} ${LabRedaction.redact(frame.header.toString(p.encoding.charset))} [${frame.attachment.size} bytes]"
             mutable.update { it.copy(labEvents = (it.labEvents + text).takeLast(40)) }
             return
         }
         when (frame.tag.lowercase(Locale.ROOT)) {
             "picturetaken", "imagechange" -> {
-                p.acknowledge()
                 mergeCamera(frame, p.encoding)
                 val errorCode = frame.value("error_code")
-                if (errorCode != null && errorCode.toLongOrNull() != 0L) {
+                if (errorCode != null && WireNumbers.errorCode(errorCode) != 0L) {
                     showError(msg(R.string.the_back_reported_capture_error_1_s_its_preview_f45c3 , errorCode))
                     return
                 }
@@ -453,30 +493,30 @@ class LeafRepository(private val context: Context) {
                     mutable.update { it.copy(notice = msg(R.string.a_capture_notification_had_no_file_name_refresh_3a060)) }
                 } else {
                     Commands.safe(path)
+                    removedPaths.remove(path)
                     mutable.update { s -> s.copy(photos = if (s.photos.any { it.path == path }) s.photos else s.photos + LeafPhoto(path)) }
                     enqueueImage(path)
                 }
             }
             "cameraparamchange", "camerashootsetupchangenotification" -> {
-                p.acknowledge()
                 val keys = (ShootField.entries.mapNotNull { it.choiceKey } + listOf("shootsetup", "defaultshootsetup", "imagesettings", "activeimagesettings", "camerasettings", "defaultcolor", "defaultorientation")).toSet()
                 val values = frame.values(p.encoding.charset).mapKeys { it.key.lowercase(Locale.ROOT) }
                 mutable.update { it.copy(camera = it.camera + values.filterKeys { key -> key !in keys }) }
                 if (values.keys.any { it in keys } || frame.tag.equals("CameraShootSetupChangeNotification", true)) refreshAfterConfigurationNotification()
             }
             "storagenotification", "powermanagement" -> {
-                p.acknowledge(); mergeCamera(frame, p.encoding)
+                mergeCamera(frame, p.encoding)
             }
             "pictureparamschange", "filesystemchange", "readytoshoot", "asynccommand", "beepnotification", "ifguiisactive" -> {
-                p.acknowledge()
                 mutable.update { it.copy(notice = msg(R.string.back_notification_1_s_7f452 , frame.tag)) }
             }
-            "shutdown", "stop" -> { p.acknowledge(); fail(LocalizedIOException(msg(R.string.the_back_stopped_the_session_1_s_1f03d , frame.tag))) }
+            "stop" -> { p.acknowledgeStop(); fail(LocalizedIOException(msg(R.string.the_back_stopped_the_session_1_s_1f03d , frame.tag))) }
+            "shutdown" -> fail(LocalizedIOException(msg(R.string.the_back_stopped_the_session_1_s_1f03d , frame.tag)))
             "error", "nak" -> showError(msg(R.string.back_notification_1_s_7f452 , frame.header.toString(p.encoding.charset)))
         }
     }
     private fun enqueueImage(path: String) {
-        if (!state.value.active || state.value.labMode) return
+        if (!state.value.active || state.value.labMode || path in removedPaths) return
         if (!queued.add(path)) return
         if (imageQueue?.trySend(path)?.isSuccess != true) {
             queued.remove(path); showError(msg(R.string.the_preview_queue_is_full_refresh_the_selected_70392))
@@ -490,11 +530,14 @@ class LeafRepository(private val context: Context) {
         val photo = withContext(Dispatchers.IO) { store.put(path, frame.attachment) }
         mutable.update { s ->
             val old = s.photos.firstOrNull { it.path == path }
-            val updated = photo.copy(starred = old?.starred ?: false, localNote = old?.localNote ?: "", metadata = if (old != null && old.deviceAddress == s.deviceAddress) old.metadata else emptyMap(), deviceAddress = s.deviceAddress, connectionGeneration = current)
+            val updated = photo.copy(starred = old?.starred ?: false, localNote = old?.localNote ?: "", metadata = emptyMap(), deviceAddress = s.deviceAddress, connectionGeneration = current)
             s.copy(photos = s.photos.filterNot { it.path == path } + updated,
                 selectedPath = if (settings.value.autoFollow || s.selectedPath == null) path else s.selectedPath,
+                backPreview = s.backPreview?.takeUnless { it.photo.path == path },
+                error = if (s.error == imageReadError) null else s.error,
                 operation = UiText.Empty, received = 0, expected = 0, previewCount = s.previewCount + 1)
         }
+        imageReadError = null
         persist()
     }
     fun select(path: String) {
@@ -528,7 +571,8 @@ class LeafRepository(private val context: Context) {
     private fun mergePhotoMetadata(path: String, frame: WireFrame, encoding: WireEncoding) {
         val metadata = frame.values(encoding.charset).filterKeys { it.lowercase(Locale.ROOT) !in setOf("attachment", "file_name") }
         mutable.update { s -> s.copy(photos = s.photos.map { photo -> if (photo.path == path)
-            photo.copy(metadata = photo.metadata.filterKeys { old -> metadata.keys.none { it.equals(old, true) } } + metadata) else photo }) }
+            photo.copy(metadata = photo.metadata.filterKeys { old -> metadata.keys.none { it.equals(old, true) } } + metadata,
+                metadataPreviewSha256 = photo.sha256.takeIf { photo.cacheFile != null && photo.deviceAddress == s.deviceAddress && photo.connectionGeneration == s.connectionGeneration }) else photo }) }
     }
     fun writeCameraNotes(path: String, copyright: String, note: String) = action(msg(R.string.writing_notes_to_back_18e71)) { p ->
         requireCurrentPhoto(path)
@@ -653,7 +697,10 @@ class LeafRepository(private val context: Context) {
                 val failure = state.value.takeIf { it.phase == SessionPhase.FAILED }?.error
                 result = initial.copy(outcome = if (failure == null) LabOutcome.CANCELLED else LabOutcome.ERROR, error = failure?.resolve())
             }
-            catch (e: Exception) { result = initial.copy(outcome = LabOutcome.ERROR, error = LabRedaction.redact(e.message ?: e.javaClass.simpleName)) }
+            catch (e: Exception) {
+                if (!p.isOpen && snapshot.connectionGeneration == state.value.connectionGeneration) fail(e)
+                result = initial.copy(outcome = LabOutcome.ERROR, error = LabRedaction.redact(e.message ?: e.javaClass.simpleName))
+            }
             finally {
                 val finished = result
                 mutable.update { s -> s.copy(labRecords = s.labRecords.map { if (it.id == id) finished else it },

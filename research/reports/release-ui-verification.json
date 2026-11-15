@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-15",
+  "avd": "Leaf2Android_API36",
+  "api": 36,
+  "physical_devices_used": false,
+  "app_data_reset_only_on_owned_avd": true,
+  "old_version": "0.3.1",
+  "new_version": "0.3.2",
+  "old_apk_sha256": "5b89cb996306a2d69dbb0465c3042a051d2d29437704b5d872e95ad4126b29f7",
+  "new_apk_sha256": "58c1b5fd158b388d0a054b1ec1b14e7dfee73251c5ba11a68172944ea764cad8",
+  "checks": {
+    "signed_in_place_update": true,
+    "selected_cache_64_preserved": true,
+    "dp67_compatibility_preserved": true,
+    "pda_style_preserved": true,
+    "fresh_default_cache_1024": true,
+    "offline_demo_cannot_write_back": true,
+    "signed_minified_demo_styles_languages_and_landscape": true,
+    "no_fatal_runtime_exception": true
+  },
+  "screenshots": [
+    "docs/screenshots/v032-release-modern-zh.png",
+    "docs/screenshots/v032-release-pda-zh.png",
+    "docs/screenshots/v032-release-landscape-en.png"
+  ]
+}

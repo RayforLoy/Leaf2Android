@@ -1,0 +1,376 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x16bf4..0x171cc, exclusive
+00016bf4 [file 00005ff4] mov       ip, sp
+00016bf8 [file 00005ff8] push      {r4, r5, r6, r7, r8, sb, sl, fp, ip, lr}
+00016bfc [file 00005ffc] add       fp, sp, #0x28
+00016c00 [file 00006000] sub       sp, sp, #0x44
+00016c04 [file 00006004] mov       r8, r0
+00016c08 [file 00006008] str       r8, [fp, #-0x54]
+00016c0c [file 0000600c] ldr       r1, [pc, #0x638]
+00016c10 [file 00006010] mov       r3, #1
+00016c14 [file 00006014] ldr       r6, [pc, #0x644]
+00016c18 [file 00006018] ldr       r0, [r1]
+00016c1c [file 0000601c] str       r3, [fp, #-0x50]
+00016c20 [file 00006020] ldr       r7, [r0, #4]
+00016c24 [file 00006024] ldr       r0, [r6]
+00016c28 [file 00006028] str       r7, [fp, #-0x4c]
+00016c2c [file 0000602c] str       r3, [r0, #0x118]
+00016c30 [file 00006030] ldr       r1, [r8, #0x20]
+00016c34 [file 00006034] cmp       r1, #0
+00016c38 [file 00006038] beq       #0x16ca8
+00016c3c [file 0000603c] mov       r0, #0x1fc0
+00016c40 [file 00006040] orr       r0, r0, #0x3e
+00016c44 [file 00006044] cmp       r1, r0
+00016c48 [file 00006048] beq       #0x16c88
+00016c4c [file 0000604c] mov       r0, #0x1fc0
+00016c50 [file 00006050] orr       r0, r0, #0x32
+00016c54 [file 00006054] cmp       r1, r0
+00016c58 [file 00006058] beq       #0x16c88
+00016c5c [file 0000605c] mov       r0, r1
+00016c60 [file 00006060] bl        #0x65340
+00016c64 [file 00006064] mov       r4, r0
+00016c68 [file 00006068] mov       r0, #0xfe
+00016c6c [file 0000606c] bl        #0x65318
+00016c70 [file 00006070] mov       r2, #0x130
+00016c74 [file 00006074] mov       r3, #0
+00016c78 [file 00006078] orr       r2, r2, #3
+00016c7c [file 0000607c] mov       r1, r4
+00016c80 [file 00006080] bl        #0x63c94
+00016c84 [file 00006084] b         #0x171c8
+00016c88 [file 00006088] mov       r0, r1
+00016c8c [file 0000608c] bl        #0x65340
+00016c90 [file 00006090] mov       r2, #0x130
+00016c94 [file 00006094] mov       r3, #0x10
+00016c98 [file 00006098] orr       r2, r2, #1
+00016c9c [file 0000609c] mov       r1, #0
+00016ca0 [file 000060a0] bl        #0x63c94
+00016ca4 [file 000060a4] b         #0x171c8
+00016ca8 [file 000060a8] ldr       r2, [r8, #8]
+00016cac [file 000060ac] ldr       sb, [pc, #0x5c0] ; 'CPictureTakenNotification::Process'
+00016cb0 [file 000060b0] ldr       r8, [pc, #0x5b8] ; 'AsyncCommandNotification'
+00016cb4 [file 000060b4] cmn       r2, #1
+00016cb8 [file 000060b8] ldr       sl, [pc, #0x5ac]
+00016cbc [file 000060bc] ble       #0x16d68
+00016cc0 [file 000060c0] ldr       r1, [r6]
+00016cc4 [file 000060c4] ldr       r0, [r1, #0xfc]
+00016cc8 [file 000060c8] cmp       r0, r2
+00016ccc [file 000060cc] beq       #0x16d68
+00016cd0 [file 000060d0] str       r2, [r1, #0xfc]
+00016cd4 [file 000060d4] ldr       r0, [r6]
+00016cd8 [file 000060d8] ldr       r1, [r0, #0xfc]
+00016cdc [file 000060dc] ldr       r0, [r0, #0x100]
+00016ce0 [file 000060e0] cmp       r1, r0
+00016ce4 [file 000060e4] ble       #0x16d54
+00016ce8 [file 000060e8] ldr       r0, [sl]
+00016cec [file 000060ec] add       r0, r0, #0xc
+00016cf0 [file 000060f0] bl        #0x9a2d0
+00016cf4 [file 000060f4] ldr       r4, [sl]
+00016cf8 [file 000060f8] mov       r3, #0x3c8
+00016cfc [file 000060fc] mov       r0, r4
+00016d00 [file 00006100] ldr       r4, [r4]
+00016d04 [file 00006104] mov       r2, r8
+00016d08 [file 00006108] ldr       r4, [r4, #0x10]
+00016d0c [file 0000610c] mov       r1, #1
+00016d10 [file 00006110] mov       lr, pc
+00016d14 [file 00006114] mov       pc, r4
+00016d18 [file 00006118] ldr       r2, [r6]
+00016d1c [file 0000611c] mov       r1, sb
+00016d20 [file 00006120] ldr       r4, [sl]
+00016d24 [file 00006124] ldr       r0, [r2, #0x100]
+00016d28 [file 00006128] ldr       r3, [r2, #0xfc]
+00016d2c [file 0000612c] str       r0, [sp]
+00016d30 [file 00006130] mov       r0, r4
+00016d34 [file 00006134] ldr       r4, [r4]
+00016d38 [file 00006138] ldr       r2, [pc, #0x528] ; 'ExpLeft(%d) > MaxExp(%d)'
+00016d3c [file 0000613c] ldr       r4, [r4, #4]
+00016d40 [file 00006140] mov       lr, pc
+00016d44 [file 00006144] mov       pc, r4
+00016d48 [file 00006148] ldr       r3, [sl]
+00016d4c [file 0000614c] add       r0, r3, #0xc
+00016d50 [file 00006150] bl        #0x9a2c4
+00016d54 [file 00006154] ldr       r1, [r7]
+00016d58 [file 00006158] mov       r0, r7
+00016d5c [file 0000615c] ldr       r2, [r1, #0x44]
+00016d60 [file 00006160] mov       lr, pc
+00016d64 [file 00006164] mov       pc, r2
+00016d68 [file 00006168] ldr       r1, [pc, #0x4e4] ; '/'
+00016d6c [file 0000616c] ldr       r0, [fp, #-0x54]
+00016d70 [file 00006170] mov       r2, r1
+00016d74 [file 00006174] ldr       r1, [r0, #0xc]
+00016d78 [file 00006178] mvn       r0, #0x47
+00016d7c [file 0000617c] add       r0, fp, r0
+00016d80 [file 00006180] bl        #0x835a4
+00016d84 [file 00006184] mvn       r0, #0x47
+00016d88 [file 00006188] add       r0, fp, r0
+00016d8c [file 0000618c] bl        #0x83728
+00016d90 [file 00006190] sub       r1, r0, #1
+00016d94 [file 00006194] str       r1, [fp, #-0x5c]
+00016d98 [file 00006198] cmp       r1, #1
+00016d9c [file 0000619c] ble       #0x16ef0
+00016da0 [file 000061a0] ldr       r0, [r6]
+00016da4 [file 000061a4] ldr       r1, [r0, #0x10]
+00016da8 [file 000061a8] cmp       r1, #0
+00016dac [file 000061ac] beq       #0x16ef0
+00016db0 [file 000061b0] add       r5, r1, #4
+00016db4 [file 000061b4] ldr       r7, [r5, #4]
+00016db8 [file 000061b8] mov       r0, #0
+00016dbc [file 000061bc] mov       r6, r0
+00016dc0 [file 000061c0] cmp       r7, #0
+00016dc4 [file 000061c4] ble       #0x16ef0
+00016dc8 [file 000061c8] ldr       r0, [r5]
+00016dcc [file 000061cc] mov       r1, #1
+00016dd0 [file 000061d0] ldr       r0, [r0, r6, lsl #2]
+00016dd4 [file 000061d4] str       r0, [fp, #-0x60]
+00016dd8 [file 000061d8] mvn       r0, #0x47
+00016ddc [file 000061dc] add       r0, fp, r0
+00016de0 [file 000061e0] bl        #0x83730
+00016de4 [file 000061e4] mov       r4, r0
+00016de8 [file 000061e8] ldr       r0, [fp, #-0x60]
+00016dec [file 000061ec] bl        #0x48e14
+00016df0 [file 000061f0] mov       r1, r4
+00016df4 [file 000061f4] bl        #0x9a2e8
+00016df8 [file 000061f8] cmp       r0, #0
+00016dfc [file 000061fc] beq       #0x16e10
+00016e00 [file 00006200] add       r6, r6, #1
+00016e04 [file 00006204] cmp       r6, r7
+00016e08 [file 00006208] blt       #0x16dc8
+00016e0c [file 0000620c] b         #0x16ef0
+00016e10 [file 00006210] ldr       r1, [fp, #-0x5c]
+00016e14 [file 00006214] mov       r6, #2
+00016e18 [file 00006218] ldr       r7, [fp, #-0x60]
+00016e1c [file 0000621c] mov       r4, #0
+00016e20 [file 00006220] cmp       r1, #2
+00016e24 [file 00006224] ble       #0x16ee8
+00016e28 [file 00006228] mov       r5, r4
+00016e2c [file 0000622c] ldr       r0, [r7, #0x10]
+00016e30 [file 00006230] cmp       r5, r0
+00016e34 [file 00006234] bge       #0x16e7c
+00016e38 [file 00006238] mov       r1, r6
+00016e3c [file 0000623c] mvn       r0, #0x47
+00016e40 [file 00006240] add       r0, fp, r0
+00016e44 [file 00006244] bl        #0x83730
+00016e48 [file 00006248] mov       r4, r0
+00016e4c [file 0000624c] ldr       r0, [r7, #0xc]
+00016e50 [file 00006250] ldr       r0, [r0, r5, lsl #2]
+00016e54 [file 00006254] bl        #0x48e14
+00016e58 [file 00006258] mov       r1, r4
+00016e5c [file 0000625c] bl        #0x9a2e8
+00016e60 [file 00006260] cmp       r0, #0
+00016e64 [file 00006264] addne     r5, r5, #1
+00016e68 [file 00006268] bne       #0x16e2c
+00016e6c [file 0000626c] ldr       r0, [r7, #0xc]
+00016e70 [file 00006270] mov       r4, #0
+00016e74 [file 00006274] ldr       r7, [r0, r5, lsl #2]
+00016e78 [file 00006278] b         #0x16ed8
+00016e7c [file 0000627c] mov       r0, #0x24
+00016e80 [file 00006280] bl        #0x9a21c
+00016e84 [file 00006284] movs      r4, r0
+00016e88 [file 00006288] str       r4, [fp, #-0x60]
+00016e8c [file 0000628c] beq       #0x16eb8
+00016e90 [file 00006290] mov       r1, r6
+00016e94 [file 00006294] mvn       r0, #0x47
+00016e98 [file 00006298] add       r0, fp, r0
+00016e9c [file 0000629c] bl        #0x83730
+00016ea0 [file 000062a0] mov       r2, r0
+00016ea4 [file 000062a4] mov       r1, r7
+00016ea8 [file 000062a8] mov       r0, r4
+00016eac [file 000062ac] bl        #0x48d10
+00016eb0 [file 000062b0] mov       r4, #0
+00016eb4 [file 000062b4] b         #0x16ec0
+00016eb8 [file 000062b8] mov       r4, #0
+00016ebc [file 000062bc] mov       r0, r4
+00016ec0 [file 000062c0] str       r0, [fp, #-0x58]
+00016ec4 [file 000062c4] mvn       r1, #0x57
+00016ec8 [file 000062c8] add       r1, fp, r1
+00016ecc [file 000062cc] add       r0, r7, #0xc
+00016ed0 [file 000062d0] bl        #0x19e30
+00016ed4 [file 000062d4] ldr       r7, [fp, #-0x58]
+00016ed8 [file 000062d8] ldr       r1, [fp, #-0x5c]
+00016edc [file 000062dc] add       r6, r6, #1
+00016ee0 [file 000062e0] cmp       r6, r1
+00016ee4 [file 000062e4] blt       #0x16e28
+00016ee8 [file 000062e8] cmp       r7, #0
+00016eec [file 000062ec] bne       #0x16f54
+00016ef0 [file 000062f0] ldr       r0, [sl]
+00016ef4 [file 000062f4] add       r0, r0, #0xc
+00016ef8 [file 000062f8] bl        #0x9a2d0
+00016efc [file 000062fc] ldr       r4, [sl]
+00016f00 [file 00006300] mov       r3, #0x400
+00016f04 [file 00006304] mov       r0, r4
+00016f08 [file 00006308] ldr       r4, [r4]
+00016f0c [file 0000630c] orr       r3, r3, #8
+00016f10 [file 00006310] ldr       r4, [r4, #0x10]
+00016f14 [file 00006314] mov       r2, r8
+00016f18 [file 00006318] mov       r1, #1
+00016f1c [file 0000631c] mov       lr, pc
+00016f20 [file 00006320] mov       pc, r4
+00016f24 [file 00006324] ldr       r3, [sl]
+00016f28 [file 00006328] mov       r1, sb
+00016f2c [file 0000632c] ldr       r2, [pc, #0x330] ; 'Invalid partition'
+00016f30 [file 00006330] mov       r0, r3
+00016f34 [file 00006334] ldr       r3, [r3]
+00016f38 [file 00006338] ldr       r3, [r3, #4]
+00016f3c [file 0000633c] mov       lr, pc
+00016f40 [file 00006340] mov       pc, r3
+00016f44 [file 00006344] ldr       r3, [sl]
+00016f48 [file 00006348] add       r0, r3, #0xc
+00016f4c [file 0000634c] bl        #0x9a2c4
+00016f50 [file 00006350] b         #0x171bc
+00016f54 [file 00006354] ldr       r6, [pc, #0x304]
+00016f58 [file 00006358] ldr       r8, [fp, #-0x54]
+00016f5c [file 0000635c] ldr       r0, [r6]
+00016f60 [file 00006360] ldr       r1, [r8, #0xc]
+00016f64 [file 00006364] add       r0, r0, #8
+00016f68 [file 00006368] bl        #0x2613c
+00016f6c [file 0000636c] mov       r5, r4
+00016f70 [file 00006370] ldr       r4, [pc, #0x2e4]
+00016f74 [file 00006374] str       r0, [fp, #-0x68]
+00016f78 [file 00006378] mov       r0, r4
+00016f7c [file 0000637c] bl        #0x37388
+00016f80 [file 00006380] ldr       r0, [pc, #0x2d0]
+00016f84 [file 00006384] ldr       r1, [r8, #0xc]
+00016f88 [file 00006388] ldr       r0, [r0]
+00016f8c [file 0000638c] bl        #0x9a2dc
+00016f90 [file 00006390] ldr       sb, [fp, #-0x50]
+00016f94 [file 00006394] cmp       r0, #0
+00016f98 [file 00006398] mov       r0, r4
+00016f9c [file 0000639c] moveq     r5, sb
+00016fa0 [file 000063a0] bl        #0x37390
+00016fa4 [file 000063a4] ldr       r3, [fp, #-0x68]
+00016fa8 [file 000063a8] cmp       r3, #0
+00016fac [file 000063ac] bne       #0x17104
+00016fb0 [file 000063b0] cmp       r5, #0
+00016fb4 [file 000063b4] beq       #0x17088
+00016fb8 [file 000063b8] mov       r1, r7
+00016fbc [file 000063bc] mvn       r0, #0x63
+00016fc0 [file 000063c0] add       r0, fp, r0
+00016fc4 [file 000063c4] bl        #0x1a210
+00016fc8 [file 000063c8] ldr       r0, [r6]
+00016fcc [file 000063cc] ldr       r4, [r0, #0x18]
+00016fd0 [file 000063d0] ldr       r1, [r4, #8]!
+00016fd4 [file 000063d4] ldr       r0, [r1, #-8]
+00016fd8 [file 000063d8] add       r1, r1, r0, lsl #1
+00016fdc [file 000063dc] ldrh      r2, [r1, #-2]
+00016fe0 [file 000063e0] lsl       r0, r2, #0x10
+00016fe4 [file 000063e4] lsr       r1, r0, #0x10
+00016fe8 [file 000063e8] cmp       r1, #0x2f
+00016fec [file 000063ec] ldreq     r1, [pc, #0x260] ; '/'
+00016ff0 [file 000063f0] mvneq     r0, #0x63
+00016ff4 [file 000063f4] addeq     r0, fp, r0
+00016ff8 [file 000063f8] bleq      #0x1a5e8
+00016ffc [file 000063fc] ldr       r1, [r4]
+00017000 [file 00006400] ldr       r0, [fp, #-0x64]
+00017004 [file 00006404] bl        #0x9a2dc
+00017008 [file 00006408] cmp       r0, #0
+0001700c [file 0000640c] beq       #0x17074
+00017010 [file 00006410] mov       r0, #0x34
+00017014 [file 00006414] bl        #0x9a21c
+00017018 [file 00006418] movs      r4, r0
+0001701c [file 0000641c] str       r4, [fp, #-0x50]
+00017020 [file 00006420] beq       #0x17044
+00017024 [file 00006424] ldr       r0, [r6]
+00017028 [file 00006428] mov       r3, #1
+0001702c [file 0000642c] mov       r2, #1
+00017030 [file 00006430] add       r1, r0, #8
+00017034 [file 00006434] mov       r0, r4
+00017038 [file 00006438] bl        #0x331a4
+0001703c [file 0000643c] mov       r4, #0
+00017040 [file 00006440] b         #0x1704c
+00017044 [file 00006444] mov       r4, #0
+00017048 [file 00006448] mov       r0, r4
+0001704c [file 0000644c] mov       r1, r0
+00017050 [file 00006450] ldr       r0, [pc, #0x1f8]
+00017054 [file 00006454] bl        #0x2a404
+00017058 [file 00006458] ldr       r0, [r6]
+0001705c [file 0000645c] mvn       r1, #0x63
+00017060 [file 00006460] add       r1, fp, r1
+00017064 [file 00006464] ldr       r2, [r0, #0x18]
+00017068 [file 00006468] add       r0, r2, #8
+0001706c [file 0000646c] bl        #0x1a188
+00017070 [file 00006470] b         #0x17078
+00017074 [file 00006474] mov       r4, #0
+00017078 [file 00006478] mvn       r0, #0x63
+0001707c [file 0000647c] add       r0, fp, r0
+00017080 [file 00006480] bl        #0x11dc0
+00017084 [file 00006484] b         #0x1708c
+00017088 [file 00006488] mov       r4, #0
+0001708c [file 0000648c] mov       r0, #0xf4
+00017090 [file 00006490] str       r4, [fp, #-0x38]
+00017094 [file 00006494] str       r4, [fp, #-0x34]
+00017098 [file 00006498] str       r4, [fp, #-0x30]
+0001709c [file 0000649c] str       r4, [fp, #-0x2c]
+000170a0 [file 000064a0] bl        #0x9a21c
+000170a4 [file 000064a4] movs      r4, r0
+000170a8 [file 000064a8] str       r4, [fp, #-0x50]
+000170ac [file 000064ac] beq       #0x170e0
+000170b0 [file 000064b0] ldr       r1, [fp, #-0x5c]
+000170b4 [file 000064b4] mvn       r0, #0x47
+000170b8 [file 000064b8] add       r0, fp, r0
+000170bc [file 000064bc] bl        #0x83730
+000170c0 [file 000064c0] mov       r2, r0
+000170c4 [file 000064c4] mvn       r3, #0x37
+000170c8 [file 000064c8] add       r3, fp, r3
+000170cc [file 000064cc] mov       r1, r7
+000170d0 [file 000064d0] mov       r0, r4
+000170d4 [file 000064d4] bl        #0x45da8
+000170d8 [file 000064d8] mov       sl, #0
+000170dc [file 000064dc] b         #0x170e8
+000170e0 [file 000064e0] mov       sl, #0
+000170e4 [file 000064e4] mov       r0, sl
+000170e8 [file 000064e8] str       r0, [fp, #-0x68]
+000170ec [file 000064ec] mvn       r1, #0x67
+000170f0 [file 000064f0] add       r1, fp, r1
+000170f4 [file 000064f4] add       r0, r7, #0x18
+000170f8 [file 000064f8] bl        #0x19cd8
+000170fc [file 000064fc] ldr       r3, [fp, #-0x68]
+00017100 [file 00006500] b         #0x17108
+00017104 [file 00006504] mov       sl, #0
+00017108 [file 00006508] ldr       r0, [r8, #0x1c]
+0001710c [file 0000650c] cmp       r0, #0
+00017110 [file 00006510] beq       #0x17138
+00017114 [file 00006514] mov       r1, #2
+00017118 [file 00006518] mov       r0, r3
+0001711c [file 0000651c] bl        #0x47c3c
+00017120 [file 00006520] ldr       r3, [fp, #-0x68]
+00017124 [file 00006524] ldr       r0, [r6]
+00017128 [file 00006528] add       r1, r3, #0xb8
+0001712c [file 0000652c] add       r0, r0, #8
+00017130 [file 00006530] bl        #0x251e4
+00017134 [file 00006534] b         #0x17150
+00017138 [file 00006538] ldr       r0, [r8, #0x18]
+0001713c [file 0000653c] mov       r1, #1
+00017140 [file 00006540] cmp       r0, #0
+00017144 [file 00006544] mov       r0, r3
+00017148 [file 00006548] moveq     r1, #0
+0001714c [file 0000654c] bl        #0x47c3c
+00017150 [file 00006550] ldr       r0, [r8, #0x10]
+00017154 [file 00006554] ldr       r6, [fp, #-0x4c]
+00017158 [file 00006558] cmp       r0, #0
+0001715c [file 0000655c] ldrne     r0, [fp, #-0x68]
+00017160 [file 00006560] mov       r4, r6
+00017164 [file 00006564] ldrne     r1, [r8, #0x14]
+00017168 [file 00006568] strne     r1, [r0, #0xec]
+0001716c [file 0000656c] ldr       r0, [fp, #-0x68]
+00017170 [file 00006570] bl        #0x47150
+00017174 [file 00006574] cmp       r0, #0
+00017178 [file 00006578] beq       #0x17190
+0001717c [file 0000657c] ldr       r0, [pc, #0xc8]
+00017180 [file 00006580] ldr       r0, [r0]
+00017184 [file 00006584] bl        #0x8f5a0
+00017188 [file 00006588] movs      r4, r0
+0001718c [file 0000658c] moveq     r4, r6
+00017190 [file 00006590] ldr       r0, [r8, #0x24]
+00017194 [file 00006594] mov       r2, r5
+00017198 [file 00006598] ldr       r1, [fp, #-0x68]
+0001719c [file 0000659c] cmp       r0, #3
+000171a0 [file 000065a0] mov       r0, r4
+000171a4 [file 000065a4] ldr       r4, [r4]
+000171a8 [file 000065a8] moveq     sb, sl
+000171ac [file 000065ac] ldr       r4, [r4, #0x20]
+000171b0 [file 000065b0] mov       r3, sb
+000171b4 [file 000065b4] mov       lr, pc
+000171b8 [file 000065b8] mov       pc, r4
+000171bc [file 000065bc] mvn       r0, #0x47
+000171c0 [file 000065c0] add       r0, fp, r0
+000171c4 [file 000065c4] bl        #0x836d8
+000171c8 [file 000065c8] ldmdb     fp, {r4, r5, r6, r7, r8, sb, sl, fp, sp, pc}

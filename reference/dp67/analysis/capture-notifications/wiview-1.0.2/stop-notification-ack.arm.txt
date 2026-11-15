@@ -1,0 +1,43 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x29504..0x295a8, exclusive
+00029504 [file 00018904] push      {r4, r5, r6, r7, r8, lr}
+00029508 [file 00018908] mov       r7, r0
+0002950c [file 0001890c] add       r8, r7, #0x40
+00029510 [file 00018910] mov       r0, r8
+00029514 [file 00018914] bl        #0x37388
+00029518 [file 00018918] ldr       r5, [pc, #0x84]
+0002951c [file 0001891c] ldr       r6, [pc, #0x7c] ; '^<Ack/>'
+00029520 [file 00018920] ldrb      r0, [r5, #4]
+00029524 [file 00018924] tst       r0, #1
+00029528 [file 00018928] bne       #0x29548
+0002952c [file 0001892c] orr       r0, r0, #1
+00029530 [file 00018930] and       r4, r0, #0xff
+00029534 [file 00018934] mov       r0, r6
+00029538 [file 00018938] bl        #0x9a5f4
+0002953c [file 0001893c] strb      r4, [r5, #4]
+00029540 [file 00018940] str       r0, [r5]
+00029544 [file 00018944] b         #0x2954c
+00029548 [file 00018948] ldr       r0, [r5]
+0002954c [file 0001894c] mov       r2, r0
+00029550 [file 00018950] ldr       r0, [r7, #4]
+00029554 [file 00018954] mov       r1, r6
+00029558 [file 00018958] bl        #0x6ba48
+0002955c [file 0001895c] ldr       r0, [pc, #0x38]
+00029560 [file 00018960] mov       r2, r6
+00029564 [file 00018964] ldr       r3, [r0]
+00029568 [file 00018968] mov       r1, #1
+0002956c [file 0001896c] mov       r0, r3
+00029570 [file 00018970] ldr       r3, [r3]
+00029574 [file 00018974] ldr       r3, [r3, #0xc]
+00029578 [file 00018978] mov       lr, pc
+0002957c [file 0001897c] mov       pc, r3
+00029580 [file 00018980] mov       r3, #1
+00029584 [file 00018984] mov       r0, r7
+00029588 [file 00018988] str       r3, [r7, #0x60]
+0002958c [file 0001898c] bl        #0x2a44c
+00029590 [file 00018990] mov       r0, r8
+00029594 [file 00018994] pop       {r4, r5, r6, r7, r8, lr}
+00029598 [file 00018998] b         #0x37390
+0002959c [file 0001899c] andseq    r8, r5, r0, asr #19
+000295a0 [file 000189a0] mulseq    r0, ip, sl
+000295a4 [file 000189a4] andseq    ip, r4, r0, lsr #13

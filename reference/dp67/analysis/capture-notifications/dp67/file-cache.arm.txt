@@ -1,0 +1,185 @@
+# Static ARM VA ranges; literal pools may decode as data-like instructions.
+# VA 0x30e70..0x3114c, exclusive
+00030e70 [file 00020270] push      {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+00030e74 [file 00020274] ldr       ip, [pc, #0xb0]
+00030e78 [file 00020278] sub       sp, sp, ip
+00030e7c [file 0002027c] mov       r8, r1
+00030e80 [file 00020280] cmp       r8, #0
+00030e84 [file 00020284] mov       r6, r0
+00030e88 [file 00020288] mov       r5, r2
+00030e8c [file 0002028c] mov       sl, r3
+00030e90 [file 00020290] moveq     r0, #0
+00030e94 [file 00020294] beq       #0x31130
+00030e98 [file 00020298] ldr       r0, [pc, #0x88]
+00030e9c [file 0002029c] bl        #0x7c99c
+00030ea0 [file 000202a0] mov       r0, r6
+00030ea4 [file 000202a4] bl        #0x3c234
+00030ea8 [file 000202a8] movs      fp, r0
+00030eac [file 000202ac] moveq     r4, #0
+00030eb0 [file 000202b0] beq       #0x31124
+00030eb4 [file 000202b4] ldr       r0, [r6, #0x24]
+00030eb8 [file 000202b8] ldr       r3, [r0, #0x54]
+00030ebc [file 000202bc] cmp       r3, #0
+00030ec0 [file 000202c0] bne       #0x30edc
+00030ec4 [file 000202c4] ldr       r3, [r0, #0x4c]
+00030ec8 [file 000202c8] cmp       r3, #0
+00030ecc [file 000202cc] bne       #0x30edc
+00030ed0 [file 000202d0] ldr       r3, [r0, #0x50]
+00030ed4 [file 000202d4] cmp       r3, #0
+00030ed8 [file 000202d8] beq       #0x30ee0
+00030edc [file 000202dc] mov       sl, #1
+00030ee0 [file 000202e0] ands      r7, sl, #0xff
+00030ee4 [file 000202e4] bne       #0x30f38
+00030ee8 [file 000202e8] add       r0, sp, #4
+00030eec [file 000202ec] mov       r1, fp
+00030ef0 [file 000202f0] bl        #0x7beb0
+00030ef4 [file 000202f4] ldr       r1, [sp, #4]
+00030ef8 [file 000202f8] add       r0, sp, #0xc
+00030efc [file 000202fc] bl        #0x1e874
+00030f00 [file 00020300] ldr       r0, [sp, #0xc]
+00030f04 [file 00020304] bl        #0x3a790
+00030f08 [file 00020308] movs      r3, r0
+00030f0c [file 0002030c] beq       #0x30f30
+00030f10 [file 00020310] mov       r0, fp
+00030f14 [file 00020314] bl        #0x7be5c
+00030f18 [file 00020318] add       r0, sp, #0xc
+00030f1c [file 0002031c] bl        #0x7be98
+00030f20 [file 00020320] mov       r4, #1
+00030f24 [file 00020324] b         #0x31124
+00030f28 [file 00020328] strheq    r1, [fp], -r8
+00030f2c [file 0002032c] andeq     r0, r0, r4, lsl r8
+00030f30 [file 00020330] add       r0, sp, #0xc
+00030f34 [file 00020334] bl        #0x7be98
+00030f38 [file 00020338] mov       sb, #0
+00030f3c [file 0002033c] mov       r4, sb
+00030f40 [file 00020340] ands      r3, r5, #0xff
+00030f44 [file 00020344] beq       #0x30f64
+00030f48 [file 00020348] ldr       r3, [r6]
+00030f4c [file 0002034c] mov       r0, r6
+00030f50 [file 00020350] ldr       r3, [r3, #4]
+00030f54 [file 00020354] mov       lr, pc
+00030f58 [file 00020358] mov       pc, r3
+00030f5c [file 0002035c] movs      r3, r0
+00030f60 [file 00020360] beq       #0x30f6c
+00030f64 [file 00020364] cmp       r7, #0
+00030f68 [file 00020368] beq       #0x3111c
+00030f6c [file 0002036c] mov       r0, #0xc
+00030f70 [file 00020370] str       sb, [sp, #4]
+00030f74 [file 00020374] bl        #0x7bebc
+00030f78 [file 00020378] cmp       r0, #0
+00030f7c [file 0002037c] beq       #0x30f9c
+00030f80 [file 00020380] mov       r3, #1
+00030f84 [file 00020384] add       r4, r0, #4
+00030f88 [file 00020388] str       r3, [r0]
+00030f8c [file 0002038c] mov       r0, r4
+00030f90 [file 00020390] bl        #0x1e18c
+00030f94 [file 00020394] mov       r0, r4
+00030f98 [file 00020398] b         #0x30fa0
+00030f9c [file 0002039c] mov       r0, sb
+00030fa0 [file 000203a0] ldr       r1, [pc, #0x2c] ; 'file_name'
+00030fa4 [file 000203a4] str       r0, [sp, #8]
+00030fa8 [file 000203a8] bl        #0x1e200
+00030fac [file 000203ac] ldr       r0, [sp, #8]
+00030fb0 [file 000203b0] mov       r1, fp
+00030fb4 [file 000203b4] bl        #0x1e250
+00030fb8 [file 000203b8] mov       r0, #0x14
+00030fbc [file 000203bc] bl        #0x7bebc
+00030fc0 [file 000203c0] cmp       r0, #0
+00030fc4 [file 000203c4] beq       #0x30fd8
+00030fc8 [file 000203c8] bl        #0x1dff8
+00030fcc [file 000203cc] mov       r5, r0
+00030fd0 [file 000203d0] b         #0x30fdc
+00030fd4 [file 000203d4] strheq    ip, [sb], -r4
+00030fd8 [file 000203d8] mov       r5, sb
+00030fdc [file 000203dc] add       r3, sp, #4
+00030fe0 [file 000203e0] str       r3, [sp]
+00030fe4 [file 000203e4] add       r2, sp, #8
+00030fe8 [file 000203e8] mov       r3, #1
+00030fec [file 000203ec] mov       r1, r5
+00030ff0 [file 000203f0] mov       r0, r8
+00030ff4 [file 000203f4] bl        #0x26f00
+00030ff8 [file 000203f8] mov       r4, r0
+00030ffc [file 000203fc] ands      r3, r4, #0xff
+00031000 [file 00020400] beq       #0x31094
+00031004 [file 00020404] cmp       r7, #0
+00031008 [file 00020408] ldreq     r3, [r6]
+0003100c [file 0002040c] moveq     r1, #1
+00031010 [file 00020410] moveq     r0, r6
+00031014 [file 00020414] ldreq     r3, [r3, #8]
+00031018 [file 00020418] moveq     lr, pc
+0003101c [file 0002041c] moveq     pc, r3
+00031020 [file 00020420] str       r7, [r6, #0x28]
+00031024 [file 00020424] mov       r2, sl
+00031028 [file 00020428] ldr       r3, [r8, #0x88]
+0003102c [file 0002042c] mov       r1, r5
+00031030 [file 00020430] mov       r0, r6
+00031034 [file 00020434] cmp       r3, #1
+00031038 [file 00020438] mov       r3, #1
+0003103c [file 0002043c] movne     r3, sb
+00031040 [file 00020440] bl        #0x31ec0
+00031044 [file 00020444] ands      r3, r0, #0xff
+00031048 [file 00020448] bne       #0x310e8
+0003104c [file 0002044c] ldr       lr, [pc, #0x3c]
+00031050 [file 00020450] ldr       r0, [lr]
+00031054 [file 00020454] cmp       r0, #0
+00031058 [file 00020458] beq       #0x310e8
+0003105c [file 0002045c] ldr       r0, [pc, #0x28] ; 'SaveLastFile failed'
+00031060 [file 00020460] mov       r2, #0x78
+00031064 [file 00020464] ldr       r3, [pc, #0x1c] ; 'CDOSFile::Cache'
+00031068 [file 00020468] str       r0, [sp]
+0003106c [file 0002046c] mov       r0, #1
+00031070 [file 00020470] ldr       r1, [pc, #0xc] ; 'DOSFile.cpp'
+00031074 [file 00020474] ldr       sl, [lr]
+00031078 [file 00020478] mov       lr, pc
+0003107c [file 0002047c] mov       pc, sl
+00031080 [file 00020480] b         #0x310e8
+00031084 [file 00020484] andeq     ip, sb, r0, lsl r7
+00031088 [file 00020488] strdeq    ip, sp, [sb], -r0
+0003108c [file 0002048c] andeq     ip, sb, r8, asr #13
+00031090 [file 00020490] andeq     lr, r8, r4, ror #23
+00031094 [file 00020494] ldr       r3, [sp, #4]
+00031098 [file 00020498] mov       r1, #0x400
+0003109c [file 0002049c] ldr       r2, [pc, #0xa4] ; 'CDOSFile::Cache GetImage failed Error: %s'
+000310a0 [file 000204a0] add       r0, sp, #0x14
+000310a4 [file 000204a4] bl        #0x7ca08
+000310a8 [file 000204a8] mov       ip, #0x810
+000310ac [file 000204ac] orr       ip, ip, #2
+000310b0 [file 000204b0] strh      sb, [sp, ip]
+000310b4 [file 000204b4] ldr       lr, [pc, #-0x2c]
+000310b8 [file 000204b8] ldr       r0, [lr]
+000310bc [file 000204bc] cmp       r0, #0
+000310c0 [file 000204c0] beq       #0x310e8
+000310c4 [file 000204c4] ldr       r0, [pc, #0x78]
+000310c8 [file 000204c8] add       r3, sp, #0x14
+000310cc [file 000204cc] ldr       r1, [pc, #0x6c] ; 'DOSFile.cpp'
+000310d0 [file 000204d0] mov       r2, #0x7c
+000310d4 [file 000204d4] str       r0, [sp]
+000310d8 [file 000204d8] mov       r0, #1
+000310dc [file 000204dc] ldr       sl, [lr]
+000310e0 [file 000204e0] mov       lr, pc
+000310e4 [file 000204e4] mov       pc, sl
+000310e8 [file 000204e8] ldr       r0, [sp, #8]
+000310ec [file 000204ec] cmp       r0, #0
+000310f0 [file 000204f0] movne     r1, #3
+000310f4 [file 000204f4] blne      #0x1f024
+000310f8 [file 000204f8] str       sb, [sp, #8]
+000310fc [file 000204fc] cmp       r5, #0
+00031100 [file 00020500] beq       #0x31114
+00031104 [file 00020504] mov       r0, r5
+00031108 [file 00020508] bl        #0x1e014
+0003110c [file 0002050c] mov       r0, r5
+00031110 [file 00020510] bl        #0x7be5c
+00031114 [file 00020514] ldr       r0, [sp, #4]
+00031118 [file 00020518] bl        #0x7d71c
+0003111c [file 0002051c] mov       r0, fp
+00031120 [file 00020520] bl        #0x7be5c
+00031124 [file 00020524] ldr       r0, [pc, #-0x204]
+00031128 [file 00020528] bl        #0x7c990
+0003112c [file 0002052c] mov       r0, r4
+00031130 [file 00020530] mov       ip, #0x810
+00031134 [file 00020534] orr       ip, ip, #4
+00031138 [file 00020538] add       sp, sp, ip
+0003113c [file 0002053c] pop       {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+00031140 [file 00020540] andeq     ip, sb, ip, ror r7
+00031144 [file 00020544] andeq     r1, fp, r8, lsl #2
+00031148 [file 00020548] andeq     ip, sb, r8, lsr #14

@@ -14,7 +14,7 @@ from pathlib import Path
 
 REFERENCE = Path(__file__).resolve().parent
 ROOT = REFERENCE.parent
-REPORT_DATE = "2026-11-14"  # Evidence revision date, deliberately not today's clock.
+REPORT_DATE = "2026-11-15"  # Evidence revision date, deliberately not today's clock.
 FIRMWARE_PREFIX = "reference/firmware/"
 FIRMWARE_LOCK = FIRMWARE_PREFIX + "provenance/source-aliases.json"
 
@@ -29,6 +29,8 @@ def sha256(path: Path) -> str:
 
 def category(relative: str) -> str:
     name = Path(relative).name
+    if relative.startswith("reference/dp67/analysis/capture-notifications/"):
+        return "generated_cross_sample_capture_notification_evidence"
     if relative.startswith("reference/dp67/"):
         if "/original/" in relative:
             return "windows_ce_bootstrap_client_installer" if relative.lower().endswith(".exe") else "windows_ce_client_installer"
@@ -197,6 +199,12 @@ def build_report() -> dict:
             row["source_lock"] = "reference/dp67/inventory.json"
             row["provenance_manifest"] = "reference/dp67/provenance.json"
             row["provenance"] = "Manufacturer installer retained from the user-supplied ZIP, embedded CAB, statically extracted components, or reproducible client evidence. The source ZIP and PDA backups are excluded; no public source URL is invented."
+            if "/analysis/capture-notifications/" in relative or path.name == "analyze_capture.py":
+                evidence_path = "reference/dp67/analysis/capture-notifications/evidence.json"
+                capture = json.loads((ROOT / evidence_path).read_text(encoding="utf-8"))
+                row.update(version=None, recorded_versions=["DP-67 1.2.1.2", "WiView 1.0.2", "WiView 1.0.3", "classic 4.701", "shared 5.041"],
+                           derived_from=[item["path"] for item in capture["sources"]], evidence_manifest=evidence_path,
+                           provenance="Reproducible cross-sample static evidence from the five hash-pinned client and firmware inputs in evidence.json; no manufacturer code or PDA backup is executed or included.")
         elif relative == "reference/analysis/lab-candidates.json":
             row["derived_from"] = [
                 "reference/analysis/wiview-control-evidence.json",

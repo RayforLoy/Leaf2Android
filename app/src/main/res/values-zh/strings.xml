@@ -246,7 +246,7 @@
     <string name="delete_back_photo_warning">这将删除后背存储中的原始文件，App 无法撤销。本机预览不等于原片备份。</string>
     <string name="confirm_back_action">确认后背操作</string>
     <string name="hardware_reported_connections">用户于 2026-11-11 报告 Valeo 22Wi、Aptus 22 可连接和读取照片；其他型号及固件仍待验证。</string>
-    <string name="remote_shooting_support_detail">依据协议实现 ISO、拍摄配置及后背下发的设置；写入须回读核对，实际硬件写入效果仍待验证。</string>
+    <string name="remote_shooting_support_detail">用户已报告 Valeo 在 0.3.1 中可修改 ISO 和灰平衡拍摄设置；其他参数、型号及点选照片编辑仍待硬件验证，写入须回读核对。</string>
     <string name="writing_shooting_settings">正在写入拍摄设置</string>
     <string name="shooting_settings_changed">编辑期间当前配置已更改。请检查刷新后的设置再操作。</string>
     <string name="shooting_write_not_confirmed">后背已应答，但设置回读不一致，未确认写入成功。</string>
@@ -287,7 +287,7 @@
     <string name="back_preview_separate">从后背请求处理后的图像，与常规预览缓存分别保存。缩放值为原厂级别，不代表增加传感器分辨率。</string>
     <string name="back_zoom_level">后背预览级别</string>
     <string name="back_preview_alarm">后背曝光警示</string>
-    <string name="back_image_coordinates_hint">X/Y 为方向修正后的后背原图坐标。屏幕或裁切预览位置不会自动换算，坐标映射仍需实机核对。</string>
+    <string name="back_image_coordinates_hint">手输 X/Y 使用后背按方向修正的图像参考网格。照片点选须有匹配的尺寸与方向；裁切或对应关系不明时请手输坐标。</string>
     <string name="sample_gray_balance_at_point">在 X/Y 取样此预览的灰平衡</string>
     <string name="read_processed_preview">读取处理预览</string>
     <string name="back_processed_preview">后背处理的 JPEG 预览</string>
@@ -360,4 +360,14 @@
     <string name="shooting_compatibility_hint">断开后可修改。自动模式在蓝牙名称含 Valeo 且 Sync 下发 ShootSetup 时使用 DP-67；已改名的后背可手动选择。此项调整拍摄配置写入格式，不改变蓝牙配对；硬件效果仍待验证。</string>
     <string name="dp67_active_hint">DP-67 兼容：仅写 12 个核心字段和后背提供的前缀。此拍摄配置路径不写压缩、方向和色彩。编辑原厂预设使用其 .1 修改配置，不自动重试写入。</string>
     <string name="dp67_modified_slot">目标修改配置：%1$s。同名槽位若已存在将被更新；回读时必须确认原预设保持不变。</string>
+    <string name="photo_actions">照片操作</string>
+    <string name="pick_gray_point">点选照片取灰平衡</string>
+    <string name="gray_pick_mode_hint">点击中性的白色或灰色区域，请求后背生成灰平衡预览。双指与双击仍可缩放，确认后才应用设置。</string>
+    <string name="gray_pick_cancel">取消点选</string>
+    <string name="gray_pick_unavailable">点选需要后背提供当前照片的明确方向和图像尺寸，并与完整预览的比例匹配。请先读取照片信息；不能确认对应关系时仍可手输协议坐标。</string>
+    <string name="gray_pick_read_metadata">读取取点信息</string>
+    <string name="gray_pick_point">取样坐标：%1$d, %2$d</string>
+    <string name="gray_pick_outside_image">请点照片区域。</string>
+    <string name="photo_delete_confirm">从当前连接的后背删除此原片？此操作不能撤销。</string>
+    <string name="photo_copy_move_hint">填写后背现有目标目录，例如 ./Shots/。暂不支持 MOS 文件改名。</string>
 </resources>

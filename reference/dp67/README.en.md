@@ -14,11 +14,13 @@ The supplied ZIP also contains 4 PDA backups. The complete ZIP, PBF files, Mac m
 | `analysis/binary-analysis.json` | Member sizes/hashes, PE metadata, imports/exports and data for SDK section comparisons |
 | `analysis/connection-and-setting-evidence.json` | Setting writes, modified slots, Prefix, Framing, Ack, connection findings and limits |
 | `analysis/disassembly/` | 15 bounded ARM function disassemblies, with virtual addresses and file offsets |
+| `analysis/capture-notifications/` | New DP-67 / both WiView notification and gray-pick evidence, plus 4.701 / 5.041 generic Error dispatch paths |
 | `provenance.json` | ZIP, installer and CAB provenance/hashes and excluded data |
 | `inventory.json` | Per-file size and SHA-256, excluding itself and Python caches |
 | `analyze_dp67.py` | Static acquisition, analysis and read-only verification |
+| `analyze_capture.py` | Generates notification and gray-pick evidence from 5 retained sources, verified by the main script |
 
-See the [DP-67 analysis report](../../docs/dp67-analysis.en.md). Its 12 core fields, optional Prefix and `.1` modified-slot behavior provide evidence for a Valeo compatibility experiment. No physical-back setting write or Bluetooth capture has established these differences as the cause of a disconnect.
+See the [DP-67 setting-write report](../../docs/dp67-analysis.en.md). Its 12 core fields, optional Prefix and `.1` modified-slot behavior provide evidence for a Valeo compatibility experiment; that static audit performed no device test of the disconnect cause. The 2026-11-15 [capture-notification and gray-pick report](../../docs/capture-notifications-analysis.en.md) distinguishes Stop / image-packet Ack paths from ordinary capture notifications. A generic no-handler branch can construct `error_code=0x01`, which must not be directly labeled busy. Original installer, CAB and client bytes remain unchanged.
 
 After installing `requirements-research.txt`, run from the project root on Windows:
 
